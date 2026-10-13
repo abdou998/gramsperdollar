@@ -1,5 +1,100 @@
 [
   {
+    "name": "One-pot spiced chicken, red lentil & rice",
+    "slug": "chicken-lentil-rice-pot",
+    "servings": 4,
+    "protein_g_per_serving": 49.7,
+    "kcal_per_serving": 590,
+    "with_optional": {
+      "protein_g_per_serving": 49.7,
+      "kcal_per_serving": 590
+    },
+    "stores": {
+      "Walmart": {
+        "cost_per_serving": 1.9,
+        "protein_g_per_dollar": 26.2,
+        "prices_checked": "2026-10"
+      }
+    },
+    "cheapest_store": "Walmart",
+    "missing_nutrition": [],
+    "unpriced_items": [],
+    "ingredients": [
+      {
+        "item": "chicken breast",
+        "grams": 600.0,
+        "optional": false,
+        "note": "frozen breasts, thawed and cut into bite-size pieces"
+      },
+      {
+        "item": "olive oil",
+        "grams": 13.5,
+        "optional": false,
+        "note": "1 tbsp"
+      },
+      {
+        "item": "onion",
+        "grams": 110.0,
+        "optional": false,
+        "note": "1 medium, diced"
+      },
+      {
+        "item": "garlic",
+        "grams": 9.0,
+        "optional": false,
+        "note": "3 cloves, minced"
+      },
+      {
+        "item": "cumin ground",
+        "grams": 2.0,
+        "optional": false,
+        "note": "1 tsp"
+      },
+      {
+        "item": "smoked paprika",
+        "grams": 2.3,
+        "optional": false,
+        "note": "1 tsp"
+      },
+      {
+        "item": "kosher salt",
+        "grams": 6.0,
+        "optional": false,
+        "note": "about 1 tsp, to taste"
+      },
+      {
+        "item": "black pepper",
+        "grams": 1.0,
+        "optional": false,
+        "note": "a few grinds"
+      },
+      {
+        "item": "white rice",
+        "grams": 200.0,
+        "optional": false,
+        "note": "1 cup, rinsed"
+      },
+      {
+        "item": "red lentils",
+        "grams": 150.0,
+        "optional": false,
+        "note": "3/4 cup, rinsed"
+      },
+      {
+        "item": "diced tomatoes canned",
+        "grams": 411.0,
+        "optional": false,
+        "note": "1 can (14.5 oz), with the juice"
+      },
+      {
+        "item": "frozen peas",
+        "grams": 150.0,
+        "optional": false,
+        "note": "1 cup, straight from frozen"
+      }
+    ]
+  },
+  {
     "name": "Lemon-rosemary grilled chicken & veg",
     "slug": "lemon-rosemary-chicken-veg",
     "servings": 2,

@@ -1,0 +1,63 @@
+# One-pot spiced chicken, red lentil & rice — 4 servings. Grams raw / as bought.
+name = "One-pot spiced chicken, red lentil & rice"
+servings = 4
+
+[[ingredients]]
+item = "chicken breast"
+grams = 600
+note = "frozen breasts, thawed and cut into bite-size pieces"
+
+[[ingredients]]
+item = "olive oil"
+grams = 13.5
+note = "1 tbsp"
+
+[[ingredients]]
+item = "onion"
+grams = 110
+note = "1 medium, diced"
+
+[[ingredients]]
+item = "garlic"
+grams = 9
+note = "3 cloves, minced"
+
+[[ingredients]]
+item = "cumin ground"
+grams = 2
+note = "1 tsp"
+
+[[ingredients]]
+item = "smoked paprika"
+grams = 2.3
+note = "1 tsp"
+
+[[ingredients]]
+item = "kosher salt"
+grams = 6
+note = "about 1 tsp, to taste"
+
+[[ingredients]]
+item = "black pepper"
+grams = 1
+note = "a few grinds"
+
+[[ingredients]]
+item = "white rice"
+grams = 200
+note = "1 cup, rinsed"
+
+[[ingredients]]
+item = "red lentils"
+grams = 150
+note = "3/4 cup, rinsed"
+
+[[ingredients]]
+item = "diced tomatoes canned"
+grams = 411
+note = "1 can (14.5 oz), with the juice"
+
+[[ingredients]]
+item = "frozen peas"
+grams = 150
+note = "1 cup, straight from frozen"
