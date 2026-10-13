@@ -1,5 +1,106 @@
 [
   {
+    "name": "Lemon-rosemary grilled chicken & veg",
+    "slug": "lemon-rosemary-chicken-veg",
+    "servings": 2,
+    "protein_g_per_serving": 48.7,
+    "kcal_per_serving": 507,
+    "with_optional": {
+      "protein_g_per_serving": 50.0,
+      "kcal_per_serving": 538
+    },
+    "stores": {
+      "Walmart": {
+        "cost_per_serving": 3.72,
+        "protein_g_per_dollar": 13.1,
+        "prices_checked": "2026-10"
+      }
+    },
+    "cheapest_store": "Walmart",
+    "missing_nutrition": [],
+    "unpriced_items": [],
+    "ingredients": [
+      {
+        "item": "chicken breast",
+        "grams": 400.0,
+        "optional": false,
+        "note": "2 boneless skinless breasts (~200 g each), butterflied into cutlets"
+      },
+      {
+        "item": "olive oil",
+        "grams": 40.5,
+        "optional": false,
+        "note": "3 tbsp total: 2 for the marinade, 1 for the squash"
+      },
+      {
+        "item": "lemon juice and zest",
+        "grams": 50.0,
+        "optional": false,
+        "note": "juice + zest of 1 lemon"
+      },
+      {
+        "item": "garlic",
+        "grams": 6.0,
+        "optional": false,
+        "note": "2 cloves, minced"
+      },
+      {
+        "item": "rosemary fresh",
+        "grams": 1.7,
+        "optional": false,
+        "note": "1 tbsp finely minced"
+      },
+      {
+        "item": "kosher salt",
+        "grams": 6.0,
+        "optional": false,
+        "note": "1 tsp + a pinch"
+      },
+      {
+        "item": "black pepper",
+        "grams": 1.5,
+        "optional": false,
+        "note": "1/2 tsp + a pinch"
+      },
+      {
+        "item": "yellow squash",
+        "grams": 196.0,
+        "optional": false,
+        "note": "1 medium, 1/2-inch slices"
+      },
+      {
+        "item": "green beans",
+        "grams": 110.0,
+        "optional": false,
+        "note": "1 cup, trimmed"
+      },
+      {
+        "item": "carrots",
+        "grams": 122.0,
+        "optional": false,
+        "note": "2 medium, cut into batons"
+      },
+      {
+        "item": "red bell pepper",
+        "grams": 60.0,
+        "optional": false,
+        "note": "1/2 pepper, rings"
+      },
+      {
+        "item": "yellow bell pepper",
+        "grams": 60.0,
+        "optional": false,
+        "note": "1/2 pepper, rings"
+      },
+      {
+        "item": "eggplant",
+        "grams": 250.0,
+        "optional": true,
+        "note": "1 small, sliced (optional)"
+      }
+    ]
+  },
+  {
     "name": "31g-protein pancake",
     "slug": "protein-pancake",
     "servings": 1,

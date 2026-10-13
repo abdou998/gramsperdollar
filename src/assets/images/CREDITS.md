@@ -5,3 +5,4 @@ Show the credit as a caption wherever the image is used. Don't present stock pho
 | File | Credit | Source | Notes |
 |---|---|---|---|
 | `protein-pancakes-berries-fa-barboza-unsplash.jpg` | Photo by Fa Barboza on Unsplash | https://unsplash.com/@fan11 | Illustrative only. Shows chocolate spread and mixed berries, which are not in our recipe. Caption should say "served with berries" or similar. |
+| `grilled-chicken-vegetables-mark-deyoung-unsplash.jpg` | Photo by Mark DeYoung on Unsplash | https://unsplash.com/@tempestdesigner | Illustrative serving idea. Plated presentation, not a meal-prep container. |

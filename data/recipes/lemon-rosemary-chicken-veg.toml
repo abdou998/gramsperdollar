@@ -1,0 +1,71 @@
+# Lemon-rosemary grilled chicken with grilled squash + steamed veg — 2 servings.
+# Grams are raw / as bought. Olive oil counted in full (some marinade stays in the bowl,
+# so real calories are slightly lower).
+name = "Lemon-rosemary grilled chicken & veg"
+servings = 2
+
+[[ingredients]]
+item = "chicken breast"
+grams = 400
+note = "2 boneless skinless breasts (~200 g each), butterflied into cutlets"
+
+[[ingredients]]
+item = "olive oil"
+grams = 40.5
+note = "3 tbsp total: 2 for the marinade, 1 for the squash"
+
+[[ingredients]]
+item = "lemon juice and zest"
+grams = 50
+note = "juice + zest of 1 lemon"
+
+[[ingredients]]
+item = "garlic"
+grams = 6
+note = "2 cloves, minced"
+
+[[ingredients]]
+item = "rosemary fresh"
+grams = 1.7
+note = "1 tbsp finely minced"
+
+[[ingredients]]
+item = "kosher salt"
+grams = 6
+note = "1 tsp + a pinch"
+
+[[ingredients]]
+item = "black pepper"
+grams = 1.5
+note = "1/2 tsp + a pinch"
+
+[[ingredients]]
+item = "yellow squash"
+grams = 196
+note = "1 medium, 1/2-inch slices"
+
+[[ingredients]]
+item = "green beans"
+grams = 110
+note = "1 cup, trimmed"
+
+[[ingredients]]
+item = "carrots"
+grams = 122
+note = "2 medium, cut into batons"
+
+[[ingredients]]
+item = "red bell pepper"
+grams = 60
+note = "1/2 pepper, rings"
+
+[[ingredients]]
+item = "yellow bell pepper"
+grams = 60
+note = "1/2 pepper, rings"
+
+[[ingredients]]
+item = "eggplant"
+grams = 250
+optional = true
+note = "1 small, sliced (optional)"
