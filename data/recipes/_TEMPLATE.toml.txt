@@ -1,0 +1,17 @@
+# Copy this file to data/recipes/<recipe-slug>.toml and fill it in.
+# Grams are as bought (raw weight). "item" must match a row in data/ingredients.csv.
+
+name = "Chicken, rice and broccoli bowls"
+servings = 4
+
+[[ingredients]]
+item = "chicken thighs boneless skinless"
+grams = 900
+
+[[ingredients]]
+item = "white rice long grain"
+grams = 400
+
+[[ingredients]]
+item = "broccoli frozen"
+grams = 500
