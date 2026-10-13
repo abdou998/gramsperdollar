@@ -1,11 +1,13 @@
-# 31 g protein pancake — single serving. Grams as weighed/bought.
+# Protein pancake — single serving. Grams as weighed/bought.
+# Whey: Abdessamad uses whey ISOLATE, 25 g scoop. Protein per 100 g must come from the tub's label
+# (generic USDA whey entries don't match real isolates). See data/nutrition.csv.
 name = "31g-protein pancake"
 servings = 1
 
 [[ingredients]]
 item = "whey protein powder"
 grams = 25
-note = "1 scoop (25 g). A 20 g scoop gives ~4 g less protein."
+note = "1 scoop (25 g) of whey isolate. Protein varies by brand: check your tub's label."
 
 [[ingredients]]
 item = "baking powder"
