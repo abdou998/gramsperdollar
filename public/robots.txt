@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gramsperdollar.com/sitemap-index.xml

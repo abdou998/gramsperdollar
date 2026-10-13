@@ -1,0 +1,71 @@
+---
+// Every page uses this layout. It handles the SEO basics once, so you never forget them:
+// title, meta description, canonical URL, social preview tags, and the sitemap link.
+interface Props {
+  title: string;        // shown in Google results — keep under ~60 characters
+  description: string;  // the grey snippet under the title — keep under ~155 characters
+}
+const { title, description } = Astro.props;
+// One clean address per page: /about (never /about.html), / for the homepage.
+const cleanPath = Astro.url.pathname.replace(/(index)?\.html$/, '').replace(/\/$/, '') || '/';
+const canonical = new URL(cleanPath, Astro.site);
+const siteName = 'Grams per Dollar';
+const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary" />
+    <style is:global>
+      :root {
+        --ink: #1d1f1c; --muted: #5d625a; --bg: #fbfaf6; --line: #e3e0d6; --accent: #2f6b3f;
+        font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+        color: var(--ink); background: var(--bg); line-height: 1.65;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root { --ink: #ecebe5; --muted: #a9ada4; --bg: #161815; --line: #2c2f2a; --accent: #7cc28e; }
+      }
+      body { margin: 0; }
+      .wrap { max-width: 44rem; margin: 0 auto; padding: 0 1rem; }
+      header { border-bottom: 1px solid var(--line); }
+      header .wrap { display: flex; justify-content: space-between; align-items: center; padding-block: 1rem; }
+      header a { color: var(--ink); text-decoration: none; }
+      .logo { font-weight: 700; letter-spacing: -0.01em; }
+      nav a { margin-left: 1rem; color: var(--muted); }
+      main { padding-block: 2.5rem 4rem; }
+      h1 { font-size: clamp(1.8rem, 5vw, 2.4rem); line-height: 1.2; letter-spacing: -0.02em; }
+      a { color: var(--accent); }
+      table { border-collapse: collapse; width: 100%; }
+      th, td { border-bottom: 1px solid var(--line); padding: 0.5rem; text-align: left; }
+      footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
+      footer .wrap { padding-block: 1.5rem; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <a class="logo" href="/">Grams per Dollar</a>
+        <nav><a href="/about">About</a></nav>
+      </div>
+    </header>
+    <main class="wrap">
+      <slot />
+    </main>
+    <footer>
+      <div class="wrap">
+        Prices are approximate US ranges, checked on the date shown on each page. Not medical or dietary advice.
+      </div>
+    </footer>
+  </body>
+</html>
