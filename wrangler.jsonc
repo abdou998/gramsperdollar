@@ -1,0 +1,11 @@
+// Cloudflare deploy config: serve the built Astro site (dist/) as static files.
+// Static asset requests are free and unlimited — no server code runs.
+{
+  "name": "gramsperdollar",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./dist",
+    // /about serves about.html; one clean URL per page
+    "html_handling": "drop-trailing-slash"
+  }
+}
