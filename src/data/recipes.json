@@ -3,30 +3,28 @@
     "name": "31g-protein pancake",
     "slug": "protein-pancake",
     "servings": 1,
-    "protein_g_per_serving": 30.5,
-    "kcal_per_serving": 318,
+    "protein_g_per_serving": 31.8,
+    "kcal_per_serving": 321,
     "with_optional": {
-      "protein_g_per_serving": 31.4,
-      "kcal_per_serving": 451
+      "protein_g_per_serving": 32.7,
+      "kcal_per_serving": 454
     },
-    "stores": {},
-    "cheapest_store": null,
+    "stores": {
+      "Walmart": {
+        "cost_per_serving": 2.17,
+        "protein_g_per_dollar": 14.7,
+        "prices_checked": "2026-10"
+      }
+    },
+    "cheapest_store": "Walmart",
     "missing_nutrition": [],
-    "unpriced_items": [
-      "baking powder",
-      "banana",
-      "butter salted",
-      "cinnamon ground",
-      "egg whole",
-      "milk whole",
-      "whey protein powder"
-    ],
+    "unpriced_items": [],
     "ingredients": [
       {
-        "item": "whey protein powder",
+        "item": "whey protein isolate",
         "grams": 25.0,
         "optional": false,
-        "note": "1 scoop (25 g). A 20 g scoop gives ~4 g less protein."
+        "note": "25 g whey isolate (Dymatize ISO100). Its official scoop is 30 g = 25 g protein; protein varies by brand."
       },
       {
         "item": "baking powder",

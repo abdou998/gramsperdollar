@@ -5,9 +5,9 @@ name = "31g-protein pancake"
 servings = 1
 
 [[ingredients]]
-item = "whey protein powder"
+item = "whey protein isolate"
 grams = 25
-note = "1 scoop (25 g) of whey isolate. Protein varies by brand: check your tub's label."
+note = "25 g whey isolate (Dymatize ISO100). Its official scoop is 30 g = 25 g protein; protein varies by brand."
 
 [[ingredients]]
 item = "baking powder"
