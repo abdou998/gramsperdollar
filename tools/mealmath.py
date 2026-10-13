@@ -1,22 +1,22 @@
 """
-mealmath.py — turn recipes + a price book into the numbers the site publishes.
+mealmath.py — turn recipes + nutrition + prices into the numbers the site publishes.
 
 Inputs
-  data/ingredients.csv   one row per (ingredient, store): pack size, price, date checked,
-                         protein and kcal per 100 g.
+  data/nutrition.csv     one row per ingredient: protein and kcal per 100 g, and the USDA source.
+  data/prices.csv        one row per (ingredient, store): pack size, price, month checked.
   data/recipes/*.toml    one file per recipe: servings + grams of each ingredient.
+                         Mark extras with `optional = true` — they are reported separately.
 
 Output
-  src/data/recipes.json  per recipe, per store: cost per serving, protein per serving,
-                         kcal per serving, grams of protein per dollar, oldest price date.
-                         Astro pages read this file, so tables update when prices change.
+  src/data/recipes.json  per recipe: protein and kcal per serving (with and without optional
+                         extras) and, per store that prices every core ingredient: cost per
+                         serving, grams of protein per dollar, and the oldest price date.
 
 Usage
   python tools/mealmath.py            # rebuild src/data/recipes.json
   python tools/mealmath.py --print    # also print a readable summary
 
-Only the standard library is used. Cost counts only the grams a recipe actually uses
-(not the whole pack), which is how per-serving cost is normally quoted.
+Standard library only. Cost counts only the grams a recipe uses, not the whole pack.
 """
 from __future__ import annotations
 
@@ -29,94 +29,117 @@ from collections import defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-INGREDIENTS = ROOT / "data" / "ingredients.csv"
+NUTRITION = ROOT / "data" / "nutrition.csv"
+PRICES = ROOT / "data" / "prices.csv"
 RECIPES_DIR = ROOT / "data" / "recipes"
 OUTPUT = ROOT / "src" / "data" / "recipes.json"
 
-REQUIRED_COLS = {
-    "item", "store", "product", "pack_g", "price_usd", "checked",
-    "protein_g_per_100g", "kcal_per_100g",
-}
+
+def _num(value: str, where: str) -> float:
+    try:
+        return float(value)
+    except ValueError:
+        sys.exit(f"{where}: '{value}' is not a number")
 
 
-def load_price_book(path: Path) -> dict[str, dict[str, dict]]:
-    """Return {item: {store: row}} with numbers parsed. Rows with no price yet are skipped."""
+def load_nutrition(path: Path) -> dict[str, dict]:
+    out = {}
+    with path.open(newline="", encoding="utf-8") as f:
+        for n, row in enumerate(csv.DictReader(f), start=2):
+            item = row["item"].strip().lower()
+            if not item:
+                continue
+            where = f"nutrition.csv line {n} ({item})"
+            out[item] = {
+                "protein": _num(row["protein_g_per_100g"], where),
+                "kcal": _num(row["kcal_per_100g"], where),
+                "source": row.get("source", "").strip(),
+            }
+    return out
+
+
+def load_prices(path: Path) -> dict[str, dict[str, dict]]:
+    """{item: {store: {pack_g, price, checked}}}; rows without a price yet are skipped."""
     book: dict[str, dict[str, dict]] = defaultdict(dict)
     with path.open(newline="", encoding="utf-8") as f:
-        reader = csv.DictReader(f)
-        missing = REQUIRED_COLS - set(reader.fieldnames or [])
-        if missing:
-            sys.exit(f"ingredients.csv is missing columns: {sorted(missing)}")
-        for n, row in enumerate(reader, start=2):
+        for n, row in enumerate(csv.DictReader(f), start=2):
             item = row["item"].strip().lower()
             if not item or not row["price_usd"].strip():
-                continue  # placeholder row, not priced yet
-            try:
-                row["pack_g"] = float(row["pack_g"])
-                row["price_usd"] = float(row["price_usd"])
-                row["protein_g_per_100g"] = float(row["protein_g_per_100g"])
-                row["kcal_per_100g"] = float(row["kcal_per_100g"])
-            except ValueError as e:
-                sys.exit(f"ingredients.csv line {n} ({item}): bad number — {e}")
-            if row["pack_g"] <= 0:
-                sys.exit(f"ingredients.csv line {n} ({item}): pack_g must be > 0")
-            book[item][row["store"].strip()] = row
+                continue
+            where = f"prices.csv line {n} ({item})"
+            pack = _num(row["pack_g"], where)
+            if pack <= 0:
+                sys.exit(f"{where}: pack_g must be > 0")
+            book[item][row["store"].strip()] = {
+                "pack_g": pack,
+                "price": _num(row["price_usd"], where),
+                "checked": row["checked"].strip(),
+            }
     return book
 
 
-def recipe_numbers(recipe: dict, book: dict) -> dict:
-    """Totals per store. A store is included only if it prices every ingredient."""
+def recipe_numbers(recipe: dict, nutrition: dict, prices: dict) -> dict:
     servings = recipe["servings"]
-    items = [(i["item"].strip().lower(), float(i["grams"])) for i in recipe["ingredients"]]
+    lines = [
+        {"item": i["item"].strip().lower(), "grams": float(i["grams"]),
+         "optional": bool(i.get("optional", False)), "note": i.get("note", "")}
+        for i in recipe["ingredients"]
+    ]
+    core = [l for l in lines if not l["optional"]]
 
-    unknown = [name for name, _ in items if name not in book]
-    stores = set.intersection(*(set(book[name]) for name, _ in items if name in book)) if items and not unknown else set()
+    missing_nutrition = sorted({l["item"] for l in lines if l["item"] not in nutrition})
 
-    protein = kcal = 0.0
-    any_store = None
+    def totals(subset):
+        p = sum(l["grams"] * nutrition[l["item"]]["protein"] / 100 for l in subset if l["item"] in nutrition)
+        k = sum(l["grams"] * nutrition[l["item"]]["kcal"] / 100 for l in subset if l["item"] in nutrition)
+        return p, k
+
+    core_p, core_k = totals(core)
+    all_p, all_k = totals(lines)
+
+    # Stores that price every core ingredient (zero-cost items like spices can be priced at 0).
+    priced = [set(prices.get(l["item"], {})) for l in core]
+    stores = set.intersection(*priced) if priced else set()
     by_store = {}
     for store in sorted(stores):
-        cost = 0.0
-        protein = kcal = 0.0
-        dates = []
-        for name, grams in items:
-            row = book[name][store]
-            cost += grams / row["pack_g"] * row["price_usd"]
-            protein += grams * row["protein_g_per_100g"] / 100
-            kcal += grams * row["kcal_per_100g"] / 100
-            dates.append(row["checked"])
-        any_store = store
+        cost = sum(l["grams"] / prices[l["item"]][store]["pack_g"] * prices[l["item"]][store]["price"] for l in core)
         by_store[store] = {
             "cost_per_serving": round(cost / servings, 2),
-            "protein_g_per_dollar": round(protein / cost, 1) if cost else None,
-            "prices_checked": min(dates),  # oldest price in the recipe — the honest date to show
+            "protein_g_per_dollar": round(core_p / cost, 1) if cost else None,
+            "prices_checked": min(prices[l["item"]][store]["checked"] for l in core),
         }
 
     return {
         "name": recipe["name"],
         "slug": recipe.get("slug", ""),
         "servings": servings,
-        "protein_g_per_serving": round(protein / servings) if any_store else None,
-        "kcal_per_serving": round(kcal / servings) if any_store else None,
+        "protein_g_per_serving": round(core_p / servings, 1),
+        "kcal_per_serving": round(core_k / servings),
+        "with_optional": {
+            "protein_g_per_serving": round(all_p / servings, 1),
+            "kcal_per_serving": round(all_k / servings),
+        },
         "stores": by_store,
         "cheapest_store": min(by_store, key=lambda s: by_store[s]["cost_per_serving"]) if by_store else None,
-        "missing_ingredients": unknown,
-        "ingredients": [{"item": n, "grams": g} for n, g in items],
+        "missing_nutrition": missing_nutrition,
+        "unpriced_items": sorted({l["item"] for l in core if not prices.get(l["item"])}),
+        "ingredients": lines,
     }
 
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--print", action="store_true", help="print a summary table")
+    ap.add_argument("--print", action="store_true", help="print a summary")
     args = ap.parse_args()
 
-    book = load_price_book(INGREDIENTS)
+    nutrition = load_nutrition(NUTRITION)
+    prices = load_prices(PRICES)
     results = []
     for path in sorted(RECIPES_DIR.glob("*.toml")):
         with path.open("rb") as f:
             recipe = tomllib.load(f)
         recipe.setdefault("slug", path.stem)
-        results.append(recipe_numbers(recipe, book))
+        results.append(recipe_numbers(recipe, nutrition, prices))
 
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(json.dumps(results, indent=2) + "\n", encoding="utf-8")
@@ -124,10 +147,14 @@ def main() -> None:
 
     if args.print:
         for r in results:
-            print(f"\n{r['name']} — {r['servings']} servings, "
-                  f"{r['protein_g_per_serving']} g protein, {r['kcal_per_serving']} kcal per serving")
-            if r["missing_ingredients"]:
-                print(f"  ! not in price book: {', '.join(r['missing_ingredients'])}")
+            w = r["with_optional"]
+            print(f"\n{r['name']} ({r['servings']} serving(s))")
+            print(f"  core:          {r['protein_g_per_serving']} g protein, {r['kcal_per_serving']} kcal per serving")
+            print(f"  with optional: {w['protein_g_per_serving']} g protein, {w['kcal_per_serving']} kcal per serving")
+            if r["missing_nutrition"]:
+                print(f"  ! no nutrition data: {', '.join(r['missing_nutrition'])}")
+            if r["unpriced_items"]:
+                print(f"  ! no prices yet: {', '.join(r['unpriced_items'])}")
             for store, s in r["stores"].items():
                 star = "  <- cheapest" if store == r["cheapest_store"] else ""
                 print(f"  {store:<12} ${s['cost_per_serving']:.2f}/serving  "

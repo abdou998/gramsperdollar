@@ -1,0 +1,44 @@
+# 31 g protein pancake — single serving. Grams as weighed/bought.
+name = "31g-protein pancake"
+servings = 1
+
+[[ingredients]]
+item = "whey protein powder"
+grams = 25
+note = "1 scoop (25 g). A 20 g scoop gives ~4 g less protein."
+
+[[ingredients]]
+item = "baking powder"
+grams = 4.6
+note = "1 teaspoon"
+
+[[ingredients]]
+item = "egg whole"
+grams = 50
+note = "1 large egg"
+
+[[ingredients]]
+item = "milk whole"
+grams = 122
+note = "1/2 cup"
+
+[[ingredients]]
+item = "cinnamon ground"
+grams = 0.5
+note = "a dash"
+
+[[ingredients]]
+item = "butter salted"
+grams = 4
+note = "for the pan"
+
+[[ingredients]]
+item = "banana"
+grams = 59
+note = "half a medium banana"
+
+[[ingredients]]
+item = "dates medjool"
+grams = 48
+optional = true
+note = "2 dates, chopped into the batter"

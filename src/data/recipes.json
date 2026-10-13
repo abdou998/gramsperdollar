@@ -1,1 +1,75 @@
-[]
+[
+  {
+    "name": "31g-protein pancake",
+    "slug": "protein-pancake",
+    "servings": 1,
+    "protein_g_per_serving": 30.5,
+    "kcal_per_serving": 318,
+    "with_optional": {
+      "protein_g_per_serving": 31.4,
+      "kcal_per_serving": 451
+    },
+    "stores": {},
+    "cheapest_store": null,
+    "missing_nutrition": [],
+    "unpriced_items": [
+      "baking powder",
+      "banana",
+      "butter salted",
+      "cinnamon ground",
+      "egg whole",
+      "milk whole",
+      "whey protein powder"
+    ],
+    "ingredients": [
+      {
+        "item": "whey protein powder",
+        "grams": 25.0,
+        "optional": false,
+        "note": "1 scoop (25 g). A 20 g scoop gives ~4 g less protein."
+      },
+      {
+        "item": "baking powder",
+        "grams": 4.6,
+        "optional": false,
+        "note": "1 teaspoon"
+      },
+      {
+        "item": "egg whole",
+        "grams": 50.0,
+        "optional": false,
+        "note": "1 large egg"
+      },
+      {
+        "item": "milk whole",
+        "grams": 122.0,
+        "optional": false,
+        "note": "1/2 cup"
+      },
+      {
+        "item": "cinnamon ground",
+        "grams": 0.5,
+        "optional": false,
+        "note": "a dash"
+      },
+      {
+        "item": "butter salted",
+        "grams": 4.0,
+        "optional": false,
+        "note": "for the pan"
+      },
+      {
+        "item": "banana",
+        "grams": 59.0,
+        "optional": false,
+        "note": "half a medium banana"
+      },
+      {
+        "item": "dates medjool",
+        "grams": 48.0,
+        "optional": true,
+        "note": "2 dates, chopped into the batter"
+      }
+    ]
+  }
+]

@@ -1,25 +1,24 @@
-# Price book + recipe maths
+# Nutrition, prices + recipe maths
 
 ## Files
-- `ingredients.csv` — the price book. One row per ingredient **per store**.
-  - `item` — short generic name, used by recipes (e.g. `chicken thighs boneless skinless`)
+- `nutrition.csv` — one row per ingredient: protein and kcal **per 100 g (raw)**, plus the USDA FoodData Central source.
+- `prices.csv` — one row per ingredient **per store**:
+  - `item` — must match `nutrition.csv` (e.g. `egg whole`)
   - `store` — `Walmart`, `Aldi`, `Costco`, `Kroger`…
   - `product` — exact product name as listed by the store
-  - `pack_g` — pack size in grams (1 lb = 453.6 g, 1 oz = 28.35 g)
+  - `pack_g` — pack size in grams (1 lb = 453.6 g, 1 oz = 28.35 g, 1 gallon milk ≈ 3,900 g)
   - `price_usd` — shelf price for that pack
-  - `checked` — month the price was checked, `YYYY-MM`
-  - `protein_g_per_100g`, `kcal_per_100g` — from USDA FoodData Central (raw weight)
-  - `nutrition_source` — e.g. `USDA FDC 171477`
+  - `checked` — month checked, `YYYY-MM`
   - `price_url` — product page the price came from
-- `recipes/*.toml` — one file per recipe (copy `_TEMPLATE.toml.txt`).
+- `recipes/*.toml` — one file per recipe (copy `_TEMPLATE.toml.txt`). Mark add-ons with `optional = true`.
 
 ## Run
 ```
 python tools/mealmath.py --print
 ```
-Writes `src/data/recipes.json` (what the site's tables read) and prints a summary:
-protein and kcal per serving, cost per serving and grams of protein per dollar at each store,
-the cheapest store, and the oldest price date (shown on the page as "prices checked").
+Writes `src/data/recipes.json` (what the site's tables read) and prints protein/kcal per serving
+(with and without optional extras), plus — once every core ingredient is priced at a store —
+cost per serving, grams of protein per dollar, the cheapest store and the oldest price date.
 
 ## Refresh routine (every ~3 months)
-Update `price_usd` and `checked` for each row, run the script, push. Every page updates.
+Update `price_usd` and `checked` in `prices.csv`, run the script, push. Every page updates.
