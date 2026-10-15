@@ -23,4 +23,24 @@ const posts = defineCollection({
     }),
 });
 
-export const collections = { posts };
+// Recipes sent from /write. They go live straight away as "not priced yet" recipe pages,
+// until they're priced in data/recipes/ (then set status: priced and the priced page takes over the URL).
+const submissions = defineCollection({
+  loader: glob({ pattern: '*/recipe.md', base: './submissions' }),
+  schema: z.object({
+    title: z.string(),
+    slug: z.string().optional(),
+    author: z.string(),
+    submitted: z.coerce.date(),
+    meal: z.enum(['breakfast', 'lunch', 'dinner', 'snack']),
+    tags: z.array(z.string()).default([]),
+    servings: z.union([z.number(), z.literal('')]).optional(),
+    prep_minutes: z.union([z.number(), z.literal('')]).optional(),
+    cook_minutes: z.union([z.number(), z.literal('')]).optional(),
+    photos: z.array(z.string()).default([]),
+    photo_credit: z.string().default(''),
+    status: z.enum(['new', 'unpriced', 'priced', 'hidden']).default('unpriced'),
+  }),
+});
+
+export const collections = { posts, submissions };

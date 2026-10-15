@@ -2,7 +2,7 @@
 // Everything is served as static files from dist/, except /api/*, which runs here.
 // /api/* powers the private writing page (/write): log in with a password, send a recipe,
 // and the recipe + photos land in the GitHub repo under submissions/ as one commit.
-// Nothing is published automatically; prices and nutrition get added before a recipe goes live.
+// That push triggers a rebuild, and the recipe goes live as "not priced yet" about a minute later.
 //
 // Secrets (Cloudflare dashboard → Worker → Settings → Variables and Secrets):
 //   WRITER_PASSWORD  the password for /write
@@ -91,7 +91,7 @@ function logout() {
 
 const clean = (v: FormDataEntryValue | null, max = 5000) => String(v ?? '').replace(/\r\n/g, '\n').trim().slice(0, max);
 const lines = (s: string) => s.split('\n').map((l) => l.replace(/^\s*(?:[-*•]|\d+[.)])\s*/, '').trim()).filter(Boolean);
-const slugify = (s: string) => s.toLowerCase().normalize('NFKD').replace(/[̀-ͯ]/g, '').replace(/&/g, ' and ').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60) || 'recipe';
+const slugify = (s: string): string => s.toLowerCase().normalize('NFKD').replace(/[̀-ͯ]/g, '').replace(/&/g, ' and ').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60) || 'recipe';
 const yamlStr = (s: string) => JSON.stringify(s); // JSON strings are valid YAML
 
 async function submit(request: Request, env: Env) {
@@ -126,6 +126,7 @@ async function submit(request: Request, env: Env) {
   if (problems.length) return json({ error: problems.join(' '), problems }, 400);
 
   const date = new Date().toISOString().slice(0, 10);
+  const slug = slugify(title).replace(/-recipe$/, '');
   const id = `${date}-${slugify(title)}-${crypto.randomUUID().slice(0, 4)}`;
   const dir = `submissions/${id}`;
 
@@ -136,6 +137,7 @@ async function submit(request: Request, env: Env) {
   const md = [
     '---',
     `title: ${yamlStr(title)}`,
+    `slug: ${slug}`,
     `author: ${yamlStr(author)}`,
     `submitted: ${date}`,
     `meal: ${meal}`,
@@ -145,7 +147,7 @@ async function submit(request: Request, env: Env) {
     `cook_minutes: ${cook ?? '""'}`,
     `photos: [${photoFiles.map((f) => yamlStr(f.path.split('/').pop()!)).join(', ')}]`,
     `photo_credit: ${yamlStr(photos.length ? (ownPhotos ? `own photos (${author})` : photoCredit) : '')}`,
-    'status: new  # new → priced → published',
+    'status: unpriced  # unpriced (live with a note) → priced (replaced by the priced recipe) | hidden',
     '---',
     '',
     '## About it',
@@ -170,7 +172,7 @@ async function submit(request: Request, env: Env) {
     { path: `${dir}/recipe.md`, text: md },
     ...photoFiles,
   ]);
-  return json({ ok: true, id });
+  return json({ ok: true, id, url: `/recipes/${slug}` });
 }
 
 function toBase64(buf: ArrayBuffer): string {

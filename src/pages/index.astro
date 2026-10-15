@@ -3,6 +3,10 @@ import { publishedPosts } from '../lib/posts';
 import Base from '../layouts/Base.astro';
 import Leaderboard from '../components/Leaderboard.astro';
 import { formatDate } from '../lib/data';
+import RecipeList from '../components/RecipeList.astro';
+import { unpricedRecipes } from '../lib/unpriced';
+
+const fresh = (await unpricedRecipes()).slice(0, 4);
 
 const posts = await publishedPosts();
 ---
@@ -23,6 +27,13 @@ const posts = await publishedPosts();
     <Leaderboard />
     <p><a href="/recipes">All recipes</a></p>
   </section>
+
+  {fresh.length > 0 && (
+    <section aria-labelledby="new-recipes">
+      <h2 id="new-recipes" class="section-head">New in the kitchen</h2>
+      <RecipeList unpriced={fresh} />
+    </section>
+  )}
 
   <section aria-labelledby="latest">
     <h2 id="latest" class="section-head">Latest</h2>

@@ -53,8 +53,9 @@ https://gramsperdollar.com  →  Google Search Console (domain property)
 - **Domain:** registered at Cloudflare Registrar, auto-renew on. Search Console verified through Cloudflare DNS — **don't delete that TXT record**.
 
 - **Private writing page:** `/write` (noindex, not in the sitemap). Password login → recipe + photos are committed to
-  `submissions/<date>-<slug>/` in one commit through the GitHub API. Nothing goes live until it's priced and turned
-  into a recipe (steps in `submissions/README.md`). Needs two Worker secrets set in the Cloudflare dashboard:
+  `submissions/<date>-<slug>/` in one commit through the GitHub API. Each one goes live straight away as a "not priced
+  yet" recipe page (`src/lib/unpriced.ts`, `UnpricedRecipe.astro`); pricing it later keeps the same URL
+  (steps in `submissions/README.md`). Needs two Worker secrets set in the Cloudflare dashboard:
   `WRITER_PASSWORD` and `GITHUB_TOKEN` (fine-grained, this repo only, Contents read/write; expires, renew it).
   Local testing: `.dev.vars` (git-ignored) + `npx wrangler dev`.
 

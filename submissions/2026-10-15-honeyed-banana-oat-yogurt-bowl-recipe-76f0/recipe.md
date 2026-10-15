@@ -1,20 +1,21 @@
 ---
-title: "Honeyed Banana Oat Yogurt Bowl Recipe"
-author: "Main"
+title: "Honeyed Banana Oat Greek Yogurt Protein Bowl"
+slug: banana-oat-greek-yogurt-protein-bowl
+author: "Sanae"
 submitted: 2026-10-15
-meal: lunch
-tags: ["no-cook", "low-carb", "5-minute", "single-serve"]
+meal: breakfast
+tags: ["no-cook", "5-minute", "single-serve"]
 servings: 1
 prep_minutes: 5
 cook_minutes: ""
 photos: ["photo-1.jpg"]
-photo_credit: "own photos (Main)"
-status: new  # new → priced → published
+photo_credit: "Photo by s_azad on Pixabay"
+status: unpriced  # unpriced (live with a note) → priced (replaced by the priced recipe) | hidden
 ---
 
 ## About it
 
-a morning protein powder bowl, which is easy on the stomach, so fast to make and delivers around 40g of protein, and can be adjustable to your liking.
+A morning protein bowl that's easy on the stomach and fast to make. The Greek yogurt and a scoop of whey put it well over 40 g of protein, and you can swap the toppings to whatever you have.
 
 ## Ingredients
 
@@ -25,15 +26,15 @@ a morning protein powder bowl, which is easy on the stomach, so fast to make and
 - 1 tsp Chia seeds
 - 1 tsp Honey (optional, for drizzling)
 - Fresh mint leaves for garnish
-- 1 scoop of whey protein powder
+- 1 scoop whey protein powder (about 30 g)
 
 ## Steps
 
-1. Prepare the Base: Spoon the Greek yogurt into the bottom of a wide bowl mixing it with one scoop of whey protein powder, and smooth it flat.
-2. Layer the Toppings: Lay your sliced banana down one side of the bowl. Pour the rolled oats down the opposite side.
-3. Add the Crunch: Sprinkle the chopped walnuts right over the center intersection where the oats and bananas meet.
-4. Finish: Evenly dust the banana slices with chia seeds, drizzle your honey over the entire bowl, and pop the fresh mint sprig on top.
+1. Make the base: mix the Greek yogurt with the scoop of whey in a wide bowl until smooth, then spread it flat.
+2. Add the toppings: lay your sliced banana down one side of the bowl. Pour the rolled oats down the opposite side.
+3. Add the crunch: sprinkle the chopped walnuts right over the center intersection where the oats and bananas meet.
+4. Finish: evenly dust the banana slices with chia seeds, drizzle your honey over the entire bowl, and put the mint on top.
 
 ## Tips
 
-you can choose your topping , either bananas/berries/mangos/pears work as great toppings.
+Swap the banana for berries, mango or pear. They all work.

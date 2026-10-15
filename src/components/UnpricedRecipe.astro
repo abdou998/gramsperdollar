@@ -1,0 +1,98 @@
+---
+// A recipe sent from /write that hasn't been priced yet: the contributor's words, photo and credit,
+// with a clear "not priced yet" note where the protein-per-dollar tag will go.
+import { Image } from 'astro:assets';
+import { photoFor, type Unpriced } from '../lib/unpriced';
+import { formatDate } from '../lib/data';
+
+interface Props { r: Unpriced }
+const { r } = Astro.props;
+const img = photoFor(r);
+const total = (r.prep ?? 0) + (r.cook ?? 0);
+const description = r.intro[0] ?? '';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Recipe',
+  name: r.title,
+  ...(description ? { description } : {}),
+  author: { '@type': 'Person', name: r.author },
+  datePublished: r.date.toISOString().slice(0, 10),
+  recipeCategory: r.meal,
+  ...(r.servings ? { recipeYield: `${r.servings} serving${r.servings > 1 ? 's' : ''}` } : {}),
+  ...(r.prep ? { prepTime: `PT${r.prep}M` } : {}),
+  ...(r.cook ? { cookTime: `PT${r.cook}M` } : {}),
+  ...(total ? { totalTime: `PT${total}M` } : {}),
+  recipeIngredient: r.ingredients,
+  recipeInstructions: r.steps.map((text) => ({ '@type': 'HowToStep', text })),
+  ...(img ? { image: new URL(img.src, Astro.site).href } : {}),
+};
+---
+<article class="recipe">
+  <header>
+    <h1 class="title">{r.title}</h1>
+    <p class="byline small muted">By {r.author}, <time datetime={r.date.toISOString()}>{formatDate(r.date)}</time></p>
+  </header>
+
+  <p class="pending">
+    <strong>Not priced yet.</strong> We're checking store prices and working out the protein, calories and
+    cost per serving for this one. They'll appear here soon.
+  </p>
+
+  {(r.servings || total > 0) && (
+    <dl class="stats">
+      {r.servings && <div><dt>Makes</dt><dd>{r.servings} serving{r.servings > 1 ? 's' : ''}</dd></div>}
+      {total > 0 && <div><dt>Time</dt><dd>{total} min</dd></div>}
+    </dl>
+  )}
+
+  {img && (
+    <figure class="photo">
+      <Image src={img} alt={r.title} widths={[480, 800, 1120]} sizes="(min-width: 56rem) 40rem, 100vw" />
+      {r.photoCredit && <figcaption class="small muted">{r.photoCredit}</figcaption>}
+    </figure>
+  )}
+
+  {r.intro.length > 0 && <div class="intro">{r.intro.map((p) => <p>{p}</p>)}</div>}
+
+  <div class="cols">
+    <div>
+      <h2>Ingredients</h2>
+      <ul class="ingredients">{r.ingredients.map((i) => <li>{i}</li>)}</ul>
+    </div>
+    <div>
+      <h2>Method</h2>
+      <ol class="steps">{r.steps.map((s) => <li>{s}</li>)}</ol>
+    </div>
+  </div>
+
+  {r.tips.length > 0 && (<><h2>Tips</h2>{r.tips.map((p) => <p class="tips">{p}</p>)}</>)}
+
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+</article>
+
+<style>
+  .recipe { max-width: var(--wide); margin: 0.5rem 0 3rem; }
+  .title { margin: 0 0 0.35rem; font-size: var(--step-3); }
+  .byline { margin: 0; }
+  .pending {
+    max-width: var(--measure); margin: 1.25rem 0 0; padding: 0.75rem 1rem;
+    border-left: 4px solid var(--tag); background: var(--basil-soft); font-size: var(--step--1); line-height: 1.55;
+  }
+  .stats { display: flex; flex-wrap: wrap; gap: 0 2rem; margin: 1.25rem 0 1.5rem; padding: 0.75rem 0; border-block: 1px solid var(--rule); }
+  .stats div { display: grid; }
+  .stats dt { font-size: var(--step--1); color: var(--muted); }
+  .stats dd { margin: 0; font-family: var(--display); font-weight: 750; font-size: var(--step-1); }
+  .photo { margin: 1.5rem 0; max-width: 40rem; }
+  .photo :global(img) { border-radius: var(--radius); width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
+  .photo figcaption { margin-top: 0.4rem; }
+  .intro, .tips { max-width: var(--measure); }
+  .cols { display: grid; grid-template-columns: minmax(14rem, 1fr) 2fr; gap: 0 2.5rem; }
+  .cols h2, h2 { font-size: var(--step-1); margin-top: 1.5rem; }
+  .ingredients { list-style: none; padding: 0; }
+  .ingredients li { padding: 0.3rem 0; border-bottom: 1px dotted var(--rule); margin: 0; }
+  .steps { padding-left: 1.3rem; }
+  .steps li { padding-left: 0.3rem; margin-bottom: 0.7em; }
+  .steps li::marker { font-family: var(--display); font-weight: 800; color: var(--basil); }
+  @media (max-width: 44rem) { .cols { grid-template-columns: 1fr; } }
+</style>

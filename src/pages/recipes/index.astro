@@ -4,19 +4,23 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import RecipeList from '../../components/RecipeList.astro';
 import CategoryLinks from '../../components/CategoryLinks.astro';
 import { allRecipes, storeStats } from '../../lib/data';
+import { unpricedRecipes } from '../../lib/unpriced';
+
+const drafts = await unpricedRecipes();
 
 const meals = ['breakfast', 'lunch', 'dinner', 'snack'];
 const label: Record<string, string> = { breakfast: 'Breakfast', lunch: 'Lunch', dinner: 'Dinner', snack: 'Snacks' };
 const byValue = (a: any, b: any) => (storeStats(b)?.protein_g_per_dollar ?? 0) - (storeStats(a)?.protein_g_per_dollar ?? 0);
 const groups = meals
-  .map((m) => ({ meal: m, recipes: allRecipes().filter((r) => r.meal === m).sort(byValue) }))
-  .filter((g) => g.recipes.length);
+  .map((m) => ({ meal: m, recipes: allRecipes().filter((r) => r.meal === m).sort(byValue), drafts: drafts.filter((d) => d.meal === m) }))
+  .filter((g) => g.recipes.length || g.drafts.length);
 const other = allRecipes().filter((r) => !meals.includes(r.meal as string));
 
 const itemList = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
-  itemListElement: allRecipes().map((r, i) => ({ '@type': 'ListItem', position: i + 1, url: new URL(`/recipes/${r.slug}`, Astro.site).href })),
+  itemListElement: [...allRecipes().map((r) => r.slug), ...drafts.map((d) => d.slug)]
+    .map((slug, i) => ({ '@type': 'ListItem', position: i + 1, url: new URL(`/recipes/${slug}`, Astro.site).href })),
 };
 ---
 <Base
@@ -27,7 +31,7 @@ const itemList = {
   <Breadcrumbs trail={[{ name: 'Recipes', url: '/recipes' }]} />
   <h1 class="page-title">High-protein meal prep recipes</h1>
   <p class="lede">
-    Every recipe is costed at a real store. Within each meal, the best value (most protein per dollar) comes first.
+    Every recipe is costed at a real store. Within each meal, the best value (most protein per dollar) comes first. New recipes show up straight away and get their numbers once we've priced them.
   </p>
 
   <CategoryLinks />
@@ -35,7 +39,7 @@ const itemList = {
   {groups.map((g) => (
     <section aria-labelledby={`m-${g.meal}`}>
       <h2 id={`m-${g.meal}`}>{label[g.meal]}</h2>
-      <RecipeList recipes={g.recipes} />
+      <RecipeList recipes={g.recipes} unpriced={g.drafts} />
     </section>
   ))}
   {other.length > 0 && (

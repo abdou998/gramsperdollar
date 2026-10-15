@@ -7,32 +7,41 @@ import RecipeList from '../../components/RecipeList.astro';
 import { allRecipes, getRecipe, storeStats, usd } from '../../lib/data';
 import { categoriesFor } from '../../lib/taxonomy';
 import { postsFeaturing } from '../../lib/posts';
+import UnpricedRecipe from '../../components/UnpricedRecipe.astro';
+import { unpricedRecipes, type Unpriced } from '../../lib/unpriced';
 
-export function getStaticPaths() {
-  return allRecipes().map((r) => ({ params: { slug: r.slug } }));
+export async function getStaticPaths() {
+  return [
+    ...allRecipes().map((r) => ({ params: { slug: r.slug }, props: { draft: undefined } })),
+    ...(await unpricedRecipes()).map((u) => ({ params: { slug: u.slug }, props: { draft: u } })),
+  ];
 }
 
-const r = getRecipe(Astro.params.slug!);
-const s = storeStats(r);
-const cats = categoriesFor(r);
-const featured = await postsFeaturing(r.slug);
+const { draft } = Astro.props as { draft?: Unpriced };
+
+const r = draft ? undefined : getRecipe(Astro.params.slug!);
+const s = r && storeStats(r);
+const cats = r ? categoriesFor(r) : [];
+const featured = r ? await postsFeaturing(r.slug) : [];
+const meal = r?.meal ?? draft!.meal;
+const slug = Astro.params.slug!;
 
 // Related: same meal type first, then best protein per dollar.
 const related = allRecipes()
-  .filter((x) => x.slug !== r.slug)
-  .sort((a, b) => Number(b.meal === r.meal) - Number(a.meal === r.meal)
+  .filter((x) => x.slug !== slug)
+  .sort((a, b) => Number(b.meal === meal) - Number(a.meal === meal)
     || (storeStats(b)?.protein_g_per_dollar ?? 0) - (storeStats(a)?.protein_g_per_dollar ?? 0))
   .slice(0, 3);
 
-const description = [
-  r.description,
-  `${Math.round(r.protein_g_per_serving)} g protein`,
-  s ? `${usd(s.cost_per_serving)} a serving.` : '',
-].filter(Boolean).join(' ').replace(/\. (\d)/, '. $1').slice(0, 155);
+const description = r
+  ? [r.description, `${Math.round(r.protein_g_per_serving)} g protein`, s ? `${usd(s.cost_per_serving)} a serving.` : '']
+      .filter(Boolean).join(' ').slice(0, 155)
+  : (draft!.intro[0] ?? `${draft!.title}, a high-protein ${draft!.meal} recipe by ${draft!.author}.`).slice(0, 155);
+const name = r?.name ?? draft!.title;
 ---
-<Base title={r.name} description={description} type="article">
-  <Breadcrumbs trail={[{ name: 'Recipes', url: '/recipes' }, { name: r.name, url: `/recipes/${r.slug}` }]} />
-  <RecipeCard slug={r.slug} headingLevel={1} />
+<Base title={name} description={description} type="article">
+  <Breadcrumbs trail={[{ name: 'Recipes', url: '/recipes' }, { name, url: `/recipes/${slug}` }]} />
+  {r ? <RecipeCard slug={r.slug} headingLevel={1} /> : <UnpricedRecipe r={draft!} />}
 
   {(featured.length > 0 || cats.length > 0) && (
     <aside class="more">

@@ -3,7 +3,8 @@
 **The easy way: [gramsperdollar.com/write](https://gramsperdollar.com/write)** (ask Abdessamad for the password).
 
 Fill in the title, tap the meal and anything that fits (one-pot, vegetarian…), add photos, ingredients and steps,
-and press **Send recipe**. That's it. Prices, protein and calories get worked out for you before it goes live.
+and press **Send recipe**. That's it. It's live on the site about a minute later, marked "not priced yet";
+prices, protein and calories get added after.
 Your writing saves on your phone as you go, so you can stop halfway and come back.
 
 Tips for that page:
