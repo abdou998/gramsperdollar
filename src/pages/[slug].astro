@@ -2,7 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
-import RecipeCard from '../components/RecipeCard.astro';
+import RecipeList from '../components/RecipeList.astro';
 import { formatDate } from '../lib/data';
 
 export async function getStaticPaths() {
@@ -47,7 +47,9 @@ const articleLd = {
     <div class="article-body">
       <Content />
     </div>
-    {d.recipes.map((slug) => <RecipeCard slug={slug} />)}
+    {d.listRecipesAtEnd && d.recipes.length > 0 && (
+      <section aria-labelledby="the-recipes"><h2 id="the-recipes">The recipes</h2><RecipeList slugs={d.recipes} /></section>
+    )}
   </article>
 </Base>
 

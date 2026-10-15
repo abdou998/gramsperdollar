@@ -2,9 +2,11 @@
 title: "High-Protein Meal Prep for One Person (4 Days, ~$8 a Day)"
 description: "Four days of high-protein meals for one: a whey pancake, lemon chicken lunches and a one-pot lentil dinner, with costs, a shopping list and a prep plan."
 published: 2026-10-15
+recipes: ["protein-pancake", "lemon-rosemary-chicken-veg", "chicken-lentil-rice-pot"]
+listRecipesAtEnd: false
 ---
 import PlanSummary from '../../components/PlanSummary.astro';
-import RecipeCard from '../../components/RecipeCard.astro';
+import RecipeList from '../../components/RecipeList.astro';
 import { getPlan, usd, num } from '../../lib/data';
 export const plan = getPlan('meal-prep-for-one');
 export const st = plan.stores.Walmart;
@@ -63,11 +65,9 @@ total drops a lot.
 
 ## The recipes
 
-<RecipeCard slug="protein-pancake" />
+Each recipe has its own page with the full ingredient list, method, storage notes and a cheaper swap.
 
-<RecipeCard slug="lemon-rosemary-chicken-veg" />
-
-<RecipeCard slug="chicken-lentil-rice-pot" />
+<RecipeList slugs={["protein-pancake", "lemon-rosemary-chicken-veg", "chicken-lentil-rice-pot"]} />
 
 ## Where the money goes
 

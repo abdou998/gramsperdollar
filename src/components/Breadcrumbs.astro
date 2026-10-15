@@ -1,0 +1,25 @@
+---
+// Visible breadcrumb trail + BreadcrumbList JSON-LD (Google can show it instead of the raw URL).
+interface Props { trail: { name: string; url: string }[] } // last item = current page
+const { trail } = Astro.props;
+const ld = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: trail.map((t, i) => ({ '@type': 'ListItem', position: i + 1, name: t.name, item: new URL(t.url, Astro.site).href })),
+};
+---
+<nav class="crumbs small" aria-label="Breadcrumb">
+  <ol>
+    {trail.map((t, i) => (
+      <li>{i < trail.length - 1 ? <a href={t.url}>{t.name}</a> : <span aria-current="page">{t.name}</span>}</li>
+    ))}
+  </ol>
+</nav>
+<script type="application/ld+json" set:html={JSON.stringify(ld)} />
+
+<style>
+  .crumbs ol { list-style: none; padding: 0; margin: 0 0 1.25rem; display: flex; flex-wrap: wrap; gap: 0.25rem 0.5rem; color: var(--muted); }
+  .crumbs li { margin: 0; }
+  .crumbs li + li::before { content: '/'; margin-right: 0.5rem; color: var(--rule); }
+  .crumbs a { color: var(--muted); }
+</style>

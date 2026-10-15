@@ -112,6 +112,11 @@
         "optional": false
       }
     ],
+    "meal": "dinner",
+    "tags": [
+      "one-pot",
+      "freezer-friendly"
+    ],
     "description": "Chicken, rice and red lentils simmered together with cumin and smoked paprika. Four dinners from one pot.",
     "prep_minutes": 10,
     "cook_minutes": 35,
@@ -239,6 +244,11 @@
         "optional": true
       }
     ],
+    "meal": "lunch",
+    "tags": [
+      "grilled",
+      "low-carb"
+    ],
     "description": "Juicy grilled chicken cutlets with squash, green beans and carrots. Two lunches, ready in about 40 minutes.",
     "prep_minutes": 25,
     "cook_minutes": 15,
@@ -333,6 +343,11 @@
         "label": "Medjool dates, chopped (optional)",
         "optional": true
       }
+    ],
+    "meal": "breakfast",
+    "tags": [
+      "5-minute",
+      "single-serve"
     ],
     "description": "One big whey pancake that takes five minutes and keeps you full until lunch.",
     "prep_minutes": 3,

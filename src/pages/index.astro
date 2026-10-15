@@ -1,19 +1,10 @@
 ---
-import { getCollection } from 'astro:content';
+import { publishedPosts } from '../lib/posts';
 import Base from '../layouts/Base.astro';
 import Leaderboard from '../components/Leaderboard.astro';
 import { formatDate } from '../lib/data';
 
-const posts = (await getCollection('posts', ({ data }) => !data.draft))
-  .sort((a, b) => b.data.published.valueOf() - a.data.published.valueOf());
-
-// Link each recipe on the leaderboard to the first post that features it.
-const links: Record<string, string> = {};
-for (const p of posts) {
-  const body = p.body ?? '';
-  const featured = [...p.data.recipes, ...[...body.matchAll(/RecipeCard slug="([^"]+)"/g)].map((m) => m[1])];
-  for (const slug of featured) links[slug] ??= `/${p.id}#${slug}`;
-}
+const posts = await publishedPosts();
 ---
 <Base
   title="Grams per Dollar"
@@ -29,7 +20,8 @@ for (const p of posts) {
 
   <section aria-labelledby="best-value">
     <h2 id="best-value" class="section-head">Best value right now</h2>
-    <Leaderboard links={links} />
+    <Leaderboard />
+    <p><a href="/recipes">All recipes</a></p>
   </section>
 
   <section aria-labelledby="latest">

@@ -34,7 +34,7 @@ for (const row of st?.buy ?? []) {
         {meals.map((m) => (
           <tr>
             <td>{m.slot}</td>
-            <td><a href={`#${m.recipe}`}>{m.r.name}</a><span class="note muted">{m.note}</span></td>
+            <td><a href={`/recipes/${m.recipe}`}>{m.r.name}</a><span class="note muted">{m.note}</span></td>
             <td class="num">{m.r.protein_g_per_serving} g</td>
             <td class="num kcal">{num(m.r.kcal_per_serving)}</td>
             <td class="num">{m.s ? usd(m.s.cost_per_serving) : ''}</td>

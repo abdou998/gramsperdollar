@@ -45,7 +45,7 @@ PANTRY = ROOT / "data" / "pantry.txt"   # staples listed apart from the checkout
 # Tolerance when rounding packs up (120 g of pepper is 1 pepper of ~119 g, not 2).
 PACK_SLACK = 0.02
 
-DISPLAY_FIELDS = ("description", "prep_minutes", "cook_minutes", "steps", "storage", "tip",
+DISPLAY_FIELDS = ("meal", "tags", "description", "prep_minutes", "cook_minutes", "steps", "storage", "tip",
                   "image", "image_alt", "image_credit")
 
 

@@ -1,0 +1,49 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import RecipeList from '../../components/RecipeList.astro';
+import CategoryLinks from '../../components/CategoryLinks.astro';
+import { allRecipes, storeStats } from '../../lib/data';
+
+const meals = ['breakfast', 'lunch', 'dinner', 'snack'];
+const label: Record<string, string> = { breakfast: 'Breakfast', lunch: 'Lunch', dinner: 'Dinner', snack: 'Snacks' };
+const byValue = (a: any, b: any) => (storeStats(b)?.protein_g_per_dollar ?? 0) - (storeStats(a)?.protein_g_per_dollar ?? 0);
+const groups = meals
+  .map((m) => ({ meal: m, recipes: allRecipes().filter((r) => r.meal === m).sort(byValue) }))
+  .filter((g) => g.recipes.length);
+const other = allRecipes().filter((r) => !meals.includes(r.meal as string));
+
+const itemList = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  itemListElement: allRecipes().map((r, i) => ({ '@type': 'ListItem', position: i + 1, url: new URL(`/recipes/${r.slug}`, Astro.site).href })),
+};
+---
+<Base
+  title="High-Protein Meal Prep Recipes, Costed"
+  description="Every high-protein meal prep recipe on the site, with protein per serving, cost per serving and grams of protein per dollar."
+  jsonLd={[itemList]}
+>
+  <Breadcrumbs trail={[{ name: 'Recipes', url: '/recipes' }]} />
+  <h1 class="page-title">High-protein meal prep recipes</h1>
+  <p class="lede">
+    Every recipe is costed at a real store. Within each meal, the best value (most protein per dollar) comes first.
+  </p>
+
+  <CategoryLinks />
+
+  {groups.map((g) => (
+    <section aria-labelledby={`m-${g.meal}`}>
+      <h2 id={`m-${g.meal}`}>{label[g.meal]}</h2>
+      <RecipeList recipes={g.recipes} />
+    </section>
+  ))}
+  {other.length > 0 && (
+    <section aria-labelledby="m-other"><h2 id="m-other">More</h2><RecipeList recipes={other} /></section>
+  )}
+</Base>
+
+<style>
+  .page-title { font-size: var(--step-3); }
+  .lede { max-width: var(--measure); }
+</style>

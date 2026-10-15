@@ -1,11 +1,11 @@
 ---
-// A full recipe: shelf tag, per-serving numbers, ingredients, method, storage, price basis.
+// A full recipe (used on /recipes/[slug]): shelf tag, per-serving numbers, ingredients, method, storage, price basis.
 // Emits schema.org Recipe JSON-LD so Google can understand it.
 import { Image } from 'astro:assets';
 import ShelfTag from './ShelfTag.astro';
 import { getRecipe, storeStats, usd, num, monthLabel, PRICE_BASIS } from '../lib/data';
 
-interface Props { slug: string; headingLevel?: 2 | 3 }
+interface Props { slug: string; headingLevel?: 1 | 2 | 3 }
 const { slug, headingLevel = 2 } = Astro.props;
 const r = getRecipe(slug);
 const s = storeStats(r);
@@ -37,7 +37,7 @@ const schema = {
   ...(img ? { image: new URL(img.src, Astro.site).href } : {}),
 };
 ---
-<section class="recipe" id={slug} aria-labelledby={`${slug}-title`}>
+<section class:list={["recipe", { page: headingLevel === 1 }]} id={slug} aria-labelledby={`${slug}-title`}>
   <header class="head">
     <ShelfTag value={s?.protein_g_per_dollar} />
     <div>
@@ -96,6 +96,7 @@ const schema = {
   }
   .head { display: grid; grid-template-columns: auto 1fr; gap: 1.1rem; align-items: start; }
   .title { margin: 0 0 0.35rem; font-size: var(--step-3); }
+  .recipe.page { margin-top: 0.5rem; border-top: 0; padding-top: 0; }
   .desc { margin: 0; color: var(--muted); max-width: var(--measure); }
   .stats {
     display: flex; flex-wrap: wrap; gap: 0 2rem;

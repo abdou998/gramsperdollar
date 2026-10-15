@@ -1,0 +1,48 @@
+---
+// Compact recipe rows that link to each full recipe page. Used in articles, /recipes and category pages.
+import ShelfTag from './ShelfTag.astro';
+import { getRecipe, storeStats, usd, num, type Recipe } from '../lib/data';
+
+interface Props { slugs?: string[]; recipes?: Recipe[]; headingLevel?: 2 | 3 }
+const { slugs, recipes, headingLevel = 3 } = Astro.props;
+const list = recipes ?? (slugs ?? []).map(getRecipe);
+const H = `h${headingLevel}`;
+---
+<ul class="recipe-list">
+  {list.map((r) => {
+    const s = storeStats(r);
+    const total = (r.prep_minutes ?? 0) + (r.cook_minutes ?? 0);
+    return (
+      <li>
+        <ShelfTag value={s?.protein_g_per_dollar} size="sm" />
+        <div class="body">
+          <H class="name"><a href={`/recipes/${r.slug}`}>{r.name}</a></H>
+          {r.description && <p class="desc">{r.description}</p>}
+          <p class="facts muted">
+            <span>{r.protein_g_per_serving} g protein</span>
+            {s && <span>{usd(s.cost_per_serving)} a serving</span>}
+            <span>{num(r.kcal_per_serving)} kcal</span>
+            {total > 0 && <span>{total} min</span>}
+            <span>makes {r.servings}</span>
+          </p>
+        </div>
+      </li>
+    );
+  })}
+</ul>
+
+<style>
+  .recipe-list { list-style: none; padding: 0; margin: 1rem 0 1.5rem; max-width: var(--wide); }
+  .recipe-list li {
+    display: grid; grid-template-columns: 7.25rem 1fr; gap: 1rem; align-items: start;
+    padding: 1rem 0; border-top: 1px solid var(--rule); margin: 0;
+  }
+  .recipe-list li:last-child { border-bottom: 1px solid var(--rule); }
+  .body { min-width: 0; }
+  .name { margin: 0; font-size: var(--step-1); font-weight: 750; line-height: 1.2; }
+  .name a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--rule); text-decoration-thickness: 2px; }
+  .name a:hover { color: var(--basil); text-decoration-color: currentColor; }
+  .desc { margin: 0.35rem 0 0.25rem; max-width: var(--measure); }
+  .facts { display: flex; flex-wrap: wrap; gap: 0.1rem 1.1rem; margin: 0; font-size: var(--step--1); }
+  @media (max-width: 30rem) { .recipe-list li { grid-template-columns: 1fr; gap: 0.5rem; } }
+</style>

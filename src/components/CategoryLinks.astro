@@ -1,0 +1,31 @@
+---
+// Links to published category pages, grouped by facet. Renders nothing until categories exist.
+import { publishedCategories, FACETS, type Category } from '../lib/taxonomy';
+
+interface Props { categories?: Category[]; heading?: string }
+const { categories = publishedCategories(), heading = 'Browse by' } = Astro.props;
+const groups = FACETS.map((f) => ({ name: f.name, items: categories.filter((c) => c.facet === f.key) })).filter((g) => g.items.length);
+---
+{groups.length > 0 && (
+  <nav class="cats" aria-label={heading}>
+    <h2 class="cats-head">{heading}</h2>
+    {groups.map((g) => (
+      <div class="group">
+        <span class="gname muted small">{g.name}</span>
+        <ul>
+          {g.items.map((c) => <li><a href={c.url}>{c.label}</a> <span class="muted small">({c.recipes.length})</span></li>)}
+        </ul>
+      </div>
+    ))}
+  </nav>
+)}
+
+<style>
+  .cats { margin: 2.5rem 0; max-width: var(--wide); }
+  .cats-head { font-size: var(--step-1); margin: 0 0 0.75rem; }
+  .group { display: grid; grid-template-columns: 10rem 1fr; gap: 0.5rem 1rem; padding: 0.5rem 0; border-top: 1px solid var(--rule); }
+  ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; }
+  li { margin: 0; }
+  a { font-family: var(--display); font-weight: 650; }
+  @media (max-width: 30rem) { .group { grid-template-columns: 1fr; } }
+</style>

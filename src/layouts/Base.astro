@@ -49,7 +49,7 @@ const path = cleanPath;
           <span class="logo-word">Grams per Dollar</span>
         </a>
         <nav aria-label="Main">
-          <a href="/" aria-current={path === '/' ? 'page' : undefined}>Recipes</a>
+          <a href="/recipes" aria-current={path.startsWith('/recipes') ? 'page' : undefined}>Recipes</a>
           <a href="/about" aria-current={path === '/about' ? 'page' : undefined}>About</a>
         </nav>
       </div>

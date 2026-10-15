@@ -1,0 +1,40 @@
+---
+// Category pages, e.g. /recipes/meal/breakfast or /recipes/cost/under-2-dollars.
+// Only generated for categories in publishedCategories() (3+ recipes, not identical to /recipes).
+import Base from '../../../layouts/Base.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import RecipeList from '../../../components/RecipeList.astro';
+import CategoryLinks from '../../../components/CategoryLinks.astro';
+import { publishedCategories, type Category } from '../../../lib/taxonomy';
+import { storeStats } from '../../../lib/data';
+
+export function getStaticPaths() {
+  return publishedCategories().map((c) => {
+    const [facet, value] = c.url.replace('/recipes/', '').split('/');
+    return { params: { facet, value }, props: { c } };
+  });
+}
+
+const { c } = Astro.props as { c: Category };
+const recipes = [...c.recipes].sort(
+  (a, b) => (storeStats(b)?.protein_g_per_dollar ?? 0) - (storeStats(a)?.protein_g_per_dollar ?? 0),
+);
+const itemList = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  itemListElement: recipes.map((r, i) => ({ '@type': 'ListItem', position: i + 1, url: new URL(`/recipes/${r.slug}`, Astro.site).href })),
+};
+const siblings = publishedCategories().filter((x) => x.facet === c.facet && x.url !== c.url);
+---
+<Base title={c.title} description={c.description} jsonLd={[itemList]}>
+  <Breadcrumbs trail={[{ name: 'Recipes', url: '/recipes' }, { name: c.title, url: c.url }]} />
+  <h1 class="page-title">{c.title}</h1>
+  <p class="lede">{c.description} Best value first.</p>
+  <RecipeList recipes={recipes} />
+  <CategoryLinks categories={siblings} heading={`Other ${c.facetName.toLowerCase()} options`} />
+</Base>
+
+<style>
+  .page-title { font-size: var(--step-3); }
+  .lede { max-width: var(--measure); }
+</style>

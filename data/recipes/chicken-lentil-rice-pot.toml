@@ -2,6 +2,8 @@
 name = "One-pot spiced chicken, red lentils and rice"
 description = "Chicken, rice and red lentils simmered together with cumin and smoked paprika. Four dinners from one pot."
 servings = 4
+meal = "dinner"
+tags = ["one-pot", "freezer-friendly"]
 prep_minutes = 10
 cook_minutes = 35
 storage = "Keeps 4 days in the fridge. It thickens as it sits, so add a splash of water before reheating."

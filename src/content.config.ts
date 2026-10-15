@@ -17,7 +17,8 @@ const posts = defineCollection({
       hero: image().optional(),
       heroAlt: z.string().optional(),
       heroCredit: z.string().optional(),
-      recipes: z.array(z.string()).default([]), // recipe slugs shown at the end (for plain .md posts)
+      recipes: z.array(z.string()).default([]), // recipe slugs this post features (links them both ways)
+      listRecipesAtEnd: z.boolean().default(true), // set false if the post places <RecipeList> itself (.mdx)
       draft: z.boolean().default(false),
     }),
 });

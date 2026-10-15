@@ -56,9 +56,10 @@ https://gramsperdollar.com  →  Google Search Console (domain property)
 
 | Path | What |
 |---|---|
-| `src/pages/` | `index.astro` (home: protein-per-dollar ranking + latest posts), `about.astro`, `[slug].astro` (renders every post). |
+| `src/pages/` | `index.astro` (home), `about.astro`, `[slug].astro` (posts), `recipes/index.astro` (all recipes by meal), `recipes/[slug].astro` (one page per recipe, Recipe + Breadcrumb schema), `recipes/[facet]/[value].astro` (category pages). |
 | `src/content/posts/` | Posts as `.md` (plain) or `.mdx` (can embed components). File name = URL. `_template.md` is never published. |
 | `src/components/` | `ShelfTag` (yellow g/$ tag), `RecipeCard` (full recipe + Recipe schema), `Leaderboard`, `PlanSummary` (week table + shopping list). |
+| `src/lib/taxonomy.ts` | Category rules (meal, protein band, cost band, store, style). A category page only exists once it has 3+ recipes and differs from /recipes — avoids thin pages. |
 | `src/styles/global.css` | Design tokens: colours, type scale, the shelf tag. |
 | `docs/WRITING.md` | How to write and publish a post without coding. |
 | `src/layouts/Base.astro` | Shared layout + SEO tags. |
@@ -95,6 +96,11 @@ git push                           # Cloudflare deploys in ~40 seconds
 - ✅ **Design system:** Archivo (display) + Source Serif 4 (body), shelf-tag yellow as the one bold element, dark mode, mobile tested.
 - 👥 **Second author:** a contributor will write 2–3 posts a week (see `docs/WRITING.md`).
 - 📋 First 10 articles planned (owner's project doc `meal-prep-site-first-10-articles.md`).
+
+### Site structure (hub and spokes)
+- Posts (hubs) link to recipe pages (spokes) via `RecipeList`; recipe pages link back ("Part of") and to related recipes.
+- One full recipe per page, so Recipe structured data is unambiguous.
+- Category pages unlock automatically as recipes are added (`MIN_RECIPES = 3`).
 
 ## 6. Content rules (non-negotiable)
 

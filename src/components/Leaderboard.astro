@@ -3,8 +3,6 @@
 import ShelfTag from './ShelfTag.astro';
 import { allRecipes, storeStats, usd, num, monthLabel, PRICE_BASIS } from '../lib/data';
 
-interface Props { links?: Record<string, string> } // recipe slug -> URL of the post that features it
-const { links = {} } = Astro.props;
 
 const rows = allRecipes()
   .map((r) => ({ r, s: storeStats(r) }))
@@ -18,7 +16,7 @@ const checked = rows.map((x) => x.s.prices_checked).filter(Boolean).sort()[0];
     <li class="row">
       <ShelfTag value={s.protein_g_per_dollar} size="sm" />
       <div class="body">
-        {links[r.slug] ? <a class="name" href={links[r.slug]}>{r.name}</a> : <span class="name">{r.name}</span>}
+        <a class="name" href={`/recipes/${r.slug}`}>{r.name}</a>
         <span class="bar" style={`--w:${(s.protein_g_per_dollar! / top) * 100}%`} aria-hidden="true"></span>
         <span class="facts muted">
           <span>{usd(s.cost_per_serving)} a serving</span>

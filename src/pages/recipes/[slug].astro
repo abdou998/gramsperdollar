@@ -1,0 +1,64 @@
+---
+// One page per recipe: the full recipe (with Recipe schema), where it's featured, and related recipes.
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import RecipeCard from '../../components/RecipeCard.astro';
+import RecipeList from '../../components/RecipeList.astro';
+import { allRecipes, getRecipe, storeStats, usd } from '../../lib/data';
+import { categoriesFor } from '../../lib/taxonomy';
+import { postsFeaturing } from '../../lib/posts';
+
+export function getStaticPaths() {
+  return allRecipes().map((r) => ({ params: { slug: r.slug } }));
+}
+
+const r = getRecipe(Astro.params.slug!);
+const s = storeStats(r);
+const cats = categoriesFor(r);
+const featured = await postsFeaturing(r.slug);
+
+// Related: same meal type first, then best protein per dollar.
+const related = allRecipes()
+  .filter((x) => x.slug !== r.slug)
+  .sort((a, b) => Number(b.meal === r.meal) - Number(a.meal === r.meal)
+    || (storeStats(b)?.protein_g_per_dollar ?? 0) - (storeStats(a)?.protein_g_per_dollar ?? 0))
+  .slice(0, 3);
+
+const description = [
+  r.description,
+  `${Math.round(r.protein_g_per_serving)} g protein`,
+  s ? `${usd(s.cost_per_serving)} a serving.` : '',
+].filter(Boolean).join(' ').replace(/\. (\d)/, '. $1').slice(0, 155);
+---
+<Base title={r.name} description={description} type="article">
+  <Breadcrumbs trail={[{ name: 'Recipes', url: '/recipes' }, { name: r.name, url: `/recipes/${r.slug}` }]} />
+  <RecipeCard slug={r.slug} headingLevel={1} />
+
+  {(featured.length > 0 || cats.length > 0) && (
+    <aside class="more">
+      {featured.length > 0 && (
+        <p>
+          <strong>Part of:</strong>{' '}
+          {featured.map((p, i) => <>{i > 0 && ', '}<a href={`/${p.id}`}>{p.data.title}</a></>)}
+        </p>
+      )}
+      {cats.length > 0 && (
+        <p><strong>More like this:</strong>{' '}
+          {cats.map((c, i) => <>{i > 0 && ', '}<a href={c.url}>{c.title}</a></>)}
+        </p>
+      )}
+    </aside>
+  )}
+
+  {related.length > 0 && (
+    <section aria-labelledby="related">
+      <h2 id="related">Other recipes</h2>
+      <RecipeList recipes={related} />
+    </section>
+  )}
+</Base>
+
+<style>
+  .more { max-width: var(--measure); padding: 1rem 0; border-top: 1px solid var(--rule); }
+  .more p { margin: 0.25rem 0; }
+</style>
