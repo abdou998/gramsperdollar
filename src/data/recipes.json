@@ -1,6 +1,6 @@
 [
   {
-    "name": "One-pot spiced chicken, red lentil & rice",
+    "name": "One-pot spiced chicken, red lentils and rice",
     "slug": "chicken-lentil-rice-pot",
     "servings": 4,
     "protein_g_per_serving": 49.7,
@@ -11,8 +11,8 @@
     },
     "stores": {
       "Walmart": {
-        "cost_per_serving": 1.9,
-        "protein_g_per_dollar": 26.2,
+        "cost_per_serving": 1.8,
+        "protein_g_per_dollar": 27.6,
         "prices_checked": "2026-10"
       }
     },
@@ -23,79 +23,111 @@
       {
         "item": "chicken breast",
         "grams": 600.0,
-        "optional": false,
-        "note": "frozen breasts, thawed and cut into bite-size pieces"
+        "amount": "1⅓ lb (600 g)",
+        "label": "chicken breast, cut into bite-size pieces",
+        "optional": false
       },
       {
         "item": "olive oil",
         "grams": 13.5,
-        "optional": false,
-        "note": "1 tbsp"
+        "amount": "1 tbsp",
+        "label": "olive oil",
+        "optional": false
       },
       {
         "item": "onion",
         "grams": 110.0,
-        "optional": false,
-        "note": "1 medium, diced"
+        "amount": "1 medium",
+        "label": "yellow onion, diced",
+        "optional": false
       },
       {
         "item": "garlic",
         "grams": 9.0,
-        "optional": false,
-        "note": "3 cloves, minced"
+        "amount": "3 cloves",
+        "label": "garlic, minced",
+        "optional": false
       },
       {
         "item": "cumin ground",
         "grams": 2.0,
-        "optional": false,
-        "note": "1 tsp"
+        "amount": "1 tsp",
+        "label": "ground cumin",
+        "optional": false
       },
       {
         "item": "smoked paprika",
         "grams": 2.3,
-        "optional": false,
-        "note": "1 tsp"
+        "amount": "1 tsp",
+        "label": "smoked paprika",
+        "optional": false
       },
       {
         "item": "kosher salt",
         "grams": 6.0,
-        "optional": false,
-        "note": "about 1 tsp, to taste"
+        "amount": "1 tsp",
+        "label": "kosher salt, divided",
+        "optional": false
       },
       {
         "item": "black pepper",
         "grams": 1.0,
-        "optional": false,
-        "note": "a few grinds"
+        "amount": "to taste",
+        "label": "black pepper",
+        "optional": false
       },
       {
         "item": "white rice",
         "grams": 200.0,
-        "optional": false,
-        "note": "1 cup, rinsed"
+        "amount": "1 cup",
+        "label": "long-grain white rice, rinsed",
+        "optional": false
       },
       {
         "item": "red lentils",
         "grams": 150.0,
-        "optional": false,
-        "note": "3/4 cup, rinsed"
+        "amount": "¾ cup",
+        "label": "red lentils, rinsed",
+        "optional": false
       },
       {
         "item": "diced tomatoes canned",
         "grams": 411.0,
-        "optional": false,
-        "note": "1 can (14.5 oz), with the juice"
+        "amount": "1 can (14.5 oz)",
+        "label": "diced tomatoes, with juice",
+        "optional": false
+      },
+      {
+        "item": "water",
+        "grams": 830.0,
+        "amount": "3½ cups",
+        "label": "water",
+        "optional": false
       },
       {
         "item": "frozen peas",
         "grams": 150.0,
-        "optional": false,
-        "note": "1 cup, straight from frozen"
+        "amount": "1 cup",
+        "label": "frozen peas",
+        "optional": false
       }
-    ]
+    ],
+    "description": "Chicken, rice and red lentils simmered together with cumin and smoked paprika. Four dinners from one pot.",
+    "prep_minutes": 10,
+    "cook_minutes": 35,
+    "steps": [
+      "Heat the oil in a large pot over medium-high heat. Add the chicken with half the salt and brown it for about 5 minutes. It doesn't need to be cooked through yet.",
+      "Turn the heat to medium. Add the onion and cook 4 to 5 minutes until soft, then the garlic, cumin and paprika for 1 more minute.",
+      "Stir in the rice, lentils, tomatoes with their juice, the water and the rest of the salt. Bring it to a boil.",
+      "Cover, turn the heat to low and simmer 18 to 20 minutes, stirring once halfway so the lentils don't catch on the bottom.",
+      "Tip in the frozen peas, put the lid back on and leave it off the heat for 5 minutes. Taste for salt and pepper.",
+      "Divide between 4 containers."
+    ],
+    "storage": "Keeps 4 days in the fridge. It thickens as it sits, so add a splash of water before reheating.",
+    "tip": "Red lentils cook in the same time as white rice and do a lot of the protein work for very little money. If it looks dry before the rice is done, stir in another ½ cup of water."
   },
   {
-    "name": "Lemon-rosemary grilled chicken & veg",
+    "name": "Lemon-rosemary chicken with grilled squash",
     "slug": "lemon-rosemary-chicken-veg",
     "servings": 2,
     "protein_g_per_serving": 48.7,
@@ -106,8 +138,8 @@
     },
     "stores": {
       "Walmart": {
-        "cost_per_serving": 3.72,
-        "protein_g_per_dollar": 13.1,
+        "cost_per_serving": 3.59,
+        "protein_g_per_dollar": 13.6,
         "prices_checked": "2026-10"
       }
     },
@@ -118,82 +150,111 @@
       {
         "item": "chicken breast",
         "grams": 400.0,
-        "optional": false,
-        "note": "2 boneless skinless breasts (~200 g each), butterflied into cutlets"
+        "amount": "2 breasts (about 14 oz)",
+        "label": "boneless skinless chicken breast",
+        "optional": false
       },
       {
         "item": "olive oil",
         "grams": 40.5,
-        "optional": false,
-        "note": "3 tbsp total: 2 for the marinade, 1 for the squash"
+        "amount": "3 tbsp",
+        "label": "olive oil, divided",
+        "optional": false
       },
       {
         "item": "lemon juice and zest",
         "grams": 50.0,
-        "optional": false,
-        "note": "juice + zest of 1 lemon"
+        "amount": "1",
+        "label": "lemon, zest and juice",
+        "optional": false
       },
       {
         "item": "garlic",
         "grams": 6.0,
-        "optional": false,
-        "note": "2 cloves, minced"
+        "amount": "2 cloves",
+        "label": "garlic, minced",
+        "optional": false
       },
       {
         "item": "rosemary fresh",
         "grams": 1.7,
-        "optional": false,
-        "note": "1 tbsp finely minced"
+        "amount": "1 tbsp",
+        "label": "fresh rosemary, finely chopped",
+        "optional": false
       },
       {
         "item": "kosher salt",
         "grams": 6.0,
-        "optional": false,
-        "note": "1 tsp + a pinch"
+        "amount": "1 tsp + a pinch",
+        "label": "kosher salt",
+        "optional": false
       },
       {
         "item": "black pepper",
         "grams": 1.5,
-        "optional": false,
-        "note": "1/2 tsp + a pinch"
+        "amount": "½ tsp + a pinch",
+        "label": "black pepper",
+        "optional": false
       },
       {
         "item": "yellow squash",
         "grams": 196.0,
-        "optional": false,
-        "note": "1 medium, 1/2-inch slices"
+        "amount": "1 medium",
+        "label": "yellow squash, cut into ½-inch rounds",
+        "optional": false
       },
       {
         "item": "green beans",
         "grams": 110.0,
-        "optional": false,
-        "note": "1 cup, trimmed"
+        "amount": "1 cup",
+        "label": "green beans, trimmed",
+        "optional": false
       },
       {
         "item": "carrots",
         "grams": 122.0,
-        "optional": false,
-        "note": "2 medium, cut into batons"
+        "amount": "2 medium",
+        "label": "carrots, cut into sticks",
+        "optional": false
       },
       {
         "item": "red bell pepper",
         "grams": 60.0,
-        "optional": false,
-        "note": "1/2 pepper, rings"
+        "amount": "½",
+        "label": "red bell pepper, sliced",
+        "optional": false
       },
       {
         "item": "yellow bell pepper",
         "grams": 60.0,
-        "optional": false,
-        "note": "1/2 pepper, rings"
+        "amount": "½",
+        "label": "yellow bell pepper, sliced",
+        "optional": false
       },
       {
         "item": "eggplant",
         "grams": 250.0,
-        "optional": true,
-        "note": "1 small, sliced (optional)"
+        "amount": "1 small",
+        "label": "eggplant, sliced (optional, grill with the squash)",
+        "optional": true
       }
-    ]
+    ],
+    "description": "Juicy grilled chicken cutlets with squash, green beans and carrots. Two lunches, ready in about 40 minutes.",
+    "prep_minutes": 25,
+    "cook_minutes": 15,
+    "steps": [
+      "Slice each chicken breast in half horizontally so you have thin cutlets that cook evenly.",
+      "Mix 2 tbsp of the oil with the lemon zest and juice, garlic, rosemary, salt and pepper. Turn the chicken in it and leave it 15 to 20 minutes while you do the vegetables (up to 2 hours in the fridge is fine).",
+      "Steam the green beans and carrots for 3 to 4 minutes, until they just lose their raw crunch. Rinse under cold water so they stop cooking and don't go soft by day three.",
+      "Heat a grill pan or heavy skillet until properly hot. Cook the chicken 4 to 5 minutes, flip, then 3 to 4 minutes more, until the thickest part reaches 165°F (74°C). Rest it 5 minutes.",
+      "Toss the squash with the last tablespoon of oil and a pinch of salt and pepper, then sear 2 to 3 minutes a side in the same pan.",
+      "Split everything between 2 containers, with the pepper slices in a small separate box."
+    ],
+    "storage": "Keeps 3 to 4 days in the fridge. Store the pepper slices separately so they stay crisp. Reheat the chicken and squash; the beans and carrots are fine cold.",
+    "tip": "Use 1½ tbsp of oil in total instead of 3. You save about 90 calories a serving and lose no protein. Dried rosemary (1 tsp) is cheaper than a fresh pack.",
+    "image": "grilled-chicken-vegetables-mark-deyoung-unsplash.jpg",
+    "image_alt": "Grilled chicken breast with grilled squash, carrots, green beans and lemon slices",
+    "image_credit": "Photo by Mark DeYoung on Unsplash."
   },
   {
     "name": "31g-protein pancake",
@@ -219,51 +280,74 @@
       {
         "item": "whey protein isolate",
         "grams": 25.0,
-        "optional": false,
-        "note": "25 g whey isolate (Dymatize ISO100). Its official scoop is 30 g = 25 g protein; protein varies by brand."
+        "amount": "25 g (1 scoop)",
+        "label": "whey protein isolate",
+        "optional": false
       },
       {
         "item": "baking powder",
         "grams": 4.6,
-        "optional": false,
-        "note": "1 teaspoon"
+        "amount": "1 tsp",
+        "label": "baking powder",
+        "optional": false
       },
       {
         "item": "egg whole",
         "grams": 50.0,
-        "optional": false,
-        "note": "1 large egg"
+        "amount": "1 large",
+        "label": "egg",
+        "optional": false
       },
       {
         "item": "milk whole",
         "grams": 122.0,
-        "optional": false,
-        "note": "1/2 cup"
+        "amount": "½ cup",
+        "label": "whole milk",
+        "optional": false
       },
       {
         "item": "cinnamon ground",
         "grams": 0.5,
-        "optional": false,
-        "note": "a dash"
+        "amount": "a pinch",
+        "label": "ground cinnamon",
+        "optional": false
       },
       {
         "item": "butter salted",
         "grams": 4.0,
-        "optional": false,
-        "note": "for the pan"
+        "amount": "1 tsp",
+        "label": "butter, for the pan",
+        "optional": false
       },
       {
         "item": "banana",
         "grams": 59.0,
-        "optional": false,
-        "note": "half a medium banana"
+        "amount": "½ medium",
+        "label": "banana, sliced",
+        "optional": false
       },
       {
         "item": "dates medjool",
         "grams": 48.0,
-        "optional": true,
-        "note": "2 dates, chopped into the batter"
+        "amount": "2",
+        "label": "Medjool dates, chopped (optional)",
+        "optional": true
       }
-    ]
+    ],
+    "description": "One big whey pancake that takes five minutes and keeps you full until lunch.",
+    "prep_minutes": 3,
+    "cook_minutes": 4,
+    "steps": [
+      "Whisk the whey, baking powder and cinnamon in a bowl, then add the egg and milk and whisk until smooth. It should look like thick pancake batter; add a splash more milk if it's stiff.",
+      "Heat a non-stick pan over medium heat and wipe it with a little butter.",
+      "Pour in the batter and cook about 2 minutes, until bubbles show on top and the edges look set.",
+      "Flip and cook 1 to 2 minutes more. Whey batter goes rubbery if you cook it hard, so keep the heat at medium.",
+      "Top with the sliced banana (and chopped dates if you're using them)."
+    ],
+    "storage": "Best made fresh. You can mix the dry ingredients for the week in jars, so each morning is just egg, milk and a pan.",
+    "tip": "The whey is about 80% of the cost. A cheaper whey concentrate works too, but check the label: you may get a few grams less protein.",
+    "image": "protein-pancakes-berries-fa-barboza-unsplash.jpg",
+    "image_alt": "A stack of golden pancakes topped with berries and chocolate spread",
+    "image_credit": "Photo by Fa Barboza on Unsplash. Shown with berries and chocolate spread, which aren't in this recipe."
   }
 ]

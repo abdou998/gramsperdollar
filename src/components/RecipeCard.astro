@@ -1,0 +1,125 @@
+---
+// A full recipe: shelf tag, per-serving numbers, ingredients, method, storage, price basis.
+// Emits schema.org Recipe JSON-LD so Google can understand it.
+import { Image } from 'astro:assets';
+import ShelfTag from './ShelfTag.astro';
+import { getRecipe, storeStats, usd, num, monthLabel, PRICE_BASIS } from '../lib/data';
+
+interface Props { slug: string; headingLevel?: 2 | 3 }
+const { slug, headingLevel = 2 } = Astro.props;
+const r = getRecipe(slug);
+const s = storeStats(r);
+const H = `h${headingLevel}`;
+
+const images = import.meta.glob<{ default: ImageMetadata }>('../assets/images/*.{jpg,jpeg,png,webp}', { eager: true });
+const img = r.image ? images[`../assets/images/${r.image}`]?.default : undefined;
+
+const total = (r.prep_minutes ?? 0) + (r.cook_minutes ?? 0);
+const hasOptional = r.ingredients.some((i) => i.optional);
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Recipe',
+  name: r.name,
+  description: r.description,
+  recipeYield: `${r.servings} serving${r.servings > 1 ? 's' : ''}`,
+  ...(r.prep_minutes ? { prepTime: `PT${r.prep_minutes}M` } : {}),
+  ...(r.cook_minutes ? { cookTime: `PT${r.cook_minutes}M` } : {}),
+  ...(total ? { totalTime: `PT${total}M` } : {}),
+  recipeIngredient: r.ingredients.map((i) => `${i.amount} ${i.label}`),
+  recipeInstructions: (r.steps ?? []).map((text) => ({ '@type': 'HowToStep', text })),
+  nutrition: {
+    '@type': 'NutritionInformation',
+    servingSize: '1 serving',
+    calories: `${r.kcal_per_serving} calories`,
+    proteinContent: `${r.protein_g_per_serving} g`,
+  },
+  ...(img ? { image: new URL(img.src, Astro.site).href } : {}),
+};
+---
+<section class="recipe" id={slug} aria-labelledby={`${slug}-title`}>
+  <header class="head">
+    <ShelfTag value={s?.protein_g_per_dollar} />
+    <div>
+      <H id={`${slug}-title`} class="title">{r.name}</H>
+      {r.description && <p class="desc">{r.description}</p>}
+    </div>
+  </header>
+
+  <dl class="stats">
+    <div><dt>Protein</dt><dd>{r.protein_g_per_serving} g</dd></div>
+    <div><dt>Calories</dt><dd>{num(r.kcal_per_serving)}</dd></div>
+    {s && <div><dt>Cost</dt><dd>{usd(s.cost_per_serving)}</dd></div>}
+    <div><dt>Makes</dt><dd>{r.servings} serving{r.servings > 1 ? 's' : ''}</dd></div>
+    {total > 0 && <div><dt>Time</dt><dd>{total} min</dd></div>}
+  </dl>
+  <p class="per small muted">Protein, calories and cost are per serving{hasOptional ? ', without the optional extras' : ''}.</p>
+
+  {img && (
+    <figure class="photo">
+      <Image src={img} alt={r.image_alt ?? ''} widths={[480, 800, 1120]} sizes="(min-width: 56rem) 56rem, 100vw" />
+      {r.image_credit && <figcaption class="small muted">{r.image_credit}</figcaption>}
+    </figure>
+  )}
+
+  <div class="cols">
+    <div>
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        {r.ingredients.map((i) => (
+          <li><span class="amt">{i.amount}</span> {i.label}</li>
+        ))}
+      </ul>
+    </div>
+    <div>
+      <h3>Method</h3>
+      <ol class="steps">
+        {(r.steps ?? []).map((step) => <li>{step}</li>)}
+      </ol>
+    </div>
+  </div>
+
+  {r.storage && (<><h3>Storing it</h3><p>{r.storage}</p></>)}
+  {r.tip && (<><h3>Make it cheaper</h3><p>{r.tip}</p></>)}
+
+  {s && <p class="small muted basis">{PRICE_BASIS}, checked {monthLabel(s.prices_checked)}. Your store's prices will differ.</p>}
+
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+</section>
+
+<style>
+  .recipe {
+    max-width: var(--wide);
+    margin: 3rem 0;
+    padding: 1.5rem 0 0;
+    border-top: 3px solid var(--ink);
+  }
+  .head { display: grid; grid-template-columns: auto 1fr; gap: 1.1rem; align-items: start; }
+  .title { margin: 0 0 0.35rem; font-size: var(--step-3); }
+  .desc { margin: 0; color: var(--muted); max-width: var(--measure); }
+  .stats {
+    display: flex; flex-wrap: wrap; gap: 0 2rem;
+    margin: 1.5rem 0 0.25rem; padding: 0.75rem 0;
+    border-block: 1px solid var(--rule);
+  }
+  .stats div { display: grid; }
+  .stats dt { font-size: var(--step--1); color: var(--muted); }
+  .stats dd { margin: 0; font-family: var(--display); font-weight: 750; font-size: var(--step-1); font-variant-numeric: tabular-nums; }
+  .per { margin: 0.4rem 0 1.5rem; }
+  .photo { margin: 0 0 1.5rem; max-width: 40rem; }
+  .photo :global(img) { border-radius: var(--radius); width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+  .photo figcaption { margin-top: 0.4rem; }
+  .cols { display: grid; grid-template-columns: minmax(14rem, 1fr) 2fr; gap: 0 2.5rem; }
+  .cols h3 { margin-top: 0.5rem; }
+  .ingredients { list-style: none; padding: 0; }
+  .ingredients li { padding: 0.3rem 0; border-bottom: 1px dotted var(--rule); margin: 0; }
+  .amt { font-family: var(--display); font-weight: 650; }
+  .steps { padding-left: 1.3rem; }
+  .steps li { padding-left: 0.3rem; margin-bottom: 0.7em; }
+  .steps li::marker { font-family: var(--display); font-weight: 800; color: var(--basil); }
+  .basis { margin-top: 1.5rem; }
+  @media (max-width: 44rem) {
+    .cols { grid-template-columns: 1fr; }
+    .head { grid-template-columns: 1fr; }
+  }
+</style>

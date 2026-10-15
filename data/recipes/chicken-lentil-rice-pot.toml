@@ -1,63 +1,94 @@
-# One-pot spiced chicken, red lentil & rice — 4 servings. Grams raw / as bought.
-name = "One-pot spiced chicken, red lentil & rice"
+# Grams raw / as bought.
+name = "One-pot spiced chicken, red lentils and rice"
+description = "Chicken, rice and red lentils simmered together with cumin and smoked paprika. Four dinners from one pot."
 servings = 4
+prep_minutes = 10
+cook_minutes = 35
+storage = "Keeps 4 days in the fridge. It thickens as it sits, so add a splash of water before reheating."
+tip = "Red lentils cook in the same time as white rice and do a lot of the protein work for very little money. If it looks dry before the rice is done, stir in another ½ cup of water."
+steps = [
+  "Heat the oil in a large pot over medium-high heat. Add the chicken with half the salt and brown it for about 5 minutes. It doesn't need to be cooked through yet.",
+  "Turn the heat to medium. Add the onion and cook 4 to 5 minutes until soft, then the garlic, cumin and paprika for 1 more minute.",
+  "Stir in the rice, lentils, tomatoes with their juice, the water and the rest of the salt. Bring it to a boil.",
+  "Cover, turn the heat to low and simmer 18 to 20 minutes, stirring once halfway so the lentils don't catch on the bottom.",
+  "Tip in the frozen peas, put the lid back on and leave it off the heat for 5 minutes. Taste for salt and pepper.",
+  "Divide between 4 containers.",
+]
 
 [[ingredients]]
 item = "chicken breast"
 grams = 600
-note = "frozen breasts, thawed and cut into bite-size pieces"
+amount = "1⅓ lb (600 g)"
+label = "chicken breast, cut into bite-size pieces"
 
 [[ingredients]]
 item = "olive oil"
 grams = 13.5
-note = "1 tbsp"
+amount = "1 tbsp"
+label = "olive oil"
 
 [[ingredients]]
 item = "onion"
 grams = 110
-note = "1 medium, diced"
+amount = "1 medium"
+label = "yellow onion, diced"
 
 [[ingredients]]
 item = "garlic"
 grams = 9
-note = "3 cloves, minced"
+amount = "3 cloves"
+label = "garlic, minced"
 
 [[ingredients]]
 item = "cumin ground"
 grams = 2
-note = "1 tsp"
+amount = "1 tsp"
+label = "ground cumin"
 
 [[ingredients]]
 item = "smoked paprika"
 grams = 2.3
-note = "1 tsp"
+amount = "1 tsp"
+label = "smoked paprika"
 
 [[ingredients]]
 item = "kosher salt"
 grams = 6
-note = "about 1 tsp, to taste"
+amount = "1 tsp"
+label = "kosher salt, divided"
 
 [[ingredients]]
 item = "black pepper"
 grams = 1
-note = "a few grinds"
+amount = "to taste"
+label = "black pepper"
 
 [[ingredients]]
 item = "white rice"
 grams = 200
-note = "1 cup, rinsed"
+amount = "1 cup"
+label = "long-grain white rice, rinsed"
 
 [[ingredients]]
 item = "red lentils"
 grams = 150
-note = "3/4 cup, rinsed"
+amount = "¾ cup"
+label = "red lentils, rinsed"
 
 [[ingredients]]
 item = "diced tomatoes canned"
 grams = 411
-note = "1 can (14.5 oz), with the juice"
+amount = "1 can (14.5 oz)"
+label = "diced tomatoes, with juice"
+
+[[ingredients]]
+item = "water"
+grams = 830
+amount = "3½ cups"
+label = "water"
 
 [[ingredients]]
 item = "frozen peas"
 grams = 150
-note = "1 cup, straight from frozen"
+amount = "1 cup"
+label = "frozen peas"

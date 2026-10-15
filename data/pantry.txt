@@ -1,0 +1,9 @@
+# Items most kitchens already have. Shopping lists show these separately instead of adding them to the checkout total.
+olive oil
+kosher salt
+black pepper
+cinnamon ground
+cumin ground
+smoked paprika
+baking powder
+butter salted

@@ -1,0 +1,116 @@
+/* Grams per Dollar — design tokens and base styles.
+   One bold element: the yellow shelf tag (.tag). Everything else stays quiet. */
+
+:root {
+  --paper: #fbfcfa;
+  --ink: #18211d;
+  --muted: #5a6560;
+  --rule: #dce1dd;
+  --basil: #2d6a47;
+  --basil-soft: #e4efe8;
+  --tag: #ffd23f;
+  --tag-ink: #18211d;
+
+  --display: 'Archivo Variable', 'Arial Narrow', system-ui, sans-serif;
+  --body: 'Source Serif 4 Variable', Georgia, 'Times New Roman', serif;
+
+  /* Type scale (1.25 ratio) */
+  --step--1: 0.85rem;
+  --step-0: 1.0625rem;
+  --step-1: 1.33rem;
+  --step-2: 1.66rem;
+  --step-3: clamp(1.9rem, 4.5vw, 2.6rem);
+  --step-4: clamp(2.3rem, 7vw, 3.6rem);
+
+  --measure: 38rem;
+  --wide: 56rem;
+  --gutter: 1rem;
+  --radius: 4px;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #121614;
+    --ink: #e7ece8;
+    --muted: #a3ada7;
+    --rule: #2b332f;
+    --basil: #82c79c;
+    --basil-soft: #1d2a23;
+    color-scheme: dark;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: var(--step-0);
+  line-height: 1.7;
+  font-optical-sizing: auto;
+}
+
+h1, h2, h3 {
+  font-family: var(--display);
+  font-stretch: 112%;
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+  margin: 2.2em 0 0.6em;
+  text-wrap: balance;
+}
+h1 { font-size: var(--step-4); margin-top: 0; }
+h2 { font-size: var(--step-2); }
+h3 { font-size: var(--step-1); font-weight: 700; }
+
+p, ul, ol { margin: 0 0 1.1em; }
+li + li { margin-top: 0.3em; }
+
+a { color: var(--basil); text-underline-offset: 0.18em; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+
+:focus-visible { outline: 3px solid var(--basil); outline-offset: 2px; border-radius: 2px; }
+
+img { max-width: 100%; height: auto; display: block; }
+
+table { border-collapse: collapse; width: 100%; font-size: var(--step--1); }
+th, td { text-align: left; padding: 0.55rem 0.5rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font-family: var(--display); font-weight: 650; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+.wrap { width: 100%; max-width: var(--wide); margin-inline: auto; padding-inline: var(--gutter); }
+.prose { max-width: var(--measure); }
+.muted { color: var(--muted); }
+.small { font-size: var(--step--1); }
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+/* The shelf tag: a US supermarket unit-price label, showing grams of protein per $1. */
+.tag {
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  align-items: end;
+  column-gap: 0.4rem;
+  background: var(--tag);
+  color: var(--tag-ink);
+  border-radius: 3px;
+  padding: 0.35rem 0.6rem 0.4rem;
+  font-family: var(--display);
+  line-height: 1;
+  box-shadow: inset 0 -3px 0 rgb(0 0 0 / 0.12);
+}
+.tag-number { font-size: 1.9rem; font-weight: 900; font-stretch: 125%; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
+.tag-unit { font-size: 0.72rem; font-weight: 600; line-height: 1.15; padding-bottom: 0.15rem; white-space: nowrap; }
+.tag-sm .tag-number { font-size: 1.3rem; }
+.tag-sm { padding: 0.25rem 0.45rem 0.3rem; }
+
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}

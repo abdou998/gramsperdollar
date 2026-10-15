@@ -1,30 +1,56 @@
 ---
 import Base from '../layouts/Base.astro';
+import ShelfTag from '../components/ShelfTag.astro';
 ---
 <Base
   title="About and how prices are checked"
-  description="How Grams per Dollar builds its meal prep plans and checks grocery prices."
+  description="Who runs Grams per Dollar, what the yellow protein-per-dollar tag means, and how recipe costs and nutrition are worked out."
 >
-  <h1>About Grams per Dollar</h1>
-  <p>
-    Grams per Dollar is a small, independent site about high-protein meal prep on a budget.
-  </p>
-  <p>
-    I'm into nutrition, and I hate overpaying for food. So I cook to get as much protein as
-    I can out of every dollar. The meals here are the ones that pass that test: filling,
-    high in protein, and cheap enough that you won't be tempted by takeout or pricey meal kits.
-  </p>
+  <div class="prose">
+    <h1>About Grams per Dollar</h1>
+    <p>
+      Grams per Dollar is a small, independent site about high-protein meal prep on a budget,
+      run by two people who cook most of what they eat at home.
+    </p>
+    <p>
+      We're into nutrition, and we hate overpaying for food. So we cook to get as much protein as
+      we can out of every dollar. The meals here are the ones that pass that test: filling,
+      high in protein, and cheap enough that you won't be tempted by takeout or pricey meal kits.
+    </p>
 
-  <h2>How prices are checked</h2>
-  <ul>
-    <li>Prices come from US grocery chains' own websites and apps.</li>
-    <li>They are shown as ranges, because prices differ by state and store.</li>
-    <li>Every page shows the month its prices were last checked.</li>
-  </ul>
+    <h2>What the yellow tag means</h2>
+    <p class="tag-row">
+      <ShelfTag value={27.6} />
+      <span>
+        It's grams of protein you get for each dollar spent on a recipe's ingredients. A meal with
+        50 g of protein that costs $2.00 scores 25. Higher is better value.
+      </span>
+    </p>
 
-  <h2>What this site is not</h2>
-  <p>
-    This site shares recipes, shopping lists and costs. It does not give medical, weight-loss
-    or supplement advice. If you have a health condition, talk to a doctor or registered dietitian.
-  </p>
+    <h2>How prices are checked</h2>
+    <ul>
+      <li>Prices come from US grocery chains' own websites. Right now that's Walmart.com, for a Sacramento, CA store.</li>
+      <li>We count only the amount a recipe uses, not the whole pack. A teaspoon of cumin costs a few cents, not the price of the jar.</li>
+      <li>Every recipe shows the month its prices were checked. We recheck them every few months.</li>
+      <li>Prices vary a lot between states and stores, so treat them as a guide to which meals are good value, not an exact bill.</li>
+    </ul>
+
+    <h2>Where the nutrition numbers come from</h2>
+    <p>
+      Protein and calories come from <a href="https://fdc.nal.usda.gov/">USDA FoodData Central</a>,
+      using raw weights. Branded products like protein powder use the product's own label, because
+      generic entries don't match real products well.
+    </p>
+
+    <h2>What this site is not</h2>
+    <p>
+      This site shares recipes, shopping lists and costs. It doesn't give medical, weight-loss
+      or supplement advice. If you have a health condition, talk to a doctor or registered dietitian.
+    </p>
+  </div>
 </Base>
+
+<style>
+  .tag-row { display: grid; grid-template-columns: auto 1fr; gap: 1rem; align-items: center; }
+  @media (max-width: 26rem) { .tag-row { grid-template-columns: 1fr; } }
+</style>

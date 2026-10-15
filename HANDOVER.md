@@ -1,6 +1,6 @@
 # Grams per Dollar — Handover
 
-_Last updated: 13 Oct 2026. This repo is **public**, so nothing private goes in here (accounts,
+_Last updated: 15 Oct 2026. This repo is **public**, so nothing private goes in here (accounts,
 emails, personal history). Private notes live in the owner's Claude project "side hustle"._
 
 ## 1. What this is
@@ -56,13 +56,19 @@ https://gramsperdollar.com  →  Google Search Console (domain property)
 
 | Path | What |
 |---|---|
-| `src/pages/` | One file = one public page. Currently `/` and `/about`. |
+| `src/pages/` | `index.astro` (home: protein-per-dollar ranking + latest posts), `about.astro`, `[slug].astro` (renders every post). |
+| `src/content/posts/` | Posts as `.md` (plain) or `.mdx` (can embed components). File name = URL. `_template.md` is never published. |
+| `src/components/` | `ShelfTag` (yellow g/$ tag), `RecipeCard` (full recipe + Recipe schema), `Leaderboard`, `PlanSummary` (week table + shopping list). |
+| `src/styles/global.css` | Design tokens: colours, type scale, the shelf tag. |
+| `docs/WRITING.md` | How to write and publish a post without coding. |
 | `src/layouts/Base.astro` | Shared layout + SEO tags. |
 | `src/assets/images/` | Images + `CREDITS.md` (every stock photo needs a visible credit caption). |
 | `src/data/recipes.json` | **Generated** by `tools/mealmath.py`. Pages read recipe numbers from here. |
 | `data/nutrition.csv` | Protein + kcal per 100 g (USDA FoodData Central; whey from the product label). |
 | `data/prices.csv` | One row per ingredient per store: pack size, price, month checked, URL. |
-| `data/recipes/*.toml` | One file per recipe: servings + grams per ingredient (`optional = true` for extras). |
+| `data/recipes/*.toml` | One file per recipe: servings, grams + display amount per ingredient, steps, storage, tip, image. |
+| `data/plans/*.toml` | Multi-day plans (which recipes, how many servings). Produces day totals + a shopping list. |
+| `data/pantry.txt`, `data/aisles.csv` | Pantry staples kept out of checkout totals; store aisle for each item. |
 | `tools/mealmath.py` | Calculates per-serving protein/kcal/cost and protein per dollar per store. |
 | `drafts/` | Unpublished writing (outside `src/pages`, so never deployed). |
 
@@ -84,8 +90,10 @@ git push                           # Cloudflare deploys in ~40 seconds
 | Lemon-rosemary grilled chicken & veg | 48.7 g | $3.72 | 13.1 g |
 | 31 g protein pancake | 31.8 g | $2.17 | 14.7 g |
 
-- ⏳ **Article #1 not written yet:** "High protein meal prep for one person". Waiting on the owner
-  cooking the one-pot recipe and filling the `[YOUR NOTE]` lines in `drafts/recipes.md`.
+- ✅ **Article #1 live:** `/high-protein-meal-prep-for-one` (3 recipes, 4-day plan, shopping list, prep timeline).
+  Written as recipe guidance; it doesn't claim the recipes were kitchen-tested. Add real cooking notes once they're made.
+- ✅ **Design system:** Archivo (display) + Source Serif 4 (body), shelf-tag yellow as the one bold element, dark mode, mobile tested.
+- 👥 **Second author:** a contributor will write 2–3 posts a week (see `docs/WRITING.md`).
 - 📋 First 10 articles planned (owner's project doc `meal-prep-site-first-10-articles.md`).
 
 ## 6. Content rules (non-negotiable)

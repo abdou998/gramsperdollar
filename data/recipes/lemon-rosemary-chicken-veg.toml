@@ -1,71 +1,98 @@
-# Lemon-rosemary grilled chicken with grilled squash + steamed veg — 2 servings.
-# Grams are raw / as bought. Olive oil counted in full (some marinade stays in the bowl,
-# so real calories are slightly lower).
-name = "Lemon-rosemary grilled chicken & veg"
+# Grams raw / as bought. Olive oil counted in full (some marinade stays in the bowl).
+name = "Lemon-rosemary chicken with grilled squash"
+description = "Juicy grilled chicken cutlets with squash, green beans and carrots. Two lunches, ready in about 40 minutes."
 servings = 2
+prep_minutes = 25
+cook_minutes = 15
+image = "grilled-chicken-vegetables-mark-deyoung-unsplash.jpg"
+image_alt = "Grilled chicken breast with grilled squash, carrots, green beans and lemon slices"
+image_credit = "Photo by Mark DeYoung on Unsplash."
+storage = "Keeps 3 to 4 days in the fridge. Store the pepper slices separately so they stay crisp. Reheat the chicken and squash; the beans and carrots are fine cold."
+tip = "Use 1½ tbsp of oil in total instead of 3. You save about 90 calories a serving and lose no protein. Dried rosemary (1 tsp) is cheaper than a fresh pack."
+steps = [
+  "Slice each chicken breast in half horizontally so you have thin cutlets that cook evenly.",
+  "Mix 2 tbsp of the oil with the lemon zest and juice, garlic, rosemary, salt and pepper. Turn the chicken in it and leave it 15 to 20 minutes while you do the vegetables (up to 2 hours in the fridge is fine).",
+  "Steam the green beans and carrots for 3 to 4 minutes, until they just lose their raw crunch. Rinse under cold water so they stop cooking and don't go soft by day three.",
+  "Heat a grill pan or heavy skillet until properly hot. Cook the chicken 4 to 5 minutes, flip, then 3 to 4 minutes more, until the thickest part reaches 165°F (74°C). Rest it 5 minutes.",
+  "Toss the squash with the last tablespoon of oil and a pinch of salt and pepper, then sear 2 to 3 minutes a side in the same pan.",
+  "Split everything between 2 containers, with the pepper slices in a small separate box.",
+]
 
 [[ingredients]]
 item = "chicken breast"
 grams = 400
-note = "2 boneless skinless breasts (~200 g each), butterflied into cutlets"
+amount = "2 breasts (about 14 oz)"
+label = "boneless skinless chicken breast"
 
 [[ingredients]]
 item = "olive oil"
 grams = 40.5
-note = "3 tbsp total: 2 for the marinade, 1 for the squash"
+amount = "3 tbsp"
+label = "olive oil, divided"
 
 [[ingredients]]
 item = "lemon juice and zest"
 grams = 50
-note = "juice + zest of 1 lemon"
+amount = "1"
+label = "lemon, zest and juice"
 
 [[ingredients]]
 item = "garlic"
 grams = 6
-note = "2 cloves, minced"
+amount = "2 cloves"
+label = "garlic, minced"
 
 [[ingredients]]
 item = "rosemary fresh"
 grams = 1.7
-note = "1 tbsp finely minced"
+amount = "1 tbsp"
+label = "fresh rosemary, finely chopped"
 
 [[ingredients]]
 item = "kosher salt"
 grams = 6
-note = "1 tsp + a pinch"
+amount = "1 tsp + a pinch"
+label = "kosher salt"
 
 [[ingredients]]
 item = "black pepper"
 grams = 1.5
-note = "1/2 tsp + a pinch"
+amount = "½ tsp + a pinch"
+label = "black pepper"
 
 [[ingredients]]
 item = "yellow squash"
 grams = 196
-note = "1 medium, 1/2-inch slices"
+amount = "1 medium"
+label = "yellow squash, cut into ½-inch rounds"
 
 [[ingredients]]
 item = "green beans"
 grams = 110
-note = "1 cup, trimmed"
+amount = "1 cup"
+label = "green beans, trimmed"
 
 [[ingredients]]
 item = "carrots"
 grams = 122
-note = "2 medium, cut into batons"
+amount = "2 medium"
+label = "carrots, cut into sticks"
 
 [[ingredients]]
 item = "red bell pepper"
 grams = 60
-note = "1/2 pepper, rings"
+amount = "½"
+label = "red bell pepper, sliced"
 
 [[ingredients]]
 item = "yellow bell pepper"
 grams = 60
-note = "1/2 pepper, rings"
+amount = "½"
+label = "yellow bell pepper, sliced"
 
 [[ingredients]]
 item = "eggplant"
 grams = 250
+amount = "1 small"
+label = "eggplant, sliced (optional, grill with the squash)"
 optional = true
-note = "1 small, sliced (optional)"

@@ -1,0 +1,21 @@
+# A 4-day plan for one person. `servings` = total servings of that recipe over the plan.
+name = "4-day high-protein meal prep for one"
+days = 4
+
+[[meals]]
+slot = "Breakfast"
+recipe = "protein-pancake"
+servings = 4
+note = "Made fresh each morning"
+
+[[meals]]
+slot = "Lunch"
+recipe = "lemon-rosemary-chicken-veg"
+servings = 4
+note = "Make the recipe twice (or double it) on prep day"
+
+[[meals]]
+slot = "Dinner"
+recipe = "chicken-lentil-rice-pot"
+servings = 4
+note = "One pot on prep day"

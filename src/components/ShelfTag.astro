@@ -1,0 +1,11 @@
+---
+// Yellow shelf tag showing grams of protein per $1 — the site's signature element.
+interface Props { value: number | null | undefined; size?: 'md' | 'sm' }
+const { value, size = 'md' } = Astro.props;
+---
+{value != null && (
+  <span class={size === 'sm' ? 'tag tag-sm' : 'tag'} role="img" aria-label={`${value} grams of protein per dollar`}>
+    <span class="tag-number" aria-hidden="true">{value}</span>
+    <span class="tag-unit" aria-hidden="true">g protein<br />per $1</span>
+  </span>
+)}

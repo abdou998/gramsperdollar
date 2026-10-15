@@ -1,0 +1,90 @@
+---
+title: "High-Protein Meal Prep for One Person (4 Days, ~$8 a Day)"
+description: "Four days of high-protein meals for one: a whey pancake, lemon chicken lunches and a one-pot lentil dinner, with costs, a shopping list and a prep plan."
+published: 2026-10-15
+---
+import PlanSummary from '../../components/PlanSummary.astro';
+import RecipeCard from '../../components/RecipeCard.astro';
+import { getPlan, usd, num } from '../../lib/data';
+export const plan = getPlan('meal-prep-for-one');
+export const st = plan.stores.Walmart;
+
+Cooking for one is awkward in a specific way. Chicken comes in 3 and 5 lb bags, recipes
+serve four or six, and by Thursday you're eating the same thing for the fifth time or
+throwing half of it out.
+
+This plan is built around those problems. It covers breakfast, lunch and dinner for four
+days, gives you about **{plan.per_day.protein_g} g of protein a day**, and costs about
+**{usd(st.cost_per_day)} a day** in ingredients. Two of the meals are made in one prep session;
+breakfast takes five minutes each morning.
+
+Every recipe below shows its protein per serving and what it costs, plus the yellow tag:
+**grams of protein you get for each dollar**. Higher is better value.
+
+## The four days at a glance
+
+Every day looks the same, which is the point of meal prep. If that's too repetitive,
+swap the lunch and dinner around or freeze two portions of the dinner for next week.
+
+<PlanSummary slug="meal-prep-for-one" part="week" />
+
+That's about {num(plan.per_day.kcal)} calories a day from these three meals. If you need more
+than that, add a snack rather than bigger portions: a cup of Greek yogurt, a couple of
+boiled eggs or a glass of milk all keep the protein per dollar high.
+
+## The prep session
+
+Plan on roughly an hour and a half. The trick is running the one-pot dinner and the
+lunch at the same time, so nothing sits waiting.
+
+1. **The night before:** move the chicken from the freezer to the fridge so it's thawed.
+2. **Start the dinner pot.** Brown the chicken pieces, then the onion and spices, then add
+   the rice, lentils, tomatoes and water. Once it's simmering with the lid on, leave it.
+3. **While it simmers, marinate the lunch chicken.** Slice the breasts into thin cutlets
+   and coat them in the lemon, garlic and rosemary mix.
+4. **Steam the green beans and carrots,** then rinse them under cold water and drain.
+5. **Finish the pot.** Stir in the frozen peas, put the lid back on and take it off the heat.
+6. **Grill the lunch chicken** in batches, then the squash in the same pan.
+7. **Portion everything** into 8 containers: 4 dinners, 4 lunches. Keep the bell pepper
+   slices in a separate small box so they stay crisp.
+8. **Optional:** measure the dry pancake ingredients (whey, baking powder, cinnamon) into
+   4 jars. Each morning, add an egg and milk and you're cooking in a minute.
+
+Cooked chicken and rice dishes keep 3 to 4 days in the fridge, so this plan stops at four days.
+If you want a fifth day, freeze one dinner portion on prep day and thaw it overnight.
+
+## Shopping list
+
+<PlanSummary slug="meal-prep-for-one" part="shopping" />
+
+The first shop looks expensive mainly because of the whey tub, which is 20 servings.
+After week one, you're buying chicken, vegetables and a few staples, and the checkout
+total drops a lot.
+
+## The recipes
+
+<RecipeCard slug="protein-pancake" />
+
+<RecipeCard slug="lemon-rosemary-chicken-veg" />
+
+<RecipeCard slug="chicken-lentil-rice-pot" />
+
+## Where the money goes
+
+Two things stand out in the numbers.
+
+**The dinner is the best value on the page.** It has about the same protein per serving as
+the grilled chicken lunch at roughly half the cost. Red lentils do a lot of that work:
+they cook in the same time as white rice and add protein for very little money.
+
+**The pancake's cost is almost all whey.** The egg, milk and banana add pennies; the scoop
+of isolate is most of the price. If you want breakfast cheaper, a less expensive whey
+concentrate is the biggest lever, at the cost of a few grams of protein.
+
+## How the numbers are worked out
+
+Protein and calories come from USDA FoodData Central, except the whey, which uses the
+product's own label. Costs use Walmart.com prices for Sacramento, CA, checked October 2026,
+and count only the amount each recipe uses, not the whole pack. Prices in your area will
+be different, so treat them as a guide to which meals are good value rather than an exact bill.
+[More on how prices are checked](/about).

@@ -1,16 +1,59 @@
 ---
+import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
+import Leaderboard from '../components/Leaderboard.astro';
+import { formatDate } from '../lib/data';
+
+const posts = (await getCollection('posts', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.published.valueOf() - a.data.published.valueOf());
+
+// Link each recipe on the leaderboard to the first post that features it.
+const links: Record<string, string> = {};
+for (const p of posts) {
+  const body = p.body ?? '';
+  const featured = [...p.data.recipes, ...[...body.matchAll(/RecipeCard slug="([^"]+)"/g)].map((m) => m[1])];
+  for (const slug of featured) links[slug] ??= `/${p.id}#${slug}`;
+}
 ---
 <Base
   title="Grams per Dollar"
-  description="High-protein meal prep on a budget: week plans, shopping lists, and the cost per gram of protein for every recipe."
+  description="High-protein meal prep on a budget. Every recipe shows protein per serving, cost per serving and how many grams of protein you get for each dollar."
 >
-  <h1>High-protein meal prep, priced by the gram</h1>
-  <p>
-    Every plan on this site shows two numbers most meal prep guides skip:
-    <strong>how much protein each serving gives you</strong> and
-    <strong>what it costs per gram</strong>. Plans are built around real constraints:
-    cooking for one, a tight weekly budget, no microwave, or one hour on a Sunday.
-  </p>
-  <p>The first guides are being written now.</p>
+  <section class="intro">
+    <h1>High-protein meals, priced by the gram</h1>
+    <p class="lede">
+      Every recipe here is costed at a real supermarket and shows how many grams of protein you get
+      for each dollar you spend. The higher the yellow number, the better the value.
+    </p>
+  </section>
+
+  <section aria-labelledby="best-value">
+    <h2 id="best-value" class="section-head">Best value right now</h2>
+    <Leaderboard links={links} />
+  </section>
+
+  <section aria-labelledby="latest">
+    <h2 id="latest" class="section-head">Latest</h2>
+    {posts.length === 0 && <p class="muted">The first guides are being written now.</p>}
+    <ul class="posts">
+      {posts.map((p) => (
+        <li>
+          <a class="post-title" href={`/${p.id}`}>{p.data.title}</a>
+          <p class="post-desc">{p.data.description}</p>
+          <p class="small muted"><time datetime={p.data.published.toISOString()}>{formatDate(p.data.published)}</time></p>
+        </li>
+      ))}
+    </ul>
+  </section>
 </Base>
+
+<style>
+  .intro { max-width: 46rem; margin-bottom: 2.5rem; }
+  .intro h1 { font-stretch: 118%; }
+  .lede { font-size: var(--step-1); line-height: 1.5; max-width: var(--measure); margin-top: 1rem; }
+  .section-head { font-size: var(--step-1); margin: 3rem 0 0.75rem; }
+  .posts { list-style: none; padding: 0; max-width: var(--measure); }
+  .posts li { padding: 1rem 0; border-top: 1px solid var(--rule); margin: 0; }
+  .post-title { font-family: var(--display); font-weight: 750; font-size: var(--step-1); line-height: 1.25; }
+  .post-desc { margin: 0.4rem 0 0.2rem; }
+</style>

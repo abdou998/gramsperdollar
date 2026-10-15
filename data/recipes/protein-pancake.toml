@@ -1,46 +1,68 @@
-# Protein pancake — single serving. Grams as weighed/bought.
-# Whey: Abdessamad uses whey ISOLATE, 25 g scoop. Protein per 100 g must come from the tub's label
-# (generic USDA whey entries don't match real isolates). See data/nutrition.csv.
+# Grams are as weighed/bought. `amount` is what readers see.
+# Whey: Dymatize ISO100, protein from the product label (see data/nutrition.csv).
 name = "31g-protein pancake"
+description = "One big whey pancake that takes five minutes and keeps you full until lunch."
 servings = 1
+prep_minutes = 3
+cook_minutes = 4
+image = "protein-pancakes-berries-fa-barboza-unsplash.jpg"
+image_alt = "A stack of golden pancakes topped with berries and chocolate spread"
+image_credit = "Photo by Fa Barboza on Unsplash. Shown with berries and chocolate spread, which aren't in this recipe."
+storage = "Best made fresh. You can mix the dry ingredients for the week in jars, so each morning is just egg, milk and a pan."
+tip = "The whey is about 80% of the cost. A cheaper whey concentrate works too, but check the label: you may get a few grams less protein."
+steps = [
+  "Whisk the whey, baking powder and cinnamon in a bowl, then add the egg and milk and whisk until smooth. It should look like thick pancake batter; add a splash more milk if it's stiff.",
+  "Heat a non-stick pan over medium heat and wipe it with a little butter.",
+  "Pour in the batter and cook about 2 minutes, until bubbles show on top and the edges look set.",
+  "Flip and cook 1 to 2 minutes more. Whey batter goes rubbery if you cook it hard, so keep the heat at medium.",
+  "Top with the sliced banana (and chopped dates if you're using them).",
+]
 
 [[ingredients]]
 item = "whey protein isolate"
 grams = 25
-note = "25 g whey isolate (Dymatize ISO100). Its official scoop is 30 g = 25 g protein; protein varies by brand."
+amount = "25 g (1 scoop)"
+label = "whey protein isolate"
 
 [[ingredients]]
 item = "baking powder"
 grams = 4.6
-note = "1 teaspoon"
+amount = "1 tsp"
+label = "baking powder"
 
 [[ingredients]]
 item = "egg whole"
 grams = 50
-note = "1 large egg"
+amount = "1 large"
+label = "egg"
 
 [[ingredients]]
 item = "milk whole"
 grams = 122
-note = "1/2 cup"
+amount = "½ cup"
+label = "whole milk"
 
 [[ingredients]]
 item = "cinnamon ground"
 grams = 0.5
-note = "a dash"
+amount = "a pinch"
+label = "ground cinnamon"
 
 [[ingredients]]
 item = "butter salted"
 grams = 4
-note = "for the pan"
+amount = "1 tsp"
+label = "butter, for the pan"
 
 [[ingredients]]
 item = "banana"
 grams = 59
-note = "half a medium banana"
+amount = "½ medium"
+label = "banana, sliced"
 
 [[ingredients]]
 item = "dates medjool"
 grams = 48
+amount = "2"
+label = "Medjool dates, chopped (optional)"
 optional = true
-note = "2 dates, chopped into the batter"

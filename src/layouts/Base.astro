@@ -1,16 +1,24 @@
 ---
-// Every page uses this layout. It handles the SEO basics once, so you never forget them:
-// title, meta description, canonical URL, social preview tags, and the sitemap link.
+// Every page uses this layout. It handles the SEO basics once:
+// title, meta description, canonical URL, social tags, sitemap link, and extra JSON-LD.
+import '@fontsource-variable/archivo/wdth.css';
+import '@fontsource-variable/source-serif-4/opsz.css';
+import '../styles/global.css';
+
 interface Props {
   title: string;        // shown in Google results — keep under ~60 characters
   description: string;  // the grey snippet under the title — keep under ~155 characters
+  type?: 'website' | 'article';
+  image?: string;       // absolute URL for social previews
+  jsonLd?: object[];
 }
-const { title, description } = Astro.props;
+const { title, description, type = 'website', image, jsonLd = [] } = Astro.props;
 // One clean address per page: /about (never /about.html), / for the homepage.
 const cleanPath = Astro.url.pathname.replace(/(index)?\.html$/, '').replace(/\/$/, '') || '/';
 const canonical = new URL(cleanPath, Astro.site);
 const siteName = 'Grams per Dollar';
 const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
+const path = cleanPath;
 ---
 <!doctype html>
 <html lang="en">
@@ -21,51 +29,64 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
     <link rel="sitemap" href="/sitemap-index.xml" />
-    <meta property="og:type" content="website" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta name="theme-color" content="#ffd23f" />
+    <meta property="og:type" content={type} />
     <meta property="og:site_name" content={siteName} />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
-    <meta name="twitter:card" content="summary" />
-    <style is:global>
-      :root {
-        --ink: #1d1f1c; --muted: #5d625a; --bg: #fbfaf6; --line: #e3e0d6; --accent: #2f6b3f;
-        font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-        color: var(--ink); background: var(--bg); line-height: 1.65;
-      }
-      @media (prefers-color-scheme: dark) {
-        :root { --ink: #ecebe5; --muted: #a9ada4; --bg: #161815; --line: #2c2f2a; --accent: #7cc28e; }
-      }
-      body { margin: 0; }
-      .wrap { max-width: 44rem; margin: 0 auto; padding: 0 1rem; }
-      header { border-bottom: 1px solid var(--line); }
-      header .wrap { display: flex; justify-content: space-between; align-items: center; padding-block: 1rem; }
-      header a { color: var(--ink); text-decoration: none; }
-      .logo { font-weight: 700; letter-spacing: -0.01em; }
-      nav a { margin-left: 1rem; color: var(--muted); }
-      main { padding-block: 2.5rem 4rem; }
-      h1 { font-size: clamp(1.8rem, 5vw, 2.4rem); line-height: 1.2; letter-spacing: -0.02em; }
-      a { color: var(--accent); }
-      table { border-collapse: collapse; width: 100%; }
-      th, td { border-bottom: 1px solid var(--line); padding: 0.5rem; text-align: left; }
-      footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
-      footer .wrap { padding-block: 1.5rem; }
-    </style>
+    {image && <meta property="og:image" content={image} />}
+    <meta name="twitter:card" content={image ? 'summary_large_image' : 'summary'} />
+    {jsonLd.map((d) => <script type="application/ld+json" set:html={JSON.stringify(d)} />)}
   </head>
   <body>
-    <header>
-      <div class="wrap">
-        <a class="logo" href="/">Grams per Dollar</a>
-        <nav><a href="/about">About</a></nav>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site">
+      <div class="wrap bar">
+        <a class="logo" href="/" aria-label="Grams per Dollar, home">
+          <span class="logo-mark" aria-hidden="true">g/$</span>
+          <span class="logo-word">Grams per Dollar</span>
+        </a>
+        <nav aria-label="Main">
+          <a href="/" aria-current={path === '/' ? 'page' : undefined}>Recipes</a>
+          <a href="/about" aria-current={path === '/about' ? 'page' : undefined}>About</a>
+        </nav>
       </div>
     </header>
-    <main class="wrap">
+    <main id="main" class="wrap">
       <slot />
     </main>
-    <footer>
+    <footer class="site">
       <div class="wrap">
-        Prices are approximate US ranges, checked on the date shown on each page. Not medical or dietary advice.
+        <p>
+          Prices are approximate, from one store's website, and dated on every recipe. Yours will differ.
+          This site shares recipes and costs. It isn't medical or dietary advice.
+        </p>
+        <p><a href="/about">How we check prices</a></p>
       </div>
     </footer>
   </body>
 </html>
+
+<style>
+  .skip { position: absolute; left: -999px; top: 0.5rem; background: var(--tag); color: var(--tag-ink); padding: 0.5rem 0.75rem; z-index: 10; }
+  .skip:focus { left: 0.5rem; }
+  header.site { border-bottom: 1px solid var(--rule); }
+  .bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 0.9rem; }
+  .logo { display: inline-flex; align-items: center; gap: 0.6rem; text-decoration: none; color: var(--ink); }
+  .logo-mark {
+    background: var(--tag); color: var(--tag-ink); border-radius: 3px;
+    font-family: var(--display); font-weight: 900; font-stretch: 125%; font-size: 0.95rem;
+    padding: 0.2rem 0.4rem; box-shadow: inset 0 -2px 0 rgb(0 0 0 / 0.12);
+  }
+  .logo-word { font-family: var(--display); font-weight: 800; font-stretch: 110%; font-size: 1.1rem; letter-spacing: -0.01em; }
+  nav { display: flex; gap: 1.25rem; font-family: var(--display); font-weight: 600; font-size: 0.95rem; }
+  nav a { color: var(--ink); text-decoration: none; padding-block: 0.25rem; }
+  nav a:hover, nav a[aria-current='page'] { box-shadow: inset 0 -2px 0 var(--basil); }
+  main { padding-block: 2.5rem 4rem; }
+  footer.site { border-top: 1px solid var(--rule); color: var(--muted); font-size: var(--step--1); }
+  footer.site .wrap { padding-block: 1.75rem 2.5rem; max-width: var(--wide); }
+  footer.site p { max-width: var(--measure); }
+  @media (max-width: 26rem) { .logo-word { display: none; } }
+</style>

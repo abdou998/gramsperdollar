@@ -1,0 +1,64 @@
+---
+import { getCollection, render } from 'astro:content';
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import RecipeCard from '../components/RecipeCard.astro';
+import { formatDate } from '../lib/data';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts', ({ data }) => !data.draft);
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const d = post.data;
+const canonical = new URL(`/${post.id}`, Astro.site).href;
+
+const articleLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: d.title,
+  description: d.description,
+  datePublished: d.published.toISOString(),
+  dateModified: (d.updated ?? d.published).toISOString(),
+  author: { '@type': d.author === 'Grams per Dollar' ? 'Organization' : 'Person', name: d.author },
+  publisher: { '@type': 'Organization', name: 'Grams per Dollar', url: Astro.site?.href },
+  mainEntityOfPage: canonical,
+  ...(d.hero ? { image: new URL(d.hero.src, Astro.site).href } : {}),
+};
+---
+<Base title={d.title} description={d.description} type="article"
+  image={d.hero ? new URL(d.hero.src, Astro.site).href : undefined} jsonLd={[articleLd]}>
+  <article>
+    <header class="post-head">
+      <h1>{d.title}</h1>
+      <p class="byline muted small">
+        By {d.author}. Published <time datetime={d.published.toISOString()}>{formatDate(d.published)}</time>
+        {d.updated && <>, updated <time datetime={d.updated.toISOString()}>{formatDate(d.updated)}</time></>}.
+      </p>
+    </header>
+    {d.hero && (
+      <figure class="hero">
+        <Image src={d.hero} alt={d.heroAlt ?? ''} widths={[480, 800, 1120]} sizes="(min-width: 56rem) 56rem, 100vw" loading="eager" />
+        {d.heroCredit && <figcaption class="small muted">{d.heroCredit}</figcaption>}
+      </figure>
+    )}
+    <div class="article-body">
+      <Content />
+    </div>
+    {d.recipes.map((slug) => <RecipeCard slug={slug} />)}
+  </article>
+</Base>
+
+<style>
+  .post-head { max-width: 46rem; }
+  .post-head h1 { font-size: var(--step-3); font-stretch: 108%; }
+  .byline { margin-top: -0.25rem; }
+  .hero { margin: 1.5rem 0 2rem; max-width: var(--wide); }
+  .hero :global(img) { border-radius: var(--radius); width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+  .hero figcaption { margin-top: 0.4rem; }
+  /* Prose stays at reading width; recipe cards and tables inside can go wider. */
+  .article-body > :global(:is(p, ul, ol, h2, h3, blockquote)) { max-width: var(--measure); }
+  .article-body :global(h2) { scroll-margin-top: 1rem; }
+</style>

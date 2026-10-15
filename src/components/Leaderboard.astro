@@ -1,0 +1,63 @@
+---
+// Recipes ranked by grams of protein per dollar. The homepage hero.
+import ShelfTag from './ShelfTag.astro';
+import { allRecipes, storeStats, usd, num, monthLabel, PRICE_BASIS } from '../lib/data';
+
+interface Props { links?: Record<string, string> } // recipe slug -> URL of the post that features it
+const { links = {} } = Astro.props;
+
+const rows = allRecipes()
+  .map((r) => ({ r, s: storeStats(r) }))
+  .filter((x) => x.s?.protein_g_per_dollar)
+  .sort((a, b) => b.s.protein_g_per_dollar! - a.s.protein_g_per_dollar!);
+const top = rows[0]?.s.protein_g_per_dollar ?? 1;
+const checked = rows.map((x) => x.s.prices_checked).filter(Boolean).sort()[0];
+---
+<ol class="board">
+  {rows.map(({ r, s }) => (
+    <li class="row">
+      <ShelfTag value={s.protein_g_per_dollar} size="sm" />
+      <div class="body">
+        {links[r.slug] ? <a class="name" href={links[r.slug]}>{r.name}</a> : <span class="name">{r.name}</span>}
+        <span class="bar" style={`--w:${(s.protein_g_per_dollar! / top) * 100}%`} aria-hidden="true"></span>
+        <span class="facts muted">
+          <span>{usd(s.cost_per_serving)} a serving</span>
+          <span>{Math.round(r.protein_g_per_serving)} g protein</span>
+          <span>{num(r.kcal_per_serving)} kcal</span>
+        </span>
+      </div>
+    </li>
+  ))}
+</ol>
+<p class="small muted">{PRICE_BASIS}, checked {monthLabel(checked)}. Protein from USDA FoodData Central and product labels.</p>
+
+<style>
+  .board { list-style: none; padding: 0; margin: 0 0 0.75rem; }
+  .row {
+    display: grid;
+    grid-template-columns: 7.25rem 1fr;
+    gap: 1rem;
+    align-items: start;
+    padding: 1rem 0;
+    border-top: 1px solid var(--rule);
+  }
+  .row:last-child { border-bottom: 1px solid var(--rule); }
+  .body { display: grid; gap: 0.35rem; min-width: 0; }
+  .name { font-family: var(--display); font-weight: 700; font-size: var(--step-1); line-height: 1.2; text-decoration: none; color: var(--ink); }
+  a.name { text-decoration: underline; text-decoration-color: var(--rule); text-decoration-thickness: 2px; }
+  a.name:hover { color: var(--basil); text-decoration-color: currentColor; }
+  .bar {
+    display: block; height: 0.5rem; border-radius: 1px;
+    background: var(--basil); width: var(--w);
+  }
+  .facts { display: flex; flex-wrap: wrap; gap: 0.15rem 1.1rem; font-size: var(--step--1); }
+  @media (prefers-reduced-motion: no-preference) {
+    .bar { animation: grow 900ms cubic-bezier(.2,.7,.2,1) both; transform-origin: left; }
+    .row:nth-child(2) .bar { animation-delay: 80ms; }
+    .row:nth-child(3) .bar { animation-delay: 160ms; }
+    @keyframes grow { from { transform: scaleX(0); } }
+  }
+  @media (max-width: 30rem) {
+    .row { grid-template-columns: 1fr; gap: 0.5rem; }
+  }
+</style>

@@ -1,0 +1,279 @@
+[
+  {
+    "name": "4-day high-protein meal prep for one",
+    "slug": "meal-prep-for-one",
+    "days": 4,
+    "meals": [
+      {
+        "slot": "Breakfast",
+        "recipe": "protein-pancake",
+        "name": "31g-protein pancake",
+        "servings": 4,
+        "note": "Made fresh each morning"
+      },
+      {
+        "slot": "Lunch",
+        "recipe": "lemon-rosemary-chicken-veg",
+        "name": "Lemon-rosemary chicken with grilled squash",
+        "servings": 4,
+        "note": "Make the recipe twice (or double it) on prep day"
+      },
+      {
+        "slot": "Dinner",
+        "recipe": "chicken-lentil-rice-pot",
+        "name": "One-pot spiced chicken, red lentils and rice",
+        "servings": 4,
+        "note": "One pot on prep day"
+      }
+    ],
+    "per_day": {
+      "protein_g": 130,
+      "kcal": 1418
+    },
+    "stores": {
+      "Walmart": {
+        "cost_per_day": 7.56,
+        "cost_total_used": 30.25,
+        "checkout_total": 84.29,
+        "buy": [
+          {
+            "item": "banana",
+            "aisle": "Produce",
+            "product": "Fresh Banana sold by weight ($0.50/lb)",
+            "grams_needed": 236,
+            "packs": 1,
+            "pack_price": 0.5,
+            "url": "https://www.walmart.com/search?q=fresh+bananas"
+          },
+          {
+            "item": "yellow bell pepper",
+            "aisle": "Produce",
+            "product": "Fresh Bell Peppers 3 count ($2.97; ~119 g each)",
+            "grams_needed": 120,
+            "packs": 1,
+            "pack_price": 0.99,
+            "url": "https://www.walmart.com/search?q=fresh+red+bell+pepper+each"
+          },
+          {
+            "item": "lemon juice and zest",
+            "aisle": "Produce",
+            "product": "Fresh Bulk Yellow Lemon each (regular price - on sale at $0.33; ~50 g juice + zest per lemon)",
+            "grams_needed": 100,
+            "packs": 2,
+            "pack_price": 0.68,
+            "url": "https://www.walmart.com/search?q=fresh+lemon+each"
+          },
+          {
+            "item": "red bell pepper",
+            "aisle": "Produce",
+            "product": "Fresh Red Bell Pepper each (~119 g)",
+            "grams_needed": 120,
+            "packs": 1,
+            "pack_price": 1.27,
+            "url": "https://www.walmart.com/search?q=fresh+red+bell+pepper+each"
+          },
+          {
+            "item": "rosemary fresh",
+            "aisle": "Produce",
+            "product": "Fresh Rosemary 0.5 oz Clamshell",
+            "grams_needed": 3,
+            "packs": 1,
+            "pack_price": 1.92,
+            "url": "https://www.walmart.com/search?q=fresh+rosemary"
+          },
+          {
+            "item": "carrots",
+            "aisle": "Produce",
+            "product": "Fresh Whole Carrots 2 lb Bag",
+            "grams_needed": 244,
+            "packs": 1,
+            "pack_price": 2.26,
+            "url": "https://www.walmart.com/search?q=fresh+whole+carrots+2+lb"
+          },
+          {
+            "item": "onion",
+            "aisle": "Produce",
+            "product": "Fresh Yellow Onions 3 lb Bag",
+            "grams_needed": 110,
+            "packs": 1,
+            "pack_price": 2.54,
+            "url": "https://www.walmart.com/search?q=fresh+yellow+onion+each"
+          },
+          {
+            "item": "yellow squash",
+            "aisle": "Produce",
+            "product": "Fresh Yellow Squash sold by weight ($1.42/lb)",
+            "grams_needed": 392,
+            "packs": 1,
+            "pack_price": 1.42,
+            "url": "https://www.walmart.com/search?q=yellow+squash+fresh"
+          },
+          {
+            "item": "garlic",
+            "aisle": "Produce",
+            "product": "Garlic Bulb Fresh Whole each (~40 g)",
+            "grams_needed": 21,
+            "packs": 1,
+            "pack_price": 0.64,
+            "url": "https://www.walmart.com/search?q=fresh+garlic"
+          },
+          {
+            "item": "green beans",
+            "aisle": "Produce",
+            "product": "Marketside Fresh Green Beans 12 oz",
+            "grams_needed": 220,
+            "packs": 1,
+            "pack_price": 2.68,
+            "url": "https://www.walmart.com/search?q=fresh+green+beans"
+          },
+          {
+            "item": "chicken breast",
+            "aisle": "Meat (frozen)",
+            "product": "Great Value All Natural Boneless Skinless Chicken Breasts 5 lb (Frozen)",
+            "grams_needed": 1400,
+            "packs": 1,
+            "pack_price": 14.94,
+            "url": "https://www.walmart.com/search?q=great+value+boneless+skinless+chicken+breasts"
+          },
+          {
+            "item": "egg whole",
+            "aisle": "Dairy and eggs",
+            "product": "Great Value Cage-Free Large White Eggs 12 count (12 x 50 g edible)",
+            "grams_needed": 200,
+            "packs": 1,
+            "pack_price": 1.67,
+            "url": "https://www.walmart.com/search?q=great+value+large+white+eggs"
+          },
+          {
+            "item": "milk whole",
+            "aisle": "Dairy and eggs",
+            "product": "Great Value Whole Vitamin D Milk 1 gallon (~3900 g)",
+            "grams_needed": 488,
+            "packs": 1,
+            "pack_price": 3.68,
+            "url": "https://www.walmart.com/search?q=great+value+whole+milk+gallon"
+          },
+          {
+            "item": "frozen peas",
+            "aisle": "Frozen",
+            "product": "Great Value Sweet Peas 12 oz (Frozen)",
+            "grams_needed": 150,
+            "packs": 1,
+            "pack_price": 0.98,
+            "url": "https://www.walmart.com/search?q=great+value+frozen+sweet+peas"
+          },
+          {
+            "item": "white rice",
+            "aisle": "Dry goods and cans",
+            "product": "Great Value Long Grain Enriched Rice 32 oz",
+            "grams_needed": 200,
+            "packs": 1,
+            "pack_price": 1.82,
+            "url": "https://www.walmart.com/search?q=great+value+long+grain+white+rice"
+          },
+          {
+            "item": "diced tomatoes canned",
+            "aisle": "Dry goods and cans",
+            "product": "Great Value Petite Diced Tomatoes in Tomato Juice 14.5 oz",
+            "grams_needed": 411,
+            "packs": 1,
+            "pack_price": 0.96,
+            "url": "https://www.walmart.com/search?q=great+value+diced+tomatoes+14.5+oz"
+          },
+          {
+            "item": "red lentils",
+            "aisle": "Dry goods and cans",
+            "product": "Great Value Red Lentils 1 lb",
+            "grams_needed": 150,
+            "packs": 1,
+            "pack_price": 2.18,
+            "url": "https://www.walmart.com/search?q=red+lentils"
+          },
+          {
+            "item": "whey protein isolate",
+            "aisle": "Protein powder",
+            "product": "Dymatize ISO100 Hydrolyzed Whey Isolate Gourmet Vanilla 20 servings (20 x 30 g; regular price - was on sale at $40.00)",
+            "grams_needed": 100,
+            "packs": 1,
+            "pack_price": 42.48,
+            "url": "https://www.walmart.com/ip/189797385"
+          }
+        ],
+        "pantry": [
+          {
+            "item": "baking powder",
+            "aisle": "Baking",
+            "product": "Great Value Double Acting Baking Powder 8.1 oz",
+            "grams_needed": 18,
+            "packs": 1,
+            "pack_price": 2.18,
+            "url": "https://www.walmart.com/search?q=great+value+baking+powder"
+          },
+          {
+            "item": "black pepper",
+            "aisle": "Oils and spices",
+            "product": "Great Value Ground Black Pepper 3 oz",
+            "grams_needed": 4,
+            "packs": 1,
+            "pack_price": 3.58,
+            "url": "https://www.walmart.com/search?q=great+value+ground+black+pepper"
+          },
+          {
+            "item": "butter salted",
+            "aisle": "Dairy and eggs",
+            "product": "Great Value Sweet Cream Salted Butter 4 sticks 16 oz",
+            "grams_needed": 16,
+            "packs": 1,
+            "pack_price": 3.06,
+            "url": "https://www.walmart.com/search?q=great+value+salted+butter+sticks"
+          },
+          {
+            "item": "cinnamon ground",
+            "aisle": "Oils and spices",
+            "product": "Great Value Kosher Ground Cinnamon 2.5 oz",
+            "grams_needed": 2,
+            "packs": 1,
+            "pack_price": 1.27,
+            "url": "https://www.walmart.com/search?q=great+value+ground+cinnamon"
+          },
+          {
+            "item": "cumin ground",
+            "aisle": "Oils and spices",
+            "product": "Great Value Ground Cumin 4.5 oz",
+            "grams_needed": 2,
+            "packs": 1,
+            "pack_price": 4.37,
+            "url": "https://www.walmart.com/search?q=great+value+ground+cumin"
+          },
+          {
+            "item": "kosher salt",
+            "aisle": "Oils and spices",
+            "product": "Great Value Coarse Kosher Salt 48 oz",
+            "grams_needed": 18,
+            "packs": 1,
+            "pack_price": 2.97,
+            "url": "https://www.walmart.com/search?q=great+value+kosher+salt"
+          },
+          {
+            "item": "olive oil",
+            "aisle": "Oils and spices",
+            "product": "Great Value Extra Virgin Olive Oil 17 fl oz (~457 g)",
+            "grams_needed": 94,
+            "packs": 1,
+            "pack_price": 6.12,
+            "url": "https://www.walmart.com/search?q=great+value+extra+virgin+olive+oil"
+          },
+          {
+            "item": "smoked paprika",
+            "aisle": "Oils and spices",
+            "product": "Great Value Smoked Paprika 2 oz",
+            "grams_needed": 2,
+            "packs": 1,
+            "pack_price": 2.14,
+            "url": "https://www.walmart.com/search?q=great+value+smoked+paprika"
+          }
+        ]
+      }
+    }
+  }
+]
