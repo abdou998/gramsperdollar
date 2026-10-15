@@ -1,0 +1,352 @@
+---
+// Private writing page for contributors. Not in the sitemap, marked noindex.
+// The page itself is just a form; the password check and saving happen in worker/index.ts.
+import Base from '../layouts/Base.astro';
+import { tagNames } from '../lib/taxonomy';
+
+const meals = [
+  ['breakfast', 'Breakfast'], ['lunch', 'Lunch'], ['dinner', 'Dinner'], ['snack', 'Snack'],
+];
+const styles = ['one-pot', 'sheet-pan', 'freezer-friendly', 'no-cook', 'vegetarian', 'air-fryer', 'slow-cooker', 'grilled', 'low-carb', '5-minute', 'single-serve'];
+---
+<Base title="Write a recipe" description="Private page for sending recipes to Grams per Dollar." noindex>
+  <div class="write">
+    <h1>Write a recipe</h1>
+
+    <p id="loading" class="muted">Loading…</p>
+
+    <form id="login" class="card" hidden>
+      <label for="password">Password</label>
+      <div class="row">
+        <input id="password" name="password" type="password" autocomplete="current-password" required />
+        <button type="submit" class="btn">Log in</button>
+      </div>
+      <p class="error" role="alert" hidden></p>
+    </form>
+
+    <div id="sent" class="card done" hidden>
+      <h2>Sent</h2>
+      <p>Your recipe is with us. We'll add the prices and protein numbers, then publish it and let you know.</p>
+      <button type="button" class="btn" id="another">Write another</button>
+    </div>
+
+    <form id="recipe" hidden novalidate>
+      <p class="lede">
+        Write it the way you'd tell a friend. Don't worry about prices, protein or calories;
+        we work those out. Your writing saves on this phone as you go.
+      </p>
+
+      <fieldset>
+        <label for="title" class="q">What's it called?</label>
+        <p class="hint">Say what it is, the way someone would search for it. "Chicken burrito bowls" beats "Tuesday bowls".</p>
+        <input id="title" name="title" maxlength="90" required autocomplete="off" />
+      </fieldset>
+
+      <fieldset>
+        <legend class="q">Which meal is it?</legend>
+        <div class="chips">
+          {meals.map(([v, l]) => (
+            <label class="chip"><input type="radio" name="meal" value={v} required /><span>{l}</span></label>
+          ))}
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend class="q">Anything else true about it?</legend>
+        <p class="hint">Tick all that fit. Skip if none do.</p>
+        <div class="chips">
+          {styles.map((v) => (
+            <label class="chip"><input type="checkbox" name="tags" value={v} /><span>{tagNames[v] ?? v}</span></label>
+          ))}
+        </div>
+      </fieldset>
+
+      <fieldset class="numbers">
+        <legend class="q">How much and how long?</legend>
+        <label>Serves <input name="servings" type="number" inputmode="numeric" min="1" max="20" /></label>
+        <label>Prep, min <input name="prep_minutes" type="number" inputmode="numeric" min="0" max="600" /></label>
+        <label>Cook, min <input name="cook_minutes" type="number" inputmode="numeric" min="0" max="900" /></label>
+      </fieldset>
+
+      <fieldset>
+        <legend class="q">Photos</legend>
+        <p class="hint">Up to 6. The first one is the main photo; tap another one to make it the main. They're shrunk on your phone before sending.</p>
+        <label class="pick">
+          <input id="photo-input" type="file" accept="image/*" multiple />
+          <span>Add photos</span>
+        </label>
+        <ul id="thumbs" class="thumbs"></ul>
+        <div id="photo-source" hidden>
+          <label class="check"><input type="checkbox" name="own_photos" value="yes" checked /> I took these photos</label>
+          <div id="credit-wrap" hidden>
+            <label for="photo_credit">Who took them, and where are they from?</label>
+            <input id="photo_credit" name="photo_credit" placeholder="Jane Doe on Unsplash" />
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <label for="intro" class="q">Tell people about it</label>
+        <p class="hint">A few sentences. Why you make it, what it tastes like, how it keeps in the fridge, what you'd change next time.</p>
+        <textarea id="intro" name="intro" rows="5"></textarea>
+      </fieldset>
+
+      <fieldset>
+        <label for="ingredients" class="q">Ingredients</label>
+        <p class="hint">One per line, with amounts. Grams are best, cups and spoons are fine.</p>
+        <textarea id="ingredients" name="ingredients" rows="8" required placeholder={"500 g chicken breast\n1 cup white rice\n2 tbsp olive oil\n1 lemon"}></textarea>
+      </fieldset>
+
+      <fieldset>
+        <label for="steps" class="q">How to make it</label>
+        <p class="hint">One step per line, in order.</p>
+        <textarea id="steps" name="steps" rows="8" required placeholder={"Cook the rice.\nSeason the chicken and pan-fry it for 6 minutes a side.\nSlice and split into 4 boxes."}></textarea>
+      </fieldset>
+
+      <fieldset>
+        <label for="tips" class="q">Tips <span class="optional">(optional)</span></label>
+        <p class="hint">Swaps, how long it keeps, how to reheat it, how to make it cheaper.</p>
+        <textarea id="tips" name="tips" rows="4"></textarea>
+      </fieldset>
+
+      <fieldset>
+        <label for="author" class="q">Your name on the post</label>
+        <input id="author" name="author" maxlength="60" required autocomplete="name" />
+      </fieldset>
+
+      <div class="send">
+        <p class="error" role="alert" hidden></p>
+        <button type="submit" class="btn big">Send recipe</button>
+        <p class="small muted" id="saved" aria-live="polite"></p>
+      </div>
+      <p class="small"><button type="button" class="link" id="logout">Log out</button></p>
+    </form>
+  </div>
+</Base>
+
+<script>
+  const $ = <T extends HTMLElement>(s: string) => document.querySelector(s) as T;
+  const loginForm = $<HTMLFormElement>('#login');
+  const form = $<HTMLFormElement>('#recipe');
+  const sent = $('#sent');
+  const DRAFT = 'gpd-write-draft';
+  const NAME = 'gpd-write-name';
+  let photos: { blob: Blob; url: string }[] = [];
+
+  const store = {
+    get(k: string) { try { return localStorage.getItem(k); } catch { return null; } },
+    set(k: string, v: string) { try { localStorage.setItem(k, v); } catch {} },
+    del(k: string) { try { localStorage.removeItem(k); } catch {} },
+  };
+
+  function show(el: HTMLElement | null) {
+    for (const x of [loginForm, form, sent, $('#loading')]) x.hidden = x !== el;
+  }
+  function error(scope: HTMLElement, msg = '') {
+    const e = scope.querySelector('.error') as HTMLElement;
+    e.textContent = msg; e.hidden = !msg;
+  }
+
+  // ---- session ----
+  async function start() {
+    try {
+      const r = await fetch('/api/session');
+      const s = await r.json();
+      if (!s.configured) { show(null); $('#loading').hidden = false; $('#loading').textContent = 'This page isn’t switched on yet. Ask Abdessamad to finish the setup.'; return; }
+      if (s.loggedIn) openForm(); else show(loginForm);
+    } catch {
+      $('#loading').textContent = 'Couldn’t reach the server. Check your connection and reload.';
+    }
+  }
+
+  loginForm.addEventListener('submit', async (ev) => {
+    ev.preventDefault();
+    error(loginForm);
+    const btn = loginForm.querySelector('button')!;
+    btn.disabled = true;
+    const r = await fetch('/api/login', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ password: ($('#password') as HTMLInputElement).value }) }).catch(() => null);
+    btn.disabled = false;
+    if (r?.ok) { openForm(); return; }
+    const d = await r?.json().catch(() => ({}));
+    error(loginForm, d?.error ?? 'Couldn’t reach the server. Try again.');
+  });
+
+  $('#logout').addEventListener('click', async () => {
+    await fetch('/api/logout', { method: 'POST' });
+    show(loginForm);
+  });
+
+  // ---- draft autosave (text only; photos stay in memory) ----
+  function openForm() {
+    show(form);
+    const draft = JSON.parse(store.get(DRAFT) ?? 'null');
+    if (draft) {
+      for (const [k, v] of Object.entries(draft)) {
+        const els = form.querySelectorAll<HTMLInputElement>(`[name="${k}"]`);
+        els.forEach((el) => {
+          if (el.type === 'radio' || el.type === 'checkbox') el.checked = Array.isArray(v) ? v.includes(el.value) : v === el.value;
+          else el.value = String(v);
+        });
+      }
+      $('#saved').textContent = 'Picked up where you left off.';
+    }
+    const name = store.get(NAME);
+    if (name && !($('#author') as HTMLInputElement).value) ($('#author') as HTMLInputElement).value = name;
+    syncCredit();
+  }
+
+  let timer: number | undefined;
+  form.addEventListener('input', () => {
+    clearTimeout(timer);
+    timer = window.setTimeout(() => {
+      const data: Record<string, unknown> = {};
+      for (const [k, v] of new FormData(form)) {
+        if (v instanceof File) continue;
+        if (k === 'tags') ((data.tags as string[]) ??= []).push(String(v));
+        else data[k] = v;
+      }
+      if (!data.own_photos) data.own_photos = '';
+      store.set(DRAFT, JSON.stringify(data));
+      $('#saved').textContent = 'Saved on this phone.';
+    }, 600);
+  });
+
+  // ---- photos ----
+  async function shrink(file: File): Promise<Blob> {
+    const bmp = await createImageBitmap(file, { imageOrientation: 'from-image' } as ImageBitmapOptions);
+    const scale = Math.min(1, 1800 / Math.max(bmp.width, bmp.height));
+    const c = document.createElement('canvas');
+    c.width = Math.round(bmp.width * scale); c.height = Math.round(bmp.height * scale);
+    c.getContext('2d')!.drawImage(bmp, 0, 0, c.width, c.height);
+    return new Promise((res, rej) => c.toBlob((b) => (b ? res(b) : rej()), 'image/jpeg', 0.82));
+  }
+
+  function drawThumbs() {
+    const ul = $('#thumbs');
+    ul.innerHTML = '';
+    photos.forEach((p, i) => {
+      const li = document.createElement('li');
+      li.innerHTML = `
+        <button type="button" class="thumb" aria-label="${i === 0 ? 'Main photo' : `Make photo ${i + 1} the main photo`}">
+          <img src="${p.url}" alt="" />${i === 0 ? '<span class="thumb-main">Main</span>' : ''}
+        </button>
+        <button type="button" class="remove" aria-label="Remove photo ${i + 1}">Remove</button>`;
+      li.querySelector('.thumb')!.addEventListener('click', () => { photos.unshift(...photos.splice(i, 1)); drawThumbs(); });
+      li.querySelector('.remove')!.addEventListener('click', () => { URL.revokeObjectURL(p.url); photos.splice(i, 1); drawThumbs(); });
+      ul.append(li);
+    });
+    $('#photo-source').hidden = photos.length === 0;
+  }
+
+  $('#photo-input').addEventListener('change', async (ev) => {
+    const input = ev.target as HTMLInputElement;
+    const files = [...(input.files ?? [])].slice(0, 6 - photos.length);
+    input.value = '';
+    for (const f of files) {
+      try { const blob = await shrink(f); photos.push({ blob, url: URL.createObjectURL(blob) }); }
+      catch { error(form, `Couldn’t open ${f.name}. Try a JPG or PNG.`); }
+    }
+    drawThumbs();
+  });
+
+  function syncCredit() {
+    const own = (form.querySelector('[name="own_photos"]') as HTMLInputElement).checked;
+    $('#credit-wrap').hidden = own;
+  }
+  form.querySelector('[name="own_photos"]')!.addEventListener('change', syncCredit);
+
+  // ---- send ----
+  form.addEventListener('submit', async (ev) => {
+    ev.preventDefault();
+    error(form);
+    const fd = new FormData(form);
+    const missing = [];
+    if (String(fd.get('title') ?? '').trim().length < 4) missing.push('a title');
+    if (!fd.get('meal')) missing.push('the meal');
+    if (String(fd.get('ingredients') ?? '').trim().split('\n').filter(Boolean).length < 2) missing.push('the ingredients');
+    if (String(fd.get('steps') ?? '').trim().split('\n').filter(Boolean).length < 2) missing.push('the steps');
+    if (!String(fd.get('author') ?? '').trim()) missing.push('your name');
+    if (missing.length) { error(form, `Still needed: ${missing.join(', ')}.`); return; }
+
+    photos.forEach((p, i) => fd.append('photos', p.blob, `photo-${i + 1}.jpg`));
+    const btn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+    btn.disabled = true; btn.textContent = 'Sending…';
+    const r = await fetch('/api/submit', { method: 'POST', body: fd }).catch(() => null);
+    btn.disabled = false; btn.textContent = 'Send recipe';
+    const d = await r?.json().catch(() => ({}));
+    if (r?.ok) {
+      store.set(NAME, String(fd.get('author')));
+      store.del(DRAFT);
+      form.reset(); photos = []; drawThumbs();
+      show(sent); window.scrollTo(0, 0);
+      return;
+    }
+    if (d?.loggedOut) { show(loginForm); error(loginForm, d.error); return; }
+    error(form, d?.error ?? 'Couldn’t send. Check your connection; your writing is still here.');
+  });
+
+  $('#another').addEventListener('click', () => { openForm(); window.scrollTo(0, 0); });
+
+  start();
+</script>
+
+<style>
+  .write { max-width: 40rem; }
+  h1 { font-size: var(--step-3); margin-bottom: 1rem; }
+  .lede { margin: 0 0 2rem; }
+  .card { border: 1px solid var(--rule); border-radius: var(--radius); padding: 1.25rem; }
+  .done h2 { margin-top: 0; }
+
+  fieldset { border: 0; margin: 0 0 2rem; padding: 0; min-width: 0; }
+  .q { display: block; font-family: var(--display); font-weight: 750; font-size: var(--step-1); line-height: 1.3; padding: 0; margin-bottom: 0.25rem; }
+  .optional { font-weight: 500; color: var(--muted); font-size: var(--step-0); }
+  .hint { color: var(--muted); font-size: var(--step--1); margin: 0 0 0.6rem; line-height: 1.5; }
+
+  input:not([type='radio']):not([type='checkbox']):not([type='file']), textarea {
+    width: 100%; font: inherit; font-size: 1rem; color: var(--ink); background: var(--paper);
+    border: 1px solid var(--muted); border-radius: var(--radius); padding: 0.6rem 0.7rem;
+  }
+  textarea { line-height: 1.55; resize: vertical; }
+  input:focus-visible, textarea:focus-visible, button:focus-visible, .chip input:focus-visible + span, .pick input:focus-visible + span {
+    outline: 3px solid var(--basil); outline-offset: 2px;
+  }
+  .row { display: flex; gap: 0.5rem; margin-top: 0.4rem; }
+
+  .chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .chip { position: relative; }
+  .chip input { position: absolute; opacity: 0; inset: 0; margin: 0; }
+  .chip span {
+    display: inline-block; font-family: var(--display); font-weight: 600; font-size: 0.95rem;
+    padding: 0.5rem 0.85rem; border: 1px solid var(--rule); border-radius: 999px; cursor: pointer; user-select: none;
+  }
+  .chip input:checked + span { background: var(--tag); color: var(--tag-ink); border-color: var(--tag); }
+
+  .numbers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; }
+  .numbers legend { grid-column: 1 / -1; }
+  .numbers label { font-family: var(--display); font-size: 0.9rem; font-weight: 600; }
+  .numbers input { margin-top: 0.3rem; }
+
+  .pick { display: inline-block; position: relative; }
+  .pick input { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+  .pick span { display: inline-block; border: 1px dashed var(--muted); border-radius: var(--radius); padding: 0.7rem 1.1rem; font-family: var(--display); font-weight: 650; }
+  .thumbs { list-style: none; padding: 0; margin: 1rem 0 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(6.5rem, 1fr)); gap: 0.75rem; }
+  :global(.thumbs li) { margin: 0; }
+  :global(.thumb) { position: relative; display: block; width: 100%; aspect-ratio: 1; padding: 0; border: 0; border-radius: var(--radius); overflow: hidden; cursor: pointer; background: var(--rule); }
+  :global(.thumb img) { width: 100%; height: 100%; object-fit: cover; display: block; }
+  :global(.thumb-main) { position: absolute; left: 0.3rem; top: 0.3rem; background: var(--tag); color: var(--tag-ink); font-family: var(--display); font-weight: 750; font-size: 0.75rem; padding: 0.1rem 0.4rem; border-radius: 3px; }
+  :global(.remove), .link { background: none; border: 0; padding: 0.3rem 0; color: var(--muted); font: inherit; font-size: var(--step--1); text-decoration: underline; cursor: pointer; }
+  .check { display: flex; gap: 0.5rem; align-items: center; margin: 1rem 0 0.5rem; }
+  .check input { width: 1.15rem; height: 1.15rem; }
+  #credit-wrap label { display: block; font-size: var(--step--1); margin-bottom: 0.3rem; }
+
+  .btn {
+    font-family: var(--display); font-weight: 750; font-size: 1rem; cursor: pointer;
+    background: var(--tag); color: var(--tag-ink); border: 0; border-radius: var(--radius);
+    padding: 0.65rem 1.1rem; box-shadow: inset 0 -3px 0 rgb(0 0 0 / 0.14); white-space: nowrap;
+  }
+  .btn:disabled { opacity: 0.6; cursor: progress; }
+  .btn.big { width: 100%; font-size: var(--step-1); padding: 0.9rem; }
+  .send { border-top: 1px solid var(--rule); padding-top: 1.5rem; }
+  .error { color: #b3261e; font-family: var(--display); font-weight: 600; margin: 0 0 0.75rem; }
+  @media (prefers-color-scheme: dark) { .error { color: #ff8a80; } }
+</style>

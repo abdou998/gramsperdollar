@@ -48,15 +48,23 @@ https://gramsperdollar.com  →  Google Search Console (domain property)
 ```
 
 - **Framework:** Astro 7, fully static. `astro.config.mjs` sets `site`, clean URLs (`/about`, not `/about.html`) and the sitemap.
-- **Hosting config:** `wrangler.jsonc` serves `dist/` as static assets. workers.dev URLs are **disabled** (avoids duplicate copies of the site).
+- **Hosting config:** `wrangler.jsonc` serves `dist/` as static assets. Only `/api/*` runs code (`worker/index.ts`), for the private writing page. workers.dev URLs are **disabled** (avoids duplicate copies of the site).
 - **SEO basics in place:** per-page title and meta description, canonical URLs (`src/layouts/Base.astro`), `public/robots.txt`, auto sitemap at `/sitemap-index.xml` (submitted to Search Console).
 - **Domain:** registered at Cloudflare Registrar, auto-renew on. Search Console verified through Cloudflare DNS — **don't delete that TXT record**.
+
+- **Private writing page:** `/write` (noindex, not in the sitemap). Password login → recipe + photos are committed to
+  `submissions/<date>-<slug>/` in one commit through the GitHub API. Nothing goes live until it's priced and turned
+  into a recipe (steps in `submissions/README.md`). Needs two Worker secrets set in the Cloudflare dashboard:
+  `WRITER_PASSWORD` and `GITHUB_TOKEN` (fine-grained, this repo only, Contents read/write; expires, renew it).
+  Local testing: `.dev.vars` (git-ignored) + `npx wrangler dev`.
 
 ## 4. Repo map
 
 | Path | What |
 |---|---|
 | `src/pages/` | `index.astro` (home), `about.astro`, `[slug].astro` (posts), `recipes/index.astro` (all recipes by meal), `recipes/[slug].astro` (one page per recipe, Recipe + Breadcrumb schema), `recipes/[facet]/[value].astro` (category pages). |
+| `worker/index.ts` | The small server for `/api/*`: login, session cookie, and committing submissions to GitHub. |
+| `submissions/` | Recipes sent from `/write`, waiting to be priced. Not read by the site. |
 | `src/content/posts/` | Posts as `.md` (plain) or `.mdx` (can embed components). File name = URL. `_template.md` is never published. |
 | `src/components/` | `ShelfTag` (yellow g/$ tag), `RecipeCard` (full recipe + Recipe schema), `Leaderboard`, `PlanSummary` (week table + shopping list). |
 | `src/lib/taxonomy.ts` | Category rules (meal, protein band, cost band, store, style). A category page only exists once it has 3+ recipes and differs from /recipes — avoids thin pages. |

@@ -11,8 +11,9 @@ interface Props {
   type?: 'website' | 'article';
   image?: string;       // absolute URL for social previews
   jsonLd?: object[];
+  noindex?: boolean;    // private pages: keep out of Google
 }
-const { title, description, type = 'website', image, jsonLd = [] } = Astro.props;
+const { title, description, type = 'website', image, jsonLd = [], noindex = false } = Astro.props;
 // One clean address per page: /about (never /about.html), / for the homepage.
 const cleanPath = Astro.url.pathname.replace(/(index)?\.html$/, '').replace(/\/$/, '') || '/';
 const canonical = new URL(cleanPath, Astro.site);
@@ -27,7 +28,7 @@ const path = cleanPath;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
-    <link rel="canonical" href={canonical} />
+    {noindex ? <meta name="robots" content="noindex, nofollow" /> : <link rel="canonical" href={canonical} />}
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <meta name="theme-color" content="#ffd23f" />

@@ -17,7 +17,7 @@ type Facet = {
 
 const meals: Record<string, string> = { breakfast: 'Breakfast', lunch: 'Lunch', dinner: 'Dinner', snack: 'Snack' };
 
-const tagNames: Record<string, string> = {
+export const tagNames: Record<string, string> = {
   'one-pot': 'One-pot', 'freezer-friendly': 'Freezer-friendly', 'no-cook': 'No-cook', 'vegetarian': 'Vegetarian',
   'grilled': 'Grilled', 'low-carb': 'Low-carb', '5-minute': '5-minute', 'single-serve': 'Single-serve',
   'sheet-pan': 'Sheet-pan', 'slow-cooker': 'Slow cooker', 'air-fryer': 'Air fryer',

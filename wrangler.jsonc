@@ -1,11 +1,20 @@
-// Cloudflare deploy config: serve the built Astro site (dist/) as static files.
-// Static asset requests are free and unlimited — no server code runs.
+// Cloudflare deploy config.
+// Pages are static files from dist/ (free, no server code runs for them).
+// Only /api/* runs the small Worker in worker/index.ts, which powers the private /write page.
 {
   "name": "gramsperdollar",
   "compatibility_date": "2026-10-01",
+  "main": "worker/index.ts",
   "assets": {
     "directory": "./dist",
+    "binding": "ASSETS",
     // /about serves about.html; one clean URL per page
-    "html_handling": "drop-trailing-slash"
+    "html_handling": "drop-trailing-slash",
+    "run_worker_first": ["/api/*"]
+  },
+  "vars": {
+    "GITHUB_REPO": "abdou998/gramsperdollar",
+    "GITHUB_BRANCH": "main"
   }
+  // Secrets (set in the Cloudflare dashboard, never in this file): WRITER_PASSWORD, GITHUB_TOKEN
 }

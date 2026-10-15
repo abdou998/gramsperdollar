@@ -8,5 +8,5 @@ export default defineConfig({
   site: 'https://gramsperdollar.com',
   trailingSlash: 'never',
   build: { format: 'file' }, // /about instead of /about/ — one clean URL per page
-  integrations: [mdx(), sitemap()],
+  integrations: [mdx(), sitemap({ filter: (page) => !page.includes('/write') })],
 });

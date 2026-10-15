@@ -1,4 +1,24 @@
-# Writing a post
+# Writing a recipe
+
+**The easy way: [gramsperdollar.com/write](https://gramsperdollar.com/write)** (ask Abdessamad for the password).
+
+Fill in the title, tap the meal and anything that fits (one-pot, vegetarian…), add photos, ingredients and steps,
+and press **Send recipe**. That's it. Prices, protein and calories get worked out for you before it goes live.
+Your writing saves on your phone as you go, so you can stop halfway and come back.
+
+Tips for that page:
+- **Title:** what someone would type into Google. "Chicken burrito bowls", not "Tuesday bowls".
+- **Ingredients:** one per line, with amounts. Grams are best (500 g chicken breast); cups and spoons are fine.
+- **Steps:** one per line, in order.
+- **Tell people about it:** a few real sentences. How it tasted, how it kept, what you'd change. This is
+  the part Google can't find anywhere else, so it matters most.
+- **Photos:** your own phone photos are great. If you use someone else's, say who took them.
+
+---
+
+The rest of this guide is the older, more technical way (editing files on GitHub). You don't need it.
+
+## Writing a full post on GitHub
 
 You don't need to code. You can write straight on GitHub in your browser.
 
