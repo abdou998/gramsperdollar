@@ -160,3 +160,6 @@ Everything is plain files, so nothing is locked in.
 4. Weekly: one article, then a Search Console check-in (impressions, queries, pages indexed).
 5. Quarterly: refresh `data/prices.csv`.
 6. Later: optional Kroger API for automated prices; affiliate links once there's traffic.
+7. Recipe schema, decided 16 Oct: **no videos, ever** (the 'video' suggestions in Search Console stay unfixed on purpose).
+   **Star ratings (`aggregateRating`) only once real readers arrive**: add a simple 1–5 rating on recipe pages and output
+   it in the schema only when a recipe has real votes. Never invent ratings. Revisit when Search Console shows steady clicks.
