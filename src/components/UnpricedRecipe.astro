@@ -4,6 +4,7 @@
 import { Image } from 'astro:assets';
 import { photoFor, type Unpriced } from '../lib/unpriced';
 import { formatDate } from '../lib/data';
+import { howToSteps } from '../lib/schema';
 
 interface Props { r: Unpriced }
 const { r } = Astro.props;
@@ -24,7 +25,8 @@ const schema = {
   ...(r.cook ? { cookTime: `PT${r.cook}M` } : {}),
   ...(total ? { totalTime: `PT${total}M` } : {}),
   recipeIngredient: r.ingredients,
-  recipeInstructions: r.steps.map((text) => ({ '@type': 'HowToStep', text })),
+  recipeInstructions: howToSteps(r.steps),
+  ...(r.tags.length ? { keywords: ['high protein', ...r.tags].join(', ') } : {}),
   ...(img ? { image: new URL(img.src, Astro.site).href } : {}),
 };
 ---

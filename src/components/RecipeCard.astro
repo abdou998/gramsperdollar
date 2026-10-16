@@ -3,6 +3,7 @@
 // Emits schema.org Recipe JSON-LD so Google can understand it.
 import { Image } from 'astro:assets';
 import ShelfTag from './ShelfTag.astro';
+import { howToSteps, SITE_AUTHOR } from '../lib/schema';
 import { getRecipe, storeStats, usd, num, monthLabel, PRICE_BASIS } from '../lib/data';
 
 interface Props { slug: string; headingLevel?: 1 | 2 | 3 }
@@ -27,7 +28,10 @@ const schema = {
   ...(r.cook_minutes ? { cookTime: `PT${r.cook_minutes}M` } : {}),
   ...(total ? { totalTime: `PT${total}M` } : {}),
   recipeIngredient: r.ingredients.map((i) => `${i.amount} ${i.label}`),
-  recipeInstructions: (r.steps ?? []).map((text) => ({ '@type': 'HowToStep', text })),
+  recipeInstructions: howToSteps(r.steps ?? []),
+  author: SITE_AUTHOR,
+  ...(r.meal ? { recipeCategory: r.meal } : {}),
+  ...((r.tags as string[] | undefined)?.length ? { keywords: ['high protein', 'meal prep', ...(r.tags as string[])].join(', ') } : {}),
   nutrition: {
     '@type': 'NutritionInformation',
     servingSize: '1 serving',
