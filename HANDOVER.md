@@ -1,6 +1,6 @@
 # Grams per Dollar — Handover
 
-_Last updated: 15 Oct 2026. This repo is **public**, so nothing private goes in here (accounts,
+_Last updated: 16 Oct 2026. This repo is **public**, so nothing private goes in here (accounts,
 emails, personal history). Private notes live in the owner's Claude project "side hustle"._
 
 ## 1. What this is
@@ -89,21 +89,28 @@ npm run build                      # check the site builds
 git push                           # Cloudflare deploys in ~40 seconds
 ```
 
-## 5. Current status
+## 5. Current status (16 Oct 2026)
 
-- ✅ Site live, Search Console verified, sitemap submitted (first status "Couldn't fetch" — normal for a new property; recheck).
-- ✅ Data system working with 3 recipes (Walmart, Oct 2026 prices, Sacramento CA default store):
+- ✅ Site live on Cloudflare, Search Console verified, sitemap submitted ("Success").
+- ✅ **Pages:** home, About, article #1 `/high-protein-meal-prep-for-one`, `/recipes`, one page per recipe, private `/write`.
+- ✅ **Priced recipes** (Walmart, Oct 2026, Sacramento CA default store):
 
 | Recipe | Protein/serving | Cost/serving | Protein per $ |
 |---|---|---|---|
-| One-pot spiced chicken, red lentil & rice | 49.7 g | $1.90 | 26.2 g |
-| Lemon-rosemary grilled chicken & veg | 48.7 g | $3.72 | 13.1 g |
+| One-pot spiced chicken, red lentils & rice | 49.7 g | $1.80 | 27.6 g |
 | 31 g protein pancake | 31.8 g | $2.17 | 14.7 g |
+| Lemon-rosemary chicken with grilled squash | 48.7 g | $3.59 | 13.6 g |
 
-- ✅ **Article #1 live:** `/high-protein-meal-prep-for-one` (3 recipes, 4-day plan, shopping list, prep timeline).
-  Written as recipe guidance; it doesn't claim the recipes were kitchen-tested. Add real cooking notes once they're made.
-- ✅ **Design system:** Archivo (display) + Source Serif 4 (body), shelf-tag yellow as the one bold element, dark mode, mobile tested.
-- 👥 **Second author:** a contributor will write 2–3 posts a week (see `docs/WRITING.md`).
+- ✅ **Unpriced (live with a "Not priced yet" note):** Sanae's banana oat Greek yogurt protein bowl
+  (`submissions/2026-10-15-…-76f0/`). Next to price: needs Greek yogurt, oats, walnuts, chia, honey, mint in the price book.
+- ✅ **Contributor flow:** `/write` (password) → `submissions/` commit → live in ~1 min as unpriced → priced weekly in a batch.
+- ✅ **Photos:** all 4 recipes have one (3 stock photos, credited in captions and `src/assets/images/CREDITS.md`). Replace with
+  real photos when the dishes are cooked.
+- ✅ **Recipe structured data:** Search Console shows 0 invalid. Added author, step name/url, category, keywords, cuisine
+  (only where true). Validation started 16 Oct for those 6. See decision 7 in Next steps for the 3 left on purpose.
+- ⏳ **Indexing:** article and /recipes not indexed yet. "Request indexing" in Search Console has to be done by the owner
+  (automating the URL Inspection page failed twice).
+- ⏸ Category pages: built but none published yet (each needs 3+ recipes).
 - 📋 First 10 articles planned (owner's project doc `meal-prep-site-first-10-articles.md`).
 
 ### Site structure (hub and spokes)
@@ -151,15 +158,19 @@ Everything is plain files, so nothing is locked in.
 | GitHub | Code | Claude GitHub App has push access to this repo only. |
 | Cloudflare | Domain + hosting | Cloudflare's GitHub app is scoped to this repo only. |
 | Google Search Console | Search data | Domain property, verified via Cloudflare DNS. |
+| Cloudflare Worker secrets | `/write` | `WRITER_PASSWORD` and `GITHUB_TOKEN` (fine-grained, this repo only, Contents read/write, **expires Oct 2027**: renew it and re-add the secret). |
 
 ## 10. Next steps
 
-1. Owner cooks the one-pot recipe and fills the `[YOUR NOTE]` lines.
-2. Write article #1 "High protein meal prep for one person" (pancake breakfast, chicken & veg lunch, one-pot dinner, cost table, shopping list, prep timeline). Build the recipe-table component that reads `src/data/recipes.json`.
-3. Recheck the sitemap status in Search Console.
-4. Weekly: one article, then a Search Console check-in (impressions, queries, pages indexed).
+1. **Weekly batch (Claude):** "price new recipes": `git pull`, price every `status: unpriced` submission (see
+   `submissions/README.md`), push. Then a Search Console check-in (impressions, queries, pages indexed, Recipes report:
+   only act if **Invalid > 0**).
+2. Owner: request indexing for the article and `/recipes` in Search Console.
+3. Sanae: 2–3 recipes a week via `/write`. Ask for grams where possible and real phone photos.
+4. Articles from the 10-article plan, each linking its recipes (hub and spokes).
 5. Quarterly: refresh `data/prices.csv`.
 6. Later: optional Kroger API for automated prices; affiliate links once there's traffic.
-7. Recipe schema, decided 16 Oct: **no videos, ever** (the 'video' suggestions in Search Console stay unfixed on purpose).
-   **Star ratings (`aggregateRating`) only once real readers arrive**: add a simple 1–5 rating on recipe pages and output
-   it in the schema only when a recipe has real votes. Never invent ratings. Revisit when Search Console shows steady clicks.
+7. Recipe schema, decided 16 Oct: **no videos, ever** (the 'video' and step image/video suggestions in Search Console stay
+   unfixed on purpose and can't be dismissed). **Star ratings (`aggregateRating`) only once real readers arrive**: add a
+   simple 1–5 rating on recipe pages and output it in the schema only when a recipe has real votes. Never invent ratings.
+   Revisit when Search Console shows steady clicks.
