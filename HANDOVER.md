@@ -108,8 +108,7 @@ git push                           # Cloudflare deploys in ~40 seconds
   real photos when the dishes are cooked.
 - ✅ **Recipe structured data:** Search Console shows 0 invalid. Added author, step name/url, category, keywords, cuisine
   (only where true). Validation started 16 Oct for those 6. See decision 7 in Next steps for the 3 left on purpose.
-- ⏳ **Indexing:** article and /recipes not indexed yet. "Request indexing" in Search Console has to be done by the owner
-  (automating the URL Inspection page failed twice).
+- ✅ **Indexed (16 Oct):** the article and `/recipes` are on Google. New pages get found through the sitemap and internal links.
 - ✅ First category page live: `/recipes/protein/40g-plus` (3 recipes). Others unlock at 3+ recipes each.
 - 📋 First 10 articles planned (owner's project doc `meal-prep-site-first-10-articles.md`).
 
@@ -165,7 +164,7 @@ Everything is plain files, so nothing is locked in.
 1. **Weekly batch (Claude):** "price new recipes": `git pull`, price every `status: unpriced` submission (see
    `submissions/README.md`), push. Then a Search Console check-in (impressions, queries, pages indexed, Recipes report:
    only act if **Invalid > 0**).
-2. Owner: request indexing for the article and `/recipes` in Search Console.
+2. Owner: only use "Request indexing" for a brand-new or heavily changed page Google hasn't picked up after a few days.
 3. Sanae: 2–3 recipes a week via `/write`. Ask for grams where possible and real phone photos.
 4. Articles from the 10-article plan, each linking its recipes (hub and spokes).
 5. Quarterly: refresh `data/prices.csv`.
