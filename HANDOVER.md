@@ -99,18 +99,18 @@ git push                           # Cloudflare deploys in ~40 seconds
 |---|---|---|---|
 | One-pot spiced chicken, red lentils & rice | 49.7 g | $1.80 | 27.6 g |
 | 31 g protein pancake | 31.8 g | $2.17 | 14.7 g |
+| Banana oat Greek yogurt protein bowl (by Sanae) | 57 g | $3.53 | 16.2 g |
 | Lemon-rosemary chicken with grilled squash | 48.7 g | $3.59 | 13.6 g |
 
-- ✅ **Unpriced (live with a "Not priced yet" note):** Sanae's banana oat Greek yogurt protein bowl
-  (`submissions/2026-10-15-…-76f0/`). Next to price: needs Greek yogurt, oats, walnuts, chia, honey, mint in the price book.
+- ✅ **Unpriced:** none right now. Sanae's yogurt bowl was priced 16 Oct (first one through the full flow).
 - ✅ **Contributor flow:** `/write` (password) → `submissions/` commit → live in ~1 min as unpriced → priced weekly in a batch.
-- ✅ **Photos:** all 4 recipes have one (3 stock photos, credited in captions and `src/assets/images/CREDITS.md`). Replace with
+- ✅ **Photos:** all 4 recipes have one (all stock photos, credited in captions and `src/assets/images/CREDITS.md`). Replace with
   real photos when the dishes are cooked.
 - ✅ **Recipe structured data:** Search Console shows 0 invalid. Added author, step name/url, category, keywords, cuisine
   (only where true). Validation started 16 Oct for those 6. See decision 7 in Next steps for the 3 left on purpose.
 - ⏳ **Indexing:** article and /recipes not indexed yet. "Request indexing" in Search Console has to be done by the owner
   (automating the URL Inspection page failed twice).
-- ⏸ Category pages: built but none published yet (each needs 3+ recipes).
+- ✅ First category page live: `/recipes/protein/40g-plus` (3 recipes). Others unlock at 3+ recipes each.
 - 📋 First 10 articles planned (owner's project doc `meal-prep-site-first-10-articles.md`).
 
 ### Site structure (hub and spokes)

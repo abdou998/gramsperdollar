@@ -30,7 +30,7 @@ const schema = {
   recipeIngredient: r.ingredients.map((i) => `${i.amount} ${i.label}`),
   recipeInstructions: howToSteps(r.steps ?? [], new URL(`/recipes/${r.slug}`, Astro.site).href),
   ...(r.cuisine ? { recipeCuisine: r.cuisine } : {}),
-  author: SITE_AUTHOR,
+  author: r.author ? { '@type': 'Person', name: r.author } : SITE_AUTHOR,
   ...(r.meal ? { recipeCategory: r.meal } : {}),
   ...((r.tags as string[] | undefined)?.length ? { keywords: ['high protein', 'meal prep', ...(r.tags as string[])].join(', ') } : {}),
   nutrition: {
@@ -48,6 +48,7 @@ const schema = {
     <div>
       <H id={`${slug}-title`} class="title">{r.name}</H>
       {r.description && <p class="desc">{r.description}</p>}
+      {r.author && <p class="byline small muted">By {r.author}</p>}
     </div>
   </header>
 
@@ -66,6 +67,8 @@ const schema = {
       {r.image_credit && <figcaption class="small muted">{r.image_credit}</figcaption>}
     </figure>
   )}
+
+  {r.intro && <p class="intro">{r.intro}</p>}
 
   <div class="cols">
     <div>
@@ -103,6 +106,8 @@ const schema = {
   .title { margin: 0 0 0.35rem; font-size: var(--step-3); }
   .recipe.page { margin-top: 0.5rem; border-top: 0; padding-top: 0; }
   .desc { margin: 0; color: var(--muted); max-width: var(--measure); }
+  .byline { margin: 0.4rem 0 0; }
+  .intro { max-width: var(--measure); margin: 0 0 1.5rem; }
   .stats {
     display: flex; flex-wrap: wrap; gap: 0 2rem;
     margin: 1.5rem 0 0.25rem; padding: 0.75rem 0;

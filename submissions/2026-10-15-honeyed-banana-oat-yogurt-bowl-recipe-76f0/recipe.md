@@ -10,7 +10,7 @@ prep_minutes: 5
 cook_minutes: ""
 photos: ["photo-1.jpg"]
 photo_credit: "Photo by s_azad on Pixabay"
-status: unpriced  # unpriced (live with a note) → priced (replaced by the priced recipe) | hidden
+status: priced  # unpriced (live with a note) → priced (replaced by the priced recipe) | hidden
 ---
 
 ## About it

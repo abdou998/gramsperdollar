@@ -1,0 +1,72 @@
+# By Sanae (submitted via /write, 15 Oct 2026). Grams raw / as bought.
+# Her amounts are cups and spoons; grams below are standard conversions. "1–2 tbsp" walnuts → middle (1½ tbsp).
+# Whey: Dymatize ISO100 30 g scoop (protein from the label, see data/nutrition.csv).
+name = "Honeyed Banana Oat Greek Yogurt Protein Bowl"
+description = "Greek yogurt whipped with a scoop of whey, topped with banana, oats, walnuts and chia. Five minutes, no cooking."
+author = "Sanae"
+intro = "A morning protein bowl that's easy on the stomach and fast to make. The Greek yogurt and a scoop of whey put it well over 40 g of protein, and you can swap the toppings to whatever you have."
+servings = 1
+meal = "breakfast"
+tags = ["no-cook", "5-minute", "single-serve"]
+prep_minutes = 5
+image = "banana-oat-yogurt-bowl-s-azad-pixabay.jpg"
+image_alt = "A bowl of Greek yogurt topped with sliced banana, rolled oats, walnuts, chia seeds and mint"
+image_credit = "Photo by s_azad on Pixabay."
+storage = "Best eaten fresh. To prep ahead, mix the yogurt and whey in a sealed tub the night before and add the toppings in the morning so the oats stay crunchy."
+tip = "Swap the banana for berries, mango or pear. They all work. The whey is over half the cost, so if it's tight, use a second cup of yogurt instead (you'll lose about 2 g of protein)."
+steps = [
+  "Make the base: mix the Greek yogurt with the scoop of whey in a wide bowl until smooth, then spread it flat.",
+  "Add the toppings: lay your sliced banana down one side of the bowl. Pour the rolled oats down the opposite side.",
+  "Add the crunch: sprinkle the chopped walnuts right over the center where the oats and bananas meet.",
+  "Finish: evenly dust the banana slices with chia seeds, drizzle your honey over the entire bowl, and put the mint on top.",
+]
+
+[[ingredients]]
+item = "greek yogurt plain nonfat"
+grams = 227
+amount = "1 cup"
+label = "plain nonfat Greek yogurt"
+
+[[ingredients]]
+item = "whey protein isolate"
+grams = 30
+amount = "1 scoop (30 g)"
+label = "whey protein powder"
+
+[[ingredients]]
+item = "banana"
+grams = 118
+amount = "1 medium"
+label = "banana, sliced"
+
+[[ingredients]]
+item = "rolled oats"
+grams = 40
+amount = "½ cup"
+label = "rolled oats"
+
+[[ingredients]]
+item = "walnuts"
+grams = 11
+amount = "1–2 tbsp"
+label = "walnuts, chopped"
+
+[[ingredients]]
+item = "chia seeds"
+grams = 4
+amount = "1 tsp"
+label = "chia seeds"
+
+[[ingredients]]
+item = "honey"
+grams = 7
+amount = "1 tsp"
+label = "honey, for drizzling (optional)"
+optional = true
+
+[[ingredients]]
+item = "mint fresh"
+grams = 1
+amount = "a few leaves"
+label = "fresh mint (optional)"
+optional = true

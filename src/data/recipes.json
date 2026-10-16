@@ -1,5 +1,105 @@
 [
   {
+    "name": "Honeyed Banana Oat Greek Yogurt Protein Bowl",
+    "slug": "banana-oat-greek-yogurt-protein-bowl",
+    "servings": 1,
+    "protein_g_per_serving": 57.0,
+    "kcal_per_serving": 592,
+    "with_optional": {
+      "protein_g_per_serving": 57.1,
+      "kcal_per_serving": 614
+    },
+    "stores": {
+      "Walmart": {
+        "cost_per_serving": 3.53,
+        "protein_g_per_dollar": 16.2,
+        "prices_checked": "2026-10"
+      }
+    },
+    "cheapest_store": "Walmart",
+    "missing_nutrition": [],
+    "unpriced_items": [],
+    "ingredients": [
+      {
+        "item": "greek yogurt plain nonfat",
+        "grams": 227.0,
+        "amount": "1 cup",
+        "label": "plain nonfat Greek yogurt",
+        "optional": false
+      },
+      {
+        "item": "whey protein isolate",
+        "grams": 30.0,
+        "amount": "1 scoop (30 g)",
+        "label": "whey protein powder",
+        "optional": false
+      },
+      {
+        "item": "banana",
+        "grams": 118.0,
+        "amount": "1 medium",
+        "label": "banana, sliced",
+        "optional": false
+      },
+      {
+        "item": "rolled oats",
+        "grams": 40.0,
+        "amount": "½ cup",
+        "label": "rolled oats",
+        "optional": false
+      },
+      {
+        "item": "walnuts",
+        "grams": 11.0,
+        "amount": "1–2 tbsp",
+        "label": "walnuts, chopped",
+        "optional": false
+      },
+      {
+        "item": "chia seeds",
+        "grams": 4.0,
+        "amount": "1 tsp",
+        "label": "chia seeds",
+        "optional": false
+      },
+      {
+        "item": "honey",
+        "grams": 7.0,
+        "amount": "1 tsp",
+        "label": "honey, for drizzling (optional)",
+        "optional": true
+      },
+      {
+        "item": "mint fresh",
+        "grams": 1.0,
+        "amount": "a few leaves",
+        "label": "fresh mint (optional)",
+        "optional": true
+      }
+    ],
+    "author": "Sanae",
+    "intro": "A morning protein bowl that's easy on the stomach and fast to make. The Greek yogurt and a scoop of whey put it well over 40 g of protein, and you can swap the toppings to whatever you have.",
+    "meal": "breakfast",
+    "tags": [
+      "no-cook",
+      "5-minute",
+      "single-serve"
+    ],
+    "description": "Greek yogurt whipped with a scoop of whey, topped with banana, oats, walnuts and chia. Five minutes, no cooking.",
+    "prep_minutes": 5,
+    "steps": [
+      "Make the base: mix the Greek yogurt with the scoop of whey in a wide bowl until smooth, then spread it flat.",
+      "Add the toppings: lay your sliced banana down one side of the bowl. Pour the rolled oats down the opposite side.",
+      "Add the crunch: sprinkle the chopped walnuts right over the center where the oats and bananas meet.",
+      "Finish: evenly dust the banana slices with chia seeds, drizzle your honey over the entire bowl, and put the mint on top."
+    ],
+    "storage": "Best eaten fresh. To prep ahead, mix the yogurt and whey in a sealed tub the night before and add the toppings in the morning so the oats stay crunchy.",
+    "tip": "Swap the banana for berries, mango or pear. They all work. The whey is over half the cost, so if it's tight, use a second cup of yogurt instead (you'll lose about 2 g of protein).",
+    "image": "banana-oat-yogurt-bowl-s-azad-pixabay.jpg",
+    "image_alt": "A bowl of Greek yogurt topped with sliced banana, rolled oats, walnuts, chia seeds and mint",
+    "image_credit": "Photo by s_azad on Pixabay."
+  },
+  {
     "name": "One-pot spiced chicken, red lentils and rice",
     "slug": "chicken-lentil-rice-pot",
     "servings": 4,
