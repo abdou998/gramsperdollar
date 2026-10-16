@@ -248,6 +248,7 @@
       }
     ],
     "meal": "lunch",
+    "cuisine": "Mediterranean",
     "tags": [
       "grilled",
       "low-carb"
@@ -348,6 +349,7 @@
       }
     ],
     "meal": "breakfast",
+    "cuisine": "American",
     "tags": [
       "5-minute",
       "single-serve"

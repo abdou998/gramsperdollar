@@ -25,7 +25,7 @@ const schema = {
   ...(r.cook ? { cookTime: `PT${r.cook}M` } : {}),
   ...(total ? { totalTime: `PT${total}M` } : {}),
   recipeIngredient: r.ingredients,
-  recipeInstructions: howToSteps(r.steps),
+  recipeInstructions: howToSteps(r.steps, new URL(`/recipes/${r.slug}`, Astro.site).href),
   ...(r.tags.length ? { keywords: ['high protein', ...r.tags].join(', ') } : {}),
   ...(img ? { image: new URL(img.src, Astro.site).href } : {}),
 };
@@ -64,7 +64,7 @@ const schema = {
     </div>
     <div>
       <h2>Method</h2>
-      <ol class="steps">{r.steps.map((s) => <li>{s}</li>)}</ol>
+      <ol class="steps">{r.steps.map((s, i) => <li id={`step-${i + 1}`}>{s}</li>)}</ol>
     </div>
   </div>
 

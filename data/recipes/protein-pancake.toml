@@ -3,6 +3,7 @@
 name = "31g-protein pancake"
 description = "One big whey pancake that takes five minutes and keeps you full until lunch."
 servings = 1
+cuisine = "American"
 meal = "breakfast"
 tags = ["5-minute", "single-serve"]
 prep_minutes = 3

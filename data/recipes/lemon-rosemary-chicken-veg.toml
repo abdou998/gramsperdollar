@@ -2,6 +2,7 @@
 name = "Lemon-rosemary chicken with grilled squash"
 description = "Juicy grilled chicken cutlets with squash, green beans and carrots. Two lunches, ready in about 40 minutes."
 servings = 2
+cuisine = "Mediterranean"
 meal = "lunch"
 tags = ["grilled", "low-carb"]
 prep_minutes = 25

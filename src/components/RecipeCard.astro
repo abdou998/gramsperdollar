@@ -28,7 +28,8 @@ const schema = {
   ...(r.cook_minutes ? { cookTime: `PT${r.cook_minutes}M` } : {}),
   ...(total ? { totalTime: `PT${total}M` } : {}),
   recipeIngredient: r.ingredients.map((i) => `${i.amount} ${i.label}`),
-  recipeInstructions: howToSteps(r.steps ?? []),
+  recipeInstructions: howToSteps(r.steps ?? [], new URL(`/recipes/${r.slug}`, Astro.site).href),
+  ...(r.cuisine ? { recipeCuisine: r.cuisine } : {}),
   author: SITE_AUTHOR,
   ...(r.meal ? { recipeCategory: r.meal } : {}),
   ...((r.tags as string[] | undefined)?.length ? { keywords: ['high protein', 'meal prep', ...(r.tags as string[])].join(', ') } : {}),
@@ -78,7 +79,7 @@ const schema = {
     <div>
       <h3>Method</h3>
       <ol class="steps">
-        {(r.steps ?? []).map((step) => <li>{step}</li>)}
+        {(r.steps ?? []).map((step, i) => <li id={`step-${i + 1}`}>{step}</li>)}
       </ol>
     </div>
   </div>

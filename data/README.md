@@ -12,7 +12,7 @@
   - `price_url` — product page the price came from
 - `recipes/*.toml` — one file per recipe (copy `_TEMPLATE.toml.txt`). Mark add-ons with `optional = true`.
   Each recipe also needs `meal` (breakfast / lunch / dinner / snack) and `tags` (e.g. `["one-pot", "freezer-friendly",
-  "no-cook", "vegetarian"]`). These drive the category pages. Every recipe gets its own page at `/recipes/<file-name>`.
+  "no-cook", "vegetarian"]`). These drive the category pages. Optional `cuisine` (e.g. "Mexican") only when it genuinely fits. Every recipe gets its own page at `/recipes/<file-name>`.
 
 ## Run
 ```
