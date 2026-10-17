@@ -1,0 +1,5 @@
+# One row per store + market (state) we price. `market` matches prices.csv.
+# location = the exact store the prices come from; source/note are shown on the site.
+id,store,market,state,city,location,source,note
+walmart-ca,Walmart,CA,California,Sacramento,"Sacramento Gerber Rd Supercenter (95829)",walmart.com,"Regular shelf price on walmart.com for this store."
+aldi-tx,Aldi,TX,Texas,Houston,"ALDI ROS 18, 3618 Old Spanish Trail, Houston (77021)",aldi.us (in-store mode),"Aldi's online prices (run by Instacart) can differ from the shelf price."

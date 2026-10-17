@@ -9,7 +9,7 @@ import PlanSummary from '../../components/PlanSummary.astro';
 import RecipeList from '../../components/RecipeList.astro';
 import { getPlan, usd, num } from '../../lib/data';
 export const plan = getPlan('meal-prep-for-one');
-export const st = plan.stores.Walmart;
+export const st = plan.stores['walmart-ca'];
 
 Cooking for one is awkward in a specific way. Chicken comes in 3 and 5 lb bags, recipes
 serve four or six, and by Thursday you're eating the same thing for the fifth time or

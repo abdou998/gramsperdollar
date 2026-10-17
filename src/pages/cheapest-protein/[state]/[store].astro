@@ -1,17 +1,22 @@
 ---
 // Staples ranked by grams of protein per $1 at one store. One page per store in data/prices.csv
 // (only stores with enough ranked items). The site's signature data page.
-import Base from '../../layouts/Base.astro';
-import Breadcrumbs from '../../components/Breadcrumbs.astro';
-import RecipeList from '../../components/RecipeList.astro';
-import { rankStores, storeRank, storeSlug, leanness, usd, num, monthLabel, allRecipes, storeStats } from '../../lib/data';
+import Base from '../../../layouts/Base.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import RecipeList from '../../../components/RecipeList.astro';
+import { rankStores, storeRank, leanness, usd, num, monthLabel, allRecipes, storeStats, storeInfo, rankUrl, stateSlug, states } from '../../../lib/data';
+import { storeSlug } from '../../../lib/stores';
 
 
 export function getStaticPaths() {
-  return rankStores().filter((s) => storeRank(s).length >= 10).map((store) => ({ params: { store: storeSlug(store) }, props: { store } }));
+  return rankStores().filter((id) => storeRank(id).length >= 10)
+    .map((id) => ({ params: { state: stateSlug(id), store: storeSlug(id) }, props: { id } }));
 }
-const { store } = Astro.props as { store: string };
-const rows = storeRank(store);
+const { id } = Astro.props as { id: string };
+const info = storeInfo(id);
+const store = info.store;
+const siblings = (states().find((s) => s.market === info.market)?.ids ?? []).filter((x) => x !== id && storeRank(x).length >= 10);
+const rows = storeRank(id);
 const checked = rows.map((r) => r.checked).sort()[0];
 const month = monthLabel(checked);
 const top = rows[0];
@@ -26,12 +31,11 @@ const groups = [...new Set(rows.map((r) => r.group))];
 // Shop-friendly product names: drop our notes in brackets.
 const clean = (n: string) => n.replace(/\s*\((?!dry\)|frozen\)|\d+ g drained\))[^)]*\)/gi, '').replace(/\s+/g, ' ').trim();
 const pct = (x: number | null) => (x == null ? '' : `${Math.round(x * 100)}%`);
-const slug = storeSlug(store);
-const url = `/cheapest-protein/${slug}`;
-const title = `Cheapest Protein at ${store}, Ranked by Price (${month.split(' ')[0].slice(0, 3)} ${month.split(' ')[1]})`;
-const description = `${rows.length} ${store} staples ranked by grams of protein per dollar, with real shelf prices checked ${month}. ${top.name} comes first; ${lean[0]?.name.toLowerCase()} is the cheapest lean protein.`;
+const url = rankUrl(id);
+const title = `Cheapest Protein at ${store} in ${info.state} (${month.split(' ')[0].slice(0, 3)} ${month.split(' ')[1]})`;
+const description = `${rows.length} ${store} staples ranked by grams of protein per dollar, priced at ${info.city}, ${info.market} in ${month}. ${top.name} comes first; ${lean[0]?.name.toLowerCase()} is the cheapest lean protein.`;
 
-const recipes = allRecipes().filter((r) => storeStats(r, store)).sort((a, b) => (storeStats(b, store)!.protein_g_per_dollar ?? 0) - (storeStats(a, store)!.protein_g_per_dollar ?? 0)).slice(0, 4);
+const recipes = allRecipes().filter((r) => storeStats(r, id)).sort((a, b) => (storeStats(b, id)!.protein_g_per_dollar ?? 0) - (storeStats(a, id)!.protein_g_per_dollar ?? 0)).slice(0, 4);
 
 const article = {
   '@context': 'https://schema.org', '@type': 'Article', headline: title, description,
@@ -39,14 +43,17 @@ const article = {
 };
 ---
 <Base title={title} description={description.slice(0, 158)} type="article" jsonLd={[article]}>
-  <Breadcrumbs trail={[{ name: 'Home', url: '/' }, { name: `Cheapest protein at ${store}`, url }]} />
+  <Breadcrumbs trail={[{ name: 'Cheapest protein', url: '/cheapest-protein' }, { name: info.state, url: `/cheapest-protein#${stateSlug(id)}` }, { name: store, url }]} />
 
   <header class="head">
-    <h1>The cheapest protein at {store}</h1>
+    <h1>The cheapest protein at {store} in {info.state}</h1>
     <p class="lede">
       {rows.length} everyday foods, ranked by how many grams of protein you get for each dollar at the till.
-      Real {store} shelf prices, checked {month}.
+      Prices from {info.location}, checked {month}.
     </p>
+    {siblings.length > 0 && (
+      <p class="small">Also in {info.state}: {siblings.map((x, i) => <>{i > 0 && ', '}<a href={rankUrl(x)}>{storeInfo(x).store}</a></>)} · <a href={`/cheapest-protein#${stateSlug(id)}`}>compare stores</a></p>
+    )}
   </header>
 
   <section class="findings" aria-label="Key findings">
@@ -127,9 +134,10 @@ const article = {
   <section class="prose method" aria-labelledby="how">
     <h2 id="how">How this list works</h2>
     <ul>
-      <li><strong>Whole pack, shelf price.</strong> We take the price of the whole pack on {store}.com
-        (the {store === 'Walmart' ? 'Sacramento, CA store' : 'default store'}), checked {month}, and divide its total protein by that price.
-        Sale prices are replaced with the regular price.</li>
+      <li><strong>Whole pack, one real store.</strong> We take the price of the whole pack from {info.source} for {info.location},
+        checked {month}, and divide its total protein by that price. Sale prices are replaced with the regular price. {info.note}</li>
+      <li><strong>Store brands.</strong> We pick each store's own everyday version of the food (Great Value at Walmart, Aldi's house
+        brands at Aldi). Where a store doesn't sell something, it's simply not on its list.</li>
       <li><strong>As sold.</strong> Meat, beans, lentils, rice and oats are counted raw or dry, the way you buy them.
         Canned tuna is counted drained; other cans as packed.</li>
       <li><strong>Protein numbers</strong> come from USDA FoodData Central or, for canned and branded items, the product's own label.</li>

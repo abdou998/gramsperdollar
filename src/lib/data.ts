@@ -4,8 +4,11 @@ import plans from '../data/plans.json';
 export type Recipe = (typeof recipes)[number];
 export type Plan = (typeof plans)[number];
 
-export const STORE = 'Walmart';
-export const PRICE_BASIS = 'Walmart.com prices for Sacramento, CA';
+import { DEFAULT_STORE, priceBasis } from './stores';
+export { storeInfo, storeLabel, priceBasis, rankUrl, states, stateSlug, allStoreIds, DEFAULT_STORE } from './stores';
+/** The store used where a page shows a single price (recipe cards, lists). */
+export const STORE = DEFAULT_STORE;
+export const PRICE_BASIS = priceBasis(DEFAULT_STORE);
 
 export function getRecipe(slug: string): Recipe {
   const r = recipes.find((x) => x.slug === slug);
@@ -24,7 +27,7 @@ export function allRecipes(): Recipe[] {
 }
 
 export function storeStats(r: Recipe, store = STORE) {
-  return (r.stores as Record<string, { cost_per_serving: number; protein_g_per_dollar: number | null; prices_checked: string | null }>)[store];
+  return (r.stores as Record<string, { cost_per_serving: number; protein_g_per_dollar: number | null; prices_checked: string | null; breakdown?: any[] }>)[store];
 }
 
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -48,7 +51,6 @@ import rank from '../data/protein_rank.json';
 export type RankRow = (typeof rank)[keyof typeof rank][number];
 export const rankStores = (): string[] => Object.keys(rank);
 export const storeRank = (store: string): RankRow[] => (rank as Record<string, RankRow[]>)[store] ?? [];
-export const storeSlug = (store: string) => store.toLowerCase().replace(/\W+/g, '-');
 /** Lean = at least half the calories come from protein. */
 export function leanness(share: number | null): { key: 'lean' | 'balanced' | 'carbfat'; label: string } {
   if (share == null) return { key: 'balanced', label: '' };

@@ -112,7 +112,16 @@ git push                           # Cloudflare deploys in ~40 seconds
   one-pot being crawled before its photo was added; 'Missing nutrition' from the unpriced shrimp bowl. Both fixed. Unpriced
   recipes without a photo now output no Recipe schema at all, so they can't trigger a critical error. See decision 7 in Next steps for the 3 left on purpose.
 - ✅ **Indexed (16 Oct):** the article and `/recipes` are on Google. New pages get found through the sitemap and internal links.
-- ✅ **Cheapest protein at Walmart** (`/cheapest-protein/walmart`, 17 Oct): 21 staples ranked by g protein per $1 (whole pack,
+- ✅ **Stores by state** (17 Oct): every price belongs to one store in one state (`data/stores.csv`, ids like `walmart-ca`).
+  `/cheapest-protein` = hub with a state dropdown (remembered on the device), store cards and, once a state has 2+ stores, a
+  side-by-side protein-per-$ table. Ranking pages at `/cheapest-protein/<state>/<store>`; old `/cheapest-protein/walmart`
+  301-redirects (`public/_redirects`). Recipes show "What it costs at each store"; the planner has a store picker.
+  Priced: **Walmart, California** (Sacramento Gerber Rd) and **Aldi, Texas** (ROS 18, 3618 Old Spanish Trail, Houston; aldi.us
+  in-store mode, Instacart-run, may differ from shelf). Aldi has no dry red lentils (one-pot not priced there) and its whey is
+  a blend (priced for recipes, kept off the ranking: labels disagree).
+  **Walmart Texas pending:** Walmart showed a "Robot or human?" check after too-fast lookups; never try to bypass it — the
+  owner clears it in his browser, then price slowly (one page at a time). Store set to S Wayside Dr Supercenter #5612, 77023.
+- ✅ **Cheapest protein at Walmart** (`/cheapest-protein/california/walmart`, 17 Oct): 21 staples ranked by g protein per $1 (whole pack,
   shelf price), with cost of 30 g protein and % of calories from protein (lean filter). Built from `data/protein_sources.csv`;
   one page per store with 10+ ranked items. Linked from the main menu and the homepage.
 - ✅ **"Where the money goes"** on every priced recipe: per-ingredient cost, share and protein (`MoneyBreakdown.astro`).

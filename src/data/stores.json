@@ -1,0 +1,22 @@
+{
+  "walmart-ca": {
+    "id": "walmart-ca",
+    "store": "Walmart",
+    "market": "CA",
+    "state": "California",
+    "city": "Sacramento",
+    "location": "Sacramento Gerber Rd Supercenter (95829)",
+    "source": "walmart.com",
+    "note": "Regular shelf price on walmart.com for this store."
+  },
+  "aldi-tx": {
+    "id": "aldi-tx",
+    "store": "Aldi",
+    "market": "TX",
+    "state": "Texas",
+    "city": "Houston",
+    "location": "ALDI ROS 18, 3618 Old Spanish Trail, Houston (77021)",
+    "source": "aldi.us (in-store mode)",
+    "note": "Aldi's online prices (run by Instacart) can differ from the shelf price."
+  }
+}

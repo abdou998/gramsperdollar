@@ -1,0 +1,136 @@
+---
+// Hub: pick your state, see the stores we price there, and (when a state has 2+ stores) a side-by-side
+// comparison of protein per dollar. Stores in different states are never compared with each other.
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { states, storeInfo, storeRank, rankUrl, leanness, usd, monthLabel } from '../../lib/data';
+
+const list = states()
+  .map((st) => ({ ...st, ids: st.ids.filter((id) => storeRank(id).length >= 10) }))
+  .filter((st) => st.ids.length);
+
+function compare(ids: string[]) {
+  const names = new Map<string, { name: string; group: string; vals: Record<string, number> }>();
+  for (const id of ids) for (const r of storeRank(id)) {
+    if (!names.has(r.item)) names.set(r.item, { name: r.name, group: r.group, vals: {} });
+    names.get(r.item)!.vals[id] = r.protein_per_dollar;
+  }
+  return [...names.values()].filter((x) => Object.keys(x.vals).length >= 2)
+    .sort((a, b) => Math.max(...Object.values(b.vals)) - Math.max(...Object.values(a.vals)));
+}
+const checked = list.flatMap((s) => s.ids.flatMap((id) => storeRank(id).map((r) => r.checked))).sort()[0];
+const storeCount = list.reduce((a, s) => a + s.ids.length, 0);
+---
+<Base
+  title="Cheapest Protein by Store and State"
+  description={`Which grocery store gives you the most protein per dollar? Real prices from ${storeCount} stores in ${list.map((s) => s.state).join(' and ')}, checked ${monthLabel(checked)}.`}
+>
+  <Breadcrumbs trail={[{ name: 'Home', url: '/' }, { name: 'Cheapest protein', url: '/cheapest-protein' }]} />
+  <header class="head">
+    <h1>The cheapest protein, store by store</h1>
+    <p class="lede">
+      Pick your state to see the stores we price there. Every number is grams of protein per $1 at a real store's
+      shelf price, checked {monthLabel(checked)}.
+    </p>
+  </header>
+
+  <div class="picker">
+    <label for="state">Your state</label>
+    <select id="state">
+      {list.map((st) => <option value={st.slug}>{st.state}</option>)}
+    </select>
+    <p class="small muted">More states and stores are being added. Prices in different states come from different cities, so we only compare stores within a state.</p>
+  </div>
+
+  {list.map((st) => {
+    const rows = st.ids.length >= 2 ? compare(st.ids) : [];
+    return (
+      <section class="state" id={st.slug} data-state={st.slug} aria-labelledby={`h-${st.slug}`}>
+        <h2 id={`h-${st.slug}`}>{st.state}</h2>
+        <ul class="stores">
+          {st.ids.map((id) => {
+            const info = storeInfo(id);
+            const r = storeRank(id);
+            const lean = r.find((x) => leanness(x.protein_share).key === 'lean');
+            return (
+              <li>
+                <h3><a href={rankUrl(id)}>{info.store}</a></h3>
+                <p class="small muted">{info.location}</p>
+                <ol class="top">
+                  {r.slice(0, 3).map((x) => (
+                    <li><span class="v">{x.protein_per_dollar}</span> <span class="u">g/$1</span> {x.name}</li>
+                  ))}
+                </ol>
+                {lean && <p class="small">Cheapest lean protein: <strong>{lean.name.toLowerCase()}</strong> ({lean.protein_per_dollar} g per $1)</p>}
+                <p><a href={rankUrl(id)}>All {r.length} at {info.store}</a></p>
+              </li>
+            );
+          })}
+        </ul>
+
+        {rows.length > 0 && (
+          <div class="cmp">
+            <h3>{st.ids.map((id) => storeInfo(id).store).join(' vs ')}: protein per $1</h3>
+            <div class="scroll">
+              <table>
+                <thead><tr><th>Food</th>{st.ids.map((id) => <th class="num">{storeInfo(id).store}</th>)}</tr></thead>
+                <tbody>
+                  {rows.map((row) => {
+                    const best = Math.max(...Object.values(row.vals));
+                    return (
+                      <tr>
+                        <td>{row.name}</td>
+                        {st.ids.map((id) => {
+                          const v = row.vals[id];
+                          return <td class:list={['num', { best: v === best }]}>{v ?? '–'}</td>;
+                        })}
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+            <p class="small muted">Highlighted = more protein for your dollar. Each store's own everyday brand, regular price.</p>
+          </div>
+        )}
+        {st.ids.length < 2 && <p class="small muted">We'll compare stores here once a second {st.state} store is priced.</p>}
+      </section>
+    );
+  })}
+</Base>
+
+<script>
+  const sel = document.getElementById('state') as HTMLSelectElement;
+  const sections = document.querySelectorAll<HTMLElement>('.state');
+  function show(slug: string) {
+    if (![...sections].some((s) => s.dataset.state === slug)) slug = sections[0]?.dataset.state ?? '';
+    sel.value = slug;
+    sections.forEach((s) => (s.hidden = s.dataset.state !== slug));
+    try { localStorage.setItem('gpd-state', slug); } catch {}
+  }
+  let start = location.hash.slice(1);
+  if (!start) { try { start = localStorage.getItem('gpd-state') || ''; } catch {} }
+  show(start);
+  sel.addEventListener('change', () => { show(sel.value); history.replaceState(null, '', `#${sel.value}`); });
+</script>
+
+<style>
+  .head { max-width: 46rem; }
+  .head h1 { font-stretch: 118%; }
+  .lede { font-size: var(--step-1); line-height: 1.5; max-width: var(--measure); }
+  .picker { margin: 1.5rem 0 1rem; max-width: var(--measure); }
+  .picker label { display: block; font-family: var(--display); font-weight: 700; margin-bottom: 0.3rem; }
+  .picker select { font: 700 1.05rem var(--display); padding: 0.55rem 2.2rem 0.55rem 0.8rem; border: 2px solid var(--ink); border-radius: var(--radius); background: var(--tag); color: var(--tag-ink); }
+  .state { border-top: 3px solid var(--ink); margin-top: 1.5rem; }
+  .state h2 { margin-top: 1rem; }
+  .stores { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 0 2rem; max-width: var(--wide); }
+  .stores > li { border-top: 1px solid var(--rule); padding: 0.75rem 0; margin: 0; }
+  .stores h3 { margin: 0; }
+  .top { list-style: none; padding: 0; margin: 0.6rem 0; }
+  .top li { margin: 0.25rem 0; }
+  .top .v { font-family: var(--display); font-weight: 800; background: var(--tag); color: var(--tag-ink); padding: 0 0.3rem; border-radius: 3px; font-variant-numeric: tabular-nums; }
+  .top .u { font-size: var(--step--1); color: var(--muted); margin-right: 0.3rem; }
+  .cmp { margin-top: 1.5rem; max-width: 40rem; }
+  .scroll { overflow-x: auto; }
+  td.best { font-weight: 800; background: var(--basil-soft); }
+</style>

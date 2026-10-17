@@ -2,9 +2,11 @@
 import { publishedPosts } from '../lib/posts';
 import Base from '../layouts/Base.astro';
 import Leaderboard from '../components/Leaderboard.astro';
-import { formatDate, storeRank, leanness, usd } from '../lib/data';
+import { formatDate, storeRank, leanness, usd, STORE, storeInfo, rankUrl, states } from '../lib/data';
 
-const cheap = storeRank('Walmart');
+const cheap = storeRank(STORE);
+const home = storeInfo(STORE);
+const nStores = states().reduce((a, s) => a + s.ids.length, 0);
 const cheapTop = cheap.slice(0, 3);
 const cheapLean = cheap.find((r) => leanness(r.protein_share).key === 'lean');
 import RecipeList from '../components/RecipeList.astro';
@@ -27,14 +29,14 @@ const posts = await publishedPosts();
   </section>
 
   <section aria-labelledby="cheapest" class="cheapest">
-    <h2 id="cheapest" class="section-head">Cheapest protein at Walmart</h2>
+    <h2 id="cheapest" class="section-head">Cheapest protein at {home.store} ({home.state})</h2>
     <ol class="mini">
       {cheapTop.map((r) => (
         <li><span class="tag tag-sm"><span class="tag-number">{r.protein_per_dollar}</span><span class="tag-unit">g protein<br />per $1</span></span> <span class="mini-name">{r.name}</span> <span class="small muted">30 g protein for {usd(r.cost_per_30g!)}</span></li>
       ))}
     </ol>
     {cheapLean && <p class="small">Cheapest <em>lean</em> protein: <strong>{cheapLean.name.toLowerCase()}</strong>, {cheapLean.protein_per_dollar} g per $1.</p>}
-    <p><a href="/cheapest-protein/walmart">See all {cheap.length}, ranked</a></p>
+    <p><a href={rankUrl(STORE)}>See all {cheap.length}, ranked</a> · <a href="/cheapest-protein">Pick your state and compare {nStores} stores</a></p>
   </section>
 
   <section aria-labelledby="best-value">

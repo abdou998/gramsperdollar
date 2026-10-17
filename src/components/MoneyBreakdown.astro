@@ -1,10 +1,11 @@
 ---
 // "Where the money goes": each ingredient's cost per serving, its share of the total and the protein it adds.
 // The pricing is what makes this site different, so it gets a real table, not a footnote.
-import { storeStats, usd, monthLabel, storeSlug, rankStores, PRICE_BASIS, type Recipe } from '../lib/data';
+import { storeStats, usd, monthLabel, rankStores, rankUrl, priceBasis, storeInfo, STORE, type Recipe } from '../lib/data';
 
 interface Props { r: Recipe; store?: string }
-const { r, store = 'Walmart' } = Astro.props;
+const { r, store = STORE } = Astro.props;
+const info = storeInfo(store);
 const s = storeStats(r, store) as any;
 const rows: any[] = s?.breakdown ?? [];
 const shown = rows.filter((b) => b.cost >= 0.01);
@@ -19,7 +20,7 @@ const short = (l: string) => { const t = l.split(',')[0].replace(/\s*\(.*?\)/g, 
   <section class="money" aria-labelledby={`${r.slug}-money`}>
     <h3 id={`${r.slug}-money`}>Where the money goes</h3>
     <p class="sum">
-      {usd(s.cost_per_serving)} a serving at {store}.
+      {usd(s.cost_per_serving)} a serving at {info.store} ({info.city}, {info.market}).
       {top && <> The {short(top.label).toLowerCase()} is {Math.round(top.share * 100)}% of the cost</>}{proteinTop && proteinTop.item !== top?.item
         ? <>, and the {short(proteinTop.label).toLowerCase()} brings the most protein ({Math.round(proteinTop.protein / protein * 100)}%).</>
         : <>{top ? ' and brings the most protein.' : ''}</>}
@@ -45,8 +46,8 @@ const short = (l: string) => { const t = l.split(',')[0].replace(/\s*\(.*?\)/g, 
       </table>
     </div>
     <p class="small muted basis">
-      {PRICE_BASIS}, checked {monthLabel(s.prices_checked)}. Costs count only what the recipe uses, not whole packs.
-      {hasRank && <> See the <a href={`/cheapest-protein/${storeSlug(store)}`}>cheapest protein at {store}</a>.</>}
+      {priceBasis(store)}, checked {monthLabel(s.prices_checked)}. Costs count only what the recipe uses, not whole packs.
+      {hasRank && <> See the <a href={rankUrl(store)}>cheapest protein at {info.store}</a>.</>}
     </p>
   </section>
 )}

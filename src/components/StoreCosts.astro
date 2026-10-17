@@ -1,0 +1,36 @@
+---
+// What this recipe costs at every store we price, grouped by state. Stores missing an ingredient say so.
+import { storeStats, usd, states, storeInfo, type Recipe } from '../lib/data';
+
+interface Props { r: Recipe }
+const { r } = Astro.props;
+const rows = states().flatMap((st) => st.ids.map((id) => ({ id, st, s: storeStats(r, id) })));
+const priced = rows.filter((x) => x.s);
+---
+{priced.length > 1 && (
+  <section class="costs" aria-labelledby={`${r.slug}-stores`}>
+    <h3 id={`${r.slug}-stores`}>What it costs at each store</h3>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Store</th><th class="num">Per serving</th><th class="num">Protein per $1</th></tr></thead>
+        <tbody>
+          {rows.map(({ id, st, s }) => (
+            <tr data-state={st.slug}>
+              <td>{storeInfo(id).store} <span class="muted small">{storeInfo(id).city}, {st.market}</span></td>
+              {s
+                ? <><td class="num">{usd(s.cost_per_serving)}</td><td class="num"><strong>{s.protein_g_per_dollar}</strong> g</td></>
+                : <td colspan="2" class="num muted small">Not every ingredient sold there</td>}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p class="small muted">Each store's own everyday brands. Where a store doesn't carry an exact ingredient we use its closest swap, listed on the <a href="/cheapest-protein">store pages</a>.</p>
+  </section>
+)}
+
+<style>
+  .costs { margin-top: 2rem; max-width: 40rem; }
+  .costs h3 { margin-top: 0; }
+  .scroll { overflow-x: auto; }
+</style>

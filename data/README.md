@@ -2,9 +2,13 @@
 
 ## Files
 - `nutrition.csv` — one row per ingredient: protein and kcal **per 100 g (raw)**, plus the USDA FoodData Central source.
-- `prices.csv` — one row per ingredient **per store**:
+- `stores.csv` — one row per **store + state** we price (`id` like `walmart-ca`, `aldi-tx`), with the exact store location,
+  the source website and a note shown on the site. Only compare stores within the same state.
+- `prices.csv` — one row per ingredient **per store + state**:
   - `item` — must match `nutrition.csv` (e.g. `egg whole`)
   - `store` — `Walmart`, `Aldi`, `Costco`, `Kroger`…
+  - `market` — state code (`CA`, `TX`…); `store` + `market` must match a row in `stores.csv`
+  - `unranked` — `yes` to leave a row off the cheapest-protein ranking (e.g. a swap whose label we couldn't verify)
   - `product` — exact product name as listed by the store
   - `pack_g` — pack size in grams (1 lb = 453.6 g, 1 oz = 28.35 g, 1 gallon milk ≈ 3,900 g)
   - `price_usd` — shelf price for that pack

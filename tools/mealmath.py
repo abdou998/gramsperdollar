@@ -43,7 +43,8 @@ OUT_RECIPES = ROOT / "src" / "data" / "recipes.json"
 OUT_PLANS = ROOT / "src" / "data" / "plans.json"
 SOURCES = ROOT / "data" / "protein_sources.csv"   # staples ranked on the cheapest-protein pages
 OUT_RANK = ROOT / "src" / "data" / "protein_rank.json"
-OUT_BOOK = ROOT / "src" / "data" / "pricebook.json"   # what the in-browser meal planner prices with
+OUT_BOOK = ROOT / "src" / "data" / "pricebook.json"
+OUT_STORES = ROOT / "src" / "data" / "stores.json"   # store + state metadata for the site   # what the in-browser meal planner prices with
 
 AISLES = ROOT / "data" / "aisles.csv"     # shopping lists are grouped by store aisle
 PANTRY = ROOT / "data" / "pantry.txt"   # staples listed apart from the checkout total
@@ -73,7 +74,22 @@ def load_nutrition(path: Path) -> dict[str, dict]:
     return out
 
 
-def load_prices(path: Path) -> dict[str, dict[str, dict]]:
+STORES = ROOT / "data" / "stores.csv"   # which store + state each price set comes from
+FREE_ITEMS = {"water"}                  # costs nothing at any store
+
+
+def load_stores(path: Path) -> dict[str, dict]:
+    with path.open(newline="", encoding="utf-8") as f:
+        rows = list(csv.DictReader(l for l in f if not l.startswith("#")))
+    return {r["id"].strip(): {k: v.strip() for k, v in r.items()} for r in rows}
+
+
+def store_id(store: str, market: str) -> str:
+    return f"{store.strip().lower().replace(' ', '-')}-{market.strip().lower()}"
+
+
+def load_prices(path: Path, stores: dict[str, dict]) -> dict[str, dict[str, dict]]:
+    """item -> store id (e.g. 'walmart-ca') -> price row."""
     book: dict[str, dict[str, dict]] = defaultdict(dict)
     with path.open(newline="", encoding="utf-8") as f:
         for n, row in enumerate(csv.DictReader(f), start=2):
@@ -81,16 +97,24 @@ def load_prices(path: Path) -> dict[str, dict[str, dict]]:
             if not item or not row["price_usd"].strip():
                 continue
             where = f"prices.csv line {n} ({item})"
+            sid = store_id(row["store"], row.get("market") or "")
+            if sid not in stores:
+                sys.exit(f"{where}: store '{sid}' is not in data/stores.csv")
             pack = _num(row["pack_g"], where)
             if pack <= 0:
                 sys.exit(f"{where}: pack_g must be > 0")
-            book[item][row["store"].strip()] = {
+            book[item][sid] = {
                 "product": row["product"].strip(),
                 "pack_g": pack,
                 "price": _num(row["price_usd"], where),
                 "checked": row["checked"].strip(),
                 "url": row.get("price_url", "").strip(),
+                "unranked": (row.get("unranked") or "").strip().lower() in ("yes", "y", "1", "true"),
             }
+    for item in FREE_ITEMS:
+        for sid in stores:
+            book[item].setdefault(sid, {"product": "Tap water", "pack_g": 1000, "price": 0.0, "checked": "",
+                                        "url": "", "unranked": True})
     return book
 
 
@@ -231,7 +255,7 @@ def protein_rank(nutrition: dict, prices: dict) -> dict:
         if not n:
             sys.exit(f"protein_sources.csv: no nutrition for '{item}'")
         for store, p in prices.get(item, {}).items():
-            if p["price"] <= 0:
+            if p["price"] <= 0 or p.get("unranked"):
                 continue
             protein = p["pack_g"] * n["protein"] / 100
             by_store[store].append({
@@ -252,7 +276,8 @@ def main() -> None:
     args = ap.parse_args()
 
     nutrition = load_nutrition(NUTRITION)
-    prices = load_prices(PRICES)
+    stores_info = load_stores(STORES)
+    prices = load_prices(PRICES, stores_info)
     with AISLES.open(newline="", encoding="utf-8") as f:
         aisles = {r["item"].strip().lower(): r["aisle"].strip() for r in csv.DictReader(f)}
     pantry_items = {l.strip().lower() for l in PANTRY.read_text(encoding="utf-8").splitlines()
@@ -280,8 +305,9 @@ def main() -> None:
                    "stores": {st: {"product": p["product"], "pack_g": p["pack_g"], "price": p["price"], "url": p["url"]}
                               for st, p in stores.items()}}
             for item, stores in prices.items()}
-    OUT_BOOK.write_text(json.dumps({"aisle_order": AISLE_ORDER, "pack_slack": PACK_SLACK, "items": book},
+    OUT_BOOK.write_text(json.dumps({"aisle_order": AISLE_ORDER, "pack_slack": PACK_SLACK, "stores": stores_info, "items": book},
                                    ensure_ascii=False) + "\n", encoding="utf-8")
+    OUT_STORES.write_text(json.dumps(stores_info, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     rank = protein_rank(nutrition, prices)
     OUT_RANK.write_text(json.dumps(rank, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(f"Wrote {len(recipes)} recipe(s) and {len(plans)} plan(s) to src/data/")
@@ -296,7 +322,7 @@ def main() -> None:
                 if r[issue]:
                     print(f"  ! {issue}: {', '.join(r[issue])}")
             for store, s in r["stores"].items():
-                print(f"  {store:<10} ${s['cost_per_serving']:.2f}/serving  {s['protein_g_per_dollar']} g protein per $")
+                print(f"  {store:<11} ${s['cost_per_serving']:.2f}/serving  {s['protein_g_per_dollar']} g protein per $")
         for p in plans:
             print(f"\nPLAN {p['name']}: {p['per_day']['protein_g']} g protein, {p['per_day']['kcal']} kcal per day")
             for store, s in p["stores"].items():

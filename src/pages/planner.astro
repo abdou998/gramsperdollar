@@ -7,21 +7,24 @@ import Base from '../layouts/Base.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import book from '../data/pricebook.json';
 import plans from '../data/plans.json';
-import { allRecipes, storeStats, usd, monthLabel, STORE, PRICE_BASIS } from '../lib/data';
+import { allRecipes, storeStats, usd, monthLabel, STORE, states, storeInfo, priceBasis } from '../lib/data';
 
 const images = import.meta.glob<{ default: ImageMetadata }>('../assets/images/*.{jpg,jpeg,png,webp}', { eager: true });
 const meals = ['breakfast', 'lunch', 'dinner', 'snack'];
 const label: Record<string, string> = { breakfast: 'Breakfast', lunch: 'Lunch', dinner: 'Dinner', snack: 'Snacks' };
-const recipes = allRecipes().filter((r) => storeStats(r, STORE));
+const recipes = allRecipes().filter((r) => Object.keys(r.stores).length);
+const stateList = states();
 const groups = meals.map((m) => ({ meal: m, list: recipes.filter((r) => r.meal === m) })).filter((g) => g.list.length);
-const checked = recipes.map((r) => storeStats(r, STORE)!.prices_checked).filter(Boolean).sort()[0];
+const checked = recipes.flatMap((r) => Object.values(r.stores as Record<string, any>).map((s) => s.prices_checked)).filter(Boolean).sort()[0];
 
 const preset = plans[0];
 const data = {
   store: STORE,
+  stores: Object.fromEntries(stateList.flatMap((st) => st.ids.map((id) => [id, { ...storeInfo(id), basis: priceBasis(id) }]))),
   recipes: recipes.map((r) => ({
     slug: r.slug, name: r.name, servings: r.servings,
-    protein: r.protein_g_per_serving, kcal: r.kcal_per_serving, cost: storeStats(r, STORE)!.cost_per_serving,
+    protein: r.protein_g_per_serving, kcal: r.kcal_per_serving,
+    costs: Object.fromEntries(Object.entries(r.stores as Record<string, any>).map(([id, s]) => [id, s.cost_per_serving])),
     ingredients: r.ingredients.filter((i) => !i.optional).map((i) => ({ item: i.item, grams: i.grams })),
   })),
   book,
@@ -29,20 +32,30 @@ const data = {
 };
 ---
 <Base
-  title="High-Protein Meal Planner With a Walmart Shopping List"
-  description="Pick your high-protein meals for the week and get daily protein, calories and cost, plus one shopping list with the real Walmart checkout total."
+  title="High-Protein Meal Planner With a Real Shopping List"
+  description="Pick your high-protein meals for the week and get daily protein, calories and cost, plus one shopping list with the real checkout total at Walmart, Aldi and more."
 >
   <Breadcrumbs trail={[{ name: 'Home', url: '/' }, { name: 'Meal planner', url: '/planner' }]} />
   <header class="head">
     <h1>Plan your week</h1>
     <p class="lede">
       Choose how many servings of each meal you want. You'll get protein, calories and cost per day, and one
-      shopping list with what it really costs at the {STORE} checkout.
+      shopping list with what it really costs at the checkout of the store you pick.
     </p>
   </header>
 
   <div class="layout">
     <section class="pick" aria-labelledby="pick-h">
+      <div class="days store-pick">
+        <label for="store">Where you shop</label>
+        <select id="store">
+          {stateList.map((st) => (
+            <optgroup label={st.state}>
+              {st.ids.map((id) => <option value={id}>{storeInfo(id).store} ({storeInfo(id).city}, {st.market})</option>)}
+            </optgroup>
+          ))}
+        </select>
+      </div>
       <div class="days">
         <label for="days">Days you're planning for</label>
         <div class="stepper">
@@ -57,14 +70,15 @@ const data = {
           <h3>{label[g.meal]}</h3>
           <ul class="cards">
             {g.list.map((r) => {
-              const s = storeStats(r, STORE)!;
+              const s = storeStats(r, STORE);
               const img = r.image ? images[`../assets/images/${r.image}`]?.default : undefined;
               return (
                 <li class="card" data-slug={r.slug}>
                   {img ? <Image src={img} alt="" widths={[160, 320]} sizes="5rem" class="thumb" /> : <span class="thumb" />}
                   <div class="info">
                     <a class="name" href={`/recipes/${r.slug}`}>{r.name}</a>
-                    <p class="facts small muted">{Math.round(r.protein_g_per_serving)} g protein · {usd(s.cost_per_serving)} · makes {r.servings}</p>
+                    <p class="facts small muted">{Math.round(r.protein_g_per_serving)} g protein · <span class="cost">{s ? usd(s.cost_per_serving) : ''}</span> · makes {r.servings}</p>
+                    <p class="na small" hidden>Not every ingredient is sold at this store.</p>
                   </div>
                   <div class="stepper" role="group" aria-label={`Servings of ${r.name}`}>
                     <button type="button" data-step="-1" aria-label={`One less serving of ${r.name}`}>−</button>
@@ -106,7 +120,7 @@ const data = {
         </div>
         <p class="small muted" id="status" aria-live="polite"></p>
       </div>
-      <p class="small muted basis">{PRICE_BASIS}, checked {monthLabel(checked)}. Your plan is saved on this device.</p>
+      <p class="small muted basis"><span id="basis"></span>, checked {monthLabel(checked)}. Your plan is saved on this device.</p>
     </aside>
   </div>
 
@@ -117,7 +131,7 @@ const data = {
       <li><strong>At the till</strong> is what you pay: whole packs, rounded up. <strong>Cost a day</strong> counts only what you
         actually eat, so the rest of each pack (most of a bag of rice, say) carries over to next week.</li>
       <li>Spices, oil, salt and other things most kitchens have are listed separately and not added to the till total.</li>
-      <li>Prices are {STORE}.com shelf prices. Yours will differ a little. See the <a href="/cheapest-protein/walmart">cheapest protein at {STORE}</a>.</li>
+      <li>Prices come from one real store per chain and state. Yours will differ a little. Compare stores on the <a href="/cheapest-protein">cheapest protein</a> pages.</li>
     </ul>
   </section>
 
@@ -126,9 +140,9 @@ const data = {
 
 <script>
   type Ing = { item: string; grams: number };
-  type R = { slug: string; name: string; servings: number; protein: number; kcal: number; cost: number; ingredients: Ing[] };
+  type R = { slug: string; name: string; servings: number; protein: number; kcal: number; costs: Record<string, number>; ingredients: Ing[] };
   const D = JSON.parse(document.getElementById('planner-data')!.textContent!) as {
-    store: string; recipes: R[];
+    store: string; stores: Record<string, { store: string; city: string; market: string; basis: string }>; recipes: R[];
     book: { aisle_order: string[]; pack_slack: number; items: Record<string, { aisle: string; pantry: boolean; stores: Record<string, { product: string; pack_g: number; price: number; url: string }> }> };
     preset: { name: string; days: number; picks: Record<string, number> } | null;
   };
@@ -139,6 +153,9 @@ const data = {
   const clean = (n: string) => n.replace(/\s*\((?!dry\)|frozen\))[^)]*\)/gi, '').replace(/\s+(each|sold by weight)\b/gi, '').replace(/\s+/g, ' ').trim();
 
   let state: { days: number; picks: Record<string, number> } = { days: 5, picks: {} };
+  let store = D.store;
+  try { const s = localStorage.getItem('gpd-store'); if (s && D.stores[s]) store = s; } catch {}
+  const storeSel = document.getElementById('store') as HTMLSelectElement;
 
   function load() {
     const h = new URLSearchParams(location.hash.slice(1));
@@ -163,7 +180,9 @@ const data = {
   }
 
   function compute() {
-    const picked = Object.entries(state.picks).filter(([, n]) => n > 0);
+    const all = Object.entries(state.picks).filter(([, n]) => n > 0);
+    const picked = all.filter(([slug]) => bySlug[slug].costs[store] != null);
+    const skipped = all.filter(([slug]) => bySlug[slug].costs[store] == null).map(([slug]) => bySlug[slug].name);
     let protein = 0, kcal = 0, used = 0;
     const need: Record<string, number> = {};
     for (const [slug, n] of picked) {
@@ -174,7 +193,7 @@ const data = {
     const buy: any[] = [], pantry: string[] = [], unpriced: string[] = [];
     let checkout = 0;
     for (const [item, grams] of Object.entries(need)) {
-      const b = D.book.items[item]; const p = b?.stores[D.store];
+      const b = D.book.items[item]; const p = b?.stores[store];
       if (!p) { unpriced.push(item); continue; }
       if (p.price === 0) continue;
       used += grams / p.pack_g * p.price;
@@ -185,11 +204,18 @@ const data = {
     }
     const order = Object.fromEntries(D.book.aisle_order.map((a, i) => [a, i]));
     buy.sort((a, b) => (order[a.aisle] ?? 99) - (order[b.aisle] ?? 99) || a.product.localeCompare(b.product));
-    return { picked, protein, kcal, used, checkout, buy, pantry, unpriced };
+    return { picked, skipped, protein, kcal, used, checkout, buy, pantry, unpriced };
   }
 
   function render() {
+    storeSel.value = store;
+    const info = D.stores[store];
+    $('#basis').textContent = info.basis;
     document.querySelectorAll<HTMLLIElement>('.card').forEach((c) => {
+      const cost = bySlug[c.dataset.slug!].costs[store];
+      (c.querySelector('.cost') as HTMLElement).textContent = cost != null ? usd(cost) : 'not priced here';
+      (c.querySelector('.na') as HTMLElement).hidden = cost != null;
+      c.classList.toggle('off', cost == null);
       const n = state.picks[c.dataset.slug!] || 0;
       c.querySelector('output')!.textContent = String(n);
       c.classList.toggle('on', n > 0);
@@ -216,15 +242,16 @@ const data = {
     }
     $('#list').innerHTML = html + (aisle ? '</ul>' : '');
     $('#pantry').innerHTML = r.pantry.length ? `<strong>Already in most kitchens:</strong> ${[...new Set(r.pantry)].join(', ')}.` : '';
-    const up = $('#unpriced'); up.hidden = !r.unpriced.length;
-    up.textContent = r.unpriced.length ? `Not priced yet: ${r.unpriced.join(', ')}.` : '';
+    const up = $('#unpriced'); const miss = [...r.unpriced.map((x) => `${x} (not priced)`), ...r.skipped.map((x) => `${x} (not every ingredient sold at ${info.store})`)];
+    up.hidden = !miss.length;
+    up.textContent = miss.length ? `Left out: ${miss.join('; ')}.` : '';
   }
 
   function listText() {
     const r = compute();
     const lines = [`My week (${state.days} days) from gramsperdollar.com`, ''];
     for (const [slug, n] of r.picked) lines.push(`${n} × ${bySlug[slug].name}`);
-    lines.push('', `Shopping list (${D.store}, about ${usd(r.checkout)} at the till):`);
+    lines.push('', `Shopping list (${D.stores[store].store}, about ${usd(r.checkout)} at the till):`);
     for (const b of r.buy) lines.push(`- ${b.packs > 1 ? `${b.packs} × ` : ''}${b.product}`);
     if (r.pantry.length) lines.push('', `Check you have: ${[...new Set(r.pantry)].join(', ')}`);
     return lines.join('\n');
@@ -251,6 +278,7 @@ const data = {
   $('#copy').addEventListener('click', () => copy(listText(), 'Shopping list copied.'));
   $('#share').addEventListener('click', () => copy(location.href, 'Link copied. Anyone with it sees this plan.'));
 
+  storeSel.addEventListener('change', () => { store = storeSel.value; try { localStorage.setItem('gpd-store', store); } catch {} render(); });
   load(); save(); render();
 </script>
 
@@ -272,6 +300,9 @@ const data = {
   .stepper button { width: 2.4rem; height: 2.4rem; border: 0; background: none; font: 700 1.2rem var(--display); color: var(--ink); cursor: pointer; border-radius: 999px; }
   .stepper button:hover { background: var(--basil-soft); }
   .stepper output { min-width: 1.6rem; text-align: center; font-family: var(--display); font-weight: 800; font-variant-numeric: tabular-nums; }
+  .card.off { opacity: 0.55; }
+  .na { color: var(--muted); margin: 0.15rem 0 0; }
+  .store-pick select { font: 650 0.95rem var(--display); padding: 0.45rem 0.6rem; border: 1px solid var(--rule); border-radius: var(--radius); background: var(--paper); color: var(--ink); max-width: 60%; }
   .card.on .stepper { border-color: var(--tag); background: var(--tag); color: var(--tag-ink); }
   .card.on .stepper button { color: var(--tag-ink); }
   .summary { position: sticky; top: 1rem; border-top: 3px solid var(--ink); padding-top: 0.75rem; }

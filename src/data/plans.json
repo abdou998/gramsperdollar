@@ -31,7 +31,7 @@
       "kcal": 1418
     },
     "stores": {
-      "Walmart": {
+      "walmart-ca": {
         "cost_per_day": 7.56,
         "cost_total_used": 30.25,
         "checkout_total": 84.29,
