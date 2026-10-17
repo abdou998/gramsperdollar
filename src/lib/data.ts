@@ -58,3 +58,33 @@ export function leanness(share: number | null): { key: 'lean' | 'balanced' | 'ca
   if (share >= 0.25) return { key: 'balanced', label: 'Protein plus fat or carbs' };
   return { key: 'carbfat', label: 'Mostly carbs or fat' };
 }
+
+// ---- Store filters (homepage): "All stores", each state with 2+ stores, each store ----
+import { states as _states, storeInfo as _info } from './stores';
+export type View = { key: string; label: string; ids: string[]; group?: string };
+export function storeViews(): View[] {
+  const st = _states().map((s) => ({ ...s, ids: s.ids.filter((id) => storeRank(id).length >= 10) })).filter((s) => s.ids.length);
+  const all: View = { key: 'all', label: 'All stores', ids: st.flatMap((s) => s.ids) };
+  return [all, ...st.flatMap((s) => [
+    ...(s.ids.length > 1 ? [{ key: s.slug, label: `All ${s.state} stores`, ids: s.ids, group: s.state }] : []),
+    ...s.ids.map((id) => ({ key: id, label: `${_info(id).store}, ${_info(id).city}`, ids: [id], group: s.state })),
+  ])];
+}
+/** Best protein per dollar for each food across the given stores, with the store that has it. */
+export function bestFoods(ids: string[]): (RankRow & { store: string })[] {
+  const best = new Map<string, RankRow & { store: string }>();
+  for (const id of ids) for (const r of storeRank(id)) {
+    const cur = best.get(r.item);
+    if (!cur || r.protein_per_dollar > cur.protein_per_dollar) best.set(r.item, { ...r, store: id });
+  }
+  return [...best.values()].sort((a, b) => b.protein_per_dollar - a.protein_per_dollar);
+}
+/** Each recipe at its best-value store among the given stores (only stores that sell every ingredient). */
+export function bestRecipes(ids: string[]) {
+  return allRecipes().flatMap((r) => {
+    const opts = ids.map((id) => ({ id, s: storeStats(r, id) })).filter((x) => x.s?.protein_g_per_dollar);
+    if (!opts.length) return [];
+    const b = opts.sort((a, c) => c.s.protein_g_per_dollar! - a.s.protein_g_per_dollar!)[0];
+    return [{ r, s: b.s, store: b.id }];
+  }).sort((a, b) => b.s.protein_g_per_dollar! - a.s.protein_g_per_dollar!);
+}

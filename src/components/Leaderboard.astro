@@ -1,25 +1,24 @@
 ---
-// Recipes ranked by grams of protein per dollar. The homepage hero.
+// Recipes ranked by grams of protein per dollar. With several stores, each recipe shows its best-value store.
 import ShelfTag from './ShelfTag.astro';
-import { allRecipes, storeStats, usd, num, monthLabel, PRICE_BASIS } from '../lib/data';
+import { bestRecipes, allStoreIds, storeInfo, usd, num, monthLabel, priceBasis } from '../lib/data';
 
-
-const rows = allRecipes()
-  .map((r) => ({ r, s: storeStats(r) }))
-  .filter((x) => x.s?.protein_g_per_dollar)
-  .sort((a, b) => b.s.protein_g_per_dollar! - a.s.protein_g_per_dollar!);
+interface Props { ids?: string[] }
+const { ids = allStoreIds() } = Astro.props;
+const rows = bestRecipes(ids);
+const many = ids.length > 1;
 const top = rows[0]?.s.protein_g_per_dollar ?? 1;
 const checked = rows.map((x) => x.s.prices_checked).filter(Boolean).sort()[0];
 ---
 <ol class="board">
-  {rows.map(({ r, s }) => (
+  {rows.map(({ r, s, store }) => (
     <li class="row">
       <ShelfTag value={s.protein_g_per_dollar} size="sm" />
       <div class="body">
         <a class="name" href={`/recipes/${r.slug}`}>{r.name}</a>
         <span class="bar" style={`--w:${(s.protein_g_per_dollar! / top) * 100}%`} aria-hidden="true"></span>
         <span class="facts muted">
-          <span>{usd(s.cost_per_serving)} a serving</span>
+          <span>{usd(s.cost_per_serving)} a serving{many && <> at {storeInfo(store).store} ({storeInfo(store).city})</>}</span>
           <span>{Math.round(r.protein_g_per_serving)} g protein</span>
           <span>{num(r.kcal_per_serving)} kcal</span>
         </span>
@@ -27,7 +26,7 @@ const checked = rows.map((x) => x.s.prices_checked).filter(Boolean).sort()[0];
     </li>
   ))}
 </ol>
-<p class="small muted">{PRICE_BASIS}, checked {monthLabel(checked)}. Protein from USDA FoodData Central and product labels.</p>
+<p class="small muted">{many ? 'Each recipe at whichever of these stores makes it cheapest' : priceBasis(ids[0])}, checked {monthLabel(checked)}. Protein from USDA FoodData Central and product labels.</p>
 
 <style>
   .board { list-style: none; padding: 0; margin: 0 0 0.75rem; }

@@ -2,18 +2,19 @@
 import { publishedPosts } from '../lib/posts';
 import Base from '../layouts/Base.astro';
 import Leaderboard from '../components/Leaderboard.astro';
-import { formatDate, storeRank, leanness, usd, STORE, storeInfo, rankUrl, states } from '../lib/data';
-
-const cheap = storeRank(STORE);
-const home = storeInfo(STORE);
-const nStores = states().reduce((a, s) => a + s.ids.length, 0);
-const cheapTop = cheap.slice(0, 3);
-const cheapLean = cheap.find((r) => leanness(r.protein_share).key === 'lean');
 import RecipeList from '../components/RecipeList.astro';
+import { formatDate, leanness, usd, storeInfo, rankUrl, storeViews, bestFoods } from '../lib/data';
 import { unpricedRecipes } from '../lib/unpriced';
 
-const fresh = (await unpricedRecipes()).slice(0, 4);
+const views = storeViews().map((v) => {
+  const foods = bestFoods(v.ids);
+  return { ...v, top: foods.slice(0, 3), lean: foods.find((r) => leanness(r.protein_share).key === 'lean'), n: foods.length };
+});
+const nStores = views[0].ids.length;
+const groups = [...new Set(views.map((v) => v.group).filter(Boolean))] as string[];
+const where = (id: string) => `${storeInfo(id).store}, ${storeInfo(id).city} ${storeInfo(id).market}`;
 
+const fresh = (await unpricedRecipes()).slice(0, 4);
 const posts = await publishedPosts();
 ---
 <Base
@@ -23,25 +24,44 @@ const posts = await publishedPosts();
   <section class="intro">
     <h1>High-protein meals, priced by the gram</h1>
     <p class="lede">
-      Every recipe here is costed at a real supermarket and shows how many grams of protein you get
+      Every recipe here is costed at real supermarkets and shows how many grams of protein you get
       for each dollar you spend. The higher the yellow number, the better the value.
     </p>
   </section>
 
-  <section aria-labelledby="cheapest" class="cheapest">
-    <h2 id="cheapest" class="section-head">Cheapest protein at {home.store} ({home.state})</h2>
-    <ol class="mini">
-      {cheapTop.map((r) => (
-        <li><span class="tag tag-sm"><span class="tag-number">{r.protein_per_dollar}</span><span class="tag-unit">g protein<br />per $1</span></span> <span class="mini-name">{r.name}</span> <span class="small muted">30 g protein for {usd(r.cost_per_30g!)}</span></li>
+  <div class="picker">
+    <label for="shop">Where do you shop?</label>
+    <select id="shop">
+      <option value="all">All {nStores} stores we price</option>
+      {groups.map((g) => (
+        <optgroup label={g}>
+          {views.filter((v) => v.group === g).map((v) => <option value={v.key}>{v.label}</option>)}
+        </optgroup>
       ))}
-    </ol>
-    {cheapLean && <p class="small">Cheapest <em>lean</em> protein: <strong>{cheapLean.name.toLowerCase()}</strong>, {cheapLean.protein_per_dollar} g per $1.</p>}
-    <p><a href={rankUrl(STORE)}>See all {cheap.length}, ranked</a> · <a href="/cheapest-protein">Pick your state and compare {nStores} stores</a></p>
+    </select>
+  </div>
+
+  <section aria-labelledby="cheapest" class="cheapest">
+    <h2 id="cheapest" class="section-head">Cheapest protein</h2>
+    {views.map((v, i) => (
+      <div class="view" data-view={v.key} hidden={i > 0}>
+        <ol class="mini">
+          {v.top.map((r) => (
+            <li><span class="tag tag-sm"><span class="tag-number">{r.protein_per_dollar.toFixed(1)}</span><span class="tag-unit">g protein<br />per $1</span></span> <span class="mini-name">{r.name}</span> <span class="small muted">30 g protein for {usd(r.cost_per_30g!)}{v.ids.length > 1 && <> at {where(r.store)}</>}</span></li>
+          ))}
+        </ol>
+        {v.lean && <p class="small">Cheapest <em>lean</em> protein: <strong>{v.lean.name.toLowerCase()}</strong>, {v.lean.protein_per_dollar.toFixed(1)} g per $1{v.ids.length > 1 && <> at {where(v.lean.store)}</>}.</p>}
+        <p>{v.ids.length === 1
+          ? <a href={rankUrl(v.ids[0])}>All {v.n} foods at {storeInfo(v.ids[0]).store}, ranked</a>
+          : <a href="/cheapest-protein">Compare stores in your state</a>}
+        </p>
+      </div>
+    ))}
   </section>
 
   <section aria-labelledby="best-value">
     <h2 id="best-value" class="section-head">Best-value recipes</h2>
-    <Leaderboard />
+    {views.map((v, i) => <div class="view" data-view={v.key} hidden={i > 0}><Leaderboard ids={v.ids} /></div>)}
     <p><a href="/recipes">All recipes</a> · <a href="/planner">Plan your week and get a shopping list</a></p>
   </section>
 
@@ -67,10 +87,34 @@ const posts = await publishedPosts();
   </section>
 </Base>
 
+<script>
+  // Remembers the pick. A single store is also handed to the planner (gpd-store).
+  const sel = document.getElementById('shop') as HTMLSelectElement;
+  const views = document.querySelectorAll<HTMLElement>('.view');
+  function show(key: string) {
+    if (![...views].some((v) => v.dataset.view === key)) key = 'all';
+    sel.value = key;
+    views.forEach((v) => (v.hidden = v.dataset.view !== key));
+  }
+  let start = 'all';
+  try { start = localStorage.getItem('gpd-home-view') || 'all'; } catch {}
+  show(start);
+  sel.addEventListener('change', () => {
+    show(sel.value);
+    try {
+      localStorage.setItem('gpd-home-view', sel.value);
+      if (/-[a-z]{2}$/.test(sel.value)) localStorage.setItem('gpd-store', sel.value);
+    } catch {}
+  });
+</script>
+
 <style>
   .intro { max-width: 46rem; margin-bottom: 2.5rem; }
   .intro h1 { font-stretch: 118%; }
   .lede { font-size: var(--step-1); line-height: 1.5; max-width: var(--measure); margin-top: 1rem; }
+  .picker { margin: 0 0 0.5rem; }
+  .picker label { display: block; font-family: var(--display); font-weight: 700; margin-bottom: 0.3rem; }
+  .picker select { font: 700 1.05rem var(--display); padding: 0.55rem 2.2rem 0.55rem 0.8rem; border: 2px solid var(--ink); border-radius: var(--radius); background: var(--tag); color: var(--tag-ink); max-width: 100%; }
   .section-head { font-size: var(--step-1); margin: 3rem 0 0.75rem; }
   .mini { list-style: none; padding: 0; max-width: var(--measure); }
   .mini li { display: grid; grid-template-columns: 7.25rem 1fr; column-gap: 1rem; align-items: center; padding: 0.6rem 0; border-top: 1px solid var(--rule); margin: 0; }
