@@ -5,7 +5,7 @@
 // isn't identical to the full /recipes list. Thin 1–2 item pages drag the whole site down.
 // Pages appear on their own as new recipes are added.
 import { allRecipes, storeStats, type Recipe } from './data';
-import { storeInfo, slugify } from './stores';
+import { storeInfo, slugify, storeSlug } from './stores';
 
 export const MIN_RECIPES = 3;
 
@@ -56,7 +56,7 @@ export const FACETS: Facet[] = [
     values: (r) => Object.keys(r.stores).map((id) => {
       const i = storeInfo(id);
       return {
-        value: `${slugify(i.store)}-${slugify(i.state)}`, label: `${i.store} (${i.state})`,
+        value: `${storeSlug(id)}-${slugify(i.state)}`, label: `${i.store} (${i.state})`,
         title: `${i.store} High-Protein Meal Prep in ${i.state}`,
         description: `High-protein meal prep recipes priced at ${i.store} in ${i.city}, ${i.market}, with cost per serving and protein per dollar.`,
       };

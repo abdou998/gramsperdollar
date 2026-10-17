@@ -85,7 +85,8 @@ def load_stores(path: Path) -> dict[str, dict]:
 
 
 def store_id(store: str, market: str) -> str:
-    return f"{store.strip().lower().replace(' ', '-')}-{market.strip().lower()}"
+    # "H-E-B" + "TX" -> "heb-tx": letters and digits only, so ids match data/stores.csv.
+    return f"{''.join(c for c in store.lower() if c.isalnum())}-{market.strip().lower()}"
 
 
 def load_prices(path: Path, stores: dict[str, dict]) -> dict[str, dict[str, dict]]:

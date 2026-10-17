@@ -71,6 +71,67 @@
           }
         ]
       },
+      "heb-tx": {
+        "cost_per_serving": 3.3,
+        "protein_g_per_dollar": 17.3,
+        "prices_checked": "2026-10",
+        "breakdown": [
+          {
+            "label": "whey protein powder",
+            "item": "whey protein isolate",
+            "cost": 1.93,
+            "share": 0.585,
+            "protein": 25.0,
+            "product": "Dymatize ISO100 Hydrolyzed Whey Isolate Gourmet Vanilla 1.3 lb (~590 g)",
+            "url": "https://www.heb.com/product-detail/x/1565432"
+          },
+          {
+            "label": "plain nonfat Greek yogurt",
+            "item": "greek yogurt plain nonfat",
+            "cost": 0.82,
+            "share": 0.249,
+            "protein": 23.1,
+            "product": "Hill Country Fare Blended Nonfat Plain Greek Yogurt 32 oz",
+            "url": "https://www.heb.com/product-detail/x/2262571"
+          },
+          {
+            "label": "walnuts, chopped",
+            "item": "walnuts",
+            "cost": 0.25,
+            "share": 0.076,
+            "protein": 1.7,
+            "product": "Hill Country Fare Walnut Halves & Pieces 6 oz",
+            "url": "https://www.heb.com/product-detail/x/978122"
+          },
+          {
+            "label": "rolled oats",
+            "item": "rolled oats",
+            "cost": 0.14,
+            "share": 0.043,
+            "protein": 5.3,
+            "product": "H-E-B Old Fashioned Oats 42 oz",
+            "url": "https://www.heb.com/product-detail/x/1527031"
+          },
+          {
+            "label": "banana, sliced",
+            "item": "banana",
+            "cost": 0.13,
+            "share": 0.039,
+            "protein": 1.3,
+            "product": "Fresh Bananas (sold by the bunch; $0.49/lb)",
+            "url": "https://www.heb.com/product-detail/x/377497"
+          },
+          {
+            "label": "chia seeds",
+            "item": "chia seeds",
+            "cost": 0.03,
+            "share": 0.009,
+            "protein": 0.7,
+            "product": "H-E-B Organics Chia Seeds 1 lb",
+            "url": "https://www.heb.com/product-detail/x/2160763"
+          }
+        ]
+      },
       "walmart-ca": {
         "cost_per_serving": 3.53,
         "protein_g_per_dollar": 16.2,
@@ -288,6 +349,130 @@
       "kcal_per_serving": 590
     },
     "stores": {
+      "heb-tx": {
+        "cost_per_serving": 1.55,
+        "protein_g_per_dollar": 32.1,
+        "prices_checked": "2026-10",
+        "breakdown": [
+          {
+            "label": "chicken breast, cut into bite-size pieces",
+            "item": "chicken breast",
+            "cost": 0.74,
+            "share": 0.476,
+            "protein": 33.8,
+            "product": "Fresh Boneless Skinless Chicken Breasts Value Pack (avg 4.85 lb; $2.23/lb)",
+            "url": "https://www.heb.com/product-detail/x/372565"
+          },
+          {
+            "label": "diced tomatoes, with juice",
+            "item": "diced tomatoes canned",
+            "cost": 0.24,
+            "share": 0.155,
+            "protein": 0.8,
+            "product": "Hill Country Fare Diced Tomatoes 14.5 oz",
+            "url": "https://www.heb.com/product-detail/x/15749043"
+          },
+          {
+            "label": "red lentils, rinsed",
+            "item": "red lentils",
+            "cost": 0.17,
+            "share": 0.108,
+            "protein": 9.0,
+            "product": "H-E-B Red Lentils 16 oz",
+            "url": "https://www.heb.com/product-detail/x/15968546"
+          },
+          {
+            "label": "frozen peas",
+            "item": "frozen peas",
+            "cost": 0.11,
+            "share": 0.074,
+            "protein": 2.0,
+            "product": "H-E-B Frozen Green Peas 16 oz",
+            "url": "https://www.heb.com/product-detail/x/125656"
+          },
+          {
+            "label": "long-grain white rice, rinsed",
+            "item": "white rice",
+            "cost": 0.09,
+            "share": 0.058,
+            "protein": 3.6,
+            "product": "H-E-B Enriched Long Grain White Rice 2 lb",
+            "url": "https://www.heb.com/product-detail/x/127178"
+          },
+          {
+            "label": "olive oil",
+            "item": "olive oil",
+            "cost": 0.06,
+            "share": 0.039,
+            "protein": 0.0,
+            "product": "H-E-B Extra Virgin Olive Oil 17 oz (~457 g)",
+            "url": "https://www.heb.com/product-detail/x/127074"
+          },
+          {
+            "label": "yellow onion, diced",
+            "item": "onion",
+            "cost": 0.06,
+            "share": 0.037,
+            "protein": 0.3,
+            "product": "Fresh Yellow Onions 3 lb bag",
+            "url": "https://www.heb.com/product-detail/x/449732"
+          },
+          {
+            "label": "smoked paprika",
+            "item": "smoked paprika",
+            "cost": 0.04,
+            "share": 0.024,
+            "protein": 0.1,
+            "product": "H-E-B Smoked Paprika 1.9 oz",
+            "url": "https://www.heb.com/product-detail/x/4384567"
+          },
+          {
+            "label": "garlic, minced",
+            "item": "garlic",
+            "cost": 0.02,
+            "share": 0.012,
+            "protein": 0.1,
+            "product": "Fresh Garlic bulb each (~40 g)",
+            "url": "https://www.heb.com/product-detail/x/325168"
+          },
+          {
+            "label": "ground cumin",
+            "item": "cumin ground",
+            "cost": 0.02,
+            "share": 0.011,
+            "protein": 0.1,
+            "product": "Hill Country Fare Ground Comino (cumin) 1.25 oz",
+            "url": "https://www.heb.com/product-detail/x/607761"
+          },
+          {
+            "label": "black pepper",
+            "item": "black pepper",
+            "cost": 0.01,
+            "share": 0.005,
+            "protein": 0.0,
+            "product": "H-E-B Pure Ground Black Pepper 4 oz",
+            "url": "https://www.heb.com/product-detail/x/125167"
+          },
+          {
+            "label": "kosher salt, divided",
+            "item": "kosher salt",
+            "cost": 0.0,
+            "share": 0.001,
+            "protein": 0.0,
+            "product": "H-E-B Coarse Kosher Salt 4.4 lb",
+            "url": "https://www.heb.com/product-detail/x/1917502"
+          },
+          {
+            "label": "water",
+            "item": "water",
+            "cost": 0.0,
+            "share": 0.0,
+            "protein": 0.0,
+            "product": "Tap water",
+            "url": ""
+          }
+        ]
+      },
       "walmart-ca": {
         "cost_per_serving": 1.8,
         "protein_g_per_dollar": 27.6,
@@ -537,7 +722,7 @@
         ]
       }
     },
-    "cheapest_store": "walmart-ca",
+    "cheapest_store": "heb-tx",
     "missing_nutrition": [],
     "unpriced_items": [],
     "ingredients": [
@@ -778,6 +963,121 @@
             "protein": 0.0,
             "product": "Stonemill Iodized Salt 26 oz (swap for kosher salt)",
             "url": "https://www.aldi.us/store/aldi/s?k=kosher%20salt"
+          }
+        ]
+      },
+      "heb-tx": {
+        "cost_per_serving": 3.35,
+        "protein_g_per_dollar": 14.5,
+        "prices_checked": "2026-10",
+        "breakdown": [
+          {
+            "label": "boneless skinless chicken breast",
+            "item": "chicken breast",
+            "cost": 0.98,
+            "share": 0.294,
+            "protein": 45.0,
+            "product": "Fresh Boneless Skinless Chicken Breasts Value Pack (avg 4.85 lb; $2.23/lb)",
+            "url": "https://www.heb.com/product-detail/x/372565"
+          },
+          {
+            "label": "green beans, trimmed",
+            "item": "green beans",
+            "cost": 0.42,
+            "share": 0.124,
+            "protein": 1.0,
+            "product": "Fresh Steamable Green Beans 12 oz",
+            "url": "https://www.heb.com/product-detail/x/768344"
+          },
+          {
+            "label": "olive oil, divided",
+            "item": "olive oil",
+            "cost": 0.37,
+            "share": 0.109,
+            "protein": 0.0,
+            "product": "H-E-B Extra Virgin Olive Oil 17 oz (~457 g)",
+            "url": "https://www.heb.com/product-detail/x/127074"
+          },
+          {
+            "label": "red bell pepper, sliced",
+            "item": "red bell pepper",
+            "cost": 0.37,
+            "share": 0.111,
+            "protein": 0.3,
+            "product": "Fresh Red Bell Pepper each",
+            "url": "https://www.heb.com/product-detail/x/325164"
+          },
+          {
+            "label": "yellow bell pepper, sliced",
+            "item": "yellow bell pepper",
+            "cost": 0.37,
+            "share": 0.11,
+            "protein": 0.3,
+            "product": "Fresh Yellow Bell Pepper each",
+            "url": "https://www.heb.com/product-detail/x/318717"
+          },
+          {
+            "label": "yellow squash, cut into ½-inch rounds",
+            "item": "yellow squash",
+            "cost": 0.3,
+            "share": 0.089,
+            "protein": 1.2,
+            "product": "Fresh Yellow Squash (sold by weight; $1.38/lb)",
+            "url": "https://www.heb.com/product-detail/x/374745"
+          },
+          {
+            "label": "lemon, zest and juice",
+            "item": "lemon juice and zest",
+            "cost": 0.25,
+            "share": 0.075,
+            "protein": 0.1,
+            "product": "Fresh Small Lemon each (regular price - was on sale at $0.33; ~50 g used)",
+            "url": "https://www.heb.com/product-detail/x/375185"
+          },
+          {
+            "label": "carrots, cut into sticks",
+            "item": "carrots",
+            "cost": 0.13,
+            "share": 0.04,
+            "protein": 0.6,
+            "product": "H-E-B Fresh Whole Carrots 2 lb bag",
+            "url": "https://www.heb.com/product-detail/x/4833553"
+          },
+          {
+            "label": "fresh rosemary, finely chopped",
+            "item": "rosemary fresh",
+            "cost": 0.11,
+            "share": 0.032,
+            "protein": 0.0,
+            "product": "Goodness Gardens Fresh Rosemary 0.5 oz",
+            "url": "https://www.heb.com/product-detail/x/16845512"
+          },
+          {
+            "label": "garlic, minced",
+            "item": "garlic",
+            "cost": 0.02,
+            "share": 0.007,
+            "protein": 0.2,
+            "product": "Fresh Garlic bulb each (~40 g)",
+            "url": "https://www.heb.com/product-detail/x/325168"
+          },
+          {
+            "label": "black pepper",
+            "item": "black pepper",
+            "cost": 0.02,
+            "share": 0.007,
+            "protein": 0.1,
+            "product": "H-E-B Pure Ground Black Pepper 4 oz",
+            "url": "https://www.heb.com/product-detail/x/125167"
+          },
+          {
+            "label": "kosher salt",
+            "item": "kosher salt",
+            "cost": 0.0,
+            "share": 0.001,
+            "protein": 0.0,
+            "product": "H-E-B Coarse Kosher Salt 4.4 lb",
+            "url": "https://www.heb.com/product-detail/x/1917502"
           }
         ]
       },
@@ -1212,6 +1512,76 @@
           }
         ]
       },
+      "heb-tx": {
+        "cost_per_serving": 1.98,
+        "protein_g_per_dollar": 16.0,
+        "prices_checked": "2026-10",
+        "breakdown": [
+          {
+            "label": "whey protein isolate",
+            "item": "whey protein isolate",
+            "cost": 1.61,
+            "share": 0.811,
+            "protein": 20.8,
+            "product": "Dymatize ISO100 Hydrolyzed Whey Isolate Gourmet Vanilla 1.3 lb (~590 g)",
+            "url": "https://www.heb.com/product-detail/x/1565432"
+          },
+          {
+            "label": "egg",
+            "item": "egg whole",
+            "cost": 0.14,
+            "share": 0.07,
+            "protein": 6.3,
+            "product": "Hill Country Fare Grade A Large White Eggs 12 ct (12 x 50 g edible)",
+            "url": "https://www.heb.com/product-detail/x/313762"
+          },
+          {
+            "label": "whole milk",
+            "item": "milk whole",
+            "cost": 0.09,
+            "share": 0.048,
+            "protein": 4.0,
+            "product": "Hill Country Fare Whole Milk 1 gal (~3900 g)",
+            "url": "https://www.heb.com/product-detail/x/314124"
+          },
+          {
+            "label": "banana, sliced",
+            "item": "banana",
+            "cost": 0.06,
+            "share": 0.032,
+            "protein": 0.6,
+            "product": "Fresh Bananas (sold by the bunch; $0.49/lb)",
+            "url": "https://www.heb.com/product-detail/x/377497"
+          },
+          {
+            "label": "baking powder",
+            "item": "baking powder",
+            "cost": 0.04,
+            "share": 0.021,
+            "protein": 0.0,
+            "product": "Hill Country Fare Double Acting Baking Powder 8.1 oz",
+            "url": "https://www.heb.com/product-detail/x/2657518"
+          },
+          {
+            "label": "butter, for the pan",
+            "item": "butter salted",
+            "cost": 0.03,
+            "share": 0.013,
+            "protein": 0.0,
+            "product": "Hill Country Fare Salted Butter Sticks 4 ct 16 oz",
+            "url": "https://www.heb.com/product-detail/x/3539033"
+          },
+          {
+            "label": "ground cinnamon",
+            "item": "cinnamon ground",
+            "cost": 0.01,
+            "share": 0.005,
+            "protein": 0.0,
+            "product": "Hill Country Fare Ground Cinnamon 1 oz",
+            "url": "https://www.heb.com/product-detail/x/607760"
+          }
+        ]
+      },
       "walmart-ca": {
         "cost_per_serving": 2.17,
         "protein_g_per_dollar": 14.7,
@@ -1532,6 +1902,94 @@
             "protein": 0.0,
             "product": "Stonemill Iodized Salt 26 oz (swap for kosher salt)",
             "url": "https://www.aldi.us/store/aldi/s?k=kosher%20salt"
+          }
+        ]
+      },
+      "heb-tx": {
+        "cost_per_serving": 2.51,
+        "protein_g_per_dollar": 8.4,
+        "prices_checked": "2026-10",
+        "breakdown": [
+          {
+            "label": "peeled raw shrimp",
+            "item": "shrimp raw",
+            "cost": 1.87,
+            "share": 0.744,
+            "protein": 13.6,
+            "product": "Great Catch Frozen Peeled Deveined Tail-Off Raw Shrimp 41-50 ct 2 lb",
+            "url": "https://www.heb.com/product-detail/x/899288"
+          },
+          {
+            "label": "olive oil",
+            "item": "olive oil",
+            "cost": 0.24,
+            "share": 0.097,
+            "protein": 0.0,
+            "product": "H-E-B Extra Virgin Olive Oil 17 oz (~457 g)",
+            "url": "https://www.heb.com/product-detail/x/127074"
+          },
+          {
+            "label": "white rice",
+            "item": "white rice",
+            "cost": 0.16,
+            "share": 0.064,
+            "protein": 6.4,
+            "product": "H-E-B Enriched Long Grain White Rice 2 lb",
+            "url": "https://www.heb.com/product-detail/x/127178"
+          },
+          {
+            "label": "onion, finely chopped",
+            "item": "onion",
+            "cost": 0.07,
+            "share": 0.029,
+            "protein": 0.4,
+            "product": "Fresh Yellow Onions 3 lb bag",
+            "url": "https://www.heb.com/product-detail/x/449732"
+          },
+          {
+            "label": "paprika",
+            "item": "paprika",
+            "cost": 0.06,
+            "share": 0.025,
+            "protein": 0.2,
+            "product": "H-E-B Hungarian Paprika 1.9 oz",
+            "url": "https://www.heb.com/product-detail/x/8709502"
+          },
+          {
+            "label": "garlic, minced",
+            "item": "garlic",
+            "cost": 0.04,
+            "share": 0.015,
+            "protein": 0.3,
+            "product": "Fresh Garlic bulb each (~40 g)",
+            "url": "https://www.heb.com/product-detail/x/325168"
+          },
+          {
+            "label": "black pepper",
+            "item": "black pepper",
+            "cost": 0.04,
+            "share": 0.015,
+            "protein": 0.1,
+            "product": "H-E-B Pure Ground Black Pepper 4 oz",
+            "url": "https://www.heb.com/product-detail/x/125167"
+          },
+          {
+            "label": "dried herbs or mixed seasoning",
+            "item": "italian seasoning",
+            "cost": 0.03,
+            "share": 0.01,
+            "protein": 0.0,
+            "product": "H-E-B Italian Seasoning 0.75 oz",
+            "url": "https://www.heb.com/product-detail/x/5156568"
+          },
+          {
+            "label": "salt",
+            "item": "kosher salt",
+            "cost": 0.0,
+            "share": 0.001,
+            "protein": 0.0,
+            "product": "H-E-B Coarse Kosher Salt 4.4 lb",
+            "url": "https://www.heb.com/product-detail/x/1917502"
           }
         ]
       },

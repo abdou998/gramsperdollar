@@ -200,3 +200,10 @@ Everything is plain files, so nothing is locked in.
    unfixed on purpose and can't be dismissed). **Star ratings (`aggregateRating`) only once real readers arrive**: add a
    simple 1–5 rating on recipe pages and output it in the schema only when a recipe has real votes. Never invent ratings.
    Revisit when Search Console shows steady clicks.
+
+## Update 17 Oct 2026
+- H-E-B Gulfgate (Houston 77087) priced: 46 items, id `heb-tx`. Texas now has Aldi, Walmart and H-E-B. Aldi wins 16 of 21 foods, H-E-B 3, Walmart 1, 1 tie. The 4-day plan is cheapest at H-E-B ($6.89 a day).
+- Homepage is no longer California-only: it defaults to "All stores" (each food and recipe at its best store), with a "Where do you shop?" filter (all / state / store). Helpers `storeViews`, `bestFoods` and `bestRecipes` are in src/lib/data.ts. Leaderboard takes an `ids` prop.
+- Store ids are now letters only plus the state (`heb-tx`). The URL slug is the id minus the state (`/cheapest-protein/texas/heb`).
+- **Cheaper pricing workflow: see docs/PRICING.md** (price_todo.py → browser extractor → add_prices.py).
+- Next: write the article "Aldi vs H-E-B vs Walmart: cheapest protein in Houston"; then Kroger Houston; then a new state.

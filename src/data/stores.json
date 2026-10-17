@@ -28,5 +28,15 @@
     "location": "Houston S Wayside Drive Supercenter #5612 (77023)",
     "source": "walmart.com",
     "note": "Regular shelf price on walmart.com for this store."
+  },
+  "heb-tx": {
+    "id": "heb-tx",
+    "store": "H-E-B",
+    "market": "TX",
+    "state": "Texas",
+    "city": "Houston",
+    "location": "Gulfgate H-E-B, 3111 Woodridge, Houston (77087)",
+    "source": "heb.com (in-store prices)",
+    "note": "heb.com's in-store price for this store. Curbside pickup costs a little more."
   }
 }

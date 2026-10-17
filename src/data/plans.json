@@ -31,6 +31,249 @@
       "kcal": 1418
     },
     "stores": {
+      "heb-tx": {
+        "cost_per_day": 6.89,
+        "cost_total_used": 27.54,
+        "checkout_total": 74.79,
+        "buy": [
+          {
+            "item": "banana",
+            "aisle": "Produce",
+            "product": "Fresh Bananas (sold by the bunch; $0.49/lb)",
+            "grams_needed": 236,
+            "packs": 1,
+            "pack_price": 0.49,
+            "url": "https://www.heb.com/product-detail/x/377497"
+          },
+          {
+            "item": "garlic",
+            "aisle": "Produce",
+            "product": "Fresh Garlic bulb each (~40 g)",
+            "grams_needed": 21,
+            "packs": 1,
+            "pack_price": 0.33,
+            "url": "https://www.heb.com/product-detail/x/325168"
+          },
+          {
+            "item": "red bell pepper",
+            "aisle": "Produce",
+            "product": "Fresh Red Bell Pepper each",
+            "grams_needed": 120,
+            "packs": 1,
+            "pack_price": 1.48,
+            "url": "https://www.heb.com/product-detail/x/325164"
+          },
+          {
+            "item": "lemon juice and zest",
+            "aisle": "Produce",
+            "product": "Fresh Small Lemon each (regular price - was on sale at $0.33; ~50 g used)",
+            "grams_needed": 100,
+            "packs": 2,
+            "pack_price": 0.5,
+            "url": "https://www.heb.com/product-detail/x/375185"
+          },
+          {
+            "item": "green beans",
+            "aisle": "Produce",
+            "product": "Fresh Steamable Green Beans 12 oz",
+            "grams_needed": 220,
+            "packs": 1,
+            "pack_price": 2.58,
+            "url": "https://www.heb.com/product-detail/x/768344"
+          },
+          {
+            "item": "yellow bell pepper",
+            "aisle": "Produce",
+            "product": "Fresh Yellow Bell Pepper each",
+            "grams_needed": 120,
+            "packs": 1,
+            "pack_price": 1.46,
+            "url": "https://www.heb.com/product-detail/x/318717"
+          },
+          {
+            "item": "onion",
+            "aisle": "Produce",
+            "product": "Fresh Yellow Onions 3 lb bag",
+            "grams_needed": 110,
+            "packs": 1,
+            "pack_price": 2.82,
+            "url": "https://www.heb.com/product-detail/x/449732"
+          },
+          {
+            "item": "yellow squash",
+            "aisle": "Produce",
+            "product": "Fresh Yellow Squash (sold by weight; $1.38/lb)",
+            "grams_needed": 392,
+            "packs": 1,
+            "pack_price": 1.38,
+            "url": "https://www.heb.com/product-detail/x/374745"
+          },
+          {
+            "item": "rosemary fresh",
+            "aisle": "Produce",
+            "product": "Goodness Gardens Fresh Rosemary 0.5 oz",
+            "grams_needed": 3,
+            "packs": 1,
+            "pack_price": 1.78,
+            "url": "https://www.heb.com/product-detail/x/16845512"
+          },
+          {
+            "item": "carrots",
+            "aisle": "Produce",
+            "product": "H-E-B Fresh Whole Carrots 2 lb bag",
+            "grams_needed": 244,
+            "packs": 1,
+            "pack_price": 1.99,
+            "url": "https://www.heb.com/product-detail/x/4833553"
+          },
+          {
+            "item": "chicken breast",
+            "aisle": "Meat",
+            "product": "Fresh Boneless Skinless Chicken Breasts Value Pack (avg 4.85 lb; $2.23/lb)",
+            "grams_needed": 1400,
+            "packs": 1,
+            "pack_price": 10.82,
+            "url": "https://www.heb.com/product-detail/x/372565"
+          },
+          {
+            "item": "egg whole",
+            "aisle": "Dairy and eggs",
+            "product": "Hill Country Fare Grade A Large White Eggs 12 ct (12 x 50 g edible)",
+            "grams_needed": 200,
+            "packs": 1,
+            "pack_price": 1.67,
+            "url": "https://www.heb.com/product-detail/x/313762"
+          },
+          {
+            "item": "milk whole",
+            "aisle": "Dairy and eggs",
+            "product": "Hill Country Fare Whole Milk 1 gal (~3900 g)",
+            "grams_needed": 488,
+            "packs": 1,
+            "pack_price": 3.03,
+            "url": "https://www.heb.com/product-detail/x/314124"
+          },
+          {
+            "item": "frozen peas",
+            "aisle": "Frozen",
+            "product": "H-E-B Frozen Green Peas 16 oz",
+            "grams_needed": 150,
+            "packs": 1,
+            "pack_price": 1.38,
+            "url": "https://www.heb.com/product-detail/x/125656"
+          },
+          {
+            "item": "white rice",
+            "aisle": "Dry goods and cans",
+            "product": "H-E-B Enriched Long Grain White Rice 2 lb",
+            "grams_needed": 200,
+            "packs": 1,
+            "pack_price": 1.62,
+            "url": "https://www.heb.com/product-detail/x/127178"
+          },
+          {
+            "item": "red lentils",
+            "aisle": "Dry goods and cans",
+            "product": "H-E-B Red Lentils 16 oz",
+            "grams_needed": 150,
+            "packs": 1,
+            "pack_price": 2.02,
+            "url": "https://www.heb.com/product-detail/x/15968546"
+          },
+          {
+            "item": "diced tomatoes canned",
+            "aisle": "Dry goods and cans",
+            "product": "Hill Country Fare Diced Tomatoes 14.5 oz",
+            "grams_needed": 411,
+            "packs": 1,
+            "pack_price": 0.96,
+            "url": "https://www.heb.com/product-detail/x/15749043"
+          },
+          {
+            "item": "whey protein isolate",
+            "aisle": "Protein powder",
+            "product": "Dymatize ISO100 Hydrolyzed Whey Isolate Gourmet Vanilla 1.3 lb (~590 g)",
+            "grams_needed": 100,
+            "packs": 1,
+            "pack_price": 37.98,
+            "url": "https://www.heb.com/product-detail/x/1565432"
+          }
+        ],
+        "pantry": [
+          {
+            "item": "baking powder",
+            "aisle": "Baking",
+            "product": "Hill Country Fare Double Acting Baking Powder 8.1 oz",
+            "grams_needed": 18,
+            "packs": 1,
+            "pack_price": 2.08,
+            "url": "https://www.heb.com/product-detail/x/2657518"
+          },
+          {
+            "item": "black pepper",
+            "aisle": "Oils and spices",
+            "product": "H-E-B Pure Ground Black Pepper 4 oz",
+            "grams_needed": 4,
+            "packs": 1,
+            "pack_price": 3.78,
+            "url": "https://www.heb.com/product-detail/x/125167"
+          },
+          {
+            "item": "butter salted",
+            "aisle": "Dairy and eggs",
+            "product": "Hill Country Fare Salted Butter Sticks 4 ct 16 oz",
+            "grams_needed": 16,
+            "packs": 1,
+            "pack_price": 2.98,
+            "url": "https://www.heb.com/product-detail/x/3539033"
+          },
+          {
+            "item": "cinnamon ground",
+            "aisle": "Oils and spices",
+            "product": "Hill Country Fare Ground Cinnamon 1 oz",
+            "grams_needed": 2,
+            "packs": 1,
+            "pack_price": 0.53,
+            "url": "https://www.heb.com/product-detail/x/607760"
+          },
+          {
+            "item": "cumin ground",
+            "aisle": "Oils and spices",
+            "product": "Hill Country Fare Ground Comino (cumin) 1.25 oz",
+            "grams_needed": 2,
+            "packs": 1,
+            "pack_price": 1.25,
+            "url": "https://www.heb.com/product-detail/x/607761"
+          },
+          {
+            "item": "kosher salt",
+            "aisle": "Oils and spices",
+            "product": "H-E-B Coarse Kosher Salt 4.4 lb",
+            "grams_needed": 18,
+            "packs": 1,
+            "pack_price": 2.64,
+            "url": "https://www.heb.com/product-detail/x/1917502"
+          },
+          {
+            "item": "olive oil",
+            "aisle": "Oils and spices",
+            "product": "H-E-B Extra Virgin Olive Oil 17 oz (~457 g)",
+            "grams_needed": 94,
+            "packs": 1,
+            "pack_price": 8.28,
+            "url": "https://www.heb.com/product-detail/x/127074"
+          },
+          {
+            "item": "smoked paprika",
+            "aisle": "Oils and spices",
+            "product": "H-E-B Smoked Paprika 1.9 oz",
+            "grams_needed": 2,
+            "packs": 1,
+            "pack_price": 3.48,
+            "url": "https://www.heb.com/product-detail/x/4384567"
+          }
+        ]
+      },
       "walmart-ca": {
         "cost_per_day": 7.56,
         "cost_total_used": 30.25,

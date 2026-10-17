@@ -9,7 +9,7 @@ export const allStoreIds = () => Object.keys(S);
 export const storeInfo = (id: string): StoreInfo => S[id];
 export const slugify = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 export const stateSlug = (id: string) => slugify(S[id].state);
-export const storeSlug = (id: string) => slugify(S[id].store);
+export const storeSlug = (id: string) => id.replace(/-[a-z]{2}$/, ''); // 'heb-tx' -> 'heb'
 /** "Walmart (Houston, TX)" */
 export const storeLabel = (id: string) => `${S[id].store} (${S[id].city}, ${S[id].market})`;
 /** "Walmart.com prices for the Sacramento Gerber Rd Supercenter (95829), California" */

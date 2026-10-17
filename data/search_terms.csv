@@ -1,0 +1,49 @@
+# What to type into a store's search box for each item, and what counts as a match.
+# Used by tools/price_todo.py. pick = the size/kind to choose (store brand, regular price, usual pack).
+item,search,pick
+whey protein isolate,whey protein isolate,store-brand or cheapest unflavoured/vanilla isolate tub; note servings x g
+egg whole,large eggs 12,store-brand large white eggs, 12 count (600 g edible)
+milk whole,whole milk gallon,store-brand whole milk 1 gallon (~3900 g)
+banana,banana,loose bananas per lb
+butter salted,salted butter,store-brand salted butter 16 oz
+baking powder,baking powder,store-brand ~8 oz
+cinnamon ground,ground cinnamon,store-brand smallest common jar
+chicken breast,boneless skinless chicken breast,store-brand family/value pack, price per lb or bag
+olive oil,extra virgin olive oil,store-brand ~16-17 fl oz
+lemon juice and zest,lemon,single lemon each (~50 g juice+zest used)
+garlic,garlic bulb,single bulb (~40 g)
+rosemary fresh,fresh rosemary,fresh clamshell ~0.5-0.75 oz (dried if no fresh; say so)
+kosher salt,kosher salt,store-brand kosher salt (iodized salt if none; say so)
+black pepper,ground black pepper,store-brand ~3 oz
+yellow squash,yellow squash,loose per lb (zucchini if none; say so)
+green beans,fresh green beans,bag ~12 oz or per lb
+carrots,carrots 2 lb,whole carrots 2 lb bag
+red bell pepper,red bell pepper,single pepper each (~119 g)
+yellow bell pepper,yellow bell pepper,single pepper each (~119 g)
+white rice,long grain white rice,store-brand 2 lb bag
+red lentils,red lentils,1 lb bag
+onion,yellow onions 3 lb,3 lb bag
+diced tomatoes canned,diced tomatoes 14.5 oz,store-brand 14.5 oz can
+frozen peas,frozen peas,store-brand 12-16 oz bag
+cumin ground,ground cumin,store-brand jar
+smoked paprika,smoked paprika,store-brand jar (plain paprika if none; say so)
+greek yogurt plain nonfat,plain nonfat greek yogurt 32 oz,store-brand 32 oz tub
+rolled oats,old fashioned oats,store-brand 42 oz (or largest common canister)
+walnuts,walnuts halves pieces,store-brand 8 oz bag
+chia seeds,chia seeds,store-brand bag
+honey,honey,store-brand 12 oz bear
+mint fresh,fresh mint,fresh clamshell ~0.5-0.75 oz
+shrimp raw,frozen raw shrimp peeled,store-brand peeled raw frozen bag 12-16 oz
+paprika,paprika,store-brand jar
+italian seasoning,italian seasoning,store-brand jar
+tuna canned light drained,chunk light tuna in water 5 oz,store-brand 5 oz can (113 g drained)
+chicken canned,canned chicken breast 12.5 oz,store-brand 12.5 oz can
+black beans dry,dry black beans 2 lb,store-brand 2 lb bag
+black beans canned,black beans 15 oz can,store-brand 15 oz can
+ground turkey 93,ground turkey 93/7,1 lb pack/roll
+ground beef 80/20,ground beef 80/20,1 lb pack (or per lb)
+chicken thigh boneless,boneless skinless chicken thighs,store-brand value pack
+pork loin,boneless pork loin,per lb (whole/half loin)
+tofu firm,extra firm tofu,14-16 oz block
+cottage cheese,cottage cheese 4%,store-brand 24 oz tub
+peanut butter,creamy peanut butter,store-brand largest common jar (28-40 oz)
