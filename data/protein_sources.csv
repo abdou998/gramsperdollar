@@ -1,0 +1,24 @@
+# Items ranked on /cheapest-protein/<store>. `name` is what readers see; `group` is the filter.
+# Rank is grams of protein per $1 at the shelf price, using the whole pack (what you pay at the till).
+item,name,group
+chicken breast,Chicken breast (boneless),Meat and fish
+chicken thigh boneless,Chicken thighs (boneless),Meat and fish
+ground turkey 93,Ground turkey 93/7,Meat and fish
+ground beef 80/20,Ground beef 80/20,Meat and fish
+pork loin,Pork loin roast,Meat and fish
+tuna canned light drained,Canned light tuna,Meat and fish
+chicken canned,Canned chicken breast,Meat and fish
+shrimp raw,Shrimp (frozen raw),Meat and fish
+egg whole,Eggs,Dairy and eggs
+milk whole,Whole milk,Dairy and eggs
+greek yogurt plain nonfat,Greek yogurt (nonfat),Dairy and eggs
+cottage cheese,Cottage cheese,Dairy and eggs
+red lentils,Red lentils (dry),Plant
+black beans dry,Black beans (dry),Plant
+black beans canned,Black beans (canned),Plant
+tofu firm,Tofu (extra firm),Plant
+peanut butter,Peanut butter,Plant
+frozen peas,Frozen peas,Plant
+rolled oats,Rolled oats,Grains
+white rice,White rice,Grains
+whey protein isolate,Whey protein isolate,Protein powder

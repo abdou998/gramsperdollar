@@ -14,11 +14,15 @@
   Each recipe also needs `meal` (breakfast / lunch / dinner / snack) and `tags` (e.g. `["one-pot", "freezer-friendly",
   "no-cook", "vegetarian"]`). These drive the category pages. Optional `cuisine` (e.g. "Mexican") only when it genuinely fits. Optional `author` (shown as a byline) and `intro` (a paragraph in the contributor's words) for recipes from `/write`. Every recipe gets its own page at `/recipes/<file-name>`.
 
+- `protein_sources.csv` — the staples ranked on `/cheapest-protein/<store>` (item, display name, filter group).
+  A store gets its own ranking page once it has prices for 10+ of these. To add a store: add its rows to
+  `prices.csv` (same `item` names, store name in `store`), run the script, and its page appears.
+
 ## Run
 ```
 python tools/mealmath.py --print
 ```
-Writes `src/data/recipes.json` (what the site's tables read) and prints protein/kcal per serving
+Writes `src/data/recipes.json` (what the site's tables read, incl. a per-ingredient cost breakdown), `src/data/protein_rank.json` and prints protein/kcal per serving
 (with and without optional extras), plus — once every core ingredient is priced at a store —
 cost per serving, grams of protein per dollar, the cheapest store and the oldest price date.
 

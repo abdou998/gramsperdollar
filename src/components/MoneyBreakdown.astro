@@ -1,0 +1,65 @@
+---
+// "Where the money goes": each ingredient's cost per serving, its share of the total and the protein it adds.
+// The pricing is what makes this site different, so it gets a real table, not a footnote.
+import { storeStats, usd, monthLabel, storeSlug, rankStores, PRICE_BASIS, type Recipe } from '../lib/data';
+
+interface Props { r: Recipe; store?: string }
+const { r, store = 'Walmart' } = Astro.props;
+const s = storeStats(r, store) as any;
+const rows: any[] = s?.breakdown ?? [];
+const shown = rows.filter((b) => b.cost >= 0.01);
+const small = rows.filter((b) => b.cost < 0.01);
+const top = shown[0];
+const protein = rows.reduce((a, b) => a + b.protein, 0);
+const proteinTop = [...rows].sort((a, b) => b.protein - a.protein)[0];
+const hasRank = rankStores().includes(store);
+const short = (l: string) => { const t = l.split(',')[0].replace(/\s*\(.*?\)/g, '').trim(); return t.charAt(0).toUpperCase() + t.slice(1); };
+---
+{s && rows.length > 0 && (
+  <section class="money" aria-labelledby={`${r.slug}-money`}>
+    <h3 id={`${r.slug}-money`}>Where the money goes</h3>
+    <p class="sum">
+      {usd(s.cost_per_serving)} a serving at {store}.
+      {top && <> The {short(top.label).toLowerCase()} is {Math.round(top.share * 100)}% of the cost</>}{proteinTop && proteinTop.item !== top?.item
+        ? <>, and the {short(proteinTop.label).toLowerCase()} brings the most protein ({Math.round(proteinTop.protein / protein * 100)}%).</>
+        : <>{top ? ' and brings the most protein.' : ''}</>}
+    </p>
+    <div class="scroll">
+      <table>
+        <caption class="visually-hidden">Cost and protein per serving, by ingredient</caption>
+        <thead><tr><th>Ingredient</th><th class="num">Cost</th><th class="share-h"><span class="visually-hidden">Share of cost</span></th><th class="num">Protein</th></tr></thead>
+        <tbody>
+          {shown.map((b) => (
+            <tr>
+              <td>{short(b.label)}</td>
+              <td class="num">{usd(b.cost)}</td>
+              <td class="share"><span class="bar" style={`--w:${Math.max(b.share * 100, 1)}%`}></span><span class="pc">{Math.round(b.share * 100)}%</span></td>
+              <td class="num">{b.protein >= 0.5 ? `${b.protein.toFixed(1)} g` : '–'}</td>
+            </tr>
+          ))}
+          {small.length > 0 && (
+            <tr class="muted"><td>{small.map((b) => short(b.label)).join(', ')}</td><td class="num">under 1¢</td><td></td><td class="num">–</td></tr>
+          )}
+        </tbody>
+        <tfoot><tr><th>Per serving</th><th class="num">{usd(s.cost_per_serving)}</th><th></th><th class="num">{r.protein_g_per_serving} g</th></tr></tfoot>
+      </table>
+    </div>
+    <p class="small muted basis">
+      {PRICE_BASIS}, checked {monthLabel(s.prices_checked)}. Costs count only what the recipe uses, not whole packs.
+      {hasRank && <> See the <a href={`/cheapest-protein/${storeSlug(store)}`}>cheapest protein at {store}</a>.</>}
+    </p>
+  </section>
+)}
+
+<style>
+  .money { margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid var(--rule); max-width: 40rem; }
+  .money h3 { margin-top: 0; }
+  .sum { max-width: var(--measure); }
+  .scroll { overflow-x: auto; }
+  .share { width: 32%; }
+  .share-h { width: 32%; }
+  .bar { display: inline-block; vertical-align: middle; height: 0.55rem; width: var(--w); max-width: calc(100% - 2.6rem); background: var(--tag); box-shadow: inset 0 -2px 0 rgb(0 0 0 / 0.12); border-radius: 1px; }
+  .pc { margin-left: 0.4rem; font-variant-numeric: tabular-nums; color: var(--muted); }
+  tfoot th { border-top: 2px solid var(--ink); border-bottom: 0; }
+  .basis { margin-top: 0.75rem; }
+</style>

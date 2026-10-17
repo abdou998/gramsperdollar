@@ -14,6 +14,8 @@ Output
                          per dollar and the oldest price date.
   src/data/plans.json    per plan: daily totals and a shopping list (packs to buy per store),
                          with small-quantity pantry items listed separately.
+  src/data/protein_rank.json  per store: the staples in data/protein_sources.csv ranked by grams
+                         of protein per $1 (whole pack at the shelf price).
 
 Usage
   python tools/mealmath.py            # rebuild both JSON files
@@ -39,6 +41,8 @@ RECIPES_DIR = ROOT / "data" / "recipes"
 PLANS_DIR = ROOT / "data" / "plans"
 OUT_RECIPES = ROOT / "src" / "data" / "recipes.json"
 OUT_PLANS = ROOT / "src" / "data" / "plans.json"
+SOURCES = ROOT / "data" / "protein_sources.csv"   # staples ranked on the cheapest-protein pages
+OUT_RANK = ROOT / "src" / "data" / "protein_rank.json"
 
 AISLES = ROOT / "data" / "aisles.csv"     # shopping lists are grouped by store aisle
 PANTRY = ROOT / "data" / "pantry.txt"   # staples listed apart from the checkout total
@@ -114,10 +118,21 @@ def recipe_numbers(recipe: dict, nutrition: dict, prices: dict) -> dict:
     for store in sorted(stores):
         cost = sum(l["grams"] / prices[l["item"]][store]["pack_g"] * prices[l["item"]][store]["price"] for l in core)
         dates = [prices[l["item"]][store]["checked"] for l in core if prices[l["item"]][store]["price"] > 0]
+        # Where the money goes: each core ingredient's cost and protein per serving, biggest cost first.
+        breakdown = []
+        for l in core:
+            p = prices[l["item"]][store]
+            c = l["grams"] / p["pack_g"] * p["price"] / servings
+            prot = l["grams"] * nutrition.get(l["item"], {}).get("protein", 0) / 100 / servings
+            breakdown.append({"label": l["label"], "item": l["item"], "cost": round(c, 2),
+                              "share": round(c * servings / cost, 3) if cost else 0,
+                              "protein": round(prot, 1), "product": p["product"], "url": p["url"]})
+        breakdown.sort(key=lambda b: -b["cost"])
         by_store[store] = {
             "cost_per_serving": round(cost / servings, 2),
             "protein_g_per_dollar": round(core_p / cost, 1) if cost else None,
             "prices_checked": min(dates) if dates else None,
+            "breakdown": breakdown,
         }
 
     out = {
@@ -140,7 +155,7 @@ def recipe_numbers(recipe: dict, nutrition: dict, prices: dict) -> dict:
     return out
 
 
-AISLE_ORDER = ["Produce", "Meat (frozen)", "Dairy and eggs", "Frozen", "Dry goods and cans",
+AISLE_ORDER = ["Produce", "Meat", "Dairy and eggs", "Frozen", "Dry goods and cans",
                "Protein powder", "Baking", "Oils and spices", "Other"]
 
 
@@ -204,6 +219,32 @@ def plan_numbers(plan: dict, recipes: dict[str, dict], raw: dict[str, dict], pri
     }
 
 
+def protein_rank(nutrition: dict, prices: dict) -> dict:
+    """Rank staples by grams of protein per $1, per store, using the whole pack at the shelf price."""
+    with SOURCES.open(newline="", encoding="utf-8") as f:
+        rows = list(csv.DictReader(l for l in f if not l.startswith("#")))
+    by_store: dict[str, list] = defaultdict(list)
+    for r in rows:
+        item = r["item"].strip().lower()
+        n = nutrition.get(item)
+        if not n:
+            sys.exit(f"protein_sources.csv: no nutrition for '{item}'")
+        for store, p in prices.get(item, {}).items():
+            if p["price"] <= 0:
+                continue
+            protein = p["pack_g"] * n["protein"] / 100
+            by_store[store].append({
+                "item": item, "name": r["name"].strip(), "group": r["group"].strip(),
+                "product": p["product"], "pack_g": round(p["pack_g"]), "price": p["price"],
+                "protein_per_pack": round(protein, 1),
+                "protein_per_dollar": round(protein / p["price"], 1),
+                "cost_per_30g": round(p["price"] * 30 / protein, 2) if protein else None,
+                "protein_share": round(4 * n["protein"] / n["kcal"], 2) if n["kcal"] else None,
+                "checked": p["checked"], "url": p["url"],
+            })
+    return {store: sorted(lst, key=lambda x: -x["protein_per_dollar"]) for store, lst in by_store.items()}
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--print", action="store_true", help="print a summary")
@@ -234,6 +275,8 @@ def main() -> None:
     OUT_RECIPES.parent.mkdir(parents=True, exist_ok=True)
     OUT_RECIPES.write_text(json.dumps(list(recipes.values()), indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     OUT_PLANS.write_text(json.dumps(plans, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    rank = protein_rank(nutrition, prices)
+    OUT_RANK.write_text(json.dumps(rank, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(f"Wrote {len(recipes)} recipe(s) and {len(plans)} plan(s) to src/data/")
 
     if args.print:
@@ -252,6 +295,12 @@ def main() -> None:
             for store, s in p["stores"].items():
                 print(f"  {store}: ${s['cost_per_day']}/day used, ${s['cost_total_used']} used over {p['days']} days, "
                       f"checkout ${s['checkout_total']} ({len(s['buy'])} items + {len(s['pantry'])} pantry)")
+
+
+        for store, lst in rank.items():
+            print(f"\nCHEAPEST PROTEIN at {store}")
+            for x in lst:
+                print(f"  {x['protein_per_dollar']:>6} g/$  ${x['cost_per_30g']:.2f} per 30 g  {x['protein_share']:.0%} kcal  {x['name']}")
 
 
 if __name__ == "__main__":

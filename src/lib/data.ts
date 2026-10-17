@@ -42,3 +42,17 @@ export const num = (n: number) => n.toLocaleString('en-US');
 export function formatDate(d: Date): string {
   return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
 }
+
+// ---- Cheapest-protein rankings (built by tools/mealmath.py from data/protein_sources.csv) ----
+import rank from '../data/protein_rank.json';
+export type RankRow = (typeof rank)[keyof typeof rank][number];
+export const rankStores = (): string[] => Object.keys(rank);
+export const storeRank = (store: string): RankRow[] => (rank as Record<string, RankRow[]>)[store] ?? [];
+export const storeSlug = (store: string) => store.toLowerCase().replace(/\W+/g, '-');
+/** Lean = at least half the calories come from protein. */
+export function leanness(share: number | null): { key: 'lean' | 'balanced' | 'carbfat'; label: string } {
+  if (share == null) return { key: 'balanced', label: '' };
+  if (share >= 0.5) return { key: 'lean', label: 'Lean protein' };
+  if (share >= 0.25) return { key: 'balanced', label: 'Protein plus fat or carbs' };
+  return { key: 'carbfat', label: 'Mostly carbs or fat' };
+}

@@ -112,6 +112,10 @@ git push                           # Cloudflare deploys in ~40 seconds
   one-pot being crawled before its photo was added; 'Missing nutrition' from the unpriced shrimp bowl. Both fixed. Unpriced
   recipes without a photo now output no Recipe schema at all, so they can't trigger a critical error. See decision 7 in Next steps for the 3 left on purpose.
 - ✅ **Indexed (16 Oct):** the article and `/recipes` are on Google. New pages get found through the sitemap and internal links.
+- ✅ **Cheapest protein at Walmart** (`/cheapest-protein/walmart`, 17 Oct): 21 staples ranked by g protein per $1 (whole pack,
+  shelf price), with cost of 30 g protein and % of calories from protein (lean filter). Built from `data/protein_sources.csv`;
+  one page per store with 10+ ranked items. Linked from the main menu and the homepage.
+- ✅ **"Where the money goes"** on every priced recipe: per-ingredient cost, share and protein (`MoneyBreakdown.astro`).
 - ✅ First category page live: `/recipes/protein/40g-plus` (3 recipes). Others unlock at 3+ recipes each.
 - 📋 First 10 articles planned (owner's project doc `meal-prep-site-first-10-articles.md`).
 
@@ -171,7 +175,12 @@ Everything is plain files, so nothing is locked in.
 3. Sanae: 2–3 recipes a week via `/write`. Ask for grams where possible and real phone photos.
 4. Articles from the 10-article plan, each linking its recipes (hub and spokes).
 5. Quarterly: refresh `data/prices.csv`.
-6. Later: optional Kroger API for automated prices; affiliate links once there's traffic.
+6. **More stores (owner wants the big US chains):** Kroger (official free price API), Costco, Sam's Club, Aldi, H-E-B, Target.
+   Each needs the ~25 ranked staples + recipe ingredients priced. Then: a `/cheapest-protein` hub comparing stores,
+   "cheapest at X" on every recipe, store category pages unlock. Caveats: Costco/Sam's online prices differ from
+   warehouse prices and need membership; Aldi online goes through Instacart (marked up) — label the source honestly.
+   Next: weekly meal planner (pick recipes → combined shopping list + checkout total; save on device), then look & feel
+   (warmer palette, recipe prev/next, filter chips). Affiliate links once there's traffic.
 7. Recipe schema, decided 16 Oct: **no videos, ever** (the 'video' and step image/video suggestions in Search Console stay
    unfixed on purpose and can't be dismissed). **Star ratings (`aggregateRating`) only once real readers arrive**: add a
    simple 1–5 rating on recipe pages and output it in the schema only when a recipe has real votes. Never invent ratings.

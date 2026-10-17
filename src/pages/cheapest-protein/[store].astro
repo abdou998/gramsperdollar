@@ -1,0 +1,198 @@
+---
+// Staples ranked by grams of protein per $1 at one store. One page per store in data/prices.csv
+// (only stores with enough ranked items). The site's signature data page.
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import RecipeList from '../../components/RecipeList.astro';
+import { rankStores, storeRank, storeSlug, leanness, usd, num, monthLabel, allRecipes, storeStats } from '../../lib/data';
+
+
+export function getStaticPaths() {
+  return rankStores().filter((s) => storeRank(s).length >= 10).map((store) => ({ params: { store: storeSlug(store) }, props: { store } }));
+}
+const { store } = Astro.props as { store: string };
+const rows = storeRank(store);
+const checked = rows.map((r) => r.checked).sort()[0];
+const month = monthLabel(checked);
+const top = rows[0];
+const lean = rows.filter((r) => leanness(r.protein_share).key === 'lean');
+const firstOf = (g: string) => rows.find((r) => r.group === g);
+const meat = firstOf('Meat and fish');
+const dairy = firstOf('Dairy and eggs');
+const plant = firstOf('Plant');
+const priciest = rows.at(-1)!;
+const max = top.protein_per_dollar;
+const groups = [...new Set(rows.map((r) => r.group))];
+// Shop-friendly product names: drop our notes in brackets.
+const clean = (n: string) => n.replace(/\s*\((?!dry\)|frozen\)|\d+ g drained\))[^)]*\)/gi, '').replace(/\s+/g, ' ').trim();
+const pct = (x: number | null) => (x == null ? '' : `${Math.round(x * 100)}%`);
+const slug = storeSlug(store);
+const url = `/cheapest-protein/${slug}`;
+const title = `Cheapest Protein at ${store}, Ranked by Price (${month.split(' ')[0].slice(0, 3)} ${month.split(' ')[1]})`;
+const description = `${rows.length} ${store} staples ranked by grams of protein per dollar, with real shelf prices checked ${month}. ${top.name} comes first; ${lean[0]?.name.toLowerCase()} is the cheapest lean protein.`;
+
+const recipes = allRecipes().filter((r) => storeStats(r, store)).sort((a, b) => (storeStats(b, store)!.protein_g_per_dollar ?? 0) - (storeStats(a, store)!.protein_g_per_dollar ?? 0)).slice(0, 4);
+
+const article = {
+  '@context': 'https://schema.org', '@type': 'Article', headline: title, description,
+  dateModified: `${checked}-01`, author: { '@type': 'Organization', name: 'Grams per Dollar', url: 'https://gramsperdollar.com/about' },
+};
+---
+<Base title={title} description={description.slice(0, 158)} type="article" jsonLd={[article]}>
+  <Breadcrumbs trail={[{ name: 'Home', url: '/' }, { name: `Cheapest protein at ${store}`, url }]} />
+
+  <header class="head">
+    <h1>The cheapest protein at {store}</h1>
+    <p class="lede">
+      {rows.length} everyday foods, ranked by how many grams of protein you get for each dollar at the till.
+      Real {store} shelf prices, checked {month}.
+    </p>
+  </header>
+
+  <section class="findings" aria-label="Key findings">
+    <div class="finding">
+      <p class="k">Cheapest protein overall</p>
+      <p class="v">{top.name}</p>
+      <p class="d">{top.protein_per_dollar} g of protein per $1. 30 g of protein costs {usd(top.cost_per_30g!)}.</p>
+    </div>
+    {lean[0] && (
+      <div class="finding">
+        <p class="k">Cheapest lean protein</p>
+        <p class="v">{lean[0].name}</p>
+        <p class="d">{lean[0].protein_per_dollar} g per $1, and {pct(lean[0].protein_share)} of its calories are protein.</p>
+      </div>
+    )}
+    {meat && (
+      <div class="finding">
+        <p class="k">Cheapest meat or fish</p>
+        <p class="v">{meat.name}</p>
+        <p class="d">{meat.protein_per_dollar} g per $1 ({usd(meat.cost_per_30g!)} for 30 g of protein).</p>
+      </div>
+    )}
+    <div class="finding">
+      <p class="k">Priciest on the list</p>
+      <p class="v">{priciest.name}</p>
+      <p class="d">{priciest.protein_per_dollar} g per $1: {usd(priciest.cost_per_30g!)} for the same 30 g.</p>
+    </div>
+  </section>
+
+  <p class="prose why">
+    Cheapest isn't always best. {top.name}{plant && top.item !== plant.item ? ` and ${plant.name.toLowerCase()}` : ''} give a lot of protein per dollar,
+    but most of their calories come from carbs or fat. If you want protein without many extra calories, look at
+    the <strong>lean protein</strong> rows: at least half their calories are protein.
+  </p>
+
+  <div class="filters" role="group" aria-label="Show">
+    <button type="button" class="chip" aria-pressed="true" data-filter="all">All {rows.length}</button>
+    <button type="button" class="chip" aria-pressed="false" data-filter="lean">Lean protein ({lean.length})</button>
+    {groups.map((g) => (
+      <button type="button" class="chip" aria-pressed="false" data-filter={`g:${g}`}>{g}</button>
+    ))}
+  </div>
+
+  <ol class="rank" id="rank">
+    {rows.map((r, i) => {
+      const L = leanness(r.protein_share);
+      return (
+        <li data-group={r.group} data-lean={L.key}>
+          <span class="pos" aria-hidden="true">{i + 1}</span>
+          <div class="main">
+            <h2 class="name">{r.name}</h2>
+            <p class="product small muted"><a href={r.url} rel="nofollow noopener" target="_blank">{clean(r.product)}</a> · {usd(r.price)}{/sold by weight/i.test(r.product) ? '/lb' : ''}</p>
+            <span class="bar" style={`--w:${(r.protein_per_dollar / max) * 100}%`} aria-hidden="true"></span>
+            <dl class="facts">
+              <div><dt>30 g protein costs</dt><dd>{usd(r.cost_per_30g!)}</dd></div>
+              <div><dt>Protein per pack</dt><dd>{num(Math.round(r.protein_per_pack))} g</dd></div>
+              <div><dt>Calories from protein</dt><dd>{pct(r.protein_share)} <span class:list={["leanness", { "is-lean": L.key === "lean" }]}>{L.label}</span></dd></div>
+            </dl>
+          </div>
+          <span class="tag tag-sm" role="img" aria-label={`${r.protein_per_dollar} grams of protein per dollar`}>
+            <span class="tag-number" aria-hidden="true">{r.protein_per_dollar}</span>
+            <span class="tag-unit" aria-hidden="true">g protein<br />per $1</span>
+          </span>
+        </li>
+      );
+    })}
+  </ol>
+
+  {recipes.length > 0 && (
+    <section aria-labelledby="cook">
+      <h2 id="cook">Cook with them</h2>
+      <p class="prose">Recipes built on these prices, costed per serving at {store}:</p>
+      <RecipeList recipes={recipes} />
+      <p><a href="/recipes">All recipes</a></p>
+    </section>
+  )}
+
+  <section class="prose method" aria-labelledby="how">
+    <h2 id="how">How this list works</h2>
+    <ul>
+      <li><strong>Whole pack, shelf price.</strong> We take the price of the whole pack on {store}.com
+        (the {store === 'Walmart' ? 'Sacramento, CA store' : 'default store'}), checked {month}, and divide its total protein by that price.
+        Sale prices are replaced with the regular price.</li>
+      <li><strong>As sold.</strong> Meat, beans, lentils, rice and oats are counted raw or dry, the way you buy them.
+        Canned tuna is counted drained; other cans as packed.</li>
+      <li><strong>Protein numbers</strong> come from USDA FoodData Central or, for canned and branded items, the product's own label.</li>
+      <li><strong>Calories from protein</strong> is protein × 4 kcal, divided by the food's total calories. It shows how much of what
+        you're eating is actually protein.</li>
+      <li>Prices change and differ by town. Treat this as a guide, not a quote. We recheck every few months.</li>
+    </ul>
+  </section>
+</Base>
+
+<script>
+  const chips = document.querySelectorAll<HTMLButtonElement>('.filters .chip');
+  const items = document.querySelectorAll<HTMLLIElement>('#rank li');
+  chips.forEach((c) => c.addEventListener('click', () => {
+    chips.forEach((x) => x.setAttribute('aria-pressed', String(x === c)));
+    const f = c.dataset.filter!;
+    items.forEach((li) => {
+      li.hidden = !(f === 'all' || (f === 'lean' && li.dataset.lean === 'lean') || (f.startsWith('g:') && li.dataset.group === f.slice(2)));
+    });
+  }));
+</script>
+
+<style>
+  .head { max-width: 46rem; }
+  .head h1 { font-size: var(--step-4); font-stretch: 118%; }
+  .lede { font-size: var(--step-1); line-height: 1.5; max-width: var(--measure); }
+  .findings {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr)); gap: 0;
+    margin: 2rem 0 1.5rem; border-top: 3px solid var(--ink); max-width: var(--wide);
+  }
+  .finding { padding: 0.9rem 1rem 1rem 0; border-bottom: 1px solid var(--rule); }
+  .finding p { margin: 0; }
+  .k { font-size: var(--step--1); color: var(--muted); }
+  .v { font-family: var(--display); font-weight: 800; font-stretch: 110%; font-size: var(--step-1); line-height: 1.2; margin: 0.15rem 0 0.25rem !important; }
+  .d { font-size: var(--step--1); }
+  .why { margin-top: 1.5rem; }
+  .filters { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1.5rem 0 0.5rem; }
+  .chip {
+    font-family: var(--display); font-weight: 600; font-size: 0.92rem; cursor: pointer;
+    padding: 0.45rem 0.8rem; border: 1px solid var(--rule); border-radius: 999px; background: var(--paper); color: var(--ink);
+  }
+  .chip[aria-pressed='true'] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  .rank { list-style: none; padding: 0; margin: 0 0 2rem; max-width: var(--wide); counter-reset: none; }
+  .rank li {
+    display: grid; grid-template-columns: 2rem 1fr auto; gap: 0.25rem 1rem; align-items: start;
+    padding: 1.1rem 0; border-top: 1px solid var(--rule); margin: 0;
+  }
+  .rank li:last-child { border-bottom: 1px solid var(--rule); }
+  .pos { font-family: var(--display); font-weight: 800; font-size: var(--step-1); color: var(--muted); font-variant-numeric: tabular-nums; line-height: 1.3; }
+  .main { min-width: 0; }
+  .name { font-size: var(--step-1); margin: 0; line-height: 1.25; }
+  .product { margin: 0.2rem 0 0.5rem; }
+  .product a { color: var(--muted); }
+  .bar { display: block; height: 0.45rem; border-radius: 1px; background: var(--basil); width: var(--w); margin-bottom: 0.6rem; }
+  .facts { display: flex; flex-wrap: wrap; gap: 0.2rem 1.6rem; margin: 0; font-size: var(--step--1); }
+  .facts div { display: grid; }
+  .facts dt { color: var(--muted); }
+  .facts dd { margin: 0; font-family: var(--display); font-weight: 700; font-variant-numeric: tabular-nums; }
+  .leanness { font-family: var(--body); font-weight: 400; color: var(--muted); margin-left: 0.3rem; }
+  .leanness.is-lean { color: var(--basil); font-weight: 600; }
+  .method li { margin-bottom: 0.6em; }
+  @media (max-width: 34rem) {
+    .rank li { grid-template-columns: 1.6rem 1fr; }
+    .rank .tag { grid-column: 2; justify-self: start; order: -1; margin-bottom: 0.4rem; }
+  }
+</style>

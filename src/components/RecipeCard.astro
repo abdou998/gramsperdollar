@@ -3,6 +3,7 @@
 // Emits schema.org Recipe JSON-LD so Google can understand it.
 import { Image } from 'astro:assets';
 import ShelfTag from './ShelfTag.astro';
+import MoneyBreakdown from './MoneyBreakdown.astro';
 import { howToSteps, SITE_AUTHOR } from '../lib/schema';
 import { getRecipe, storeStats, usd, num, monthLabel, PRICE_BASIS } from '../lib/data';
 
@@ -90,7 +91,7 @@ const schema = {
   {r.storage && (<><h3>Storing it</h3><p>{r.storage}</p></>)}
   {r.tip && (<><h3>Make it cheaper</h3><p>{r.tip}</p></>)}
 
-  {s && <p class="small muted basis">{PRICE_BASIS}, checked {monthLabel(s.prices_checked)}. Your store's prices will differ.</p>}
+  <MoneyBreakdown r={r} />
 
   <script type="application/ld+json" set:html={JSON.stringify(schema)} />
 </section>

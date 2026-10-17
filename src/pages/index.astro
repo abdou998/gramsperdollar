@@ -2,7 +2,11 @@
 import { publishedPosts } from '../lib/posts';
 import Base from '../layouts/Base.astro';
 import Leaderboard from '../components/Leaderboard.astro';
-import { formatDate } from '../lib/data';
+import { formatDate, storeRank, leanness, usd } from '../lib/data';
+
+const cheap = storeRank('Walmart');
+const cheapTop = cheap.slice(0, 3);
+const cheapLean = cheap.find((r) => leanness(r.protein_share).key === 'lean');
 import RecipeList from '../components/RecipeList.astro';
 import { unpricedRecipes } from '../lib/unpriced';
 
@@ -22,8 +26,19 @@ const posts = await publishedPosts();
     </p>
   </section>
 
+  <section aria-labelledby="cheapest" class="cheapest">
+    <h2 id="cheapest" class="section-head">Cheapest protein at Walmart</h2>
+    <ol class="mini">
+      {cheapTop.map((r) => (
+        <li><span class="tag tag-sm"><span class="tag-number">{r.protein_per_dollar}</span><span class="tag-unit">g protein<br />per $1</span></span> <span class="mini-name">{r.name}</span> <span class="small muted">30 g protein for {usd(r.cost_per_30g!)}</span></li>
+      ))}
+    </ol>
+    {cheapLean && <p class="small">Cheapest <em>lean</em> protein: <strong>{cheapLean.name.toLowerCase()}</strong>, {cheapLean.protein_per_dollar} g per $1.</p>}
+    <p><a href="/cheapest-protein/walmart">See all {cheap.length}, ranked</a></p>
+  </section>
+
   <section aria-labelledby="best-value">
-    <h2 id="best-value" class="section-head">Best value right now</h2>
+    <h2 id="best-value" class="section-head">Best-value recipes</h2>
     <Leaderboard />
     <p><a href="/recipes">All recipes</a></p>
   </section>
@@ -55,6 +70,10 @@ const posts = await publishedPosts();
   .intro h1 { font-stretch: 118%; }
   .lede { font-size: var(--step-1); line-height: 1.5; max-width: var(--measure); margin-top: 1rem; }
   .section-head { font-size: var(--step-1); margin: 3rem 0 0.75rem; }
+  .mini { list-style: none; padding: 0; max-width: var(--measure); }
+  .mini li { display: grid; grid-template-columns: 7.25rem 1fr; column-gap: 1rem; align-items: center; padding: 0.6rem 0; border-top: 1px solid var(--rule); margin: 0; }
+  .mini-name { font-family: var(--display); font-weight: 700; font-size: var(--step-1); }
+  .mini .small { grid-column: 2; }
   .posts { list-style: none; padding: 0; max-width: var(--measure); }
   .posts li { padding: 1rem 0; border-top: 1px solid var(--rule); margin: 0; }
   .post-title { font-family: var(--display); font-weight: 750; font-size: var(--step-1); line-height: 1.25; }

@@ -1,5 +1,5 @@
 item,aisle
-chicken breast,Meat (frozen)
+chicken breast,Meat
 frozen peas,Frozen
 egg whole,Dairy and eggs
 milk whole,Dairy and eggs
@@ -35,3 +35,14 @@ mint fresh,Produce
 shrimp raw,Frozen
 paprika,Oils and spices
 italian seasoning,Oils and spices
+tuna canned light drained,Dry goods and cans
+chicken canned,Dry goods and cans
+black beans dry,Dry goods and cans
+black beans canned,Dry goods and cans
+ground turkey 93,Meat
+ground beef 80/20,Meat
+chicken thigh boneless,Meat
+pork loin,Meat
+tofu firm,Produce
+cottage cheese,Dairy and eggs
+peanut butter,Dry goods and cans
