@@ -51,8 +51,8 @@ const path = cleanPath;
         </a>
         <nav aria-label="Main">
           <a href="/cheapest-protein/walmart" aria-current={path.startsWith('/cheapest-protein') ? 'page' : undefined}>Cheapest protein</a>
+          <a href="/planner" aria-current={path === '/planner' ? 'page' : undefined}>Planner</a>
           <a href="/recipes" aria-current={path.startsWith('/recipes') ? 'page' : undefined}>Recipes</a>
-          <a href="/about" aria-current={path === '/about' ? 'page' : undefined}>About</a>
         </nav>
       </div>
     </header>
@@ -65,7 +65,7 @@ const path = cleanPath;
           Prices are approximate, from one store's website, and dated on every recipe. Yours will differ.
           This site shares recipes and costs. It isn't medical or dietary advice.
         </p>
-        <p><a href="/about">How we check prices</a></p>
+        <p><a href="/about">About us and how we check prices</a></p>
       </div>
     </footer>
   </body>
@@ -83,7 +83,7 @@ const path = cleanPath;
     padding: 0.2rem 0.4rem; box-shadow: inset 0 -2px 0 rgb(0 0 0 / 0.12);
   }
   .logo-word { font-family: var(--display); font-weight: 800; font-stretch: 110%; font-size: 1.1rem; letter-spacing: -0.01em; }
-  nav { display: flex; gap: 1.25rem; font-family: var(--display); font-weight: 600; font-size: 0.95rem; }
+  nav { display: flex; gap: 1.1rem; font-family: var(--display); font-weight: 600; font-size: 0.95rem; }
   nav a { color: var(--ink); text-decoration: none; padding-block: 0.25rem; }
   nav a:hover, nav a[aria-current='page'] { box-shadow: inset 0 -2px 0 var(--basil); }
   main { padding-block: 2.5rem 4rem; }

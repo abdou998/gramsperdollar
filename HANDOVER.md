@@ -116,6 +116,10 @@ git push                           # Cloudflare deploys in ~40 seconds
   shelf price), with cost of 30 g protein and % of calories from protein (lean filter). Built from `data/protein_sources.csv`;
   one page per store with 10+ ranked items. Linked from the main menu and the homepage.
 - ✅ **"Where the money goes"** on every priced recipe: per-ingredient cost, share and protein (`MoneyBreakdown.astro`).
+- ✅ **Weekly meal planner** (`/planner`, 17 Oct): steppers per recipe + days → protein/kcal/cost per day and one shopping
+  list by aisle with the checkout total (same pack maths as `mealmath.py`; reads `src/data/pricebook.json`). Saved in
+  localStorage (`gpd-plan`) and in the URL (`#d=4&r=slug:4,...`) for sharing; copy list / copy link. "Add to my week" button
+  on every priced recipe. Checked against the 4-day plan: identical totals.
 - ✅ First category page live: `/recipes/protein/40g-plus` (3 recipes). Others unlock at 3+ recipes each.
 - 📋 First 10 articles planned (owner's project doc `meal-prep-site-first-10-articles.md`).
 
@@ -179,7 +183,7 @@ Everything is plain files, so nothing is locked in.
    Each needs the ~25 ranked staples + recipe ingredients priced. Then: a `/cheapest-protein` hub comparing stores,
    "cheapest at X" on every recipe, store category pages unlock. Caveats: Costco/Sam's online prices differ from
    warehouse prices and need membership; Aldi online goes through Instacart (marked up) — label the source honestly.
-   Next: weekly meal planner (pick recipes → combined shopping list + checkout total; save on device), then look & feel
+   Next: look & feel
    (warmer palette, recipe prev/next, filter chips). Affiliate links once there's traffic.
 7. Recipe schema, decided 16 Oct: **no videos, ever** (the 'video' and step image/video suggestions in Search Console stay
    unfixed on purpose and can't be dismissed). **Star ratings (`aggregateRating`) only once real readers arrive**: add a

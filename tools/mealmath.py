@@ -43,6 +43,7 @@ OUT_RECIPES = ROOT / "src" / "data" / "recipes.json"
 OUT_PLANS = ROOT / "src" / "data" / "plans.json"
 SOURCES = ROOT / "data" / "protein_sources.csv"   # staples ranked on the cheapest-protein pages
 OUT_RANK = ROOT / "src" / "data" / "protein_rank.json"
+OUT_BOOK = ROOT / "src" / "data" / "pricebook.json"   # what the in-browser meal planner prices with
 
 AISLES = ROOT / "data" / "aisles.csv"     # shopping lists are grouped by store aisle
 PANTRY = ROOT / "data" / "pantry.txt"   # staples listed apart from the checkout total
@@ -275,6 +276,12 @@ def main() -> None:
     OUT_RECIPES.parent.mkdir(parents=True, exist_ok=True)
     OUT_RECIPES.write_text(json.dumps(list(recipes.values()), indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     OUT_PLANS.write_text(json.dumps(plans, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    book = {item: {"aisle": aisles.get(item, "Other"), "pantry": item in pantry_items,
+                   "stores": {st: {"product": p["product"], "pack_g": p["pack_g"], "price": p["price"], "url": p["url"]}
+                              for st, p in stores.items()}}
+            for item, stores in prices.items()}
+    OUT_BOOK.write_text(json.dumps({"aisle_order": AISLE_ORDER, "pack_slack": PACK_SLACK, "items": book},
+                                   ensure_ascii=False) + "\n", encoding="utf-8")
     rank = protein_rank(nutrition, prices)
     OUT_RANK.write_text(json.dumps(rank, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(f"Wrote {len(recipes)} recipe(s) and {len(plans)} plan(s) to src/data/")
