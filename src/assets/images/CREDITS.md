@@ -8,3 +8,4 @@ Show the credit as a caption wherever the image is used. Don't present stock pho
 | `grilled-chicken-vegetables-mark-deyoung-unsplash.jpg` | Photo by Mark DeYoung on Unsplash | https://unsplash.com/@tempestdesigner | Illustrative serving idea. Plated presentation, not a meal-prep container. |
 | `chicken-lentils-rice-dannie-sorum-unsplash.jpg` | Photo by Dannie Sorum on Unsplash | https://unsplash.com/@danjoso | Illustrative only. Sliced seared chicken on lentils and rice, plated, not our one-pot. Cropped around the plate. |
 | `banana-oat-yogurt-bowl-s-azad-pixabay.jpg` | Photo by s_azad on Pixabay | https://pixabay.com/users/s_azad-56663719/ | Chosen by Sanae for her yogurt bowl. Illustrative. |
+| `shrimp-rice-bowl-sanae.jpg` | Sanae (own photo) | sent via /write, 17 Oct 2026 | Her own cooking. |

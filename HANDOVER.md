@@ -101,13 +101,16 @@ git push                           # Cloudflare deploys in ~40 seconds
 | 31 g protein pancake | 31.8 g | $2.17 | 14.7 g |
 | Banana oat Greek yogurt protein bowl (by Sanae) | 57 g | $3.53 | 16.2 g |
 | Lemon-rosemary chicken with grilled squash | 48.7 g | $3.59 | 13.6 g |
+| Garlic paprika shrimp and rice bowl (by Sanae, own photo) | 21 g | $2.58 | 8.2 g |
 
-- ✅ **Unpriced:** none right now. Sanae's yogurt bowl was priced 16 Oct (first one through the full flow).
+- ✅ **Unpriced:** none right now. Sanae's yogurt bowl (16 Oct) and shrimp bowl (17 Oct) are priced.
 - ✅ **Contributor flow:** `/write` (password) → `submissions/` commit → live in ~1 min as unpriced → priced weekly in a batch.
-- ✅ **Photos:** all 4 recipes have one (all stock photos, credited in captions and `src/assets/images/CREDITS.md`). Replace with
+- ✅ **Photos:** all 5 recipes have one (the shrimp bowl is Sanae's own; the rest are stock, credited in captions and `src/assets/images/CREDITS.md`). Replace with
   real photos when the dishes are cooked.
 - ✅ **Recipe structured data:** Search Console shows 0 invalid. Added author, step name/url, category, keywords, cuisine
-  (only where true). Validation started 16 Oct for those 6. See decision 7 in Next steps for the 3 left on purpose.
+  (only where true). Validation started 16 Oct for those 6. 17 Oct email: 'Missing image' (critical) came from the
+  one-pot being crawled before its photo was added; 'Missing nutrition' from the unpriced shrimp bowl. Both fixed. Unpriced
+  recipes without a photo now output no Recipe schema at all, so they can't trigger a critical error. See decision 7 in Next steps for the 3 left on purpose.
 - ✅ **Indexed (16 Oct):** the article and `/recipes` are on Google. New pages get found through the sitemap and internal links.
 - ✅ First category page live: `/recipes/protein/40g-plus` (3 recipes). Others unlock at 3+ recipes each.
 - 📋 First 10 articles planned (owner's project doc `meal-prep-site-first-10-articles.md`).

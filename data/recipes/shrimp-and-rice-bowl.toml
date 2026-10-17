@@ -1,0 +1,82 @@
+# By Sanae (submitted via /write, 17 Oct 2026). Grams raw / as bought. Rice weight is hers (1 cup ≈ 180 g).
+name = "Garlic Paprika Shrimp and Rice Bowl"
+description = "Garlicky paprika shrimp tossed through fluffy rice in one pan. Two bowls in about 40 minutes."
+author = "Sanae"
+intro = "A simple, protein-rich meal that's both nourishing and flavourful: savoury garlic, tender shrimp, fluffy rice."
+servings = 2
+meal = "lunch"
+tags = []
+prep_minutes = 15
+cook_minutes = 25
+image = "shrimp-rice-bowl-sanae.jpg"
+image_alt = "A white bowl of paprika-orange rice and shrimp topped with fresh coriander"
+image_credit = "Photo by Sanae."
+storage = "Keeps up to 2 days in the fridge in an airtight container."
+tip = "Frozen shrimp works fine here. Shrimp is lower in protein per gram than chicken, so for a bigger protein hit use the whole 12 oz bag (340 g): that takes each bowl to about 30 g of protein."
+steps = [
+  "Cook the rice: rinse it and cook it in a pot of salted water. Once tender, drain if needed and set aside.",
+  "Cook the shrimp: heat the olive oil in a pan. Add the onion and garlic and sauté until fragrant. Add the shrimp, paprika, black pepper, salt and herbs, and cook until the shrimp are pink and opaque.",
+  "Combine: add the cooked rice straight to the shrimp pan. Mix gently so the rice soaks up the seasoning, and cook together for another 2 to 3 minutes.",
+  "Serve: spoon into bowls and garnish with fresh parsley or coriander. Add a squeeze of lemon if you like, and serve warm.",
+]
+
+[[ingredients]]
+item = "white rice"
+grams = 180
+amount = "1 cup (180 g)"
+label = "white rice"
+
+[[ingredients]]
+item = "shrimp raw"
+grams = 200
+amount = "200 g"
+label = "peeled raw shrimp"
+
+[[ingredients]]
+item = "garlic"
+grams = 9
+amount = "3 cloves"
+label = "garlic, minced"
+
+[[ingredients]]
+item = "onion"
+grams = 70
+amount = "1 small"
+label = "onion, finely chopped"
+
+[[ingredients]]
+item = "olive oil"
+grams = 27
+amount = "2 tbsp"
+label = "olive oil"
+
+[[ingredients]]
+item = "paprika"
+grams = 2.3
+amount = "1 tsp"
+label = "paprika"
+
+[[ingredients]]
+item = "black pepper"
+grams = 2.3
+amount = "1 tsp"
+label = "black pepper"
+
+[[ingredients]]
+item = "kosher salt"
+grams = 3
+amount = "1 tsp"
+label = "salt"
+
+[[ingredients]]
+item = "italian seasoning"
+grams = 1
+amount = "1 tsp"
+label = "dried herbs or mixed seasoning"
+
+[[ingredients]]
+item = "lemon juice and zest"
+grams = 25
+amount = "½"
+label = "lemon, for squeezing (optional)"
+optional = true

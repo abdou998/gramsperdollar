@@ -70,7 +70,8 @@ const schema = {
 
   {r.tips.length > 0 && (<><h2>Tips</h2>{r.tips.map((p) => <p class="tips">{p}</p>)}</>)}
 
-  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  {/* Recipe schema only with a photo: Google treats a recipe without an image as a critical error. */}
+  {img && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}
 </article>
 
 <style>

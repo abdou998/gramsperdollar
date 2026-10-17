@@ -1,7 +1,7 @@
 ---
 title: "Shrimp and Rice Bowl"
 slug: shrimp-and-rice-bowl
-author: "sanae"
+author: "Sanae"
 submitted: 2026-10-17
 meal: lunch
 tags: []
@@ -10,7 +10,7 @@ prep_minutes: 15
 cook_minutes: 25
 photos: ["photo-1.jpg"]
 photo_credit: "own photos (sanae)"
-status: unpriced  # unpriced (live with a note) → priced (replaced by the priced recipe) | hidden
+status: priced  # unpriced (live with a note) → priced (replaced by the priced recipe) | hidden
 ---
 
 ## About it

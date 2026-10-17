@@ -469,5 +469,116 @@
     "image": "protein-pancakes-berries-fa-barboza-unsplash.jpg",
     "image_alt": "A stack of golden pancakes topped with berries and chocolate spread",
     "image_credit": "Photo by Fa Barboza on Unsplash. Shown with berries and chocolate spread, which aren't in this recipe."
+  },
+  {
+    "name": "Garlic Paprika Shrimp and Rice Bowl",
+    "slug": "shrimp-and-rice-bowl",
+    "servings": 2,
+    "protein_g_per_serving": 21.0,
+    "kcal_per_serving": 547,
+    "with_optional": {
+      "protein_g_per_serving": 21.1,
+      "kcal_per_serving": 550
+    },
+    "stores": {
+      "Walmart": {
+        "cost_per_serving": 2.58,
+        "protein_g_per_dollar": 8.2,
+        "prices_checked": "2026-10"
+      }
+    },
+    "cheapest_store": "Walmart",
+    "missing_nutrition": [],
+    "unpriced_items": [],
+    "ingredients": [
+      {
+        "item": "white rice",
+        "grams": 180.0,
+        "amount": "1 cup (180 g)",
+        "label": "white rice",
+        "optional": false
+      },
+      {
+        "item": "shrimp raw",
+        "grams": 200.0,
+        "amount": "200 g",
+        "label": "peeled raw shrimp",
+        "optional": false
+      },
+      {
+        "item": "garlic",
+        "grams": 9.0,
+        "amount": "3 cloves",
+        "label": "garlic, minced",
+        "optional": false
+      },
+      {
+        "item": "onion",
+        "grams": 70.0,
+        "amount": "1 small",
+        "label": "onion, finely chopped",
+        "optional": false
+      },
+      {
+        "item": "olive oil",
+        "grams": 27.0,
+        "amount": "2 tbsp",
+        "label": "olive oil",
+        "optional": false
+      },
+      {
+        "item": "paprika",
+        "grams": 2.3,
+        "amount": "1 tsp",
+        "label": "paprika",
+        "optional": false
+      },
+      {
+        "item": "black pepper",
+        "grams": 2.3,
+        "amount": "1 tsp",
+        "label": "black pepper",
+        "optional": false
+      },
+      {
+        "item": "kosher salt",
+        "grams": 3.0,
+        "amount": "1 tsp",
+        "label": "salt",
+        "optional": false
+      },
+      {
+        "item": "italian seasoning",
+        "grams": 1.0,
+        "amount": "1 tsp",
+        "label": "dried herbs or mixed seasoning",
+        "optional": false
+      },
+      {
+        "item": "lemon juice and zest",
+        "grams": 25.0,
+        "amount": "½",
+        "label": "lemon, for squeezing (optional)",
+        "optional": true
+      }
+    ],
+    "author": "Sanae",
+    "intro": "A simple, protein-rich meal that's both nourishing and flavourful: savoury garlic, tender shrimp, fluffy rice.",
+    "meal": "lunch",
+    "tags": [],
+    "description": "Garlicky paprika shrimp tossed through fluffy rice in one pan. Two bowls in about 40 minutes.",
+    "prep_minutes": 15,
+    "cook_minutes": 25,
+    "steps": [
+      "Cook the rice: rinse it and cook it in a pot of salted water. Once tender, drain if needed and set aside.",
+      "Cook the shrimp: heat the olive oil in a pan. Add the onion and garlic and sauté until fragrant. Add the shrimp, paprika, black pepper, salt and herbs, and cook until the shrimp are pink and opaque.",
+      "Combine: add the cooked rice straight to the shrimp pan. Mix gently so the rice soaks up the seasoning, and cook together for another 2 to 3 minutes.",
+      "Serve: spoon into bowls and garnish with fresh parsley or coriander. Add a squeeze of lemon if you like, and serve warm."
+    ],
+    "storage": "Keeps up to 2 days in the fridge in an airtight container.",
+    "tip": "Frozen shrimp works fine here. Shrimp is lower in protein per gram than chicken, so for a bigger protein hit use the whole 12 oz bag (340 g): that takes each bowl to about 30 g of protein.",
+    "image": "shrimp-rice-bowl-sanae.jpg",
+    "image_alt": "A white bowl of paprika-orange rice and shrimp topped with fresh coriander",
+    "image_credit": "Photo by Sanae."
   }
 ]
