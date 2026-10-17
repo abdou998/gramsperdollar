@@ -119,8 +119,10 @@ git push                           # Cloudflare deploys in ~40 seconds
   Priced: **Walmart, California** (Sacramento Gerber Rd) and **Aldi, Texas** (ROS 18, 3618 Old Spanish Trail, Houston; aldi.us
   in-store mode, Instacart-run, may differ from shelf). Aldi has no dry red lentils (one-pot not priced there) and its whey is
   a blend (priced for recipes, kept off the ranking: labels disagree).
-  **Walmart Texas pending:** Walmart showed a "Robot or human?" check after too-fast lookups; never try to bypass it — the
-  owner clears it in his browser, then price slowly (one page at a time). Store set to S Wayside Dr Supercenter #5612, 77023.
+  **Walmart, Texas** priced 17 Oct (S Wayside Dr Supercenter #5612, 77023). Texas hub shows Aldi vs Walmart: Aldi wins 17 of
+  19 staples. Walmart online prices are nearly national (CA ≈ TX) except milk ($2.53 TX vs $3.68 CA).
+  Walmart shows a "Robot or human?" check if pages are opened too fast: never bypass it — the owner clears it himself; then
+  go slowly (~10 s between pages, one normal page load at a time, no background fetches).
 - ✅ **Cheapest protein at Walmart** (`/cheapest-protein/california/walmart`, 17 Oct): 21 staples ranked by g protein per $1 (whole pack,
   shelf price), with cost of 30 g protein and % of calories from protein (lean filter). Built from `data/protein_sources.csv`;
   one page per store with 10+ ranked items. Linked from the main menu and the homepage.

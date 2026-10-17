@@ -58,10 +58,10 @@ const storeCount = list.reduce((a, s) => a + s.ids.length, 0);
                 <p class="small muted">{info.location}</p>
                 <ol class="top">
                   {r.slice(0, 3).map((x) => (
-                    <li><span class="v">{x.protein_per_dollar}</span> <span class="u">g/$1</span> {x.name}</li>
+                    <li><span class="v">{x.protein_per_dollar.toFixed(1)}</span> <span class="u">g/$1</span> {x.name}</li>
                   ))}
                 </ol>
-                {lean && <p class="small">Cheapest lean protein: <strong>{lean.name.toLowerCase()}</strong> ({lean.protein_per_dollar} g per $1)</p>}
+                {lean && <p class="small">Cheapest lean protein: <strong>{lean.name.toLowerCase()}</strong> ({lean.protein_per_dollar.toFixed(1)} g per $1)</p>}
                 <p><a href={rankUrl(id)}>All {r.length} at {info.store}</a></p>
               </li>
             );
@@ -71,6 +71,21 @@ const storeCount = list.reduce((a, s) => a + s.ids.length, 0);
         {rows.length > 0 && (
           <div class="cmp">
             <h3>{st.ids.map((id) => storeInfo(id).store).join(' vs ')}: protein per $1</h3>
+            {(() => {
+              const winner = (row: { vals: Record<string, number> }) => {
+                const best = Math.max(...Object.values(row.vals));
+                const ids = Object.keys(row.vals).filter((k) => row.vals[k] === best);
+                return ids.length === 1 ? ids[0] : null;
+              };
+              const tally = st.ids.map((id) => ({ id, n: rows.filter((row) => winner(row) === id).length })).sort((a, b) => b.n - a.n);
+              const ties = rows.filter((row) => !winner(row)).length;
+              return (
+                <p class="verdict">
+                  {storeInfo(tally[0].id).store} gives more protein per dollar on {tally[0].n} of {rows.length} foods
+                  {tally.slice(1).map((t) => <>, {storeInfo(t.id).store} on {t.n}</>)}{ties > 0 && <>, {ties} {ties === 1 ? 'tie' : 'ties'}</>}.
+                </p>
+              );
+            })()}
             <div class="scroll">
               <table>
                 <thead><tr><th>Food</th>{st.ids.map((id) => <th class="num">{storeInfo(id).store}</th>)}</tr></thead>
@@ -82,7 +97,7 @@ const storeCount = list.reduce((a, s) => a + s.ids.length, 0);
                         <td>{row.name}</td>
                         {st.ids.map((id) => {
                           const v = row.vals[id];
-                          return <td class:list={['num', { best: v === best }]}>{v ?? '–'}</td>;
+                          return <td class:list={['num', { best: v === best }]}>{v != null ? v.toFixed(1) : '–'}</td>;
                         })}
                       </tr>
                     );
@@ -132,5 +147,6 @@ const storeCount = list.reduce((a, s) => a + s.ids.length, 0);
   .top .u { font-size: var(--step--1); color: var(--muted); margin-right: 0.3rem; }
   .cmp { margin-top: 1.5rem; max-width: 40rem; }
   .scroll { overflow-x: auto; }
+  .verdict { font-family: var(--display); font-weight: 650; }
   td.best { font-weight: 800; background: var(--basil-soft); }
 </style>

@@ -3,3 +3,4 @@
 id,store,market,state,city,location,source,note
 walmart-ca,Walmart,CA,California,Sacramento,"Sacramento Gerber Rd Supercenter (95829)",walmart.com,"Regular shelf price on walmart.com for this store."
 aldi-tx,Aldi,TX,Texas,Houston,"ALDI ROS 18, 3618 Old Spanish Trail, Houston (77021)",aldi.us (in-store mode),"Aldi's online prices (run by Instacart) can differ from the shelf price."
+walmart-tx,Walmart,TX,Texas,Houston,"Houston S Wayside Drive Supercenter #5612 (77023)",walmart.com,"Regular shelf price on walmart.com for this store."

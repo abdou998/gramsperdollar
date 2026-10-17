@@ -18,5 +18,15 @@
     "location": "ALDI ROS 18, 3618 Old Spanish Trail, Houston (77021)",
     "source": "aldi.us (in-store mode)",
     "note": "Aldi's online prices (run by Instacart) can differ from the shelf price."
+  },
+  "walmart-tx": {
+    "id": "walmart-tx",
+    "store": "Walmart",
+    "market": "TX",
+    "state": "Texas",
+    "city": "Houston",
+    "location": "Houston S Wayside Drive Supercenter #5612 (77023)",
+    "source": "walmart.com",
+    "note": "Regular shelf price on walmart.com for this store."
   }
 }

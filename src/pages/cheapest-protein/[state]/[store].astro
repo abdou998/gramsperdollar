@@ -114,7 +114,7 @@ const article = {
             </dl>
           </div>
           <span class="tag tag-sm" role="img" aria-label={`${r.protein_per_dollar} grams of protein per dollar`}>
-            <span class="tag-number" aria-hidden="true">{r.protein_per_dollar}</span>
+            <span class="tag-number" aria-hidden="true">{r.protein_per_dollar.toFixed(1)}</span>
             <span class="tag-unit" aria-hidden="true">g protein<br />per $1</span>
           </span>
         </li>
