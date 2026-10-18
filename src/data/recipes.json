@@ -319,6 +319,7 @@
     "author": "Sanae",
     "intro": "A morning protein bowl that's easy on the stomach and fast to make. The Greek yogurt and a scoop of whey put it well over 40 g of protein, and you can swap the toppings to whatever you have.",
     "meal": "breakfast",
+    "cuisine": "American",
     "tags": [
       "no-cook",
       "5-minute",
@@ -819,6 +820,7 @@
       }
     ],
     "meal": "dinner",
+    "cuisine": "Mediterranean",
     "tags": [
       "one-pot",
       "freezer-friendly"
@@ -2248,6 +2250,7 @@
     "author": "Sanae",
     "intro": "A simple, protein-rich meal that's both nourishing and flavourful: savoury garlic, tender shrimp, fluffy rice.",
     "meal": "lunch",
+    "cuisine": "American",
     "tags": [],
     "description": "Garlicky paprika shrimp tossed through fluffy rice in one pan. Two bowls in about 40 minutes.",
     "prep_minutes": 15,

@@ -2,6 +2,7 @@
 # Her amounts are cups and spoons; grams below are standard conversions. "1–2 tbsp" walnuts → middle (1½ tbsp).
 # Whey: Dymatize ISO100 30 g scoop (protein from the label, see data/nutrition.csv).
 name = "Honeyed Banana Oat Greek Yogurt Protein Bowl"
+cuisine = "American"
 description = "Greek yogurt whipped with a scoop of whey, topped with banana, oats, walnuts and chia. Five minutes, no cooking."
 author = "Sanae"
 intro = "A morning protein bowl that's easy on the stomach and fast to make. The Greek yogurt and a scoop of whey put it well over 40 g of protein, and you can swap the toppings to whatever you have."

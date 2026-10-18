@@ -1,5 +1,6 @@
 # Grams raw / as bought.
 name = "One-pot spiced chicken, red lentils and rice"
+cuisine = "Mediterranean"
 description = "Chicken, rice and red lentils simmered together with cumin and smoked paprika. Four dinners from one pot."
 servings = 4
 meal = "dinner"

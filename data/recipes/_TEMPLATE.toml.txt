@@ -2,6 +2,7 @@
 # Grams are as bought (raw weight). "item" must match a row in data/ingredients.csv.
 
 name = "Chicken, rice and broccoli bowls"
+cuisine = "American"   # required for Google: American, Mediterranean, Mexican, Asian...
 servings = 4
 
 [[ingredients]]
