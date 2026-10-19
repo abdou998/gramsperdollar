@@ -1,0 +1,35 @@
+---
+// Cost per serving of each priced recipe at the given stores (one state). Cheapest highlighted.
+import { allRecipes, storeStats, storeInfo, usd } from '../lib/data';
+
+interface Props { ids: string[] }
+const { ids } = Astro.props;
+const rows = allRecipes()
+  .map((r) => ({ r, s: ids.map((id) => storeStats(r, id)) }))
+  .filter((x) => x.s.filter(Boolean).length >= 2);
+---
+<div class="scroll">
+  <table>
+    <caption class="visually-hidden">Cost per serving at {ids.map((id) => storeInfo(id).store).join(', ')}</caption>
+    <thead><tr><th>Recipe</th>{ids.map((id) => <th class="num">{storeInfo(id).store}</th>)}</tr></thead>
+    <tbody>
+      {rows.map(({ r, s }) => {
+        const low = Math.min(...s.filter(Boolean).map((x) => x!.cost_per_serving));
+        return (
+          <tr>
+            <td><a href={`/recipes/${r.slug}`}>{r.name}</a></td>
+            {s.map((x) => x
+              ? <td class:list={['num', { best: x.cost_per_serving === low }]}>{usd(x.cost_per_serving)}</td>
+              : <td class="num muted small">not sold</td>)}
+          </tr>
+        );
+      })}
+    </tbody>
+  </table>
+</div>
+<p class="small muted">Cost per serving, counting only the amount the recipe uses. Highlighted = cheapest.</p>
+
+<style>
+  .scroll { overflow-x: auto; max-width: 40rem; }
+  td.best { font-weight: 800; background: var(--basil-soft); }
+</style>

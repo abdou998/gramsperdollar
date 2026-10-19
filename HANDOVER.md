@@ -207,3 +207,12 @@ Everything is plain files, so nothing is locked in.
 - Store ids are now letters only plus the state (`heb-tx`). The URL slug is the id minus the state (`/cheapest-protein/texas/heb`).
 - **Cheaper pricing workflow: see docs/PRICING.md** (price_todo.py → browser extractor → add_prices.py).
 - Next: write the article "Aldi vs H-E-B vs Walmart: cheapest protein in Houston"; then Kroger Houston; then a new state.
+
+## Update 19 Oct 2026
+- Search Console started collecting impressions on 17 Oct (first impressions).
+- New article `/aldi-vs-heb-vs-walmart-houston` (src/content/posts/aldi-vs-heb-vs-walmart-houston.mdx). All numbers come live from the data
+  (`compareTally`, plan costs), so a price refresh updates the article; re-read the prose claims after each refresh (who wins, ties, "about X%").
+- New shared helpers `compareStores` / `compareTally` (src/lib/data.ts) and components `StoreCompare` (protein per $1 table, used by the hub
+  and posts) and `RecipeStoreCosts` (recipe cost per serving by store). The Texas hub links to the article.
+- Recipes 'Missing nutrition' validation (19 Oct email): still failing because Sanae's unpriced quinoa salad (18 Oct) has a photo, so it
+  outputs Recipe schema without nutrition. Fix = price it (submissions/README.md).

@@ -88,3 +88,26 @@ export function bestRecipes(ids: string[]) {
     return [{ r, s: b.s, store: b.id }];
   }).sort((a, b) => b.s.protein_g_per_dollar! - a.s.protein_g_per_dollar!);
 }
+
+/** Foods ranked at 2+ of the given stores, with each store's protein per $1, best first.
+ *  `winner` is the store id with the most protein per $1, or null on a tie. */
+export function compareStores(ids: string[]) {
+  const rows = new Map<string, { item: string; name: string; group: string; vals: Record<string, number>; winner: string | null }>();
+  for (const id of ids) for (const r of storeRank(id)) {
+    if (!rows.has(r.item)) rows.set(r.item, { item: r.item, name: r.name, group: r.group, vals: {}, winner: null });
+    rows.get(r.item)!.vals[id] = r.protein_per_dollar;
+  }
+  const out = [...rows.values()].filter((x) => Object.keys(x.vals).length >= 2);
+  for (const row of out) {
+    const best = Math.max(...Object.values(row.vals));
+    const top = Object.keys(row.vals).filter((k) => row.vals[k] === best);
+    row.winner = top.length === 1 ? top[0] : null;
+  }
+  return out.sort((a, b) => Math.max(...Object.values(b.vals)) - Math.max(...Object.values(a.vals)));
+}
+/** How many foods each store wins, plus ties. */
+export function compareTally(ids: string[]) {
+  const rows = compareStores(ids);
+  const wins = ids.map((id) => ({ id, n: rows.filter((r) => r.winner === id).length })).sort((a, b) => b.n - a.n);
+  return { rows, wins, ties: rows.filter((r) => !r.winner).length };
+}

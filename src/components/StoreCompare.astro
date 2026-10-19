@@ -1,0 +1,49 @@
+---
+// Side-by-side protein per $1 for stores in ONE state (never compare across states).
+// Used on the /cheapest-protein hub and in posts.
+import { compareTally, storeInfo, rankUrl } from '../lib/data';
+
+interface Props { ids: string[]; verdict?: boolean }
+const { ids, verdict = true } = Astro.props;
+const { rows, wins, ties } = compareTally(ids);
+const name = (id: string) => storeInfo(id).store;
+---
+{rows.length > 0 && (
+  <div class="store-compare">
+    {verdict && (
+      <p class="verdict">
+        {name(wins[0].id)} gives more protein per dollar on {wins[0].n} of {rows.length} foods
+        {wins.slice(1).map((t) => <>, {name(t.id)} on {t.n}</>)}{ties > 0 && <>, {ties} {ties === 1 ? 'tie' : 'ties'}</>}.
+      </p>
+    )}
+    <div class="scroll">
+      <table>
+        <caption class="visually-hidden">Grams of protein per $1 at {ids.map(name).join(', ')}</caption>
+        <thead><tr><th>Food</th>{ids.map((id) => <th class="num"><a href={rankUrl(id)}>{name(id)}</a></th>)}</tr></thead>
+        <tbody>
+          {rows.map((row) => {
+            const best = Math.max(...Object.values(row.vals));
+            return (
+              <tr>
+                <td>{row.name}</td>
+                {ids.map((id) => {
+                  const v = row.vals[id];
+                  return <td class:list={['num', { best: v === best }]}>{v != null ? v.toFixed(1) : '–'}</td>;
+                })}
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+    <p class="small muted">Grams of protein per $1, whole pack at the regular shelf price. Highlighted = most protein for your dollar. Each store's own everyday brand. – = not sold there.</p>
+  </div>
+)}
+
+<style>
+  .store-compare { max-width: 40rem; }
+  .scroll { overflow-x: auto; }
+  .verdict { font-family: var(--display); font-weight: 650; }
+  td.best { font-weight: 800; background: var(--basil-soft); }
+  th a { color: inherit; }
+</style>

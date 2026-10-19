@@ -1,0 +1,157 @@
+---
+title: "Aldi vs H-E-B vs Walmart: Cheapest Protein in Houston"
+description: "We priced 21 protein staples at an Aldi, an H-E-B and a Walmart in Houston. Aldi wins most foods, H-E-B wins the full meal plan. Real prices, Oct 2026."
+published: 2026-10-19
+recipes: ["chicken-lentil-rice-pot", "protein-pancake", "lemon-rosemary-chicken-veg", "banana-oat-greek-yogurt-protein-bowl", "shrimp-and-rice-bowl"]
+listRecipesAtEnd: false
+---
+import StoreCompare from '../../components/StoreCompare.astro';
+import RecipeStoreCosts from '../../components/RecipeStoreCosts.astro';
+import { getPlan, storeRank, storeInfo, rankUrl, compareTally, usd } from '../../lib/data';
+
+export const T = ['aldi-tx', 'heb-tx', 'walmart-tx'];
+export const t = compareTally(T);
+export const wins = (id) => t.wins.find((w) => w.id === id).n;
+export const g = (id, item) => storeRank(id).find((r) => r.item === item);
+export const gpd = (id, item) => g(id, item).protein_per_dollar.toFixed(1);
+export const plan = getPlan('meal-prep-for-one');
+export const heb = plan.stores['heb-tx'];
+export const wmt = plan.stores['walmart-tx'];
+export const pct = (a, b) => Math.round((a / b - 1) * 100);
+
+If you shop in Houston and want the most protein for your money, the short version is:
+**Aldi is cheapest food by food, H-E-B is cheapest for a whole week of meals, and Walmart
+rarely wins either.**
+
+We priced the same {t.rows.length} protein staples at one Aldi, one H-E-B and one Walmart
+in Houston in October 2026, then worked out how many grams of protein each dollar buys.
+Here's what came out.
+
+## The short answer
+
+- **Aldi** gives the most protein per dollar on **{wins('aldi-tx')} of {t.rows.length} foods**:
+  chicken breast, tofu, dry and canned beans, peanut butter, oats, Greek yogurt, ground turkey
+  and more.
+- **H-E-B** wins **{wins('heb-tx')}**: red lentils, whey protein and frozen shrimp. More usefully,
+  it's the only one of the three where you can buy our whole 4-day meal plan in one trip at the
+  lowest cost: **{usd(heb.cost_per_day)} a day**.
+- **Walmart** wins **{wins('walmart-tx')}** (canned chicken, by a tenth of a gram), with
+  {t.ties} tie. Its 4-day plan costs {usd(wmt.cost_per_day)} a day, about
+  {pct(wmt.cost_per_day, heb.cost_per_day)}% more than H-E-B.
+- **Willing to make two stops?** Aldi for the staples, H-E-B for lentils and protein powder.
+
+## The three stores
+
+Prices are from one specific store each, so your nearest branch may be a little different:
+
+- **Aldi:** {storeInfo('aldi-tx').location}. Prices from aldi.us in in-store mode.
+- **H-E-B:** {storeInfo('heb-tx').location}. heb.com's in-store prices.
+- **Walmart:** {storeInfo('walmart-tx').location}. walmart.com's shelf prices for that store.
+
+For every food we picked each store's own everyday brand, used the regular price (not a sale)
+and counted the whole pack, because that's what you pay at the till.
+
+## Protein per dollar, food by food
+
+Higher is better: it's the grams of protein you get for each $1.
+
+<StoreCompare ids={T} />
+
+## Where the difference is big
+
+**Chicken breast.** Aldi's fresh family pack (${g('aldi-tx', 'chicken breast').price}/lb) and
+H-E-B's fresh value pack ($2.23/lb) are almost level at {gpd('aldi-tx', 'chicken breast')} and
+{gpd('heb-tx', 'chicken breast')} g per $1. Walmart's store-brand breasts at this store come as
+a frozen 5 lb bag and give {gpd('walmart-tx', 'chicken breast')} g per $1, roughly a quarter
+less. Chicken is the backbone of most meal prep, so this one matters more than anything else
+on the list.
+
+**Tofu.** Aldi's extra-firm tofu gives {gpd('aldi-tx', 'tofu firm')} g per $1, about double
+Walmart's {gpd('walmart-tx', 'tofu firm')} (Walmart has no store-brand tofu here, so it's a
+name brand). H-E-B sits in the middle at {gpd('heb-tx', 'tofu firm')}.
+
+**Ground turkey 93/7.** Aldi and H-E-B both charge $4.89, but Aldi's pack is 19.2 oz and
+H-E-B's is 16 oz. Same price, 20% more turkey.
+
+**Peanut butter and dry black beans.** Aldi and Walmart sell the big packs (40 oz jar, 2 lb bag);
+H-E-B's store brand is in smaller packs, which cost more per gram. If H-E-B is your store,
+look for the bigger size.
+
+## Where it's basically a tie
+
+Eggs and cottage cheese are level at all three, less than 1% apart. Whole milk and pork loin
+are level at Aldi and Walmart, with H-E-B about 15% behind. Don't drive across town for any of them.
+
+One thing we didn't expect: **H-E-B and Walmart charged exactly the same, to the cent**, for
+their store-brand eggs ($1.67), oats ($4.18 for 42 oz), Greek yogurt ($3.28), cottage cheese
+($2.87), canned tuna ($0.96) and canned black beans ($0.92). Aldi was a little lower on all six.
+
+## What H-E-B does better
+
+- **Red lentils.** Aldi doesn't sell dry red lentils at this store, and H-E-B's
+  ({gpd('heb-tx', 'red lentils')} g per $1) beat Walmart's ({gpd('walmart-tx', 'red lentils')}).
+  At H-E-B they're the second-best protein value after dry black beans.
+- **Whey protein.** Both H-E-B and Walmart sell the same isolate; per gram, H-E-B's tub works
+  out cheaper. Aldi only sells a whey *blend*, which isn't the same product, so we left it out
+  of the ranking.
+- **Shrimp.** H-E-B's 2 lb bag edges out the smaller bags at the other two. But shrimp is the
+  worst protein value of all {t.rows.length} foods at every store (about 7 g per $1, against
+  60 to 70+ for dry beans), so buy it because you like it, not to save money.
+
+## The 4-day meal plan at each store
+
+Our [4-day high-protein meal prep for one](/high-protein-meal-prep-for-one) uses three recipes:
+a whey pancake, lemon-rosemary chicken and a one-pot chicken, red lentil and rice dinner.
+About {plan.per_day.protein_g} g of protein a day. Here's what it costs in Houston:
+
+| Store | Per day | Ingredients used (4 days) | Checkout total (first shop) |
+|---|---:|---:|---:|
+| **H-E-B** | **{usd(heb.cost_per_day)}** | {usd(heb.cost_total_used)} | {usd(heb.checkout_total)} |
+| Walmart | {usd(wmt.cost_per_day)} | {usd(wmt.cost_total_used)} | {usd(wmt.checkout_total)} |
+| Aldi | – | – | No dry red lentils |
+
+The checkout total is higher than the "used" amount because you buy whole packs: most of the
+whey tub, rice, milk and chicken carry over to next week.
+
+H-E-B wins here because its lentils, whey and chicken are all cheap, and those three make up
+most of the plan's cost. Aldi would likely be cheaper still if it sold red lentils; you could
+buy those at H-E-B and the rest at Aldi.
+
+## Recipe by recipe
+
+Each of our recipes priced at all three stores, per serving:
+
+<RecipeStoreCosts ids={T} />
+
+Aldi comes out cheapest on every recipe it can make. One caveat: **the pancake at Aldi uses
+Aldi's whey blend**, not the isolate the recipe is written for, so treat that low price as
+optimistic. The protein figure is worked out for the isolate.
+
+## So which store should you use?
+
+- **Only one store, the whole list:** H-E-B. Cheapest full week in our numbers, and it sells
+  everything our recipes need.
+- **Cheapest staples:** Aldi, especially for chicken breast, tofu, beans, peanut butter, oats
+  and Greek yogurt.
+- **Two stops:** Aldi for the staples, H-E-B for red lentils and protein powder.
+- **Walmart:** fine if it's the one near you. It's about {pct(wmt.cost_per_day, heb.cost_per_day)}%
+  dearer than H-E-B on our plan, but it's level on eggs, milk, cottage cheese and canned chicken. Just skip the
+  frozen chicken breast bag if you can get fresh elsewhere.
+
+Full rankings for each store: [Aldi]({rankUrl('aldi-tx')}), [H-E-B]({rankUrl('heb-tx')}),
+[Walmart]({rankUrl('walmart-tx')}), and the [cheapest protein hub](/cheapest-protein) for
+other states.
+
+## How we checked the prices
+
+- One store per chain, all in Houston, checked October 2026.
+- Regular prices only. Where a store had a sale running, we used the normal price.
+- Each store's own everyday brand. Where there are two, the cheaper one per unit. Where a store
+  has no store brand, a name brand.
+- Meat sold by weight uses the per-pound price.
+- **Aldi's online prices come through Instacart** and can be slightly different from the shelf.
+  H-E-B's are its own in-store prices for that branch; curbside pickup costs a little more.
+- Protein comes from USDA FoodData Central, except the whey, which uses the product's label.
+
+Prices change, so treat these as a guide to which store is better value, not an exact bill.
+We'll refresh them every few months, and add more Houston stores (Kroger and Target are next).
