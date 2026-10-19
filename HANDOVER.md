@@ -216,3 +216,19 @@ Everything is plain files, so nothing is locked in.
   and posts) and `RecipeStoreCosts` (recipe cost per serving by store). The Texas hub links to the article.
 - Recipes 'Missing nutrition' validation (19 Oct email): still failing because Sanae's unpriced quinoa salad (18 Oct) has a photo, so it
   outputs Recipe schema without nutrition. Fix = price it (submissions/README.md).
+
+## Update 19 Oct 2026 (later): redesign, SEO pass, quinoa salad
+- **Look:** "market garden" palette (leaf-white paper, sage panels, forest ink, leaf-green accent); the yellow shelf tag stays the
+  only loud element. Display font is now Bricolage Grotesque (Archivo removed). One organic shape token, `--leaf`
+  (two round corners, two tight), on photos and panels. Pickers and buttons are pills (`select`, `.btn` in global.css).
+- **Menu:** Recipes, Cheapest protein, Meal planner, Guides. New `/guides` page lists all posts. Footer has site-wide links.
+- **Homepage:** hero (headline + store picker) with a "cheapest protein right now" shelf beside it; best-value recipes as photo
+  cards; planner call-out; guides; compare stores by state; new submissions; "how the numbers work".
+- **Recipes default to their best-value store** (`homeStore()` in src/lib/data.ts), named next to the cost. Walmart CA is no longer
+  the hidden default (plan articles still pass `STORE` explicitly for their plan totals).
+- **SEO:** WebSite + Organization schema on the homepage; CollectionPage on /guides; breadcrumbs on posts; og:image on every
+  page (recipe photo or `public/og-default.png`); titles drop the brand suffix when it would push past ~62 characters;
+  About page lists every store we price.
+- **Quinoa & chicken salad** (Sanae, 18 Oct) priced at H-E-B as `/recipes/quinoa-chicken-salad-honey-mustard`; the old typo URL
+  301s to it. New items: quinoa, romaine, spinach, avocado, tomato, cucumber, feta, yellow mustard (nutrition + search terms).
+  Still to price at Aldi TX, Walmart TX and Walmart CA (`tools/price_todo.py <id>`).

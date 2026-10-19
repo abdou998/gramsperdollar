@@ -1,10 +1,10 @@
 ---
 // "Where the money goes": each ingredient's cost per serving, its share of the total and the protein it adds.
 // The pricing is what makes this site different, so it gets a real table, not a footnote.
-import { storeStats, usd, monthLabel, rankStores, rankUrl, priceBasis, storeInfo, STORE, type Recipe } from '../lib/data';
+import { homeStore, storeStats, usd, monthLabel, rankStores, rankUrl, priceBasis, storeInfo, STORE, type Recipe } from '../lib/data';
 
 interface Props { r: Recipe; store?: string }
-const { r, store = STORE } = Astro.props;
+const { r, store = homeStore(r) ?? STORE } = Astro.props;
 const info = storeInfo(store);
 const s = storeStats(r, store) as any;
 const rows: any[] = s?.breakdown ?? [];

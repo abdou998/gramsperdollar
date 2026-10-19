@@ -3,6 +3,7 @@ import { getCollection, render } from 'astro:content';
 import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 import RecipeList from '../components/RecipeList.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 import { formatDate } from '../lib/data';
 
 export async function getStaticPaths() {
@@ -25,11 +26,12 @@ const articleLd = {
   author: { '@type': d.author === 'Grams per Dollar' ? 'Organization' : 'Person', name: d.author },
   publisher: { '@type': 'Organization', name: 'Grams per Dollar', url: Astro.site?.href },
   mainEntityOfPage: canonical,
-  ...(d.hero ? { image: new URL(d.hero.src, Astro.site).href } : {}),
+  image: d.hero ? new URL(d.hero.src, Astro.site).href : new URL('/og-default.png', Astro.site).href,
 };
 ---
 <Base title={d.title} description={d.description} type="article"
   image={d.hero ? new URL(d.hero.src, Astro.site).href : undefined} jsonLd={[articleLd]}>
+  <Breadcrumbs trail={[{ name: 'Home', url: '/' }, { name: 'Guides', url: '/guides' }, { name: d.title, url: `/${post.id}` }]} />
   <article>
     <header class="post-head">
       <h1>{d.title}</h1>
@@ -55,7 +57,7 @@ const articleLd = {
 
 <style>
   .post-head { max-width: 46rem; }
-  .post-head h1 { font-size: var(--step-3); font-stretch: 108%; }
+  .post-head h1 { font-size: var(--step-3); letter-spacing: -0.03em; }
   .byline { margin-top: -0.25rem; }
   .hero { margin: 1.5rem 0 2rem; max-width: var(--wide); }
   .hero :global(img) { border-radius: var(--radius); width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }

@@ -1,6 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
 import ShelfTag from '../components/ShelfTag.astro';
+import { states, storeInfo } from '../lib/data';
+const sts = states();
 ---
 <Base
   title="About and how prices are checked"
@@ -10,7 +12,7 @@ import ShelfTag from '../components/ShelfTag.astro';
     <h1>About Grams per Dollar</h1>
     <p>
       Grams per Dollar is a small, independent site about high-protein meal prep on a budget,
-      run by two people who cook most of what they eat at home.
+      run by two people who cook most of what they eat at home. Many of the recipes are written and photographed by Sanae.
     </p>
     <p>
       We're into nutrition, and we hate overpaying for food. So we cook to get as much protein as
@@ -29,7 +31,14 @@ import ShelfTag from '../components/ShelfTag.astro';
 
     <h2>How prices are checked</h2>
     <ul>
-      <li>Prices come from US grocery chains' own websites. Right now that's Walmart.com, for a Sacramento, CA store.</li>
+      <li>Prices come from US grocery chains' own websites, for one named store each. Right now that's:
+        <ul>
+          {sts.map((st) => st.ids.map((id) => <li>{storeInfo(id).store}: {storeInfo(id).location}, {st.state} ({storeInfo(id).source})</li>))}
+        </ul>
+      </li>
+      <li>We use the regular price, not sales, and each store's own everyday brand where it has one.</li>
+      <li>We only compare stores within the same state, because prices differ from city to city.</li>
+      <li>Each recipe is shown at the store where it gives the most protein per dollar, with what it costs at every other store underneath.</li>
       <li>We count only the amount a recipe uses, not the whole pack. A teaspoon of cumin costs a few cents, not the price of the jar.</li>
       <li>Every recipe shows the month its prices were checked. We recheck them every few months.</li>
       <li>Prices vary a lot between states and stores, so treat them as a guide to which meals are good value, not an exact bill.</li>

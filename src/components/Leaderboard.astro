@@ -1,60 +1,48 @@
 ---
 // Recipes ranked by grams of protein per dollar. With several stores, each recipe shows its best-value store.
+import { Image } from 'astro:assets';
 import ShelfTag from './ShelfTag.astro';
 import { bestRecipes, allStoreIds, storeInfo, usd, num, monthLabel, priceBasis } from '../lib/data';
+import { recipeImage } from '../lib/images';
 
-interface Props { ids?: string[] }
-const { ids = allStoreIds() } = Astro.props;
-const rows = bestRecipes(ids);
+interface Props { ids?: string[]; limit?: number }
+const { ids = allStoreIds(), limit = 6 } = Astro.props;
+const all = bestRecipes(ids);
+const rows = all.slice(0, limit);
 const many = ids.length > 1;
-const top = rows[0]?.s.protein_g_per_dollar ?? 1;
-const checked = rows.map((x) => x.s.prices_checked).filter(Boolean).sort()[0];
+const checked = all.map((x) => x.s.prices_checked).filter(Boolean).sort()[0];
 ---
 <ol class="board">
-  {rows.map(({ r, s, store }) => (
-    <li class="row">
-      <ShelfTag value={s.protein_g_per_dollar} size="sm" />
-      <div class="body">
-        <a class="name" href={`/recipes/${r.slug}`}>{r.name}</a>
-        <span class="bar" style={`--w:${(s.protein_g_per_dollar! / top) * 100}%`} aria-hidden="true"></span>
-        <span class="facts muted">
-          <span>{usd(s.cost_per_serving)} a serving{many && <> at {storeInfo(store).store} ({storeInfo(store).city})</>}</span>
-          <span>{Math.round(r.protein_g_per_serving)} g protein</span>
-          <span>{num(r.kcal_per_serving)} kcal</span>
-        </span>
-      </div>
-    </li>
-  ))}
+  {rows.map(({ r, s, store }) => {
+    const img = recipeImage(r.image);
+    return (
+      <li>
+        <a class="card" href={`/recipes/${r.slug}`}>
+          <span class="ph">
+            {img ? <Image src={img} alt="" widths={[320, 560]} sizes="(min-width: 40rem) 18rem, 100vw" /> : <span class="no-photo"></span>}
+            <span class="pin"><ShelfTag value={s.protein_g_per_dollar} size="sm" /></span>
+          </span>
+          <span class="name">{r.name}</span>
+          <span class="facts muted">
+            <span>{usd(s.cost_per_serving)} a serving{many && <> at {storeInfo(store).store}</>}</span>
+            <span>{Math.round(r.protein_g_per_serving)} g protein</span>
+            <span>{num(r.kcal_per_serving)} kcal</span>
+          </span>
+        </a>
+      </li>
+    );
+  })}
 </ol>
-<p class="small muted">{many ? 'Each recipe at whichever of these stores makes it cheapest' : priceBasis(ids[0])}, checked {monthLabel(checked)}. Protein from USDA FoodData Central and product labels.</p>
+<p class="small muted">Ranked by grams of protein per $1. {many ? 'Each recipe at whichever of these stores makes it best value' : priceBasis(ids[0])}, checked {monthLabel(checked)}.</p>
 
 <style>
-  .board { list-style: none; padding: 0; margin: 0 0 0.75rem; }
-  .row {
-    display: grid;
-    grid-template-columns: 7.25rem 1fr;
-    gap: 1rem;
-    align-items: start;
-    padding: 1rem 0;
-    border-top: 1px solid var(--rule);
-  }
-  .row:last-child { border-bottom: 1px solid var(--rule); }
-  .body { display: grid; gap: 0.35rem; min-width: 0; }
-  .name { font-family: var(--display); font-weight: 700; font-size: var(--step-1); line-height: 1.2; text-decoration: none; color: var(--ink); }
-  a.name { text-decoration: underline; text-decoration-color: var(--rule); text-decoration-thickness: 2px; }
-  a.name:hover { color: var(--basil); text-decoration-color: currentColor; }
-  .bar {
-    display: block; height: 0.5rem; border-radius: 1px;
-    background: var(--basil); width: var(--w);
-  }
-  .facts { display: flex; flex-wrap: wrap; gap: 0.15rem 1.1rem; font-size: var(--step--1); }
-  @media (prefers-reduced-motion: no-preference) {
-    .bar { animation: grow 900ms cubic-bezier(.2,.7,.2,1) both; transform-origin: left; }
-    .row:nth-child(2) .bar { animation-delay: 80ms; }
-    .row:nth-child(3) .bar { animation-delay: 160ms; }
-    @keyframes grow { from { transform: scaleX(0); } }
-  }
-  @media (max-width: 30rem) {
-    .row { grid-template-columns: 1fr; gap: 0.5rem; }
-  }
+  .board { list-style: none; padding: 0; margin: 0 0 1rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: 2rem 1.5rem; }
+  .board li { margin: 0; }
+  .card { display: grid; gap: 0.45rem; color: var(--ink); text-decoration: none; }
+  .ph { position: relative; display: block; aspect-ratio: 4 / 3; margin-bottom: 0.6rem; }
+  .ph :global(img), .no-photo { width: 100%; height: 100%; object-fit: cover; border-radius: var(--leaf); display: block; background: var(--surface); }
+  .pin { position: absolute; left: -0.4rem; bottom: -0.6rem; }
+  .name { font-family: var(--display); font-weight: 700; font-size: var(--step-1); line-height: 1.2; margin-top: 0.3rem; }
+  .card:hover .name { color: var(--basil); text-decoration: underline; }
+  .facts { font-size: var(--step--1); display: flex; flex-wrap: wrap; gap: 0 0.9rem; }
 </style>

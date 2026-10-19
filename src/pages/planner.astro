@@ -33,7 +33,7 @@ const data = {
 ---
 <Base
   title="High-Protein Meal Planner With a Real Shopping List"
-  description="Pick your high-protein meals for the week and get daily protein, calories and cost, plus one shopping list with the real checkout total at Walmart, Aldi and more."
+  description="Pick high-protein meals for the week and get daily protein, calories and cost, plus one shopping list with the checkout total at Walmart, Aldi or H-E-B."
 >
   <Breadcrumbs trail={[{ name: 'Home', url: '/' }, { name: 'Meal planner', url: '/planner' }]} />
   <header class="head">
@@ -284,7 +284,7 @@ const data = {
 
 <style>
   .head { max-width: 46rem; }
-  .head h1 { font-stretch: 118%; }
+  .head h1 { }
   .lede { font-size: var(--step-1); line-height: 1.5; max-width: var(--measure); }
   .layout { display: grid; grid-template-columns: minmax(0, 1fr) 22rem; gap: 2.5rem; align-items: start; margin-top: 1.5rem; }
   .group h3 { margin: 1.75rem 0 0.5rem; }
@@ -305,7 +305,7 @@ const data = {
   .store-pick select { font: 650 0.95rem var(--display); padding: 0.45rem 0.6rem; border: 1px solid var(--rule); border-radius: var(--radius); background: var(--paper); color: var(--ink); max-width: 60%; }
   .card.on .stepper { border-color: var(--tag); background: var(--tag); color: var(--tag-ink); }
   .card.on .stepper button { color: var(--tag-ink); }
-  .summary { position: sticky; top: 1rem; border-top: 3px solid var(--ink); padding-top: 0.75rem; }
+  .summary { position: sticky; top: 1rem; border-top: 2px solid var(--rule); padding-top: 0.75rem; }
   .summary h2 { margin: 0 0 0.75rem; font-size: var(--step-2); }
   .summary h3 { margin: 1.25rem 0 0.25rem; }
   .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; margin: 0; }

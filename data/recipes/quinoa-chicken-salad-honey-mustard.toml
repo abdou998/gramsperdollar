@@ -1,0 +1,125 @@
+# By Sanae (submitted via /write, 18 Oct 2026). Grams as bought; quinoa is the dry weight for her 1 cup cooked.
+name = "Quinoa and Chicken Salad with Honey Mustard Yogurt Dressing"
+cuisine = "American"
+description = "Quinoa, sliced chicken, boiled eggs, feta and crunchy veg with a creamy honey mustard yogurt dressing. Two big bowls."
+author = "Sanae"
+intro = "My take on making healthy eating simple: chicken, eggs and quinoa for protein, fresh vegetables, and a homemade yogurt dressing. Nothing complicated, and it's flexible, so use whatever salad veg you have in the fridge."
+servings = 2
+meal = "lunch"
+tags = ["grilled"]
+prep_minutes = 15
+cook_minutes = 20
+image = "quinoa-chicken-salad-sanae.jpg"
+image_alt = "A bowl of quinoa salad with sliced chicken, boiled egg, avocado, tomato, cucumber and feta"
+image_credit = "Photo by Sanae."
+storage = "Keep the salad and the dressing in separate airtight containers in the fridge, and eat the chicken within 3 to 4 days. For the best texture, add the avocado and dressing just before eating."
+tip = "The avocado is about a quarter of the cost but adds very little protein; the chicken brings over half the protein for a fraction of the price. Leave the avocado out (or use half) and the bowl gets noticeably cheaper with almost the same protein."
+steps = [
+  "Cook the quinoa: rinse it and cook it according to the package instructions. Set aside to cool slightly.",
+  "Cook the chicken and eggs: season the chicken breast with salt and black pepper and cook it in a pan with the olive oil until cooked through on both sides, then slice. Boil the eggs, let them cool, and cut them into halves or quarters.",
+  "Prepare the vegetables: wash and chop the lettuce, spinach, tomato and cucumber. Slice the avocado.",
+  "Make the dressing: in a small bowl, mix the yogurt, mustard, minced garlic, honey and lemon juice. Add salt and black pepper to taste and stir until smooth and creamy.",
+  "Assemble: add the quinoa and vegetables to a bowl. Top with the sliced chicken, eggs, avocado and crumbled feta. Drizzle with the dressing and toss gently, or serve the dressing on the side.",
+]
+
+[[ingredients]]
+item = "quinoa"
+grams = 60
+amount = "⅓ cup (60 g) dry"
+label = "quinoa (makes about 1 cup cooked)"
+
+[[ingredients]]
+item = "chicken breast"
+grams = 200
+amount = "200 g"
+label = "chicken breast"
+
+[[ingredients]]
+item = "egg whole"
+grams = 100
+amount = "2"
+label = "eggs"
+
+[[ingredients]]
+item = "romaine lettuce"
+grams = 94
+amount = "2 cups"
+label = "lettuce, chopped"
+
+[[ingredients]]
+item = "spinach fresh"
+grams = 30
+amount = "1 cup"
+label = "fresh spinach"
+
+[[ingredients]]
+item = "avocado"
+grams = 150
+amount = "1"
+label = "avocado, sliced"
+
+[[ingredients]]
+item = "tomato"
+grams = 123
+amount = "1 medium"
+label = "tomato, chopped"
+
+[[ingredients]]
+item = "cucumber"
+grams = 300
+amount = "1½"
+label = "cucumbers, sliced"
+
+[[ingredients]]
+item = "feta cheese"
+grams = 40
+amount = "40 g"
+label = "feta cheese, crumbled"
+
+[[ingredients]]
+item = "olive oil"
+grams = 13.5
+amount = "1 tbsp"
+label = "olive oil"
+
+[[ingredients]]
+item = "greek yogurt plain nonfat"
+grams = 45
+amount = "3 tbsp"
+label = "plain yogurt (we price nonfat Greek), for the dressing"
+
+[[ingredients]]
+item = "mustard yellow"
+grams = 5
+amount = "1 tsp"
+label = "mustard, for the dressing"
+
+[[ingredients]]
+item = "garlic"
+grams = 3
+amount = "1 small clove"
+label = "garlic, minced, for the dressing"
+
+[[ingredients]]
+item = "honey"
+grams = 7
+amount = "1 tsp"
+label = "honey, for the dressing"
+
+[[ingredients]]
+item = "lemon juice and zest"
+grams = 10
+amount = "2 tsp"
+label = "fresh lemon juice, for the dressing"
+
+[[ingredients]]
+item = "kosher salt"
+grams = 2
+amount = "to taste"
+label = "salt"
+
+[[ingredients]]
+item = "black pepper"
+grams = 1
+amount = "to taste"
+label = "black pepper"

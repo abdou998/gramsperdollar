@@ -2,16 +2,19 @@
    One bold element: the yellow shelf tag (.tag). Everything else stays quiet. */
 
 :root {
-  --paper: #fbfcfa;
-  --ink: #18211d;
-  --muted: #5a6560;
-  --rule: #dce1dd;
-  --basil: #2d6a47;
-  --basil-soft: #e4efe8;
+  /* Market-garden palette: leaf-white paper, forest ink, one leaf-green accent.
+     The yellow shelf tag stays the only loud thing on the page. */
+  --paper: #f2f4ec;
+  --surface: #e4ead8;
+  --ink: #1d2b20;
+  --muted: #566454;
+  --rule: #cfd8c2;
+  --basil: #3d6b35;
+  --basil-soft: #dbe7cf;
   --tag: #ffd23f;
-  --tag-ink: #18211d;
+  --tag-ink: #1d2b20;
 
-  --display: 'Archivo Variable', 'Arial Narrow', system-ui, sans-serif;
+  --display: 'Bricolage Grotesque Variable', 'Trebuchet MS', system-ui, sans-serif;
   --body: 'Source Serif 4 Variable', Georgia, 'Times New Roman', serif;
 
   /* Type scale (1.25 ratio) */
@@ -23,20 +26,24 @@
   --step-4: clamp(2.3rem, 7vw, 3.6rem);
 
   --measure: 38rem;
-  --wide: 56rem;
+  --wide: 60rem;
   --gutter: 1rem;
-  --radius: 4px;
+  --radius: 10px;
+  /* The one organic shape: a leaf (two round corners, two tight ones). Used on photos and panels. */
+  --leaf: 1.75rem 0.4rem 1.75rem 0.4rem;
+  --leaf-sm: 1rem 0.25rem 1rem 0.25rem;
   color-scheme: light;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --paper: #121614;
-    --ink: #e7ece8;
-    --muted: #a3ada7;
-    --rule: #2b332f;
-    --basil: #82c79c;
-    --basil-soft: #1d2a23;
+    --paper: #131a14;
+    --surface: #1b241c;
+    --ink: #e5ebdc;
+    --muted: #a3af9c;
+    --rule: #2d382e;
+    --basil: #9fcf8f;
+    --basil-soft: #23331f;
     color-scheme: dark;
   }
 }
@@ -57,10 +64,9 @@ body {
 
 h1, h2, h3 {
   font-family: var(--display);
-  font-stretch: 112%;
-  font-weight: 800;
-  line-height: 1.12;
-  letter-spacing: -0.015em;
+  font-weight: 750;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
   margin: 2.2em 0 0.6em;
   text-wrap: balance;
 }
@@ -77,6 +83,10 @@ a:hover { text-decoration-thickness: 2px; }
 :focus-visible { outline: 3px solid var(--basil); outline-offset: 2px; border-radius: 2px; }
 
 img { max-width: 100%; height: auto; display: block; }
+
+/* Soft panel for grouped content (hero, store comparisons, notes). */
+.panel { background: var(--surface); border-radius: var(--leaf); padding: clamp(1.1rem, 3vw, 2rem); }
+.leaf-img { border-radius: var(--leaf); overflow: hidden; }
 
 table { border-collapse: collapse; width: 100%; font-size: var(--step--1); }
 th, td { text-align: left; padding: 0.55rem 0.5rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
@@ -106,7 +116,7 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; white-sp
   line-height: 1;
   box-shadow: inset 0 -3px 0 rgb(0 0 0 / 0.12);
 }
-.tag-number { font-size: 1.9rem; font-weight: 900; font-stretch: 125%; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
+.tag-number { font-size: 1.9rem; font-weight: 800; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
 .tag-unit { font-size: 0.72rem; font-weight: 600; line-height: 1.15; padding-bottom: 0.15rem; white-space: nowrap; }
 .tag-sm .tag-number { font-size: 1.3rem; }
 .tag-sm { padding: 0.25rem 0.45rem 0.3rem; }
@@ -114,3 +124,27 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; white-sp
 @media (prefers-reduced-motion: no-preference) {
   html { scroll-behavior: smooth; }
 }
+
+/* Store and state pickers. */
+select {
+  font: 650 1rem var(--display);
+  color: var(--ink);
+  background: var(--paper);
+  border: 1.5px solid var(--basil);
+  border-radius: 999px;
+  padding: 0.55rem 2.4rem 0.55rem 1rem;
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, var(--basil) 50%), linear-gradient(135deg, var(--basil) 50%, transparent 50%);
+  background-position: calc(100% - 1.15rem) 55%, calc(100% - 0.8rem) 55%;
+  background-size: 0.35rem 0.35rem;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+select:hover { border-color: var(--ink); }
+
+/* Pill buttons (Add to my week, planner actions). */
+.btn {
+  display: inline-block; font: 650 0.95rem var(--display); cursor: pointer; text-decoration: none;
+  background: var(--basil); color: var(--paper); border: 0; border-radius: 999px; padding: 0.6rem 1.1rem;
+}
+.btn:hover { background: var(--ink); }

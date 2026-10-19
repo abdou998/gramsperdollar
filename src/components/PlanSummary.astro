@@ -9,7 +9,7 @@ const st = (plan.stores as Record<string, any>)[STORE];
 
 const meals = plan.meals.map((m) => {
   const r = getRecipe(m.recipe);
-  return { ...m, r, s: storeStats(r) };
+  return { ...m, r, s: storeStats(r, STORE) };
 });
 const checked = meals.map((m) => m.s?.prices_checked).filter(Boolean).sort()[0];
 

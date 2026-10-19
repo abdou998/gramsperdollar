@@ -1,0 +1,45 @@
+---
+// All published posts: store comparisons and meal plans.
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { publishedPosts } from '../lib/posts';
+import { formatDate } from '../lib/data';
+
+const posts = await publishedPosts();
+const ld = {
+  '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'High-protein meal prep guides',
+  url: new URL('/guides', Astro.site).href,
+  mainEntity: { '@type': 'ItemList', itemListElement: posts.map((p, i) => ({ '@type': 'ListItem', position: i + 1, url: new URL(`/${p.id}`, Astro.site).href, name: p.data.title })) },
+};
+---
+<Base
+  title="High-Protein Meal Prep Guides and Store Comparisons"
+  description="Meal prep plans with shopping lists and costs, and side-by-side store comparisons of protein per dollar at real US supermarkets."
+  jsonLd={[ld]}
+>
+  <Breadcrumbs trail={[{ name: 'Home', url: '/' }, { name: 'Guides', url: '/guides' }]} />
+  <h1>Guides</h1>
+  <p class="lede">Meal prep plans with shopping lists, and store-by-store comparisons using real, dated prices.</p>
+  <ul class="posts">
+    {posts.map((p) => (
+      <li>
+        <a class="post-title" href={`/${p.id}`}>{p.data.title}</a>
+        <p class="post-desc">{p.data.description}</p>
+        <p class="small muted">
+          <time datetime={p.data.published.toISOString()}>{formatDate(p.data.published)}</time>
+          {p.data.updated && <>, updated <time datetime={p.data.updated.toISOString()}>{formatDate(p.data.updated)}</time></>}
+        </p>
+      </li>
+    ))}
+  </ul>
+</Base>
+
+<style>
+  h1 { font-size: var(--step-4); letter-spacing: -0.03em; }
+  .lede { font-size: var(--step-1); line-height: 1.5; max-width: var(--measure); }
+  .posts { list-style: none; padding: 0; max-width: var(--measure); margin-top: 2rem; }
+  .posts li { padding: 1.1rem 0; border-top: 1px solid var(--rule); margin: 0; }
+  .post-title { font-family: var(--display); font-weight: 700; font-size: var(--step-1); line-height: 1.25; color: var(--ink); }
+  .post-title:hover { color: var(--basil); }
+  .post-desc { margin: 0.4rem 0 0.2rem; }
+</style>

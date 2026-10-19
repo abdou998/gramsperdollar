@@ -12,6 +12,8 @@ const list = states()
 
 const checked = list.flatMap((s) => s.ids.flatMap((id) => storeRank(id).map((r) => r.checked))).sort()[0];
 const storeCount = list.reduce((a, s) => a + s.ids.length, 0);
+// Default to the state with the most stores, so first-time visitors see a comparison.
+const fallback = [...list].sort((a, b) => b.ids.length - a.ids.length)[0]?.slug ?? '';
 ---
 <Base
   title="Cheapest Protein by Store and State"
@@ -28,7 +30,7 @@ const storeCount = list.reduce((a, s) => a + s.ids.length, 0);
 
   <div class="picker">
     <label for="state">Your state</label>
-    <select id="state">
+    <select id="state" data-default={fallback}>
       {list.map((st) => <option value={st.slug}>{st.state}</option>)}
     </select>
     <p class="small muted">More states and stores are being added. Prices in different states come from different cities, so we only compare stores within a state.</p>
@@ -76,7 +78,7 @@ const storeCount = list.reduce((a, s) => a + s.ids.length, 0);
   const sel = document.getElementById('state') as HTMLSelectElement;
   const sections = document.querySelectorAll<HTMLElement>('.state');
   function show(slug: string) {
-    if (![...sections].some((s) => s.dataset.state === slug)) slug = sections[0]?.dataset.state ?? '';
+    if (![...sections].some((s) => s.dataset.state === slug)) slug = sel.dataset.default || (sections[0]?.dataset.state ?? '');
     sel.value = slug;
     sections.forEach((s) => (s.hidden = s.dataset.state !== slug));
     try { localStorage.setItem('gpd-state', slug); } catch {}
@@ -89,12 +91,12 @@ const storeCount = list.reduce((a, s) => a + s.ids.length, 0);
 
 <style>
   .head { max-width: 46rem; }
-  .head h1 { font-stretch: 118%; }
+  .head h1 { }
   .lede { font-size: var(--step-1); line-height: 1.5; max-width: var(--measure); }
   .picker { margin: 1.5rem 0 1rem; max-width: var(--measure); }
   .picker label { display: block; font-family: var(--display); font-weight: 700; margin-bottom: 0.3rem; }
-  .picker select { font: 700 1.05rem var(--display); padding: 0.55rem 2.2rem 0.55rem 0.8rem; border: 2px solid var(--ink); border-radius: var(--radius); background: var(--tag); color: var(--tag-ink); }
-  .state { border-top: 3px solid var(--ink); margin-top: 1.5rem; }
+  .picker select { max-width: 100%; }
+  .state { border-top: 2px solid var(--rule); margin-top: 1.5rem; }
   .state h2 { margin-top: 1rem; }
   .stores { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 0 2rem; max-width: var(--wide); }
   .stores > li { border-top: 1px solid var(--rule); padding: 0.75rem 0; margin: 0; }

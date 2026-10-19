@@ -1,7 +1,7 @@
 ---
 // Every page uses this layout. It handles the SEO basics once:
 // title, meta description, canonical URL, social tags, sitemap link, and extra JSON-LD.
-import '@fontsource-variable/archivo/wdth.css';
+import '@fontsource-variable/bricolage-grotesque/opsz.css';
 import '@fontsource-variable/source-serif-4/opsz.css';
 import '../styles/global.css';
 
@@ -12,17 +12,26 @@ interface Props {
   image?: string;       // absolute URL for social previews
   jsonLd?: object[];
   noindex?: boolean;    // private pages: keep out of Google
+  fullTitle?: boolean;  // true = use `title` as-is (no " | Grams per Dollar")
 }
-const { title, description, type = 'website', image, jsonLd = [], noindex = false } = Astro.props;
+const { title, description, type = 'website', image, jsonLd = [], noindex = false, fullTitle: asIs = false } = Astro.props;
 // One clean address per page: /about (never /about.html), / for the homepage.
 const cleanPath = Astro.url.pathname.replace(/(index)?\.html$/, '').replace(/\/$/, '') || '/';
 const canonical = new URL(cleanPath, Astro.site);
 const siteName = 'Grams per Dollar';
-const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
+// Google cuts titles around 60 characters: keep the brand suffix only when it fits.
+const fullTitle = asIs || title === siteName || title.length + siteName.length + 3 > 62 ? title : `${title} | ${siteName}`;
+const ogImage = image ?? new URL('/og-default.png', Astro.site).href;
+const nav = [
+  { href: '/recipes', label: 'Recipes', on: cleanPath.startsWith('/recipes') },
+  { href: '/cheapest-protein', label: 'Cheapest protein', on: cleanPath.startsWith('/cheapest-protein') },
+  { href: '/planner', label: 'Meal planner', on: cleanPath === '/planner' },
+  { href: '/guides', label: 'Guides', on: cleanPath === '/guides' || type === 'article' && !cleanPath.startsWith('/recipes') },
+];
 const path = cleanPath;
 ---
 <!doctype html>
-<html lang="en">
+<html lang="en-US">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -31,14 +40,16 @@ const path = cleanPath;
     {noindex ? <meta name="robots" content="noindex, nofollow" /> : <link rel="canonical" href={canonical} />}
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <meta name="theme-color" content="#ffd23f" />
+    <meta name="theme-color" content="#3d6b35" />
     <meta property="og:type" content={type} />
     <meta property="og:site_name" content={siteName} />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
-    {image && <meta property="og:image" content={image} />}
-    <meta name="twitter:card" content={image ? 'summary_large_image' : 'summary'} />
+    <meta property="og:image" content={ogImage} />
+    {!image && <><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" /></>}
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
     {jsonLd.map((d) => <script type="application/ld+json" set:html={JSON.stringify(d)} />)}
   </head>
   <body>
@@ -50,9 +61,7 @@ const path = cleanPath;
           <span class="logo-word">Grams per Dollar</span>
         </a>
         <nav aria-label="Main">
-          <a href="/cheapest-protein" aria-current={path.startsWith('/cheapest-protein') ? 'page' : undefined}>Cheapest protein</a>
-          <a href="/planner" aria-current={path === '/planner' ? 'page' : undefined}>Planner</a>
-          <a href="/recipes" aria-current={path.startsWith('/recipes') ? 'page' : undefined}>Recipes</a>
+          {nav.map((n) => <a href={n.href} aria-current={n.on ? 'page' : undefined}>{n.label}</a>)}
         </nav>
       </div>
     </header>
@@ -60,12 +69,21 @@ const path = cleanPath;
       <slot />
     </main>
     <footer class="site">
-      <div class="wrap">
-        <p>
-          Prices are approximate, from one store's website, and dated on every recipe. Yours will differ.
-          This site shares recipes and costs. It isn't medical or dietary advice.
-        </p>
-        <p><a href="/about">About us and how we check prices</a></p>
+      <div class="wrap foot">
+        <div>
+          <p class="foot-name">Grams per Dollar</p>
+          <p>High-protein meal prep, costed at real US supermarkets. Prices are from each store's website, dated on every page, and yours will differ a little.</p>
+          <p>Recipes and costs only, not medical or dietary advice.</p>
+        </div>
+        <nav aria-label="Footer">
+          <ul>
+            <li><a href="/recipes">All recipes</a></li>
+            <li><a href="/cheapest-protein">Cheapest protein by store</a></li>
+            <li><a href="/planner">Weekly meal planner</a></li>
+            <li><a href="/guides">Guides</a></li>
+            <li><a href="/about">About us and how we check prices</a></li>
+          </ul>
+        </nav>
       </div>
     </footer>
   </body>
@@ -74,21 +92,30 @@ const path = cleanPath;
 <style>
   .skip { position: absolute; left: -999px; top: 0.5rem; background: var(--tag); color: var(--tag-ink); padding: 0.5rem 0.75rem; z-index: 10; }
   .skip:focus { left: 0.5rem; }
-  header.site { border-bottom: 1px solid var(--rule); }
-  .bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 0.9rem; }
+  header.site { background: var(--paper); }
+  .bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem 1.5rem; padding-block: 1.1rem; }
   .logo { display: inline-flex; align-items: center; gap: 0.6rem; text-decoration: none; color: var(--ink); }
   .logo-mark {
-    background: var(--tag); color: var(--tag-ink); border-radius: 3px;
-    font-family: var(--display); font-weight: 900; font-stretch: 125%; font-size: 0.95rem;
-    padding: 0.2rem 0.4rem; box-shadow: inset 0 -2px 0 rgb(0 0 0 / 0.12);
+    background: var(--tag); color: var(--tag-ink); border-radius: var(--leaf-sm);
+    font-family: var(--display); font-weight: 800; font-size: 0.95rem;
+    padding: 0.25rem 0.5rem; box-shadow: inset 0 -2px 0 rgb(0 0 0 / 0.12);
   }
-  .logo-word { font-family: var(--display); font-weight: 800; font-stretch: 110%; font-size: 1.1rem; letter-spacing: -0.01em; }
-  nav { display: flex; gap: 1.1rem; font-family: var(--display); font-weight: 600; font-size: 0.95rem; }
-  nav a { color: var(--ink); text-decoration: none; padding-block: 0.25rem; }
-  nav a:hover, nav a[aria-current='page'] { box-shadow: inset 0 -2px 0 var(--basil); }
-  main { padding-block: 2.5rem 4rem; }
-  footer.site { border-top: 1px solid var(--rule); color: var(--muted); font-size: var(--step--1); }
-  footer.site .wrap { padding-block: 1.75rem 2.5rem; max-width: var(--wide); }
-  footer.site p { max-width: var(--measure); }
-  @media (max-width: 26rem) { .logo-word { display: none; } }
+  .logo-word { font-family: var(--display); font-weight: 750; font-size: 1.15rem; letter-spacing: -0.02em; }
+  nav[aria-label='Main'] { display: flex; gap: 0.25rem; font-family: var(--display); font-weight: 600; font-size: 0.95rem; overflow-x: auto; scrollbar-width: none; }
+  nav[aria-label='Main'] a { color: var(--ink); text-decoration: none; padding: 0.4rem 0.8rem; border-radius: 999px; white-space: nowrap; }
+  nav[aria-label='Main'] a:hover { background: var(--surface); }
+  nav[aria-label='Main'] a[aria-current='page'] { background: var(--basil); color: var(--paper); }
+  main { padding-block: 1.5rem 4rem; }
+  footer.site { background: var(--surface); color: var(--muted); font-size: var(--step--1); border-radius: 2.5rem 2.5rem 0 0; margin-top: 2rem; }
+  .foot { display: grid; grid-template-columns: 1.4fr 1fr; gap: 1rem 3rem; padding-block: 2.25rem 2.75rem; }
+  .foot-name { font-family: var(--display); font-weight: 750; font-size: 1.05rem; color: var(--ink); margin-bottom: 0.4rem; }
+  .foot p { max-width: var(--measure); }
+  .foot ul { list-style: none; padding: 0; margin: 0; }
+  .foot li { margin: 0 0 0.35rem; }
+  .foot a { color: var(--ink); }
+  @media (max-width: 40rem) {
+    .bar { flex-direction: column; align-items: flex-start; }
+    nav[aria-label='Main'] { width: calc(100% + var(--gutter)); margin-left: -0.8rem; }
+    .foot { grid-template-columns: 1fr; }
+  }
 </style>

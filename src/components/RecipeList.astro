@@ -1,8 +1,11 @@
 ---
 // Compact recipe rows that link to each full recipe page. Used in articles, /recipes and category pages.
+// Each row: photo with the shelf tag pinned to it (like a price label on produce), then name and facts.
+import { Image } from 'astro:assets';
 import ShelfTag from './ShelfTag.astro';
-import { getRecipe, storeStats, usd, num, type Recipe } from '../lib/data';
-import type { Unpriced } from '../lib/unpriced';
+import { getRecipe, storeStats, homeStore, storeShort, usd, num, type Recipe } from '../lib/data';
+import { recipeImage } from '../lib/images';
+import { photoFor, type Unpriced } from '../lib/unpriced';
 
 interface Props { slugs?: string[]; recipes?: Recipe[]; unpriced?: Unpriced[]; headingLevel?: 2 | 3 }
 const { slugs, recipes, unpriced = [], headingLevel = 3 } = Astro.props;
@@ -12,19 +15,23 @@ const H = `h${headingLevel}`;
 <ul class="recipe-list">
   {list.map((r) => {
     const s = storeStats(r);
+    const home = homeStore(r);
+    const img = recipeImage(r.image);
     const total = (r.prep_minutes ?? 0) + (r.cook_minutes ?? 0);
     return (
       <li>
-        <ShelfTag value={s?.protein_g_per_dollar} size="sm" />
+        <a class="thumb" href={`/recipes/${r.slug}`} tabindex="-1" aria-hidden="true">
+          {img ? <Image src={img} alt="" widths={[240, 400]} sizes="9rem" /> : <span class="no-photo"></span>}
+          <span class="pin"><ShelfTag value={s?.protein_g_per_dollar} size="sm" /></span>
+        </a>
         <div class="body">
           <H class="name"><a href={`/recipes/${r.slug}`}>{r.name}</a></H>
           {r.description && <p class="desc">{r.description}</p>}
           <p class="facts muted">
             <span>{r.protein_g_per_serving} g protein</span>
-            {s && <span>{usd(s.cost_per_serving)} a serving</span>}
+            {s && home && <span>{usd(s.cost_per_serving)} a serving at {storeShort(home)}</span>}
             <span>{num(r.kcal_per_serving)} kcal</span>
             {total > 0 && <span>{total} min</span>}
-            <span>makes {r.servings}</span>
           </p>
         </div>
       </li>
@@ -32,14 +39,18 @@ const H = `h${headingLevel}`;
   })}
   {unpriced.map((u) => {
     const total = (u.prep ?? 0) + (u.cook ?? 0);
+    const img = photoFor(u);
     return (
       <li>
-        <span class="pending-tag small">Not priced yet</span>
+        <a class="thumb" href={`/recipes/${u.slug}`} tabindex="-1" aria-hidden="true">
+          {img ? <Image src={img} alt="" widths={[240, 400]} sizes="9rem" /> : <span class="no-photo"></span>}
+          <span class="pin"><span class="pending-tag small">Not priced yet</span></span>
+        </a>
         <div class="body">
           <H class="name"><a href={`/recipes/${u.slug}`}>{u.title}</a></H>
           {u.intro[0] && <p class="desc">{u.intro[0].length > 160 ? u.intro[0].slice(0, 157).replace(/\s\S*$/, '') + '…' : u.intro[0]}</p>}
           <p class="facts muted">
-            <span>by {u.author}</span>
+            <span>by {u.author.charAt(0).toUpperCase() + u.author.slice(1)}</span>
             {total > 0 && <span>{total} min</span>}
             {u.servings && <span>makes {u.servings}</span>}
           </p>
@@ -50,21 +61,20 @@ const H = `h${headingLevel}`;
 </ul>
 
 <style>
-  .recipe-list { list-style: none; padding: 0; margin: 1rem 0 1.5rem; max-width: var(--wide); }
-  .recipe-list li {
-    display: grid; grid-template-columns: 7.25rem 1fr; gap: 1rem; align-items: start;
-    padding: 1rem 0; border-top: 1px solid var(--rule); margin: 0;
-  }
-  .recipe-list li:last-child { border-bottom: 1px solid var(--rule); }
-  .body { min-width: 0; }
+  .recipe-list { list-style: none; padding: 0; margin: 1rem 0 1.5rem; max-width: var(--wide); display: grid; gap: 1.75rem; }
+  .recipe-list li { display: grid; grid-template-columns: 9rem 1fr; gap: 1.25rem; align-items: start; margin: 0; }
+  .thumb { position: relative; display: block; aspect-ratio: 1; }
+  .thumb :global(img), .no-photo { width: 100%; height: 100%; object-fit: cover; border-radius: var(--leaf); display: block; background: var(--surface); }
+  .pin { position: absolute; left: -0.4rem; bottom: -0.6rem; }
+  .body { min-width: 0; padding-top: 0.2rem; }
   .pending-tag {
-    justify-self: start; font-family: var(--display); font-weight: 650; color: var(--muted);
-    border: 1px dashed var(--muted); border-radius: 3px; padding: 0.35rem 0.5rem; line-height: 1.2;
+    display: inline-block; font-family: var(--display); font-weight: 650; color: var(--ink); background: var(--paper);
+    border: 1px dashed var(--muted); border-radius: var(--leaf-sm); padding: 0.3rem 0.5rem; line-height: 1.2;
   }
-  .name { margin: 0; font-size: var(--step-1); font-weight: 750; line-height: 1.2; }
-  .name a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--rule); text-decoration-thickness: 2px; }
-  .name a:hover { color: var(--basil); text-decoration-color: currentColor; }
-  .desc { margin: 0.35rem 0 0.25rem; max-width: var(--measure); }
+  .name { margin: 0; font-size: var(--step-1); font-weight: 700; line-height: 1.2; }
+  .name a { color: var(--ink); text-decoration: none; }
+  .name a:hover { color: var(--basil); text-decoration: underline; }
+  .desc { margin: 0.35rem 0 0.3rem; max-width: var(--measure); }
   .facts { display: flex; flex-wrap: wrap; gap: 0.1rem 1.1rem; margin: 0; font-size: var(--step--1); }
-  @media (max-width: 30rem) { .recipe-list li { grid-template-columns: 1fr; gap: 0.5rem; } }
+  @media (max-width: 30rem) { .recipe-list li { grid-template-columns: 6.5rem 1fr; gap: 1rem; } .desc { display: none; } .pin { transform: scale(0.8); transform-origin: bottom left; } }
 </style>

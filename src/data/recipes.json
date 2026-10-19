@@ -1809,6 +1809,325 @@
     "image_credit": "Photo by Fa Barboza on Unsplash. Shown with berries and chocolate spread, which aren't in this recipe."
   },
   {
+    "name": "Quinoa and Chicken Salad with Honey Mustard Yogurt Dressing",
+    "slug": "quinoa-chicken-salad-honey-mustard",
+    "servings": 2,
+    "protein_g_per_serving": 42.5,
+    "kcal_per_serving": 609,
+    "with_optional": {
+      "protein_g_per_serving": 42.5,
+      "kcal_per_serving": 609
+    },
+    "stores": {
+      "heb-tx": {
+        "cost_per_serving": 3.77,
+        "protein_g_per_dollar": 11.3,
+        "prices_checked": "2026-10",
+        "breakdown": [
+          {
+            "label": "avocado, sliced",
+            "item": "avocado",
+            "cost": 0.89,
+            "share": 0.236,
+            "protein": 1.5,
+            "product": "Fresh Large Hass Avocado each (~150 g edible)",
+            "url": "https://www.heb.com/product-detail/x/318627"
+          },
+          {
+            "label": "lettuce, chopped",
+            "item": "romaine lettuce",
+            "cost": 0.54,
+            "share": 0.142,
+            "protein": 0.6,
+            "product": "H-E-B Fresh Hearts of Romaine Lettuce 10 oz",
+            "url": "https://www.heb.com/product-detail/x/984619"
+          },
+          {
+            "label": "chicken breast",
+            "item": "chicken breast",
+            "cost": 0.49,
+            "share": 0.13,
+            "protein": 22.5,
+            "product": "Fresh Boneless Skinless Chicken Breasts Value Pack (avg 4.85 lb; $2.23/lb)",
+            "url": "https://www.heb.com/product-detail/x/372565"
+          },
+          {
+            "label": "feta cheese, crumbled",
+            "item": "feta cheese",
+            "cost": 0.47,
+            "share": 0.124,
+            "protein": 2.8,
+            "product": "H-E-B Deli Traditional Feta Cheese Crumbles 6 oz",
+            "url": "https://www.heb.com/product-detail/x/6058072"
+          },
+          {
+            "label": "cucumbers, sliced",
+            "item": "cucumber",
+            "cost": 0.33,
+            "share": 0.088,
+            "protein": 1.0,
+            "product": "Fresh Cucumber each (~300 g; regular price - was on sale at $0.45)",
+            "url": "https://www.heb.com/product-detail/x/319432"
+          },
+          {
+            "label": "fresh spinach",
+            "item": "spinach fresh",
+            "cost": 0.24,
+            "share": 0.064,
+            "protein": 0.4,
+            "product": "H-E-B Fresh Baby Spinach 6 oz",
+            "url": "https://www.heb.com/product-detail/x/984624"
+          },
+          {
+            "label": "quinoa (makes about 1 cup cooked)",
+            "item": "quinoa",
+            "cost": 0.22,
+            "share": 0.058,
+            "protein": 4.2,
+            "product": "H-E-B Organics White Quinoa 1 lb",
+            "url": "https://www.heb.com/product-detail/x/2160808"
+          },
+          {
+            "label": "eggs",
+            "item": "egg whole",
+            "cost": 0.14,
+            "share": 0.037,
+            "protein": 6.3,
+            "product": "Hill Country Fare Grade A Large White Eggs 12 ct (12 x 50 g edible)",
+            "url": "https://www.heb.com/product-detail/x/313762"
+          },
+          {
+            "label": "tomato, chopped",
+            "item": "tomato",
+            "cost": 0.13,
+            "share": 0.035,
+            "protein": 0.5,
+            "product": "Fresh Roma Tomato each (avg 0.29 lb)",
+            "url": "https://www.heb.com/product-detail/x/318578"
+          },
+          {
+            "label": "olive oil",
+            "item": "olive oil",
+            "cost": 0.12,
+            "share": 0.032,
+            "protein": 0.0,
+            "product": "H-E-B Extra Virgin Olive Oil 17 oz (~457 g)",
+            "url": "https://www.heb.com/product-detail/x/127074"
+          },
+          {
+            "label": "plain yogurt (we price nonfat Greek), for the dressing",
+            "item": "greek yogurt plain nonfat",
+            "cost": 0.08,
+            "share": 0.022,
+            "protein": 2.3,
+            "product": "Hill Country Fare Blended Nonfat Plain Greek Yogurt 32 oz",
+            "url": "https://www.heb.com/product-detail/x/2262571"
+          },
+          {
+            "label": "fresh lemon juice, for the dressing",
+            "item": "lemon juice and zest",
+            "cost": 0.05,
+            "share": 0.013,
+            "protein": 0.0,
+            "product": "Fresh Small Lemon each (regular price - was on sale at $0.33; ~50 g used)",
+            "url": "https://www.heb.com/product-detail/x/375185"
+          },
+          {
+            "label": "honey, for the dressing",
+            "item": "honey",
+            "cost": 0.04,
+            "share": 0.01,
+            "protein": 0.0,
+            "product": "Hill Country Fare Clover Honey Bear 12 oz",
+            "url": "https://www.heb.com/product-detail/x/123681"
+          },
+          {
+            "label": "black pepper",
+            "item": "black pepper",
+            "cost": 0.02,
+            "share": 0.004,
+            "protein": 0.1,
+            "product": "H-E-B Pure Ground Black Pepper 4 oz",
+            "url": "https://www.heb.com/product-detail/x/125167"
+          },
+          {
+            "label": "garlic, minced, for the dressing",
+            "item": "garlic",
+            "cost": 0.01,
+            "share": 0.003,
+            "protein": 0.1,
+            "product": "Fresh Garlic bulb each (~40 g)",
+            "url": "https://www.heb.com/product-detail/x/325168"
+          },
+          {
+            "label": "mustard, for the dressing",
+            "item": "mustard yellow",
+            "cost": 0.0,
+            "share": 0.001,
+            "protein": 0.1,
+            "product": "Hill Country Fare Coarse Yellow Mustard 20 oz",
+            "url": "https://www.heb.com/product-detail/x/15681013"
+          },
+          {
+            "label": "salt",
+            "item": "kosher salt",
+            "cost": 0.0,
+            "share": 0.0,
+            "protein": 0.0,
+            "product": "H-E-B Coarse Kosher Salt 4.4 lb",
+            "url": "https://www.heb.com/product-detail/x/1917502"
+          }
+        ]
+      }
+    },
+    "cheapest_store": "heb-tx",
+    "missing_nutrition": [],
+    "unpriced_items": [],
+    "ingredients": [
+      {
+        "item": "quinoa",
+        "grams": 60.0,
+        "amount": "⅓ cup (60 g) dry",
+        "label": "quinoa (makes about 1 cup cooked)",
+        "optional": false
+      },
+      {
+        "item": "chicken breast",
+        "grams": 200.0,
+        "amount": "200 g",
+        "label": "chicken breast",
+        "optional": false
+      },
+      {
+        "item": "egg whole",
+        "grams": 100.0,
+        "amount": "2",
+        "label": "eggs",
+        "optional": false
+      },
+      {
+        "item": "romaine lettuce",
+        "grams": 94.0,
+        "amount": "2 cups",
+        "label": "lettuce, chopped",
+        "optional": false
+      },
+      {
+        "item": "spinach fresh",
+        "grams": 30.0,
+        "amount": "1 cup",
+        "label": "fresh spinach",
+        "optional": false
+      },
+      {
+        "item": "avocado",
+        "grams": 150.0,
+        "amount": "1",
+        "label": "avocado, sliced",
+        "optional": false
+      },
+      {
+        "item": "tomato",
+        "grams": 123.0,
+        "amount": "1 medium",
+        "label": "tomato, chopped",
+        "optional": false
+      },
+      {
+        "item": "cucumber",
+        "grams": 300.0,
+        "amount": "1½",
+        "label": "cucumbers, sliced",
+        "optional": false
+      },
+      {
+        "item": "feta cheese",
+        "grams": 40.0,
+        "amount": "40 g",
+        "label": "feta cheese, crumbled",
+        "optional": false
+      },
+      {
+        "item": "olive oil",
+        "grams": 13.5,
+        "amount": "1 tbsp",
+        "label": "olive oil",
+        "optional": false
+      },
+      {
+        "item": "greek yogurt plain nonfat",
+        "grams": 45.0,
+        "amount": "3 tbsp",
+        "label": "plain yogurt (we price nonfat Greek), for the dressing",
+        "optional": false
+      },
+      {
+        "item": "mustard yellow",
+        "grams": 5.0,
+        "amount": "1 tsp",
+        "label": "mustard, for the dressing",
+        "optional": false
+      },
+      {
+        "item": "garlic",
+        "grams": 3.0,
+        "amount": "1 small clove",
+        "label": "garlic, minced, for the dressing",
+        "optional": false
+      },
+      {
+        "item": "honey",
+        "grams": 7.0,
+        "amount": "1 tsp",
+        "label": "honey, for the dressing",
+        "optional": false
+      },
+      {
+        "item": "lemon juice and zest",
+        "grams": 10.0,
+        "amount": "2 tsp",
+        "label": "fresh lemon juice, for the dressing",
+        "optional": false
+      },
+      {
+        "item": "kosher salt",
+        "grams": 2.0,
+        "amount": "to taste",
+        "label": "salt",
+        "optional": false
+      },
+      {
+        "item": "black pepper",
+        "grams": 1.0,
+        "amount": "to taste",
+        "label": "black pepper",
+        "optional": false
+      }
+    ],
+    "author": "Sanae",
+    "intro": "My take on making healthy eating simple: chicken, eggs and quinoa for protein, fresh vegetables, and a homemade yogurt dressing. Nothing complicated, and it's flexible, so use whatever salad veg you have in the fridge.",
+    "meal": "lunch",
+    "cuisine": "American",
+    "tags": [
+      "grilled"
+    ],
+    "description": "Quinoa, sliced chicken, boiled eggs, feta and crunchy veg with a creamy honey mustard yogurt dressing. Two big bowls.",
+    "prep_minutes": 15,
+    "cook_minutes": 20,
+    "steps": [
+      "Cook the quinoa: rinse it and cook it according to the package instructions. Set aside to cool slightly.",
+      "Cook the chicken and eggs: season the chicken breast with salt and black pepper and cook it in a pan with the olive oil until cooked through on both sides, then slice. Boil the eggs, let them cool, and cut them into halves or quarters.",
+      "Prepare the vegetables: wash and chop the lettuce, spinach, tomato and cucumber. Slice the avocado.",
+      "Make the dressing: in a small bowl, mix the yogurt, mustard, minced garlic, honey and lemon juice. Add salt and black pepper to taste and stir until smooth and creamy.",
+      "Assemble: add the quinoa and vegetables to a bowl. Top with the sliced chicken, eggs, avocado and crumbled feta. Drizzle with the dressing and toss gently, or serve the dressing on the side."
+    ],
+    "storage": "Keep the salad and the dressing in separate airtight containers in the fridge, and eat the chicken within 3 to 4 days. For the best texture, add the avocado and dressing just before eating.",
+    "tip": "Avocado and feta are the dearest extras here. Leave out the avocado on prep days and the bowl costs a lot less, with almost the same protein.",
+    "image": "quinoa-chicken-salad-sanae.jpg",
+    "image_alt": "A bowl of quinoa salad with sliced chicken, boiled egg, avocado, tomato, cucumber and feta",
+    "image_credit": "Photo by Sanae."
+  },
+  {
     "name": "Garlic Paprika Shrimp and Rice Bowl",
     "slug": "shrimp-and-rice-bowl",
     "servings": 2,

@@ -6,12 +6,13 @@ import ShelfTag from './ShelfTag.astro';
 import MoneyBreakdown from './MoneyBreakdown.astro';
 import StoreCosts from './StoreCosts.astro';
 import { howToSteps, SITE_AUTHOR } from '../lib/schema';
-import { getRecipe, storeStats, usd, num, monthLabel, PRICE_BASIS } from '../lib/data';
+import { getRecipe, storeStats, homeStore, storeShort, usd, num } from '../lib/data';
 
 interface Props { slug: string; headingLevel?: 1 | 2 | 3 }
 const { slug, headingLevel = 2 } = Astro.props;
 const r = getRecipe(slug);
 const s = storeStats(r);
+const home = homeStore(r);
 const H = `h${headingLevel}`;
 
 const images = import.meta.glob<{ default: ImageMetadata }>('../assets/images/*.{jpg,jpeg,png,webp}', { eager: true });
@@ -57,13 +58,13 @@ const schema = {
   <dl class="stats">
     <div><dt>Protein</dt><dd>{r.protein_g_per_serving} g</dd></div>
     <div><dt>Calories</dt><dd>{num(r.kcal_per_serving)}</dd></div>
-    {s && <div><dt>Cost</dt><dd>{usd(s.cost_per_serving)}</dd></div>}
+    {s && home && <div><dt>Cost at {storeShort(home)}</dt><dd>{usd(s.cost_per_serving)}</dd></div>}
     <div><dt>Makes</dt><dd>{r.servings} serving{r.servings > 1 ? 's' : ''}</dd></div>
     {total > 0 && <div><dt>Time</dt><dd>{total} min</dd></div>}
   </dl>
   {s && (
     <p class="add">
-      <button type="button" class="add-btn" data-add-slug={r.slug} data-add-n={r.servings}>Add to my week</button>
+      <button type="button" class="btn add-btn" data-add-slug={r.slug} data-add-n={r.servings}>Add to my week</button>
       <span class="add-status small" aria-live="polite"></span>
     </p>
   )}
@@ -125,28 +126,26 @@ const schema = {
     max-width: var(--wide);
     margin: 3rem 0;
     padding: 1.5rem 0 0;
-    border-top: 3px solid var(--ink);
+    border-top: 2px solid var(--rule);
   }
   .head { display: grid; grid-template-columns: auto 1fr; gap: 1.1rem; align-items: start; }
-  .title { margin: 0 0 0.35rem; font-size: var(--step-3); }
+  .title { margin: 0 0 0.35rem; font-size: var(--step-3); letter-spacing: -0.03em; }
   .recipe.page { margin-top: 0.5rem; border-top: 0; padding-top: 0; }
   .desc { margin: 0; color: var(--muted); max-width: var(--measure); }
   .byline { margin: 0.4rem 0 0; }
   .intro { max-width: var(--measure); margin: 0 0 1.5rem; }
   .stats {
-    display: flex; flex-wrap: wrap; gap: 0 2rem;
-    margin: 1.5rem 0 0.25rem; padding: 0.75rem 0;
-    border-block: 1px solid var(--rule);
+    display: flex; flex-wrap: wrap; gap: 0.5rem 2rem;
+    margin: 1.5rem 0 0.25rem; padding: 0.9rem 1.25rem;
+    background: var(--surface); border-radius: var(--leaf-sm);
   }
   .stats div { display: grid; }
   .stats dt { font-size: var(--step--1); color: var(--muted); }
   .stats dd { margin: 0; font-family: var(--display); font-weight: 750; font-size: var(--step-1); font-variant-numeric: tabular-nums; }
   .per { margin: 0.4rem 0 1.5rem; }
   .add { margin: 0.9rem 0 0; display: flex; flex-wrap: wrap; gap: 0.4rem 0.9rem; align-items: center; }
-  .add-btn { font-family: var(--display); font-weight: 700; font-size: 0.95rem; cursor: pointer; background: var(--ink); color: var(--paper); border: 0; border-radius: 999px; padding: 0.55rem 1rem; }
-  .add-btn:hover { background: var(--basil); }
   .photo { margin: 0 0 1.5rem; max-width: 40rem; }
-  .photo :global(img) { border-radius: var(--radius); width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+  .photo :global(img) { border-radius: var(--leaf); width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
   .photo figcaption { margin-top: 0.4rem; }
   .cols { display: grid; grid-template-columns: minmax(14rem, 1fr) 2fr; gap: 0 2.5rem; }
   .cols h3 { margin-top: 0.5rem; }

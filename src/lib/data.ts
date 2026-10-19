@@ -4,7 +4,7 @@ import plans from '../data/plans.json';
 export type Recipe = (typeof recipes)[number];
 export type Plan = (typeof plans)[number];
 
-import { DEFAULT_STORE, priceBasis } from './stores';
+import { DEFAULT_STORE, priceBasis, storeInfo as storeInfoShort } from './stores';
 export { storeInfo, storeLabel, priceBasis, rankUrl, states, stateSlug, allStoreIds, DEFAULT_STORE } from './stores';
 /** The store used where a page shows a single price (recipe cards, lists). */
 export const STORE = DEFAULT_STORE;
@@ -26,9 +26,20 @@ export function allRecipes(): Recipe[] {
   return recipes;
 }
 
-export function storeStats(r: Recipe, store = STORE) {
-  return (r.stores as Record<string, { cost_per_serving: number; protein_g_per_dollar: number | null; prices_checked: string | null; breakdown?: any[] }>)[store];
+type StoreStats = { cost_per_serving: number; protein_g_per_dollar: number | null; prices_checked: string | null; breakdown?: any[] };
+/** The store a recipe is shown at by default: the one where it gives the most protein per $1
+ *  (only stores that sell every ingredient). Same rule as the homepage leaderboard. */
+export function homeStore(r: Recipe): string | undefined {
+  const st = r.stores as Record<string, StoreStats>;
+  return Object.keys(st).sort((a, b) => (st[b].protein_g_per_dollar ?? 0) - (st[a].protein_g_per_dollar ?? 0))[0];
 }
+/** Numbers for a recipe at one store. Without a store: at its home store (see homeStore). */
+export function storeStats(r: Recipe, store?: string): StoreStats | undefined {
+  const id = store ?? homeStore(r);
+  return id ? (r.stores as Record<string, StoreStats>)[id] : undefined;
+}
+/** "Aldi, Houston" */
+export const storeShort = (id: string) => `${storeInfoShort(id).store}, ${storeInfoShort(id).city}`;
 
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
