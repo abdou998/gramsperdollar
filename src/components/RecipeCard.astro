@@ -35,7 +35,7 @@ const schema = {
   ...(r.cuisine ? { recipeCuisine: r.cuisine } : {}),
   author: r.author ? { '@type': 'Person', name: r.author } : SITE_AUTHOR,
   ...(r.meal ? { recipeCategory: r.meal } : {}),
-  ...((r.tags as string[] | undefined)?.length ? { keywords: ['high protein', 'meal prep', ...(r.tags as string[])].join(', ') } : {}),
+  keywords: ['high protein', 'meal prep', ...(r.meal ? [r.meal] : []), ...((r.tags as string[] | undefined) ?? [])].join(', '),
   nutrition: {
     '@type': 'NutritionInformation',
     servingSize: '1 serving',
