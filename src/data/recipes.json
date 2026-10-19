@@ -1819,6 +1819,166 @@
       "kcal_per_serving": 609
     },
     "stores": {
+      "aldi-tx": {
+        "cost_per_serving": 2.63,
+        "protein_g_per_dollar": 16.1,
+        "prices_checked": "2026-10",
+        "breakdown": [
+          {
+            "label": "chicken breast",
+            "item": "chicken breast",
+            "cost": 0.48,
+            "share": 0.184,
+            "protein": 22.5,
+            "product": "Boneless Skinless Chicken Breasts Family Pack, about 5 lb (sold by weight; regular price $2.19/lb)",
+            "url": "https://www.aldi.us/store/aldi/s?k=boneless%20skinless%20chicken%20breast"
+          },
+          {
+            "label": "feta cheese, crumbled",
+            "item": "feta cheese",
+            "cost": 0.33,
+            "share": 0.124,
+            "protein": 2.8,
+            "product": "Emporium Selection Original Feta Cheese Crumbles 4 oz",
+            "url": "https://www.aldi.us/store/aldi/s?k=crumbled%20feta"
+          },
+          {
+            "label": "lettuce, chopped",
+            "item": "romaine lettuce",
+            "cost": 0.3,
+            "share": 0.115,
+            "protein": 0.6,
+            "product": "Romaine Lettuce Hearts 3 count (~510 g)",
+            "url": "https://www.aldi.us/store/aldi/s?k=romaine"
+          },
+          {
+            "label": "cucumbers, sliced",
+            "item": "cucumber",
+            "cost": 0.28,
+            "share": 0.105,
+            "protein": 1.0,
+            "product": "Cucumber each (~300 g)",
+            "url": "https://www.aldi.us/store/aldi/s?k=cucumber"
+          },
+          {
+            "label": "tomato, chopped",
+            "item": "tomato",
+            "cost": 0.26,
+            "share": 0.097,
+            "protein": 0.5,
+            "product": "Tomatoes on the Vine, loose (sold by weight; $1.89/lb)",
+            "url": "https://www.aldi.us/store/aldi/s?k=roma%20tomatoes"
+          },
+          {
+            "label": "avocado, sliced",
+            "item": "avocado",
+            "cost": 0.23,
+            "share": 0.086,
+            "protein": 1.5,
+            "product": "Large Avocados each (~150 g edible; price as listed online)",
+            "url": "https://www.aldi.us/store/aldi/s?k=avocado"
+          },
+          {
+            "label": "quinoa (makes about 1 cup cooked)",
+            "item": "quinoa",
+            "cost": 0.21,
+            "share": 0.082,
+            "protein": 4.2,
+            "product": "Simply Nature Organic Gluten Free Quinoa 16 oz",
+            "url": "https://www.aldi.us/store/aldi/s?k=quinoa"
+          },
+          {
+            "label": "eggs",
+            "item": "egg whole",
+            "cost": 0.14,
+            "share": 0.053,
+            "protein": 6.3,
+            "product": "Goldhen Large Grade A Eggs 12 count (12 x 50 g edible; regular price - was on sale at $1.45)",
+            "url": "https://www.aldi.us/store/aldi/s?k=large%20eggs"
+          },
+          {
+            "label": "fresh spinach",
+            "item": "spinach fresh",
+            "cost": 0.12,
+            "share": 0.048,
+            "protein": 0.4,
+            "product": "Little Salad Bar Spinach 8 oz",
+            "url": "https://www.aldi.us/store/aldi/s?k=baby%20spinach"
+          },
+          {
+            "label": "olive oil",
+            "item": "olive oil",
+            "cost": 0.08,
+            "share": 0.03,
+            "protein": 0.0,
+            "product": "Priano Extra Virgin Olive Oil 16.9 fl oz",
+            "url": "https://www.aldi.us/store/aldi/s?k=extra%20virgin%20olive%20oil"
+          },
+          {
+            "label": "plain yogurt (we price nonfat Greek), for the dressing",
+            "item": "greek yogurt plain nonfat",
+            "cost": 0.07,
+            "share": 0.028,
+            "protein": 2.3,
+            "product": "Friendly Farms Nonfat Plain Greek Yogurt 32 oz",
+            "url": "https://www.aldi.us/store/aldi/s?k=plain%20nonfat%20greek%20yogurt"
+          },
+          {
+            "label": "fresh lemon juice, for the dressing",
+            "item": "lemon juice and zest",
+            "cost": 0.06,
+            "share": 0.023,
+            "protein": 0.0,
+            "product": "Seedless Lemons 1 lb bag (~4 lemons; ~200 g juice + zest)",
+            "url": "https://www.aldi.us/store/aldi/s?k=lemons"
+          },
+          {
+            "label": "honey, for the dressing",
+            "item": "honey",
+            "cost": 0.03,
+            "share": 0.012,
+            "protein": 0.0,
+            "product": "Berryhill Clover Honey Bear 12 oz",
+            "url": "https://www.aldi.us/store/aldi/s?k=clover%20honey%20bear"
+          },
+          {
+            "label": "garlic, minced, for the dressing",
+            "item": "garlic",
+            "cost": 0.02,
+            "share": 0.007,
+            "protein": 0.1,
+            "product": "Garlic 3 count (~120 g)",
+            "url": "https://www.aldi.us/store/aldi/s?k=garlic"
+          },
+          {
+            "label": "black pepper",
+            "item": "black pepper",
+            "cost": 0.02,
+            "share": 0.006,
+            "protein": 0.1,
+            "product": "Stonemill Black Peppercorn Grinder 1.76 oz",
+            "url": "https://www.aldi.us/store/aldi/s?k=ground%20black%20pepper"
+          },
+          {
+            "label": "mustard, for the dressing",
+            "item": "mustard yellow",
+            "cost": 0.0,
+            "share": 0.002,
+            "protein": 0.1,
+            "product": "Burman's Yellow Mustard 20 oz",
+            "url": "https://www.aldi.us/store/aldi/s?k=yellow%20mustard"
+          },
+          {
+            "label": "salt",
+            "item": "kosher salt",
+            "cost": 0.0,
+            "share": 0.0,
+            "protein": 0.0,
+            "product": "Stonemill Iodized Salt 26 oz (swap for kosher salt)",
+            "url": "https://www.aldi.us/store/aldi/s?k=kosher%20salt"
+          }
+        ]
+      },
       "heb-tx": {
         "cost_per_serving": 3.77,
         "protein_g_per_dollar": 11.3,
@@ -1978,9 +2138,329 @@
             "url": "https://www.heb.com/product-detail/x/1917502"
           }
         ]
+      },
+      "walmart-ca": {
+        "cost_per_serving": 3.43,
+        "protein_g_per_dollar": 12.4,
+        "prices_checked": "2026-10",
+        "breakdown": [
+          {
+            "label": "chicken breast",
+            "item": "chicken breast",
+            "cost": 0.66,
+            "share": 0.192,
+            "protein": 22.5,
+            "product": "Great Value All Natural Boneless Skinless Chicken Breasts 5 lb (Frozen)",
+            "url": "https://www.walmart.com/search?q=great+value+boneless+skinless+chicken+breasts"
+          },
+          {
+            "label": "lettuce, chopped",
+            "item": "romaine lettuce",
+            "cost": 0.56,
+            "share": 0.163,
+            "protein": 0.6,
+            "product": "Marketside Hearts of Romaine Salad 10 oz Bag",
+            "url": "https://www.walmart.com/ip/34017487"
+          },
+          {
+            "label": "feta cheese, crumbled",
+            "item": "feta cheese",
+            "cost": 0.41,
+            "share": 0.12,
+            "protein": 2.8,
+            "product": "Athenos Crumbled Traditional Feta Cheese 12 oz (no Great Value feta)",
+            "url": "https://www.walmart.com/ip/10308726"
+          },
+          {
+            "label": "cucumbers, sliced",
+            "item": "cucumber",
+            "cost": 0.38,
+            "share": 0.111,
+            "protein": 1.0,
+            "product": "Fresh Cucumber each (~300 g)",
+            "url": "https://www.walmart.com/ip/44390954"
+          },
+          {
+            "label": "avocado, sliced",
+            "item": "avocado",
+            "cost": 0.36,
+            "share": 0.107,
+            "protein": 1.5,
+            "product": "Fresh Hass Avocado each (~150 g edible; regular price - was on sale at $0.65)",
+            "url": "https://www.walmart.com/ip/44390949"
+          },
+          {
+            "label": "quinoa (makes about 1 cup cooked)",
+            "item": "quinoa",
+            "cost": 0.24,
+            "share": 0.07,
+            "protein": 4.2,
+            "product": "Great Value Organic White Quinoa 16 oz",
+            "url": "https://www.walmart.com/ip/51258803"
+          },
+          {
+            "label": "fresh spinach",
+            "item": "spinach fresh",
+            "cost": 0.19,
+            "share": 0.056,
+            "protein": 0.4,
+            "product": "Marketside Fresh Baby Spinach 6 oz Bag",
+            "url": "https://www.walmart.com/ip/34017490"
+          },
+          {
+            "label": "tomato, chopped",
+            "item": "tomato",
+            "cost": 0.15,
+            "share": 0.045,
+            "protein": 0.5,
+            "product": "Fresh Roma Tomatoes 2 lb Bag",
+            "url": "https://www.walmart.com/ip/44391236"
+          },
+          {
+            "label": "eggs",
+            "item": "egg whole",
+            "cost": 0.14,
+            "share": 0.041,
+            "protein": 6.3,
+            "product": "Great Value Cage-Free Large White Eggs 12 count (12 x 50 g edible)",
+            "url": "https://www.walmart.com/search?q=great+value+large+white+eggs"
+          },
+          {
+            "label": "olive oil",
+            "item": "olive oil",
+            "cost": 0.09,
+            "share": 0.026,
+            "protein": 0.0,
+            "product": "Great Value Extra Virgin Olive Oil 17 fl oz (~457 g)",
+            "url": "https://www.walmart.com/search?q=great+value+extra+virgin+olive+oil"
+          },
+          {
+            "label": "plain yogurt (we price nonfat Greek), for the dressing",
+            "item": "greek yogurt plain nonfat",
+            "cost": 0.08,
+            "share": 0.024,
+            "protein": 2.3,
+            "product": "Great Value Greek Plain Nonfat Yogurt 32 oz Tub",
+            "url": "https://www.walmart.com/search?q=great+value+plain+nonfat+greek+yogurt+32+oz"
+          },
+          {
+            "label": "fresh lemon juice, for the dressing",
+            "item": "lemon juice and zest",
+            "cost": 0.07,
+            "share": 0.02,
+            "protein": 0.0,
+            "product": "Fresh Bulk Yellow Lemon each (regular price - on sale at $0.33; ~50 g juice + zest per lemon)",
+            "url": "https://www.walmart.com/search?q=fresh+lemon+each"
+          },
+          {
+            "label": "honey, for the dressing",
+            "item": "honey",
+            "cost": 0.04,
+            "share": 0.011,
+            "protein": 0.0,
+            "product": "Great Value Honey 12 oz Plastic Bear",
+            "url": "https://www.walmart.com/search?q=great+value+honey+12+oz"
+          },
+          {
+            "label": "garlic, minced, for the dressing",
+            "item": "garlic",
+            "cost": 0.02,
+            "share": 0.007,
+            "protein": 0.1,
+            "product": "Garlic Bulb Fresh Whole each (~40 g)",
+            "url": "https://www.walmart.com/search?q=fresh+garlic"
+          },
+          {
+            "label": "black pepper",
+            "item": "black pepper",
+            "cost": 0.02,
+            "share": 0.006,
+            "protein": 0.1,
+            "product": "Great Value Ground Black Pepper 3 oz",
+            "url": "https://www.walmart.com/search?q=great+value+ground+black+pepper"
+          },
+          {
+            "label": "mustard, for the dressing",
+            "item": "mustard yellow",
+            "cost": 0.0,
+            "share": 0.001,
+            "protein": 0.1,
+            "product": "Great Value Yellow Mustard 20 oz Squeeze Bottle",
+            "url": "https://www.walmart.com/ip/43711099"
+          },
+          {
+            "label": "salt",
+            "item": "kosher salt",
+            "cost": 0.0,
+            "share": 0.001,
+            "protein": 0.0,
+            "product": "Great Value Coarse Kosher Salt 48 oz",
+            "url": "https://www.walmart.com/search?q=great+value+kosher+salt"
+          }
+        ]
+      },
+      "walmart-tx": {
+        "cost_per_serving": 3.42,
+        "protein_g_per_dollar": 12.4,
+        "prices_checked": "2026-10",
+        "breakdown": [
+          {
+            "label": "chicken breast",
+            "item": "chicken breast",
+            "cost": 0.66,
+            "share": 0.193,
+            "protein": 22.5,
+            "product": "Great Value All Natural Boneless Skinless Chicken Breasts 5 lb (Frozen)",
+            "url": "https://www.walmart.com/search?q=great+value+boneless+skinless+chicken+breasts"
+          },
+          {
+            "label": "lettuce, chopped",
+            "item": "romaine lettuce",
+            "cost": 0.56,
+            "share": 0.164,
+            "protein": 0.6,
+            "product": "Marketside Hearts of Romaine Salad 10 oz Bag",
+            "url": "https://www.walmart.com/ip/34017487"
+          },
+          {
+            "label": "feta cheese, crumbled",
+            "item": "feta cheese",
+            "cost": 0.4,
+            "share": 0.118,
+            "protein": 2.8,
+            "product": "President Crumbled Feta Cheese 12 oz (no Great Value feta)",
+            "url": "https://www.walmart.com/ip/122250650"
+          },
+          {
+            "label": "cucumbers, sliced",
+            "item": "cucumber",
+            "cost": 0.38,
+            "share": 0.111,
+            "protein": 1.0,
+            "product": "Fresh Cucumber each (~300 g)",
+            "url": "https://www.walmart.com/ip/44390954"
+          },
+          {
+            "label": "avocado, sliced",
+            "item": "avocado",
+            "cost": 0.36,
+            "share": 0.107,
+            "protein": 1.5,
+            "product": "Fresh Hass Avocado each (~150 g edible; regular price - was on sale at $0.65)",
+            "url": "https://www.walmart.com/ip/44390949"
+          },
+          {
+            "label": "quinoa (makes about 1 cup cooked)",
+            "item": "quinoa",
+            "cost": 0.24,
+            "share": 0.07,
+            "protein": 4.2,
+            "product": "Great Value Organic White Quinoa 16 oz",
+            "url": "https://www.walmart.com/ip/51258803"
+          },
+          {
+            "label": "fresh spinach",
+            "item": "spinach fresh",
+            "cost": 0.19,
+            "share": 0.056,
+            "protein": 0.4,
+            "product": "Marketside Fresh Baby Spinach 6 oz Bag",
+            "url": "https://www.walmart.com/ip/34017490"
+          },
+          {
+            "label": "tomato, chopped",
+            "item": "tomato",
+            "cost": 0.15,
+            "share": 0.045,
+            "protein": 0.5,
+            "product": "Fresh Roma Tomatoes 2 lb Bag",
+            "url": "https://www.walmart.com/ip/44391236"
+          },
+          {
+            "label": "eggs",
+            "item": "egg whole",
+            "cost": 0.14,
+            "share": 0.041,
+            "protein": 6.3,
+            "product": "Great Value Large White Eggs 12 count (12 x 50 g edible)",
+            "url": "https://www.walmart.com/search?q=great+value+large+white+eggs"
+          },
+          {
+            "label": "olive oil",
+            "item": "olive oil",
+            "cost": 0.09,
+            "share": 0.026,
+            "protein": 0.0,
+            "product": "Great Value Extra Virgin Olive Oil 17 fl oz (~457 g)",
+            "url": "https://www.walmart.com/search?q=great+value+extra+virgin+olive+oil"
+          },
+          {
+            "label": "plain yogurt (we price nonfat Greek), for the dressing",
+            "item": "greek yogurt plain nonfat",
+            "cost": 0.08,
+            "share": 0.024,
+            "protein": 2.3,
+            "product": "Great Value Greek Plain Nonfat Yogurt 32 oz Tub",
+            "url": "https://www.walmart.com/search?q=great+value+plain+nonfat+greek+yogurt+32+oz"
+          },
+          {
+            "label": "fresh lemon juice, for the dressing",
+            "item": "lemon juice and zest",
+            "cost": 0.07,
+            "share": 0.022,
+            "protein": 0.0,
+            "product": "Fresh Bulk Yellow Lemon each (regular price - was on sale at $0.30; ~50 g juice + zest per lemon)",
+            "url": "https://www.walmart.com/search?q=fresh+lemon+each"
+          },
+          {
+            "label": "honey, for the dressing",
+            "item": "honey",
+            "cost": 0.04,
+            "share": 0.011,
+            "protein": 0.0,
+            "product": "Great Value Honey 12 oz Plastic Bear",
+            "url": "https://www.walmart.com/search?q=great+value+honey+12+oz"
+          },
+          {
+            "label": "garlic, minced, for the dressing",
+            "item": "garlic",
+            "cost": 0.02,
+            "share": 0.005,
+            "protein": 0.1,
+            "product": "Garlic Bulb Fresh Whole each (~40 g)",
+            "url": "https://www.walmart.com/search?q=fresh+garlic"
+          },
+          {
+            "label": "black pepper",
+            "item": "black pepper",
+            "cost": 0.02,
+            "share": 0.006,
+            "protein": 0.1,
+            "product": "Great Value Ground Black Pepper 3 oz",
+            "url": "https://www.walmart.com/search?q=great+value+ground+black+pepper"
+          },
+          {
+            "label": "mustard, for the dressing",
+            "item": "mustard yellow",
+            "cost": 0.0,
+            "share": 0.001,
+            "protein": 0.1,
+            "product": "Great Value Yellow Mustard 20 oz Squeeze Bottle",
+            "url": "https://www.walmart.com/ip/43711099"
+          },
+          {
+            "label": "salt",
+            "item": "kosher salt",
+            "cost": 0.0,
+            "share": 0.001,
+            "protein": 0.0,
+            "product": "Great Value Coarse Kosher Salt 48 oz (sold as 3-pack $8.91; per box)",
+            "url": "https://www.walmart.com/search?q=great+value+kosher+salt"
+          }
+        ]
       }
     },
-    "cheapest_store": "heb-tx",
+    "cheapest_store": "aldi-tx",
     "missing_nutrition": [],
     "unpriced_items": [],
     "ingredients": [
@@ -2122,7 +2602,7 @@
       "Assemble: add the quinoa and vegetables to a bowl. Top with the sliced chicken, eggs, avocado and crumbled feta. Drizzle with the dressing and toss gently, or serve the dressing on the side."
     ],
     "storage": "Keep the salad and the dressing in separate airtight containers in the fridge, and eat the chicken within 3 to 4 days. For the best texture, add the avocado and dressing just before eating.",
-    "tip": "Avocado and feta are the dearest extras here. Leave out the avocado on prep days and the bowl costs a lot less, with almost the same protein.",
+    "tip": "The chicken and eggs bring most of the protein. The salad vegetables, feta and avocado add cost but very little protein, so if you want it cheaper, trim those rather than the chicken: skip the feta or use half an avocado.",
     "image": "quinoa-chicken-salad-sanae.jpg",
     "image_alt": "A bowl of quinoa salad with sliced chicken, boiled egg, avocado, tomato, cucumber and feta",
     "image_credit": "Photo by Sanae."
