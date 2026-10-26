@@ -1,0 +1,75 @@
+# By Sanae (submitted via /write, 19 Oct 2026). Grams as bought. "Greek yogurt" priced as each store's nonfat plain Greek yogurt.
+name = "Overnight Chia Pudding with Berries and Banana"
+cuisine = "American"
+description = "Chia seeds soaked overnight in milk and Greek yogurt, topped with banana, berries, pumpkin seeds and granola. One jar, ten minutes the night before."
+author = "Sanae"
+intro = "An easy make-ahead breakfast for busy mornings: chia seeds bring fibre and healthy fats, while the yogurt and milk add protein. Switch the fruit and toppings for whatever you have at home, or stir in a scoop of protein powder for an extra protein boost."
+servings = 1
+meal = "breakfast"
+tags = ["no-cook", "single-serve"]
+prep_minutes = 10
+image = "overnight-chia-pudding-sanae.jpg"
+image_alt = "A jar of chia pudding topped with sliced banana, blueberries, blackberries, pumpkin seeds and granola"
+image_credit = "Photo by Sanae."
+storage = "Keep covered in the fridge. The pudding base keeps up to 3 days, so you can make three jars at once. Add the banana and granola just before eating so they stay fresh and crunchy."
+tip = "The berries cost the most here and add almost no protein. Frozen berries work just as well in a pudding and are usually much cheaper per ounce; the yogurt and chia are where the protein comes from."
+steps = [
+  "Mix the base: combine the chia seeds, milk, yogurt and honey (if using) in a bowl or jar. Stir well so no clumps form.",
+  "Chill overnight: cover and refrigerate for at least 6 hours, ideally overnight, until the chia seeds have soaked up the liquid and the pudding has thickened.",
+  "Add the toppings: in the morning, stir the pudding and top with the sliced banana, blueberries, blackberries, pumpkin seeds and granola. Add a splash of milk if you like it thinner.",
+]
+
+[[ingredients]]
+item = "chia seeds"
+grams = 24
+amount = "2 tbsp"
+label = "chia seeds"
+
+[[ingredients]]
+item = "milk whole"
+grams = 124
+amount = "½ cup (120 ml)"
+label = "milk"
+
+[[ingredients]]
+item = "greek yogurt plain nonfat"
+grams = 120
+amount = "120 g"
+label = "plain Greek yogurt"
+
+[[ingredients]]
+item = "honey"
+grams = 7
+amount = "1 tsp"
+label = "honey (optional)"
+optional = true
+
+[[ingredients]]
+item = "banana"
+grams = 118
+amount = "1"
+label = "banana, sliced"
+
+[[ingredients]]
+item = "blueberries"
+grams = 40
+amount = "a small handful (40 g)"
+label = "blueberries"
+
+[[ingredients]]
+item = "blackberries"
+grams = 40
+amount = "a small handful (40 g)"
+label = "blackberries"
+
+[[ingredients]]
+item = "pumpkin seeds"
+grams = 9
+amount = "1 tbsp"
+label = "pumpkin seeds"
+
+[[ingredients]]
+item = "granola"
+grams = 7
+amount = "1 tbsp"
+label = "granola"
