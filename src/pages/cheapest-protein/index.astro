@@ -3,7 +3,7 @@
 // comparison of protein per dollar. Stores in different states are never compared with each other.
 import Base from '../../layouts/Base.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
-import { states, storeInfo, storeRank, rankUrl, leanness, monthLabel, compareTally } from '../../lib/data';
+import { states, storeInfo, storeRank, rankUrl, leanness, monthLabel, compareTally, statePages } from '../../lib/data';
 import StoreCompare from '../../components/StoreCompare.astro';
 
 const list = states()
@@ -39,7 +39,7 @@ const fallback = [...list].sort((a, b) => b.ids.length - a.ids.length)[0]?.slug 
   {list.map((st) => {
     return (
       <section class="state" id={st.slug} data-state={st.slug} aria-labelledby={`h-${st.slug}`}>
-        <h2 id={`h-${st.slug}`}>{st.state}</h2>
+        <h2 id={`h-${st.slug}`}>{statePages().some((x) => x.slug === st.slug) ? <a href={`/cheapest-protein/${st.slug}`}>{st.state}</a> : st.state}</h2>
         <ul class="stores">
           {st.ids.map((id) => {
             const info = storeInfo(id);
@@ -65,6 +65,7 @@ const fallback = [...list].sort((a, b) => b.ids.length - a.ids.length)[0]?.slug 
           <div class="cmp">
             <h3>{st.ids.map((id) => storeInfo(id).store).join(' vs ')}: protein per $1</h3>
             <StoreCompare ids={st.ids} />
+            {statePages().some((x) => x.slug === st.slug) && <p><a href={`/cheapest-protein/${st.slug}`}>The cheapest grocery store in {st.state} for protein: full comparison</a></p>}
             {st.market === 'TX' && <p><a href="/aldi-vs-heb-vs-walmart-houston">Aldi vs H-E-B vs Walmart in Houston: which store to use, and what a week of meals costs at each</a></p>}
           </div>
         )}

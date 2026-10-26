@@ -27,7 +27,7 @@ const nav = [
   { href: '/recipes', label: 'Recipes', on: cleanPath.startsWith('/recipes') },
   { href: '/cheapest-protein', label: 'Cheapest protein', on: cleanPath.startsWith('/cheapest-protein') },
   { href: '/planner', label: 'Meal planner', on: cleanPath === '/planner' },
-  { href: '/guides', label: 'Guides', on: cleanPath === '/guides' || type === 'article' && !cleanPath.startsWith('/recipes') },
+  { href: '/guides', label: 'Guides', on: cleanPath === '/guides' || (type === 'article' && !/^\/(recipes|cheapest-protein)/.test(cleanPath)) },
 ];
 const path = cleanPath;
 ---

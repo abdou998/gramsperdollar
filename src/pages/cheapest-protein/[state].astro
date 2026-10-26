@@ -1,0 +1,95 @@
+---
+// One page per state with 2+ priced stores: which store gives the most protein per dollar there.
+// Targets searches like "cheapest grocery store in texas" (seen rising in Google Trends, Oct 2026).
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import StoreCompare from '../../components/StoreCompare.astro';
+import RecipeStoreCosts from '../../components/RecipeStoreCosts.astro';
+import { statePages, storeInfo, storeRank, rankUrl, compareTally, leanness, monthLabel, usd } from '../../lib/data';
+import { publishedPosts } from '../../lib/posts';
+
+export function getStaticPaths() {
+  return statePages().map((st) => ({ params: { state: st.slug }, props: { st } }));
+}
+const { st } = Astro.props as { st: ReturnType<typeof statePages>[number] };
+const ids = st.ids;
+const { rows, wins, ties } = compareTally(ids);
+const name = (id: string) => storeInfo(id).store;
+const cities = [...new Set(ids.map((id) => storeInfo(id).city))];
+const checked = ids.flatMap((id) => storeRank(id).map((r) => r.checked)).sort().at(-1);
+const month = monthLabel(checked);
+const leader = wins[0];
+const names = ids.map(name);
+const list = names.length > 2 ? `${names.slice(0, -1).join(', ')} and ${names.at(-1)}` : names.join(' and ');
+const title = `Cheapest Grocery Store in ${st.state} for Protein (${month.slice(0, 3)} ${month.split(' ')[1]})`;
+const description = `${list} compared in ${cities.join(', ')}: ${name(leader.id)} gives the most protein per dollar on ${leader.n} of ${rows.length} foods. Real shelf prices, ${month}.`;
+const posts = (await publishedPosts()).filter((p) => ids.some((id) => p.data.title.includes(name(id))) && p.data.title.includes(cities[0]));
+const ld = { '@context': 'https://schema.org', '@type': 'Article', headline: title, description, dateModified: `${checked}-01`,
+  author: { '@type': 'Organization', name: 'Grams per Dollar', url: 'https://gramsperdollar.com/about' } };
+---
+<Base title={title} description={description.slice(0, 158)} type="article" jsonLd={[ld]}>
+  <Breadcrumbs trail={[{ name: 'Home', url: '/' }, { name: 'Cheapest protein', url: '/cheapest-protein' }, { name: st.state, url: `/cheapest-protein/${st.slug}` }]} />
+  <header class="head">
+    <h1>The cheapest grocery store in {st.state} for protein</h1>
+    <p class="lede">
+      We priced the same everyday protein foods at {list} in {cities.join(', ')} and worked out how many grams of
+      protein each dollar buys. <strong>{name(leader.id)} wins on {leader.n} of {rows.length} foods</strong>
+      {wins.slice(1).map((w) => <>, {name(w.id)} on {w.n}</>)}{ties > 0 && <>, with {ties} {ties === 1 ? 'tie' : 'ties'}</>}.
+      Prices checked {month}.
+    </p>
+  </header>
+
+  <section aria-labelledby="by-store">
+    <h2 id="by-store">Store by store</h2>
+    <ul class="stores">
+      {ids.map((id) => {
+        const r = storeRank(id);
+        const lean = r.find((x) => leanness(x.protein_share).key === 'lean');
+        return (
+          <li class="panel">
+            <h3><a href={rankUrl(id)}>{name(id)}</a></h3>
+            <p class="small muted">{storeInfo(id).location}</p>
+            <p>Best value: <strong>{r[0].name.toLowerCase()}</strong>, {r[0].protein_per_dollar.toFixed(1)} g protein per $1.
+              {lean && <> Cheapest lean protein: <strong>{lean.name.toLowerCase()}</strong>, 30 g of protein for {usd(lean.cost_per_30g!)}.</>}</p>
+            <p><a href={rankUrl(id)}>All {r.length} foods at {name(id)}, ranked</a></p>
+          </li>
+        );
+      })}
+    </ul>
+  </section>
+
+  <section aria-labelledby="compare">
+    <h2 id="compare">Protein per dollar, food by food</h2>
+    <StoreCompare ids={ids} verdict={false} />
+  </section>
+
+  <section aria-labelledby="recipes">
+    <h2 id="recipes">What our recipes cost at each store</h2>
+    <RecipeStoreCosts ids={ids} />
+  </section>
+
+  {posts.length > 0 && (
+    <section aria-labelledby="more">
+      <h2 id="more">The full comparison</h2>
+      <ul>{posts.map((p) => <li><a href={`/${p.id}`}>{p.data.title}</a></li>)}</ul>
+    </section>
+  )}
+
+  <section aria-labelledby="how">
+    <h2 id="how">How we check prices</h2>
+    <p class="prose">One real store per chain, regular shelf prices (not sales), each store's own everyday brand, whole packs.
+      Prices in other {st.state} cities will differ a little, but which store is cheaper usually holds.
+      <a href="/about">More on our method</a>.</p>
+  </section>
+</Base>
+
+<style>
+  .head { max-width: 46rem; }
+  .head h1 { letter-spacing: -0.03em; }
+  .lede { font-size: var(--step-1); line-height: 1.5; max-width: var(--measure); }
+  section { margin-top: 2.5rem; }
+  section h2 { font-size: var(--step-2); }
+  .stores { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; }
+  .stores li { margin: 0; }
+  .stores h3 { margin: 0 0 0.2rem; }
+</style>

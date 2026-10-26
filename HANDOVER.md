@@ -240,3 +240,16 @@ Everything is plain files, so nothing is locked in.
   differ from /recipes). Any other category that lists every recipe keeps its page but points its canonical at /recipes
   and isn't linked. New page: `/recipes/store/heb-texas`.
 - 301s added for the old unpriced yogurt-bowl URL, `/cheapest-protein/texas|california` and `/cheapest-protein/texas/h-e-b`.
+
+## Update 26 Oct 2026 (afternoon): SEO pass, ratings, state pages
+- Recipe pages: Google title "<seo_name>: 50 g Protein for $1.55" (`recipeTitle()`; `seo_name` in each TOML), schema images in
+  16:9 / 4:3 / 1:1, `datePublished` (mealmath stamps `published` into a new TOML the first time it runs: /write submission
+  date, else today), h2 sections, hero photo loads first, photo alt text everywhere.
+- Category pages: intro + description written from the data. 404 page (wrangler `not_found_handling`). Sitemap lastmod.
+  PNG icons + web manifest.
+- **Star ratings:** widget on recipe pages, `/api/rating` + `/api/rate` in the Worker, one vote per visitor. The Worker adds
+  `aggregateRating` to the Recipe JSON-LD only when real votes exist. Switched off until a KV namespace is bound as `RATINGS`
+  in wrangler.jsonc (owner creates it; id is not secret).
+- **State pages** `/cheapest-protein/<state>` for states with 2+ ranked stores (Texas now). Trends (Oct 2026): "what is the
+  cheapest grocery store in texas" rising; in Texas "heb high protein" > "cheapest grocery store". Nationally "cheapest protein"
+  and "high protein meal prep" dwarf state queries; "walmart high protein" and "costco high protein" are the big chain terms.

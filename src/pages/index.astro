@@ -3,7 +3,7 @@ import { publishedPosts } from '../lib/posts';
 import Base from '../layouts/Base.astro';
 import Leaderboard from '../components/Leaderboard.astro';
 import RecipeList from '../components/RecipeList.astro';
-import { formatDate, leanness, usd, storeInfo, rankUrl, storeViews, bestFoods, states, storeRank, monthLabel } from '../lib/data';
+import { formatDate, leanness, usd, storeInfo, rankUrl, storeViews, bestFoods, states, storeRank, monthLabel, stateUrl } from '../lib/data';
 import { unpricedRecipes } from '../lib/unpriced';
 
 const views = storeViews().map((v) => {
@@ -111,7 +111,7 @@ const jsonLd = [
     <ul class="states">
       {stateCards.map((st) => (
         <li class="panel">
-          <a class="state-name" href={`/cheapest-protein#${st.slug}`}>{st.state}</a>
+          <a class="state-name" href={stateUrl(st.slug)}>{st.state}</a>
           <p class="small">{st.ids.map((id) => storeInfo(id).store).join(', ')} in {[...new Set(st.ids.map((id) => storeInfo(id).city))].join(', ')}</p>
         </li>
       ))}

@@ -4,7 +4,7 @@
 import Base from '../../../layouts/Base.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import RecipeList from '../../../components/RecipeList.astro';
-import { rankStores, storeRank, leanness, usd, num, monthLabel, allRecipes, storeStats, storeInfo, rankUrl, stateSlug, states } from '../../../lib/data';
+import { rankStores, storeRank, leanness, usd, num, monthLabel, allRecipes, storeStats, storeInfo, rankUrl, stateSlug, states, stateUrl } from '../../../lib/data';
 import { storeSlug } from '../../../lib/stores';
 
 
@@ -43,7 +43,7 @@ const article = {
 };
 ---
 <Base title={title} description={description.slice(0, 158)} type="article" jsonLd={[article]}>
-  <Breadcrumbs trail={[{ name: 'Cheapest protein', url: '/cheapest-protein' }, { name: info.state, url: `/cheapest-protein#${stateSlug(id)}` }, { name: store, url }]} />
+  <Breadcrumbs trail={[{ name: 'Home', url: '/' }, { name: 'Cheapest protein', url: '/cheapest-protein' }, { name: info.state, url: stateUrl(stateSlug(id)) }, { name: store, url }]} />
 
   <header class="head">
     <h1>The cheapest protein at {store} in {info.state}</h1>
@@ -52,7 +52,7 @@ const article = {
       Prices from {info.location}, checked {month}.
     </p>
     {siblings.length > 0 && (
-      <p class="small">Also in {info.state}: {siblings.map((x, i) => <>{i > 0 && ', '}<a href={rankUrl(x)}>{storeInfo(x).store}</a></>)} · <a href={`/cheapest-protein#${stateSlug(id)}`}>compare stores</a></p>
+      <p class="small">Also in {info.state}: {siblings.map((x, i) => <>{i > 0 && ', '}<a href={rankUrl(x)}>{storeInfo(x).store}</a></>)} · <a href={stateUrl(stateSlug(id))}>compare stores in {info.state}</a></p>
     )}
   </header>
 

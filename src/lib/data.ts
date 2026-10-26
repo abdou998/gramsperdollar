@@ -134,3 +134,10 @@ export function recipeTitle(r: Recipe): string {
   const mid = `${name} (${p} g Protein)`;
   return mid.length <= 60 ? mid : name;
 }
+
+/** States with their own page (/cheapest-protein/<state>): 2+ stores with rankings, so there's a real comparison. */
+export function statePages() {
+  return _states().map((s) => ({ ...s, ids: s.ids.filter((id) => storeRank(id).length >= 10) })).filter((s) => s.ids.length >= 2);
+}
+/** Where a state links to: its own page when it has one, else the hub section. */
+export const stateUrl = (slug: string) => statePages().some((s) => s.slug === slug) ? `/cheapest-protein/${slug}` : `/cheapest-protein#${slug}`;
