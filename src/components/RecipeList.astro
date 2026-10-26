@@ -7,15 +7,15 @@ import { getRecipe, storeStats, homeStore, storeShort, usd, num, type Recipe } f
 import { recipeImage } from '../lib/images';
 import { photoFor, type Unpriced } from '../lib/unpriced';
 
-interface Props { slugs?: string[]; recipes?: Recipe[]; unpriced?: Unpriced[]; headingLevel?: 2 | 3 }
-const { slugs, recipes, unpriced = [], headingLevel = 3 } = Astro.props;
+interface Props { slugs?: string[]; recipes?: Recipe[]; unpriced?: Unpriced[]; headingLevel?: 2 | 3; store?: string } // store: show that store's price
+const { slugs, recipes, unpriced = [], headingLevel = 3, store } = Astro.props;
 const list = recipes ?? (slugs ?? []).map(getRecipe);
 const H = `h${headingLevel}`;
 ---
 <ul class="recipe-list">
   {list.map((r) => {
-    const s = storeStats(r);
-    const home = homeStore(r);
+    const home = store ?? homeStore(r);
+    const s = storeStats(r, home);
     const img = recipeImage(r.image);
     const total = (r.prep_minutes ?? 0) + (r.cook_minutes ?? 0);
     return (

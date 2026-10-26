@@ -232,3 +232,11 @@ Everything is plain files, so nothing is locked in.
 - **Quinoa & chicken salad** (Sanae, 18 Oct) priced at H-E-B as `/recipes/quinoa-chicken-salad-honey-mustard`; the old typo URL
   301s to it. New items: quinoa, romaine, spinach, avocado, tomato, cucumber, feta, yellow mustard (nutrition + search terms).
   Still to price at Aldi TX, Walmart TX and Walmart CA (`tools/price_todo.py <id>`).
+
+## Update 26 Oct 2026: 404s from vanishing category pages
+- Cause: category pages were dropped when they listed the same recipes as /recipes. Once the quinoa salad was priced at
+  every store, `/recipes/store/walmart-california` and `/walmart-texas` vanished, so Google got 404s.
+- Fix: a category page now stays once it has 3+ recipes. Store pages list recipes at that store's own prices (so they
+  differ from /recipes). Any other category that lists every recipe keeps its page but points its canonical at /recipes
+  and isn't linked. New page: `/recipes/store/heb-texas`.
+- 301s added for the old unpriced yogurt-bowl URL, `/cheapest-protein/texas|california` and `/cheapest-protein/texas/h-e-b`.

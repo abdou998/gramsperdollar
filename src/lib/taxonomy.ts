@@ -1,15 +1,17 @@
 // Recipe categories ("facets"). Each one is written to match how people actually search,
 // e.g. "30g protein breakfast" or "high protein meals under $2".
 //
-// SEO rule: a category page is only published once it lists MIN_RECIPES or more recipes and
-// isn't identical to the full /recipes list. Thin 1–2 item pages drag the whole site down.
-// Pages appear on their own as new recipes are added.
+// SEO rule: a category page is only published once it lists MIN_RECIPES or more recipes.
+// Thin 1–2 item pages drag the whole site down. Pages appear on their own as recipes are added,
+// and once published they stay (a page that vanishes becomes a 404 in Search Console).
+// A page that lists exactly the same recipes as /recipes points its canonical at /recipes,
+// except store pages, which show that store's own prices and so are different pages.
 import { allRecipes, storeStats, type Recipe } from './data';
 import { storeInfo, slugify, storeSlug } from './stores';
 
 export const MIN_RECIPES = 3;
 
-type Value = { value: string; label: string; title: string; description: string };
+type Value = { value: string; label: string; title: string; description: string; store?: string };
 type Facet = {
   key: string;          // URL segment: /recipes/{key}/{value}
   name: string;         // shown in filters
@@ -56,7 +58,7 @@ export const FACETS: Facet[] = [
     values: (r) => Object.keys(r.stores).map((id) => {
       const i = storeInfo(id);
       return {
-        value: `${storeSlug(id)}-${slugify(i.state)}`, label: `${i.store} (${i.state})`,
+        value: `${storeSlug(id)}-${slugify(i.state)}`, label: `${i.store} (${i.state})`, store: id,
         title: `${i.store} High-Protein Meal Prep in ${i.state}`,
         description: `High-protein meal prep recipes priced at ${i.store} in ${i.city}, ${i.market}, with cost per serving and protein per dollar.`,
       };
@@ -89,12 +91,16 @@ export function allCategories(): Category[] {
   return [...map.values()];
 }
 
-/** Only categories worth their own page: enough recipes, and not the same list as /recipes. */
+/** Categories with their own page: enough recipes to be useful. */
 export function publishedCategories(): Category[] {
-  const total = allRecipes().length;
-  return allCategories().filter((c) => c.recipes.length >= MIN_RECIPES && c.recipes.length < total);
+  return allCategories().filter((c) => c.recipes.length >= MIN_RECIPES);
+}
+
+/** True when a (non-store) category lists every recipe, so it would duplicate /recipes. */
+export function duplicatesAll(c: Category): boolean {
+  return !c.store && c.recipes.length === allRecipes().length;
 }
 
 export function categoriesFor(r: Recipe): Category[] {
-  return publishedCategories().filter((c) => c.recipes.some((x) => x.slug === r.slug));
+  return publishedCategories().filter((c) => !duplicatesAll(c) && c.recipes.some((x) => x.slug === r.slug));
 }

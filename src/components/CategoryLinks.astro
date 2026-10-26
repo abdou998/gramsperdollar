@@ -1,9 +1,10 @@
 ---
 // Links to published category pages, grouped by facet. Renders nothing until categories exist.
-import { publishedCategories, FACETS, type Category } from '../lib/taxonomy';
+import { publishedCategories, duplicatesAll, FACETS, type Category } from '../lib/taxonomy';
 
 interface Props { categories?: Category[]; heading?: string }
-const { categories = publishedCategories(), heading = 'Browse by' } = Astro.props;
+const { categories: cats = publishedCategories(), heading = 'Browse by' } = Astro.props;
+const categories = cats.filter((c) => !duplicatesAll(c));
 const groups = FACETS.map((f) => ({ name: f.name, items: categories.filter((c) => c.facet === f.key) })).filter((g) => g.items.length);
 ---
 {groups.length > 0 && (

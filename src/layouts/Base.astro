@@ -13,11 +13,12 @@ interface Props {
   jsonLd?: object[];
   noindex?: boolean;    // private pages: keep out of Google
   fullTitle?: boolean;  // true = use `title` as-is (no " | Grams per Dollar")
+  canonical?: string;   // path of the preferred page, when this one duplicates another
 }
-const { title, description, type = 'website', image, jsonLd = [], noindex = false, fullTitle: asIs = false } = Astro.props;
+const { title, description, type = 'website', image, jsonLd = [], noindex = false, fullTitle: asIs = false, canonical: canonicalPath } = Astro.props;
 // One clean address per page: /about (never /about.html), / for the homepage.
 const cleanPath = Astro.url.pathname.replace(/(index)?\.html$/, '').replace(/\/$/, '') || '/';
-const canonical = new URL(cleanPath, Astro.site);
+const canonical = new URL(canonicalPath ?? cleanPath, Astro.site);
 const siteName = 'Grams per Dollar';
 // Google cuts titles around 60 characters: keep the brand suffix only when it fits.
 const fullTitle = asIs || title === siteName || title.length + siteName.length + 3 > 62 ? title : `${title} | ${siteName}`;
