@@ -70,8 +70,8 @@ const schema = {
 
   {r.tips.length > 0 && (<><h2>Tips</h2>{r.tips.map((p) => <p class="tips">{p}</p>)}</>)}
 
-  {/* Recipe schema only with a photo: Google treats a recipe without an image as a critical error. */}
-  {img && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}
+  {/* No Recipe schema until the recipe is priced: without nutrition (and sometimes a photo) Google flags it,
+      and the warnings come back every time a new recipe is submitted. Pricing adds the full schema. */}
 </article>
 
 <style>
