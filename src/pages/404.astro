@@ -1,0 +1,25 @@
+---
+// Shown for any address that doesn't exist (Cloudflare serves it with a real 404 status).
+import Base from '../layouts/Base.astro';
+import Leaderboard from '../components/Leaderboard.astro';
+import { allStoreIds } from '../lib/data';
+---
+<Base title="Page not found" description="This page doesn't exist. Find high-protein recipes priced at real US supermarkets." noindex>
+  <h1>That page isn't here</h1>
+  <p class="lede">The link may be old or mistyped. Here's where most people are heading:</p>
+  <ul class="go">
+    <li><a href="/recipes">All recipes, with protein and cost per serving</a></li>
+    <li><a href="/cheapest-protein">The cheapest protein, store by store</a></li>
+    <li><a href="/planner">Plan your week and get a shopping list</a></li>
+    <li><a href="/guides">Guides and store comparisons</a></li>
+  </ul>
+  <h2>Best-value recipes</h2>
+  <Leaderboard ids={allStoreIds()} limit={3} />
+</Base>
+
+<style>
+  h1 { font-size: var(--step-4); letter-spacing: -0.03em; }
+  .lede { font-size: var(--step-1); max-width: var(--measure); }
+  .go { font-family: var(--display); font-weight: 650; font-size: 1.1rem; margin-bottom: 2.5rem; }
+  h2 { font-size: var(--step-2); }
+</style>

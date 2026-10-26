@@ -6,7 +6,7 @@ import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import RecipeList from '../../../components/RecipeList.astro';
 import CategoryLinks from '../../../components/CategoryLinks.astro';
 import { publishedCategories, duplicatesAll, type Category } from '../../../lib/taxonomy';
-import { storeStats } from '../../../lib/data';
+import { storeStats, homeStore, storeShort, storeInfo, usd } from '../../../lib/data';
 
 export function getStaticPaths() {
   return publishedCategories().map((c) => {
@@ -24,12 +24,22 @@ const itemList = {
   '@type': 'ItemList',
   itemListElement: recipes.map((r, i) => ({ '@type': 'ListItem', position: i + 1, url: new URL(`/recipes/${r.slug}`, Astro.site).href })),
 };
+// Intro written from the data, so it stays true as recipes and prices change.
+const at = (r: (typeof recipes)[number]) => c.store ?? homeStore(r)!;
+const costs = recipes.map((r) => storeStats(r, at(r))!.cost_per_serving);
+const prot = recipes.map((r) => Math.round(r.protein_g_per_serving));
+const best = recipes[0];
+const bestS = storeStats(best, at(best))!;
+const where = c.store ? `at ${storeInfo(c.store).store} in ${storeInfo(c.store).city}` : 'at the cheapest store we price for each one';
+const intro = `${recipes.length} recipes, ${Math.min(...prot)} to ${Math.max(...prot)} g of protein a serving, costing ${usd(Math.min(...costs))} to ${usd(Math.max(...costs))} a serving ${where}. `
+  + `Best value right now: ${best.name.charAt(0).toLowerCase() + best.name.slice(1)}, ${bestS.protein_g_per_dollar} g of protein per $1${c.store ? '' : ` at ${storeShort(at(best))}`}.`;
+const description = `${recipes.length} ${c.description.charAt(0).toLowerCase() + c.description.slice(1).replace(/\.$/, '')}, from ${usd(Math.min(...costs))} a serving.`.slice(0, 158);
 const siblings = publishedCategories().filter((x) => x.facet === c.facet && x.url !== c.url);
 ---
-<Base title={c.title} description={c.description} jsonLd={[itemList]} canonical={duplicatesAll(c) ? '/recipes' : undefined}>
+<Base title={c.title} description={description} jsonLd={[itemList]} canonical={duplicatesAll(c) ? '/recipes' : undefined}>
   <Breadcrumbs trail={[{ name: 'Home', url: '/' }, { name: 'Recipes', url: '/recipes' }, { name: c.title, url: c.url }]} />
   <h1 class="page-title">{c.title}</h1>
-  <p class="lede">{c.description} Best value first.</p>
+  <p class="lede">{c.description} {intro} Listed best value first.</p>
   <RecipeList recipes={recipes} store={c.store} />
   <CategoryLinks categories={siblings} heading={`Other ${c.facetName.toLowerCase()} options`} />
 </Base>

@@ -51,7 +51,7 @@ PANTRY = ROOT / "data" / "pantry.txt"   # staples listed apart from the checkout
 # Tolerance when rounding packs up (120 g of pepper is 1 pepper of ~119 g, not 2).
 PACK_SLACK = 0.02
 
-DISPLAY_FIELDS = ("author", "intro", "meal", "cuisine", "tags", "description", "prep_minutes", "cook_minutes", "steps", "storage", "tip",
+DISPLAY_FIELDS = ("published", "seo_name", "author", "intro", "meal", "cuisine", "tags", "description", "prep_minutes", "cook_minutes", "steps", "storage", "tip",
                   "image", "image_alt", "image_credit")
 
 
@@ -271,6 +271,25 @@ def protein_rank(nutrition: dict, prices: dict) -> dict:
     return {store: sorted(lst, key=lambda x: -x["protein_per_dollar"]) for store, lst in by_store.items()}
 
 
+def stamp_published(path: Path) -> str:
+    """First time a recipe is processed, record its publish date in its own file (so it never changes later).
+    Uses the /write submission date when the recipe came from there, otherwise today."""
+    import datetime, re as _re
+    date = datetime.date.today().isoformat()
+    for sub in (ROOT / "submissions").glob("*/recipe.md"):
+        text = sub.read_text(encoding="utf-8")
+        m_slug = _re.search(r"^slug:\s*(\S+)", text, _re.M)
+        m_date = _re.search(r"^submitted:\s*(\d{4}-\d{2}-\d{2})", text, _re.M)
+        if m_slug and m_date and m_slug.group(1) == path.stem:
+            date = m_date.group(1)
+    lines = path.read_text(encoding="utf-8").splitlines(keepends=True)
+    at = next((i + 1 for i, l in enumerate(lines) if l.startswith("name =")), 0)
+    lines.insert(at, f'published = "{date}"\n')
+    path.write_text("".join(lines), encoding="utf-8")
+    print(f"{path.name}: published = {date} (added)")
+    return date
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--print", action="store_true", help="print a summary")
@@ -289,6 +308,8 @@ def main() -> None:
         with path.open("rb") as f:
             r = tomllib.load(f)
         r["slug"] = path.stem
+        if "published" not in r:
+            r["published"] = stamp_published(path)
         raw[path.stem] = r
         recipes[path.stem] = recipe_numbers(r, nutrition, prices)
 

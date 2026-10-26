@@ -316,6 +316,8 @@
         "optional": true
       }
     ],
+    "published": "2026-10-15",
+    "seo_name": "Greek Yogurt Protein Bowl",
     "author": "Sanae",
     "intro": "A morning protein bowl that's easy on the stomach and fast to make. The Greek yogurt and a scoop of whey put it well over 40 g of protein, and you can swap the toppings to whatever you have.",
     "meal": "breakfast",
@@ -819,6 +821,8 @@
         "optional": false
       }
     ],
+    "published": "2026-10-13",
+    "seo_name": "One-Pot Chicken, Lentils and Rice",
     "meal": "dinner",
     "cuisine": "Mediterranean",
     "tags": [
@@ -1410,6 +1414,8 @@
         "optional": true
       }
     ],
+    "published": "2026-10-13",
+    "seo_name": "Lemon Rosemary Chicken Meal Prep",
     "meal": "lunch",
     "cuisine": "Mediterranean",
     "tags": [
@@ -1829,6 +1835,8 @@
         "optional": false
       }
     ],
+    "published": "2026-10-19",
+    "seo_name": "Protein Overnight Chia Pudding",
     "author": "Sanae",
     "intro": "An easy make-ahead breakfast for busy mornings: chia seeds bring fibre and healthy fats, while the yogurt and milk add protein. Switch the fruit and toppings for whatever you have at home, or stir in a scoop of protein powder for an extra protein boost.",
     "meal": "breakfast",
@@ -1851,7 +1859,7 @@
     "image_credit": "Photo by Sanae."
   },
   {
-    "name": "31g-protein pancake",
+    "name": "High-protein whey pancake",
     "slug": "protein-pancake",
     "servings": 1,
     "protein_g_per_serving": 31.8,
@@ -2203,6 +2211,8 @@
         "optional": true
       }
     ],
+    "published": "2026-10-13",
+    "seo_name": "High-Protein Whey Pancake",
     "meal": "breakfast",
     "cuisine": "American",
     "tags": [
@@ -3001,6 +3011,8 @@
         "optional": false
       }
     ],
+    "published": "2026-10-18",
+    "seo_name": "Quinoa Chicken Salad",
     "author": "Sanae",
     "intro": "My take on making healthy eating simple: chicken, eggs and quinoa for protein, fresh vegetables, and a homemade yogurt dressing. Nothing complicated, and it's flexible, so use whatever salad veg you have in the fridge.",
     "meal": "lunch",
@@ -3463,6 +3475,8 @@
         "optional": true
       }
     ],
+    "published": "2026-10-17",
+    "seo_name": "Garlic Paprika Shrimp and Rice",
     "author": "Sanae",
     "intro": "A simple, protein-rich meal that's both nourishing and flavourful: savoury garlic, tender shrimp, fluffy rice.",
     "meal": "lunch",

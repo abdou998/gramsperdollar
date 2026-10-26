@@ -1,7 +1,7 @@
 ---
 // A full recipe (used on /recipes/[slug]): shelf tag, per-serving numbers, ingredients, method, storage, price basis.
 // Emits schema.org Recipe JSON-LD so Google can understand it.
-import { Image } from 'astro:assets';
+import { Image, getImage } from 'astro:assets';
 import ShelfTag from './ShelfTag.astro';
 import MoneyBreakdown from './MoneyBreakdown.astro';
 import StoreCosts from './StoreCosts.astro';
@@ -14,11 +14,21 @@ const r = getRecipe(slug);
 const s = storeStats(r);
 const home = homeStore(r);
 const H = `h${headingLevel}`;
+const Sub = `h${headingLevel + 1}`; // sections sit one level below the recipe title
+const isPage = headingLevel === 1;
 
 const images = import.meta.glob<{ default: ImageMetadata }>('../assets/images/*.{jpg,jpeg,png,webp}', { eager: true });
 const img = r.image ? images[`../assets/images/${r.image}`]?.default : undefined;
 
 const total = (r.prep_minutes ?? 0) + (r.cook_minutes ?? 0);
+// Google asks for the dish photo in 16:9, 4:3 and 1:1 (each at least 50,000 pixels). Cropped from the one photo, centred.
+const schemaImages = img
+  ? await Promise.all([[1200, 675], [1200, 900], [1200, 1200]].map(async ([w, h]) => {
+      const width = Math.floor(Math.min(w, img.width, img.height * w / h)); // never upscale
+      const out = await getImage({ src: img, width, height: Math.round(width * h / w), fit: 'cover', format: 'jpg' });
+      return new URL(out.src, Astro.site).href;
+    }))
+  : [];
 const hasOptional = r.ingredients.some((i) => i.optional);
 
 const schema = {
@@ -42,7 +52,8 @@ const schema = {
     calories: `${r.kcal_per_serving} calories`,
     proteinContent: `${r.protein_g_per_serving} g`,
   },
-  ...(img ? { image: new URL(img.src, Astro.site).href } : {}),
+  ...(schemaImages.length ? { image: schemaImages } : {}),
+  ...(r.published ? { datePublished: r.published } : {}),
 };
 ---
 <section class:list={["recipe", { page: headingLevel === 1 }]} id={slug} aria-labelledby={`${slug}-title`}>
@@ -72,7 +83,7 @@ const schema = {
 
   {img && (
     <figure class="photo">
-      <Image src={img} alt={r.image_alt ?? ''} widths={[480, 800, 1120]} sizes="(min-width: 56rem) 56rem, 100vw" />
+      <Image src={img} alt={r.image_alt ?? r.name} widths={[480, 800, 1120]} sizes="(min-width: 56rem) 56rem, 100vw" loading={isPage ? 'eager' : 'lazy'} fetchpriority={isPage ? 'high' : 'auto'} />
       {r.image_credit && <figcaption class="small muted">{r.image_credit}</figcaption>}
     </figure>
   )}
@@ -81,7 +92,7 @@ const schema = {
 
   <div class="cols">
     <div>
-      <h3>Ingredients</h3>
+      <Sub>Ingredients</Sub>
       <ul class="ingredients">
         {r.ingredients.map((i) => (
           <li><span class="amt">{i.amount}</span> {i.label}</li>
@@ -89,18 +100,18 @@ const schema = {
       </ul>
     </div>
     <div>
-      <h3>Method</h3>
+      <Sub>Method</Sub>
       <ol class="steps">
         {(r.steps ?? []).map((step, i) => <li id={`step-${i + 1}`}>{step}</li>)}
       </ol>
     </div>
   </div>
 
-  {r.storage && (<><h3>Storing it</h3><p>{r.storage}</p></>)}
-  {r.tip && (<><h3>Make it cheaper</h3><p>{r.tip}</p></>)}
+  {r.storage && (<><Sub>Storing it</Sub><p>{r.storage}</p></>)}
+  {r.tip && (<><Sub>Make it cheaper</Sub><p>{r.tip}</p></>)}
 
-  <MoneyBreakdown r={r} />
-  <StoreCosts r={r} />
+  <MoneyBreakdown r={r} level={headingLevel + 1} />
+  <StoreCosts r={r} level={headingLevel + 1} />
 
   <script type="application/ld+json" set:html={JSON.stringify(schema)} />
 </section>
@@ -148,7 +159,8 @@ const schema = {
   .photo :global(img) { border-radius: var(--leaf); width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
   .photo figcaption { margin-top: 0.4rem; }
   .cols { display: grid; grid-template-columns: minmax(14rem, 1fr) 2fr; gap: 0 2.5rem; }
-  .cols h3 { margin-top: 0.5rem; }
+  .cols :is(h2, h3) { margin-top: 0.5rem; font-size: var(--step-1); }
+  .recipe > :is(h2, h3) { font-size: var(--step-1); }
   .ingredients { list-style: none; padding: 0; }
   .ingredients li { padding: 0.3rem 0; border-bottom: 1px dotted var(--rule); margin: 0; }
   .amt { font-family: var(--display); font-weight: 650; }

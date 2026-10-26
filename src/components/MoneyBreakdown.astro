@@ -3,8 +3,9 @@
 // The pricing is what makes this site different, so it gets a real table, not a footnote.
 import { homeStore, storeStats, usd, monthLabel, rankStores, rankUrl, priceBasis, storeInfo, STORE, type Recipe } from '../lib/data';
 
-interface Props { r: Recipe; store?: string }
-const { r, store = homeStore(r) ?? STORE } = Astro.props;
+interface Props { r: Recipe; store?: string; level?: number }
+const { r, store = homeStore(r) ?? STORE, level = 3 } = Astro.props;
+const Hx = `h${level}`;
 const info = storeInfo(store);
 const s = storeStats(r, store) as any;
 const rows: any[] = s?.breakdown ?? [];
@@ -18,7 +19,7 @@ const short = (l: string) => { const t = l.split(',')[0].replace(/\s*\(.*?\)/g, 
 ---
 {s && rows.length > 0 && (
   <section class="money" aria-labelledby={`${r.slug}-money`}>
-    <h3 id={`${r.slug}-money`}>Where the money goes</h3>
+    <Hx id={`${r.slug}-money`}>Where the money goes</Hx>
     <p class="sum">
       {usd(s.cost_per_serving)} a serving at {info.store} ({info.city}, {info.market}).
       {top && <> The {short(top.label).toLowerCase()} is {Math.round(top.share * 100)}% of the cost</>}{proteinTop && proteinTop.item !== top?.item
@@ -54,7 +55,7 @@ const short = (l: string) => { const t = l.split(',')[0].replace(/\s*\(.*?\)/g, 
 
 <style>
   .money { margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid var(--rule); max-width: 40rem; }
-  .money h3 { margin-top: 0; }
+  .money :is(h2, h3) { margin-top: 0; font-size: var(--step-1); }
   .sum { max-width: var(--measure); }
   .scroll { overflow-x: auto; }
   .share { width: 32%; }

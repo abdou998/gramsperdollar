@@ -1,6 +1,8 @@
 # Grams are as weighed/bought. `amount` is what readers see.
 # Whey: Dymatize ISO100, protein from the product label (see data/nutrition.csv).
-name = "31g-protein pancake"
+published = "2026-10-13"
+seo_name = "High-Protein Whey Pancake"  # short, search-style name used in the Google title
+name = "High-protein whey pancake"
 description = "One big whey pancake that takes five minutes and keeps you full until lunch."
 servings = 1
 cuisine = "American"

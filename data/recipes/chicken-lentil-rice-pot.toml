@@ -1,4 +1,6 @@
 # Grams raw / as bought.
+published = "2026-10-13"
+seo_name = "One-Pot Chicken, Lentils and Rice"  # short, search-style name used in the Google title
 name = "One-pot spiced chicken, red lentils and rice"
 cuisine = "Mediterranean"
 description = "Chicken, rice and red lentils simmered together with cumin and smoked paprika. Four dinners from one pot."

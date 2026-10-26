@@ -21,7 +21,7 @@ const H = `h${headingLevel}`;
     return (
       <li>
         <a class="thumb" href={`/recipes/${r.slug}`} tabindex="-1" aria-hidden="true">
-          {img ? <Image src={img} alt="" widths={[240, 400]} sizes="9rem" /> : <span class="no-photo"></span>}
+          {img ? <Image src={img} alt={r.image_alt ?? `${r.name}, ${r.protein_g_per_serving} g protein a serving`} widths={[240, 400]} sizes="9rem" /> : <span class="no-photo"></span>}
           <span class="pin"><ShelfTag value={s?.protein_g_per_dollar} size="sm" /></span>
         </a>
         <div class="body">
@@ -43,7 +43,7 @@ const H = `h${headingLevel}`;
     return (
       <li>
         <a class="thumb" href={`/recipes/${u.slug}`} tabindex="-1" aria-hidden="true">
-          {img ? <Image src={img} alt="" widths={[240, 400]} sizes="9rem" /> : <span class="no-photo"></span>}
+          {img ? <Image src={img} alt={`${u.title}, photo by ${u.author.charAt(0).toUpperCase() + u.author.slice(1)}`} widths={[240, 400]} sizes="9rem" /> : <span class="no-photo"></span>}
           <span class="pin"><span class="pending-tag small">Not priced yet</span></span>
         </a>
         <div class="body">

@@ -19,7 +19,7 @@ const checked = all.map((x) => x.s.prices_checked).filter(Boolean).sort()[0];
       <li>
         <a class="card" href={`/recipes/${r.slug}`}>
           <span class="ph">
-            {img ? <Image src={img} alt="" widths={[320, 560]} sizes="(min-width: 40rem) 18rem, 100vw" /> : <span class="no-photo"></span>}
+            {img ? <Image src={img} alt={r.image_alt ?? r.name} widths={[320, 560]} sizes="(min-width: 40rem) 18rem, 100vw" /> : <span class="no-photo"></span>}
             <span class="pin"><ShelfTag value={s.protein_g_per_dollar} size="sm" /></span>
           </span>
           <span class="name">{r.name}</span>

@@ -1,6 +1,8 @@
 # By Sanae (submitted via /write, 15 Oct 2026). Grams raw / as bought.
 # Her amounts are cups and spoons; grams below are standard conversions. "1–2 tbsp" walnuts → middle (1½ tbsp).
 # Whey: Dymatize ISO100 30 g scoop (protein from the label, see data/nutrition.csv).
+published = "2026-10-15"
+seo_name = "Greek Yogurt Protein Bowl"  # short, search-style name used in the Google title
 name = "Honeyed Banana Oat Greek Yogurt Protein Bowl"
 cuisine = "American"
 description = "Greek yogurt whipped with a scoop of whey, topped with banana, oats, walnuts and chia. Five minutes, no cooking."

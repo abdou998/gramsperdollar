@@ -1,5 +1,7 @@
 # By Sanae (submitted via /write, 19 Oct 2026). Grams as bought. "Greek yogurt" priced as each store's nonfat plain Greek yogurt.
+seo_name = "Protein Overnight Chia Pudding"  # short, search-style name used in the Google title
 name = "Overnight Chia Pudding with Berries and Banana"
+published = "2026-10-19"
 cuisine = "American"
 description = "Chia seeds soaked overnight in milk and Greek yogurt, topped with banana, berries, pumpkin seeds and granola. One jar, ten minutes the night before."
 author = "Sanae"

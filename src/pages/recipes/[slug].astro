@@ -4,7 +4,7 @@ import Base from '../../layouts/Base.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import RecipeCard from '../../components/RecipeCard.astro';
 import RecipeList from '../../components/RecipeList.astro';
-import { allRecipes, getRecipe, storeStats, homeStore, storeShort, usd } from '../../lib/data';
+import { allRecipes, getRecipe, storeStats, homeStore, storeShort, usd, recipeTitle } from '../../lib/data';
 import { recipeImage } from '../../lib/images';
 import { photoFor } from '../../lib/unpriced';
 import { categoriesFor } from '../../lib/taxonomy';
@@ -44,7 +44,7 @@ const name = r?.name ?? draft!.title;
 const photo = r ? recipeImage(r.image) : photoFor(draft!);
 const ogImage = photo ? new URL(photo.src, Astro.site).href : undefined;
 ---
-<Base title={name} description={description} type="article" image={ogImage}>
+<Base title={r ? recipeTitle(r) : name} description={description} type="article" image={ogImage}>
   <Breadcrumbs trail={[{ name: 'Home', url: '/' }, { name: 'Recipes', url: '/recipes' }, { name, url: `/recipes/${slug}` }]} />
   {r ? <RecipeCard slug={r.slug} headingLevel={1} /> : <UnpricedRecipe r={draft!} />}
 

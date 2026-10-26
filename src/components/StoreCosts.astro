@@ -2,14 +2,15 @@
 // What this recipe costs at every store we price, grouped by state. Stores missing an ingredient say so.
 import { storeStats, usd, states, storeInfo, type Recipe } from '../lib/data';
 
-interface Props { r: Recipe }
-const { r } = Astro.props;
+interface Props { r: Recipe; level?: number }
+const { r, level = 3 } = Astro.props;
+const Hx = `h${level}`;
 const rows = states().flatMap((st) => st.ids.map((id) => ({ id, st, s: storeStats(r, id) })));
 const priced = rows.filter((x) => x.s);
 ---
 {priced.length > 1 && (
   <section class="costs" aria-labelledby={`${r.slug}-stores`}>
-    <h3 id={`${r.slug}-stores`}>What it costs at each store</h3>
+    <Hx id={`${r.slug}-stores`}>What it costs at each store</Hx>
     <div class="scroll">
       <table>
         <thead><tr><th>Store</th><th class="num">Per serving</th><th class="num">Protein per $1</th></tr></thead>
@@ -31,6 +32,6 @@ const priced = rows.filter((x) => x.s);
 
 <style>
   .costs { margin-top: 2rem; max-width: 40rem; }
-  .costs h3 { margin-top: 0; }
+  .costs :is(h2, h3) { margin-top: 0; font-size: var(--step-1); }
   .scroll { overflow-x: auto; }
 </style>

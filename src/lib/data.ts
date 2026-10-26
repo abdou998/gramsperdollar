@@ -122,3 +122,15 @@ export function compareTally(ids: string[]) {
   const wins = ids.map((id) => ({ id, n: rows.filter((r) => r.winner === id).length })).sort((a, b) => b.n - a.n);
   return { rows, wins, ties: rows.filter((r) => !r.winner).length };
 }
+
+/** The Google title for a recipe page: "<search name>: 50 g Protein for $1.55" (price at its best-value store),
+ *  shortened to "<search name> (50 g Protein)" if that would pass 60 characters. */
+export function recipeTitle(r: Recipe): string {
+  const name = (r as any).seo_name ?? r.name;
+  const p = Math.round(r.protein_g_per_serving);
+  const s = storeStats(r);
+  const full = s ? `${name}: ${p} g Protein for ${usd(s.cost_per_serving)}` : '';
+  if (full && full.length <= 60) return full;
+  const mid = `${name} (${p} g Protein)`;
+  return mid.length <= 60 ? mid : name;
+}

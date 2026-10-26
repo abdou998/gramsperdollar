@@ -74,7 +74,7 @@ const data = {
               const img = r.image ? images[`../assets/images/${r.image}`]?.default : undefined;
               return (
                 <li class="card" data-slug={r.slug}>
-                  {img ? <Image src={img} alt="" widths={[160, 320]} sizes="5rem" class="thumb" /> : <span class="thumb" />}
+                  {img ? <Image src={img} alt={r.image_alt ?? r.name} widths={[160, 320]} sizes="5rem" class="thumb" /> : <span class="thumb" />}
                   <div class="info">
                     <a class="name" href={`/recipes/${r.slug}`}>{r.name}</a>
                     <p class="facts small muted">{Math.round(r.protein_g_per_serving)} g protein · <span class="cost">{s ? usd(s.cost_per_serving) : ''}</span> · makes {r.servings}</p>
