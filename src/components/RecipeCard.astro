@@ -110,13 +110,53 @@ const schema = {
   {r.storage && (<><Sub>Storing it</Sub><p>{r.storage}</p></>)}
   {r.tip && (<><Sub>Make it cheaper</Sub><p>{r.tip}</p></>)}
 
+  {isPage && (
+    <section class="rate" data-rate-slug={r.slug} hidden aria-labelledby={`${r.slug}-rate`}>
+      <Sub id={`${r.slug}-rate`}>Made it? Rate it</Sub>
+      <p class="rate-sum small" aria-live="polite"></p>
+      <div class="stars" role="group" aria-label="Your rating">
+        {[1, 2, 3, 4, 5].map((n) => <button type="button" data-stars={n} aria-label={`${n} star${n > 1 ? 's' : ''}`}>★</button>)}
+      </div>
+      <p class="rate-msg small muted" aria-live="polite"></p>
+    </section>
+  )}
   <MoneyBreakdown r={r} level={headingLevel + 1} />
   <StoreCosts r={r} level={headingLevel + 1} />
 
-  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <script type="application/ld+json" data-recipe-ld set:html={JSON.stringify(schema)} />
 </section>
 
 <script>
+  // Reader ratings: hidden until the ratings service is switched on; one vote per visitor (can be changed).
+  document.querySelectorAll<HTMLElement>('[data-rate-slug]').forEach(async (box) => {
+    const slug = box.dataset.rateSlug!;
+    const sum = box.querySelector('.rate-sum') as HTMLElement;
+    const msg = box.querySelector('.rate-msg') as HTMLElement;
+    const btns = [...box.querySelectorAll<HTMLButtonElement>('[data-stars]')];
+    const mark = (n: number) => btns.forEach((b) => b.classList.toggle('on', Number(b.dataset.stars) <= n));
+    const show = (d: { count: number; average: number | null }) => {
+      sum.textContent = d.count ? `${d.average} out of 5 from ${d.count} rating${d.count > 1 ? 's' : ''}` : 'No ratings yet. Be the first.';
+    };
+    let mine = 0;
+    try { mine = Number(localStorage.getItem(`gpd-rated-${slug}`)) || 0; } catch {}
+    try {
+      const d = await (await fetch(`/api/rating?slug=${slug}`)).json();
+      if (!d.enabled) return;
+      show(d); mark(mine); box.hidden = false;
+      if (mine) msg.textContent = `You rated it ${mine}. Tap again to change.`;
+    } catch { return; }
+    btns.forEach((b) => b.addEventListener('click', async () => {
+      const n = Number(b.dataset.stars); mark(n);
+      try {
+        const r = await fetch('/api/rate', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ slug, stars: n }) });
+        const d = await r.json();
+        if (!r.ok) { msg.textContent = d.error || 'Could not save your rating.'; return; }
+        show(d); msg.textContent = `Thanks! You rated it ${n}.`;
+        try { localStorage.setItem(`gpd-rated-${slug}`, String(n)); } catch {}
+      } catch { msg.textContent = 'Could not save your rating. Try again.'; }
+    }));
+  });
+
   // "Add to my week": adds one batch of this recipe to the planner saved on this device.
   document.querySelectorAll<HTMLButtonElement>('.add-btn').forEach((b) => b.addEventListener('click', () => {
     const status = b.nextElementSibling as HTMLElement;
@@ -168,6 +208,12 @@ const schema = {
   .steps li { padding-left: 0.3rem; margin-bottom: 0.7em; }
   .steps li::marker { font-family: var(--display); font-weight: 800; color: var(--basil); }
   .basis { margin-top: 1.5rem; }
+  .rate { margin-top: 2rem; padding: 1rem 1.25rem; background: var(--surface); border-radius: var(--leaf-sm); max-width: 40rem; }
+  .rate :is(h2, h3) { margin: 0 0 0.25rem; font-size: var(--step-1); }
+  .rate-sum, .rate-msg { margin: 0.25rem 0; }
+  .stars { display: flex; gap: 0.25rem; }
+  .stars button { font-size: 1.9rem; line-height: 1; background: none; border: 0; cursor: pointer; color: var(--rule); padding: 0.1rem; }
+  .stars button.on, .stars button:hover { color: #e0a400; }
   @media (max-width: 44rem) {
     .cols { grid-template-columns: 1fr; }
     .head { grid-template-columns: 1fr; }

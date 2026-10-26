@@ -12,11 +12,13 @@
     "html_handling": "drop-trailing-slash",
     // unknown addresses get dist/404.html with a real 404 status
     "not_found_handling": "404-page",
-    "run_worker_first": ["/api/*"]
+    "run_worker_first": ["/api/*", "/recipes/*"]
   },
   "vars": {
     "GITHUB_REPO": "abdou998/gramsperdollar",
     "GITHUB_BRANCH": "main"
   }
+  // Reader ratings: add the KV namespace id here once it exists, then ratings switch on by themselves:
+  // "kv_namespaces": [{ "binding": "RATINGS", "id": "<id from Cloudflare → Storage & Databases → KV>" }],
   // Secrets (set in the Cloudflare dashboard, never in this file): WRITER_PASSWORD, GITHUB_TOKEN
 }

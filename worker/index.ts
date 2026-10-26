@@ -4,6 +4,10 @@
 // and the recipe + photos land in the GitHub repo under submissions/ as one commit.
 // That push triggers a rebuild, and the recipe goes live as "not priced yet" about a minute later.
 //
+// It also powers reader star ratings on recipe pages (/api/rating, /api/rate) and adds the real
+// average to each recipe's Google data (aggregateRating) once it has votes. Ratings need the RATINGS
+// KV namespace (wrangler.jsonc); without it they simply stay switched off.
+//
 // Secrets (Cloudflare dashboard → Worker → Settings → Variables and Secrets):
 //   WRITER_PASSWORD  the password for /write
 //   GITHUB_TOKEN     fine-grained token, this repo only, "Contents: Read and write"
@@ -15,6 +19,16 @@ interface Env {
   GITHUB_REPO: string;
   GITHUB_BRANCH: string;
   GITHUB_API?: string; // override for local testing only
+  RATINGS?: KVNamespace; // reader ratings: "r:<slug>" -> {sum,count}; "v:<slug>:<visitor>" -> stars
+}
+
+interface KVNamespace {
+  get(key: string): Promise<string | null>;
+  put(key: string, value: string, opts?: { expirationTtl?: number }): Promise<void>;
+}
+declare class HTMLRewriter {
+  on(selector: string, handlers: { element?(el: any): void; text?(t: any): void }): HTMLRewriter;
+  transform(res: Response): Response;
 }
 
 const COOKIE = 'gpd_writer';
@@ -26,12 +40,15 @@ const MEALS = ['breakfast', 'lunch', 'dinner', 'snack'];
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
+    if (/^\/recipes\/[a-z0-9-]+$/.test(url.pathname) && request.method === 'GET') return recipePage(request, env, url.pathname.slice(9));
     if (!url.pathname.startsWith('/api/')) return env.ASSETS.fetch(request);
     try {
       if (url.pathname === '/api/session' && request.method === 'GET') return session(request, env);
       if (url.pathname === '/api/login' && request.method === 'POST') return login(request, env);
       if (url.pathname === '/api/logout' && request.method === 'POST') return logout();
       if (url.pathname === '/api/submit' && request.method === 'POST') return submit(request, env);
+      if (url.pathname === '/api/rating' && request.method === 'GET') return rating(url.searchParams.get('slug') ?? '', env);
+      if (url.pathname === '/api/rate' && request.method === 'POST') return rate(request, env);
       return json({ error: 'Not found.' }, 404);
     } catch (e) {
       console.error(e);
@@ -219,4 +236,63 @@ function json(data: unknown, status = 200, headers: Record<string, string> = {})
     status,
     headers: { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store', ...headers },
   });
+}
+
+
+// ---------- reader ratings ----------
+// One vote per recipe per visitor (visitor = hashed IP, kept a year); voting again replaces the old vote.
+// Nothing is invented: a recipe only gets stars (on the page and in Google's data) once real people have rated it.
+
+const SLUG = /^[a-z0-9-]{3,100}$/;
+type Tally = { sum: number; count: number };
+
+async function tally(env: Env, slug: string): Promise<Tally> {
+  const raw = await env.RATINGS!.get(`r:${slug}`);
+  return raw ? JSON.parse(raw) : { sum: 0, count: 0 };
+}
+const summary = (t: Tally) => ({ count: t.count, average: t.count ? Math.round((t.sum / t.count) * 10) / 10 : null });
+
+async function rating(slug: string, env: Env) {
+  if (!env.RATINGS) return json({ enabled: false });
+  if (!SLUG.test(slug)) return json({ error: 'Unknown recipe.' }, 400);
+  return json({ enabled: true, ...summary(await tally(env, slug)) }, 200, { 'cache-control': 'no-store' });
+}
+
+async function rate(request: Request, env: Env) {
+  if (!env.RATINGS) return json({ error: 'Ratings are not switched on yet.' }, 503);
+  const body = await request.json().catch(() => ({})) as { slug?: string; stars?: number };
+  const slug = String(body.slug ?? ''); const stars = Number(body.stars);
+  if (!SLUG.test(slug) || !Number.isInteger(stars) || stars < 1 || stars > 5) return json({ error: 'Pick 1 to 5 stars.' }, 400);
+  // Only real, published recipe pages can be rated.
+  const page = await env.ASSETS.fetch(new Request(new URL(`/recipes/${slug}`, request.url)));
+  if (page.status !== 200 || !(await page.text()).includes('"@type":"Recipe"')) return json({ error: 'Unknown recipe.' }, 404);
+  const ip = request.headers.get('cf-connecting-ip') ?? 'unknown';
+  const visitor = (await hmac('gpd-rating', ip)).slice(0, 24);
+  const vkey = `v:${slug}:${visitor}`;
+  const prev = Number(await env.RATINGS.get(vkey)) || 0;
+  const t = await tally(env, slug);
+  t.sum += stars - prev; if (!prev) t.count += 1;
+  await env.RATINGS.put(`r:${slug}`, JSON.stringify(t));
+  await env.RATINGS.put(vkey, String(stars), { expirationTtl: 365 * 864e2 });
+  return json({ ok: true, ...summary(t) });
+}
+
+// Recipe pages: served from the static files; when the recipe has real ratings, the average is added to its
+// Recipe JSON-LD (aggregateRating), matching the stars shown on the page.
+async function recipePage(request: Request, env: Env, slug: string): Promise<Response> {
+  const res = await env.ASSETS.fetch(request);
+  if (!env.RATINGS || res.status !== 200) return res;
+  const t = await tally(env, slug);
+  if (!t.count) return res;
+  const agg = { '@type': 'AggregateRating', ratingValue: summary(t).average, ratingCount: t.count, bestRating: 5, worstRating: 1 };
+  let buf = '';
+  return new HTMLRewriter().on('script[data-recipe-ld]', {
+    text(chunk: any) {
+      buf += chunk.text;
+      if (!chunk.lastInTextNode) { chunk.remove(); return; }
+      try { const d = JSON.parse(buf); d.aggregateRating = agg; chunk.replace(JSON.stringify(d)); }
+      catch { chunk.replace(buf); }
+      buf = '';
+    },
+  }).transform(res);
 }
