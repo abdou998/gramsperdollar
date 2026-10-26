@@ -4,3 +4,6 @@
 /cheapest-protein/texas /cheapest-protein#texas 301
 /cheapest-protein/california /cheapest-protein#california 301
 /cheapest-protein/texas/h-e-b /cheapest-protein/texas/heb 301
+/%7BrankUrl('aldi-tx')%7D /cheapest-protein/texas/aldi 301
+/%7BrankUrl('heb-tx')%7D /cheapest-protein/texas/heb 301
+/%7BrankUrl('walmart-tx')%7D /cheapest-protein/texas/walmart 301
