@@ -1,0 +1,37 @@
+# Monthly Kroger price fetch via the official Kroger Public API.
+# Needs repo secrets KROGER_CLIENT_ID and KROGER_CLIENT_SECRET (Settings > Secrets and variables > Actions).
+# Edit data/kroger/run.txt and push to run it now: line 1 = "locations <zip>" or "products <locationId> [...]".
+name: kroger-prices
+on:
+  workflow_dispatch:
+  push:
+    paths: ['data/kroger/run.txt']
+  schedule:
+    - cron: '17 6 1 * *'
+permissions:
+  contents: write
+concurrency: kroger
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: Fetch
+        env:
+          KROGER_CLIENT_ID: ${{ secrets.KROGER_CLIENT_ID }}
+          KROGER_CLIENT_SECRET: ${{ secrets.KROGER_CLIENT_SECRET }}
+        run: |
+          read -r cmd args < data/kroger/run.txt
+          if [ "$cmd" = products ]; then
+            for loc in $args; do python3 tools/kroger_fetch.py products "$loc"; done
+          else
+            python3 tools/kroger_fetch.py "$cmd" $args
+          fi
+      - name: Commit results
+        run: |
+          git config user.name "kroger-prices bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/kroger
+          git diff --cached --quiet || (git commit -m "Kroger API fetch $(date -u +%F)" && git push)
