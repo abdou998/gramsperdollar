@@ -635,6 +635,290 @@
             "url": "https://www.heb.com/product-detail/x/1917502"
           }
         ]
+      },
+      "walmart-ca": {
+        "cost_per_serving": 3.9,
+        "protein_g_per_dollar": 15.5,
+        "prices_checked": "2026-10",
+        "breakdown": [
+          {
+            "label": "chicken breast, cubed",
+            "item": "chicken breast",
+            "cost": 1.32,
+            "share": 0.338,
+            "protein": 45.0,
+            "product": "Great Value All Natural Boneless Skinless Chicken Breasts 5 lb (Frozen)",
+            "url": "https://www.walmart.com/search?q=great+value+boneless+skinless+chicken+breasts"
+          },
+          {
+            "label": "red bell pepper, cut into squares",
+            "item": "red bell pepper",
+            "cost": 0.64,
+            "share": 0.163,
+            "protein": 0.6,
+            "product": "Fresh Red Bell Pepper each (~119 g)",
+            "url": "https://www.walmart.com/search?q=fresh+red+bell+pepper+each"
+          },
+          {
+            "label": "green bell pepper, cut into squares",
+            "item": "green bell pepper",
+            "cost": 0.49,
+            "share": 0.127,
+            "protein": 0.5,
+            "product": "Fresh Bell Peppers 3 count (~357 g; no single green pepper listed: closest swap)",
+            "url": "https://www.walmart.com/ip/47770124"
+          },
+          {
+            "label": "potatoes, cut into wedges or cubes",
+            "item": "potatoes russet",
+            "cost": 0.41,
+            "share": 0.106,
+            "protein": 5.3,
+            "product": "Fresh Whole Russet Potatoes 5 lb Bag (regular price - was on sale at $2.25)",
+            "url": "https://www.walmart.com/ip/10447837"
+          },
+          {
+            "label": "rice",
+            "item": "white rice",
+            "cost": 0.19,
+            "share": 0.048,
+            "protein": 6.6,
+            "product": "Great Value Long Grain Enriched Rice 32 oz",
+            "url": "https://www.walmart.com/search?q=great+value+long+grain+white+rice"
+          },
+          {
+            "label": "olive oil (rice and potatoes)",
+            "item": "olive oil",
+            "cost": 0.18,
+            "share": 0.046,
+            "protein": 0.0,
+            "product": "Great Value Extra Virgin Olive Oil 17 fl oz (~457 g)",
+            "url": "https://www.walmart.com/search?q=great+value+extra+virgin+olive+oil"
+          },
+          {
+            "label": "lemon, juiced",
+            "item": "lemon juice and zest",
+            "cost": 0.17,
+            "share": 0.044,
+            "protein": 0.0,
+            "product": "Fresh Bulk Yellow Lemon each (regular price - on sale at $0.33; ~50 g juice + zest per lemon)",
+            "url": "https://www.walmart.com/search?q=fresh+lemon+each"
+          },
+          {
+            "label": "fresh parsley or coriander, chopped",
+            "item": "parsley fresh",
+            "cost": 0.13,
+            "share": 0.034,
+            "protein": 0.2,
+            "product": "Fresh Italian Parsley Bunch each (~60 g)",
+            "url": "https://www.walmart.com/ip/44391168"
+          },
+          {
+            "label": "onion, finely chopped (marinade and rice)",
+            "item": "onion",
+            "cost": 0.12,
+            "share": 0.03,
+            "protein": 0.7,
+            "product": "Fresh Yellow Onions 3 lb Bag",
+            "url": "https://www.walmart.com/search?q=fresh+yellow+onion+each"
+          },
+          {
+            "label": "garlic, minced (marinade and rice)",
+            "item": "garlic",
+            "cost": 0.1,
+            "share": 0.025,
+            "protein": 0.4,
+            "product": "Garlic Bulb Fresh Whole each (~40 g)",
+            "url": "https://www.walmart.com/search?q=fresh+garlic"
+          },
+          {
+            "label": "paprika (marinade, rice and potatoes)",
+            "item": "paprika",
+            "cost": 0.05,
+            "share": 0.014,
+            "protein": 0.5,
+            "product": "Great Value Paprika 2.5 oz",
+            "url": "https://www.walmart.com/search?q=great+value+paprika"
+          },
+          {
+            "label": "ground cumin",
+            "item": "cumin ground",
+            "cost": 0.04,
+            "share": 0.009,
+            "protein": 0.2,
+            "product": "Great Value Ground Cumin 4.5 oz",
+            "url": "https://www.walmart.com/search?q=great+value+ground+cumin"
+          },
+          {
+            "label": "black pepper",
+            "item": "black pepper",
+            "cost": 0.04,
+            "share": 0.011,
+            "protein": 0.1,
+            "product": "Great Value Ground Black Pepper 3 oz",
+            "url": "https://www.walmart.com/search?q=great+value+ground+black+pepper"
+          },
+          {
+            "label": "mustard",
+            "item": "mustard yellow",
+            "cost": 0.01,
+            "share": 0.003,
+            "protein": 0.3,
+            "product": "Great Value Yellow Mustard 20 oz Squeeze Bottle",
+            "url": "https://www.walmart.com/ip/43711099"
+          },
+          {
+            "label": "salt",
+            "item": "kosher salt",
+            "cost": 0.0,
+            "share": 0.001,
+            "protein": 0.0,
+            "product": "Great Value Coarse Kosher Salt 48 oz",
+            "url": "https://www.walmart.com/search?q=great+value+kosher+salt"
+          }
+        ]
+      },
+      "walmart-tx": {
+        "cost_per_serving": 4.35,
+        "protein_g_per_dollar": 13.9,
+        "prices_checked": "2026-10",
+        "breakdown": [
+          {
+            "label": "chicken breast, cubed",
+            "item": "chicken breast",
+            "cost": 1.32,
+            "share": 0.303,
+            "protein": 45.0,
+            "product": "Great Value All Natural Boneless Skinless Chicken Breasts 5 lb (Frozen)",
+            "url": "https://www.walmart.com/search?q=great+value+boneless+skinless+chicken+breasts"
+          },
+          {
+            "label": "green bell pepper, cut into squares",
+            "item": "green bell pepper",
+            "cost": 0.78,
+            "share": 0.178,
+            "protein": 0.5,
+            "product": "Marketside Organic Green Bell Pepper 2 count 8 oz (no conventional green pepper listed)",
+            "url": "https://www.walmart.com/ip/720640702"
+          },
+          {
+            "label": "red bell pepper, cut into squares",
+            "item": "red bell pepper",
+            "cost": 0.76,
+            "share": 0.175,
+            "protein": 0.6,
+            "product": "Fresh Red Bell Pepper each (regular price - was on sale at $1.42)",
+            "url": "https://www.walmart.com/search?q=fresh+red+bell+pepper+each"
+          },
+          {
+            "label": "potatoes, cut into wedges or cubes",
+            "item": "potatoes russet",
+            "cost": 0.43,
+            "share": 0.099,
+            "protein": 5.3,
+            "product": "Jumbo Russet Potatoes Whole Fresh 8 lb Bag",
+            "url": "https://www.walmart.com/ip/10447838"
+          },
+          {
+            "label": "rice",
+            "item": "white rice",
+            "cost": 0.19,
+            "share": 0.043,
+            "protein": 6.6,
+            "product": "Great Value Long Grain Enriched Rice 32 oz",
+            "url": "https://www.walmart.com/search?q=great+value+long+grain+white+rice"
+          },
+          {
+            "label": "lemon, juiced",
+            "item": "lemon juice and zest",
+            "cost": 0.18,
+            "share": 0.043,
+            "protein": 0.0,
+            "product": "Fresh Bulk Yellow Lemon each (regular price - was on sale at $0.30; ~50 g juice + zest per lemon)",
+            "url": "https://www.walmart.com/search?q=fresh+lemon+each"
+          },
+          {
+            "label": "olive oil (rice and potatoes)",
+            "item": "olive oil",
+            "cost": 0.18,
+            "share": 0.042,
+            "protein": 0.0,
+            "product": "Great Value Extra Virgin Olive Oil 17 fl oz (~457 g)",
+            "url": "https://www.walmart.com/search?q=great+value+extra+virgin+olive+oil"
+          },
+          {
+            "label": "onion, finely chopped (marinade and rice)",
+            "item": "onion",
+            "cost": 0.17,
+            "share": 0.039,
+            "protein": 0.7,
+            "product": "Fresh Yellow Onions 3 lb Bag",
+            "url": "https://www.walmart.com/search?q=fresh+yellow+onion+each"
+          },
+          {
+            "label": "fresh parsley or coriander, chopped",
+            "item": "parsley fresh",
+            "cost": 0.13,
+            "share": 0.031,
+            "protein": 0.2,
+            "product": "Fresh Italian Parsley Bunch each (~60 g)",
+            "url": "https://www.walmart.com/ip/44391168"
+          },
+          {
+            "label": "garlic, minced (marinade and rice)",
+            "item": "garlic",
+            "cost": 0.06,
+            "share": 0.014,
+            "protein": 0.4,
+            "product": "Garlic Bulb Fresh Whole each (~40 g)",
+            "url": "https://www.walmart.com/search?q=fresh+garlic"
+          },
+          {
+            "label": "paprika (marinade, rice and potatoes)",
+            "item": "paprika",
+            "cost": 0.05,
+            "share": 0.012,
+            "protein": 0.5,
+            "product": "Great Value Paprika 2.5 oz",
+            "url": "https://www.walmart.com/search?q=great+value+paprika"
+          },
+          {
+            "label": "ground cumin",
+            "item": "cumin ground",
+            "cost": 0.04,
+            "share": 0.008,
+            "protein": 0.2,
+            "product": "Great Value Ground Cumin 4.5 oz",
+            "url": "https://www.walmart.com/search?q=great+value+ground+cumin"
+          },
+          {
+            "label": "black pepper",
+            "item": "black pepper",
+            "cost": 0.04,
+            "share": 0.01,
+            "protein": 0.1,
+            "product": "Great Value Ground Black Pepper 3 oz",
+            "url": "https://www.walmart.com/search?q=great+value+ground+black+pepper"
+          },
+          {
+            "label": "mustard",
+            "item": "mustard yellow",
+            "cost": 0.01,
+            "share": 0.003,
+            "protein": 0.3,
+            "product": "Great Value Yellow Mustard 20 oz Squeeze Bottle",
+            "url": "https://www.walmart.com/ip/43711099"
+          },
+          {
+            "label": "salt",
+            "item": "kosher salt",
+            "cost": 0.0,
+            "share": 0.001,
+            "protein": 0.0,
+            "product": "Great Value Coarse Kosher Salt 48 oz (sold as 3-pack $8.91; per box)",
+            "url": "https://www.walmart.com/search?q=great+value+kosher+salt"
+          }
+        ]
       }
     },
     "cheapest_store": "aldi-tx",
@@ -1486,6 +1770,200 @@
             "protein": 0.0,
             "product": "H-E-B Coarse Kosher Salt 4.4 lb",
             "url": "https://www.heb.com/product-detail/x/1917502"
+          }
+        ]
+      },
+      "walmart-ca": {
+        "cost_per_serving": 1.75,
+        "protein_g_per_dollar": 23.0,
+        "prices_checked": "2026-10",
+        "breakdown": [
+          {
+            "label": "chicken breast, cooked and diced or shredded",
+            "item": "chicken breast",
+            "cost": 0.89,
+            "share": 0.509,
+            "protein": 30.4,
+            "product": "Great Value All Natural Boneless Skinless Chicken Breasts 5 lb (Frozen)",
+            "url": "https://www.walmart.com/search?q=great+value+boneless+skinless+chicken+breasts"
+          },
+          {
+            "label": "sweet potatoes",
+            "item": "sweet potato",
+            "cost": 0.42,
+            "share": 0.242,
+            "protein": 3.1,
+            "product": "Sweet Potatoes Whole Fresh 3 lb Bag",
+            "url": "https://www.walmart.com/ip/132720824"
+          },
+          {
+            "label": "cheese (we price shredded cheddar)",
+            "item": "cheddar cheese",
+            "cost": 0.2,
+            "share": 0.113,
+            "protein": 5.8,
+            "product": "Great Value Mild Cheddar Finely Shredded Cheese 16 oz",
+            "url": "https://www.walmart.com/ip/22057338"
+          },
+          {
+            "label": "onion, finely chopped",
+            "item": "onion",
+            "cost": 0.07,
+            "share": 0.037,
+            "protein": 0.4,
+            "product": "Fresh Yellow Onions 3 lb Bag",
+            "url": "https://www.walmart.com/search?q=fresh+yellow+onion+each"
+          },
+          {
+            "label": "olive oil",
+            "item": "olive oil",
+            "cost": 0.06,
+            "share": 0.035,
+            "protein": 0.0,
+            "product": "Great Value Extra Virgin Olive Oil 17 fl oz (~457 g)",
+            "url": "https://www.walmart.com/search?q=great+value+extra+virgin+olive+oil"
+          },
+          {
+            "label": "garlic, minced",
+            "item": "garlic",
+            "cost": 0.05,
+            "share": 0.027,
+            "protein": 0.2,
+            "product": "Garlic Bulb Fresh Whole each (~40 g)",
+            "url": "https://www.walmart.com/search?q=fresh+garlic"
+          },
+          {
+            "label": "paprika",
+            "item": "paprika",
+            "cost": 0.02,
+            "share": 0.01,
+            "protein": 0.2,
+            "product": "Great Value Paprika 2.5 oz",
+            "url": "https://www.walmart.com/search?q=great+value+paprika"
+          },
+          {
+            "label": "dried herbs",
+            "item": "italian seasoning",
+            "cost": 0.02,
+            "share": 0.012,
+            "protein": 0.0,
+            "product": "Great Value Italian Seasoning 0.95 oz",
+            "url": "https://www.walmart.com/search?q=great+value+italian+seasoning"
+          },
+          {
+            "label": "black pepper",
+            "item": "black pepper",
+            "cost": 0.02,
+            "share": 0.012,
+            "protein": 0.1,
+            "product": "Great Value Ground Black Pepper 3 oz",
+            "url": "https://www.walmart.com/search?q=great+value+ground+black+pepper"
+          },
+          {
+            "label": "salt",
+            "item": "kosher salt",
+            "cost": 0.0,
+            "share": 0.001,
+            "protein": 0.0,
+            "product": "Great Value Coarse Kosher Salt 48 oz",
+            "url": "https://www.walmart.com/search?q=great+value+kosher+salt"
+          }
+        ]
+      },
+      "walmart-tx": {
+        "cost_per_serving": 1.76,
+        "protein_g_per_dollar": 22.9,
+        "prices_checked": "2026-10",
+        "breakdown": [
+          {
+            "label": "chicken breast, cooked and diced or shredded",
+            "item": "chicken breast",
+            "cost": 0.89,
+            "share": 0.506,
+            "protein": 30.4,
+            "product": "Great Value All Natural Boneless Skinless Chicken Breasts 5 lb (Frozen)",
+            "url": "https://www.walmart.com/search?q=great+value+boneless+skinless+chicken+breasts"
+          },
+          {
+            "label": "sweet potatoes",
+            "item": "sweet potato",
+            "cost": 0.42,
+            "share": 0.241,
+            "protein": 3.1,
+            "product": "Sweet Potatoes Whole Fresh 3 lb Bag",
+            "url": "https://www.walmart.com/ip/132720824"
+          },
+          {
+            "label": "cheese (we price shredded cheddar)",
+            "item": "cheddar cheese",
+            "cost": 0.2,
+            "share": 0.112,
+            "protein": 5.8,
+            "product": "Great Value Mild Cheddar Block Cheese 16 oz (grate it yourself)",
+            "url": "https://www.walmart.com/ip/10452376"
+          },
+          {
+            "label": "onion, finely chopped",
+            "item": "onion",
+            "cost": 0.09,
+            "share": 0.054,
+            "protein": 0.4,
+            "product": "Fresh Yellow Onions 3 lb Bag",
+            "url": "https://www.walmart.com/search?q=fresh+yellow+onion+each"
+          },
+          {
+            "label": "olive oil",
+            "item": "olive oil",
+            "cost": 0.06,
+            "share": 0.034,
+            "protein": 0.0,
+            "product": "Great Value Extra Virgin Olive Oil 17 fl oz (~457 g)",
+            "url": "https://www.walmart.com/search?q=great+value+extra+virgin+olive+oil"
+          },
+          {
+            "label": "garlic, minced",
+            "item": "garlic",
+            "cost": 0.03,
+            "share": 0.018,
+            "protein": 0.2,
+            "product": "Garlic Bulb Fresh Whole each (~40 g)",
+            "url": "https://www.walmart.com/search?q=fresh+garlic"
+          },
+          {
+            "label": "paprika",
+            "item": "paprika",
+            "cost": 0.02,
+            "share": 0.01,
+            "protein": 0.2,
+            "product": "Great Value Paprika 2.5 oz",
+            "url": "https://www.walmart.com/search?q=great+value+paprika"
+          },
+          {
+            "label": "dried herbs",
+            "item": "italian seasoning",
+            "cost": 0.02,
+            "share": 0.011,
+            "protein": 0.0,
+            "product": "Great Value Italian Seasoning 0.95 oz",
+            "url": "https://www.walmart.com/search?q=great+value+italian+seasoning"
+          },
+          {
+            "label": "black pepper",
+            "item": "black pepper",
+            "cost": 0.02,
+            "share": 0.012,
+            "protein": 0.1,
+            "product": "Great Value Ground Black Pepper 3 oz",
+            "url": "https://www.walmart.com/search?q=great+value+ground+black+pepper"
+          },
+          {
+            "label": "salt",
+            "item": "kosher salt",
+            "cost": 0.0,
+            "share": 0.001,
+            "protein": 0.0,
+            "product": "Great Value Coarse Kosher Salt 48 oz (sold as 3-pack $8.91; per box)",
+            "url": "https://www.walmart.com/search?q=great+value+kosher+salt"
           }
         ]
       }
@@ -2762,6 +3240,146 @@
             "protein": 0.3,
             "product": "Fresh Bananas (sold by the bunch; $0.49/lb)",
             "url": "https://www.heb.com/product-detail/x/377497"
+          }
+        ]
+      },
+      "walmart-ca": {
+        "cost_per_serving": 0.68,
+        "protein_g_per_dollar": 18.6,
+        "prices_checked": "2026-10",
+        "breakdown": [
+          {
+            "label": "protein powder",
+            "item": "whey protein isolate",
+            "cost": 0.42,
+            "share": 0.627,
+            "protein": 5.0,
+            "product": "Dymatize ISO100 Hydrolyzed Whey Isolate Gourmet Vanilla 20 servings (20 x 30 g; regular price - was on sale at $40.00)",
+            "url": "https://www.walmart.com/ip/189797385"
+          },
+          {
+            "label": "oat flour",
+            "item": "rolled oats",
+            "cost": 0.07,
+            "share": 0.098,
+            "protein": 2.4,
+            "product": "Great Value 100% Whole Grain Old Fashioned Oats 42 oz",
+            "url": "https://www.walmart.com/search?q=great+value+old+fashioned+oats+42+oz"
+          },
+          {
+            "label": "rolled oats",
+            "item": "rolled oats",
+            "cost": 0.06,
+            "share": 0.087,
+            "protein": 2.1,
+            "product": "Great Value 100% Whole Grain Old Fashioned Oats 42 oz",
+            "url": "https://www.walmart.com/search?q=great+value+old+fashioned+oats+42+oz"
+          },
+          {
+            "label": "dark chocolate chips or chopped dark chocolate",
+            "item": "chocolate chips",
+            "cost": 0.05,
+            "share": 0.074,
+            "protein": 0.2,
+            "product": "Great Value Semi-Sweet Chocolate Baking Chips 12 oz",
+            "url": "https://www.walmart.com/ip/42306176"
+          },
+          {
+            "label": "egg",
+            "item": "egg whole",
+            "cost": 0.03,
+            "share": 0.041,
+            "protein": 1.3,
+            "product": "Great Value Cage-Free Large White Eggs 12 count (12 x 50 g edible)",
+            "url": "https://www.walmart.com/search?q=great+value+large+white+eggs"
+          },
+          {
+            "label": "banana, mashed",
+            "item": "banana",
+            "cost": 0.03,
+            "share": 0.038,
+            "protein": 0.3,
+            "product": "Fresh Banana sold by weight ($0.50/lb)",
+            "url": "https://www.walmart.com/search?q=fresh+bananas"
+          },
+          {
+            "label": "peanut butter",
+            "item": "peanut butter",
+            "cost": 0.02,
+            "share": 0.035,
+            "protein": 1.4,
+            "product": "Great Value Creamy Peanut Butter 40 oz",
+            "url": "https://www.walmart.com/search?q=great+value+creamy+peanut+butter+40+oz"
+          }
+        ]
+      },
+      "walmart-tx": {
+        "cost_per_serving": 0.66,
+        "protein_g_per_dollar": 19.0,
+        "prices_checked": "2026-10",
+        "breakdown": [
+          {
+            "label": "protein powder",
+            "item": "whey protein isolate",
+            "cost": 0.42,
+            "share": 0.64,
+            "protein": 5.0,
+            "product": "Dymatize ISO100 Hydrolyzed Whey Isolate Gourmet Vanilla 20 servings (20 x 30 g; regular price - was on sale at $40.00)",
+            "url": "https://www.walmart.com/ip/189797385"
+          },
+          {
+            "label": "oat flour",
+            "item": "rolled oats",
+            "cost": 0.06,
+            "share": 0.095,
+            "protein": 2.4,
+            "product": "Great Value 100% Whole Grain Old Fashioned Oats 42 oz",
+            "url": "https://www.walmart.com/search?q=great+value+old+fashioned+oats+42+oz"
+          },
+          {
+            "label": "rolled oats",
+            "item": "rolled oats",
+            "cost": 0.06,
+            "share": 0.085,
+            "protein": 2.1,
+            "product": "Great Value 100% Whole Grain Old Fashioned Oats 42 oz",
+            "url": "https://www.walmart.com/search?q=great+value+old+fashioned+oats+42+oz"
+          },
+          {
+            "label": "dark chocolate chips or chopped dark chocolate",
+            "item": "chocolate chips",
+            "cost": 0.04,
+            "share": 0.066,
+            "protein": 0.2,
+            "product": "Great Value Semi-Sweet Chocolate Chips 24 oz Bag",
+            "url": "https://www.walmart.com/ip/252907204"
+          },
+          {
+            "label": "egg",
+            "item": "egg whole",
+            "cost": 0.03,
+            "share": 0.042,
+            "protein": 1.3,
+            "product": "Great Value Large White Eggs 12 count (12 x 50 g edible)",
+            "url": "https://www.walmart.com/search?q=great+value+large+white+eggs"
+          },
+          {
+            "label": "banana, mashed",
+            "item": "banana",
+            "cost": 0.03,
+            "share": 0.039,
+            "protein": 0.3,
+            "product": "Fresh Banana (sold by weight; regular price $0.50/lb - was on sale at $0.40/lb)",
+            "url": "https://www.walmart.com/search?q=fresh+bananas"
+          },
+          {
+            "label": "peanut butter",
+            "item": "peanut butter",
+            "cost": 0.02,
+            "share": 0.034,
+            "protein": 1.4,
+            "product": "Great Value Creamy Peanut Butter 40 oz",
+            "url": "https://www.walmart.com/search?q=great+value+creamy+peanut+butter+40+oz"
           }
         ]
       }
