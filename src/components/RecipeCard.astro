@@ -38,7 +38,7 @@ const schema = {
   description: r.description,
   recipeYield: `${r.servings} serving${r.servings > 1 ? 's' : ''}`,
   ...(r.prep_minutes ? { prepTime: `PT${r.prep_minutes}M` } : {}),
-  ...(r.cook_minutes ? { cookTime: `PT${r.cook_minutes}M` } : {}),
+  ...(r.prep_minutes ? { cookTime: `PT${r.cook_minutes ?? 0}M` } : {}), // no-cook recipes: PT0M, so prep and cook always come as a pair
   ...(total ? { totalTime: `PT${total}M` } : {}),
   recipeIngredient: r.ingredients.map((i) => `${i.amount} ${i.label}`),
   recipeInstructions: howToSteps(r.steps ?? [], new URL(`/recipes/${r.slug}`, Astro.site).href),

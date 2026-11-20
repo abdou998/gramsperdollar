@@ -28,7 +28,7 @@ export const tagNames: Record<string, string> = {
 const tagLabel = (t: string) => tagNames[t] ?? t.replace(/-/g, ' ').replace(/^\w/, (c) => c.toUpperCase());
 
 function proteinBand(g: number): Value {
-  if (g >= 40) return { value: '40g-plus', label: '40 g+', title: 'High-Protein Meals With 40 g+ Protein', description: 'Meal prep recipes with at least 40 grams of protein a serving, each costed by the gram.' };
+  if (g >= 40) return { value: '40g-plus', label: '40 g+', title: '40 g Protein Meals for Meal Prep, Cheapest First', description: 'Meal prep recipes with at least 40 grams of protein a serving, each costed by the gram.' };
   if (g >= 30) return { value: '30g', label: '30–39 g', title: '30 g Protein Meals for Meal Prep', description: 'Recipes with 30 to 39 grams of protein a serving, with cost per serving and protein per dollar.' };
   return { value: '20g', label: '20–29 g', title: '20 g Protein Meals and Snacks', description: 'Recipes with 20 to 29 grams of protein a serving, with cost per serving and protein per dollar.' };
 }

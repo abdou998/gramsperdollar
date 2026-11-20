@@ -36,10 +36,13 @@ const related = allRecipes()
     || (storeStats(b)?.protein_g_per_dollar ?? 0) - (storeStats(a)?.protein_g_per_dollar ?? 0))
   .slice(0, 3);
 
+// Lead with what makes someone click: protein, price, time. Then the dish.
+const total = r ? (r.prep_minutes ?? 0) + ((r as any).cook_minutes ?? 0) : 0;
+const clip = (t: string, n = 155) => (t.length <= n ? t : t.slice(0, n - 1).replace(/\s+\S*$/, '') + '…');
 const description = r
-  ? [r.description, `${Math.round(r.protein_g_per_serving)} g protein`, s && home ? `${usd(s.cost_per_serving)} a serving at ${storeShort(home)}.` : '']
-      .filter(Boolean).join(' ').slice(0, 155)
-  : (draft!.intro[0] ?? `${draft!.title}, a high-protein ${draft!.meal} recipe by ${draft!.author}.`).slice(0, 155);
+  ? clip([`${Math.round(r.protein_g_per_serving)} g protein`, s ? `${usd(s.cost_per_serving)} a serving` : '', total ? `${total} minutes` : '']
+      .filter(Boolean).join(', ') + `. ${r.description}`)
+  : clip(draft!.intro[0] ?? `${draft!.title}, a high-protein ${draft!.meal} recipe by ${draft!.author}.`);
 const name = r?.name ?? draft!.title;
 const photo = r ? recipeImage(r.image) : photoFor(draft!);
 const ogImage = photo ? new URL(photo.src, Astro.site).href : undefined;

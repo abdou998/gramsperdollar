@@ -32,8 +32,8 @@ const groups = [...new Set(rows.map((r) => r.group))];
 const clean = (n: string) => n.replace(/\s*\((?!dry\)|frozen\)|\d+ g drained\))[^)]*\)/gi, '').replace(/\s+/g, ' ').trim();
 const pct = (x: number | null) => (x == null ? '' : `${Math.round(x * 100)}%`);
 const url = rankUrl(id);
-const title = `Cheapest Protein at ${store} in ${info.state} (${month.split(' ')[0].slice(0, 3)} ${month.split(' ')[1]})`;
-const description = `${rows.length} ${store} staples ranked by grams of protein per dollar, priced at ${info.city}, ${info.market} in ${month}. ${top.name} comes first; ${lean[0]?.name.toLowerCase()} is the cheapest lean protein.`;
+const title = `Cheapest Protein at ${store} (${info.market}): ${rows.length} Foods Ranked, ${month.slice(0, 3)} ${month.split(' ')[1]}`;
+const description = `${top.name}: ${top.protein_per_dollar.toFixed(1)} g protein per $1, best of ${rows.length} ${store} staples ranked in ${info.city} (${month.slice(0, 3)} ${month.split(' ')[1]}).${lean[0] ? ` Cheapest lean protein: ${lean[0].name.toLowerCase()}.` : ''}`;
 
 const recipes = allRecipes().filter((r) => storeStats(r, id)).sort((a, b) => (storeStats(b, id)!.protein_g_per_dollar ?? 0) - (storeStats(a, id)!.protein_g_per_dollar ?? 0)).slice(0, 4);
 
