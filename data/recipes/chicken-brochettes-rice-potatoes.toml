@@ -1,0 +1,125 @@
+# By Sanae (submitted via /write, 2 Nov 2026). Her recipe gave no weights for chicken, potatoes or peppers:
+# 400 g chicken, 500 g potatoes and one pepper of each colour are our assumptions for 2 servings (check with Sanae).
+published = "2026-11-02"
+seo_name = "Oven Chicken Skewers with Rice and Potatoes"  # short, search-style name used in the Google title
+name = "Oven-Baked Chicken Brochettes with Seasoned Rice and Crispy Potatoes"
+cuisine = "Mediterranean"
+description = "Mustard-lemon chicken skewers with peppers, garlicky seasoned rice and crispy paprika potatoes, all from the oven. A full plate for two."
+author = "Sanae"
+intro = "A simple, filling, protein-rich plate from everyday ingredients. The chicken is tender and full of flavour from a tangy mustard and lemon marinade, while the seasoned rice and crispy potatoes make it properly satisfying. Next time I'd add more colourful vegetables or a fresh salad on the side."
+servings = 2
+meal = "dinner"
+tags = []
+prep_minutes = 20
+cook_minutes = 40
+image = "chicken-brochettes-rice-potatoes-sanae.jpg"
+image_alt = "Chicken and pepper skewers with seasoned rice and roasted potato wedges on a white plate"
+image_credit = "Photo by Sanae."
+storage = "Keeps up to 3 days in the fridge in an airtight container. Reheat thoroughly, adding a little water to the rice so it stays moist."
+tip = "Chicken breast in a big value pack is the cheapest way to keep this high in protein; boneless thighs work too. Frozen peppers are fine for the skewers, and a boiled egg or a spoon of Greek yogurt on the side adds extra protein for pennies."
+steps = [
+  "Roast the potatoes: heat the oven to 200°C (400°F). Cut the potatoes into even wedges or cubes, toss with olive oil, paprika, salt and pepper, and spread them out on a tray with space between the pieces. Bake 30 to 40 minutes, turning halfway, until golden and crispy.",
+  "Marinate the chicken: cut the chicken into medium cubes. Mix the onion, half the garlic, the parsley, cumin, paprika, salt, pepper, lemon juice, mustard and yogurt (if using), then coat the chicken well. Cover and chill for at least 30 minutes.",
+  "Make the skewers: thread the chicken onto skewers, alternating with squares of red and green pepper.",
+  "Bake the skewers: place them on a lightly oiled tray and bake at 200°C (400°F), turning halfway, until the chicken is cooked through (74°C / 165°F in the thickest pieces).",
+  "Cook the rice: rinse the rice until the water runs clearer, then boil it in salted water until tender and drain well.",
+  "Season the rice: soften the rest of the onion in olive oil, add the rest of the garlic for 30 seconds, season with paprika, salt and pepper, then stir in the rice and cook 2 to 3 minutes so it soaks up the flavour.",
+  "Serve: plate the rice with the skewers and crispy potatoes, and eat warm.",
+]
+
+[[ingredients]]
+item = "chicken breast"
+grams = 400
+amount = "400 g"
+label = "chicken breast, cubed"
+
+[[ingredients]]
+item = "potatoes russet"
+grams = 500
+amount = "500 g"
+label = "potatoes, cut into wedges or cubes"
+
+[[ingredients]]
+item = "white rice"
+grams = 185
+amount = "1 cup"
+label = "rice"
+
+[[ingredients]]
+item = "red bell pepper"
+grams = 119
+amount = "1"
+label = "red bell pepper, cut into squares"
+
+[[ingredients]]
+item = "green bell pepper"
+grams = 119
+amount = "1"
+label = "green bell pepper, cut into squares"
+
+[[ingredients]]
+item = "onion"
+grams = 125
+amount = "1 small + ½"
+label = "onion, finely chopped (marinade and rice)"
+
+[[ingredients]]
+item = "garlic"
+grams = 12
+amount = "4 cloves"
+label = "garlic, minced (marinade and rice)"
+
+[[ingredients]]
+item = "parsley fresh"
+grams = 15
+amount = "a small handful"
+label = "fresh parsley or coriander, chopped"
+
+[[ingredients]]
+item = "lemon juice and zest"
+grams = 25
+amount = "½"
+label = "lemon, juiced"
+
+[[ingredients]]
+item = "mustard yellow"
+grams = 15
+amount = "1 tbsp"
+label = "mustard"
+
+[[ingredients]]
+item = "greek yogurt plain nonfat"
+grams = 30
+amount = "2 tbsp"
+label = "plain yogurt (optional)"
+optional = true
+
+[[ingredients]]
+item = "olive oil"
+grams = 27
+amount = "2 tbsp"
+label = "olive oil (rice and potatoes)"
+
+[[ingredients]]
+item = "cumin ground"
+grams = 2.1
+amount = "1 tsp"
+label = "ground cumin"
+
+[[ingredients]]
+item = "paprika"
+grams = 6.9
+amount = "3 tsp"
+label = "paprika (marinade, rice and potatoes)"
+
+[[ingredients]]
+item = "kosher salt"
+grams = 4
+amount = "to taste"
+label = "salt"
+
+[[ingredients]]
+item = "black pepper"
+grams = 2
+amount = "to taste"
+label = "black pepper"

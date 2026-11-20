@@ -342,6 +342,444 @@
     "image_credit": "Photo by s_azad on Pixabay."
   },
   {
+    "name": "Oven-Baked Chicken Brochettes with Seasoned Rice and Crispy Potatoes",
+    "slug": "chicken-brochettes-rice-potatoes",
+    "servings": 2,
+    "protein_g_per_serving": 60.4,
+    "kcal_per_serving": 985,
+    "with_optional": {
+      "protein_g_per_serving": 62.0,
+      "kcal_per_serving": 994
+    },
+    "stores": {
+      "aldi-tx": {
+        "cost_per_serving": 3.31,
+        "protein_g_per_dollar": 18.3,
+        "prices_checked": "2026-10",
+        "breakdown": [
+          {
+            "label": "chicken breast, cubed",
+            "item": "chicken breast",
+            "cost": 0.97,
+            "share": 0.292,
+            "protein": 45.0,
+            "product": "Boneless Skinless Chicken Breasts Family Pack, about 5 lb (sold by weight; regular price $2.19/lb)",
+            "url": "https://www.aldi.us/store/aldi/s?k=boneless%20skinless%20chicken%20breast"
+          },
+          {
+            "label": "red bell pepper, cut into squares",
+            "item": "red bell pepper",
+            "cost": 0.45,
+            "share": 0.135,
+            "protein": 0.6,
+            "product": "Multi-Colored Peppers 3 count (~357 g)",
+            "url": "https://www.aldi.us/store/aldi/s?k=red%20bell%20pepper"
+          },
+          {
+            "label": "green bell pepper, cut into squares",
+            "item": "green bell pepper",
+            "cost": 0.45,
+            "share": 0.135,
+            "protein": 0.5,
+            "product": "Multi-Colored Peppers 3 count (~357 g; green peppers out of stock: closest swap)",
+            "url": "https://www.aldi.us/store/aldi/s?k=green%20bell%20pepper"
+          },
+          {
+            "label": "potatoes, cut into wedges or cubes",
+            "item": "potatoes russet",
+            "cost": 0.42,
+            "share": 0.126,
+            "protein": 5.3,
+            "product": "Yellow Potatoes 5 lb bag (no russets at this store: closest swap)",
+            "url": "https://www.aldi.us/store/aldi/s?k=russet%20potatoes"
+          },
+          {
+            "label": "rice",
+            "item": "white rice",
+            "cost": 0.16,
+            "share": 0.049,
+            "protein": 6.6,
+            "product": "Earthly Grains Long Grain White Rice 48 oz",
+            "url": "https://www.aldi.us/store/aldi/s?k=long%20grain%20white%20rice"
+          },
+          {
+            "label": "olive oil (rice and potatoes)",
+            "item": "olive oil",
+            "cost": 0.16,
+            "share": 0.047,
+            "protein": 0.0,
+            "product": "Priano Extra Virgin Olive Oil 16.9 fl oz",
+            "url": "https://www.aldi.us/store/aldi/s?k=extra%20virgin%20olive%20oil"
+          },
+          {
+            "label": "onion, finely chopped (marinade and rice)",
+            "item": "onion",
+            "cost": 0.15,
+            "share": 0.046,
+            "protein": 0.7,
+            "product": "White Onions 2 lb bag",
+            "url": "https://www.aldi.us/store/aldi/s?k=yellow%20onions"
+          },
+          {
+            "label": "lemon, juiced",
+            "item": "lemon juice and zest",
+            "cost": 0.15,
+            "share": 0.045,
+            "protein": 0.0,
+            "product": "Seedless Lemons 1 lb bag (~4 lemons; ~200 g juice + zest)",
+            "url": "https://www.aldi.us/store/aldi/s?k=lemons"
+          },
+          {
+            "label": "paprika (marinade, rice and potatoes)",
+            "item": "paprika",
+            "cost": 0.15,
+            "share": 0.046,
+            "protein": 0.5,
+            "product": "Simply Nature Organic Smoked Paprika 1.6 oz (swap for regular paprika)",
+            "url": "https://www.aldi.us/store/aldi/s?k=paprika"
+          },
+          {
+            "label": "fresh parsley or coriander, chopped",
+            "item": "parsley fresh",
+            "cost": 0.12,
+            "share": 0.036,
+            "protein": 0.2,
+            "product": "Parsley bunch each (~60 g)",
+            "url": "https://www.aldi.us/store/aldi/s?k=parsley"
+          },
+          {
+            "label": "garlic, minced (marinade and rice)",
+            "item": "garlic",
+            "cost": 0.07,
+            "share": 0.023,
+            "protein": 0.4,
+            "product": "Garlic 3 count (~120 g)",
+            "url": "https://www.aldi.us/store/aldi/s?k=garlic"
+          },
+          {
+            "label": "black pepper",
+            "item": "black pepper",
+            "cost": 0.03,
+            "share": 0.01,
+            "protein": 0.1,
+            "product": "Stonemill Black Peppercorn Grinder 1.76 oz",
+            "url": "https://www.aldi.us/store/aldi/s?k=ground%20black%20pepper"
+          },
+          {
+            "label": "ground cumin",
+            "item": "cumin ground",
+            "cost": 0.02,
+            "share": 0.006,
+            "protein": 0.2,
+            "product": "Stonemill Ground Cumin 2 oz",
+            "url": "https://www.aldi.us/store/aldi/s?k=ground%20cumin"
+          },
+          {
+            "label": "mustard",
+            "item": "mustard yellow",
+            "cost": 0.01,
+            "share": 0.004,
+            "protein": 0.3,
+            "product": "Burman's Yellow Mustard 20 oz",
+            "url": "https://www.aldi.us/store/aldi/s?k=yellow%20mustard"
+          },
+          {
+            "label": "salt",
+            "item": "kosher salt",
+            "cost": 0.0,
+            "share": 0.0,
+            "protein": 0.0,
+            "product": "Stonemill Iodized Salt 26 oz (swap for kosher salt)",
+            "url": "https://www.aldi.us/store/aldi/s?k=kosher%20salt"
+          }
+        ]
+      },
+      "heb-tx": {
+        "cost_per_serving": 3.52,
+        "protein_g_per_dollar": 17.2,
+        "prices_checked": "2026-10",
+        "breakdown": [
+          {
+            "label": "chicken breast, cubed",
+            "item": "chicken breast",
+            "cost": 0.98,
+            "share": 0.279,
+            "protein": 45.0,
+            "product": "Fresh Boneless Skinless Chicken Breasts Value Pack (avg 4.85 lb; $2.23/lb)",
+            "url": "https://www.heb.com/product-detail/x/372565"
+          },
+          {
+            "label": "red bell pepper, cut into squares",
+            "item": "red bell pepper",
+            "cost": 0.74,
+            "share": 0.21,
+            "protein": 0.6,
+            "product": "Fresh Red Bell Pepper each",
+            "url": "https://www.heb.com/product-detail/x/325164"
+          },
+          {
+            "label": "green bell pepper, cut into squares",
+            "item": "green bell pepper",
+            "cost": 0.36,
+            "share": 0.102,
+            "protein": 0.5,
+            "product": "Fresh Green Bell Pepper each (~119 g)",
+            "url": "https://www.heb.com/product-detail/x/374700"
+          },
+          {
+            "label": "potatoes, cut into wedges or cubes",
+            "item": "potatoes russet",
+            "cost": 0.33,
+            "share": 0.094,
+            "protein": 5.3,
+            "product": "H-E-B Texas Roots Fresh Russet Potatoes 5 lb bag (regular price - was on sale at $2.47)",
+            "url": "https://www.heb.com/product-detail/x/318997"
+          },
+          {
+            "label": "olive oil (rice and potatoes)",
+            "item": "olive oil",
+            "cost": 0.24,
+            "share": 0.069,
+            "protein": 0.0,
+            "product": "H-E-B Extra Virgin Olive Oil 17 oz (~457 g)",
+            "url": "https://www.heb.com/product-detail/x/127074"
+          },
+          {
+            "label": "paprika (marinade, rice and potatoes)",
+            "item": "paprika",
+            "cost": 0.19,
+            "share": 0.054,
+            "protein": 0.5,
+            "product": "H-E-B Hungarian Paprika 1.9 oz",
+            "url": "https://www.heb.com/product-detail/x/8709502"
+          },
+          {
+            "label": "rice",
+            "item": "white rice",
+            "cost": 0.17,
+            "share": 0.047,
+            "protein": 6.6,
+            "product": "H-E-B Enriched Long Grain White Rice 2 lb",
+            "url": "https://www.heb.com/product-detail/x/127178"
+          },
+          {
+            "label": "onion, finely chopped (marinade and rice)",
+            "item": "onion",
+            "cost": 0.13,
+            "share": 0.037,
+            "protein": 0.7,
+            "product": "Fresh Yellow Onions 3 lb bag",
+            "url": "https://www.heb.com/product-detail/x/449732"
+          },
+          {
+            "label": "fresh parsley or coriander, chopped",
+            "item": "parsley fresh",
+            "cost": 0.12,
+            "share": 0.034,
+            "protein": 0.2,
+            "product": "Fresh Curly Leaf Parsley bunch (~60 g)",
+            "url": "https://www.heb.com/product-detail/x/319481"
+          },
+          {
+            "label": "lemon, juiced",
+            "item": "lemon juice and zest",
+            "cost": 0.12,
+            "share": 0.035,
+            "protein": 0.0,
+            "product": "Fresh Small Lemon each (regular price - was on sale at $0.33; ~50 g used)",
+            "url": "https://www.heb.com/product-detail/x/375185"
+          },
+          {
+            "label": "garlic, minced (marinade and rice)",
+            "item": "garlic",
+            "cost": 0.05,
+            "share": 0.014,
+            "protein": 0.4,
+            "product": "Fresh Garlic bulb each (~40 g)",
+            "url": "https://www.heb.com/product-detail/x/325168"
+          },
+          {
+            "label": "ground cumin",
+            "item": "cumin ground",
+            "cost": 0.04,
+            "share": 0.011,
+            "protein": 0.2,
+            "product": "Hill Country Fare Ground Comino (cumin) 1.25 oz",
+            "url": "https://www.heb.com/product-detail/x/607761"
+          },
+          {
+            "label": "black pepper",
+            "item": "black pepper",
+            "cost": 0.03,
+            "share": 0.009,
+            "protein": 0.1,
+            "product": "H-E-B Pure Ground Black Pepper 4 oz",
+            "url": "https://www.heb.com/product-detail/x/125167"
+          },
+          {
+            "label": "mustard",
+            "item": "mustard yellow",
+            "cost": 0.01,
+            "share": 0.004,
+            "protein": 0.3,
+            "product": "Hill Country Fare Coarse Yellow Mustard 20 oz",
+            "url": "https://www.heb.com/product-detail/x/15681013"
+          },
+          {
+            "label": "salt",
+            "item": "kosher salt",
+            "cost": 0.0,
+            "share": 0.001,
+            "protein": 0.0,
+            "product": "H-E-B Coarse Kosher Salt 4.4 lb",
+            "url": "https://www.heb.com/product-detail/x/1917502"
+          }
+        ]
+      }
+    },
+    "cheapest_store": "aldi-tx",
+    "missing_nutrition": [],
+    "unpriced_items": [],
+    "ingredients": [
+      {
+        "item": "chicken breast",
+        "grams": 400.0,
+        "amount": "400 g",
+        "label": "chicken breast, cubed",
+        "optional": false
+      },
+      {
+        "item": "potatoes russet",
+        "grams": 500.0,
+        "amount": "500 g",
+        "label": "potatoes, cut into wedges or cubes",
+        "optional": false
+      },
+      {
+        "item": "white rice",
+        "grams": 185.0,
+        "amount": "1 cup",
+        "label": "rice",
+        "optional": false
+      },
+      {
+        "item": "red bell pepper",
+        "grams": 119.0,
+        "amount": "1",
+        "label": "red bell pepper, cut into squares",
+        "optional": false
+      },
+      {
+        "item": "green bell pepper",
+        "grams": 119.0,
+        "amount": "1",
+        "label": "green bell pepper, cut into squares",
+        "optional": false
+      },
+      {
+        "item": "onion",
+        "grams": 125.0,
+        "amount": "1 small + ½",
+        "label": "onion, finely chopped (marinade and rice)",
+        "optional": false
+      },
+      {
+        "item": "garlic",
+        "grams": 12.0,
+        "amount": "4 cloves",
+        "label": "garlic, minced (marinade and rice)",
+        "optional": false
+      },
+      {
+        "item": "parsley fresh",
+        "grams": 15.0,
+        "amount": "a small handful",
+        "label": "fresh parsley or coriander, chopped",
+        "optional": false
+      },
+      {
+        "item": "lemon juice and zest",
+        "grams": 25.0,
+        "amount": "½",
+        "label": "lemon, juiced",
+        "optional": false
+      },
+      {
+        "item": "mustard yellow",
+        "grams": 15.0,
+        "amount": "1 tbsp",
+        "label": "mustard",
+        "optional": false
+      },
+      {
+        "item": "greek yogurt plain nonfat",
+        "grams": 30.0,
+        "amount": "2 tbsp",
+        "label": "plain yogurt (optional)",
+        "optional": true
+      },
+      {
+        "item": "olive oil",
+        "grams": 27.0,
+        "amount": "2 tbsp",
+        "label": "olive oil (rice and potatoes)",
+        "optional": false
+      },
+      {
+        "item": "cumin ground",
+        "grams": 2.1,
+        "amount": "1 tsp",
+        "label": "ground cumin",
+        "optional": false
+      },
+      {
+        "item": "paprika",
+        "grams": 6.9,
+        "amount": "3 tsp",
+        "label": "paprika (marinade, rice and potatoes)",
+        "optional": false
+      },
+      {
+        "item": "kosher salt",
+        "grams": 4.0,
+        "amount": "to taste",
+        "label": "salt",
+        "optional": false
+      },
+      {
+        "item": "black pepper",
+        "grams": 2.0,
+        "amount": "to taste",
+        "label": "black pepper",
+        "optional": false
+      }
+    ],
+    "published": "2026-11-02",
+    "seo_name": "Oven Chicken Skewers with Rice and Potatoes",
+    "author": "Sanae",
+    "intro": "A simple, filling, protein-rich plate from everyday ingredients. The chicken is tender and full of flavour from a tangy mustard and lemon marinade, while the seasoned rice and crispy potatoes make it properly satisfying. Next time I'd add more colourful vegetables or a fresh salad on the side.",
+    "meal": "dinner",
+    "cuisine": "Mediterranean",
+    "tags": [],
+    "description": "Mustard-lemon chicken skewers with peppers, garlicky seasoned rice and crispy paprika potatoes, all from the oven. A full plate for two.",
+    "prep_minutes": 20,
+    "cook_minutes": 40,
+    "steps": [
+      "Roast the potatoes: heat the oven to 200°C (400°F). Cut the potatoes into even wedges or cubes, toss with olive oil, paprika, salt and pepper, and spread them out on a tray with space between the pieces. Bake 30 to 40 minutes, turning halfway, until golden and crispy.",
+      "Marinate the chicken: cut the chicken into medium cubes. Mix the onion, half the garlic, the parsley, cumin, paprika, salt, pepper, lemon juice, mustard and yogurt (if using), then coat the chicken well. Cover and chill for at least 30 minutes.",
+      "Make the skewers: thread the chicken onto skewers, alternating with squares of red and green pepper.",
+      "Bake the skewers: place them on a lightly oiled tray and bake at 200°C (400°F), turning halfway, until the chicken is cooked through (74°C / 165°F in the thickest pieces).",
+      "Cook the rice: rinse the rice until the water runs clearer, then boil it in salted water until tender and drain well.",
+      "Season the rice: soften the rest of the onion in olive oil, add the rest of the garlic for 30 seconds, season with paprika, salt and pepper, then stir in the rice and cook 2 to 3 minutes so it soaks up the flavour.",
+      "Serve: plate the rice with the skewers and crispy potatoes, and eat warm."
+    ],
+    "storage": "Keeps up to 3 days in the fridge in an airtight container. Reheat thoroughly, adding a little water to the rice so it stays moist.",
+    "tip": "Chicken breast in a big value pack is the cheapest way to keep this high in protein; boneless thighs work too. Frozen peppers are fine for the skewers, and a boiled egg or a spoon of Greek yogurt on the side adds extra protein for pennies.",
+    "image": "chicken-brochettes-rice-potatoes-sanae.jpg",
+    "image_alt": "Chicken and pepper skewers with seasoned rice and roasted potato wedges on a white plate",
+    "image_credit": "Photo by Sanae."
+  },
+  {
     "name": "One-pot spiced chicken, red lentils and rice",
     "slug": "chicken-lentil-rice-pot",
     "servings": 4,
@@ -845,6 +1283,324 @@
     "image": "chicken-lentils-rice-dannie-sorum-unsplash.jpg",
     "image_alt": "Sliced seared chicken on a bed of lentils, rice and peas",
     "image_credit": "Similar dish, plated. Photo by Dannie Sorum on Unsplash."
+  },
+  {
+    "name": "Creamy Chicken Stuffed Sweet Potatoes",
+    "slug": "creamy-chicken-stuffed-sweet-potato",
+    "servings": 2,
+    "protein_g_per_serving": 40.2,
+    "kcal_per_serving": 500,
+    "with_optional": {
+      "protein_g_per_serving": 40.7,
+      "kcal_per_serving": 510
+    },
+    "stores": {
+      "aldi-tx": {
+        "cost_per_serving": 1.38,
+        "protein_g_per_dollar": 29.1,
+        "prices_checked": "2026-10",
+        "breakdown": [
+          {
+            "label": "chicken breast, cooked and diced or shredded",
+            "item": "chicken breast",
+            "cost": 0.65,
+            "share": 0.471,
+            "protein": 30.4,
+            "product": "Boneless Skinless Chicken Breasts Family Pack, about 5 lb (sold by weight; regular price $2.19/lb)",
+            "url": "https://www.aldi.us/store/aldi/s?k=boneless%20skinless%20chicken%20breast"
+          },
+          {
+            "label": "sweet potatoes",
+            "item": "sweet potato",
+            "cost": 0.29,
+            "share": 0.207,
+            "protein": 3.1,
+            "product": "Sweet Potatoes 3 lb bag",
+            "url": "https://www.aldi.us/store/aldi/s?k=sweet%20potatoes"
+          },
+          {
+            "label": "cheese (we price shredded cheddar)",
+            "item": "cheddar cheese",
+            "cost": 0.18,
+            "share": 0.13,
+            "protein": 5.8,
+            "product": "Happy Farms Shredded Mild Cheddar Cheese 16 oz",
+            "url": "https://www.aldi.us/store/aldi/s?k=shredded%20cheddar"
+          },
+          {
+            "label": "onion, finely chopped",
+            "item": "onion",
+            "cost": 0.08,
+            "share": 0.061,
+            "protein": 0.4,
+            "product": "White Onions 2 lb bag",
+            "url": "https://www.aldi.us/store/aldi/s?k=yellow%20onions"
+          },
+          {
+            "label": "olive oil",
+            "item": "olive oil",
+            "cost": 0.05,
+            "share": 0.038,
+            "protein": 0.0,
+            "product": "Priano Extra Virgin Olive Oil 16.9 fl oz",
+            "url": "https://www.aldi.us/store/aldi/s?k=extra%20virgin%20olive%20oil"
+          },
+          {
+            "label": "paprika",
+            "item": "paprika",
+            "cost": 0.05,
+            "share": 0.036,
+            "protein": 0.2,
+            "product": "Simply Nature Organic Smoked Paprika 1.6 oz (swap for regular paprika)",
+            "url": "https://www.aldi.us/store/aldi/s?k=paprika"
+          },
+          {
+            "label": "garlic, minced",
+            "item": "garlic",
+            "cost": 0.04,
+            "share": 0.027,
+            "protein": 0.2,
+            "product": "Garlic 3 count (~120 g)",
+            "url": "https://www.aldi.us/store/aldi/s?k=garlic"
+          },
+          {
+            "label": "dried herbs",
+            "item": "italian seasoning",
+            "cost": 0.02,
+            "share": 0.017,
+            "protein": 0.0,
+            "product": "Stonemill Italian Herb Blend Seasoning 0.75 oz",
+            "url": "https://www.aldi.us/store/aldi/s?k=italian%20seasoning"
+          },
+          {
+            "label": "black pepper",
+            "item": "black pepper",
+            "cost": 0.02,
+            "share": 0.012,
+            "protein": 0.1,
+            "product": "Stonemill Black Peppercorn Grinder 1.76 oz",
+            "url": "https://www.aldi.us/store/aldi/s?k=ground%20black%20pepper"
+          },
+          {
+            "label": "salt",
+            "item": "kosher salt",
+            "cost": 0.0,
+            "share": 0.001,
+            "protein": 0.0,
+            "product": "Stonemill Iodized Salt 26 oz (swap for kosher salt)",
+            "url": "https://www.aldi.us/store/aldi/s?k=kosher%20salt"
+          }
+        ]
+      },
+      "heb-tx": {
+        "cost_per_serving": 1.73,
+        "protein_g_per_dollar": 23.3,
+        "prices_checked": "2026-10",
+        "breakdown": [
+          {
+            "label": "chicken breast, cooked and diced or shredded",
+            "item": "chicken breast",
+            "cost": 0.66,
+            "share": 0.385,
+            "protein": 30.4,
+            "product": "Fresh Boneless Skinless Chicken Breasts Value Pack (avg 4.85 lb; $2.23/lb)",
+            "url": "https://www.heb.com/product-detail/x/372565"
+          },
+          {
+            "label": "sweet potatoes",
+            "item": "sweet potato",
+            "cost": 0.5,
+            "share": 0.291,
+            "protein": 3.1,
+            "product": "Fresh Sweet Potatoes (sold by weight; $1.14/lb)",
+            "url": "https://www.heb.com/product-detail/x/318978"
+          },
+          {
+            "label": "cheese (we price shredded cheddar)",
+            "item": "cheddar cheese",
+            "cost": 0.27,
+            "share": 0.159,
+            "protein": 5.8,
+            "product": "H-E-B Mild Cheddar Shredded Cheese 16 oz (regular price - was on sale at $3.99)",
+            "url": "https://www.heb.com/product-detail/x/947305"
+          },
+          {
+            "label": "olive oil",
+            "item": "olive oil",
+            "cost": 0.08,
+            "share": 0.047,
+            "protein": 0.0,
+            "product": "H-E-B Extra Virgin Olive Oil 17 oz (~457 g)",
+            "url": "https://www.heb.com/product-detail/x/127074"
+          },
+          {
+            "label": "onion, finely chopped",
+            "item": "onion",
+            "cost": 0.07,
+            "share": 0.042,
+            "protein": 0.4,
+            "product": "Fresh Yellow Onions 3 lb bag",
+            "url": "https://www.heb.com/product-detail/x/449732"
+          },
+          {
+            "label": "paprika",
+            "item": "paprika",
+            "cost": 0.06,
+            "share": 0.037,
+            "protein": 0.2,
+            "product": "H-E-B Hungarian Paprika 1.9 oz",
+            "url": "https://www.heb.com/product-detail/x/8709502"
+          },
+          {
+            "label": "dried herbs",
+            "item": "italian seasoning",
+            "cost": 0.03,
+            "share": 0.015,
+            "protein": 0.0,
+            "product": "H-E-B Italian Seasoning 0.75 oz",
+            "url": "https://www.heb.com/product-detail/x/5156568"
+          },
+          {
+            "label": "garlic, minced",
+            "item": "garlic",
+            "cost": 0.02,
+            "share": 0.014,
+            "protein": 0.2,
+            "product": "Fresh Garlic bulb each (~40 g)",
+            "url": "https://www.heb.com/product-detail/x/325168"
+          },
+          {
+            "label": "black pepper",
+            "item": "black pepper",
+            "cost": 0.02,
+            "share": 0.01,
+            "protein": 0.1,
+            "product": "H-E-B Pure Ground Black Pepper 4 oz",
+            "url": "https://www.heb.com/product-detail/x/125167"
+          },
+          {
+            "label": "salt",
+            "item": "kosher salt",
+            "cost": 0.0,
+            "share": 0.001,
+            "protein": 0.0,
+            "product": "H-E-B Coarse Kosher Salt 4.4 lb",
+            "url": "https://www.heb.com/product-detail/x/1917502"
+          }
+        ]
+      }
+    },
+    "cheapest_store": "aldi-tx",
+    "missing_nutrition": [],
+    "unpriced_items": [],
+    "ingredients": [
+      {
+        "item": "sweet potato",
+        "grams": 400.0,
+        "amount": "2 medium (about 400 g)",
+        "label": "sweet potatoes",
+        "optional": false
+      },
+      {
+        "item": "chicken breast",
+        "grams": 270.0,
+        "amount": "200 g cooked (about 270 g raw)",
+        "label": "chicken breast, cooked and diced or shredded",
+        "optional": false
+      },
+      {
+        "item": "onion",
+        "grams": 70.0,
+        "amount": "1 small",
+        "label": "onion, finely chopped",
+        "optional": false
+      },
+      {
+        "item": "garlic",
+        "grams": 6.0,
+        "amount": "2 cloves",
+        "label": "garlic, minced",
+        "optional": false
+      },
+      {
+        "item": "cheddar cheese",
+        "grams": 50.0,
+        "amount": "50 g",
+        "label": "cheese (we price shredded cheddar)",
+        "optional": false
+      },
+      {
+        "item": "milk whole",
+        "grams": 30.0,
+        "amount": "2 tbsp",
+        "label": "milk, if needed for a creamier filling",
+        "optional": true
+      },
+      {
+        "item": "olive oil",
+        "grams": 9.0,
+        "amount": "2 tsp",
+        "label": "olive oil",
+        "optional": false
+      },
+      {
+        "item": "paprika",
+        "grams": 2.3,
+        "amount": "1 tsp",
+        "label": "paprika",
+        "optional": false
+      },
+      {
+        "item": "italian seasoning",
+        "grams": 1.0,
+        "amount": "1 tsp",
+        "label": "dried herbs",
+        "optional": false
+      },
+      {
+        "item": "kosher salt",
+        "grams": 2.0,
+        "amount": "to taste",
+        "label": "salt",
+        "optional": false
+      },
+      {
+        "item": "black pepper",
+        "grams": 1.0,
+        "amount": "to taste",
+        "label": "black pepper",
+        "optional": false
+      },
+      {
+        "item": "parsley fresh",
+        "grams": 5.0,
+        "amount": "a small handful",
+        "label": "fresh parsley or chives, to finish",
+        "optional": true
+      }
+    ],
+    "published": "2026-11-01",
+    "seo_name": "Chicken Stuffed Sweet Potatoes",
+    "author": "Sanae",
+    "intro": "A simple, affordable, protein-rich meal. The sweet potato is soft and naturally sweet, while the chicken, garlic, onion and melted cheese make a savoury, creamy filling. Next time I'd try lean ground beef instead of chicken, or add mushrooms for extra flavour.",
+    "meal": "lunch",
+    "cuisine": "American",
+    "tags": [],
+    "description": "Baked sweet potatoes filled with a creamy, cheesy garlic chicken filling. Two big halves each, about an hour, mostly hands-off.",
+    "prep_minutes": 15,
+    "cook_minutes": 50,
+    "steps": [
+      "Bake the sweet potatoes: heat the oven to 200°C (400°F). Wash the sweet potatoes, rub them with a little olive oil, salt and pepper, pierce them with a fork and bake for about 50 minutes, until soft.",
+      "Start the filling: meanwhile, heat the rest of the olive oil in a pan. Add the onion and garlic and cook until soft and fragrant.",
+      "Season the chicken: add the cooked chicken, season with salt, pepper, paprika and herbs, and mix well.",
+      "Make it creamy: add the cheese, plus a little milk if needed, and stir until the cheese melts into a creamy filling.",
+      "Fill and serve: cut the baked sweet potatoes in half, gently open the middles, spoon in the chicken and finish with fresh herbs."
+    ],
+    "storage": "Keeps up to 3 days in the fridge in an airtight container. Reheat in the microwave or the oven at 180°C (350°F), with a splash of milk if the filling looks dry.",
+    "tip": "The chicken brings most of the protein, so keep that and trim elsewhere: use less cheese, stretch the filling with onion or other veg, or swap in cheaper boneless thighs.",
+    "image": "creamy-chicken-stuffed-sweet-potato-sanae.jpg",
+    "image_alt": "Two baked sweet potato halves filled with creamy chicken and topped with fresh herbs on a white plate",
+    "image_credit": "Photo by Sanae."
   },
   {
     "name": "Lemon-rosemary chicken with grilled squash",
@@ -1856,6 +2612,246 @@
     "tip": "The berries cost the most here and add almost no protein. Frozen berries work just as well in a pudding and are usually much cheaper per ounce; the yogurt and chia are where the protein comes from.",
     "image": "overnight-chia-pudding-sanae.jpg",
     "image_alt": "A jar of chia pudding topped with sliced banana, blueberries, blackberries, pumpkin seeds and granola",
+    "image_credit": "Photo by Sanae."
+  },
+  {
+    "name": "Peanut Butter and Dark Chocolate Protein Oat Cookies",
+    "slug": "peanut-butter-and-dark-chocolate-protein-oat-cookies",
+    "servings": 5,
+    "protein_g_per_serving": 12.6,
+    "kcal_per_serving": 246,
+    "with_optional": {
+      "protein_g_per_serving": 12.6,
+      "kcal_per_serving": 246
+    },
+    "stores": {
+      "aldi-tx": {
+        "cost_per_serving": 0.38,
+        "protein_g_per_dollar": 33.5,
+        "prices_checked": "2026-10",
+        "breakdown": [
+          {
+            "label": "protein powder",
+            "item": "whey protein isolate",
+            "cost": 0.16,
+            "share": 0.421,
+            "protein": 5.0,
+            "product": "Elevation Vanilla Whey Protein Blend 24 oz (a blend, not an isolate: closest Aldi swap)",
+            "url": "https://www.aldi.us/store/aldi/s?k=elevation%20whey%20protein"
+          },
+          {
+            "label": "oat flour",
+            "item": "rolled oats",
+            "cost": 0.06,
+            "share": 0.151,
+            "protein": 2.4,
+            "product": "Millville Old Fashioned Rolled Oats 42 oz",
+            "url": "https://www.aldi.us/store/aldi/s?k=old%20fashioned%20oats"
+          },
+          {
+            "label": "rolled oats",
+            "item": "rolled oats",
+            "cost": 0.05,
+            "share": 0.134,
+            "protein": 2.1,
+            "product": "Millville Old Fashioned Rolled Oats 42 oz",
+            "url": "https://www.aldi.us/store/aldi/s?k=old%20fashioned%20oats"
+          },
+          {
+            "label": "dark chocolate chips or chopped dark chocolate",
+            "item": "chocolate chips",
+            "cost": 0.04,
+            "share": 0.115,
+            "protein": 0.2,
+            "product": "Baker's Corner Semi-Sweet Chocolate Morsels 12 oz",
+            "url": "https://www.aldi.us/store/aldi/s?k=chocolate%20chips"
+          },
+          {
+            "label": "egg",
+            "item": "egg whole",
+            "cost": 0.03,
+            "share": 0.073,
+            "protein": 1.3,
+            "product": "Goldhen Large Grade A Eggs 12 count (12 x 50 g edible; regular price - was on sale at $1.45)",
+            "url": "https://www.aldi.us/store/aldi/s?k=large%20eggs"
+          },
+          {
+            "label": "peanut butter",
+            "item": "peanut butter",
+            "cost": 0.02,
+            "share": 0.052,
+            "protein": 1.4,
+            "product": "Peanut Delight Creamy Peanut Butter 40 oz",
+            "url": "https://www.aldi.us/store/aldi/s?k=creamy%20peanut%20butter"
+          },
+          {
+            "label": "banana, mashed",
+            "item": "banana",
+            "cost": 0.02,
+            "share": 0.054,
+            "protein": 0.3,
+            "product": "Bananas (sold by weight)",
+            "url": "https://www.aldi.us/store/aldi/s?k=bananas"
+          }
+        ]
+      },
+      "heb-tx": {
+        "cost_per_serving": 0.63,
+        "protein_g_per_dollar": 19.9,
+        "prices_checked": "2026-10",
+        "breakdown": [
+          {
+            "label": "protein powder",
+            "item": "whey protein isolate",
+            "cost": 0.39,
+            "share": 0.612,
+            "protein": 5.0,
+            "product": "Dymatize ISO100 Hydrolyzed Whey Isolate Gourmet Vanilla 1.3 lb (~590 g)",
+            "url": "https://www.heb.com/product-detail/x/1565432"
+          },
+          {
+            "label": "oat flour",
+            "item": "rolled oats",
+            "cost": 0.06,
+            "share": 0.1,
+            "protein": 2.4,
+            "product": "H-E-B Old Fashioned Oats 42 oz",
+            "url": "https://www.heb.com/product-detail/x/1527031"
+          },
+          {
+            "label": "rolled oats",
+            "item": "rolled oats",
+            "cost": 0.06,
+            "share": 0.089,
+            "protein": 2.1,
+            "product": "H-E-B Old Fashioned Oats 42 oz",
+            "url": "https://www.heb.com/product-detail/x/1527031"
+          },
+          {
+            "label": "dark chocolate chips or chopped dark chocolate",
+            "item": "chocolate chips",
+            "cost": 0.04,
+            "share": 0.071,
+            "protein": 0.2,
+            "product": "Hill Country Fare Semi-Sweet Chocolate Chips 12 oz",
+            "url": "https://www.heb.com/product-detail/x/127567"
+          },
+          {
+            "label": "peanut butter",
+            "item": "peanut butter",
+            "cost": 0.03,
+            "share": 0.044,
+            "protein": 1.4,
+            "product": "Hill Country Fare Creamy Peanut Butter 18 oz",
+            "url": "https://www.heb.com/product-detail/x/125055"
+          },
+          {
+            "label": "egg",
+            "item": "egg whole",
+            "cost": 0.03,
+            "share": 0.044,
+            "protein": 1.3,
+            "product": "Hill Country Fare Grade A Large White Eggs 12 ct (12 x 50 g edible)",
+            "url": "https://www.heb.com/product-detail/x/313762"
+          },
+          {
+            "label": "banana, mashed",
+            "item": "banana",
+            "cost": 0.03,
+            "share": 0.04,
+            "protein": 0.3,
+            "product": "Fresh Bananas (sold by the bunch; $0.49/lb)",
+            "url": "https://www.heb.com/product-detail/x/377497"
+          }
+        ]
+      }
+    },
+    "cheapest_store": "aldi-tx",
+    "missing_nutrition": [],
+    "unpriced_items": [],
+    "ingredients": [
+      {
+        "item": "rolled oats",
+        "grams": 90.0,
+        "amount": "1 cup oat flour (90 g oats, blended)",
+        "label": "oat flour",
+        "optional": false
+      },
+      {
+        "item": "rolled oats",
+        "grams": 80.0,
+        "amount": "1 cup",
+        "label": "rolled oats",
+        "optional": false
+      },
+      {
+        "item": "peanut butter",
+        "grams": 32.0,
+        "amount": "2 tbsp",
+        "label": "peanut butter",
+        "optional": false
+      },
+      {
+        "item": "egg whole",
+        "grams": 50.0,
+        "amount": "1",
+        "label": "egg",
+        "optional": false
+      },
+      {
+        "item": "banana",
+        "grams": 118.0,
+        "amount": "1 ripe",
+        "label": "banana, mashed",
+        "optional": false
+      },
+      {
+        "item": "chocolate chips",
+        "grams": 22.0,
+        "amount": "2 tbsp",
+        "label": "dark chocolate chips or chopped dark chocolate",
+        "optional": false
+      },
+      {
+        "item": "whey protein isolate",
+        "grams": 30.0,
+        "amount": "1 scoop (30 g)",
+        "label": "protein powder",
+        "optional": false
+      },
+      {
+        "item": "baking powder",
+        "grams": 2.0,
+        "amount": "½ tsp",
+        "label": "baking powder (optional)",
+        "optional": true
+      }
+    ],
+    "published": "2026-11-02",
+    "seo_name": "Peanut Butter Protein Oat Cookies",
+    "author": "Sanae",
+    "intro": "An easy, affordable snack made with oats, peanut butter and dark chocolate that sorts out a sweet craving. Soft and chewy, rich with chocolate and a hint of peanut butter. Next time I'd add chopped nuts or extra dark chocolate for more crunch.",
+    "meal": "snack",
+    "cuisine": "American",
+    "tags": [
+      "freezer-friendly"
+    ],
+    "description": "Soft, chewy oat cookies with banana, peanut butter, dark chocolate and a scoop of whey. No flour or added sugar beyond the chocolate. About 10 cookies.",
+    "prep_minutes": 10,
+    "cook_minutes": 15,
+    "steps": [
+      "Heat the oven: preheat to 180°C (350°F) and line a baking tray with baking paper.",
+      "Mix the wet ingredients: mash the banana with a fork until smooth, then mix in the egg and peanut butter.",
+      "Add the dry ingredients: blend half the oats into flour, then add it with the whole oats, baking powder and protein powder. Mix into a thick dough, adding milk a tablespoon at a time if it's too dry.",
+      "Add the chocolate: fold in the dark chocolate pieces so they're spread through the dough.",
+      "Shape: scoop small portions onto the tray and flatten them gently with your fingers or a spoon, as they won't spread much in the oven.",
+      "Bake: 12 to 15 minutes, until set and lightly golden at the edges. Take them out a little early if you like them soft.",
+      "Cool: leave on the tray for 5 to 10 minutes, then move to a rack. They firm up as they cool."
+    ],
+    "storage": "Keep in an airtight container in the fridge for up to 4 days, or freeze for longer. Eat cold, or warm one in the microwave for 10 to 15 seconds.",
+    "tip": "Make your own oat flour by blending rolled oats: it's much cheaper than bought oat flour. The whey is most of the cost and most of the protein; without it, two cookies have about 8 g of protein instead of 13.",
+    "image": "peanut-butter-and-dark-chocolate-protein-oat-cookies-sanae.jpg",
+    "image_alt": "Three oat cookies with dark chocolate chunks and a peanut butter swirl on a white plate",
     "image_credit": "Photo by Sanae."
   },
   {

@@ -1,0 +1,99 @@
+# By Sanae (submitted via /write, 1 Nov 2026). Grams as bought: her 200 g cooked chicken ≈ 270 g raw breast.
+published = "2026-11-01"
+seo_name = "Chicken Stuffed Sweet Potatoes"  # short, search-style name used in the Google title
+name = "Creamy Chicken Stuffed Sweet Potatoes"
+cuisine = "American"
+description = "Baked sweet potatoes filled with a creamy, cheesy garlic chicken filling. Two big halves each, about an hour, mostly hands-off."
+author = "Sanae"
+intro = "A simple, affordable, protein-rich meal. The sweet potato is soft and naturally sweet, while the chicken, garlic, onion and melted cheese make a savoury, creamy filling. Next time I'd try lean ground beef instead of chicken, or add mushrooms for extra flavour."
+servings = 2
+meal = "lunch"
+tags = []
+prep_minutes = 15
+cook_minutes = 50
+image = "creamy-chicken-stuffed-sweet-potato-sanae.jpg"
+image_alt = "Two baked sweet potato halves filled with creamy chicken and topped with fresh herbs on a white plate"
+image_credit = "Photo by Sanae."
+storage = "Keeps up to 3 days in the fridge in an airtight container. Reheat in the microwave or the oven at 180°C (350°F), with a splash of milk if the filling looks dry."
+tip = "The chicken brings most of the protein, so keep that and trim elsewhere: use less cheese, stretch the filling with onion or other veg, or swap in cheaper boneless thighs."
+steps = [
+  "Bake the sweet potatoes: heat the oven to 200°C (400°F). Wash the sweet potatoes, rub them with a little olive oil, salt and pepper, pierce them with a fork and bake for about 50 minutes, until soft.",
+  "Start the filling: meanwhile, heat the rest of the olive oil in a pan. Add the onion and garlic and cook until soft and fragrant.",
+  "Season the chicken: add the cooked chicken, season with salt, pepper, paprika and herbs, and mix well.",
+  "Make it creamy: add the cheese, plus a little milk if needed, and stir until the cheese melts into a creamy filling.",
+  "Fill and serve: cut the baked sweet potatoes in half, gently open the middles, spoon in the chicken and finish with fresh herbs.",
+]
+
+[[ingredients]]
+item = "sweet potato"
+grams = 400
+amount = "2 medium (about 400 g)"
+label = "sweet potatoes"
+
+[[ingredients]]
+item = "chicken breast"
+grams = 270
+amount = "200 g cooked (about 270 g raw)"
+label = "chicken breast, cooked and diced or shredded"
+
+[[ingredients]]
+item = "onion"
+grams = 70
+amount = "1 small"
+label = "onion, finely chopped"
+
+[[ingredients]]
+item = "garlic"
+grams = 6
+amount = "2 cloves"
+label = "garlic, minced"
+
+[[ingredients]]
+item = "cheddar cheese"
+grams = 50
+amount = "50 g"
+label = "cheese (we price shredded cheddar)"
+
+[[ingredients]]
+item = "milk whole"
+grams = 30
+amount = "2 tbsp"
+label = "milk, if needed for a creamier filling"
+optional = true
+
+[[ingredients]]
+item = "olive oil"
+grams = 9
+amount = "2 tsp"
+label = "olive oil"
+
+[[ingredients]]
+item = "paprika"
+grams = 2.3
+amount = "1 tsp"
+label = "paprika"
+
+[[ingredients]]
+item = "italian seasoning"
+grams = 1
+amount = "1 tsp"
+label = "dried herbs"
+
+[[ingredients]]
+item = "kosher salt"
+grams = 2
+amount = "to taste"
+label = "salt"
+
+[[ingredients]]
+item = "black pepper"
+grams = 1
+amount = "to taste"
+label = "black pepper"
+
+[[ingredients]]
+item = "parsley fresh"
+grams = 5
+amount = "a small handful"
+label = "fresh parsley or chives, to finish"
+optional = true

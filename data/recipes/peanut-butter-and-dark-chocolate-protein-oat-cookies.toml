@@ -1,0 +1,78 @@
+# By Sanae (submitted via /write, 2 Nov 2026). Oat flour = blended rolled oats (her own money-saving tip).
+# No yield given: we count about 10 cookies, a serving = 2 cookies. The scoop of whey counts in the numbers
+# (it's what makes these "protein" cookies); leave it out for a plain oat cookie.
+published = "2026-11-02"
+seo_name = "Peanut Butter Protein Oat Cookies"  # short, search-style name used in the Google title
+name = "Peanut Butter and Dark Chocolate Protein Oat Cookies"
+cuisine = "American"
+description = "Soft, chewy oat cookies with banana, peanut butter, dark chocolate and a scoop of whey. No flour or added sugar beyond the chocolate. About 10 cookies."
+author = "Sanae"
+intro = "An easy, affordable snack made with oats, peanut butter and dark chocolate that sorts out a sweet craving. Soft and chewy, rich with chocolate and a hint of peanut butter. Next time I'd add chopped nuts or extra dark chocolate for more crunch."
+servings = 5
+meal = "snack"
+tags = ["freezer-friendly"]
+prep_minutes = 10
+cook_minutes = 15
+image = "peanut-butter-and-dark-chocolate-protein-oat-cookies-sanae.jpg"
+image_alt = "Three oat cookies with dark chocolate chunks and a peanut butter swirl on a white plate"
+image_credit = "Photo by Sanae."
+storage = "Keep in an airtight container in the fridge for up to 4 days, or freeze for longer. Eat cold, or warm one in the microwave for 10 to 15 seconds."
+tip = "Make your own oat flour by blending rolled oats: it's much cheaper than bought oat flour. The whey is most of the cost and most of the protein; without it, two cookies have about 8 g of protein instead of 13."
+steps = [
+  "Heat the oven: preheat to 180°C (350°F) and line a baking tray with baking paper.",
+  "Mix the wet ingredients: mash the banana with a fork until smooth, then mix in the egg and peanut butter.",
+  "Add the dry ingredients: blend half the oats into flour, then add it with the whole oats, baking powder and protein powder. Mix into a thick dough, adding milk a tablespoon at a time if it's too dry.",
+  "Add the chocolate: fold in the dark chocolate pieces so they're spread through the dough.",
+  "Shape: scoop small portions onto the tray and flatten them gently with your fingers or a spoon, as they won't spread much in the oven.",
+  "Bake: 12 to 15 minutes, until set and lightly golden at the edges. Take them out a little early if you like them soft.",
+  "Cool: leave on the tray for 5 to 10 minutes, then move to a rack. They firm up as they cool.",
+]
+
+[[ingredients]]
+item = "rolled oats"
+grams = 90
+amount = "1 cup oat flour (90 g oats, blended)"
+label = "oat flour"
+
+[[ingredients]]
+item = "rolled oats"
+grams = 80
+amount = "1 cup"
+label = "rolled oats"
+
+[[ingredients]]
+item = "peanut butter"
+grams = 32
+amount = "2 tbsp"
+label = "peanut butter"
+
+[[ingredients]]
+item = "egg whole"
+grams = 50
+amount = "1"
+label = "egg"
+
+[[ingredients]]
+item = "banana"
+grams = 118
+amount = "1 ripe"
+label = "banana, mashed"
+
+[[ingredients]]
+item = "chocolate chips"
+grams = 22
+amount = "2 tbsp"
+label = "dark chocolate chips or chopped dark chocolate"
+
+[[ingredients]]
+item = "whey protein isolate"
+grams = 30
+amount = "1 scoop (30 g)"
+label = "protein powder"
+
+[[ingredients]]
+item = "baking powder"
+grams = 2
+amount = "½ tsp"
+label = "baking powder (optional)"
+optional = true
