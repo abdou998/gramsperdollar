@@ -263,3 +263,9 @@ Everything is plain files, so nothing is locked in.
   owner (boards: "High-Protein Meal Prep on a Budget", "High-Protein Breakfast & Snacks"; one pin a day).
 - **Bot checks:** Walmart blocks the Claude built-in browser pane; use the owner's Chrome (Claude in Chrome) for Walmart.
   H-E-B blocks background fetch() after ~9 product pages: refresh prices with normal page loads, ~8 s apart.
+
+## 20 Nov 2026 (evening): Kroger via official API
+- Kroger Public API keys live in GitHub repo secrets (KROGER_CLIENT_ID / KROGER_CLIENT_SECRET). The workspace can't reach api.kroger.com, so everything runs in `.github/workflows/kroger.yml`.
+- Monthly (1st, 06:17 UTC) the Action prices every store in `data/kroger/stores.csv`: `kroger_fetch.py` → `kroger_pick.py` (relevance rules + own-brand/produce rules; pins in `data/kroger/picks.csv`) → `add_prices.py` → `mealmath.py` → commits → deploys.
+- New Kroger store in any state: put `locations <zip>` in `data/kroger/run.txt` and push → read `data/kroger/locations-<zip>.json` → add the store to `data/stores.csv` + `data/kroger/stores.csv` → put `products` in run.txt and push. Review the first pick list by hand.
+- Kroger Houston = Polk St 03400223 (77023), store id `kroger-tx`.
