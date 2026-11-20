@@ -10,7 +10,7 @@ Never put the keys in this repo: it is public.
 Step 2 (picking the product per item and writing prices.csv rows) is done by tools/kroger_pick.py once
 we've checked what the API returns.
 """
-import base64, csv, json, os, pathlib, sys, time, urllib.parse, urllib.request
+import base64, csv, urllib.error, json, os, pathlib, sys, time, urllib.parse, urllib.request
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / 'data' / 'kroger'
@@ -23,7 +23,12 @@ def token():
                                  data=b'grant_type=client_credentials&scope=product.compact',
                                  headers={'Authorization': 'Basic ' + base64.b64encode(f'{cid}:{sec}'.encode()).decode(),
                                           'Content-Type': 'application/x-www-form-urlencoded'})
-    return json.load(urllib.request.urlopen(req))['access_token']
+    try:
+        return json.load(urllib.request.urlopen(req))['access_token']
+    except urllib.error.HTTPError as e:
+        # Never print the secret; id is not secret.
+        print(f'token failed {e.code}: {e.read()[:300]!r} | id={cid!r} | secret length={len(sec)}')
+        raise
 
 
 def get(tok, path, **q):
