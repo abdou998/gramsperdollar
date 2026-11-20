@@ -253,3 +253,13 @@ Everything is plain files, so nothing is locked in.
 - **State pages** `/cheapest-protein/<state>` for states with 2+ ranked stores (Texas now). Trends (Oct 2026): "what is the
   cheapest grocery store in texas" rising; in Texas "heb high protein" > "cheapest grocery store". Nationally "cheapest protein"
   and "high protein meal prep" dwarf state queries; "walmart high protein" and "costco high protein" are the big chain terms.
+
+## Update 20 Nov 2026
+- Priced Sanae's November recipes at all 4 stores (stuffed sweet potatoes, chicken brochettes [slug chicken-brochettes-rice-potatoes,
+  old slug 301s; weights for chicken/potatoes assumed], PB protein oat cookies [10 cookies, serving = 2, whey counted]).
+- CTR pass: recipe meta descriptions lead with "X g protein, $Y a serving, Z minutes"; store rankings titled
+  "Cheapest Protein at H-E-B (TX): 21 Foods Ranked, Oct 2026"; titles matched to GSC queries (40 g meals, whey pancakes, 4-day meal prep).
+- **Pinterest:** `tools/make_pins.py` renders pins to `public/pins/<slug>.jpg` (served at /pins/…). Bulk-upload CSV made for the
+  owner (boards: "High-Protein Meal Prep on a Budget", "High-Protein Breakfast & Snacks"; one pin a day).
+- **Bot checks:** Walmart blocks the Claude built-in browser pane; use the owner's Chrome (Claude in Chrome) for Walmart.
+  H-E-B blocks background fetch() after ~9 product pages: refresh prices with normal page loads, ~8 s apart.
