@@ -32,9 +32,9 @@
     },
     "stores": {
       "heb-tx": {
-        "cost_per_day": 6.89,
-        "cost_total_used": 27.54,
-        "checkout_total": 74.79,
+        "cost_per_day": 6.97,
+        "cost_total_used": 27.88,
+        "checkout_total": 78.48,
         "buy": [
           {
             "item": "banana",
@@ -60,13 +60,13 @@
             "product": "Fresh Red Bell Pepper each",
             "grams_needed": 120,
             "packs": 1,
-            "pack_price": 1.48,
+            "pack_price": 1.38,
             "url": "https://www.heb.com/product-detail/x/325164"
           },
           {
             "item": "lemon juice and zest",
             "aisle": "Produce",
-            "product": "Fresh Small Lemon each (regular price - was on sale at $0.33; ~50 g used)",
+            "product": "Fresh Small Lemon each (~50 g used)",
             "grams_needed": 100,
             "packs": 2,
             "pack_price": 0.5,
@@ -78,7 +78,7 @@
             "product": "Fresh Steamable Green Beans 12 oz",
             "grams_needed": 220,
             "packs": 1,
-            "pack_price": 2.58,
+            "pack_price": 2.24,
             "url": "https://www.heb.com/product-detail/x/768344"
           },
           {
@@ -87,7 +87,7 @@
             "product": "Fresh Yellow Bell Pepper each",
             "grams_needed": 120,
             "packs": 1,
-            "pack_price": 1.46,
+            "pack_price": 1.38,
             "url": "https://www.heb.com/product-detail/x/318717"
           },
           {
@@ -96,7 +96,7 @@
             "product": "Fresh Yellow Onions 3 lb bag",
             "grams_needed": 110,
             "packs": 1,
-            "pack_price": 2.82,
+            "pack_price": 2.38,
             "url": "https://www.heb.com/product-detail/x/449732"
           },
           {
@@ -150,7 +150,7 @@
             "product": "Hill Country Fare Whole Milk 1 gal (~3900 g)",
             "grams_needed": 488,
             "packs": 1,
-            "pack_price": 3.03,
+            "pack_price": 3.18,
             "url": "https://www.heb.com/product-detail/x/314124"
           },
           {
@@ -195,7 +195,7 @@
             "product": "Dymatize ISO100 Hydrolyzed Whey Isolate Gourmet Vanilla 1.3 lb (~590 g)",
             "grams_needed": 100,
             "packs": 1,
-            "pack_price": 37.98,
+            "pack_price": 42.48,
             "url": "https://www.heb.com/product-detail/x/1565432"
           }
         ],
@@ -215,7 +215,7 @@
             "product": "H-E-B Pure Ground Black Pepper 4 oz",
             "grams_needed": 4,
             "packs": 1,
-            "pack_price": 3.78,
+            "pack_price": 3.68,
             "url": "https://www.heb.com/product-detail/x/125167"
           },
           {
@@ -518,9 +518,9 @@
         ]
       },
       "walmart-tx": {
-        "cost_per_day": 7.59,
-        "cost_total_used": 30.37,
-        "checkout_total": 84.3,
+        "cost_per_day": 7.6,
+        "cost_total_used": 30.39,
+        "checkout_total": 84.55,
         "buy": [
           {
             "item": "banana",
@@ -543,7 +543,7 @@
           {
             "item": "lemon juice and zest",
             "aisle": "Produce",
-            "product": "Fresh Bulk Yellow Lemon each (regular price - was on sale at $0.30; ~50 g juice + zest per lemon)",
+            "product": "Fresh Bulk Yellow Lemon each (regular price - on Rollback at $0.50; ~50 g used)",
             "grams_needed": 100,
             "packs": 2,
             "pack_price": 0.74,
@@ -624,7 +624,7 @@
           {
             "item": "egg whole",
             "aisle": "Dairy and eggs",
-            "product": "Great Value Large White Eggs 12 count (12 x 50 g edible)",
+            "product": "Great Value Large White Eggs 12 count (12 x 50 g edible) (regular price - on Rollback at $1.22)",
             "grams_needed": 200,
             "packs": 1,
             "pack_price": 1.67,
@@ -636,7 +636,7 @@
             "product": "Great Value Whole Vitamin D Milk 1 gallon (~3900 g)",
             "grams_needed": 488,
             "packs": 1,
-            "pack_price": 2.53,
+            "pack_price": 2.78,
             "url": "https://www.walmart.com/search?q=great+value+whole+milk+gallon"
           },
           {
@@ -710,7 +710,7 @@
             "product": "Great Value Sweet Cream Salted Butter 4 sticks 16 oz",
             "grams_needed": 16,
             "packs": 1,
-            "pack_price": 3.06,
+            "pack_price": 2.74,
             "url": "https://www.walmart.com/search?q=great+value+salted+butter+sticks"
           },
           {
@@ -743,7 +743,7 @@
           {
             "item": "olive oil",
             "aisle": "Oils and spices",
-            "product": "Great Value Extra Virgin Olive Oil 17 fl oz (~457 g)",
+            "product": "Great Value Extra Virgin Olive Oil 17 fl oz (~457 g) (regular price - on Rollback at $5.48)",
             "grams_needed": 94,
             "packs": 1,
             "pack_price": 6.12,
