@@ -274,6 +274,249 @@
           }
         ]
       },
+      "kroger-tx": {
+        "cost_per_day": 7.87,
+        "cost_total_used": 31.48,
+        "checkout_total": 90.43,
+        "buy": [
+          {
+            "item": "green beans",
+            "aisle": "Produce",
+            "product": "Fresh Bagged Green Beans (sold by weight, per lb)",
+            "grams_needed": 220,
+            "packs": 1,
+            "pack_price": 1.99,
+            "url": "https://www.kroger.com/p/x/0000000004066"
+          },
+          {
+            "item": "banana",
+            "aisle": "Produce",
+            "product": "Fresh Bunch of Bananas – 5-7 Bananas (sold by weight, per lb)",
+            "grams_needed": 236,
+            "packs": 1,
+            "pack_price": 0.49,
+            "url": "https://www.kroger.com/p/x/0000000004011"
+          },
+          {
+            "item": "red bell pepper",
+            "aisle": "Produce",
+            "product": "Fresh Red Hothouse Bell Pepper 1 ct (regular price - on sale at $0.99)",
+            "grams_needed": 120,
+            "packs": 1,
+            "pack_price": 1.5,
+            "url": "https://www.kroger.com/p/x/0000000004688"
+          },
+          {
+            "item": "yellow bell pepper",
+            "aisle": "Produce",
+            "product": "Fresh Yellow Bell Pepper 1 ct (regular price - on sale at $0.99)",
+            "grams_needed": 120,
+            "packs": 1,
+            "pack_price": 1.5,
+            "url": "https://www.kroger.com/p/x/0000000004689"
+          },
+          {
+            "item": "garlic",
+            "aisle": "Produce",
+            "product": "Kroger Garlic Bulbs 5 ct",
+            "grams_needed": 21,
+            "packs": 1,
+            "pack_price": 2.49,
+            "url": "https://www.kroger.com/p/x/0001111002824"
+          },
+          {
+            "item": "carrots",
+            "aisle": "Produce",
+            "product": "Kroger Whole Carrots 2 lb",
+            "grams_needed": 244,
+            "packs": 1,
+            "pack_price": 1.99,
+            "url": "https://www.kroger.com/p/x/0001111091622"
+          },
+          {
+            "item": "onion",
+            "aisle": "Produce",
+            "product": "Kroger Yellow Onion 3 lb Bag 3 lb (regular price - on sale at $3.29)",
+            "grams_needed": 110,
+            "packs": 1,
+            "pack_price": 3.89,
+            "url": "https://www.kroger.com/p/x/0001111091682"
+          },
+          {
+            "item": "rosemary fresh",
+            "aisle": "Produce",
+            "product": "Simple Truth Organic Rosemary 0.5 oz",
+            "grams_needed": 3,
+            "packs": 1,
+            "pack_price": 2.49,
+            "url": "https://www.kroger.com/p/x/0001111001886"
+          },
+          {
+            "item": "yellow squash",
+            "aisle": "Produce",
+            "product": "Squash Yellow (sold by weight, per lb)",
+            "grams_needed": 392,
+            "packs": 1,
+            "pack_price": 1.39,
+            "url": "https://www.kroger.com/p/x/0000000004784"
+          },
+          {
+            "item": "lemon juice and zest",
+            "aisle": "Produce",
+            "product": "Wonderful Seedless Lemons 3 lb",
+            "grams_needed": 100,
+            "packs": 1,
+            "pack_price": 5.0,
+            "url": "https://www.kroger.com/p/x/0007224076189"
+          },
+          {
+            "item": "chicken breast",
+            "aisle": "Meat",
+            "product": "Heritage Farm Boneless Skinless Chicken Breasts (sold by weight, per lb)",
+            "grams_needed": 1400,
+            "packs": 4,
+            "pack_price": 2.59,
+            "url": "https://www.kroger.com/p/x/0028334900000"
+          },
+          {
+            "item": "egg whole",
+            "aisle": "Dairy and eggs",
+            "product": "Kroger Grade A Large White Eggs 12 ct",
+            "grams_needed": 200,
+            "packs": 1,
+            "pack_price": 1.79,
+            "url": "https://www.kroger.com/p/x/0001111060903"
+          },
+          {
+            "item": "milk whole",
+            "aisle": "Dairy and eggs",
+            "product": "Kroger Vitamin D Whole Milk Gallon 1 gal",
+            "grams_needed": 488,
+            "packs": 1,
+            "pack_price": 3.19,
+            "url": "https://www.kroger.com/p/x/0001111040101"
+          },
+          {
+            "item": "frozen peas",
+            "aisle": "Frozen",
+            "product": "Kroger Frozen Sweet Green Peas 32 oz",
+            "grams_needed": 150,
+            "packs": 1,
+            "pack_price": 3.19,
+            "url": "https://www.kroger.com/p/x/0001111081918"
+          },
+          {
+            "item": "diced tomatoes canned",
+            "aisle": "Dry goods and cans",
+            "product": "Kroger Diced Tomatoes 14.5 oz",
+            "grams_needed": 411,
+            "packs": 1,
+            "pack_price": 1.0,
+            "url": "https://www.kroger.com/p/x/0001111011612"
+          },
+          {
+            "item": "white rice",
+            "aisle": "Dry goods and cans",
+            "product": "Kroger Enriched Long Grain White Rice 32 oz",
+            "grams_needed": 200,
+            "packs": 1,
+            "pack_price": 1.89,
+            "url": "https://www.kroger.com/p/x/0001111089875"
+          },
+          {
+            "item": "red lentils",
+            "aisle": "Dry goods and cans",
+            "product": "Simple Truth Organic Red Lentils 16 oz",
+            "grams_needed": 150,
+            "packs": 1,
+            "pack_price": 3.29,
+            "url": "https://www.kroger.com/p/x/0001111086285"
+          },
+          {
+            "item": "whey protein isolate",
+            "aisle": "Protein powder",
+            "product": "Isopure Zero Carb 100% Pure Whey Protein Isolate Powder Vanilla 15.3 oz",
+            "grams_needed": 100,
+            "packs": 1,
+            "pack_price": 42.99,
+            "url": "https://www.kroger.com/p/x/0008909402626"
+          }
+        ],
+        "pantry": [
+          {
+            "item": "baking powder",
+            "aisle": "Baking",
+            "product": "Kroger Baking Powder 8.1 oz",
+            "grams_needed": 18,
+            "packs": 1,
+            "pack_price": 2.19,
+            "url": "https://www.kroger.com/p/x/0001111090765"
+          },
+          {
+            "item": "black pepper",
+            "aisle": "Oils and spices",
+            "product": "Smart Way Ground Black Pepper 2.25 oz",
+            "grams_needed": 4,
+            "packs": 1,
+            "pack_price": 1.25,
+            "url": "https://www.kroger.com/p/x/0001111011742"
+          },
+          {
+            "item": "butter salted",
+            "aisle": "Dairy and eggs",
+            "product": "Kroger Salted Butter Sticks 4 sticks / 16 oz",
+            "grams_needed": 16,
+            "packs": 1,
+            "pack_price": 3.29,
+            "url": "https://www.kroger.com/p/x/0001111089301"
+          },
+          {
+            "item": "cinnamon ground",
+            "aisle": "Oils and spices",
+            "product": "Smart Way Ground Cinnamon 1.94 oz",
+            "grams_needed": 2,
+            "packs": 1,
+            "pack_price": 1.25,
+            "url": "https://www.kroger.com/p/x/0001111011748"
+          },
+          {
+            "item": "cumin ground",
+            "aisle": "Oils and spices",
+            "product": "Simple Truth Organic Ground Cumin 1.72 oz",
+            "grams_needed": 2,
+            "packs": 1,
+            "pack_price": 3.99,
+            "url": "https://www.kroger.com/p/x/0001111015600"
+          },
+          {
+            "item": "kosher salt",
+            "aisle": "Oils and spices",
+            "product": "Morton Coarse Kosher Salt Coarse Salt for Cooking, 3 lb. 3 lb",
+            "grams_needed": 18,
+            "packs": 1,
+            "pack_price": 4.29,
+            "url": "https://www.kroger.com/p/x/0002460001700"
+          },
+          {
+            "item": "olive oil",
+            "aisle": "Oils and spices",
+            "product": "Kroger Extra Virgin Olive Oil 25.4 fl oz (regular price - on sale at $8.99)",
+            "grams_needed": 94,
+            "packs": 1,
+            "pack_price": 9.49,
+            "url": "https://www.kroger.com/p/x/0001111004415"
+          },
+          {
+            "item": "smoked paprika",
+            "aisle": "Oils and spices",
+            "product": "Badia Smoked Paprika 2 oz (regular price - on sale at $1.99)",
+            "grams_needed": 2,
+            "packs": 1,
+            "pack_price": 2.19,
+            "url": "https://www.kroger.com/p/x/0003384400213"
+          }
+        ]
+      },
       "walmart-ca": {
         "cost_per_day": 7.56,
         "cost_total_used": 30.25,

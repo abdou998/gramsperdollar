@@ -1,0 +1,5 @@
+# Pin a Kroger productId (and pack_g when the size is a count or a dry pint) for items the auto-pick gets wrong.
+item,productId,pack_g
+blueberries,0003338322101,340
+green bell pepper,0000000004065,164
+tofu firm,0001111091342,

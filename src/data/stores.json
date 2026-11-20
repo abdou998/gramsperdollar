@@ -38,5 +38,15 @@
     "location": "Gulfgate H-E-B, 3111 Woodridge, Houston (77087)",
     "source": "heb.com (in-store prices)",
     "note": "heb.com's in-store price for this store. Curbside pickup costs a little more."
+  },
+  "kroger-tx": {
+    "id": "kroger-tx",
+    "store": "Kroger",
+    "market": "TX",
+    "state": "Texas",
+    "city": "Houston",
+    "location": "Kroger Polk St, 4000 Polk St, Houston (77023)",
+    "source": "Kroger API (store prices)",
+    "note": "Store price from Kroger's official product API for this store."
   }
 }

@@ -1,6 +1,7 @@
 # Monthly Kroger price fetch via the official Kroger Public API.
 # Needs repo secrets KROGER_CLIENT_ID and KROGER_CLIENT_SECRET (Settings > Secrets and variables > Actions).
-# Edit data/kroger/run.txt and push to run it now: line 1 = "locations <zip>" or "products <locationId> [...]".
+# Monthly (and on push of data/kroger/run.txt): prices every store in data/kroger/stores.csv and recomputes recipe costs.
+# run.txt line 1 = "locations <zip>" to look up store ids instead.
 name: kroger-prices
 on:
   workflow_dispatch:
@@ -24,14 +25,21 @@ jobs:
           KROGER_CLIENT_SECRET: ${{ secrets.KROGER_CLIENT_SECRET }}
         run: |
           read -r cmd args < data/kroger/run.txt
-          if [ "$cmd" = products ]; then
-            for loc in $args; do python3 tools/kroger_fetch.py products "$loc"; done
+          if [ "$cmd" = locations ] && [ "${{ github.event_name }}" = push ]; then
+            python3 tools/kroger_fetch.py locations $args
           else
-            python3 tools/kroger_fetch.py "$cmd" $args
+            # every Kroger store we price: fetch -> pick -> prices.csv -> recipe costs
+            mkdir -p data/todo
+            tail -n +2 data/kroger/stores.csv | while IFS=, read -r loc sid; do
+              python3 tools/kroger_fetch.py products "$loc"
+              python3 tools/kroger_pick.py "$loc" "$sid"
+              python3 tools/add_prices.py "$sid" "data/todo/$sid.tsv"
+            done
+            python3 tools/mealmath.py
           fi
       - name: Commit results
         run: |
           git config user.name "kroger-prices bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/kroger
-          git diff --cached --quiet || (git commit -m "Kroger API fetch $(date -u +%F)" && git push)
+          git add data/kroger data/prices.csv src/data
+          git diff --cached --quiet || (git commit -m "Kroger prices $(date -u +%F)" && git push)
