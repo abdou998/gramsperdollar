@@ -1,0 +1,182 @@
+[
+ {
+  "locationId": "66000088",
+  "chain": "FRYS",
+  "name": "Fry's Food And Drug - Frys Food And Drug Phoenix",
+  "address": "100 E Jefferson St",
+  "city": "Phoenix",
+  "state": "AZ",
+  "zip": "85004"
+ },
+ {
+  "locationId": "66000002",
+  "chain": "FRYS",
+  "name": "Fry's Food And Drug - 30th St Thomas",
+  "address": "3036 E Thomas Rd",
+  "city": "Phoenix",
+  "state": "AZ",
+  "zip": "85016"
+ },
+ {
+  "locationId": "66000128",
+  "chain": "FRYS",
+  "name": "Fry's Food And Drug - 7th Ave Camelback",
+  "address": "744 W Camelback Rd",
+  "city": "Phoenix",
+  "state": "AZ",
+  "zip": "85013"
+ },
+ {
+  "locationId": "66000129",
+  "chain": "FRYS",
+  "name": "Fry's Food And Drug - 20th St Highland",
+  "address": "4724 N 20Th St",
+  "city": "Phoenix",
+  "state": "AZ",
+  "zip": "85016"
+ },
+ {
+  "locationId": "66000610",
+  "chain": "FRYS",
+  "name": "Fry's Mercado - 43rd Ave McDowell",
+  "address": "4230 W Mcdowell Rd",
+  "city": "Phoenix",
+  "state": "AZ",
+  "zip": "85009"
+ },
+ {
+  "locationId": "66000135",
+  "chain": "FRYS",
+  "name": "Fry's Food And Drug - 44th St Thomas",
+  "address": "4505 E Thomas Rd",
+  "city": "Phoenix",
+  "state": "AZ",
+  "zip": "85018"
+ },
+ {
+  "locationId": "66000046",
+  "chain": "FRYS",
+  "name": "Fry's Food And Drug - 7th St Baseline",
+  "address": "520 E Baseline Rd",
+  "city": "Phoenix",
+  "state": "AZ",
+  "zip": "85042"
+ },
+ {
+  "locationId": "66000623",
+  "chain": "FRYS",
+  "name": "Fry's Food And Drug - 19th Ave Glendale",
+  "address": "1815 W Glendale Ave",
+  "city": "Phoenix",
+  "state": "AZ",
+  "zip": "85021"
+ },
+ {
+  "locationId": "66000081",
+  "chain": "FRYS",
+  "name": "Fry's Food And Drug - 24Th Baseline",
+  "address": "2250 E Baseline Rd",
+  "city": "Phoenix",
+  "state": "AZ",
+  "zip": "85042"
+ },
+ {
+  "locationId": "66000010",
+  "chain": "FRYS",
+  "name": "Fry's Food And Drug - 43rd Ave Bethany Home",
+  "address": "4353 W Bethany Home Rd",
+  "city": "Glendale",
+  "state": "AZ",
+  "zip": "85301"
+ },
+ {
+  "locationId": "66000043",
+  "chain": "FRYS",
+  "name": "Fry's Food And Drug - 48th St Baseline",
+  "address": "2700 W Baseline Rd",
+  "city": "Tempe",
+  "state": "AZ",
+  "zip": "85283"
+ },
+ {
+  "locationId": "66000087",
+  "chain": "FRYS",
+  "name": "Fry's Food And Drug - 51st Ave Baseline",
+  "address": "5140 W Baseline Rd",
+  "city": "Laveen",
+  "state": "AZ",
+  "zip": "85339"
+ },
+ {
+  "locationId": "66000126",
+  "chain": "FRYS",
+  "name": "Fry's Food And Drug - 67th Ave Indian School",
+  "address": "6601 W Indian School Rd",
+  "city": "Phoenix",
+  "state": "AZ",
+  "zip": "85033"
+ },
+ {
+  "locationId": "66000609",
+  "chain": "FRYS",
+  "name": "Fry's Food And Drug - Cave Creek Hatcher",
+  "address": "850 E Hatcher Rd",
+  "city": "Phoenix",
+  "state": "AZ",
+  "zip": "85020"
+ },
+ {
+  "locationId": "66000136",
+  "chain": "FRYS",
+  "name": "Fry's Food And Drug - 43rd Northern",
+  "address": "4329 W Northern Ave",
+  "city": "Glendale",
+  "state": "AZ",
+  "zip": "85301"
+ },
+ {
+  "locationId": "66000101",
+  "chain": "FRYS",
+  "name": "Fry's Food And Drug - Mill Southern",
+  "address": "3232 S Mill Ave",
+  "city": "Tempe",
+  "state": "AZ",
+  "zip": "85282"
+ },
+ {
+  "locationId": "66000011",
+  "chain": "FRYS",
+  "name": "Fry's Food And Drug - 67th Ave Bethany Home",
+  "address": "6710 W Bethany Home Rd",
+  "city": "Glendale",
+  "state": "AZ",
+  "zip": "85303"
+ },
+ {
+  "locationId": "66000005",
+  "chain": "FRYS",
+  "name": "Fry's Food And Drug - 77th St McDowell",
+  "address": "7770 E Mcdowell Rd",
+  "city": "Scottsdale",
+  "state": "AZ",
+  "zip": "85257"
+ },
+ {
+  "locationId": "66000641",
+  "chain": "FRYS",
+  "name": "Fry's Food And Drug - 35th Ave Peoria",
+  "address": "3511 W Peoria Ave",
+  "city": "Phoenix",
+  "state": "AZ",
+  "zip": "85029"
+ },
+ {
+  "locationId": "66000124",
+  "chain": "FRYS",
+  "name": "Fry's Food And Drug - Rural Southern",
+  "address": "3255 S Rural Rd",
+  "city": "Tempe",
+  "state": "AZ",
+  "zip": "85282"
+ }
+]

@@ -1,0 +1,182 @@
+[
+ {
+  "locationId": "70400770",
+  "chain": "FOOD4LESS",
+  "name": "Food 4 Less - 6th Burlington",
+  "address": "1700 W 6Th St",
+  "city": "Los Angeles",
+  "state": "CA",
+  "zip": "90017"
+ },
+ {
+  "locationId": "70300032",
+  "chain": "RALPHS",
+  "name": "Ralphs - Third Street",
+  "address": "3410 W 3Rd St",
+  "city": "Los Angeles",
+  "state": "CA",
+  "zip": "90020"
+ },
+ {
+  "locationId": "70400375",
+  "chain": "FOOD4LESS",
+  "name": "Food 4 Less - Olympic Hoover",
+  "address": "1091 S Hoover St",
+  "city": "Los Angeles",
+  "state": "CA",
+  "zip": "90006"
+ },
+ {
+  "locationId": "70300022",
+  "chain": "RALPHS",
+  "name": "Ralphs Fresh Fare - 9th Flower",
+  "address": "645 W 9Th St",
+  "city": "Los Angeles",
+  "state": "CA",
+  "zip": "90015"
+ },
+ {
+  "locationId": "70300016",
+  "chain": "RALPHS",
+  "name": "Ralphs - Wiltern",
+  "address": "670 S Western Ave",
+  "city": "Los Angeles",
+  "state": "CA",
+  "zip": "90005"
+ },
+ {
+  "locationId": "70300206",
+  "chain": "RALPHS",
+  "name": "Ralphs - HollyWest",
+  "address": "5429 Hollywood Blvd",
+  "city": "Los Angeles",
+  "state": "CA",
+  "zip": "90027"
+ },
+ {
+  "locationId": "70300294",
+  "chain": "RALPHS",
+  "name": "Ralphs - Renaissance Plaza",
+  "address": "2600 S Vermont Ave",
+  "city": "Los Angeles",
+  "state": "CA",
+  "zip": "90007"
+ },
+ {
+  "locationId": "70400381",
+  "chain": "FOOD4LESS",
+  "name": "Food 4 Less - WesternVenice",
+  "address": "1717 S Western Ave",
+  "city": "Los Angeles",
+  "state": "CA",
+  "zip": "90006"
+ },
+ {
+  "locationId": "70400766",
+  "chain": "FOOD4LESS",
+  "name": "Food 4 Less - Highland Park",
+  "address": "5100 N Figueroa St",
+  "city": "Los Angeles",
+  "state": "CA",
+  "zip": "90042"
+ },
+ {
+  "locationId": "70400363",
+  "chain": "FOOD4LESS",
+  "name": "Food 4 Less - Boyle Heights",
+  "address": "2750 E 1St St",
+  "city": "Los Angeles",
+  "state": "CA",
+  "zip": "90033"
+ },
+ {
+  "locationId": "70400359",
+  "chain": "FOOD4LESS",
+  "name": "Food 4 Less - Jefferson Park",
+  "address": "1748 S. Jefferson Blvd.",
+  "city": "Los Angeles",
+  "state": "CA",
+  "zip": "90018"
+ },
+ {
+  "locationId": "70300039",
+  "chain": "RALPHS",
+  "name": "Ralphs - La Brea",
+  "address": "260 S La Brea Ave",
+  "city": "Los Angeles",
+  "state": "CA",
+  "zip": "90036"
+ },
+ {
+  "locationId": "70300293",
+  "chain": "RALPHS",
+  "name": "Ralphs - La Brea Marketplace",
+  "address": "1233 N La Brea Ave",
+  "city": "West Hollywood",
+  "state": "CA",
+  "zip": "90038"
+ },
+ {
+  "locationId": "70300291",
+  "chain": "RALPHS",
+  "name": "Ralphs - Pico San Vincente",
+  "address": "4760 W Pico Blvd",
+  "city": "Los Angeles",
+  "state": "CA",
+  "zip": "90019"
+ },
+ {
+  "locationId": "70300060",
+  "chain": "RALPHS",
+  "name": "Ralphs - Colorado",
+  "address": "1416 E Colorado St",
+  "city": "Glendale",
+  "state": "CA",
+  "zip": "91205"
+ },
+ {
+  "locationId": "70300100",
+  "chain": "RALPHS",
+  "name": "Ralphs - Sunset",
+  "address": "7257 W Sunset Blvd",
+  "city": "Los Angeles",
+  "state": "CA",
+  "zip": "90046"
+ },
+ {
+  "locationId": "70300134",
+  "chain": "RALPHS",
+  "name": "Ralphs - Glendale Wilson",
+  "address": "211 N Glendale Ave",
+  "city": "Glendale",
+  "state": "CA",
+  "zip": "91206"
+ },
+ {
+  "locationId": "70300289",
+  "chain": "RALPHS",
+  "name": "Ralphs Fresh Fare - Wilshire Hauser",
+  "address": "5601 Wilshire Blvd",
+  "city": "Los Angeles",
+  "state": "CA",
+  "zip": "90036"
+ },
+ {
+  "locationId": "70400370",
+  "chain": "FOOD4LESS",
+  "name": "Food 4 Less - El Sereno",
+  "address": "4910 Huntington Dr S",
+  "city": "Los Angeles",
+  "state": "CA",
+  "zip": "90032"
+ },
+ {
+  "locationId": "70400330",
+  "chain": "FOOD4LESS",
+  "name": "Food 4 Less - Unicentro ANGELUS",
+  "address": "3654 E Olympic Blvd",
+  "city": "Los Angeles",
+  "state": "CA",
+  "zip": "90023"
+ }
+]

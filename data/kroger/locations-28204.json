@@ -1,0 +1,182 @@
+[
+ {
+  "locationId": "09700412",
+  "chain": "HART",
+  "name": "Harris Teeter - Myers Park Center",
+  "address": "1015 Providence Rd",
+  "city": "CHARLOTTE",
+  "state": "NC",
+  "zip": "28207"
+ },
+ {
+  "locationId": "09700061",
+  "chain": "HART",
+  "name": "Harris Teeter - Kenilworth Commons",
+  "address": "1227 East Blvd",
+  "city": "CHARLOTTE",
+  "state": "NC",
+  "zip": "28203"
+ },
+ {
+  "locationId": "09700401",
+  "chain": "HART",
+  "name": "Harris Teeter - Central Avenue",
+  "address": "1704 Central Ave",
+  "city": "CHARLOTTE",
+  "state": "NC",
+  "zip": "28205"
+ },
+ {
+  "locationId": "09700205",
+  "chain": "HART",
+  "name": "Harris Teeter - Fifth and Poplar",
+  "address": "325 W 6th St",
+  "city": "Charlotte",
+  "state": "NC",
+  "zip": "28202"
+ },
+ {
+  "locationId": "09700305",
+  "chain": "HART",
+  "name": "Harris Teeter - Sedgefield",
+  "address": "2717 South Blvd",
+  "city": "Charlotte",
+  "state": "NC",
+  "zip": "28209"
+ },
+ {
+  "locationId": "09700208",
+  "chain": "HART",
+  "name": "Harris Teeter - Cotswold",
+  "address": "112 S Sharon Amity Rd",
+  "city": "Charlotte",
+  "state": "NC",
+  "zip": "28211"
+ },
+ {
+  "locationId": "09700218",
+  "chain": "HART",
+  "name": "Harris Teeter - Park Road Shopping Center",
+  "address": "4101 Park Rd",
+  "city": "Charlotte",
+  "state": "NC",
+  "zip": "28209"
+ },
+ {
+  "locationId": "09700035",
+  "chain": "HART",
+  "name": "Harris Teeter - Park Selwyn Terrace",
+  "address": "5030 Park Rd",
+  "city": "CHARLOTTE",
+  "state": "NC",
+  "zip": "28209"
+ },
+ {
+  "locationId": "09700160",
+  "chain": "HART",
+  "name": "Harris Teeter - Morrocroft Village",
+  "address": "6701 Carnegie Blvd",
+  "city": "Charlotte",
+  "state": "NC",
+  "zip": "28211"
+ },
+ {
+  "locationId": "09700294",
+  "chain": "HART",
+  "name": "Harris Teeter - Olde Towne Village",
+  "address": "4100 Carmel Rd",
+  "city": "Charlotte",
+  "state": "NC",
+  "zip": "28226"
+ },
+ {
+  "locationId": "09700204",
+  "chain": "HART",
+  "name": "Harris Teeter - Quail Corners",
+  "address": "8538 Park Rd",
+  "city": "CHARLOTTE",
+  "state": "NC",
+  "zip": "28210"
+ },
+ {
+  "locationId": "09700171",
+  "chain": "HART",
+  "name": "Harris Teeter - Sardis Crossing",
+  "address": "1621 Sardis Rd N",
+  "city": "CHARLOTTE",
+  "state": "NC",
+  "zip": "28270"
+ },
+ {
+  "locationId": "09700004",
+  "chain": "HART",
+  "name": "Harris Teeter - Colony Place",
+  "address": "7823 Colony Rd",
+  "city": "Charlotte",
+  "state": "NC",
+  "zip": "28226"
+ },
+ {
+  "locationId": "09700258",
+  "chain": "HART",
+  "name": "Harris Teeter - Town Center Plaza",
+  "address": "8600 University City Blvd",
+  "city": "Charlotte",
+  "state": "NC",
+  "zip": "28213"
+ },
+ {
+  "locationId": "09700030",
+  "chain": "HART",
+  "name": "Harris Teeter - Arboretum",
+  "address": "3333 Pineville Matthews Rd",
+  "city": "Charlotte",
+  "state": "NC",
+  "zip": "28226"
+ },
+ {
+  "locationId": "09700472",
+  "chain": "HART",
+  "name": "Harris Teeter - The Shoppes at Davis Lake",
+  "address": "8445 Davis Lake Pkwy",
+  "city": "Charlotte",
+  "state": "NC",
+  "zip": "28269"
+ },
+ {
+  "locationId": "09700157",
+  "chain": "HART",
+  "name": "Harris Teeter - Matthews Festival",
+  "address": "1811 Matthews Township Pkwy",
+  "city": "MATTHEWS",
+  "state": "NC",
+  "zip": "28105"
+ },
+ {
+  "locationId": "09700003",
+  "chain": "HART",
+  "name": "Harris Teeter - Berewick Town Center",
+  "address": "4821 Berewick Town Center Dr",
+  "city": "Charlotte",
+  "state": "NC",
+  "zip": "28278"
+ },
+ {
+  "locationId": "09700220",
+  "chain": "HART",
+  "name": "Harris Teeter - Cochran Commons",
+  "address": "2720 W Mallard Creek Church Rd",
+  "city": "CHARLOTTE",
+  "state": "NC",
+  "zip": "28262"
+ },
+ {
+  "locationId": "09700474",
+  "chain": "HART",
+  "name": "Harris Teeter - Mint Hill Pavilion",
+  "address": "7036 Brighton Park Dr",
+  "city": "MINT HILL",
+  "state": "NC",
+  "zip": "28227"
+ }
+]

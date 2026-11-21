@@ -1,0 +1,182 @@
+[
+ {
+  "locationId": "62000115",
+  "chain": "KINGSOOPERS",
+  "name": "King Soopers - Union Station",
+  "address": "1950 Chestnut Pl",
+  "city": "Denver",
+  "state": "CO",
+  "zip": "80202"
+ },
+ {
+  "locationId": "62000029",
+  "chain": "KINGSOOPERS",
+  "name": "King Soopers - CAPITOL HILL",
+  "address": "1155 E 9Th Ave",
+  "city": "Denver",
+  "state": "CO",
+  "zip": "80218"
+ },
+ {
+  "locationId": "62000001",
+  "chain": "KINGSOOPERS",
+  "name": "King Soopers - Speer Blvd",
+  "address": "1331 Speer Blvd",
+  "city": "Denver",
+  "state": "CO",
+  "zip": "80204"
+ },
+ {
+  "locationId": "62000005",
+  "chain": "KINGSOOPERS",
+  "name": "King Soopers - MAYFAIR",
+  "address": "1355 Krameria St",
+  "city": "Denver",
+  "state": "CO",
+  "zip": "80220"
+ },
+ {
+  "locationId": "62000093",
+  "chain": "KINGSOOPERS",
+  "name": "King Soopers - Quebec Street",
+  "address": "2810 Quebec St",
+  "city": "Denver",
+  "state": "CO",
+  "zip": "80207"
+ },
+ {
+  "locationId": "62000092",
+  "chain": "KINGSOOPERS",
+  "name": "King Soopers - Commerce City Plaza",
+  "address": "4850 E 62Nd Ave",
+  "city": "Commerce City",
+  "state": "CO",
+  "zip": "80022"
+ },
+ {
+  "locationId": "62000124",
+  "chain": "KINGSOOPERS",
+  "name": "King Soopers - Glendale",
+  "address": "4600 Leetsdale Dr",
+  "city": "Glendale",
+  "state": "CO",
+  "zip": "80246"
+ },
+ {
+  "locationId": "62000057",
+  "chain": "KINGSOOPERS",
+  "name": "King Soopers - Ridge Village on 38th Ave",
+  "address": "5301 W 38th Ave",
+  "city": "Wheat Ridge",
+  "state": "CO",
+  "zip": "80212"
+ },
+ {
+  "locationId": "62000090",
+  "chain": "KINGSOOPERS",
+  "name": "King Soopers - Sloans Lake Edgewater",
+  "address": "1725 Sheridan Blvd",
+  "city": "Edgewater",
+  "state": "CO",
+  "zip": "80214"
+ },
+ {
+  "locationId": "62000150",
+  "chain": "KINGSOOPERS",
+  "name": "King Soopers - Virginia Village",
+  "address": "4201 E Arkansas Ave",
+  "city": "Denver",
+  "state": "CO",
+  "zip": "80222"
+ },
+ {
+  "locationId": "62000035",
+  "chain": "KINGSOOPERS",
+  "name": "King Soopers - Monaco Parkway",
+  "address": "890 S Monaco Pkwy",
+  "city": "Denver",
+  "state": "CO",
+  "zip": "80224"
+ },
+ {
+  "locationId": "62000003",
+  "chain": "KINGSOOPERS",
+  "name": "King Soopers - Lloyd King Center",
+  "address": "6350 Sheridan Blvd",
+  "city": "Arvada",
+  "state": "CO",
+  "zip": "80003"
+ },
+ {
+  "locationId": "62000123",
+  "chain": "KINGSOOPERS",
+  "name": "King Soopers - Central Park",
+  "address": "10406 Martin Luther King BLVD",
+  "city": "Denver",
+  "state": "CO",
+  "zip": "80238"
+ },
+ {
+  "locationId": "62000056",
+  "chain": "KINGSOOPERS",
+  "name": "King Soopers - W Evans Ave",
+  "address": "2727 W Evans Ave",
+  "city": "Denver",
+  "state": "CO",
+  "zip": "80219"
+ },
+ {
+  "locationId": "62000007",
+  "chain": "KINGSOOPERS",
+  "name": "King Soopers - W Florida Ave",
+  "address": "5125 W Florida Ave",
+  "city": "Denver",
+  "state": "CO",
+  "zip": "80219"
+ },
+ {
+  "locationId": "62000034",
+  "chain": "KINGSOOPERS",
+  "name": "King Soopers - Federal Heights",
+  "address": "1575 W 84Th Ave",
+  "city": "Denver",
+  "state": "CO",
+  "zip": "80260"
+ },
+ {
+  "locationId": "62000072",
+  "chain": "KINGSOOPERS",
+  "name": "King Soopers - University Hills",
+  "address": "2750 S Colorado Blvd",
+  "city": "Denver",
+  "state": "CO",
+  "zip": "80222"
+ },
+ {
+  "locationId": "62000014",
+  "chain": "KINGSOOPERS",
+  "name": "King Soopers - Peoria Street",
+  "address": "655 Peoria St",
+  "city": "Aurora",
+  "state": "CO",
+  "zip": "80011"
+ },
+ {
+  "locationId": "62000127",
+  "chain": "KINGSOOPERS",
+  "name": "King Soopers - Belmar",
+  "address": "7984 W Alameda Ave",
+  "city": "Lakewood",
+  "state": "CO",
+  "zip": "80226"
+ },
+ {
+  "locationId": "62000030",
+  "chain": "KINGSOOPERS",
+  "name": "King Soopers - Havana and Mississippi",
+  "address": "1155 S Havana St",
+  "city": "Aurora",
+  "state": "CO",
+  "zip": "80012"
+ }
+]

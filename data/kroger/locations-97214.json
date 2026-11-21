@@ -1,0 +1,182 @@
+[
+ {
+  "locationId": "70100135",
+  "chain": "FRED",
+  "name": "Fred Meyer - Hawthorne",
+  "address": "3805 Se Hawthorne Blvd",
+  "city": "Portland",
+  "state": "OR",
+  "zip": "97214"
+ },
+ {
+  "locationId": "70100600",
+  "chain": "FRED",
+  "name": "Fred Meyer - Hollywood West",
+  "address": "3030 Ne Weidler St",
+  "city": "Portland",
+  "state": "OR",
+  "zip": "97232"
+ },
+ {
+  "locationId": "70500205",
+  "chain": "QFC",
+  "name": "Quality Food Center - Mount Tabor",
+  "address": "5544 E Burnside St",
+  "city": "Portland",
+  "state": "OR",
+  "zip": "97215"
+ },
+ {
+  "locationId": "70100125",
+  "chain": "FRED",
+  "name": "Fred Meyer - Glisan",
+  "address": "6615 Ne Glisan St",
+  "city": "Portland",
+  "state": "OR",
+  "zip": "97213"
+ },
+ {
+  "locationId": "70100360",
+  "chain": "FRED",
+  "name": "Fred Meyer - Stadium",
+  "address": "100 NW 20Th Pl",
+  "city": "Portland",
+  "state": "OR",
+  "zip": "97209"
+ },
+ {
+  "locationId": "70500206",
+  "chain": "QFC",
+  "name": "Quality Food Center - Moreland",
+  "address": "6411 SE Milwaukie Ave",
+  "city": "Portland",
+  "state": "OR",
+  "zip": "97202"
+ },
+ {
+  "locationId": "70100253",
+  "chain": "FRED",
+  "name": "Fred Meyer - Southeast Fuel",
+  "address": "4718 SE 82nd Ave",
+  "city": "Portland",
+  "state": "OR",
+  "zip": "97266"
+ },
+ {
+  "locationId": "70100012",
+  "chain": "FRED",
+  "name": "Fred Meyer - Gateway Fuel",
+  "address": "1511 NE 92nd Ave",
+  "city": "Portland",
+  "state": "OR",
+  "zip": "97220"
+ },
+ {
+  "locationId": "70100040",
+  "chain": "FRED",
+  "name": "Fred Meyer - Burlingame",
+  "address": "7555 Sw Barbur Blvd",
+  "city": "Portland",
+  "state": "OR",
+  "zip": "97219"
+ },
+ {
+  "locationId": "70100150",
+  "chain": "FRED",
+  "name": "Fred Meyer - Interstate",
+  "address": "7404 N Interstate Ave",
+  "city": "Portland",
+  "state": "OR",
+  "zip": "97217"
+ },
+ {
+  "locationId": "70100004",
+  "chain": "FRED",
+  "name": "Fred Meyer - Burlingame Fuel",
+  "address": "8420 SW 24th Ave",
+  "city": "Portland",
+  "state": "OR",
+  "zip": "97219"
+ },
+ {
+  "locationId": "70100153",
+  "chain": "FRED",
+  "name": "Fred Meyer - Johnson Creek",
+  "address": "8955 Se 82Nd Ave",
+  "city": "Happy Valley",
+  "state": "OR",
+  "zip": "97086"
+ },
+ {
+  "locationId": "70500202",
+  "chain": "QFC",
+  "name": "Quality Food Center - West Hills",
+  "address": "7525 SW Barnes Rd",
+  "city": "Portland",
+  "state": "OR",
+  "zip": "97225"
+ },
+ {
+  "locationId": "70100285",
+  "chain": "FRED",
+  "name": "Fred Meyer - Raleigh Hills",
+  "address": "7700 Sw Beaverton Hillsdale Hwy",
+  "city": "Portland",
+  "state": "OR",
+  "zip": "97225"
+ },
+ {
+  "locationId": "70100075",
+  "chain": "FRED",
+  "name": "Fred Meyer - Division",
+  "address": "14700 Se Division St",
+  "city": "Portland",
+  "state": "OR",
+  "zip": "97236"
+ },
+ {
+  "locationId": "70100255",
+  "chain": "FRED",
+  "name": "Fred Meyer - Peninsula",
+  "address": "6850 N Lombard St",
+  "city": "Portland",
+  "state": "OR",
+  "zip": "97203"
+ },
+ {
+  "locationId": "70100240",
+  "chain": "FRED",
+  "name": "Fred Meyer - Oak Grove",
+  "address": "14700 Se Mcloughlin Blvd",
+  "city": "Oak Grove",
+  "state": "OR",
+  "zip": "97267"
+ },
+ {
+  "locationId": "70100683",
+  "chain": "FRED",
+  "name": "Fred Meyer - Grand Central",
+  "address": "2500 Columbia House Blvd",
+  "city": "Vancouver",
+  "state": "WA",
+  "zip": "98661"
+ },
+ {
+  "locationId": "70100375",
+  "chain": "FRED",
+  "name": "Fred Meyer - Tigard",
+  "address": "11565 Sw Pacific Hwy",
+  "city": "Tigard",
+  "state": "OR",
+  "zip": "97223"
+ },
+ {
+  "locationId": "70100035",
+  "chain": "FRED",
+  "name": "Fred Meyer - Beaverton",
+  "address": "11425 Sw Beaverton Hillsdale Hwy",
+  "city": "Beaverton",
+  "state": "OR",
+  "zip": "97005"
+ }
+]
