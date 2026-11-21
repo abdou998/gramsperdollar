@@ -123,6 +123,51 @@
     "soldBy": "UNIT",
     "regular": 7.49,
     "promo": 6.69
+   },
+   {
+    "id": "0088742200021",
+    "brand": "Happy Egg Co.",
+    "desc": "Happy Egg Co.\u00ae Heritage Free Range Large Blue and Brown Eggs",
+    "size": "12 ct",
+    "soldBy": "UNIT",
+    "regular": 8.99,
+    "promo": null
+   },
+   {
+    "id": "0086174500001",
+    "brand": "Vital Farms",
+    "desc": "Vital Farms\u00ae Pasture-Raised Large Brown Eggs",
+    "size": "12 ct",
+    "soldBy": "UNIT",
+    "regular": 8.49,
+    "promo": null
+   },
+   {
+    "id": "0086174500002",
+    "brand": "Vital Farms",
+    "desc": "Vital Farms\u00ae Pasture-Raised Large Brown Grade-A Organic Eggs",
+    "size": "12 ct",
+    "soldBy": "UNIT",
+    "regular": 10.99,
+    "promo": null
+   },
+   {
+    "id": "0001111016520",
+    "brand": "Private Selection",
+    "desc": "Simple Truth Organic\u00ae Pasture Raised Large Brown Eggs",
+    "size": "12 ct",
+    "soldBy": "UNIT",
+    "regular": 6.49,
+    "promo": 6
+   },
+   {
+    "id": "0081565200215",
+    "brand": "Pete and Gerrys",
+    "desc": "Pete and Gerry's\u00ae Pasture Raised Large Eggs",
+    "size": "12 ct",
+    "soldBy": "UNIT",
+    "regular": 7.99,
+    "promo": null
    }
   ]
  },
@@ -236,6 +281,78 @@
     "soldBy": "UNIT",
     "regular": 4.79,
     "promo": 3.5
+   },
+   {
+    "id": "0007039910010",
+    "brand": "Alta Dena",
+    "desc": "Alta Dena Vitamin D Whole Milk",
+    "size": "1/2 gal",
+    "soldBy": "UNIT",
+    "regular": 3.69,
+    "promo": 3.5
+   },
+   {
+    "id": "0007039910020",
+    "brand": "Alta Dena",
+    "desc": "Alta Dena Vitamin D Whole Milk",
+    "size": "1 gal",
+    "soldBy": "UNIT",
+    "regular": 5.49,
+    "promo": 4.99
+   },
+   {
+    "id": "0074236500539",
+    "brand": "Horizon Organic",
+    "desc": "Horizon Organic Lactose Free Milk - Whole Milk",
+    "size": "1/2 gal",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": null
+   },
+   {
+    "id": "0074236526495",
+    "brand": "Horizon Organic",
+    "desc": "Horizon Organic Vitamin D Whole Milk - Vitamin D Milk",
+    "size": "1/2 gal",
+    "soldBy": "UNIT",
+    "regular": 6.49,
+    "promo": null
+   },
+   {
+    "id": "0074236526497",
+    "brand": "Horizon Organic",
+    "desc": "Horizon Organic DHA Omega-3 Milk - DHA Whole Milk",
+    "size": "1/2 gal",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": null
+   },
+   {
+    "id": "0074236500679",
+    "brand": "Horizon Organic",
+    "desc": "Horizon Organic Vitamin D Whole Milk - Vitamin D Milk",
+    "size": "1 gal",
+    "soldBy": "UNIT",
+    "regular": 9.99,
+    "promo": null
+   },
+   {
+    "id": "0007085299324",
+    "brand": "Clover Sonoma",
+    "desc": "Clover Org Milk VitD UHT HG",
+    "size": "0.5 gal",
+    "soldBy": "UNIT",
+    "regular": 6.49,
+    "promo": 5.49
+   },
+   {
+    "id": "0004138309029",
+    "brand": "Lactaid",
+    "desc": "Lactaid\u00ae Calcium Enriched Whole Milk",
+    "size": "1/2 gal",
+    "soldBy": "UNIT",
+    "regular": 5.49,
+    "promo": null
    }
   ]
  },
@@ -340,6 +457,348 @@
     "soldBy": "UNIT",
     "regular": 4.99,
     "promo": 3.5
+   },
+   {
+    "id": "0005100024781",
+    "brand": "V8",
+    "desc": "V8 Energy Strawberry Banana Energy Drink Cans",
+    "size": "6 ct / 8 fl oz",
+    "soldBy": "UNIT",
+    "regular": 7.49,
+    "promo": null
+   },
+   {
+    "id": "0005385908573",
+    "brand": "Kern's",
+    "desc": "Kern's\u00ae Strawberry Banana Nectar",
+    "size": "59 fl oz",
+    "soldBy": "UNIT",
+    "regular": 4.49,
+    "promo": 4.19
+   },
+   {
+    "id": "0007965604972",
+    "brand": "Banana Boat",
+    "desc": "Banana Boat Sport Ultra Sunscreen Lotion SPF 50 Broad Spectrum Superior Endurance Vs Sweat + Water",
+    "size": "8 fl oz",
+    "soldBy": "UNIT",
+    "regular": 14.79,
+    "promo": null
+   },
+   {
+    "id": "0007965603179",
+    "brand": "Banana Boat",
+    "desc": "Banana Boat Sport Ultra Sunscreen Spray SPF 50+ Broad Spectrum Superior Endurance Vs Sweat + Water",
+    "size": "6 oz",
+    "soldBy": "UNIT",
+    "regular": 14.79,
+    "promo": null
+   },
+   {
+    "id": "0007965604971",
+    "brand": "Banana Boat",
+    "desc": "Banana Boat Sport Ultra Sunscreen Lotion SPF 30 Broad Spectrum Superior Endurance Vs Sweat + Water",
+    "size": "8 fl oz",
+    "soldBy": "UNIT",
+    "regular": 14.79,
+    "promo": null
+   },
+   {
+    "id": "0007965603178",
+    "brand": "Banana Boat",
+    "desc": "Banana Boat Sport Ultra Sunscreen Spray SPF 30 Broad Spectrum Superior Endurance Vs Sweat + Water",
+    "size": "6 oz",
+    "soldBy": "UNIT",
+    "regular": 13.99,
+    "promo": null
+   },
+   {
+    "id": "0007965601332",
+    "brand": "Banana Boat",
+    "desc": "Banana Boat Sport Ultra Sunscreen Spray SPF 50+ Broad Spectrum Superior Endurance Vs Sweat + Water",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 21.99,
+    "promo": null
+   },
+   {
+    "id": "0007965601806",
+    "brand": "Banana Boat",
+    "desc": "Banana Boat Kids Sport Sunscreen Spray SPF 50 Tear-Free Sting-Free Pediatrician Tested",
+    "size": "6 oz",
+    "soldBy": "UNIT",
+    "regular": 14.79,
+    "promo": null
+   },
+   {
+    "id": "0007965605080",
+    "brand": "Banana Boat",
+    "desc": "Banana Boat Sport Ultra Sunscreen Spray SPF 100 Broad Spectrum Superior Endurance Vs Sweat + Water",
+    "size": "6 oz",
+    "soldBy": "UNIT",
+    "regular": 15.99,
+    "promo": null
+   },
+   {
+    "id": "0007965603165",
+    "brand": "Banana Boat",
+    "desc": "Banana Boat Sport Ultra Sunscreen Spray SPF 30 Broad Spectrum Superior Endurance Vs Sweat + Water",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 21.99,
+    "promo": null
+   },
+   {
+    "id": "0007965604968",
+    "brand": "Banana Boat",
+    "desc": "Banana Boat Sport Ultra Sunscreen Lotion SPF 100 Broad Spectrum Superior Endurance Vs Sweat + Water",
+    "size": "4oz",
+    "soldBy": "UNIT",
+    "regular": 15.99,
+    "promo": null
+   },
+   {
+    "id": "0007965604663",
+    "brand": "Banana Boat",
+    "desc": "Banana Boat Deep Tanning Dry Oil Sunscreen Spray SPF 4",
+    "size": "6 oz",
+    "soldBy": "UNIT",
+    "regular": 14.49,
+    "promo": null
+   },
+   {
+    "id": "0007965602560",
+    "brand": "Banana Boat",
+    "desc": "Banana Boat Kids Sport Sunscreen Spray SPF 50 Tear-Free Sting-Free Pediatrician Tested",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 21.99,
+    "promo": null
+   },
+   {
+    "id": "0007965614029",
+    "brand": "Banana Boat",
+    "desc": "Banana Boat Sport 360 Coverage Sunscreen Mist SPF 50+ Refillable Non-Aerosol Dual Sprayer",
+    "size": "5.5 oz",
+    "soldBy": "UNIT",
+    "regular": 15.99,
+    "promo": null
+   },
+   {
+    "id": "0004133109095",
+    "brand": "GOYA",
+    "desc": "Goya\u00ae Hojas de Platano Banana Leaves",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 4.79,
+    "promo": 4.49
+   },
+   {
+    "id": "0007047000313",
+    "brand": "Yoplait",
+    "desc": "Yoplait\u2122 Original Low Fat Strawberry Banana Yogurt Cup",
+    "size": "6 oz",
+    "soldBy": "UNIT",
+    "regular": 1,
+    "promo": null
+   },
+   {
+    "id": "0001111007291",
+    "brand": "Bakery Fresh",
+    "desc": "Bakery Fresh Banana Nut Muffins with Walnut Topping",
+    "size": "4 ct / 15 oz",
+    "soldBy": "UNIT",
+    "regular": 5,
+    "promo": null
+   },
+   {
+    "id": "0085817600206",
+    "brand": "BODYARMOR",
+    "desc": "BODYARMOR\u00ae Strawberry Banana Sports Drink Bottle",
+    "size": "16 fl oz",
+    "soldBy": "UNIT",
+    "regular": 2.19,
+    "promo": null
+   },
+   {
+    "id": "0003663204284",
+    "brand": "Oikos",
+    "desc": "Oikos Pro 23g Protein Strawberry Banana Cultured Dairy Drink",
+    "size": "7 fl oz",
+    "soldBy": "UNIT",
+    "regular": 2.69,
+    "promo": null
+   },
+   {
+    "id": "0081829001280",
+    "brand": "Chobani",
+    "desc": "Chobani\u00ae Strawberry Banana on the Bottom Low Fat Greek Yogurt Cups",
+    "size": "4 ct / 5.3 oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": null
+   },
+   {
+    "id": "0088342601786",
+    "brand": "Simple Joys Bakery",
+    "desc": "Simple Joys Bakery Banana Nut Sliced Cakes",
+    "size": "14.1 oz",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": null
+   },
+   {
+    "id": "0007047040391",
+    "brand": "Yoplait",
+    "desc": "Yoplait\u2122 Original Low Fat Strawberry and Strawberry Banana Yogurt Cups",
+    "size": "8 ct / 6 oz",
+    "soldBy": "UNIT",
+    "regular": 6.79,
+    "promo": null
+   },
+   {
+    "id": "0007321400162",
+    "brand": "Mezzetta",
+    "desc": "Mezzetta\u00ae Mild Banana Pepper Rings",
+    "size": "16 fl oz",
+    "soldBy": "UNIT",
+    "regular": 4.69,
+    "promo": null
+   },
+   {
+    "id": "0007047029062",
+    "brand": "Yoplait",
+    "desc": "Yoplait\u00ae Original Smooth Style Strawberry Banana Low Fat Yogurt Tub",
+    "size": "32 oz",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": null
+   },
+   {
+    "id": "0001111014410",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae CARBmaster\u00ae Strawberry Banana Lactose Free Lowfat Yogurt Cup",
+    "size": "6 oz",
+    "soldBy": "UNIT",
+    "regular": 0.89,
+    "promo": null
+   },
+   {
+    "id": "0081162002203",
+    "brand": "Core Power",
+    "desc": "Core Power\u00ae Strawberry Banana 26g Protein Shake Bottle",
+    "size": "12 pk / 14 fl oz",
+    "soldBy": "UNIT",
+    "regular": 46.99,
+    "promo": 40
+   },
+   {
+    "id": "0081162002198",
+    "brand": "Core Power",
+    "desc": "Core Power\u00ae Strawberry Banana Protein Shake Bottle",
+    "size": "14 fl oz",
+    "soldBy": "UNIT",
+    "regular": 5.49,
+    "promo": 3.99
+   },
+   {
+    "id": "0001111014402",
+    "brand": "Kroger",
+    "desc": "Yogurt\u00ae CARBmaster\u00ae Banana Cream Pie Lactose Free Lowfat Yogurt Cup",
+    "size": "6 oz",
+    "soldBy": "UNIT",
+    "regular": 0.89,
+    "promo": null
+   },
+   {
+    "id": "0003663200839",
+    "brand": "Oikos",
+    "desc": "Oikos Triple Zero Banana Creme High Protein Nonfat Greek Yogurt Cup",
+    "size": "5.3 oz.",
+    "soldBy": "UNIT",
+    "regular": 1.79,
+    "promo": null
+   },
+   {
+    "id": "0004610000968",
+    "brand": "Sargento",
+    "desc": "Sargento\u00ae Sweet Balanced Breaks\u00ae Monterey Jack Cranberries Dark Chocolate & Banana Chips Snack Kit",
+    "size": "3 ct / 1.5 oz each",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": 4
+   },
+   {
+    "id": "0007684010035",
+    "brand": "Ben & Jerry's",
+    "desc": "Ben & Jerry's Chunky Monkey\u00ae with Fudge and Walnuts and Banana Ice Cream Pint",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": 4.99
+   },
+   {
+    "id": "0060265241931",
+    "brand": "KIND",
+    "desc": "KIND Breakfast Peanut Butter Banana Dark Chocolate, Gluten Free Breakfast Bars, 8g Protein, 6 Count",
+    "size": "6ct",
+    "soldBy": "UNIT",
+    "regular": 7.49,
+    "promo": null
+   },
+   {
+    "id": "0005215970125",
+    "brand": "Stonyfield Organic",
+    "desc": "Stonyfield Organic Kids Reduced Fat Yogurt Pouches, Strawberry Banana, 3.5 oz, 4 Ct",
+    "size": "4 ct",
+    "soldBy": "UNIT",
+    "regular": 7.29,
+    "promo": null
+   },
+   {
+    "id": "0004300020475",
+    "brand": "Jell-O",
+    "desc": "Jell-O Banana Cream Artificially Flavored Instant Pudding & Pie Filling Mix Family Size Box",
+    "size": "5.1 oz",
+    "soldBy": "UNIT",
+    "regular": 2.99,
+    "promo": 1.67
+   },
+   {
+    "id": "0003663202760",
+    "brand": "Danimals",
+    "desc": "Danimals Smoothie Strawberry and Banana Split Low Fat Dairy Drink Smoothie Bottles",
+    "size": "3.1 fl. oz., 12 pack",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": null
+   },
+   {
+    "id": "0081829001179",
+    "brand": "Chobani",
+    "desc": "Chobani\u00ae Low-Fat Greek Yogurt Strawberry Banana Drink 7oz",
+    "size": "7 fl oz",
+    "soldBy": "UNIT",
+    "regular": 2.59,
+    "promo": 2.29
+   },
+   {
+    "id": "0084886000049",
+    "brand": "GoGo Squeez",
+    "desc": "GoGo squeeZ Toy Story 5 No Sugar Added Banana Strawberry Applesauce Variety Pouches,",
+    "size": "12 ct / 3.2 oz",
+    "soldBy": "UNIT",
+    "regular": 11.29,
+    "promo": null
+   },
+   {
+    "id": "0081829001971",
+    "brand": "Chobani",
+    "desc": "Chobani Lowfat Strawberry Banana Greek Yogurt Drinks",
+    "size": "4 ct / 7 fl oz",
+    "soldBy": "UNIT",
+    "regular": 8.29,
+    "promo": null
    }
   ]
  },
@@ -452,6 +911,195 @@
     "size": "4 ct / 16 oz",
     "soldBy": "UNIT",
     "regular": 11.49,
+    "promo": null
+   },
+   {
+    "id": "0004720015260",
+    "brand": "Challenge",
+    "desc": "Challenge\u00ae Salted Butter",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 6.49,
+    "promo": 4.99
+   },
+   {
+    "id": "0004720015423",
+    "brand": "Danish Creamery",
+    "desc": "Danish Creamery European Style Salted Butter (8 oz)",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": 4.29
+   },
+   {
+    "id": "0004720015552",
+    "brand": "Challenge",
+    "desc": "Challenge\u00ae Salted Butter Cubes",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": 4.99
+   },
+   {
+    "id": "0004720035420",
+    "brand": "Danish Creamery",
+    "desc": "Danish Creamery\u00ae Sea Salted Butter Sticks",
+    "size": "1 lb",
+    "soldBy": "UNIT",
+    "regular": 7.99,
+    "promo": 6.49
+   },
+   {
+    "id": "0004720015330",
+    "brand": "Challenge",
+    "desc": "Challenge\u00ae Salted Whipped Butter Tub",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": 4.59
+   },
+   {
+    "id": "0004720015259",
+    "brand": "Challenge",
+    "desc": "Challenge\u00ae Sea Salted Butter with Canola Oil Spreadable Tub",
+    "size": "15 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": 4.59
+   },
+   {
+    "id": "0001111090593",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Butter with Olive Oil and Sea Salt Spreadable Tub",
+    "size": "15 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0003450014449",
+    "brand": "Land O' Lakes",
+    "desc": "Land O Lakes Butter with Olive Oil and Sea Salt Tub, Spreadable",
+    "size": "13 oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": null
+   },
+   {
+    "id": "0001111006497",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Spreadable Butter with Olive Oil and Sea Salt Tub BIG DEAL!",
+    "size": "30 oz",
+    "soldBy": "UNIT",
+    "regular": 7.49,
+    "promo": null
+   },
+   {
+    "id": "0003450015179",
+    "brand": "Land O' Lakes",
+    "desc": "Land O Lakes Butter with Olive Oil and Sea Salt Tub",
+    "size": "7 oz",
+    "soldBy": "UNIT",
+    "regular": 3.49,
+    "promo": 3.19
+   },
+   {
+    "id": "0003450014002",
+    "brand": "Land O' Lakes",
+    "desc": "Land O Lakes Butter with Olive Oil and Sea Salt Tub, Spreadable",
+    "size": "21 oz",
+    "soldBy": "UNIT",
+    "regular": 8.49,
+    "promo": 7.99
+   },
+   {
+    "id": "0001111003698",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Grass Fed Ghee Butter with Pink Himalayan Salt Spread",
+    "size": "14 oz",
+    "soldBy": "UNIT",
+    "regular": 15.99,
+    "promo": null
+   },
+   {
+    "id": "0086155500012",
+    "brand": "4th & Heart",
+    "desc": "4th & Heart Himalayan Pink Salt Ghee 9 oz",
+    "size": "9 oz",
+    "soldBy": "UNIT",
+    "regular": 14.99,
+    "promo": null
+   },
+   {
+    "id": "0007457030544",
+    "brand": "Haagen-Dazs",
+    "desc": "Haagen-Dazs Salted Brown Butter Cookie Ice Cream, 14oz",
+    "size": "14.0 fluid ounces",
+    "soldBy": "UNIT",
+    "regular": 6.79,
+    "promo": 6.79
+   },
+   {
+    "id": "0085006430317",
+    "brand": "David",
+    "desc": "David High Protein Bar, Salted Peanut Butter, 28g Protein",
+    "size": "1 ct",
+    "soldBy": "UNIT",
+    "regular": 3.49,
+    "promo": null
+   },
+   {
+    "id": "0005025581231",
+    "brand": "Ritter Sport",
+    "desc": "Ritter Sport Milk Chocolate Minis Assortment, Salted Caramel, Pistachio, Butter Biscuit, 5.29oz",
+    "size": "5.29 oz",
+    "soldBy": "UNIT",
+    "regular": 7.99,
+    "promo": null
+   },
+   {
+    "id": "0001740022443",
+    "brand": "Minute",
+    "desc": "Minute Ready-To-Eat Butter and Sea Salt Rice, Microwavable Rice Cups, , 2 Count",
+    "size": "8.8 onz",
+    "soldBy": "UNIT",
+    "regular": 3.19,
+    "promo": null
+   },
+   {
+    "id": "0019056968405",
+    "brand": "Green Giant",
+    "desc": "Green Giant Butter with Salt & Pepper Corn Cob Bites",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 4.59,
+    "promo": 3.99
+   },
+   {
+    "id": "0002819000111",
+    "brand": "Jolly Time",
+    "desc": "Jolly Time\u00ae Healthy Pop 100's Butter & Sea Salt Microwave Popcorn Bags",
+    "size": "10 ct / 1.2 oz",
+    "soldBy": "UNIT",
+    "regular": 6.49,
+    "promo": null
+   },
+   {
+    "id": "0081106801769",
+    "brand": "Dr Teal's",
+    "desc": "Dr Teal's\u00ae With Shea Butter & Almond Oil Epsom Salt Magnesium Soak",
+    "size": "3 lbs",
+    "soldBy": "UNIT",
+    "regular": 7.49,
+    "promo": null
+   },
+   {
+    "id": "0081106801770",
+    "brand": "Dr Teal's",
+    "desc": "Dr Teal's\u00ae Foaming Bath with Pure Epsom Salt, Soften & Moisturize with Shea Butter & Almond Oil",
+    "size": "34 fl oz",
+    "soldBy": "UNIT",
+    "regular": 6.99,
     "promo": null
    }
   ]
@@ -566,6 +1214,348 @@
     "soldBy": "UNIT",
     "regular": 4.99,
     "promo": 3.49
+   },
+   {
+    "id": "0001111083563",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Dark Brown Sugar",
+    "size": "32 oz",
+    "soldBy": "UNIT",
+    "regular": 2.99,
+    "promo": 2
+   },
+   {
+    "id": "0001111010687",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Slivered Almonds",
+    "size": "4 oz",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": null
+   },
+   {
+    "id": "0001111002677",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Graham Cracker Crumbs",
+    "size": "15 oz",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": null
+   },
+   {
+    "id": "0001111011888",
+    "brand": "Smart Way",
+    "desc": "Smart Way\u2122 Granulated Sugar",
+    "size": "4 lb",
+    "soldBy": "UNIT",
+    "regular": 2.99,
+    "promo": null
+   },
+   {
+    "id": "0001111073863",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Light Corn Syrup",
+    "size": "32 fl oz",
+    "soldBy": "UNIT",
+    "regular": 4.49,
+    "promo": null
+   },
+   {
+    "id": "0001111009384",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Mini Marshmallows",
+    "size": "10 oz",
+    "soldBy": "UNIT",
+    "regular": 1.99,
+    "promo": 1
+   },
+   {
+    "id": "0001111007365",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Milk Chocolate Chips",
+    "size": "11.5 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": 3.49
+   },
+   {
+    "id": "0066144000021",
+    "brand": "Zulka",
+    "desc": "Zulka Morena Pure Cane Sugar",
+    "size": "4 lb",
+    "soldBy": "UNIT",
+    "regular": 5.49,
+    "promo": null
+   },
+   {
+    "id": "0074759940610",
+    "brand": "Ghirardelli",
+    "desc": "Ghirardelli Premium Baking Cocoa 100% Cocoa Dutch Process Unsweetened Cocoa Powder",
+    "size": "8 ounces",
+    "soldBy": "UNIT",
+    "regular": 10.99,
+    "promo": 7.49
+   },
+   {
+    "id": "0001111088318",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Pure Cane Granulated Sugar",
+    "size": "4 lb",
+    "soldBy": "UNIT",
+    "regular": 5.29,
+    "promo": null
+   },
+   {
+    "id": "0007101205555",
+    "brand": "King Arthur Baking Company",
+    "desc": "King Arthur\u2122 Flour White Whole Wheat Flour",
+    "size": "5 lb",
+    "soldBy": "UNIT",
+    "regular": 10.79,
+    "promo": 5.49
+   },
+   {
+    "id": "0001111008915",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae 100% Pure Pumpkin",
+    "size": "15 oz",
+    "soldBy": "UNIT",
+    "regular": 2.29,
+    "promo": 1.67
+   },
+   {
+    "id": "0001111085257",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae All Purpose Baking Mix",
+    "size": "40 oz",
+    "soldBy": "UNIT",
+    "regular": 4.49,
+    "promo": null
+   },
+   {
+    "id": "0001111086116",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Unbleached Enriched All Purpose Flour",
+    "size": "5 lb",
+    "soldBy": "UNIT",
+    "regular": 2.99,
+    "promo": null
+   },
+   {
+    "id": "0003400005200",
+    "brand": "Hershey's",
+    "desc": "HERSHEY'S Natural Unsweetened Cocoa Powder Can",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 6.79,
+    "promo": 5.99
+   },
+   {
+    "id": "0001111002053",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Imitation Butter Flavor Bottle",
+    "size": "1 fl oz",
+    "soldBy": "UNIT",
+    "regular": 2.49,
+    "promo": null
+   },
+   {
+    "id": "0001580003062",
+    "brand": "C&H",
+    "desc": "C&H\u00ae Premium Pure Cane Granulated White Sugar for Holiday Baking",
+    "size": "4 lb",
+    "soldBy": "UNIT",
+    "regular": 5.49,
+    "promo": 3.99
+   },
+   {
+    "id": "0001580006232",
+    "brand": "C&H",
+    "desc": "C&H\u00ae Premium Pure Cane Light Brown Sugar for Holiday Baking",
+    "size": "2 lbs",
+    "soldBy": "UNIT",
+    "regular": 5.49,
+    "promo": null
+   },
+   {
+    "id": "0001111005453",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Clear Imitation Vanilla Extract",
+    "size": "2 fl oz",
+    "soldBy": "UNIT",
+    "regular": 2.99,
+    "promo": null
+   },
+   {
+    "id": "0004010000928",
+    "brand": "Fleischmann's",
+    "desc": "Fleischmann's\u00ae Original Active Dry Yeast Packs",
+    "size": "3 pk / 0.25 oz",
+    "soldBy": "UNIT",
+    "regular": 2.49,
+    "promo": 1.99
+   },
+   {
+    "id": "0003900004504",
+    "brand": "Libby's",
+    "desc": "Libby's 100% Pure Pumpkin",
+    "size": "15 oz",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": 2.5
+   },
+   {
+    "id": "0001111085605",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae 100% Pure Vegetable Oil",
+    "size": "48 fl oz",
+    "soldBy": "UNIT",
+    "regular": 4.49,
+    "promo": 3.99
+   },
+   {
+    "id": "0001600010810",
+    "brand": "Gold Medal",
+    "desc": "Gold Medal\u2122 Premium Quality All Natural Whole Wheat Flour",
+    "size": "5 lbs",
+    "soldBy": "UNIT",
+    "regular": 7.99,
+    "promo": null
+   },
+   {
+    "id": "0001111007377",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Semi Sweet Chocolate Baking Chips",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": 3.49
+   },
+   {
+    "id": "0001600010710",
+    "brand": "Gold Medal",
+    "desc": "Gold Medal\u2122 All Purpose Flour",
+    "size": "32 oz",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": null
+   },
+   {
+    "id": "0081857000173",
+    "brand": "Watkins",
+    "desc": "Watkins Baking Vanilla Extract",
+    "size": "1 ct / 11 fl oz",
+    "soldBy": "UNIT",
+    "regular": 16.99,
+    "promo": null
+   },
+   {
+    "id": "0001111078390",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Apple Pie Filling",
+    "size": "20 oz",
+    "soldBy": "UNIT",
+    "regular": 3.29,
+    "promo": 2.79
+   },
+   {
+    "id": "0001111002073",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Green Food Coloring",
+    "size": "1 fl oz",
+    "soldBy": "UNIT",
+    "regular": 2.29,
+    "promo": null
+   },
+   {
+    "id": "0060069900328",
+    "brand": "Jet-Puffed",
+    "desc": "Jet-Puffed Marshmallows, Bag",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 2.59,
+    "promo": null
+   },
+   {
+    "id": "0001111002067",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Red Food Coloring",
+    "size": "1 fl oz",
+    "soldBy": "UNIT",
+    "regular": 2.29,
+    "promo": null
+   },
+   {
+    "id": "0001111088007",
+    "brand": "Private Selection",
+    "desc": "Private Selection\u00ae Turbinado Cane Sugar",
+    "size": "2 lb",
+    "soldBy": "UNIT",
+    "regular": 5.29,
+    "promo": null
+   },
+   {
+    "id": "0001111089866",
+    "brand": "Kroger",
+    "desc": "Kro White Whl Wheat Flour 5 LB",
+    "size": "5lb",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": null
+   },
+   {
+    "id": "0001111085401",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae All Purpose Bleached Enriched Flour",
+    "size": "2 lbs",
+    "soldBy": "UNIT",
+    "regular": 2.19,
+    "promo": null
+   },
+   {
+    "id": "0074759961065",
+    "brand": "Ghirardelli",
+    "desc": "Ghirardelli Premium Baking Classic White Vanilla Flavored Chips",
+    "size": "11 ounces",
+    "soldBy": "UNIT",
+    "regular": 8.99,
+    "promo": 6.99
+   },
+   {
+    "id": "0001600010610",
+    "brand": "Gold Medal",
+    "desc": "Gold Medal\u2122 All Purpose Flour",
+    "size": "5 lbs",
+    "soldBy": "UNIT",
+    "regular": 4.49,
+    "promo": null
+   },
+   {
+    "id": "0001111085402",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Bleached All Purpose Flour",
+    "size": "5 lb",
+    "soldBy": "UNIT",
+    "regular": 2.99,
+    "promo": 2.5
+   },
+   {
+    "id": "0001111084624",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae All-Vegetable Shortening",
+    "size": "48 oz",
+    "soldBy": "UNIT",
+    "regular": 7.99,
+    "promo": null
+   },
+   {
+    "id": "0019600524234",
+    "brand": "Crisco",
+    "desc": "Crisco All-Vegetable Shortening, Gluten-Free",
+    "size": "48 oz",
+    "soldBy": "UNIT",
+    "regular": 9.99,
+    "promo": null
    }
   ]
  },
@@ -678,6 +1668,24 @@
     "size": "0.87 oz",
     "soldBy": "UNIT",
     "regular": 1.59,
+    "promo": null
+   },
+   {
+    "id": "0082699802175",
+    "brand": "Spicely Organics",
+    "desc": "Spicely Organics Ground Cinnamon",
+    "size": "1.4 oz",
+    "soldBy": "UNIT",
+    "regular": 8.99,
+    "promo": 8.99
+   },
+   {
+    "id": "0008370310318",
+    "brand": "Tadin",
+    "desc": "Tadin\u00ae Ground Cinnamon",
+    "size": "0.87 oz",
+    "soldBy": "UNIT",
+    "regular": 1.29,
     "promo": null
    }
   ]
@@ -792,6 +1800,177 @@
     "soldBy": "WEIGHT",
     "regular": 9.99,
     "promo": null
+   },
+   {
+    "id": "0024058150000",
+    "brand": "Simple Truth",
+    "desc": "Simple Truth\u00ae Natural Boneless & Skinless Fresh Chicken Breast Tenders",
+    "size": "1 lb",
+    "soldBy": "WEIGHT",
+    "regular": 8.49,
+    "promo": 7.99
+   },
+   {
+    "id": "0029082900000",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Boneless & Skinless Fresh Organic Chicken Breasts",
+    "size": "1 lb",
+    "soldBy": "WEIGHT",
+    "regular": 10.49,
+    "promo": 9.99
+   },
+   {
+    "id": "0020890050000",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Boneless Skinless Fresh Organic Chicken Breast Tenders",
+    "size": "1 lb",
+    "soldBy": "WEIGHT",
+    "regular": 11.49,
+    "promo": 10.99
+   },
+   {
+    "id": "0023065600000",
+    "brand": "Foster Farms",
+    "desc": "Foster Farms Free Range Boneless Skinless Chicken Breast Fillets",
+    "size": "1 lb",
+    "soldBy": "WEIGHT",
+    "regular": 9.99,
+    "promo": 7.99
+   },
+   {
+    "id": "0002370016220",
+    "brand": "Tyson",
+    "desc": "Tyson\u00ae Thin Sliced Boneless Skinless Chicken Breasts",
+    "size": "40 oz",
+    "soldBy": "UNIT",
+    "regular": 14.99,
+    "promo": null
+   },
+   {
+    "id": "0029989600000",
+    "brand": "Foster Farms",
+    "desc": "Foster Farms Organic Boneless Skinless Chicken Breast Fillets",
+    "size": "1 pk",
+    "soldBy": "WEIGHT",
+    "regular": 13.99,
+    "promo": 10.99
+   },
+   {
+    "id": "0001111031922",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Boneless & Skinless Frozen Organic Chicken Breast Thin Sliced",
+    "size": "32 oz",
+    "soldBy": "UNIT",
+    "regular": 16.99,
+    "promo": null
+   },
+   {
+    "id": "0029987600000",
+    "brand": "Foster Farms",
+    "desc": "Foster Farms Organic Boneless Skinless Chicken Breast Tenders",
+    "size": "1 pk",
+    "soldBy": "WEIGHT",
+    "regular": 14.99,
+    "promo": 11.99
+   },
+   {
+    "id": "0007274566629",
+    "brand": "Perdue",
+    "desc": "Perdue \u00ae RESERVE\u2122 Frozen Boneless Skinless Chicken Breast",
+    "size": "3 ct / 1.125 lbs",
+    "soldBy": "UNIT",
+    "regular": 10,
+    "promo": null
+   },
+   {
+    "id": "0020894850000",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Natural\u02c6 Boneless Skinless Fresh Chicken Tenderloins",
+    "size": "1 lb",
+    "soldBy": "WEIGHT",
+    "regular": 5.99,
+    "promo": 4.99
+   },
+   {
+    "id": "0001111013619",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Frozen Fully Cooked Boneless Skinless Diced Chicken Breast",
+    "size": "22 oz",
+    "soldBy": "UNIT",
+    "regular": 8.99,
+    "promo": null
+   },
+   {
+    "id": "0027071500000",
+    "brand": "Foster Farms",
+    "desc": "Foster Farms Fresh & Natural Cage Free Boneless Skinless Chicken Breasts Value Pack",
+    "size": "1 lb",
+    "soldBy": "WEIGHT",
+    "regular": 6.99,
+    "promo": 5.99
+   },
+   {
+    "id": "0001111000906",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Frozen Boneless Skinless Raw Chicken Tenderloins",
+    "size": "2.5 lb",
+    "soldBy": "UNIT",
+    "regular": 11.49,
+    "promo": 8.99
+   },
+   {
+    "id": "0001111097860",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Frozen Raw Boneless Skinless Chicken Breasts",
+    "size": "3 lb",
+    "soldBy": "UNIT",
+    "regular": 10.99,
+    "promo": 9.99
+   },
+   {
+    "id": "0001111097308",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Frozen Raw Thinly Sliced Boneless Skinless Chicken Breast Cutlets",
+    "size": "2.5 lb",
+    "soldBy": "UNIT",
+    "regular": 12.29,
+    "promo": 9.99
+   },
+   {
+    "id": "0001111067942",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Boneless Skinless Frozen Chicken Breast BIG DEAL!",
+    "size": "8 lb",
+    "soldBy": "UNIT",
+    "regular": 24.99,
+    "promo": 20
+   },
+   {
+    "id": "0002370016222",
+    "brand": "Tyson",
+    "desc": "Tyson\u00ae Boneless Skinless Chicken Breast Tenderloins",
+    "size": "40 oz",
+    "soldBy": "UNIT",
+    "regular": 15.99,
+    "promo": null
+   },
+   {
+    "id": "0001111070286",
+    "brand": "Simple Truth",
+    "desc": "Simple Truth\u00ae Natural Boneless and Skinless Chicken Breasts",
+    "size": "32 oz",
+    "soldBy": "UNIT",
+    "regular": 10,
+    "promo": null
+   },
+   {
+    "id": "0001111069750",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Frozen Garlic and Herb Seasoned Boneless Skinless Chicken Breasts",
+    "size": "40 oz",
+    "soldBy": "UNIT",
+    "regular": 11.99,
+    "promo": null
    }
   ]
  },
@@ -905,6 +2084,348 @@
     "soldBy": "UNIT",
     "regular": 7.49,
     "promo": null
+   },
+   {
+    "id": "0001952155005",
+    "brand": "Carapelli",
+    "desc": "Carapelli Organic Extra Virgin Olive Oil - 16.9oz",
+    "size": "16.9 fl oz",
+    "soldBy": "UNIT",
+    "regular": 15.99,
+    "promo": 12.99
+   },
+   {
+    "id": "0004179060321",
+    "brand": "Bertolli",
+    "desc": "Bertolli Dress & Drizz Extra Virgin Olive Oil, Rich Taste",
+    "size": "15.5 fl oz",
+    "soldBy": "UNIT",
+    "regular": 13.99,
+    "promo": 10.99
+   },
+   {
+    "id": "0083071200119",
+    "brand": "Garcia de la Cruz",
+    "desc": "Garcia de la Cruz Organic Extra Virgin Olive Oil",
+    "size": "16.9 fl oz",
+    "soldBy": "UNIT",
+    "regular": 17.99,
+    "promo": 15.99
+   },
+   {
+    "id": "0085068711050",
+    "brand": "California Olive Ranch",
+    "desc": "California Olive Ranch 100% California Extra Virgin Olive Oil 16.9 fl oz",
+    "size": "16.9 fl oz",
+    "soldBy": "UNIT",
+    "regular": 23.49,
+    "promo": null
+   },
+   {
+    "id": "0085068711042",
+    "brand": "California Olive Ranch",
+    "desc": "California Olive Ranch Chef's Bottle 100% California Extra Virgin Olive Oil 16.9 fl oz",
+    "size": "16.9 fl oz",
+    "soldBy": "UNIT",
+    "regular": 23.49,
+    "promo": null
+   },
+   {
+    "id": "0085068711030",
+    "brand": "California Olive Ranch",
+    "desc": "California Olive Ranch Extra Virgin Olive Oil 5 oz",
+    "size": "5 oz",
+    "soldBy": "UNIT",
+    "regular": 9.99,
+    "promo": null
+   },
+   {
+    "id": "0001111014538",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Nonstick Extra Virgin Olive Oil Cooking Spray",
+    "size": "5 oz",
+    "soldBy": "UNIT",
+    "regular": 4.79,
+    "promo": null
+   },
+   {
+    "id": "0007040400278",
+    "brand": "Pompeian",
+    "desc": "Smooth Extra Virgin Olive Oil, 16oz Plastic",
+    "size": "16 fl oz",
+    "soldBy": "UNIT",
+    "regular": 11.99,
+    "promo": 11.29
+   },
+   {
+    "id": "0007040400008",
+    "brand": "Pompeian",
+    "desc": "Robust Extra Virgin Olive Oil, 16 oz plastic",
+    "size": "16 fl oz",
+    "soldBy": "UNIT",
+    "regular": 11.99,
+    "promo": 11.29
+   },
+   {
+    "id": "0007040400280",
+    "brand": "Pompeian",
+    "desc": "Pompeian Smooth Extra Virgin Olive Oil - 32 fl oz",
+    "size": "32 fl oz",
+    "soldBy": "UNIT",
+    "regular": 21.99,
+    "promo": null
+   },
+   {
+    "id": "0004179000225",
+    "brand": "Bertolli",
+    "desc": "Bertolli Extra Virgin Olive Oil, Rich Taste",
+    "size": "50.7 fl oz",
+    "soldBy": "UNIT",
+    "regular": 30.99,
+    "promo": 26.99
+   },
+   {
+    "id": "0004173601014",
+    "brand": "Filippo Berio",
+    "desc": "Filippo Berio Extra Virgin Olive Oil",
+    "size": "16.9 fl oz",
+    "soldBy": "UNIT",
+    "regular": 10.99,
+    "promo": null
+   },
+   {
+    "id": "0004179021426",
+    "brand": "Bertolli",
+    "desc": "Bertolli Extra Virgin Olive Oil Rich Taste - 25.4oz",
+    "size": "25.4 fl oz",
+    "soldBy": "UNIT",
+    "regular": 19.99,
+    "promo": null
+   },
+   {
+    "id": "0004173600002",
+    "brand": "Filippo Berio",
+    "desc": "Filippo Berio 100% Italiano Extra Virgin Olive Oil 25.3 fl oz",
+    "size": "25.3",
+    "soldBy": "UNIT",
+    "regular": 16.99,
+    "promo": 13.99
+   },
+   {
+    "id": "0007040400006",
+    "brand": "Pompeian",
+    "desc": "Pompeian\u00ae Organic Extra Virgin Olive Oil",
+    "size": "16 fl oz",
+    "soldBy": "UNIT",
+    "regular": 13.49,
+    "promo": 11.49
+   },
+   {
+    "id": "0086000908282",
+    "brand": "Graza",
+    "desc": "Graza Super Sizzle Extra Virgin Olive Oil 33.8 fl oz",
+    "size": "33.8 fl oz",
+    "soldBy": "UNIT",
+    "regular": 20.99,
+    "promo": null
+   },
+   {
+    "id": "0007040400474",
+    "brand": "Pompeian",
+    "desc": "Pompeian\u00ae Gourmet Selection Extra Virgin Olive Oil",
+    "size": "32 fl oz",
+    "soldBy": "UNIT",
+    "regular": 21.99,
+    "promo": null
+   },
+   {
+    "id": "0007040400770",
+    "brand": "Pompeian",
+    "desc": "Pompeian Smooth\u00ae Extra Virgin Olive Oil",
+    "size": "25.4 fl oz",
+    "soldBy": "UNIT",
+    "regular": 15.99,
+    "promo": null
+   },
+   {
+    "id": "0001111007266",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Extra Virgin Olive Oil Cooking Spray",
+    "size": "13.5 oz",
+    "soldBy": "UNIT",
+    "regular": 9.49,
+    "promo": null
+   },
+   {
+    "id": "0001111009670",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Extra Virgin Olive Oil",
+    "size": "68 fl oz",
+    "soldBy": "UNIT",
+    "regular": 26.99,
+    "promo": null
+   },
+   {
+    "id": "0001111015167",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Cold Extracted Extra Virgin Olive Oil",
+    "size": "50.7 fl oz",
+    "soldBy": "UNIT",
+    "regular": 20.49,
+    "promo": null
+   },
+   {
+    "id": "0019589369367",
+    "brand": "Graza",
+    "desc": "Graza Drizzle Extra Virgin Olive Oil 16.9 fl oz",
+    "size": "16.9 fl oz",
+    "soldBy": "UNIT",
+    "regular": 19.99,
+    "promo": null
+   },
+   {
+    "id": "0001111016425",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Extra Virgin Olive Oil",
+    "size": "67.6 fl oz",
+    "soldBy": "UNIT",
+    "regular": 26.99,
+    "promo": null
+   },
+   {
+    "id": "0619150991082",
+    "brand": "Terra Delyssa",
+    "desc": "Terra Delyssa\u00ae Single Origin Squeezable Extra Virgin Olive Oil 25.5 Fl Oz",
+    "size": "25.5 fl oz",
+    "soldBy": "UNIT",
+    "regular": 14.49,
+    "promo": null
+   },
+   {
+    "id": "0003915301002",
+    "brand": "Colavita",
+    "desc": "Colavita Extra Virgin Olive Oil",
+    "size": "34 fl oz.",
+    "soldBy": "UNIT",
+    "regular": 29.99,
+    "promo": 27.99
+   },
+   {
+    "id": "0001111011244",
+    "brand": "Private Selection",
+    "desc": "Private Selection\u00ae High Heat Cooking Oil Avocado and Extra Virgin Olive Oil 90/10 Blend",
+    "size": "25.4 fl oz",
+    "soldBy": "UNIT",
+    "regular": 12.99,
+    "promo": null
+   },
+   {
+    "id": "0001111014543",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Nonstick Extra Virgin Olive Oil Cooking Spray Twin Pack",
+    "size": "2 ct / 5 oz",
+    "soldBy": "UNIT",
+    "regular": 8.29,
+    "promo": null
+   },
+   {
+    "id": "0001111007937",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Cold Extracted Extra Virgin Olive Oil",
+    "size": "25.36 fl oz",
+    "soldBy": "UNIT",
+    "regular": 11.99,
+    "promo": null
+   },
+   {
+    "id": "0007321000147",
+    "brand": "Star",
+    "desc": "Star\u00ae Extra Virgin Olive Oil",
+    "size": "16.9 fl oz",
+    "soldBy": "UNIT",
+    "regular": 14.99,
+    "promo": 13.99
+   },
+   {
+    "id": "0004179060033",
+    "brand": "Bertolli",
+    "desc": "Bertolli Organic Extra Virgin Olive Oil, Rich Taste",
+    "size": "25.4 fl oz",
+    "soldBy": "UNIT",
+    "regular": 19.99,
+    "promo": null
+   },
+   {
+    "id": "0085006239310",
+    "brand": "Graza",
+    "desc": "Graza Sizzle Extra Virgin Olive Oil 5 oz",
+    "size": "5 oz",
+    "soldBy": "UNIT",
+    "regular": 8.99,
+    "promo": null
+   },
+   {
+    "id": "0001111011250",
+    "brand": "Private Selection",
+    "desc": "Private Selection\u00ae 100% Extra Virgin Olive Oil Cooking Oil",
+    "size": "25.4 fl oz",
+    "soldBy": "UNIT",
+    "regular": 13.99,
+    "promo": null
+   },
+   {
+    "id": "0086897200021",
+    "brand": "Origin 846",
+    "desc": "Origin 846 Organic Extra Virgin Olive Oil",
+    "size": "28.6 fl oz",
+    "soldBy": "UNIT",
+    "regular": 20.99,
+    "promo": 19.29
+   },
+   {
+    "id": "0081001717034",
+    "brand": "Cobram Estate",
+    "desc": "Cobram Estate Extra Virgin Olive Oil",
+    "size": "33.8 fl oz",
+    "soldBy": "UNIT",
+    "regular": 24.49,
+    "promo": null
+   },
+   {
+    "id": "0001111011248",
+    "brand": "Private Selection",
+    "desc": "Private Selection\u00ae Finishing 100% Extra Virgin Olive Oil",
+    "size": "16.9 fl oz",
+    "soldBy": "UNIT",
+    "regular": 13.99,
+    "promo": null
+   },
+   {
+    "id": "0002409430002",
+    "brand": "De Cecco",
+    "desc": "De Cecco\u00ae Extra Virgin Olive Oil",
+    "size": "16.9 fl oz",
+    "soldBy": "UNIT",
+    "regular": 11.99,
+    "promo": null
+   },
+   {
+    "id": "0001111015145",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Extra Virgin Olive Oil",
+    "size": "25.36 fl oz",
+    "soldBy": "UNIT",
+    "regular": 10.49,
+    "promo": 9.49
+   },
+   {
+    "id": "0085006817413",
+    "brand": "Smash Kitchen",
+    "desc": "Smash Kitchen\u2122 Extra Virgin Olive Oil",
+    "size": "33.8 oz",
+    "soldBy": "UNIT",
+    "regular": 18.79,
+    "promo": 16.99
    }
   ]
  },
@@ -1009,6 +2530,348 @@
     "soldBy": "UNIT",
     "regular": 1.67,
     "promo": 1
+   },
+   {
+    "id": "0004900002470",
+    "brand": "Sprite",
+    "desc": "Sprite\u00ae Lemon-Lime Caffeine Free Soda Bottles",
+    "size": "6 pk / 16.9 fl oz",
+    "soldBy": "UNIT",
+    "regular": 7.49,
+    "promo": 7.49
+   },
+   {
+    "id": "0004900006724",
+    "brand": "Sprite",
+    "desc": "Sprite\u00ae Lemon-Lime Caffeine Free Soda Mini Cans",
+    "size": "10 pk / 7.5 fl oz",
+    "soldBy": "UNIT",
+    "regular": 7.99,
+    "promo": 7.49
+   },
+   {
+    "id": "0001111070205",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae 100% Lemon Juice",
+    "size": "15 fl oz",
+    "soldBy": "UNIT",
+    "regular": 2.29,
+    "promo": null
+   },
+   {
+    "id": "0004900001938",
+    "brand": "Sprite",
+    "desc": "Sprite\u00ae Lemon-Lime Caffeine Free Soda Cans",
+    "size": "24 pk / 12 fl oz",
+    "soldBy": "UNIT",
+    "regular": 16.99,
+    "promo": null
+   },
+   {
+    "id": "0004900003719",
+    "brand": "Sprite",
+    "desc": "Sprite\u00ae Zero Sugar Lemon-Lime Caffeine Free Soda Bottle",
+    "size": "20 fl oz",
+    "soldBy": "UNIT",
+    "regular": 2.99,
+    "promo": null
+   },
+   {
+    "id": "0001111049682",
+    "brand": "Kroger",
+    "desc": "Big K\u00ae Lemon Lime Caffeine Free Soda Cans",
+    "size": "12 pk / 12 fl oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": 4.49
+   },
+   {
+    "id": "0004900005545",
+    "brand": "Sprite",
+    "desc": "Sprite\u00ae Lemon-Lime Caffeine Free Soda Bottle",
+    "size": "1.25 liter",
+    "soldBy": "UNIT",
+    "regular": 2.29,
+    "promo": 1.5
+   },
+   {
+    "id": "0007800001180",
+    "brand": "7UP",
+    "desc": "7UP Lime Lemon Caffeine-Free Soda Cans",
+    "size": "12 pk / 12 fl oz",
+    "soldBy": "UNIT",
+    "regular": 11.99,
+    "promo": null
+   },
+   {
+    "id": "0004140901396",
+    "brand": "Italia Garden",
+    "desc": "Italia\u2122 Garden Lemon Juice",
+    "size": "4 fl oz",
+    "soldBy": "UNIT",
+    "regular": 1.25,
+    "promo": null
+   },
+   {
+    "id": "0004900006106",
+    "brand": "Sprite",
+    "desc": "Sprite\u00ae Lemon-Lime Caffeine Free Soda Mini Cans",
+    "size": "6 pk / 7.5 fl oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": 5.49
+   },
+   {
+    "id": "0004900009350",
+    "brand": "Sprite",
+    "desc": "Sprite\u00ae Zero Sugar Lemon-Lime Caffeine Free Soda Mini Cans",
+    "size": "10 pk / 7.5 fl oz",
+    "soldBy": "UNIT",
+    "regular": 7.99,
+    "promo": 7.49
+   },
+   {
+    "id": "0001111070207",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae 100% Lemon Juice",
+    "size": "32 fl oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0007800000034",
+    "brand": "7UP",
+    "desc": "7UP Lime Lemon Caffeine-Free Soda Bottle",
+    "size": "2 l",
+    "soldBy": "UNIT",
+    "regular": 3.49,
+    "promo": 2
+   },
+   {
+    "id": "0007800001219",
+    "brand": "7UP",
+    "desc": "7UP Lime Lemon Caffeine-Free Soda Bottles",
+    "size": "6 pk / 16.9 fl oz",
+    "soldBy": "UNIT",
+    "regular": 7.49,
+    "promo": 7.49
+   },
+   {
+    "id": "0004400006028",
+    "brand": "Oreo",
+    "desc": "OREO Lemon Creme Sandwich Cookies Family Size",
+    "size": "18.71 oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": 4.99
+   },
+   {
+    "id": "0001111011605",
+    "brand": "Smart Way",
+    "desc": "Smart Way\u2122 Lemon Sandwich Cookies",
+    "size": "25 oz",
+    "soldBy": "UNIT",
+    "regular": 2.89,
+    "promo": null
+   },
+   {
+    "id": "0007800003373",
+    "brand": "7UP",
+    "desc": "7UP Lime Lemon Caffeine-Free Soda Mini Cans",
+    "size": "10 pk / 7.5 fl oz",
+    "soldBy": "UNIT",
+    "regular": 7.99,
+    "promo": 6.99
+   },
+   {
+    "id": "0001111012796",
+    "brand": "Kroger",
+    "desc": "Big K\u00ae Lemon Lime Caffeine Free Mini Soda Cans",
+    "size": "6 pk / 7.5 fl oz",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": 2.99
+   },
+   {
+    "id": "0081006371031",
+    "brand": "poppi",
+    "desc": "Poppi Lemon Lime Prebiotic Soda Can",
+    "size": "12 fl oz",
+    "soldBy": "UNIT",
+    "regular": 2.79,
+    "promo": null
+   },
+   {
+    "id": "0004140901395",
+    "brand": "Italia Garden",
+    "desc": "Italia\u2122 Garden Lemon Juice",
+    "size": "16 fl oz",
+    "soldBy": "UNIT",
+    "regular": 3.49,
+    "promo": 3.29
+   },
+   {
+    "id": "0004140901397",
+    "brand": "Italia Garden",
+    "desc": "Italia Garden Organic Perfectly Lemon Juice",
+    "size": "4 fl oz",
+    "soldBy": "UNIT",
+    "regular": 1.65,
+    "promo": null
+   },
+   {
+    "id": "0007800000161",
+    "brand": "7UP",
+    "desc": "7UP Lime Lemon Caffeine-Free Soda Bottle",
+    "size": "20 fl oz",
+    "soldBy": "UNIT",
+    "regular": 2.99,
+    "promo": null
+   },
+   {
+    "id": "0004400006697",
+    "brand": "Oreo",
+    "desc": "OREO Thins Lemon Creme Sandwich Cookies Family Size",
+    "size": "11.78 oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": 4.99
+   },
+   {
+    "id": "0003619212215",
+    "brand": "Santa Cruz Organic",
+    "desc": "Santa Cruz Organic Pure Lemon 100% Juice Bottle",
+    "size": "16 fl oz",
+    "soldBy": "UNIT",
+    "regular": 6.49,
+    "promo": 4.49
+   },
+   {
+    "id": "0001111000642",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Lemon Wafer Cookies",
+    "size": "11 oz",
+    "soldBy": "UNIT",
+    "regular": 3.49,
+    "promo": null
+   },
+   {
+    "id": "0001111016618",
+    "brand": "Smart Way",
+    "desc": "Smart Way\u00ae Soft Baked Lemon Cookies",
+    "size": "6 ct / 5.33 oz",
+    "soldBy": "UNIT",
+    "regular": 1,
+    "promo": null
+   },
+   {
+    "id": "0003619212267",
+    "brand": "Santa Cruz Organic",
+    "desc": "Santa Cruz Organic Pure Lemon 100% Juice Bottle",
+    "size": "32 fl oz",
+    "soldBy": "UNIT",
+    "regular": 8.49,
+    "promo": 6.99
+   },
+   {
+    "id": "0007800001214",
+    "brand": "7UP",
+    "desc": "7UP Lime Lemon Caffeine-Free Soda Cans",
+    "size": "24 pk / 12 fl oz",
+    "soldBy": "UNIT",
+    "regular": 16.99,
+    "promo": 15.99
+   },
+   {
+    "id": "0001410005475",
+    "brand": "Pepperidge Farm",
+    "desc": "Pepperidge Farm Soft Baked Ojai Lemon Sugar Cookies",
+    "size": "8.6 oz",
+    "soldBy": "UNIT",
+    "regular": 5.79,
+    "promo": 4.99
+   },
+   {
+    "id": "0001111015336",
+    "brand": "Private Selection",
+    "desc": "Private Selection\u00ae Soft Baked Lemon Cookies",
+    "size": "8 ct / 8.6 oz",
+    "soldBy": "UNIT",
+    "regular": 3.79,
+    "promo": null
+   },
+   {
+    "id": "0081029100367",
+    "brand": "Tate's Bake Shop",
+    "desc": "Tate's Bake Shop Lemon Cookies",
+    "size": "7 oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": null
+   },
+   {
+    "id": "0081006371076",
+    "brand": "poppi",
+    "desc": "Poppi Lemon Lime Prebiotic Soda Cans",
+    "size": "4 pk / 12 fl oz",
+    "soldBy": "UNIT",
+    "regular": 9.99,
+    "promo": 7.99
+   },
+   {
+    "id": "0081006371154",
+    "brand": "poppi",
+    "desc": "Poppi Strawberry Lemon Prebiotic Mini Soda Cans",
+    "size": "6 pk / 7.5 fl oz",
+    "soldBy": "UNIT",
+    "regular": 13.99,
+    "promo": null
+   },
+   {
+    "id": "0004260847094",
+    "brand": "Lakewood Organic",
+    "desc": "Lakewood\u00ae Organic Pure Lemon Juice",
+    "size": "32 fl oz",
+    "soldBy": "UNIT",
+    "regular": 11.99,
+    "promo": null
+   },
+   {
+    "id": "0007587911118",
+    "brand": "Pompeii",
+    "desc": "Pompeii Juice Slenders\u2122 Lemon Juice",
+    "size": "18 ct / 0.17 oz",
+    "soldBy": "UNIT",
+    "regular": 3.49,
+    "promo": null
+   },
+   {
+    "id": "0064384380589",
+    "brand": "Premier Protein",
+    "desc": "Premier Protein\u00ae Sparkling Protein Soda Lemon Lime",
+    "size": "4 ct",
+    "soldBy": "UNIT",
+    "regular": 11.79,
+    "promo": 6.99
+   },
+   {
+    "id": "0004133103057",
+    "brand": "GOYA",
+    "desc": "Goya Lemon Juice",
+    "size": "32 fl oz",
+    "soldBy": "UNIT",
+    "regular": 4.69,
+    "promo": null
+   },
+   {
+    "id": "0005285166232",
+    "brand": "Sadaf",
+    "desc": "Sadaf\u00ae Lemon Juice",
+    "size": "32 fl oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
    }
   ]
  },
@@ -1121,6 +2984,348 @@
     "size": "8 ct / 13 oz",
     "soldBy": "UNIT",
     "regular": 2.99,
+    "promo": null
+   },
+   {
+    "id": "0007045900910",
+    "brand": "New York Bakery",
+    "desc": "New York Bakery Frozen Garlic Breadsticks",
+    "size": "6 ct",
+    "soldBy": "UNIT",
+    "regular": 4.29,
+    "promo": 2.99
+   },
+   {
+    "id": "0001111081079",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Garlic Frozen Bread",
+    "size": "6 ct / 10.5 oz",
+    "soldBy": "UNIT",
+    "regular": 2.99,
+    "promo": null
+   },
+   {
+    "id": "0001111016523",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Traditional Garlic Bread",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 2.99,
+    "promo": null
+   },
+   {
+    "id": "0001111011238",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Classic Frozen Garlic Bread",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 2.99,
+    "promo": null
+   },
+   {
+    "id": "0001111065202",
+    "brand": "Bakery Fresh",
+    "desc": "Bakery Fresh Garlic Bread",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": null
+   },
+   {
+    "id": "0001111015906",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Garlic Frozen Texas Toast BIG DEAL!",
+    "size": "16 ct",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0001111081655",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Parmesan Garlic Frozen Bread",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 2.99,
+    "promo": null
+   },
+   {
+    "id": "0007045900930",
+    "brand": "New York Bakery",
+    "desc": "New York Bakery Frozen Garlic Bread Knots",
+    "size": "6 ct",
+    "soldBy": "UNIT",
+    "regular": 4.69,
+    "promo": null
+   },
+   {
+    "id": "0004157322508",
+    "brand": "Bakery Fresh Goodness",
+    "desc": "Bakery Fresh Goodness Garlic Bread Half Loaf",
+    "size": "10 oz",
+    "soldBy": "UNIT",
+    "regular": 2.49,
+    "promo": null
+   },
+   {
+    "id": "0001111002719",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u2122 Minced Garlic",
+    "size": "4.5 oz",
+    "soldBy": "UNIT",
+    "regular": 3.49,
+    "promo": null
+   },
+   {
+    "id": "0007045985119",
+    "brand": "New York Bakery",
+    "desc": "New York Bakery Gluten Free Texas Toast with Real Garlic",
+    "size": "6 ct",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": null
+   },
+   {
+    "id": "0001111002721",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u2122 Minced Garlic",
+    "size": "32 oz",
+    "soldBy": "UNIT",
+    "regular": 8.49,
+    "promo": null
+   },
+   {
+    "id": "0007981306302",
+    "brand": "Boursin",
+    "desc": "Boursin Dairy-Free Garlic & Herbs Cheese Spread Alternative",
+    "size": "6 oz",
+    "soldBy": "UNIT",
+    "regular": 7.99,
+    "promo": null
+   },
+   {
+    "id": "0005040003255",
+    "brand": "San Luis Sourdough",
+    "desc": "San Luis Sourdough Garlic Bread",
+    "size": "24 oz",
+    "soldBy": "UNIT",
+    "regular": 6.79,
+    "promo": null
+   },
+   {
+    "id": "0087668101537",
+    "brand": "ACE Bakery",
+    "desc": "ACE Bakery\u00ae Garlic Parmigiano Pull Aparts",
+    "size": "12.5 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0007045985775",
+    "brand": "New York Bakery",
+    "desc": "New York Bakery Pesto & Garlic Cheesy Focaccia Bread",
+    "size": "9 ounce",
+    "soldBy": "UNIT",
+    "regular": 6.49,
+    "promo": null
+   },
+   {
+    "id": "0000000004659",
+    "brand": null,
+    "desc": "Green Onion Bulb",
+    "size": "1 ct",
+    "soldBy": "UNIT",
+    "regular": 1.49,
+    "promo": null
+   },
+   {
+    "id": "0078640900001",
+    "brand": "Garlic Expressions",
+    "desc": "Garlic Expressions Classic Vinaigrette Salad Dressing",
+    "size": "12.5 fl oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": null
+   },
+   {
+    "id": "0000000004093",
+    "brand": "Fresh Onions",
+    "desc": "Jumbo Yellow Onions",
+    "size": "1 lb",
+    "soldBy": "WEIGHT",
+    "regular": 1.29,
+    "promo": null
+   },
+   {
+    "id": "0000000004068",
+    "brand": null,
+    "desc": "Green Onions",
+    "size": "1 each",
+    "soldBy": "UNIT",
+    "regular": 1.29,
+    "promo": null
+   },
+   {
+    "id": "0000000004082",
+    "brand": "Fresh Onions",
+    "desc": "Jumbo Red Onions",
+    "size": "1 lb",
+    "soldBy": "WEIGHT",
+    "regular": 1.79,
+    "promo": null
+   },
+   {
+    "id": "0000000004166",
+    "brand": "Fresh Onions",
+    "desc": "Jumbo Sweet Onions",
+    "size": "1 lb",
+    "soldBy": "WEIGHT",
+    "regular": 1.99,
+    "promo": null
+   },
+   {
+    "id": "0000000004663",
+    "brand": "Fresh Onions",
+    "desc": "Jumbo White Onions",
+    "size": "1 lb",
+    "soldBy": "WEIGHT",
+    "regular": 1.49,
+    "promo": null
+   },
+   {
+    "id": "0001111091682",
+    "brand": null,
+    "desc": "Kroger\u00ae Yellow Onion 3 lb Bag",
+    "size": "3 lb",
+    "soldBy": "UNIT",
+    "regular": 3.49,
+    "promo": 2.99
+   },
+   {
+    "id": "0000000004662",
+    "brand": "Fresh Onions",
+    "desc": "Shallots",
+    "size": "1 lb",
+    "soldBy": "WEIGHT",
+    "regular": 2.99,
+    "promo": null
+   },
+   {
+    "id": "0001111011739",
+    "brand": "Smart Way",
+    "desc": "Smart Way\u2122 Garlic Powder",
+    "size": "2 oz",
+    "soldBy": "UNIT",
+    "regular": 1.5,
+    "promo": null
+   },
+   {
+    "id": "0001111068483",
+    "brand": "Private Selection",
+    "desc": "Private Selection\u00ae Garlic and Herb Whole Roasted Chicken Hot - Available 11am-8pm",
+    "size": "32 oz\u00a0",
+    "soldBy": "UNIT",
+    "regular": 8.99,
+    "promo": null
+   },
+   {
+    "id": "0000000094068",
+    "brand": null,
+    "desc": "Organic Green Onions",
+    "size": "1 each",
+    "soldBy": "UNIT",
+    "regular": 1.99,
+    "promo": null
+   },
+   {
+    "id": "0007096900006",
+    "brand": "Spice World",
+    "desc": "Spice World Minced Garlic 4.5 oz",
+    "size": "4.5 oz",
+    "soldBy": "UNIT",
+    "regular": 2.49,
+    "promo": null
+   },
+   {
+    "id": "0000000094093",
+    "brand": "Fresh Onions",
+    "desc": "Organic Jumbo Yellow Onions",
+    "size": "1 lb",
+    "soldBy": "WEIGHT",
+    "regular": 1.99,
+    "promo": null
+   },
+   {
+    "id": "0007096900009",
+    "brand": "Spice World",
+    "desc": "Spice World Minced Garlic 8 oz",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": null
+   },
+   {
+    "id": "0001111062960",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae White Onion 3 lb Bag",
+    "size": "3 lb",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0005100012910",
+    "brand": "Prego",
+    "desc": "Prego Roasted Garlic & Herb Sauce",
+    "size": "24 oz",
+    "soldBy": "UNIT",
+    "regular": 3.49,
+    "promo": null
+   },
+   {
+    "id": "0001111062959",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Red Onion 3 lb Bag",
+    "size": "3 lb",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0001111085100",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Roasted Garlic Alfredo Sauce",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 2.89,
+    "promo": null
+   },
+   {
+    "id": "0002970000147",
+    "brand": "Idahoan",
+    "desc": "Idahoan Roasted Garlic Mashed Potatoes pouch",
+    "size": "4 oz",
+    "soldBy": "UNIT",
+    "regular": 1.99,
+    "promo": 1.79
+   },
+   {
+    "id": "0000000094082",
+    "brand": "Fresh Onions",
+    "desc": "Organic Jumbo Red Onions",
+    "size": "1 lb",
+    "soldBy": "WEIGHT",
+    "regular": 2.29,
+    "promo": null
+   },
+   {
+    "id": "0001111060160",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Yellow Onion 2 lb Bag",
+    "size": "2 lb",
+    "soldBy": "UNIT",
+    "regular": 3.79,
     "promo": null
    }
   ]
@@ -1258,6 +3463,348 @@
     "soldBy": "UNIT",
     "regular": 4.29,
     "promo": 3.99
+   },
+   {
+    "id": "0060502100088",
+    "brand": "Dash",
+    "desc": "Dash Salt-Free Garlic & Herb Seasoning Blend, Kosher",
+    "size": "2.5 oz",
+    "soldBy": "UNIT",
+    "regular": 4.29,
+    "promo": 3.99
+   },
+   {
+    "id": "0000930000653",
+    "brand": "Mt. Olive",
+    "desc": "Mt. Olive Kosher Baby Dill Pickles with Sea Salt",
+    "size": "24 fl oz",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": null
+   },
+   {
+    "id": "0060502100061",
+    "brand": "Dash",
+    "desc": "Dash Salt-Free Lemon Pepper Seasoning Blend, Kosher, 2.5 oz",
+    "size": "2.5 oz",
+    "soldBy": "UNIT",
+    "regular": 4.29,
+    "promo": 3.99
+   },
+   {
+    "id": "0060502100009",
+    "brand": "Dash",
+    "desc": "Dash Onion & Herb Seasoning Blend, Salt-Free, Kosher, 2.5 oz",
+    "size": "2.5 oz",
+    "soldBy": "UNIT",
+    "regular": 4.29,
+    "promo": 3.99
+   },
+   {
+    "id": "0060502100099",
+    "brand": "Dash",
+    "desc": "Dash Table Blend Seasoning Blend, Salt-Free, Kosher, 2.5 oz",
+    "size": "2.5 oz",
+    "soldBy": "UNIT",
+    "regular": 4.29,
+    "promo": 3.99
+   },
+   {
+    "id": "0060502100022",
+    "brand": "Mrs. Dash",
+    "desc": "Dash Salt-Free Southwest Chipotle Seasoning Blend, Kosher",
+    "size": "2.5 oz",
+    "soldBy": "UNIT",
+    "regular": 4.29,
+    "promo": 3.99
+   },
+   {
+    "id": "0060502168580",
+    "brand": "Dash",
+    "desc": "Dash Salt-Free Ultimate Garlic Seasoning Blend, Kosher",
+    "size": "2.7 oz",
+    "soldBy": "UNIT",
+    "regular": 4.29,
+    "promo": 3.99
+   },
+   {
+    "id": "0060502129918",
+    "brand": "Dash",
+    "desc": "Dash Everything But the Salt Seasoning Blend, Kosher",
+    "size": "2.6 oz",
+    "soldBy": "UNIT",
+    "regular": 4.29,
+    "promo": 3.99
+   },
+   {
+    "id": "0060502100010",
+    "brand": "Mrs. Dash",
+    "desc": "Dash Salt-Free Extra Spicy Seasoning Blend, Kosher",
+    "size": "2.5 oz",
+    "soldBy": "UNIT",
+    "regular": 4.29,
+    "promo": 3.99
+   },
+   {
+    "id": "0060502101228",
+    "brand": "Dash",
+    "desc": "Dash Salt-Free Cajun Seasoning Blend, Kosher, 2.6 oz",
+    "size": "2.6 oz",
+    "soldBy": "UNIT",
+    "regular": 4.29,
+    "promo": 3.99
+   },
+   {
+    "id": "0000930000309",
+    "brand": "Mt. Olive",
+    "desc": "Mt. Olive Petite Snack Crunchers Buffalo Kosher Dill Pickles with Sea Salt",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 4.49,
+    "promo": null
+   },
+   {
+    "id": "0072806010008",
+    "brand": "Celtic Sea Salt",
+    "desc": "Celtic Sea Salt\u00ae Light Grey\u00ae 1 lb bag",
+    "size": "1 lb",
+    "soldBy": "UNIT",
+    "regular": 11.49,
+    "promo": null
+   },
+   {
+    "id": "0072806010011",
+    "brand": "Celtic Sea Salt",
+    "desc": "Celtic Sea Salt\u00ae Fine Ground 1lb Bag",
+    "size": "1 lb",
+    "soldBy": "UNIT",
+    "regular": 18.99,
+    "promo": null
+   },
+   {
+    "id": "0001111004808",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Iodized Salt",
+    "size": "26 oz",
+    "soldBy": "UNIT",
+    "regular": 1.25,
+    "promo": null
+   },
+   {
+    "id": "0001111004807",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Salt",
+    "size": "26 oz",
+    "soldBy": "UNIT",
+    "regular": 1.25,
+    "promo": null
+   },
+   {
+    "id": "0002460001001",
+    "brand": "Morton",
+    "desc": "Morton Plain Table Salt, Non-Iodized Salt, 26 oz",
+    "size": "26 oz",
+    "soldBy": "UNIT",
+    "regular": 2.59,
+    "promo": null
+   },
+   {
+    "id": "0001111071352",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Salt & Pepper Shakers Duo Pack",
+    "size": "5 oz",
+    "soldBy": "UNIT",
+    "regular": 2.79,
+    "promo": null
+   },
+   {
+    "id": "0002150000450",
+    "brand": "Lawry's",
+    "desc": "Lawry's Classic Coarse Ground Garlic Salt",
+    "size": "11 oz",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": null
+   },
+   {
+    "id": "0002150000300",
+    "brand": "Lawry's",
+    "desc": "Lawry's Economy Size Seasoned Salt",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0001111011229",
+    "brand": "Smart Way",
+    "desc": "Smart Way\u2122 Seasoned Salt",
+    "size": "4.2 oz",
+    "soldBy": "UNIT",
+    "regular": 1.5,
+    "promo": null
+   },
+   {
+    "id": "0005210074602",
+    "brand": "McCormick",
+    "desc": "McCormick Sea Salt Grinder",
+    "size": "2.12 oz",
+    "soldBy": "UNIT",
+    "regular": 4.49,
+    "promo": null
+   },
+   {
+    "id": "0002460001097",
+    "brand": "Morton",
+    "desc": "Morton All-Natural Coarse Sea Salt 17.6 oz",
+    "size": "17.6 oz",
+    "soldBy": "UNIT",
+    "regular": 4.79,
+    "promo": null
+   },
+   {
+    "id": "0002460001085",
+    "brand": "Morton",
+    "desc": "Morton\u00ae Natural Sea Salt 26 oz. Round Can",
+    "size": "26 oz",
+    "soldBy": "UNIT",
+    "regular": 4.39,
+    "promo": null
+   },
+   {
+    "id": "0002150000057",
+    "brand": "Lawry's",
+    "desc": "Lawry's Seasoned Salt",
+    "size": "4 oz",
+    "soldBy": "UNIT",
+    "regular": 3.49,
+    "promo": null
+   },
+   {
+    "id": "0002460001041",
+    "brand": "Morton",
+    "desc": "Morton Lite Salt, Low Sodium Salt Alternative, 11 oz",
+    "size": "11 oz",
+    "soldBy": "UNIT",
+    "regular": 4.29,
+    "promo": null
+   },
+   {
+    "id": "0001111090341",
+    "brand": "Private Selection",
+    "desc": "Private Selection\u00ae Fine Mediterranean Sea Salt Shaker",
+    "size": "17.6 oz",
+    "soldBy": "UNIT",
+    "regular": 4.49,
+    "promo": null
+   },
+   {
+    "id": "0001111001815",
+    "brand": "Private Selection",
+    "desc": "Private Selection\u00ae Pink Himalayan Salt Grinder",
+    "size": "3.7 oz",
+    "soldBy": "UNIT",
+    "regular": 4.29,
+    "promo": null
+   },
+   {
+    "id": "0001111015035",
+    "brand": "Private Selection",
+    "desc": "Private Selection\u00ae Coarse Sea Salt Shaker",
+    "size": "13.26 oz",
+    "soldBy": "UNIT",
+    "regular": 3.49,
+    "promo": null
+   },
+   {
+    "id": "0001111003029",
+    "brand": "Private Selection",
+    "desc": "Private Selection\u00ae Extra Fine Himalayan Pink Salt Shaker",
+    "size": "26.5 oz",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": null
+   },
+   {
+    "id": "0001111010080",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Salted Butter Sticks BIG DEAL!",
+    "size": "4 sticks / 16 oz / 2 pk",
+    "soldBy": "UNIT",
+    "regular": 8.29,
+    "promo": null
+   },
+   {
+    "id": "0003450015181",
+    "brand": "Land O' Lakes",
+    "desc": "Land O Lakes Salted Butter Half Sticks",
+    "size": "8 sticks / 16 oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": null
+   },
+   {
+    "id": "0003450015164",
+    "brand": "Land O' Lakes",
+    "desc": "Land O Lakes Salted Butter Sticks",
+    "size": "4 sticks / 16 oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": null
+   },
+   {
+    "id": "0004720015260",
+    "brand": "Challenge",
+    "desc": "Challenge\u00ae Salted Butter",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 6.49,
+    "promo": 4.99
+   },
+   {
+    "id": "0007283090612",
+    "brand": "Tillamook",
+    "desc": "Tillamook Extra Creamy Sea Salted Butter Sticks",
+    "size": "4 sticks / 16 oz",
+    "soldBy": "UNIT",
+    "regular": 6.49,
+    "promo": 5.99
+   },
+   {
+    "id": "0001111011669",
+    "brand": "Private Selection",
+    "desc": "Private Selection\u00ae Grass Fed Salted Butter Block",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0004720015423",
+    "brand": "Danish Creamery",
+    "desc": "Danish Creamery European Style Salted Butter (8 oz)",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": 4.29
+   },
+   {
+    "id": "0009396601042",
+    "brand": "Organic Valley",
+    "desc": "Organic Valley\u00ae Salted Organic Butter, 8 oz",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 5.59,
+    "promo": 4.79
+   },
+   {
+    "id": "0004720015552",
+    "brand": "Challenge",
+    "desc": "Challenge\u00ae Salted Butter Cubes",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": 4.99
    }
   ]
  },
@@ -1371,6 +3918,24 @@
     "soldBy": "UNIT",
     "regular": 8.99,
     "promo": 8.99
+   },
+   {
+    "id": "0008370310323",
+    "brand": "Tadin",
+    "desc": "Tadin\u00ae Ground Black Pepper",
+    "size": "0.87 oz",
+    "soldBy": "UNIT",
+    "regular": 1.29,
+    "promo": null
+   },
+   {
+    "id": "0001111006310",
+    "brand": "Simple Truth",
+    "desc": "Simple Truth Organic\u00ae Ground Black Pepper",
+    "size": "1.73 oz",
+    "soldBy": "UNIT",
+    "regular": 4.19,
+    "promo": 4.19
    }
   ]
  },
@@ -1524,6 +4089,24 @@
     "size": "2 lb",
     "soldBy": "UNIT",
     "regular": 17.99,
+    "promo": null
+   },
+   {
+    "id": "0062797501341",
+    "brand": "Freshpet",
+    "desc": "Freshpet Multi Protein Puppy Recipe With Green Beans And Carrots Fresh Puppy Food",
+    "size": "1.75 lb",
+    "soldBy": "UNIT",
+    "regular": 10.99,
+    "promo": null
+   },
+   {
+    "id": "0001780010964",
+    "brand": "Beneful",
+    "desc": "Beneful Dog Food Freshly Prepared Meals Simmered Chicken Medley with Carrots, Green Beans",
+    "size": "10 oz.",
+    "soldBy": "UNIT",
+    "regular": 3.29,
     "promo": null
    }
   ]
@@ -1779,6 +4362,24 @@
     "soldBy": "UNIT",
     "regular": 1.99,
     "promo": null
+   },
+   {
+    "id": "0001740022545",
+    "brand": "Mahatma",
+    "desc": "Mahatma Ready to Serve Long Grain White Rice, Moist & Fluffy Precooked Rice, Pouch",
+    "size": "8.8 onz",
+    "soldBy": "UNIT",
+    "regular": 1.99,
+    "promo": null
+   },
+   {
+    "id": "0005000057366",
+    "brand": "Fancy Feast",
+    "desc": "Fancy Feast Wet Cat Food, Medleys White Meat Chicken Tuscany With Long Grain Rice & Greens",
+    "size": "3 oz.",
+    "soldBy": "UNIT",
+    "regular": 1.49,
+    "promo": null
    }
   ]
  },
@@ -1891,6 +4492,24 @@
     "size": "16 oz",
     "soldBy": "UNIT",
     "regular": 2.79,
+    "promo": null
+   },
+   {
+    "id": "0004133102340",
+    "brand": "GOYA",
+    "desc": "Goya Organic Red Kidney Beans",
+    "size": "15.5 oz",
+    "soldBy": "UNIT",
+    "regular": 2.29,
+    "promo": null
+   },
+   {
+    "id": "0004133102503",
+    "brand": "GOYA",
+    "desc": "Goya\u00ae Central American Red Beans",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 3.99,
     "promo": null
    }
   ]
@@ -2019,6 +4638,87 @@
     "soldBy": "UNIT",
     "regular": 4.19,
     "promo": null
+   },
+   {
+    "id": "0001111012670",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Diced Tomatoes",
+    "size": "4 pk / 14.5 oz",
+    "soldBy": "UNIT",
+    "regular": 4.19,
+    "promo": null
+   },
+   {
+    "id": "0001119432384",
+    "brand": "S&W",
+    "desc": "S&W\u00ae Premium Petite-Cut Diced Tomatoes with Sweet Onions & Roasted Garlic",
+    "size": "14.5 oz",
+    "soldBy": "UNIT",
+    "regular": 2.69,
+    "promo": null
+   },
+   {
+    "id": "0072534226071",
+    "brand": "Muir Glen Organic",
+    "desc": "Muir Glen\u2122 Organic Diced Tomatoes",
+    "size": "14.5 oz",
+    "soldBy": "UNIT",
+    "regular": 4.29,
+    "promo": null
+   },
+   {
+    "id": "0001111081534",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Diced Tomatoes with Jalapenos",
+    "size": "14.5 oz",
+    "soldBy": "UNIT",
+    "regular": 1.29,
+    "promo": null
+   },
+   {
+    "id": "0001111081016",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Italian Style Diced Tomatoes",
+    "size": "14.5 oz",
+    "soldBy": "UNIT",
+    "regular": 1.29,
+    "promo": null
+   },
+   {
+    "id": "0001111081509",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae No Salt Added Diced Tomatoes",
+    "size": "14.5 oz",
+    "soldBy": "UNIT",
+    "regular": 1.29,
+    "promo": null
+   },
+   {
+    "id": "0001111084490",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Chili Ready Diced Tomatoes",
+    "size": "14.5 oz",
+    "soldBy": "UNIT",
+    "regular": 1.29,
+    "promo": null
+   },
+   {
+    "id": "0001111081018",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Petite Diced Tomatoes in Tomato Juice",
+    "size": "14.5 oz",
+    "soldBy": "UNIT",
+    "regular": 1.29,
+    "promo": null
+   },
+   {
+    "id": "0001111081533",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Diced Tomatoes in Tomato Juice",
+    "size": "14.5 oz",
+    "soldBy": "UNIT",
+    "regular": 1.29,
+    "promo": null
    }
   ]
  },
@@ -2131,6 +4831,78 @@
     "size": "80 oz",
     "soldBy": "UNIT",
     "regular": 9.99,
+    "promo": null
+   },
+   {
+    "id": "0004227200164",
+    "brand": "Amy's",
+    "desc": "Amy's\u00ae Brown Rice Black-Eyed Peas and Veggies Bowl Frozen Meal",
+    "size": "9 oz",
+    "soldBy": "UNIT",
+    "regular": 7.49,
+    "promo": null
+   },
+   {
+    "id": "0004133109129",
+    "brand": "GOYA",
+    "desc": "Goya\u00ae Peas & Carrots",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 4.49,
+    "promo": null
+   },
+   {
+    "id": "0085189300132",
+    "brand": "Freshpet",
+    "desc": "Freshpet Tender Chicken Recipe With Carrots, Peas And Brown Rice Fresh Dog Food Roll",
+    "size": "1 lb",
+    "soldBy": "UNIT",
+    "regular": 4.79,
+    "promo": null
+   },
+   {
+    "id": "0085189300116",
+    "brand": "Freshpet",
+    "desc": "Freshpet Tender Chicken Recipe with Carrots, Peas and Brown Rice Fresh Dog Food Roll",
+    "size": "6 lb",
+    "soldBy": "UNIT",
+    "regular": 20.99,
+    "promo": null
+   },
+   {
+    "id": "0085189300118",
+    "brand": "Freshpet",
+    "desc": "Freshpet Chunky Beef Recipe with Carrots, Peas and Brown Rice Fresh Dog Food Roll",
+    "size": "6 lb",
+    "soldBy": "UNIT",
+    "regular": 22.99,
+    "promo": null
+   },
+   {
+    "id": "0085189300120",
+    "brand": "Freshpet",
+    "desc": "Freshpet Chunky Beef Recipe With Carrots, Peas And Brown Rice Fresh Dog Food Roll",
+    "size": "1.5 lb",
+    "soldBy": "UNIT",
+    "regular": 8.99,
+    "promo": null
+   },
+   {
+    "id": "0062797501346",
+    "brand": "Freshpet",
+    "desc": "Freshpet Tender Chicken Recipe With Carrots, Peas & Brown Rice Fresh Dog Food Roll 4-pack",
+    "size": "4-1.5 lb",
+    "soldBy": "UNIT",
+    "regular": 25.49,
+    "promo": null
+   },
+   {
+    "id": "0062797501347",
+    "brand": "Freshpet",
+    "desc": "Freshpet Chunky Beef Recipe With Carrots, Peas And Brown Rice Fresh Dog Food Roll 4-pack",
+    "size": "4-1.5 lb",
+    "soldBy": "UNIT",
+    "regular": 26.99,
     "promo": null
    }
   ]
@@ -2545,6 +5317,348 @@
     "soldBy": "UNIT",
     "regular": 7.99,
     "promo": null
+   },
+   {
+    "id": "0007500222048",
+    "brand": "Local Hive",
+    "desc": "Local Hive\u2122 100% Raw & Unfiltered US Clover Honey",
+    "size": "24 oz",
+    "soldBy": "UNIT",
+    "regular": 13.49,
+    "promo": 11.49
+   },
+   {
+    "id": "0003877800176",
+    "brand": "Nate's Honey",
+    "desc": "Nate's\u00ae Organic Honey Organic 100% Pure Raw & Unfiltered Honey",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 9.99,
+    "promo": 9.09
+   },
+   {
+    "id": "0003877883032",
+    "brand": "Nate's Honey",
+    "desc": "Nate's Honey 100% Pure Raw & Unfiltered Honey",
+    "size": "32 oz",
+    "soldBy": "UNIT",
+    "regular": 19.29,
+    "promo": null
+   },
+   {
+    "id": "0001870000020",
+    "brand": "Aunt Sue's",
+    "desc": "Aunt Sue's\u00ae Raw & Unfiltered Pure Wildflower Honey",
+    "size": "32 oz",
+    "soldBy": "UNIT",
+    "regular": 16.99,
+    "promo": null
+   },
+   {
+    "id": "0085136100533",
+    "brand": "Carmichael\u2019s Honey",
+    "desc": "Carmichael's\u00ae 100% Pure & Raw Unfiltered Honey Bottle",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 7.49,
+    "promo": null
+   },
+   {
+    "id": "0085136100578",
+    "brand": "Carmichael\u2019s Honey",
+    "desc": "Carmichael\u2019s\u00ae Pure Raw & Unfiltered Organic Honey",
+    "size": "32 oz",
+    "soldBy": "UNIT",
+    "regular": 16.79,
+    "promo": 13.49
+   },
+   {
+    "id": "0085136100576",
+    "brand": "Carmichael\u2019s Honey",
+    "desc": "Carmichael's\u2122 Organic Honey Bear",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": 6.39
+   },
+   {
+    "id": "0085136100577",
+    "brand": "Carmichael\u2019s Honey",
+    "desc": "Carmichael\u2019s\u00ae Honey Organic Raw & Unfiltered Honey",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 10.99,
+    "promo": null
+   },
+   {
+    "id": "0003877800116",
+    "brand": "Nate's Honey",
+    "desc": "Nate's Honey Chili Pepper-Infused Hot Honey",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 10.49,
+    "promo": null
+   },
+   {
+    "id": "0003877800120",
+    "brand": "Nate's Honey",
+    "desc": "Nate's Honey New Zealand Manuka Honey MGO 83+ UMF\u2122 5+",
+    "size": "13.2 oz",
+    "soldBy": "UNIT",
+    "regular": 31.99,
+    "promo": 28.99
+   },
+   {
+    "id": "0085001571722",
+    "brand": "Mike's Hot Honey",
+    "desc": "Mike's Hot Honey Extra Hot Mini Jar",
+    "size": "1.55 oz",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": 2.5
+   },
+   {
+    "id": "0003877800122",
+    "brand": "Nate's Honey",
+    "desc": "Nate's\u00ae Raw Manuka Honey New Zealand MGO 263+ UMF Certified 10+",
+    "size": "13.2 oz",
+    "soldBy": "UNIT",
+    "regular": 31.99,
+    "promo": null
+   },
+   {
+    "id": "0086537200000",
+    "brand": "Mike's Hot Honey",
+    "desc": "Mike's Hot Honey",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 13.99,
+    "promo": 12.99
+   },
+   {
+    "id": "0001113702424",
+    "brand": "Fischer Honey",
+    "desc": "Fischer's\u2122 Clover U.S. Grade A 100% Raw & Unfiltered Honey",
+    "size": "24 oz",
+    "soldBy": "UNIT",
+    "regular": 13.49,
+    "promo": 9.99
+   },
+   {
+    "id": "0001113700024",
+    "brand": "Fischer Honey",
+    "desc": "Fischer's\u2122 Raw & Unfiltered Honey",
+    "size": "24 oz",
+    "soldBy": "UNIT",
+    "regular": 13.49,
+    "promo": 9.99
+   },
+   {
+    "id": "0085001571719",
+    "brand": "Mike's Hot Honey",
+    "desc": "Mike's Hot Honey Mini Jar",
+    "size": "1.55 oz",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": 2.5
+   },
+   {
+    "id": "0085001571710",
+    "brand": "Mike's Hot Honey",
+    "desc": "Mike's Hot Honey Extra Hot",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 13.99,
+    "promo": 12.99
+   },
+   {
+    "id": "0003877800149",
+    "brand": "Nate's Honey",
+    "desc": "Nate's\u00ae 100% Raw Manuka UMF\u2122 Honey 10 pk",
+    "size": "10 ct",
+    "soldBy": "UNIT",
+    "regular": 23.99,
+    "promo": null
+   },
+   {
+    "id": "0003877800144",
+    "brand": "Nate's Honey",
+    "desc": "Nate's\u00ae Hot Honey Minis Single-Serve Hot Honey Packets",
+    "size": "9.8 oz",
+    "soldBy": "UNIT",
+    "regular": 9.99,
+    "promo": null
+   },
+   {
+    "id": "0001111016479",
+    "brand": "Simple Truth",
+    "desc": "Simple Truth Organic\u00ae Unfiltered Raw Honey",
+    "size": "24 oz",
+    "soldBy": "UNIT",
+    "regular": 11.49,
+    "promo": null
+   },
+   {
+    "id": "0007500244412",
+    "brand": "Organic Hive",
+    "desc": "Organic Hive Raw & Unfiltered Honey",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 8.99,
+    "promo": null
+   },
+   {
+    "id": "0007500270090",
+    "brand": "Local Hive",
+    "desc": "Local Hive\u2122 Original Hot Honey",
+    "size": "9 oz",
+    "soldBy": "UNIT",
+    "regular": 11.99,
+    "promo": 11.29
+   },
+   {
+    "id": "0001113752424",
+    "brand": "Jamie's Hive to Table",
+    "desc": "Jamie's Hive to Table\u00ae 100% Pure Raw Honey & Honeycomb",
+    "size": "24 oz",
+    "soldBy": "UNIT",
+    "regular": 18.49,
+    "promo": 17.29
+   },
+   {
+    "id": "0001111015191",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Hot Honey",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 7.99,
+    "promo": null
+   },
+   {
+    "id": "0001111016447",
+    "brand": "Private Selection",
+    "desc": "Private Selection\u00ae Wildflower Honey",
+    "size": "32 oz",
+    "soldBy": "UNIT",
+    "regular": 11.99,
+    "promo": null
+   },
+   {
+    "id": "0007500223024",
+    "brand": "Local Hive",
+    "desc": "Local Hive\u2122 100% Raw & Unfiltered US Wildflower Honey",
+    "size": "24 oz",
+    "soldBy": "UNIT",
+    "regular": 13.49,
+    "promo": 11.49
+   },
+   {
+    "id": "0001111016458",
+    "brand": "Private Selection",
+    "desc": "Private Selection\u00ae Raw and Unfiltered Wildflower Honey",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 10.29,
+    "promo": null
+   },
+   {
+    "id": "0007500200024",
+    "brand": "Local Hive",
+    "desc": "Local Hive\u2122 100% US Honey",
+    "size": "24 oz",
+    "soldBy": "UNIT",
+    "regular": 13.49,
+    "promo": 11.49
+   },
+   {
+    "id": "0001111003564",
+    "brand": "Private Selection",
+    "desc": "Private Selection\u00ae Honey Fig Spread",
+    "size": "10 oz",
+    "soldBy": "UNIT",
+    "regular": 5.29,
+    "promo": null
+   },
+   {
+    "id": "0001111016459",
+    "brand": "Private Selection",
+    "desc": "Private Selection\u00ae Raw and Unfiltered Clover Honey",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 10.29,
+    "promo": null
+   },
+   {
+    "id": "0005150071523",
+    "brand": "Smucker's",
+    "desc": "Smucker's Goober Peanut Butter & Honey Spread Stripes",
+    "size": "18 oz",
+    "soldBy": "UNIT",
+    "regular": 4.79,
+    "promo": null
+   },
+   {
+    "id": "0071006912890",
+    "brand": "Gefen",
+    "desc": "Gefen Honey Bear Regular",
+    "size": "12 ounces",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": 5.99
+   },
+   {
+    "id": "0001111015190",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Whipped Clover Honey",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 8.99,
+    "promo": null
+   },
+   {
+    "id": "0007500244424",
+    "brand": "Organic Hive",
+    "desc": "Organic Hive\u2122 Raw & Unfiltered Honey",
+    "size": "24 oz",
+    "soldBy": "UNIT",
+    "regular": 16.99,
+    "promo": 15.79
+   },
+   {
+    "id": "0001111016446",
+    "brand": "Private Selection",
+    "desc": "Private Selection\u00ae Scotch Bonnet Pepper Hot Honey Infused with Chilies",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 7.99,
+    "promo": null
+   },
+   {
+    "id": "0001870000044",
+    "brand": "Sue Bee",
+    "desc": "Sue Bee\u00ae Premium Clover Honey Bear",
+    "size": "24 oz",
+    "soldBy": "UNIT",
+    "regular": 13.49,
+    "promo": null
+   },
+   {
+    "id": "0001113752428",
+    "brand": "Jamie's Hive to Table",
+    "desc": "Jamie's Hive to Table\u00ae 100% Pure Wildflower Honey With Comb",
+    "size": "24 oz",
+    "soldBy": "UNIT",
+    "regular": 18.49,
+    "promo": 17.29
+   },
+   {
+    "id": "0001870000928",
+    "brand": "Sue Bee",
+    "desc": "Sue Bee\u00ae SoCal Raw & Unfiltered Wildflower Pure Honey",
+    "size": "24 oz",
+    "soldBy": "UNIT",
+    "regular": 11.99,
+    "promo": null
    }
   ]
  },
@@ -2657,6 +5771,348 @@
     "size": "16 fl oz",
     "soldBy": "UNIT",
     "regular": 11.49,
+    "promo": null
+   },
+   {
+    "id": "0003700094567",
+    "brand": "Crest",
+    "desc": "Crest Mouthwash Pro-Health Enamel & Cavity Protection Alcohol Free Fresh Mint",
+    "size": "33.8 fl oz",
+    "soldBy": "UNIT",
+    "regular": 10.99,
+    "promo": 10.29
+   },
+   {
+    "id": "0069702950518",
+    "brand": "Therabreath",
+    "desc": "TheraBreath Fresh Breath Whitening Mouthwash Dazzling Mint Alcohol-Free",
+    "size": "16 fl oz",
+    "soldBy": "UNIT",
+    "regular": 11.99,
+    "promo": null
+   },
+   {
+    "id": "0069702967625",
+    "brand": "Therabreath",
+    "desc": "TheraBreath Fresh Breath Mouthwash Icy Mint Alcohol-Free",
+    "size": "1 l",
+    "soldBy": "UNIT",
+    "regular": 16.99,
+    "promo": null
+   },
+   {
+    "id": "0004116709614",
+    "brand": "ACT",
+    "desc": "ACT Total Care Anticavity Fluoride Mouthwash with Zero Alcohol Fresh Mint",
+    "size": "33.8 fl oz",
+    "soldBy": "UNIT",
+    "regular": 11.79,
+    "promo": null
+   },
+   {
+    "id": "0004126001916",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Alcohol Free Fresh Breath Mouthwash Ice Mint",
+    "size": "16 fl oz",
+    "soldBy": "UNIT",
+    "regular": 6.49,
+    "promo": null
+   },
+   {
+    "id": "0003500067112",
+    "brand": "Colgate",
+    "desc": "Colgate Optic White Advanced Whitening Mouthwash with Icy Fresh Mint Flavor and 2% Hydrogen Peroxide",
+    "size": "32 fl oz",
+    "soldBy": "UNIT",
+    "regular": 8.99,
+    "promo": null
+   },
+   {
+    "id": "0004126002352",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae 6 in 1 Care Anticavity Mouthwash Fresh Mint Zero Alcohol",
+    "size": "33.8 fl oz",
+    "soldBy": "UNIT",
+    "regular": 4.79,
+    "promo": null
+   },
+   {
+    "id": "0004126002020",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Mouthwash Powerful Fresh Mint",
+    "size": "33.8 fl oz",
+    "soldBy": "UNIT",
+    "regular": 5.29,
+    "promo": null
+   },
+   {
+    "id": "0004126002018",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Pre-Brush Dental Rinse Mouthwash Fresh Mint",
+    "size": "24 fl oz",
+    "soldBy": "UNIT",
+    "regular": 5.29,
+    "promo": null
+   },
+   {
+    "id": "0007732646016",
+    "brand": "Tom's of Maine",
+    "desc": "Tom's of Maine Natural Wicked Fresh! Mouthwash with Fluoride in Cool Mountain Mint",
+    "size": "16 fl oz",
+    "soldBy": "UNIT",
+    "regular": 7.99,
+    "promo": null
+   },
+   {
+    "id": "0069702910090",
+    "brand": "Therabreath",
+    "desc": "TheraBreath Fresh Breath Mouthwash Mild Mint Alcohol-Free",
+    "size": "33.8 fl oz (1 l)",
+    "soldBy": "UNIT",
+    "regular": 16.99,
+    "promo": null
+   },
+   {
+    "id": "0069736600060",
+    "brand": "Smart Mouth",
+    "desc": "SmartMouth\u2122 Original Mouthwash Dual Bottle Fresh Mint",
+    "size": "16 fl oz",
+    "soldBy": "UNIT",
+    "regular": 11.99,
+    "promo": null
+   },
+   {
+    "id": "0069702913394",
+    "brand": "Therabreath",
+    "desc": "TheraBreath Fresh Breath Whitening Mouthwash Dazzling Mint Alcohol-Free",
+    "size": "1 l",
+    "soldBy": "UNIT",
+    "regular": 18.99,
+    "promo": null
+   },
+   {
+    "id": "0003700073507",
+    "brand": "Crest",
+    "desc": "Crest Mouthwash 3D White Fresh Whitening Alcohol-Free Energizing Mint Flavor",
+    "size": "33.8 fl oz",
+    "soldBy": "UNIT",
+    "regular": 10.99,
+    "promo": null
+   },
+   {
+    "id": "0082785402537",
+    "brand": "Colgate",
+    "desc": "Colgate Optic White Stain Fighter Teeth Whitening Anti-Cavity Toothpaste Gel in Fresh Mint Flavor",
+    "size": "3.8 oz",
+    "soldBy": "UNIT",
+    "regular": 6.79,
+    "promo": null
+   },
+   {
+    "id": "0003700090785",
+    "brand": "Crest",
+    "desc": "Crest Plus Scope Outlast Fresh Toothpaste, Outlast Mint, 5.4 oz",
+    "size": "5.4 oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": 3.99
+   },
+   {
+    "id": "0003700051306",
+    "brand": "Crest",
+    "desc": "Crest Whitening Toothpaste Baking Soda & Peroxide Fresh Mint",
+    "size": "4.2 oz",
+    "soldBy": "UNIT",
+    "regular": 2.79,
+    "promo": null
+   },
+   {
+    "id": "0031015808111",
+    "brand": "Sensodyne",
+    "desc": "Sensodyne Toothpaste For Sensitive Teeth And Cavity Protection Fresh Mint Sensitivity Protection",
+    "size": "4 oz",
+    "soldBy": "UNIT",
+    "regular": 7.99,
+    "promo": null
+   },
+   {
+    "id": "0003700051160",
+    "brand": "Crest",
+    "desc": "Crest Whitening Toothpaste Plus Baking Soda & Peroxide Fresh Mint",
+    "size": "5.7 oz",
+    "soldBy": "UNIT",
+    "regular": 3.29,
+    "promo": null
+   },
+   {
+    "id": "0003320018053",
+    "brand": "Arm & Hammer",
+    "desc": "ARM & HAMMER Complete Care Toothpaste Fresh Mint Anticavity Fluoride Whole Mouth Protection",
+    "size": "6 oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": 3.99
+   },
+   {
+    "id": "0082785400189",
+    "brand": "Colgate",
+    "desc": "Colgate Total Active Prevention Fresh Mint Toothpaste",
+    "size": "5.1 oz",
+    "soldBy": "UNIT",
+    "regular": 7.29,
+    "promo": null
+   },
+   {
+    "id": "0082785402541",
+    "brand": "Colgate",
+    "desc": "Colgate Optic White Purple Teeth Whitening Toothpaste with Fluoride in Fresh Mint",
+    "size": "3.8 oz",
+    "soldBy": "UNIT",
+    "regular": 9.29,
+    "promo": 8.49
+   },
+   {
+    "id": "0003700012220",
+    "brand": "Crest",
+    "desc": "Crest Toothpaste Plus Baking Soda & Peroxide Whitening Fresh Mint",
+    "size": "3 pk / 5.7 oz",
+    "soldBy": "UNIT",
+    "regular": 6.79,
+    "promo": null
+   },
+   {
+    "id": "0007094200146",
+    "brand": "GUM",
+    "desc": "GUM\u00ae Professional Clean Fresh Mint Extra Strong Flossers",
+    "size": "150 ct",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": 4.19
+   },
+   {
+    "id": "0004126034974",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Maximum Strength Extra Whitening Sensitive Toothpaste Fresh Mint",
+    "size": "4 oz",
+    "soldBy": "UNIT",
+    "regular": 5.49,
+    "promo": null
+   },
+   {
+    "id": "0031015808189",
+    "brand": "Sensodyne",
+    "desc": "Sensodyne Toothpaste For Sensitive Teeth and Cavity Protection Fresh Mint Sensitivity Protection",
+    "size": "2 ct / 4 oz",
+    "soldBy": "UNIT",
+    "regular": 13.49,
+    "promo": null
+   },
+   {
+    "id": "0081915602003",
+    "brand": "Hello",
+    "desc": "hello Epic Whitening Charcoal Fluoride Free Toothpaste in Fresh Mint",
+    "size": "4.0 oz",
+    "soldBy": "UNIT",
+    "regular": 7.99,
+    "promo": null
+   },
+   {
+    "id": "0031015835691",
+    "brand": "Sensodyne",
+    "desc": "Pronamel Active Shield Toothpaste For Sensitive Teeth and Cavity Protection Fresh Mint",
+    "size": "3.4 oz",
+    "soldBy": "UNIT",
+    "regular": 7.99,
+    "promo": 7.49
+   },
+   {
+    "id": "0005310038496",
+    "brand": "Parodontax",
+    "desc": "Parodontax Complete Protection Daily Fluoride Anticavity and Antigingivitis Toothpaste Fresh Mint",
+    "size": "3.4 oz",
+    "soldBy": "UNIT",
+    "regular": 8.49,
+    "promo": null
+   },
+   {
+    "id": "0004858210050",
+    "brand": "Biotene",
+    "desc": "Biotene Dry Mouth Fluoride Toothpaste Fresh Mint Helps Prevent Cavities & Strengthen Teeth",
+    "size": "4.3 oz",
+    "soldBy": "UNIT",
+    "regular": 10.99,
+    "promo": null
+   },
+   {
+    "id": "0082785401800",
+    "brand": "Colgate",
+    "desc": "Colgate Total Active Prevention Gum Protect Whitening Toothpaste in Fresh Mint Paste",
+    "size": "3 oz",
+    "soldBy": "UNIT",
+    "regular": 10.49,
+    "promo": null
+   },
+   {
+    "id": "0082785402690",
+    "brand": "Colgate",
+    "desc": "Colgate Max Fresh Anti-Cavity Fluoride Toothpaste in Watermelon Blast with Mint",
+    "size": "4.5 oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": 4.99
+   },
+   {
+    "id": "0082785402689",
+    "brand": "Colgate",
+    "desc": "Colgate Max Fresh Anti-Cavity Fluoride Toothpaste in Pineapple Coconut Crush with Mint",
+    "size": "4.5 oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": 4.99
+   },
+   {
+    "id": "0000980000102",
+    "brand": "Tic Tac",
+    "desc": "Tic Tac\u00ae Freshmints",
+    "size": "1.7 oz",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": null
+   },
+   {
+    "id": "0004858215942",
+    "brand": "Biotene",
+    "desc": "Biotene Dry Mouth Lozenges Refreshing Mint Sugar Free Freshens Breath",
+    "size": "27 ct",
+    "soldBy": "UNIT",
+    "regular": 11.49,
+    "promo": null
+   },
+   {
+    "id": "0003700085193",
+    "brand": "Crest",
+    "desc": "Crest Plus Scope Minty Fresh Toothpaste, Minty Fresh, 5.4 oz",
+    "size": "5.4 oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": 3.99
+   },
+   {
+    "id": "0003700085379",
+    "brand": "Crest",
+    "desc": "Crest + Scope Whitening Toothpaste Minty Fresh Complete Value Pack",
+    "size": "2 pk / 5.4 oz",
+    "soldBy": "UNIT",
+    "regular": 7.49,
+    "promo": null
+   },
+   {
+    "id": "0003700091270",
+    "brand": "Crest",
+    "desc": "Crest + Scope Complete Whitening Toothpaste Minty Fresh",
+    "size": "3 pk / 5.4 oz",
+    "soldBy": "UNIT",
+    "regular": 10.29,
     "promo": null
    }
   ]
@@ -2821,6 +6277,24 @@
     "soldBy": "UNIT",
     "regular": 5.49,
     "promo": null
+   },
+   {
+    "id": "0063486895121",
+    "brand": "Traeger\u00ae",
+    "desc": "Traeger\u00ae Brown Sugar Paprika and Garlic Rub",
+    "size": "7 oz",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": 5.79
+   },
+   {
+    "id": "0088877707791",
+    "brand": "Everyday Living",
+    "desc": "Everyday Living Waffle Kitchen Towels - Paprika",
+    "size": "2 pk",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": null
    }
   ]
  },
@@ -2934,6 +6408,33 @@
     "soldBy": "UNIT",
     "regular": 4.99,
     "promo": null
+   },
+   {
+    "id": "0085593000193",
+    "brand": "Aleia's",
+    "desc": "Aleia's\u00ae Italian Bread Crumbs",
+    "size": "7 oz",
+    "soldBy": "UNIT",
+    "regular": 7.49,
+    "promo": 6.99
+   },
+   {
+    "id": "0081441702396",
+    "brand": "Jacobsen Salt Co.",
+    "desc": "Jacobsen Pure Italian Fine Sea Salt",
+    "size": "1.8 lb",
+    "soldBy": "UNIT",
+    "regular": 11.79,
+    "promo": null
+   },
+   {
+    "id": "0085002114506",
+    "brand": "Kooshy Croutons",
+    "desc": "Kooshy Italiano Sourdough Panko Bread Crumbs",
+    "size": "7.5 oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": 4.29
    }
   ]
  },
@@ -3047,6 +6548,24 @@
     "soldBy": "UNIT",
     "regular": 1.79,
     "promo": 1
+   },
+   {
+    "id": "0001111090078",
+    "brand": "Simple Truth",
+    "desc": "Simple Truth\u00ae Pole and Line Skipjack Chunk Light Tuna in Spring Water with Sea Salt",
+    "size": "5 oz",
+    "soldBy": "UNIT",
+    "regular": 2.49,
+    "promo": null
+   },
+   {
+    "id": "0008660000020",
+    "brand": "Bumble Bee",
+    "desc": "Bumble Bee\u00ae Chunk Light Tuna in Water",
+    "size": "5 oz",
+    "soldBy": "UNIT",
+    "regular": 1.49,
+    "promo": null
    }
   ]
  },
@@ -3224,6 +6743,69 @@
     "soldBy": "UNIT",
     "regular": 3.89,
     "promo": 3.79
+   },
+   {
+    "id": "0007227338765",
+    "brand": "S&W",
+    "desc": "S&W\u00ae Premium Black Beans",
+    "size": "15 oz",
+    "soldBy": "UNIT",
+    "regular": 2.29,
+    "promo": 1.99
+   },
+   {
+    "id": "0007152401767",
+    "brand": "La Preferida",
+    "desc": "La Preferida\u00ae Black Beans",
+    "size": "15 oz",
+    "soldBy": "UNIT",
+    "regular": 1.79,
+    "promo": 1.59
+   },
+   {
+    "id": "0008831300136",
+    "brand": "Ducal",
+    "desc": "Ducal\u00ae Black Refried Beans",
+    "size": "15 oz",
+    "soldBy": "UNIT",
+    "regular": 2.99,
+    "promo": 2.79
+   },
+   {
+    "id": "0001111006385",
+    "brand": "Simple Truth Organic",
+    "desc": "STO Seasoned Black Beans Each",
+    "size": "15.5oz",
+    "soldBy": "UNIT",
+    "regular": 1.69,
+    "promo": null
+   },
+   {
+    "id": "0004227200551",
+    "brand": "Amy's",
+    "desc": "Amy's Organic Refried Black Beans",
+    "size": "15.4 oz",
+    "soldBy": "UNIT",
+    "regular": 5.49,
+    "promo": null
+   },
+   {
+    "id": "0001111012126",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Low Sodium Black Beans BIG DEAL!",
+    "size": "4 ct / 15 oz",
+    "soldBy": "UNIT",
+    "regular": 5.49,
+    "promo": null
+   },
+   {
+    "id": "0004133102067",
+    "brand": "GOYA",
+    "desc": "Goya Black Bean Soup",
+    "size": "15 oz",
+    "soldBy": "UNIT",
+    "regular": 2.49,
+    "promo": null
    }
   ]
  },
@@ -3623,6 +7205,51 @@
     "soldBy": "UNIT",
     "regular": 2.49,
     "promo": null
+   },
+   {
+    "id": "0009396600203",
+    "brand": "Organic Valley",
+    "desc": "Organic Valley\u00ae 4% Milkfat Small Curd Organic Cottage Cheese",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 6.69,
+    "promo": null
+   },
+   {
+    "id": "0004990000030",
+    "brand": "Knudsen",
+    "desc": "Knudsen Cottage Doubles Lowfat Cottage Cheese & Pineapple Topping 2% Milkfat",
+    "size": "4.7 oz (133g)",
+    "soldBy": "UNIT",
+    "regular": 1.79,
+    "promo": 1.67
+   },
+   {
+    "id": "0004990000029",
+    "brand": "Knudsen",
+    "desc": "Knudsen Cottage Doubles Low Fat Cottage Cheese & Peach Topping 2% Milkfat",
+    "size": "4.7 oz (133g)",
+    "soldBy": "UNIT",
+    "regular": 1.79,
+    "promo": 1.67
+   },
+   {
+    "id": "0004990000031",
+    "brand": "Knudsen",
+    "desc": "Knudsen Cottage Doubles Low Fat Cottage Cheese & Strawberry Topping 2% Milkfat",
+    "size": "4.7 oz (133g)",
+    "soldBy": "UNIT",
+    "regular": 1.79,
+    "promo": 1.67
+   },
+   {
+    "id": "0085007788401",
+    "brand": "Tattooed Chef",
+    "desc": "Tattooed Chef\u2122 4-Cheese Cottage Cheese Crust Pizza",
+    "size": "11.25 oz",
+    "soldBy": "UNIT",
+    "regular": 9.99,
+    "promo": 8.99
    }
   ]
  },
@@ -3735,6 +7362,348 @@
     "size": "40 oz",
     "soldBy": "UNIT",
     "regular": 8.29,
+    "promo": null
+   },
+   {
+    "id": "0005150025518",
+    "brand": "Jif",
+    "desc": "Jif Creamy Reduced Fat Peanut Butter",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 3.79,
+    "promo": null
+   },
+   {
+    "id": "0005150024322",
+    "brand": "Jif",
+    "desc": "Jif Creamy Natural Peanut Butter",
+    "size": "28 oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": null
+   },
+   {
+    "id": "0003760010506",
+    "brand": "Skippy",
+    "desc": "Skippy\u00ae Natural Peanut Butter Spread Creamy",
+    "size": "15 oz (425 g)",
+    "soldBy": "UNIT",
+    "regular": 4.29,
+    "promo": null
+   },
+   {
+    "id": "0003760010625",
+    "brand": "Skippy",
+    "desc": "Skippy\u00ae Creamy Peanut Butter",
+    "size": "40 oz (2 lbs 8 oz)",
+    "soldBy": "UNIT",
+    "regular": 8.29,
+    "promo": 7.79
+   },
+   {
+    "id": "0003760010674",
+    "brand": "Skippy",
+    "desc": "Skippy\u00ae Natural Creamy Peanut Butter Spread",
+    "size": "40 oz (2 lb 8 oz) 1.13kg",
+    "soldBy": "UNIT",
+    "regular": 8.29,
+    "promo": 7.79
+   },
+   {
+    "id": "0005150024769",
+    "brand": "Jif",
+    "desc": "Jif Creamy Peanut Butter",
+    "size": "80 oz",
+    "soldBy": "UNIT",
+    "regular": 15.49,
+    "promo": null
+   },
+   {
+    "id": "0003760010624",
+    "brand": "Skippy",
+    "desc": "Skippy\u00ae Creamy Peanut Butter",
+    "size": "net wt 28 oz (1 lb 12 oz)",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": null
+   },
+   {
+    "id": "0005150070016",
+    "brand": "Adams",
+    "desc": "Adams Creamy Natural Peanut Butter",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0005150075035",
+    "brand": "Adams",
+    "desc": "Adam's Creamy No-Stir Peanut Butter",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0003400040012",
+    "brand": "Reese's",
+    "desc": "REESE'S Creamy Peanut Butter Spread Jar",
+    "size": "18 oz",
+    "soldBy": "UNIT",
+    "regular": 4.49,
+    "promo": null
+   },
+   {
+    "id": "0001111079156",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae No Stir Creamy Peanut Butter Spread",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0001111089495",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae No Stir Creamy Peanut Butter Spread BIG DEAL!",
+    "size": "40 oz",
+    "soldBy": "UNIT",
+    "regular": 10.99,
+    "promo": null
+   },
+   {
+    "id": "0005150090288",
+    "brand": "Santa Cruz Organic",
+    "desc": "Santa Cruz Organic\u00ae Dark Roasted Creamy Peanut Butter",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 8.79,
+    "promo": null
+   },
+   {
+    "id": "0001111010497",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae No Stir Creamy Honey Peanut Butter Spread",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0001111009853",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Creamy Peanut Butter",
+    "size": "40 oz",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": 5.49
+   },
+   {
+    "id": "0001111012047",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Creamy Honey Roasted Peanut Butter Spread",
+    "size": "40 oz",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": 5.49
+   },
+   {
+    "id": "0005150093797",
+    "brand": "Jif",
+    "desc": "Jif Simply Creamy Peanut Butter Spread, Unsweetened",
+    "size": "15 ounces",
+    "soldBy": "UNIT",
+    "regular": 3.79,
+    "promo": null
+   },
+   {
+    "id": "0001111016419",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae No Sugar Added Creamy Peanut Butter",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 2.99,
+    "promo": null
+   },
+   {
+    "id": "0001111012319",
+    "brand": "Smart Way",
+    "desc": "Smart Way\u2122 Creamy Peanut Butter",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 2.29,
+    "promo": null
+   },
+   {
+    "id": "0005150099266",
+    "brand": "Jif",
+    "desc": "Jif Creamy Natural Peanut Butter To Go Spread",
+    "size": "1.1 oz / 8 ct",
+    "soldBy": "UNIT",
+    "regular": 3.59,
+    "promo": null
+   },
+   {
+    "id": "0005150024540",
+    "brand": "Jif",
+    "desc": "Jif Creamy No Added Sugar Peanut Butter",
+    "size": "15.5 oz",
+    "soldBy": "UNIT",
+    "regular": 3.79,
+    "promo": null
+   },
+   {
+    "id": "0003760014822",
+    "brand": "Skippy",
+    "desc": "Skippy\u00ae No Sugar Added Creamy Peanut Butter",
+    "size": "net wt 16 oz (1 lb) 454g",
+    "soldBy": "UNIT",
+    "regular": 4.29,
+    "promo": null
+   },
+   {
+    "id": "0003760022525",
+    "brand": "Skippy",
+    "desc": "Skippy\u00ae No Sugar Added Creamy Peanut Butter Spread",
+    "size": "net wt 40 oz (2 lb 8 oz)",
+    "soldBy": "UNIT",
+    "regular": 8.29,
+    "promo": 7.79
+   },
+   {
+    "id": "0007482263000",
+    "brand": "Richard's",
+    "desc": "Crazy Richard's\u00ae Creamy Natural No-Stir Peanut Butter Spread",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": 4.09
+   },
+   {
+    "id": "0005150024548",
+    "brand": "Jif",
+    "desc": "Jif Creamy No Added Sugar Peanut Butter",
+    "size": "33.5 oz",
+    "soldBy": "UNIT",
+    "regular": 8.29,
+    "promo": null
+   },
+   {
+    "id": "0005150024523",
+    "brand": "Jif",
+    "desc": "Jif Creamy Portable Squeeze Peanut Butter",
+    "size": "5 oz",
+    "soldBy": "UNIT",
+    "regular": 1.99,
+    "promo": null
+   },
+   {
+    "id": "0005150024545",
+    "brand": "Jif",
+    "desc": "Jif Creamy Peanut Butter Squeeze Pouch",
+    "size": "13 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0003760037774",
+    "brand": "Skippy",
+    "desc": "Skippy\u00ae Creamy Peanut Butter Blended with Plant Protein",
+    "size": "net wt 16 oz (1 lb) 454g",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": null
+   },
+   {
+    "id": "0005150031950",
+    "brand": "Jif",
+    "desc": "Jif Dark Roast Creamy Peanut Butter",
+    "size": "15 ounces",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": null
+   },
+   {
+    "id": "0085004560997",
+    "brand": "Just About Foods",
+    "desc": "ORGANIC PEANUT BUTTER CREAMY HIGH PROTEIN",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 10.99,
+    "promo": 9.49
+   },
+   {
+    "id": "0085004560905",
+    "brand": "Just About Foods",
+    "desc": "ORGANIC PEANUT BUTTER MADE WITH CREAMY AVOCADO OIL",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 11.79,
+    "promo": 10.29
+   },
+   {
+    "id": "0001111011044",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Creamy No Sugar Added Peanut Butter",
+    "size": "15 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0001111012052",
+    "brand": "Private Selection",
+    "desc": "Private Selection\u00ae Cookie Butter Creamy",
+    "size": "14.1 oz",
+    "soldBy": "UNIT",
+    "regular": 4.49,
+    "promo": null
+   },
+   {
+    "id": "0001600014943",
+    "brand": "Nature Valley",
+    "desc": "Nature Valley\u2122 Peanut Butter Chocolate Crispy Creamy Wafer Bars",
+    "size": "5 ct / 1.3 oz",
+    "soldBy": "UNIT",
+    "regular": 5.29,
+    "promo": 3.99
+   },
+   {
+    "id": "0075365670950",
+    "brand": "think!",
+    "desc": "think! Creamy Peanut Butter High Protein Bars",
+    "size": "5 ct / 2.1 oz",
+    "soldBy": "UNIT",
+    "regular": 11.49,
+    "promo": null
+   },
+   {
+    "id": "0002190814256",
+    "brand": "Larabar",
+    "desc": "Larabar\u2122 Peanut Butter Chocolate Creamy Nut Butter Protein Bars",
+    "size": "5 ct / 1.59 oz",
+    "soldBy": "UNIT",
+    "regular": 8.29,
+    "promo": 6.99
+   },
+   {
+    "id": "0075365671927",
+    "brand": "think!",
+    "desc": "think! High Protein Bars, Creamy Peanut Butter, 12 Count",
+    "size": "12 ct / 2.1 oz",
+    "soldBy": "UNIT",
+    "regular": 24.99,
+    "promo": null
+   },
+   {
+    "id": "0081432802387",
+    "brand": "Sweet Jubilee",
+    "desc": "Sweet Jubilee\u00ae Sweet Knots\u2122 Pretzels and Creamy Peanut Butter",
+    "size": "4.5 oz",
+    "soldBy": "UNIT",
+    "regular": 5.79,
     "promo": null
    }
   ]
@@ -3849,6 +7818,105 @@
     "soldBy": "UNIT",
     "regular": 3.29,
     "promo": 1.99
+   },
+   {
+    "id": "0001450001727",
+    "brand": "Birds Eye",
+    "desc": "Birds Eye Protein Quinoa & Spinach, 9g of Protein, Frozen Side",
+    "size": "10 oz",
+    "soldBy": "UNIT",
+    "regular": 4.49,
+    "promo": 3.49
+   },
+   {
+    "id": "0001111002324",
+    "brand": "Simple Truth",
+    "desc": "Simple Truth\u00ae Protein Garlic Brown Rice and Quinoa with Chia Seeds",
+    "size": "8.8 oz",
+    "soldBy": "UNIT",
+    "regular": 2.99,
+    "promo": null
+   },
+   {
+    "id": "0081509902165",
+    "brand": "Late July",
+    "desc": "Late July\u00ae Restaurant Style Chia & Quinoa Tortilla Chips",
+    "size": "10.1 oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": 4.99
+   },
+   {
+    "id": "0074840447105",
+    "brand": "Seeds of Change",
+    "desc": "Seeds of Change Organic Spanish Style Rice With Quinoa Peppers & Corn, Organic Food",
+    "size": "8.5 oz",
+    "soldBy": "UNIT",
+    "regular": 4.19,
+    "promo": null
+   },
+   {
+    "id": "0004227200669",
+    "brand": "Amy's",
+    "desc": "Amy's\u00ae Organic Soups Quinoa Kale and Red Lentil Soup",
+    "size": "14.4 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0008086806019",
+    "brand": "Dr. Praeger's",
+    "desc": "Black Bean Quinoa Veggie Burger",
+    "size": "10 oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": null
+   },
+   {
+    "id": "0085002026059",
+    "brand": "Actual Veggies",
+    "desc": "Actual Veggies Mushroom Quinoa Veggie Burger",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 7.99,
+    "promo": null
+   },
+   {
+    "id": "0001111016411",
+    "brand": "Simple Truth",
+    "desc": "Simple Truth\u00ae Cantina Style Chicken and Quinoa Bowl",
+    "size": "9 oz",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": null
+   },
+   {
+    "id": "0081996202116",
+    "brand": "Cole's",
+    "desc": "Cole's\u00ae Ready To Eat Patagonian Smoked Salmon Fillet with Quinoa",
+    "size": "5.6 oz",
+    "soldBy": "UNIT",
+    "regular": 8.49,
+    "promo": null
+   },
+   {
+    "id": "0001500070633",
+    "brand": "Gerber",
+    "desc": "Get'ems from Gerber BBQ Roundos Puff Snack Kids Snack Made with Whole Grain Quinoa",
+    "size": "2.25 oz",
+    "soldBy": "UNIT",
+    "regular": 3.69,
+    "promo": null
+   },
+   {
+    "id": "0003997803320",
+    "brand": "Bob's Red Mill",
+    "desc": "Bob's Red Mill Organic Quinoa Flour",
+    "size": "18 oz",
+    "soldBy": null,
+    "regular": null,
+    "promo": null
    }
   ]
  },
@@ -4021,6 +8089,168 @@
     "soldBy": "UNIT",
     "regular": 3.29,
     "promo": 3
+   },
+   {
+    "id": "0081000351706",
+    "brand": "Once Upon A Farm",
+    "desc": "Once Upon a Farm\u2122 2nd Stage Apple Banana Spinach and Avocado Organic Baby Food Pouch",
+    "size": "3.2 oz",
+    "soldBy": "UNIT",
+    "regular": 2.99,
+    "promo": null
+   },
+   {
+    "id": "0081000351737",
+    "brand": "Once Upon A Farm",
+    "desc": "Once Upon a Farm Apple, Beef Bone Broth, Tomato, Spinach Organic Baby Food Pouch, 3.5oz",
+    "size": "3.5 oz",
+    "soldBy": "UNIT",
+    "regular": 3.49,
+    "promo": null
+   },
+   {
+    "id": "0001111091151",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Baby Spinach BIG DEAL!",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 5,
+    "promo": null
+   },
+   {
+    "id": "0001111091649",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Tender Baby Spinach Bag Salad",
+    "size": "10 oz",
+    "soldBy": "UNIT",
+    "regular": 2.99,
+    "promo": null
+   },
+   {
+    "id": "0081957301173",
+    "brand": "Happy Baby",
+    "desc": "Happy Tot Stage 4 Organic Pears Blueberries & Spinach Pouch",
+    "size": "4 fl oz",
+    "soldBy": "UNIT",
+    "regular": 1.99,
+    "promo": null
+   },
+   {
+    "id": "0085269700129",
+    "brand": "Happy Baby",
+    "desc": "Happy Tot Organics SuperFoods Stage 4 Pear Mango Spinach & Chia Organic Toddler Food Pouch",
+    "size": "4.22 fl oz",
+    "soldBy": "UNIT",
+    "regular": 1.99,
+    "promo": null
+   },
+   {
+    "id": "0089520300101",
+    "brand": "organicgirl",
+    "desc": "organicgirl Baby Spinach",
+    "size": "5 oz",
+    "soldBy": "UNIT",
+    "regular": 4.29,
+    "promo": 3.5
+   },
+   {
+    "id": "0001500004964",
+    "brand": "Gerber",
+    "desc": "GERBER Healthy Snacks Teether Strawberry Apple Spinach 1.7oz",
+    "size": "1.7 oz",
+    "soldBy": "UNIT",
+    "regular": 3.79,
+    "promo": null
+   },
+   {
+    "id": "0001500007437",
+    "brand": "Gerber",
+    "desc": "Gerber 2nd Foods Organic Apple Blueberry Spinach",
+    "size": "3.5 oz",
+    "soldBy": "UNIT",
+    "regular": 1.89,
+    "promo": null
+   },
+   {
+    "id": "0001500007458",
+    "brand": "Gerber",
+    "desc": "Gerber 2nd Foods Organic Apple Zucchini Spinach Strawberry Pouch",
+    "size": "3.5 oz",
+    "soldBy": "UNIT",
+    "regular": 1.89,
+    "promo": null
+   },
+   {
+    "id": "0004126002406",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Blueberry Banana Kale Spinach Pouch",
+    "size": "6 ct / 24 oz",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": null
+   },
+   {
+    "id": "0085282300652",
+    "brand": "Once Upon A Farm",
+    "desc": "Once Upon a Farm Smart Blend Pear-y Blueberry & Spinach Pouch, 3.2oz",
+    "size": "1 ct",
+    "soldBy": "UNIT",
+    "regular": 3.49,
+    "promo": null
+   },
+   {
+    "id": "0081000351659",
+    "brand": "Once Upon A Farm",
+    "desc": "Once Upon a Farm\u2122 Smart Blend Pear-y Blueberry Spinach & Pine-Apple Berry Punch Organic Pouches",
+    "size": "4 pk / 3.2 oz",
+    "soldBy": "UNIT",
+    "regular": 11.49,
+    "promo": null
+   },
+   {
+    "id": "0085000389880",
+    "brand": "Cerebelly",
+    "desc": "Cerebelly Organic Spinach Apple Sweet Potato 4oz/3pk",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 11.49,
+    "promo": null
+   },
+   {
+    "id": "0001111091049",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Baby Spinach",
+    "size": "6 oz",
+    "soldBy": "UNIT",
+    "regular": 3.79,
+    "promo": null
+   },
+   {
+    "id": "0089520300116",
+    "brand": "organicgirl",
+    "desc": "organicgirl Baby Spinach 10oz",
+    "size": "10 oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": null
+   },
+   {
+    "id": "0001111004776",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Baby Spinach & Baby Kale BIG DEAL!",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 5,
+    "promo": null
+   },
+   {
+    "id": "0001111091050",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Baby Spinach",
+    "size": "10 oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": null
    }
   ]
  },
@@ -4134,6 +8364,348 @@
     "soldBy": "UNIT",
     "regular": 4.99,
     "promo": null
+   },
+   {
+    "id": "0070816312058",
+    "brand": "Boulder Canyon",
+    "desc": "Boulder Canyon Avocado Oil Classic Sea Salt Canyon Cut Kettle Style Potato Chips",
+    "size": "5.25 oz",
+    "soldBy": "UNIT",
+    "regular": 4.49,
+    "promo": 3.99
+   },
+   {
+    "id": "0082951532770",
+    "brand": "Sensible Portions",
+    "desc": "Sensible Portions\u00ae Garden Veggie Straws\u00ae Avocado Oil Zesty Ranch Veggie Chips",
+    "size": "6 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0085380700503",
+    "brand": "Chosen Foods",
+    "desc": "Chosen Foods\u00ae 100% Pure Avocado Oil Spray",
+    "size": "4.7 fo",
+    "soldBy": "UNIT",
+    "regular": 8.49,
+    "promo": 5.99
+   },
+   {
+    "id": "0082951532401",
+    "brand": "Sensible Portions",
+    "desc": "Sensible Portions\u00ae Garden Veggie Straws\u00ae Avocado Oil Sea Salt Veggie Chips",
+    "size": "10 oz",
+    "soldBy": "UNIT",
+    "regular": 7.79,
+    "promo": 6.99
+   },
+   {
+    "id": "0070816326127",
+    "brand": "Boulder Canyon",
+    "desc": "Boulder Canyon Avocado Oil Hickory BBQ Kettle Chip",
+    "size": "5.25 oz",
+    "soldBy": "UNIT",
+    "regular": 4.49,
+    "promo": 3.99
+   },
+   {
+    "id": "0006414400070",
+    "brand": "Pam",
+    "desc": "PAM Non-GMO Avocado Oil Non-Stick Cooking Spray",
+    "size": "5 oz",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": 3.99
+   },
+   {
+    "id": "0073621170108",
+    "brand": "Chosen Foods",
+    "desc": "Chosen Foods 100% Pure Avocado Oil",
+    "size": "16.9 fl oz",
+    "soldBy": "UNIT",
+    "regular": 14.99,
+    "promo": 11.49
+   },
+   {
+    "id": "0073679890360",
+    "brand": "Good Foods",
+    "desc": "Good Foods\u2122 Avocado Mash",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0008411490386",
+    "brand": "Kettle Brand",
+    "desc": "Kettle Brand Made With Avocado Oil Special Sauce Chips",
+    "size": "6 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": 3
+   },
+   {
+    "id": "0002840078963",
+    "brand": "Miss Vickie's",
+    "desc": "Miss Vickie's Avocado Oil Kettle Cooked Cheddar & Black Pepper Potato Chips",
+    "size": "6 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0008411490384",
+    "brand": "Kettle Brand",
+    "desc": "Kettle Brand Made With Avocado Oil Sea Salt Pink Peppercorn Chips",
+    "size": "6 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": 3
+   },
+   {
+    "id": "0001111006041",
+    "brand": "Simple Truth",
+    "desc": "Simple Truth\u00ae Kettle Cooked Avocado Oil Sea Salt Potato Chips",
+    "size": "7 oz",
+    "soldBy": "UNIT",
+    "regular": 3.49,
+    "promo": null
+   },
+   {
+    "id": "0070816326107",
+    "brand": "Boulder Canyon",
+    "desc": "Boulder Canyon\u00ae Wavy Avacado Oil Cheddar Sour Cream Potato Chips",
+    "size": "5.5 oz",
+    "soldBy": "UNIT",
+    "regular": 4.49,
+    "promo": 3.99
+   },
+   {
+    "id": "0085380700582",
+    "brand": "Chosen Foods",
+    "desc": "Chosen Foods\u00ae 100% Pure Avocado Oil",
+    "size": "1.65 pound",
+    "soldBy": "UNIT",
+    "regular": 21.99,
+    "promo": null
+   },
+   {
+    "id": "0081507402000",
+    "brand": "Chosen Foods",
+    "desc": "Chosen Foods 100% Pure Avocado Oil Classic Mayo",
+    "size": "12 fl oz",
+    "soldBy": "UNIT",
+    "regular": 9.99,
+    "promo": 8.99
+   },
+   {
+    "id": "0001111012230",
+    "brand": "Simple Truth",
+    "desc": "Simple Truth\u00ae Avocado Oil Cooking Spray",
+    "size": "5 oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": null
+   },
+   {
+    "id": "0081692502278",
+    "brand": "SkinnyPop",
+    "desc": "SKINNYPOP Avocado Lime Flavored Popcorn Bag",
+    "size": "4.4 oz",
+    "soldBy": "UNIT",
+    "regular": 4.29,
+    "promo": 3.79
+   },
+   {
+    "id": "0070816326122",
+    "brand": "Boulder Canyon",
+    "desc": "Boulder Canyon\u00ae Avocado Oil Blue Corn Tortilla Chips",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 5.49,
+    "promo": 4.99
+   },
+   {
+    "id": "0008266650090",
+    "brand": "popchips",
+    "desc": "Popchips\u00ae Potato Chips, Avocado Oil BBQ",
+    "size": "5 oz",
+    "soldBy": "UNIT",
+    "regular": 5.49,
+    "promo": null
+   },
+   {
+    "id": "0070816312192",
+    "brand": "Boulder Canyon",
+    "desc": "Boulder Canyon Avocado Oil Malt Vinegar & Sea Salt Kettle Cooked Potato Chips",
+    "size": "5.25 oz",
+    "soldBy": "UNIT",
+    "regular": 4.49,
+    "promo": 3.99
+   },
+   {
+    "id": "0007020085612",
+    "brand": "Chick-fil-A",
+    "desc": "Chick-Fil-A\u00ae Avocado Lime Ranch Salad Dressing",
+    "size": "12 fl oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0082951531027",
+    "brand": "Sensible Portions",
+    "desc": "Sensible Portions\u00ae Garden Veggie Straws\u00ae Avocado Oil Zesty Ranch Veggie Chips",
+    "size": "10 oz",
+    "soldBy": "UNIT",
+    "regular": 7.79,
+    "promo": 6.99
+   },
+   {
+    "id": "0001111016799",
+    "brand": "Simple Truth",
+    "desc": "Simple Truth\u00ae Creamy Ranch Dressing Made with Avocado Oil",
+    "size": "12 fl oz",
+    "soldBy": "UNIT",
+    "regular": 4.49,
+    "promo": null
+   },
+   {
+    "id": "0001111016801",
+    "brand": "Simple Truth",
+    "desc": "Simple Truth\u00ae Creamy Parmesan Caesar Dressing Made with Avocado Oil",
+    "size": "12 fl oz",
+    "soldBy": "UNIT",
+    "regular": 4.49,
+    "promo": null
+   },
+   {
+    "id": "0002840080000",
+    "brand": "Tostitos",
+    "desc": "Simply Tostitos Avocado Oil Sea Salt Tortilla Chips",
+    "size": "5.5 oz",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": null
+   },
+   {
+    "id": "0081189202680",
+    "brand": "Cabo Fresh",
+    "desc": "Cabo Fresh Avocado Now",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 6.49,
+    "promo": null
+   },
+   {
+    "id": "0008266650080",
+    "brand": "popchips",
+    "desc": "Popchips\u00ae Potato Chips, Avocado Oil Sea Salt",
+    "size": "5 oz",
+    "soldBy": "UNIT",
+    "regular": 5.49,
+    "promo": null
+   },
+   {
+    "id": "0001111006086",
+    "brand": "Simple Truth",
+    "desc": "Simple Truth\u00ae Kettle Cooked Avocado Oil BBQ Potato Chips",
+    "size": "7 oz",
+    "soldBy": "UNIT",
+    "regular": 3.49,
+    "promo": null
+   },
+   {
+    "id": "0070816326121",
+    "brand": "Boulder Canyon",
+    "desc": "8 oz Boulder Canyon Avocado Oil Sea Salt Tortilla Chips",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 5.49,
+    "promo": 4.99
+   },
+   {
+    "id": "0061611206143",
+    "brand": "Wholly Guacamole",
+    "desc": "Wholly\u00ae Guacamole Avocado Verde Salsa Mild",
+    "size": "net wt 10 oz (284g)",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": null
+   },
+   {
+    "id": "0086369900010",
+    "brand": "Primal Kitchen",
+    "desc": "Primal Kitchen Avocado Oil Mayo",
+    "size": "12 fo",
+    "soldBy": "UNIT",
+    "regular": 11.49,
+    "promo": null
+   },
+   {
+    "id": "0005220007582",
+    "brand": "Beech-Nut",
+    "desc": "Beech-Nut Organics Stage 2 Organic Baby Food, Apple Raspberries & Avocado",
+    "size": "4 oz",
+    "soldBy": "UNIT",
+    "regular": 1.79,
+    "promo": null
+   },
+   {
+    "id": "0001111012986",
+    "brand": "Private Selection",
+    "desc": "Private Selection\u00ae Avocado Oil",
+    "size": "17 fl oz",
+    "soldBy": "UNIT",
+    "regular": 11.99,
+    "promo": null
+   },
+   {
+    "id": "0082951531036",
+    "brand": "Sensible Portions",
+    "desc": "Sensible Portions\u00ae Garden Veggie\u2122 Avocado Oil Wavy Sea Salt Veggie Chips",
+    "size": "6 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0081507402397",
+    "brand": "Chosen Foods",
+    "desc": "Chosen Foods 100% Pure Avocado Oil Classic Squeeze Mayo",
+    "size": "17 fl oz",
+    "soldBy": "UNIT",
+    "regular": 11.99,
+    "promo": 10.99
+   },
+   {
+    "id": "0001111083931",
+    "brand": "Private Selection",
+    "desc": "Private Selection\u00ae Diced Haas Frozen Avocados",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0004400005550",
+    "brand": "Triscuit",
+    "desc": "Triscuit Avocado Cilantro & Lime Whole Grain Wheat Crackers",
+    "size": "8.5 oz",
+    "soldBy": "UNIT",
+    "regular": 4.79,
+    "promo": 3.49
+   },
+   {
+    "id": "0007287817623",
+    "brand": "Herdez",
+    "desc": "Herdez\u00ae Taqueria Street Sauce Avocado Cilantro Mild Taco Sauce",
+    "size": "net wt 9 oz (255g)",
+    "soldBy": "UNIT",
+    "regular": 4.49,
+    "promo": 3.99
    }
   ]
  },
@@ -4315,6 +8887,348 @@
     "soldBy": "UNIT",
     "regular": 5.49,
     "promo": null
+   },
+   {
+    "id": "0000000004596",
+    "brand": null,
+    "desc": "Pickling Cucumbers",
+    "size": "1 lb",
+    "soldBy": "WEIGHT",
+    "regular": 2.99,
+    "promo": null
+   },
+   {
+    "id": "0081425701562",
+    "brand": null,
+    "desc": "Mini Cucumber",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 2,
+    "promo": null
+   },
+   {
+    "id": "0075166615155",
+    "brand": "Nature Sweet",
+    "desc": "Nature Sweet Long English Cucumber",
+    "size": "1 ct",
+    "soldBy": "UNIT",
+    "regular": 1.99,
+    "promo": null
+   },
+   {
+    "id": "0005200013508",
+    "brand": "Gatorade",
+    "desc": "Gatorade Lime Cucumber Sports Drink Bottle",
+    "size": "28 fl oz",
+    "soldBy": "UNIT",
+    "regular": 2.39,
+    "promo": null
+   },
+   {
+    "id": "0004411512840",
+    "brand": "Cedar's",
+    "desc": "Cedar's Cucumber Garlic Dill Tzatziki",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 6.49,
+    "promo": null
+   },
+   {
+    "id": "0001299322123",
+    "brand": "LaCroix",
+    "desc": "LaCroix Sparkling Water, BlackBerry Cucumber, 12 Fl Oz (Pack of 8)",
+    "size": "8 pk / 12 fl oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": 4.79
+   },
+   {
+    "id": "0075752802807",
+    "brand": "Takis",
+    "desc": "Takis Zombie Halloween Habanero & Cucumber Rolled Tortilla Chips",
+    "size": "9.9 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0001111066267",
+    "brand": "Private Selection",
+    "desc": "Private Selection\u00ae Tzatziki Greek Yogurt Dip With Cucumber and Dill",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0001111014139",
+    "brand": "Simple Truth",
+    "desc": "Simple Truth\u00ae Cucumber Melon Sparkling Seltzer Water Cans",
+    "size": "8 ct / 12 fl oz",
+    "soldBy": "UNIT",
+    "regular": 4.39,
+    "promo": null
+   },
+   {
+    "id": "0003600050407",
+    "brand": "Huggies",
+    "desc": "Huggies Natural Care Cucumber, Aloe and Vitamin E Baby Wipes",
+    "size": "1 pk / 56 ct",
+    "soldBy": "UNIT",
+    "regular": 3.19,
+    "promo": null
+   },
+   {
+    "id": "0001111161102",
+    "brand": "Dove",
+    "desc": "Dove 2 Bars Cool Moisture Cucumber & Green Tea Scent Leaves Skin Refreshed",
+    "size": "2 ct / 3.75 oz",
+    "soldBy": "UNIT",
+    "regular": 8.49,
+    "promo": null
+   },
+   {
+    "id": "0003600050467",
+    "brand": "Huggies",
+    "desc": "Huggies Natural Care Cucumber Aloe and Vitamin E Baby Wipes",
+    "size": "3 ct",
+    "soldBy": "UNIT",
+    "regular": 8.49,
+    "promo": null
+   },
+   {
+    "id": "0001111112331",
+    "brand": "Dove",
+    "desc": "Dove \u00ae Body Wash Cucumber & Green Tea",
+    "size": "20 fo",
+    "soldBy": "UNIT",
+    "regular": 12.49,
+    "promo": 8.99
+   },
+   {
+    "id": "0001111161108",
+    "brand": "Dove",
+    "desc": "Dove 4 Bars Cool Moisture Cucumber & Green Tea Scent Leaves Skin Refreshed",
+    "size": "4 ct / 3.75 oz",
+    "soldBy": "UNIT",
+    "regular": 10.29,
+    "promo": 8.99
+   },
+   {
+    "id": "0001111139650",
+    "brand": "Dove",
+    "desc": "Dove \u00ae Body Wash Cucumber & Green Tea",
+    "size": "30.6 oz",
+    "soldBy": "UNIT",
+    "regular": 14.49,
+    "promo": null
+   },
+   {
+    "id": "0005200004766",
+    "brand": "Gatorade",
+    "desc": "Gatorade\u00ae Green Lime Cucumber Sports Drink Multipack Bottles",
+    "size": "8 pk / 20 fl oz",
+    "soldBy": "UNIT",
+    "regular": 9.99,
+    "promo": null
+   },
+   {
+    "id": "0001111161125",
+    "brand": "Dove",
+    "desc": "Dove 8 Bars Cool Moisture Cucumber & Green Tea Scent, Leaves Skin Refreshed",
+    "size": "30 oz",
+    "soldBy": "UNIT",
+    "regular": 14.29,
+    "promo": null
+   },
+   {
+    "id": "0007940053004",
+    "brand": "Dove",
+    "desc": "Dove Deodorant Stick, Cucumber & Green Tea",
+    "size": "2.4 oz",
+    "soldBy": "UNIT",
+    "regular": 11.49,
+    "promo": null
+   },
+   {
+    "id": "0085194900434",
+    "brand": "Roar",
+    "desc": "Roar\u00ae Organic Cucumber Watermelon",
+    "size": "18oz",
+    "soldBy": "UNIT",
+    "regular": 2.99,
+    "promo": 2
+   },
+   {
+    "id": "0004126001801",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Refreshing Cucumber and Green Tea Scented Body Wash",
+    "size": "22 fl oz",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": null
+   },
+   {
+    "id": "0081215403327",
+    "brand": "Native",
+    "desc": "Native Hair Cucumber & Mint Volumizing Shampoo",
+    "size": "16.5 fl oz",
+    "soldBy": "UNIT",
+    "regular": 12.49,
+    "promo": 10.99
+   },
+   {
+    "id": "0007940048228",
+    "brand": "Dove",
+    "desc": "Dove\u00a0Women's Antiperspirant Deodorant Spray Cucumber & Green Tea Aluminium-Free",
+    "size": "4 oz",
+    "soldBy": "UNIT",
+    "regular": 8.99,
+    "promo": 7.99
+   },
+   {
+    "id": "0081215403432",
+    "brand": "Native",
+    "desc": "Native Body Wash Pump with Cucumber & Mint",
+    "size": "36 fl oz",
+    "soldBy": "UNIT",
+    "regular": 19.99,
+    "promo": 16.99
+   },
+   {
+    "id": "0004126001804",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Refreshing Cucumber and Green Tea Scented Body Wash",
+    "size": "33.8 fl oz",
+    "soldBy": "UNIT",
+    "regular": 8.49,
+    "promo": null
+   },
+   {
+    "id": "0081215403328",
+    "brand": "Native",
+    "desc": "Native Cucumber & Mint Volumizing Conditioner",
+    "size": "16.5 fl oz",
+    "soldBy": "UNIT",
+    "regular": 12.49,
+    "promo": 10.99
+   },
+   {
+    "id": "0003600053612",
+    "brand": "Huggies",
+    "desc": "Huggies Natural Care Cucumber Aloe and Vitamin E Baby Wipes",
+    "size": "6 pk / 48 ct",
+    "soldBy": "UNIT",
+    "regular": 13.79,
+    "promo": null
+   },
+   {
+    "id": "0001111007658",
+    "brand": "Private Selection",
+    "desc": "Private Selection Crab Salad & Cucumber Sando by Zenshi",
+    "size": "2 pc",
+    "soldBy": "UNIT",
+    "regular": 5,
+    "promo": null
+   },
+   {
+    "id": "0008200079082",
+    "brand": "Smirnoff",
+    "desc": "Smirnoff Vodka ZeroSugar Infusions Cucumber & Lime",
+    "size": "750 ml",
+    "soldBy": "UNIT",
+    "regular": 13.99,
+    "promo": 8.99
+   },
+   {
+    "id": "0081215403018",
+    "brand": "Native",
+    "desc": "Native Cucumber & Mint Deodorant Aluminum Free Solid Deodorant Stick",
+    "size": "2.65 oz",
+    "soldBy": "UNIT",
+    "regular": 16.99,
+    "promo": 15.99
+   },
+   {
+    "id": "0003600050130",
+    "brand": "Huggies",
+    "desc": "Huggies Natural Care Cucumber Aloe and Vitamin E Baby Wipes",
+    "size": "10 pk / 560 ct",
+    "soldBy": "UNIT",
+    "regular": 21.49,
+    "promo": null
+   },
+   {
+    "id": "0084738806510",
+    "brand": "Mad Cat",
+    "desc": "Mad Cat\u00ae Cool Cucumber Cat Toy",
+    "size": "1 ct",
+    "soldBy": "UNIT",
+    "regular": 5.49,
+    "promo": null
+   },
+   {
+    "id": "0008515687500",
+    "brand": "Ketel One",
+    "desc": "Ketel One Vodka Botanical Cucumber & Mint",
+    "size": "750 ml",
+    "soldBy": "UNIT",
+    "regular": 26.99,
+    "promo": 19.99
+   },
+   {
+    "id": "0008807618880",
+    "brand": "21 SEEDS",
+    "desc": "21 Seeds Tequila Cucumber Jalapeno",
+    "size": "750 ml",
+    "soldBy": "UNIT",
+    "regular": 34.99,
+    "promo": 24.99
+   },
+   {
+    "id": "0086000242860",
+    "brand": "Modica",
+    "desc": "Modica\u00ae Cucumber Margarita Cocktail & Mocktail Mix",
+    "size": "16 fl oz",
+    "soldBy": "UNIT",
+    "regular": 12.99,
+    "promo": null
+   },
+   {
+    "id": "0082676618466",
+    "brand": null,
+    "desc": "Sliced Cucumbers with Tajin",
+    "size": "10 oz",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": null
+   },
+   {
+    "id": "0075166616335",
+    "brand": "Nature Sweet",
+    "desc": "NatureSweet Organics Baby Cukes 12 oz",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 4,
+    "promo": null
+   },
+   {
+    "id": "0000000094067",
+    "brand": null,
+    "desc": "Organic Zucchini Squash",
+    "size": "1 lb",
+    "soldBy": "WEIGHT",
+    "regular": 2.79,
+    "promo": null
+   },
+   {
+    "id": "0087489694067",
+    "brand": "Pero Family Farms",
+    "desc": "Pero Family Farms Freshwrap Organic Zucchini",
+    "size": "1 ct",
+    "soldBy": "WEIGHT",
+    "regular": 2.79,
+    "promo": null
    }
   ]
  },
@@ -4424,6 +9338,24 @@
     "id": "0007027710520",
     "brand": "Athenos",
     "desc": "Athenos Traditional Feta Cheese Crumbles",
+    "size": "4 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0007027762624",
+    "brand": "Athenos",
+    "desc": "Athenos Reduced Fat Feta Cheese Crumbles",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 12.99,
+    "promo": null
+   },
+   {
+    "id": "0007027729083",
+    "brand": "Athenos",
+    "desc": "Athenos Tomato & Basil Feta Cheese Crumbles",
     "size": "4 oz",
     "soldBy": "UNIT",
     "regular": 4.99,
@@ -4609,6 +9541,348 @@
     "soldBy": "UNIT",
     "regular": 3.99,
     "promo": null
+   },
+   {
+    "id": "0001111016101",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Frozen Blueberries BIG DEAL!",
+    "size": "4 lb",
+    "soldBy": "UNIT",
+    "regular": 11.99,
+    "promo": null
+   },
+   {
+    "id": "0001111016082",
+    "brand": "Private Selection",
+    "desc": "Private Selection\u00ae Frozen Wild Blueberries",
+    "size": "40 oz",
+    "soldBy": "UNIT",
+    "regular": 11.99,
+    "promo": null
+   },
+   {
+    "id": "0002500004492",
+    "brand": "Simply",
+    "desc": "Simply\u00ae Lemonade with Blueberry Bottle",
+    "size": "52 fl oz",
+    "soldBy": "UNIT",
+    "regular": 3.69,
+    "promo": null
+   },
+   {
+    "id": "0085392300220",
+    "brand": "Noosa",
+    "desc": "Noosa\u00ae Blueberry Yogurt Cup",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 2.79,
+    "promo": 1.67
+   },
+   {
+    "id": "0005215909004",
+    "brand": "Stonyfield Organic",
+    "desc": "Stonyfield Organic Kids Blueberry & Strawberry Vanilla Lowfat Yogurt Cups Variety Pack",
+    "size": "6 ct",
+    "soldBy": "UNIT",
+    "regular": 5.79,
+    "promo": null
+   },
+   {
+    "id": "0001111015061",
+    "brand": "Simple Truth",
+    "desc": "Simple Truth Organic\u00ae Sliced Strawberries Blackberries and Blueberries Triple Berry Smoothie Blend",
+    "size": "32 oz",
+    "soldBy": "UNIT",
+    "regular": 9.29,
+    "promo": null
+   },
+   {
+    "id": "0001111010475",
+    "brand": "Simple Truth",
+    "desc": "Simple Truth\u00ae Cranberries and Blueberries Trail Mix BIG DEAL!",
+    "size": "28 oz",
+    "soldBy": "UNIT",
+    "regular": 10,
+    "promo": null
+   },
+   {
+    "id": "0001111015062",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Sliced Strawberries Blueberries and Mango Blend Smoothie",
+    "size": "32 oz",
+    "soldBy": "UNIT",
+    "regular": 9.29,
+    "promo": null
+   },
+   {
+    "id": "0001111008230",
+    "brand": "Private Selection",
+    "desc": "Private Selection\u00ae Blueberries, Strawberries & Mangos Frozen Fruit",
+    "size": "48 oz",
+    "soldBy": "UNIT",
+    "regular": 11.99,
+    "promo": null
+   },
+   {
+    "id": "0005220017201",
+    "brand": "Beech-Nut",
+    "desc": "Beech-Nut Naturals Stage 2 Baby Food, Pear & Blueberries",
+    "size": "4 oz",
+    "soldBy": "UNIT",
+    "regular": 1.59,
+    "promo": null
+   },
+   {
+    "id": "0081957301173",
+    "brand": "Happy Baby",
+    "desc": "Happy Tot Stage 4 Organic Pears Blueberries & Spinach Pouch",
+    "size": "4 fl oz",
+    "soldBy": "UNIT",
+    "regular": 1.99,
+    "promo": null
+   },
+   {
+    "id": "0081957301066",
+    "brand": "Happy Baby",
+    "desc": "HAPPY TOT Stage 4 Pouches, Super Morning, Organic, Bananas, Blueberries, Yogurt, Oats, Chia, 4 oz\u200b",
+    "size": "4 fl oz",
+    "soldBy": "UNIT",
+    "regular": 1.99,
+    "promo": null
+   },
+   {
+    "id": "0085004411209",
+    "brand": "Catalina Crunch",
+    "desc": "Catalina Crunch \u2122 Blueberry Muffin Protein Cereal with Blueberries",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 8.49,
+    "promo": null
+   },
+   {
+    "id": "0081957301566",
+    "brand": "Happy Baby",
+    "desc": "HAPPY TOT Stage 4 Baby Food Pouches, Super Bellies, Organic, Bananas, Spinach & Blueberries, 4 oz\u200b",
+    "size": "4 fl oz",
+    "soldBy": "UNIT",
+    "regular": 1.99,
+    "promo": null
+   },
+   {
+    "id": "0081957301757",
+    "brand": "Happy Baby",
+    "desc": "Clearly Crafted Stage 2 Sweet Potatoes, Blueberries & Beets Baby Food Pouch",
+    "size": "4 fl oz",
+    "soldBy": "UNIT",
+    "regular": 2.59,
+    "promo": null
+   },
+   {
+    "id": "0001111010389",
+    "brand": "Simple Truth",
+    "desc": "Simple Truth\u00ae Cranberries and Blueberries Trail Mix",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 8.99,
+    "promo": null
+   },
+   {
+    "id": "0007102231554",
+    "brand": "Mariani",
+    "desc": "Mariani\u00ae Dried Sweetened Wild Blueberries",
+    "size": "3.5 oz",
+    "soldBy": "UNIT",
+    "regular": 5.49,
+    "promo": 4.79
+   },
+   {
+    "id": "0004114307405",
+    "brand": "Sun-Maid",
+    "desc": "Sun-Maid\u00ae Charcuterie Pairings Dried Apricots, Blueberries & Cranberries",
+    "size": "4.5 oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": null
+   },
+   {
+    "id": "0082676613982",
+    "brand": "Fresh Kitchen",
+    "desc": "Vanilla Yogurt with Blueberries",
+    "size": "10 oz",
+    "soldBy": "UNIT",
+    "regular": 3.49,
+    "promo": null
+   },
+   {
+    "id": "0001111007294",
+    "brand": "Bakery Fresh",
+    "desc": "Bakery Fresh Blueberry Muffins",
+    "size": "4 ct / 15 oz",
+    "soldBy": "UNIT",
+    "regular": 5,
+    "promo": null
+   },
+   {
+    "id": "0007047000302",
+    "brand": "Yoplait",
+    "desc": "Yoplait\u2122 Original Low Fat Mountain Blueberry Yogurt Cup",
+    "size": "6 oz",
+    "soldBy": "UNIT",
+    "regular": 1,
+    "promo": null
+   },
+   {
+    "id": "0007203096018",
+    "brand": "Entenmann's Little Bites",
+    "desc": "Entenmann's Little Bites Blueberry Mini Muffins",
+    "size": "5 ct / 1.5 oz",
+    "soldBy": "UNIT",
+    "regular": 5.49,
+    "promo": null
+   },
+   {
+    "id": "0078616215000",
+    "brand": "Vitaminwater",
+    "desc": "vitaminwater\u00ae XXX Acai-Blueberry-Pomegranate Flavored Water Beverage Bottle",
+    "size": "20 fl oz",
+    "soldBy": "UNIT",
+    "regular": 2.29,
+    "promo": null
+   },
+   {
+    "id": "0003800040320",
+    "brand": "Eggo",
+    "desc": "Eggo\u00ae Blueberry Waffles",
+    "size": "12.3 oz",
+    "soldBy": "UNIT",
+    "regular": 3.59,
+    "promo": null
+   },
+   {
+    "id": "0089470001005",
+    "brand": "Chobani",
+    "desc": "Chobani\u00ae Blueberry on the Bottom Nonfat Greek Yogurt Cup",
+    "size": "5.3 oz",
+    "soldBy": "UNIT",
+    "regular": 1.79,
+    "promo": 1.2
+   },
+   {
+    "id": "0001111087830",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Blueberry Frozen Waffles",
+    "size": "10 ct / 12.3 oz",
+    "soldBy": "UNIT",
+    "regular": 2.79,
+    "promo": null
+   },
+   {
+    "id": "0001111086989",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Fruit and Grain Blueberry Cereal Bars",
+    "size": "8 ct / 1.3 oz",
+    "soldBy": "UNIT",
+    "regular": 2.99,
+    "promo": null
+   },
+   {
+    "id": "0003663203255",
+    "brand": "Light + Fit",
+    "desc": "Dannon Light + Fit Blueberry Greek Fat Free\u00a0Yogurt Cups",
+    "size": "4 ct / 5.3 fl oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0001111067716",
+    "brand": "Private Selection",
+    "desc": "Private Selection\u00ae Blueberry Streusel Muffins",
+    "size": "4 ct / 15 oz",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": null
+   },
+   {
+    "id": "0001111062334",
+    "brand": "Bakery Fresh",
+    "desc": "Bakery Fresh Mini Blueberry Muffins",
+    "size": "12 ct / 11.8 oz",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": null
+   },
+   {
+    "id": "0001707710932",
+    "brand": "Lifeway",
+    "desc": "Lifeway\u00ae Blueberry Probiotic Low Fat Kefir Drink",
+    "size": "32 fl oz",
+    "soldBy": "UNIT",
+    "regular": 4.49,
+    "promo": null
+   },
+   {
+    "id": "0078616200296",
+    "brand": "Vitaminwater",
+    "desc": "vitaminwater\u00ae Zero Sugar XXX Acai-Blueberry-Pomegranate Flavored Water Beverage Bottle",
+    "size": "20 fl oz",
+    "soldBy": "UNIT",
+    "regular": 2.29,
+    "promo": null
+   },
+   {
+    "id": "0081829001831",
+    "brand": "Chobani",
+    "desc": "Chobani\u00ae Zero Sugar Blueberry Yogurt Cup",
+    "size": "5.3 oz",
+    "soldBy": "UNIT",
+    "regular": 1.69,
+    "promo": null
+   },
+   {
+    "id": "0081829001282",
+    "brand": "Chobani",
+    "desc": "Chobani\u00ae Blueberry on the Bottom Nonfat Greek Yogurt Cups",
+    "size": "4 ct / 5.3 oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": null
+   },
+   {
+    "id": "0001111026810",
+    "brand": "Bakery Fresh",
+    "desc": "Bakery Fresh Blueberry and Chocolate Chip Muffins Variety Pack",
+    "size": "4 ct / 15 oz",
+    "soldBy": "UNIT",
+    "regular": 5,
+    "promo": null
+   },
+   {
+    "id": "0001111060867",
+    "brand": "Bakery Fresh",
+    "desc": "Bakery Fresh Cream Cheese Blueberry Coffee Cake Bites",
+    "size": "12 ct / 10.02 oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": null
+   },
+   {
+    "id": "0001111065140",
+    "brand": "Private Selection",
+    "desc": "Private Selection\u00ae Blueberry Feta Chopped Salad Kit",
+    "size": "9.9 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": 3.99
+   },
+   {
+    "id": "0089824800101",
+    "brand": "Siggi's",
+    "desc": "siggi's Blueberry Icelandic-Style Lowfat Yogurt, 5.3 oz",
+    "size": "5.3 oz",
+    "soldBy": "UNIT",
+    "regular": 2.19,
+    "promo": null
    }
   ]
  },
@@ -4722,6 +9996,348 @@
     "soldBy": "UNIT",
     "regular": 1.79,
     "promo": 1.2
+   },
+   {
+    "id": "0081921502141",
+    "brand": "Waterloo",
+    "desc": "Waterloo\u00ae Blackberry Lemonade Sparkling Water",
+    "size": "12 fl oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": null
+   },
+   {
+    "id": "0001200018119",
+    "brand": "bubly",
+    "desc": "Bubly Sparkling Water Blackberry Cans",
+    "size": "8 ct / 12 fl oz",
+    "soldBy": "UNIT",
+    "regular": 4.79,
+    "promo": 4
+   },
+   {
+    "id": "0007800004050",
+    "brand": "Dr Pepper",
+    "desc": "Dr Pepper Blackberry Zero Sugar Soda Cans",
+    "size": "12 pk / 12 fl oz",
+    "soldBy": "UNIT",
+    "regular": 11.99,
+    "promo": null
+   },
+   {
+    "id": "0005150000684",
+    "brand": "Smucker's",
+    "desc": "Smucker's Seedless Blackberry Jam",
+    "size": "18 oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": null
+   },
+   {
+    "id": "0006647900006",
+    "brand": "Clearly Canadian",
+    "desc": "Clearly Canadian\u00ae Mountain Blackberry Flavored Sparkling Bottled Water",
+    "size": "11 fl oz",
+    "soldBy": "UNIT",
+    "regular": 2.79,
+    "promo": 2.33
+   },
+   {
+    "id": "0018473900030",
+    "brand": "Hint",
+    "desc": "Hint\u00ae Blackberry Flavored Bottled Water",
+    "size": "16 fl oz",
+    "soldBy": "UNIT",
+    "regular": 1.99,
+    "promo": 1
+   },
+   {
+    "id": "0007800004058",
+    "brand": "Dr Pepper",
+    "desc": "Dr Pepper Blackberry Soda Bottle",
+    "size": "20 fl oz",
+    "soldBy": "UNIT",
+    "regular": 2.99,
+    "promo": null
+   },
+   {
+    "id": "0007153730382",
+    "brand": "Polar",
+    "desc": "Polar Blackberry Mango Flavored Seltzer Water Cans",
+    "size": "8 pk / 12 fl oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": 4.79
+   },
+   {
+    "id": "0001299322123",
+    "brand": "LaCroix",
+    "desc": "LaCroix Sparkling Water, BlackBerry Cucumber, 12 Fl Oz (Pack of 8)",
+    "size": "8 pk / 12 fl oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": 4.79
+   },
+   {
+    "id": "0004300000555",
+    "brand": "Mio",
+    "desc": "mio Cherry Blackberry Water Enhancer Bottle",
+    "size": "1.62 fo",
+    "soldBy": "UNIT",
+    "regular": 5.29,
+    "promo": null
+   },
+   {
+    "id": "0007800004037",
+    "brand": "Dr Pepper",
+    "desc": "Dr Pepper Blackberry Soda Cans",
+    "size": "12 pk / 12 fl oz",
+    "soldBy": "UNIT",
+    "regular": 11.99,
+    "promo": null
+   },
+   {
+    "id": "0008870202929",
+    "brand": "Bonne Maman",
+    "desc": "Bonne Maman\u00ae Blackberry Preserves",
+    "size": "13 oz",
+    "soldBy": "UNIT",
+    "regular": 7.49,
+    "promo": 5.99
+   },
+   {
+    "id": "0063598580161",
+    "brand": "White Claw",
+    "desc": "White Claw Blackberry Hard Seltzer",
+    "size": "6 pack, 12 fl oz cans",
+    "soldBy": "UNIT",
+    "regular": 10.99,
+    "promo": 9.99
+   },
+   {
+    "id": "0006647900125",
+    "brand": "Clearly Canadian",
+    "desc": "Clearly Canadian\u00ae Original Mountain Blackberry Sparkling Water Cans",
+    "size": "6 pk / 12 fl oz",
+    "soldBy": "UNIT",
+    "regular": 7.99,
+    "promo": null
+   },
+   {
+    "id": "0001111067613",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Blackberry Preserves Seedless",
+    "size": "18 oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": null
+   },
+   {
+    "id": "0083609301143",
+    "brand": "Izze",
+    "desc": "IZZE No Sugar Added Blackberry Sparkling Juice Beverage Blend",
+    "size": "6 pk / 8.4 fl oz",
+    "soldBy": "UNIT",
+    "regular": 8.49,
+    "promo": null
+   },
+   {
+    "id": "0085347100474",
+    "brand": "Stur",
+    "desc": "Stur\u00ae Real Fruit Zero Sugar Liquid Water Enhancer - Blue & Blackberry",
+    "size": "1.62 fl oz",
+    "soldBy": "UNIT",
+    "regular": 4.49,
+    "promo": 3
+   },
+   {
+    "id": "0085651600224",
+    "brand": "Mamma Chia",
+    "desc": "Mamma Chia\u00ae Organic Chia Squeeze Blackberry Bliss Vitality Snacks",
+    "size": "4 ct / 3.5 oz",
+    "soldBy": "UNIT",
+    "regular": 7.29,
+    "promo": null
+   },
+   {
+    "id": "0085815800512",
+    "brand": "OLLY",
+    "desc": "OLLY Sleep Blackberry Flavor Gummy Supplement Melatonin 3mg",
+    "size": "50 count",
+    "soldBy": "UNIT",
+    "regular": 16.99,
+    "promo": 12.99
+   },
+   {
+    "id": "0001111012343",
+    "brand": "Private Selection",
+    "desc": "Private Selection\u00ae Blackberry Preserves Seedless",
+    "size": "13 oz",
+    "soldBy": "UNIT",
+    "regular": 5.49,
+    "promo": 4.49
+   },
+   {
+    "id": "0004300000619",
+    "brand": "Crystal Light",
+    "desc": "Crystal Light Zero Sugar Blackberry Lemonade Water Enhancer Bottle",
+    "size": "1.62 fo",
+    "soldBy": "UNIT",
+    "regular": 4.49,
+    "promo": null
+   },
+   {
+    "id": "0006647900056",
+    "brand": "Clearly Canadian",
+    "desc": "Clearly Canadian\u00ae Mountain Blackberry Flavored Sparkling Bottled Water",
+    "size": "4 bottles / 11 fl oz",
+    "soldBy": "UNIT",
+    "regular": 9.99,
+    "promo": 7.99
+   },
+   {
+    "id": "0008200078955",
+    "brand": "Crown Royal",
+    "desc": "Crown Royal Whisky - Canadian Blackberry",
+    "size": "750 ml",
+    "soldBy": "UNIT",
+    "regular": 26.99,
+    "promo": 19.99
+   },
+   {
+    "id": "0006727500656",
+    "brand": "Crofter's Organic",
+    "desc": "Crofter's\u00ae Organic Seedless Blackberry Premium Fruit Spread",
+    "size": "16.5 oz",
+    "soldBy": "UNIT",
+    "regular": 7.99,
+    "promo": 5.49
+   },
+   {
+    "id": "0085004198209",
+    "brand": "Rambler",
+    "desc": "Rambler Blackberry Sparkling Water 8 - 12 fl oz Cans",
+    "size": "8 ct / 12 fl oz",
+    "soldBy": "UNIT",
+    "regular": 5.49,
+    "promo": 4.99
+   },
+   {
+    "id": "0085293300841",
+    "brand": "OLLY",
+    "desc": "OLLY Extra Strength Sleep Blackberry Flavor Gummy Supplement Melatonin 5mg",
+    "size": "50 ct",
+    "soldBy": "UNIT",
+    "regular": 18.99,
+    "promo": null
+   },
+   {
+    "id": "0009800010046",
+    "brand": "Pure Leaf",
+    "desc": "Pure Leaf\u00ae Blackberry Black Iced Tea Multipack Bottles",
+    "size": "6 pk / 16.9 fl oz",
+    "soldBy": "UNIT",
+    "regular": 9.99,
+    "promo": null
+   },
+   {
+    "id": "0085521800874",
+    "brand": "Humm Kombucha",
+    "desc": "Humm\u00ae Blackberry Probiotic Kombucha Single Can",
+    "size": "12 fl oz",
+    "soldBy": "UNIT",
+    "regular": 3.49,
+    "promo": null
+   },
+   {
+    "id": "0085815800502",
+    "brand": "OLLY",
+    "desc": "OLLY Men's Multivitamin Blackberry Flavored Gummy Supplement",
+    "size": "90 count",
+    "soldBy": "UNIT",
+    "regular": 16.99,
+    "promo": 12.99
+   },
+   {
+    "id": "0006647900130",
+    "brand": "Clearly Canadian",
+    "desc": "Clearly Canadian\u00ae Zero Sugar Mountain Blackberry Sparkling Water Cans",
+    "size": "6 pk / 12 fl oz",
+    "soldBy": "UNIT",
+    "regular": 7.99,
+    "promo": null
+   },
+   {
+    "id": "0008787263420",
+    "brand": "Stella Rosa",
+    "desc": "Stella Rosa Blackberry Semi-Sweet Italian Red Wine",
+    "size": "750 ml",
+    "soldBy": "UNIT",
+    "regular": 17.99,
+    "promo": 12.84
+   },
+   {
+    "id": "0004126038252",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Melatonin Gummies Blackberry 5mg",
+    "size": "120 ct",
+    "soldBy": "UNIT",
+    "regular": 11.99,
+    "promo": null
+   },
+   {
+    "id": "0007240000669",
+    "brand": "Polaner",
+    "desc": "Polaner Sugar Free with Fiber Seedless Blackberry Preserves, Gluten-Free",
+    "size": "13.5 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0008218400873",
+    "brand": "Jack Daniel's",
+    "desc": "Jack Daniel's Tennessee Blackberry Whiskey Specialty",
+    "size": "750 ml",
+    "soldBy": "UNIT",
+    "regular": 26.99,
+    "promo": 14.99
+   },
+   {
+    "id": "0001500007444",
+    "brand": "Gerber",
+    "desc": "Gerber 2nd Foods Organic Banana Blueberry Blackberry Oatmeal Pouch",
+    "size": "3.5 oz",
+    "soldBy": "UNIT",
+    "regular": 1.89,
+    "promo": null
+   },
+   {
+    "id": "0004126002407",
+    "brand": "Comforts",
+    "desc": "Comforts\u2122 Stage 2 Banana Blackberry Baby Food Pouch",
+    "size": "6 ct / 4 oz",
+    "soldBy": "UNIT",
+    "regular": 5.49,
+    "promo": null
+   },
+   {
+    "id": "0008210017924",
+    "brand": "Arbor Mist",
+    "desc": "Arbor Mist\u00ae Blackberry Merlot Sweet Red Wine",
+    "size": "1.5 l",
+    "soldBy": "UNIT",
+    "regular": 11.99,
+    "promo": 8.99
+   },
+   {
+    "id": "0081001937300",
+    "brand": "St. Dalfour",
+    "desc": "St. Dalfour Blackberry Fruit Spread",
+    "size": "10 oz",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": 5.29
    }
   ]
  },
@@ -4939,6 +10555,348 @@
     "soldBy": "UNIT",
     "regular": 5.79,
     "promo": 4.99
+   },
+   {
+    "id": "0002190813312",
+    "brand": "Cascadian Farm Organic",
+    "desc": "Cascadian Farm\u2122 Organic French Vanilla Almond Granola",
+    "size": "11 oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": 4.99
+   },
+   {
+    "id": "0005844922135",
+    "brand": "Nature's Path Organic",
+    "desc": "Nature's Path Love Crunch Dark Chocolate & Hazelnut Butter Granola",
+    "size": "10.6 oz",
+    "soldBy": "UNIT",
+    "regular": 6.49,
+    "promo": 3.99
+   },
+   {
+    "id": "0001600022308",
+    "brand": "Nature Valley",
+    "desc": "Nature Valley\u2122 Crunchy Oats and Honey Family Size Granola",
+    "size": "24 oz",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": null
+   },
+   {
+    "id": "0088491200341",
+    "brand": "Honey Bunches of Oats",
+    "desc": "Honey Bunches of Oats Honey Roasted Granola Cereal Bag",
+    "size": "11 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0085004722005",
+    "brand": "NuTrail",
+    "desc": "NuTrail\u00ae Honey Nut No Sugar Added Nut Granola",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 8.99,
+    "promo": null
+   },
+   {
+    "id": "0005844989037",
+    "brand": "Nature's Path Organic",
+    "desc": "Nature's Path Honey Almond Granola",
+    "size": "11 oz",
+    "soldBy": "UNIT",
+    "regular": 7.79,
+    "promo": null
+   },
+   {
+    "id": "0001111016168",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Oats and Honey Granola BIG DEAL!",
+    "size": "22 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0001111013880",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Oats Raisins Almonds & Honey Granola",
+    "size": "14 oz",
+    "soldBy": "UNIT",
+    "regular": 3.49,
+    "promo": 3.29
+   },
+   {
+    "id": "0001111014117",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Oats Honey and Blueberry Granola",
+    "size": "11 oz",
+    "soldBy": "UNIT",
+    "regular": 4.49,
+    "promo": 3.99
+   },
+   {
+    "id": "0001111013879",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Oats Almonds & Honey Granola",
+    "size": "14 oz",
+    "soldBy": "UNIT",
+    "regular": 3.49,
+    "promo": 3.29
+   },
+   {
+    "id": "0070559901963",
+    "brand": "Kodiak",
+    "desc": "Kodiak\u00ae Honey Oat Protein Granola",
+    "size": "11 oz",
+    "soldBy": "UNIT",
+    "regular": 6.79,
+    "promo": null
+   },
+   {
+    "id": "0001111014114",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Oats and Honey Granola BIG DEAL!",
+    "size": "22 oz",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": null
+   },
+   {
+    "id": "0088462310165",
+    "brand": "Bear Naked",
+    "desc": "Bear Naked Cereal Granola Cacao Cashew Butter Crunch",
+    "size": "11 oz",
+    "soldBy": "UNIT",
+    "regular": 5.79,
+    "promo": 4.99
+   },
+   {
+    "id": "0002190813317",
+    "brand": "Cascadian Farm Organic",
+    "desc": "Cascadian Farm\u2122 Organic\u00ae No Added Sugar Blueberry Vanilla Granola",
+    "size": "11 oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": 4.99
+   },
+   {
+    "id": "0085641600070",
+    "brand": "Bear Naked",
+    "desc": "Bear Naked Cereal Granola Triple Berry",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 5.79,
+    "promo": 4.99
+   },
+   {
+    "id": "0060265217182",
+    "brand": "KIND",
+    "desc": "KIND Healthy Grains Peanut Butter Protein Granola Clusters",
+    "size": "11 oz",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": null
+   },
+   {
+    "id": "0088462310245",
+    "brand": "Bear Naked",
+    "desc": "Bear Naked Cereal Granola Peanut Butter",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 5.79,
+    "promo": 4.99
+   },
+   {
+    "id": "0002190813315",
+    "brand": "Cascadian Farm Organic",
+    "desc": "Cascadian Farm\u2122 Organic\u00ae No Added Sugar Coconut Cashew Granola",
+    "size": "11 oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": 4.99
+   },
+   {
+    "id": "0005844977198",
+    "brand": "Nature's Path Organic",
+    "desc": "Nature's Path Love Crunch Dark Chocolate & Coconut Granola",
+    "size": "11.5 oz",
+    "soldBy": "UNIT",
+    "regular": 6.49,
+    "promo": 3.99
+   },
+   {
+    "id": "0088462348619",
+    "brand": "Bear Naked",
+    "desc": "Bear Naked Cereal Granola Maple Pecan Crumble",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 5.79,
+    "promo": 4.99
+   },
+   {
+    "id": "0085641600001",
+    "brand": "Bear Naked",
+    "desc": "Bear Naked Cereal Granola Fruit & Nut Medley",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 5.79,
+    "promo": 4.99
+   },
+   {
+    "id": "0001111009253",
+    "brand": "Simple Truth",
+    "desc": "Simple Truth\u00ae Grain Free Original Granola Cereal BIG DEAL!",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": null
+   },
+   {
+    "id": "0002190813311",
+    "brand": "Cascadian Farm Organic",
+    "desc": "Cascadian Farm\u2122 Organic Fruit and Nut Granola",
+    "size": "11 oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": 4.99
+   },
+   {
+    "id": "0005844920310",
+    "brand": "Nature's Path Organic",
+    "desc": "Nature's Path Love Crunch Dark Chocolate & Peanut Butter Granola",
+    "size": "26.4 oz",
+    "soldBy": "UNIT",
+    "regular": 12.49,
+    "promo": null
+   },
+   {
+    "id": "0002190813318",
+    "brand": "Cascadian Farm Organic",
+    "desc": "Cascadian Farm\u2122 Organic No Added Sugar Cinnamon Apple Granola",
+    "size": "11 oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": 4.99
+   },
+   {
+    "id": "0070559901967",
+    "brand": "Kodiak",
+    "desc": "Kodiak\u00ae Protein-Packed Chocolate Granola",
+    "size": "11 oz",
+    "soldBy": "UNIT",
+    "regular": 6.79,
+    "promo": null
+   },
+   {
+    "id": "0060265225943",
+    "brand": "KIND",
+    "desc": "KIND Healthy Grains Almond Butter Protein Granola Clusters",
+    "size": "11 oz",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": null
+   },
+   {
+    "id": "0088462310592",
+    "brand": "Bear Naked",
+    "desc": "Bear Naked Granola Vanilla Almond Crisp, 5g Protein, Fiber, 22 oz",
+    "size": "22.0 oz",
+    "soldBy": "UNIT",
+    "regular": 8.49,
+    "promo": null
+   },
+   {
+    "id": "0060265217199",
+    "brand": "KIND",
+    "desc": "KIND Healthy Grains Dark Chocolate Protein Granola Clusters",
+    "size": "11 oz",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": null
+   },
+   {
+    "id": "0060265243334",
+    "brand": "KIND",
+    "desc": "KIND Peanut Butter Protein Granola Clusters",
+    "size": "22 oz",
+    "soldBy": "UNIT",
+    "regular": 10.99,
+    "promo": null
+   },
+   {
+    "id": "0060265217185",
+    "brand": "KIND",
+    "desc": "KIND Healthy Grains Vanilla Blueberry Granola with Flax Seeds",
+    "size": "11 oz",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": null
+   },
+   {
+    "id": "0070559902073",
+    "brand": "Kodiak",
+    "desc": "Kodiak\u00ae Protein-Packed Blueberry Vanilla Granola",
+    "size": "10 oz",
+    "soldBy": "UNIT",
+    "regular": 6.79,
+    "promo": null
+   },
+   {
+    "id": "0005844977185",
+    "brand": "Nature's Path Organic",
+    "desc": "Nature's Path Love Crunch Dark Chocolate & Red Berries Granola",
+    "size": "26.4 oz",
+    "soldBy": "UNIT",
+    "regular": 12.49,
+    "promo": null
+   },
+   {
+    "id": "0005844917201",
+    "brand": "Nature's Path Organic",
+    "desc": "Nature's Path Coconut & Cashew Butter Granola",
+    "size": "11 oz",
+    "soldBy": "UNIT",
+    "regular": 7.79,
+    "promo": null
+   },
+   {
+    "id": "0060265267578",
+    "brand": "KIND",
+    "desc": "KIND Protein\u00ae Max Peanut Butter Granola",
+    "size": "9 oz",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": null
+   },
+   {
+    "id": "0002190813314",
+    "brand": "Cascadian Farm Organic",
+    "desc": "Cascadian Farm\u2122 Organic Dark Chocolate Almond Granola",
+    "size": "11 oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": 4.99
+   },
+   {
+    "id": "0060265243336",
+    "brand": "KIND",
+    "desc": "KIND Oats and Honey Healthy Grains Granola Clusters",
+    "size": "22 oz",
+    "soldBy": "UNIT",
+    "regular": 10.99,
+    "promo": null
+   },
+   {
+    "id": "0001862711682",
+    "brand": "Kashi",
+    "desc": "Kellogg's Kashi Granola Cereal Blueberry Almond",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": 6.49
    }
   ]
  },
@@ -5051,6 +11009,348 @@
     "size": "1 lb",
     "soldBy": "WEIGHT",
     "regular": 2.79,
+    "promo": null
+   },
+   {
+    "id": "0000000004091",
+    "brand": "Fresh Potatoes",
+    "desc": "White Sweet Potato",
+    "size": "1 lb",
+    "soldBy": "WEIGHT",
+    "regular": 1.99,
+    "promo": null
+   },
+   {
+    "id": "0000000004818",
+    "brand": null,
+    "desc": "Japanese Sweet Potato",
+    "size": "1 lb",
+    "soldBy": "WEIGHT",
+    "regular": 1.99,
+    "promo": null
+   },
+   {
+    "id": "0001111084592",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Cut Sweet Potato Yams in Syrup",
+    "size": "40 oz",
+    "soldBy": "UNIT",
+    "regular": 3.29,
+    "promo": null
+   },
+   {
+    "id": "0003470009612",
+    "brand": "Princella",
+    "desc": "Princella\u00ae Cut Sweet Potato Yams in Syrup",
+    "size": "29 oz",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": 3
+   },
+   {
+    "id": "0003470009411",
+    "brand": "Princella",
+    "desc": "Princella\u00ae Cut Sweet Potato Yams in Light Syrup",
+    "size": "15 oz",
+    "soldBy": "UNIT",
+    "regular": 2.79,
+    "promo": 2.5
+   },
+   {
+    "id": "0000000093288",
+    "brand": null,
+    "desc": "Organic Purple Sweet Potatoes",
+    "size": "1 ct",
+    "soldBy": "WEIGHT",
+    "regular": 3.99,
+    "promo": null
+   },
+   {
+    "id": "0003784202823",
+    "brand": "Frieda's",
+    "desc": "Frieda's\u00ae Stokes\u00ae Organic Purple Sweet Potato",
+    "size": "48 oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": null
+   },
+   {
+    "id": "0062797501293",
+    "brand": "Freshpet",
+    "desc": "Freshpet Small Dog Beef And Egg Recipe With Green Beans And Sweet Potatoes Fresh Dog Food",
+    "size": "1 lb",
+    "soldBy": "UNIT",
+    "regular": 10.99,
+    "promo": null
+   },
+   {
+    "id": "0001780016962",
+    "brand": "Beneful",
+    "desc": "Beneful Freshly Prepared Blends Wet Dog Food With Salmon, Sweet Potatoes",
+    "size": "10 oz.",
+    "soldBy": "UNIT",
+    "regular": 3.29,
+    "promo": null
+   },
+   {
+    "id": "0001780016966",
+    "brand": "Beneful",
+    "desc": "Beneful Freshly Prepared Blends Wet Dog Food With Turkey, Sweet Potatoes",
+    "size": "10 oz.",
+    "soldBy": "UNIT",
+    "regular": 3.29,
+    "promo": null
+   },
+   {
+    "id": "0062797501357",
+    "brand": "Freshpet",
+    "desc": "Freshpet Grain Free Small Dog Beef And Egg Recipe With Green Beans And Sweet Potatoes Fresh Dog Food",
+    "size": "2 lb",
+    "soldBy": "UNIT",
+    "regular": 17.99,
+    "promo": null
+   },
+   {
+    "id": "0062797501276",
+    "brand": "Freshpet",
+    "desc": "Freshpet Small Dog Multi Protein Recipe With Sweet Potatoes Fresh Dog Food Roll",
+    "size": "1 lb",
+    "soldBy": "UNIT",
+    "regular": 8.49,
+    "promo": null
+   },
+   {
+    "id": "0002310012592",
+    "brand": "Cesar",
+    "desc": "Cesar Simply Crafted Adult Wet Dog Food Topper Chicken Carrots Potatoes & Chicken Sweet Potato Apple",
+    "size": "8 ct / 1.3 oz",
+    "soldBy": "UNIT",
+    "regular": 16.99,
+    "promo": null
+   },
+   {
+    "id": "0071785432305",
+    "brand": "Boston Market",
+    "desc": "Boston Market\u00aeMashed Sweet Potatoes with a Sweet Pecan Topping",
+    "size": "24 oz",
+    "soldBy": "UNIT",
+    "regular": 7.99,
+    "promo": null
+   },
+   {
+    "id": "0001111027025",
+    "brand": "Bakery Fresh",
+    "desc": "Bakery Fresh Sweet Potato Pie - 8 Inch",
+    "size": "21.5 oz",
+    "soldBy": "UNIT",
+    "regular": 5,
+    "promo": null
+   },
+   {
+    "id": "0005000000261",
+    "brand": "Fancy Feast",
+    "desc": "Fancy Feast Roasted Turkey Entr\u00e9e with Sweet Potato",
+    "size": "2.8 oz.",
+    "soldBy": "UNIT",
+    "regular": 1.49,
+    "promo": null
+   },
+   {
+    "id": "0001111013839",
+    "brand": "Pet Pride",
+    "desc": "Pet Pride\u00ae Sweet Potato Wrapped with Chicken Jerky Dog Treats BIG DEAL!",
+    "size": "32 oz",
+    "soldBy": "UNIT",
+    "regular": 24.99,
+    "promo": null
+   },
+   {
+    "id": "0001111010057",
+    "brand": "ABOUND",
+    "desc": "Abound\u00ae Grain Free All Size Dogs Jerky Bites Dog Treats Duck Sweet Potato & Blueberry",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": null
+   },
+   {
+    "id": "0004227200768",
+    "brand": "Amy's",
+    "desc": "Amy's\u00ae Thai Curry Sweet Potato Lentil Soup",
+    "size": "14.1 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0001111013054",
+    "brand": "ABOUND",
+    "desc": "ABOUND\u00ae Pro Vet Formulated Skin & Coat Support Wet Dog Food Chicken Salmon & Sweet Potato Pate",
+    "size": "13.2 oz",
+    "soldBy": "UNIT",
+    "regular": 2.69,
+    "promo": null
+   },
+   {
+    "id": "0001111086095",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Sweet Potato Corn Tortilla Chips",
+    "size": "7.5 oz",
+    "soldBy": "UNIT",
+    "regular": 2.99,
+    "promo": null
+   },
+   {
+    "id": "0073052151390",
+    "brand": "Nature's Recipe",
+    "desc": "Nature's Recipe Grain Free Small Breed Dry Dog Food with Chicken, Sweet Potato & Pumpkin, 4 lb. Bag",
+    "size": "4 pounds",
+    "soldBy": "UNIT",
+    "regular": 15.99,
+    "promo": null
+   },
+   {
+    "id": "0001111013068",
+    "brand": "ABOUND",
+    "desc": "ABOUND\u00ae Chicken Peas and Sweet Potato in Gravy Wet Dog Food",
+    "size": "3.5 oz",
+    "soldBy": "UNIT",
+    "regular": 1.25,
+    "promo": null
+   },
+   {
+    "id": "0073052150612",
+    "brand": "Nature's Recipe",
+    "desc": "Nature's Recipe Grain Free Salmon, Sweet Potato & Pumpkin Recipe Dry Dog Food, 4 lb. Bag",
+    "size": "4 pounds",
+    "soldBy": "UNIT",
+    "regular": 15.99,
+    "promo": null
+   },
+   {
+    "id": "0073052152103",
+    "brand": "Nature's Recipe",
+    "desc": "Nature's Recipe Grain Free Salmon, Sweet Potato & Pumpkin Recipe Dry Dog Food, 12 lb. Bag",
+    "size": "12 pounds",
+    "soldBy": "UNIT",
+    "regular": 37.99,
+    "promo": null
+   },
+   {
+    "id": "0002310013774",
+    "brand": "Cesar",
+    "desc": "Cesar Wholesome Bowls Adult Soft Wet Dog Food Topper Chicken Sweet Potato & Green Beans Recipe",
+    "size": "3 oz",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": null
+   },
+   {
+    "id": "0001111003664",
+    "brand": "ABOUND",
+    "desc": "ABOUND\u00ae Grain Free All Life Stages Dry Dog Food Chicken Sweet Potato and Cranberry",
+    "size": "14 lb",
+    "soldBy": "UNIT",
+    "regular": 29.99,
+    "promo": null
+   },
+   {
+    "id": "0002310013777",
+    "brand": "Cesar",
+    "desc": "Cesar Wholesome Bowls Soft Wet Dog Food Toppers Chicken & Chicken Sweet Potato & Green Beans",
+    "size": "6 ct / 3 oz",
+    "soldBy": "UNIT",
+    "regular": 20.49,
+    "promo": null
+   },
+   {
+    "id": "0001111013186",
+    "brand": "ABOUND",
+    "desc": "ABOUND\u00ae Grain Free All Life Stages Dry Dog Food Salmon and Sweet Potato",
+    "size": "28 lb",
+    "soldBy": "UNIT",
+    "regular": 47.99,
+    "promo": null
+   },
+   {
+    "id": "0073052152101",
+    "brand": "Nature's Recipe",
+    "desc": "Nature's Recipe Grain Free Chicken, Sweet Potato & Pumpkin Recipe Dry Dog Food, 12 lb. Bag",
+    "size": "12 pounds",
+    "soldBy": "UNIT",
+    "regular": 37.99,
+    "promo": null
+   },
+   {
+    "id": "0001111026562",
+    "brand": "Bakery Fresh",
+    "desc": "Bakery Fresh Sweet Potato Pie",
+    "size": "10 in",
+    "soldBy": "UNIT",
+    "regular": 7.99,
+    "promo": null
+   },
+   {
+    "id": "0081035942008",
+    "brand": "Savory Prime",
+    "desc": "Savory Prime Duck & Sweet Potato Jerky Dog Treats",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 11.99,
+    "promo": null
+   },
+   {
+    "id": "0001111013212",
+    "brand": "ABOUND",
+    "desc": "ABOUND\u00ae Pro Vet Formulated Adult Small Breed Dry Dog Food Beef and Sweet Potato",
+    "size": "16 lb",
+    "soldBy": "UNIT",
+    "regular": 33.99,
+    "promo": null
+   },
+   {
+    "id": "0081035900474",
+    "brand": "Savory Prime",
+    "desc": "Savory Prime\u00ae Sweet Potato Fries Pet Treat",
+    "size": "4 oz",
+    "soldBy": "UNIT",
+    "regular": 2.49,
+    "promo": null
+   },
+   {
+    "id": "0081035900380",
+    "brand": "Savory Prime",
+    "desc": "Savory Prime\u00ae Sweet Potato & Chicken Jerky Pet Treat",
+    "size": "4 oz",
+    "soldBy": "UNIT",
+    "regular": 4.59,
+    "promo": null
+   },
+   {
+    "id": "0086001449673",
+    "brand": "Lypid Kitchen",
+    "desc": "Lypid Kitchen Purple Yam Ube Bao",
+    "size": "4 pc / 7.76 oz",
+    "soldBy": "UNIT",
+    "regular": 9.99,
+    "promo": null
+   },
+   {
+    "id": "0695442750733",
+    "brand": "Sungiven",
+    "desc": "Sungiven\u2122 Purple Sweet Potato Vermicelli Noodles",
+    "size": "14.11 oz",
+    "soldBy": "UNIT",
+    "regular": 7.49,
+    "promo": null
+   },
+   {
+    "id": "0088588100057",
+    "brand": "SIAM",
+    "desc": "Siam\u00ae Tom Yam Soup Paste",
+    "size": "2.4 oz",
+    "soldBy": "UNIT",
+    "regular": 3.99,
     "promo": null
    }
   ]
@@ -5165,6 +11465,141 @@
     "soldBy": "UNIT",
     "regular": 2.5,
     "promo": null
+   },
+   {
+    "id": "0001111015118",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Cheddar Jack Shredded Cheese Family Size",
+    "size": "32 oz",
+    "soldBy": "UNIT",
+    "regular": 8.99,
+    "promo": 8.49
+   },
+   {
+    "id": "0007283001104",
+    "brand": "Tillamook",
+    "desc": "Tillamook Farmstyle Thick Cut Sharp Cheddar Shredded Cheese, 8oz",
+    "size": "8 oz (227 g)",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": null
+   },
+   {
+    "id": "0084037090136",
+    "brand": "Kraft",
+    "desc": "Kraft Sharp Cheddar Finely Shredded Cheese",
+    "size": "8 oz (226g)",
+    "soldBy": "UNIT",
+    "regular": 3.29,
+    "promo": null
+   },
+   {
+    "id": "0084037090137",
+    "brand": "Kraft",
+    "desc": "Kraft Mild Cheddar Finely Shredded Cheese",
+    "size": "8 oz (226g)",
+    "soldBy": "UNIT",
+    "regular": 3.29,
+    "promo": null
+   },
+   {
+    "id": "0084037090156",
+    "brand": "Kraft",
+    "desc": "Kraft Mexican Style Cheddar Jack Finely Shredded Cheese",
+    "size": "8 oz (226g)",
+    "soldBy": "UNIT",
+    "regular": 3.29,
+    "promo": null
+   },
+   {
+    "id": "0001111015119",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Mild Cheddar Shredded Cheese Family Size",
+    "size": "32 oz",
+    "soldBy": "UNIT",
+    "regular": 8.99,
+    "promo": 8.49
+   },
+   {
+    "id": "0001111015130",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Mild Cheddar Shredded Cheese",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0004610041103",
+    "brand": "Sargento",
+    "desc": "Sargento\u00ae Shredded Extra Sharp Natural Cheddar Cheese, Traditional Cut",
+    "size": "7 oz",
+    "soldBy": "UNIT",
+    "regular": 4.49,
+    "promo": 2.49
+   },
+   {
+    "id": "0084037090158",
+    "brand": "Kraft",
+    "desc": "Kraft Sharp Cheddar Shredded Cheese",
+    "size": "8 oz (226g)",
+    "soldBy": "UNIT",
+    "regular": 3.29,
+    "promo": null
+   },
+   {
+    "id": "0001111008391",
+    "brand": "Private Selection",
+    "desc": "Private Selection\u00ae Aged Cheddar Blend Thick Cut Shredded Cheese",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": null
+   },
+   {
+    "id": "0007283000100",
+    "brand": "Tillamook",
+    "desc": "Tillamook\u00ae Medium Cheddar Shredded Cheese Farmstyle",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": null
+   },
+   {
+    "id": "0001111013530",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Sharp White Cheddar Shredded Cheese",
+    "size": "6 oz",
+    "soldBy": "UNIT",
+    "regular": 4.69,
+    "promo": null
+   },
+   {
+    "id": "0002558312081",
+    "brand": "Moocho",
+    "desc": "Moocho Dairy-Free Cheddar Cheese Shreds",
+    "size": "7 oz",
+    "soldBy": "UNIT",
+    "regular": 5.79,
+    "promo": null
+   },
+   {
+    "id": "0001111008926",
+    "brand": "Simple Truth",
+    "desc": "Simple Truth\u2122 Dairy Free Cheddar Shredded Cheese",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 3.79,
+    "promo": null
+   },
+   {
+    "id": "0004956815007",
+    "brand": "Follow Your Heart",
+    "desc": "Follow Your Heart\u00ae Dairy Free Vegan Cheddar Style Shredded Cheese Fine Cut",
+    "size": "7 fl oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": null
    }
   ]
  },
@@ -5277,6 +11712,348 @@
     "size": "1 lb",
     "soldBy": "WEIGHT",
     "regular": 1.49,
+    "promo": null
+   },
+   {
+    "id": "0000000004073",
+    "brand": "Fresh Potatoes",
+    "desc": "Red Potatoes",
+    "size": "1 lb",
+    "soldBy": "WEIGHT",
+    "regular": 1.49,
+    "promo": null
+   },
+   {
+    "id": "0001111091846",
+    "brand": "Fresh",
+    "desc": "Kroger\u00ae Red Potatoes",
+    "size": "5 lb",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": null
+   },
+   {
+    "id": "0000000003221",
+    "brand": null,
+    "desc": "Red Potatoes",
+    "size": "1 ct",
+    "soldBy": null,
+    "regular": null,
+    "promo": null
+   },
+   {
+    "id": "0001111022299",
+    "brand": "Fresh Potatoes",
+    "desc": "Kroger\u00ae Sweet Potato",
+    "size": "3 lb",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": null
+   },
+   {
+    "id": "0001111079542",
+    "brand": "Fresh Potatoes",
+    "desc": "Private Selection\u00ae Petite Gold Gourmet Potatoes",
+    "size": "1.5 lb",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": null
+   },
+   {
+    "id": "0001111079541",
+    "brand": "Fresh Potatoes",
+    "desc": "Private Selection\u00ae Petite Red Gourmet Potatoes",
+    "size": "1.5 lb",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": null
+   },
+   {
+    "id": "0001111066323",
+    "brand": "Private Selection",
+    "desc": "Private Selection\u00ae Petite Gold Gourmet Potatoes",
+    "size": "3 lb",
+    "soldBy": "UNIT",
+    "regular": 6,
+    "promo": null
+   },
+   {
+    "id": "0001111066324",
+    "brand": "Private Selection",
+    "desc": "Private Selection\u00ae Petite Red Gourmet Potatoes",
+    "size": "3 lb",
+    "soldBy": "UNIT",
+    "regular": 6,
+    "promo": null
+   },
+   {
+    "id": "0001111068161",
+    "brand": "Private Selection",
+    "desc": "Private Selection\u00ae Petite Red and Gold Gourmet Potatoes",
+    "size": "1.5 lb",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": null
+   },
+   {
+    "id": "0000000004919",
+    "brand": "In Store",
+    "desc": "Fingerling Potatoes",
+    "size": "1 lb",
+    "soldBy": null,
+    "regular": null,
+    "promo": null
+   },
+   {
+    "id": "0001111060346",
+    "brand": "Private Selection",
+    "desc": "Private Selection\u00ae Petite Spudlings Gourmet Gold Potatoes",
+    "size": "1 lb",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": null
+   },
+   {
+    "id": "0000000004219",
+    "brand": null,
+    "desc": "White Potatoes",
+    "size": "1 lb",
+    "soldBy": "WEIGHT",
+    "regular": 1.99,
+    "promo": null
+   },
+   {
+    "id": "0001111062731",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Sweet Potatoes",
+    "size": "3 lb",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0001111079547",
+    "brand": "Fresh Potatoes",
+    "desc": "Private Selection\u00ae Petite Fingerling Gourmet Potatoes",
+    "size": "1.5 lb",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": null
+   },
+   {
+    "id": "0001111060350",
+    "brand": "Private Selection",
+    "desc": "Private Selection\u00ae Petite Spudlings Gourmet Red and Gold Potatoes",
+    "size": "1 lb",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": null
+   },
+   {
+    "id": "0001111060338",
+    "brand": "Private Selection",
+    "desc": "Private Selection\u00ae Red Mini Petite Spudlings Gourmet Potatoes",
+    "size": "1 lb",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": null
+   },
+   {
+    "id": "0000000004091",
+    "brand": "Fresh Potatoes",
+    "desc": "White Sweet Potato",
+    "size": "1 lb",
+    "soldBy": "WEIGHT",
+    "regular": 1.99,
+    "promo": null
+   },
+   {
+    "id": "0001111061318",
+    "brand": "Private Selection",
+    "desc": "Private Selection\u00ae Petite Potatoes with Parmesan Seasoning Blend",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0001111070095",
+    "brand": "Private Selection",
+    "desc": "Private Selection\u00ae Homestyle Rustic Herb Petite Potatoes",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0001111008023",
+    "brand": "Private Selection",
+    "desc": "Private Selection\u00ae Petite Potatoes with Hatch Green Chile Ranch Seasoning Blend",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0001111008021",
+    "brand": "Fresh Potatoes",
+    "desc": "Private Selection\u00ae Petite Gold Potatoes with Herbes De Provence Seasoning Blend",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0000000004818",
+    "brand": null,
+    "desc": "Japanese Sweet Potato",
+    "size": "1 lb",
+    "soldBy": "WEIGHT",
+    "regular": 1.99,
+    "promo": null
+   },
+   {
+    "id": "0000000094074",
+    "brand": "Fresh Potatoes",
+    "desc": "Organic Red Sweet Potatoes",
+    "size": "1 lb",
+    "soldBy": "WEIGHT",
+    "regular": 2.79,
+    "promo": null
+   },
+   {
+    "id": "0000000004011",
+    "brand": "Fresh Bananas",
+    "desc": "Fresh Bunch of Bananas \u2013 5-7 Bananas",
+    "size": "1 lb",
+    "soldBy": "WEIGHT",
+    "regular": 0.69,
+    "promo": null
+   },
+   {
+    "id": "0001111003931",
+    "brand": "Private Selection",
+    "desc": "Private Selection\u00ae Fresh Colossal Blueberries",
+    "size": "9.8 oz",
+    "soldBy": "UNIT",
+    "regular": 7.99,
+    "promo": null
+   },
+   {
+    "id": "0001111091188",
+    "brand": "Fresh Citrus",
+    "desc": "Kroger\u00ae Fresh Lemons Bag",
+    "size": "2 lb",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0001111063563",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Fresh Navel Oranges Bag",
+    "size": "4 lb",
+    "soldBy": "UNIT",
+    "regular": 6.49,
+    "promo": null
+   },
+   {
+    "id": "0001111018192",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Fresh Bartlett Pears \u2013 2 Pound Bag",
+    "size": "2 lb",
+    "soldBy": "UNIT",
+    "regular": 5.29,
+    "promo": null
+   },
+   {
+    "id": "0001111091189",
+    "brand": "Fresh Citrus",
+    "desc": "Kroger\u00ae Fresh Limes Bag",
+    "size": "2 lb",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0001111018195",
+    "brand": "Fresh Citrus",
+    "desc": "Kroger\u00ae Fresh Red Grapefruit Bag",
+    "size": "5 lb",
+    "soldBy": "UNIT",
+    "regular": 6.49,
+    "promo": null
+   },
+   {
+    "id": "0076101048124",
+    "brand": "Mission",
+    "desc": "Mission Fresh Jumbo Avocado Bag",
+    "size": "4 ct",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": null
+   },
+   {
+    "id": "0001111060179",
+    "brand": "Fresh Apples",
+    "desc": "Kroger Envy Apples",
+    "size": "by weight",
+    "soldBy": "UNIT",
+    "regular": 6.49,
+    "promo": null
+   },
+   {
+    "id": "0001111070152",
+    "brand": null,
+    "desc": "Kroger\u00ae Bartlett Pear Tray",
+    "size": "4 ct",
+    "soldBy": "UNIT",
+    "regular": 5,
+    "promo": null
+   },
+   {
+    "id": "0001111091836",
+    "brand": "Fresh Citrus",
+    "desc": "Kroger\u00ae Fresh Navel Oranges Bag",
+    "size": "4 lb",
+    "soldBy": "UNIT",
+    "regular": 5,
+    "promo": null
+   },
+   {
+    "id": "0000000003494",
+    "brand": "Fresh Melons",
+    "desc": "Mini Yellow Whole Seedless Watermelon",
+    "size": "1 ct",
+    "soldBy": "UNIT",
+    "regular": 5.69,
+    "promo": null
+   },
+   {
+    "id": "0001111063957",
+    "brand": "Private Selection",
+    "desc": "Private Selection\u00ae SugarBee\u00ae Apples \u2013 2 Pound Bag",
+    "size": "2 lb",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": null
+   },
+   {
+    "id": "0001111063564",
+    "brand": "Private Selection",
+    "desc": "Private Selection\u00ae Fresh Navel Oranges Cara Cara Bag",
+    "size": "3 lb",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0001111018199",
+    "brand": "Fresh Citrus",
+    "desc": "Kroger\u00ae Fresh Navel Oranges Bag",
+    "size": "8 lb",
+    "soldBy": "UNIT",
+    "regular": 8.99,
     "promo": null
    }
   ]
@@ -5423,6 +12200,51 @@
     "soldBy": "UNIT",
     "regular": 4.99,
     "promo": null
+   },
+   {
+    "id": "0001111016150",
+    "brand": "Private Selection",
+    "desc": "Private Selection\u00ae Parsley Flakes Shaker",
+    "size": "0.34 oz",
+    "soldBy": "UNIT",
+    "regular": 3.49,
+    "promo": null
+   },
+   {
+    "id": "0002150000036",
+    "brand": "Lawry's",
+    "desc": "Lawry's Garlic Powder Coarse Ground with Parsley",
+    "size": "2.9 oz",
+    "soldBy": "UNIT",
+    "regular": 7.99,
+    "promo": null
+   },
+   {
+    "id": "0003232700847",
+    "brand": "La Fiesta",
+    "desc": "La Fiesta Parsley Flakes",
+    "size": "0.25 oz",
+    "soldBy": "UNIT",
+    "regular": 1.29,
+    "promo": null
+   },
+   {
+    "id": "0001111069207",
+    "brand": "Private Selection",
+    "desc": "Private Selection\u00ae Mashed Potatoes with Herb Butter and Parsley",
+    "size": "13.88 oz",
+    "soldBy": "UNIT",
+    "regular": 5,
+    "promo": null
+   },
+   {
+    "id": "0001111015033",
+    "brand": "Kroger",
+    "desc": "Kroger\u00ae Garlic Salt With Parsley Shaker",
+    "size": "10.6 oz",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": 3.99
    }
   ]
  },
