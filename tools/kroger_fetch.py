@@ -55,8 +55,9 @@ def locations(tok, zipcode):
 
 def products(tok, loc):
     terms = [r for r in csv.DictReader(l for l in open(ROOT / 'data/search_terms.csv') if not l.startswith('#'))]
-    out = {}
-    for t in terms:
+    from concurrent.futures import ThreadPoolExecutor
+
+    def one(t):
         d = get(tok, '/products', **{'filter.term': t['search'][:60], 'filter.locationId': loc, 'filter.limit': 50})
         items = []
         for p in d.get('data', []):
@@ -65,8 +66,10 @@ def products(tok, loc):
             items.append({'id': p.get('productId'), 'brand': p.get('brand'), 'desc': p.get('description'),
                           'size': it.get('size'), 'soldBy': it.get('soldBy'),
                           'regular': pr.get('regular'), 'promo': pr.get('promo')})
-        out[t['item']] = {'search': t['search'], 'results': items}
-        time.sleep(0.3)
+        return t['item'], {'search': t['search'], 'results': items}
+
+    with ThreadPoolExecutor(4) as ex:
+        out = dict(ex.map(one, terms))
     (OUT / f'{loc}.json').write_text(json.dumps(out, indent=1))
     print(f'{len(out)} items fetched for {loc}')
 
