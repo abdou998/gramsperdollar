@@ -19,12 +19,12 @@ PRODUCE = {'banana', 'lemon juice and zest', 'garlic', 'rosemary fresh', 'mint f
 SKIP = ['big deal', 'trail mix', 'sauce', 'coffee', 'burger', 'patties', 'chops', 'crumbs', 'syrup', 'ice cream', 'dressing']
 # item: (words that must all appear in the description, extra words that rule a product out)
 MATCH = {
- 'whey protein isolate': ('whey', []), 'egg whole': ('large egg', []), 'milk whole': ('whole milk gallon', []),
+ 'whey protein isolate': ('whey', []), 'egg whole': ('large egg', []), 'milk whole': ('whole milk gallon', ['chocolate', 'strawberry', 'lactose', 'ultra', 'a2', 'goat']),
  'banana': ('banana', ['organic', 'red', 'plantain', 'chips']), 'butter salted': ('salted butter', ['unsalted']),
  'baking powder': ('baking powder', []), 'cinnamon ground': ('ground cinnamon', []),
  'chicken breast': ('boneless skinless chicken breast', ['frozen', 'tenderloin', 'thin']), 'olive oil': ('extra virgin olive oil', ['spray']),
- 'lemon juice and zest': ('lemon', ['juice', 'organic', 'lime', 'soda', 'tea', 'pepper']), 'garlic': ('garlic', ['minced', 'powder', 'salt', 'peeled', 'organic']),
- 'rosemary fresh': ('rosemary', ['ground', 'leaves', 'dried']), 'kosher salt': ('kosher salt', []),
+ 'lemon juice and zest': ('lemon', ['juice', 'organic', 'lime', 'soda', 'tea', 'pepper']), 'garlic': ('garlic', ['minced', 'powder', 'salt', 'peeled', 'organic', 'toast', 'bread', 'supplement', 'supports', 'capsule', 'frozen', 'butter', 'sauce', 'cheese', 'chicken', 'pork']),
+ 'rosemary fresh': ('rosemary', ['ground', 'leaves', 'dried', 'pork', 'chicken', 'roast', 'turkey', 'bread', 'crackers', 'oil']), 'kosher salt': ('kosher salt', []),
  'black pepper': ('ground black pepper', []), 'yellow squash': ('squash', ['butternut', 'spaghetti', 'acorn', 'organic', 'zucchini']),
  'green beans': ('green beans', ['canned', 'french style', 'frozen', 'cut green']), 'carrots': ('carrots', ['baby', 'shredded', 'chips', 'organic']),
  'red bell pepper': ('red bell pepper', ['organic', 'roasted', 'corn', 'mix']), 'yellow bell pepper': ('yellow bell pepper', ['organic']),
@@ -33,9 +33,9 @@ MATCH = {
  'frozen peas': ('peas', ['snap', 'snow', 'carrots', 'organic', 'canned']), 'cumin ground': ('ground cumin', []),
  'smoked paprika': ('smoked paprika', []), 'greek yogurt plain nonfat': ('plain nonfat greek yogurt', []),
  'rolled oats': ('old fashioned oats', []), 'walnuts': ('walnut', ['candied', 'glazed']), 'chia seeds': ('chia seeds', ['rice', 'quinoa', 'bar', 'pudding']),
- 'honey': ('honey', ['graham', 'mustard', 'roasted', 'granola']), 'mint fresh': ('mint', ['chocolate', 'gum', 'tea']),
+ 'honey': ('honey', ['graham', 'mustard', 'roasted', 'granola']), 'mint fresh': ('mint', ['chocolate', 'gum', 'tea', 'mouthwash', 'breath', 'tooth', 'floss', 'candy', 'lamb', 'ice cream', 'mints', 'cookie']),
  'shrimp raw': ('raw shrimp', ['cooked']), 'paprika': ('paprika', ['smoked']), 'italian seasoning': ('italian seasoning', []),
- 'tuna canned light drained': ('chunk light tuna in water', ['pouch']), 'chicken canned': ('chicken breast', ['soup', 'salad']),
+ 'tuna canned light drained': ('chunk light tuna in water', ['pouch']), 'chicken canned': ('chicken breast', ['soup', 'salad', 'fresh', 'frozen', 'strips', 'grilled']),
  'black beans dry': ('black beans', ['can', 'refried', 'seasoned']), 'black beans canned': ('black bean', ['dry', 'refried', 'seasoned', 'organic']),
  'ground turkey 93': ('ground turkey', []), 'ground beef 80/20': ('ground beef', ['grass']),
  'chicken thigh boneless': ('boneless skinless chicken thigh', []), 'pork loin': ('pork loin', ['tenderloin', 'marinated']),
@@ -110,6 +110,8 @@ def main():
             else:
                 g = grams(r.get('size'), item, density)
             if not g:
+                continue
+            if item in PRODUCE and re.match(r'\s*(\d+)\s*ct', r.get('size') or '') and int(re.match(r'\s*(\d+)', r['size']).group(1)) > 6 and r['regular'] < 3:
                 continue
             cands.append({**r, 'g': g, 'perkg': r['regular'] / g * 1000, 'own': (r.get('brand') or '').lower() in OWN})
         pick = None

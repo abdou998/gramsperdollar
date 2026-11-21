@@ -57,7 +57,7 @@ def products(tok, loc):
     terms = [r for r in csv.DictReader(l for l in open(ROOT / 'data/search_terms.csv') if not l.startswith('#'))]
     out = {}
     for t in terms:
-        d = get(tok, '/products', **{'filter.term': t['search'][:60], 'filter.locationId': loc, 'filter.limit': 12})
+        d = get(tok, '/products', **{'filter.term': t['search'][:60], 'filter.locationId': loc, 'filter.limit': 50})
         items = []
         for p in d.get('data', []):
             it = (p.get('items') or [{}])[0]
