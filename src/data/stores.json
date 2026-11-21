@@ -48,5 +48,65 @@
     "location": "Kroger Polk St, 4000 Polk St, Houston (77023)",
     "source": "Kroger API (store prices)",
     "note": "Store price from Kroger's official product API for this store."
+  },
+  "ralphs-ca": {
+    "id": "ralphs-ca",
+    "store": "Ralphs",
+    "market": "CA",
+    "state": "California",
+    "city": "Los Angeles",
+    "location": "Ralphs Third Street, 3410 W 3rd St, Los Angeles (90020)",
+    "source": "Kroger API (store prices)",
+    "note": "Store price from Kroger's official product API for this store."
+  },
+  "kingsoopers-co": {
+    "id": "kingsoopers-co",
+    "store": "King Soopers",
+    "market": "CO",
+    "state": "Colorado",
+    "city": "Denver",
+    "location": "King Soopers Capitol Hill, 1155 E 9th Ave, Denver (80218)",
+    "source": "Kroger API (store prices)",
+    "note": "Store price from Kroger's official product API for this store."
+  },
+  "frys-az": {
+    "id": "frys-az",
+    "store": "Fry's",
+    "market": "AZ",
+    "state": "Arizona",
+    "city": "Phoenix",
+    "location": "Fry's Food and Drug, 3036 E Thomas Rd, Phoenix (85016)",
+    "source": "Kroger API (store prices)",
+    "note": "Store price from Kroger's official product API for this store."
+  },
+  "fredmeyer-or": {
+    "id": "fredmeyer-or",
+    "store": "Fred Meyer",
+    "market": "OR",
+    "state": "Oregon",
+    "city": "Portland",
+    "location": "Fred Meyer Hawthorne, 3805 SE Hawthorne Blvd, Portland (97214)",
+    "source": "Kroger API (store prices)",
+    "note": "Store price from Kroger's official product API for this store."
+  },
+  "kroger-oh": {
+    "id": "kroger-oh",
+    "store": "Kroger",
+    "market": "OH",
+    "state": "Ohio",
+    "city": "Columbus",
+    "location": "Kroger Moler, 1441 Parsons Ave, Columbus (43207)",
+    "source": "Kroger API (store prices)",
+    "note": "Store price from Kroger's official product API for this store."
+  },
+  "harristeeter-nc": {
+    "id": "harristeeter-nc",
+    "store": "Harris Teeter",
+    "market": "NC",
+    "state": "North Carolina",
+    "city": "Charlotte",
+    "location": "Harris Teeter Central Avenue, 1704 Central Ave, Charlotte (28205)",
+    "source": "Kroger API (store prices)",
+    "note": "Store price from Kroger's official product API for this store."
   }
 }

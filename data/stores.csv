@@ -6,3 +6,9 @@ aldi-tx,Aldi,TX,Texas,Houston,"ALDI ROS 18, 3618 Old Spanish Trail, Houston (770
 walmart-tx,Walmart,TX,Texas,Houston,"Houston S Wayside Drive Supercenter #5612 (77023)",walmart.com,"Regular shelf price on walmart.com for this store."
 heb-tx,H-E-B,TX,Texas,Houston,"Gulfgate H-E-B, 3111 Woodridge, Houston (77087)",heb.com (in-store prices),"heb.com's in-store price for this store. Curbside pickup costs a little more."
 kroger-tx,Kroger,TX,Texas,Houston,"Kroger Polk St, 4000 Polk St, Houston (77023)",Kroger API (store prices),"Store price from Kroger's official product API for this store."
+ralphs-ca,Ralphs,CA,California,Los Angeles,"Ralphs Third Street, 3410 W 3rd St, Los Angeles (90020)",Kroger API (store prices),Store price from Kroger's official product API for this store.
+kingsoopers-co,King Soopers,CO,Colorado,Denver,"King Soopers Capitol Hill, 1155 E 9th Ave, Denver (80218)",Kroger API (store prices),Store price from Kroger's official product API for this store.
+frys-az,Fry's,AZ,Arizona,Phoenix,"Fry's Food and Drug, 3036 E Thomas Rd, Phoenix (85016)",Kroger API (store prices),Store price from Kroger's official product API for this store.
+fredmeyer-or,Fred Meyer,OR,Oregon,Portland,"Fred Meyer Hawthorne, 3805 SE Hawthorne Blvd, Portland (97214)",Kroger API (store prices),Store price from Kroger's official product API for this store.
+kroger-oh,Kroger,OH,Ohio,Columbus,"Kroger Moler, 1441 Parsons Ave, Columbus (43207)",Kroger API (store prices),Store price from Kroger's official product API for this store.
+harristeeter-nc,Harris Teeter,NC,North Carolina,Charlotte,"Harris Teeter Central Avenue, 1704 Central Ave, Charlotte (28205)",Kroger API (store prices),Store price from Kroger's official product API for this store.

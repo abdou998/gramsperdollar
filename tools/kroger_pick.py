@@ -11,15 +11,17 @@ import csv, json, pathlib, re, sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 D = ROOT / 'data'
-OWN = {'kroger', 'simple truth', 'simple truth organic', 'private selection', 'smart way', 'heritage farm'}
+# everyday own brands (organic / premium own brands don't count: the rule is the store's everyday brand)
+OWN = {'kroger', 'simple truth', 'smart way', 'heritage farm', 'harris teeter', 'ht traders', 'ralphs', 'fred meyer', 'king soopers',
+       "fry's", 'qfc', 'dillons', "smith's", "mariano's", "pick 'n save", 'city market', 'food 4 less', 'foods co', 'jay c', 'pay less', 'bakers', 'gerbes', 'metro market'}
 OZ, LB = 28.35, 453.6
 PRODUCE = {'banana', 'lemon juice and zest', 'garlic', 'rosemary fresh', 'mint fresh', 'parsley fresh', 'yellow squash', 'green beans', 'carrots',
            'red bell pepper', 'yellow bell pepper', 'green bell pepper', 'onion', 'romaine lettuce', 'spinach fresh', 'avocado', 'tomato',
            'cucumber', 'blueberries', 'blackberries', 'sweet potato', 'potatoes russet'}
-SKIP = ['big deal', 'trail mix', 'sauce', 'coffee', 'burger', 'patties', 'chops', 'crumbs', 'syrup', 'ice cream', 'dressing']
+SKIP = ['dental', 'cleanser', 'rinse', 'antiseptic', 'dog', 'cat food', 'wipe', 'body wash', 'shampoo', 'lotion', 'soap', 'deodorant', 'toothpaste', 'mouthwash', 'face', 'candle', 'big deal', 'trail mix', 'sauce', 'coffee', 'burger', 'patties', 'chops', 'crumbs', 'syrup', 'ice cream', 'dressing']
 # item: (words that must all appear in the description, extra words that rule a product out)
 MATCH = {
- 'whey protein isolate': ('whey', []), 'egg whole': ('large egg', []), 'milk whole': ('whole milk gallon', ['chocolate', 'strawberry', 'lactose', 'ultra', 'a2', 'goat']),
+ 'whey protein isolate': ('whey', []), 'egg whole': ('large egg', []), 'milk whole': ('whole milk gallon', ['buttermilk', 'cultured', 'chocolate', 'strawberry', 'lactose', 'ultra', 'a2', 'goat']),
  'banana': ('banana', ['organic', 'red', 'plantain', 'chips']), 'butter salted': ('salted butter', ['unsalted']),
  'baking powder': ('baking powder', []), 'cinnamon ground': ('ground cinnamon', []),
  'chicken breast': ('boneless skinless chicken breast', ['frozen', 'tenderloin', 'thin']), 'olive oil': ('extra virgin olive oil', ['spray']),
@@ -38,11 +40,11 @@ MATCH = {
  'tuna canned light drained': ('chunk light tuna in water', ['pouch']), 'chicken canned': ('chicken breast', ['soup', 'salad', 'fresh', 'frozen', 'strips', 'grilled']),
  'black beans dry': ('black beans', ['can', 'refried', 'seasoned']), 'black beans canned': ('black bean', ['dry', 'refried', 'seasoned', 'organic']),
  'ground turkey 93': ('ground turkey', []), 'ground beef 80/20': ('ground beef', ['grass']),
- 'chicken thigh boneless': ('boneless skinless chicken thigh', []), 'pork loin': ('pork loin', ['tenderloin', 'marinated']),
+ 'chicken thigh boneless': ('boneless skinless chicken thigh', []), 'pork loin': ('pork loin', ['tenderloin', 'marinated', 'ribs', 'filet', 'seasoned', 'garlic', 'lemon']),
  'tofu firm': ('firm tofu', []), 'cottage cheese': ('cottage cheese', []), 'peanut butter': ('creamy peanut butter', ['reduced', 'natural']),
  'quinoa': ('quinoa', ['protein', 'rice', 'blend', 'microwav']), 'romaine lettuce': ('romaine', ['salad kit', 'caesar']),
  'spinach fresh': ('spinach', ['frozen', 'blend', 'kale', 'dip']), 'avocado': ('avocado', ['organic', 'oil', 'guacamole', 'mini']),
- 'tomato': ('roma tomato', ['crushed', 'canned', 'paste', 'diced', 'can']), 'cucumber': ('cucumber', ['organic', 'mini', 'english', 'baby']), 'feta cheese': ('feta', []),
+ 'tomato': ('roma tomato', ['crushed', 'canned', 'paste', 'diced', 'can']), 'cucumber': ('cucumber', ['organic', 'mini', 'english', 'baby']), 'feta cheese': ('feta', ['dairy free', 'vegan', 'plant']),
  'mustard yellow': ('yellow mustard', []), 'blueberries': ('blueberries', ['frozen', 'dried', 'organic']),
  'blackberries': ('blackberries', ['frozen', 'organic', 'strawberr']), 'pumpkin seeds': ('pepitas|pumpkin seeds', []),
  'granola': ('granola', ['bar', 'bites']), 'sweet potato': ('sweet potato', ['cut', 'fries', 'chips', 'organic', 'mashed', 'frozen', 'wedge', 'maple', 'pecan']),
@@ -74,7 +76,7 @@ def grams(size, item, density):
         return None
     n, u = m[-1] if not any(x[1] in ('oz', 'lb', 'lbs', 'g', 'kg', 'fl oz') for x in m) else [x for x in m if x[1] in ('oz', 'lb', 'lbs', 'g', 'kg', 'fl oz')][-1]
     n = eval(n) if '/' in n else float(n)  # "1/2 gal"
-    pk = re.search(r'/\s*(\d+)\s*pk\b|^(\d+)\s*pk\b', s)
+    pk = re.search(r'/\s*(\d+)\s*pk\b|^(\d+)\s*pk\b|^([2-4])\s*ct\s*/', s) if 'canned' in item else re.search(r'/\s*(\d+)\s*pk\b|^(\d+)\s*pk\b', s)
     mult = int([g for g in pk.groups() if g][0]) if pk else 1
     if u == 'oz': g = n * OZ
     elif u in ('lb', 'lbs'): g = n * LB
@@ -113,7 +115,7 @@ def main():
                 continue
             if item in PRODUCE and re.match(r'\s*(\d+)\s*ct', r.get('size') or '') and int(re.match(r'\s*(\d+)', r['size']).group(1)) > 6 and r['regular'] < 3:
                 continue
-            cands.append({**r, 'g': g, 'perkg': r['regular'] / g * 1000, 'own': (r.get('brand') or '').lower() in OWN})
+            cands.append({**r, 'g': g, 'perkg': r['regular'] / g * 1000, 'own': (r.get('brand') or '').lower() in OWN and 'organic' not in (r.get('desc') or '').lower()})
         pick = None
         if item in pins:
             pick = next((c for c in cands if c['id'] == pins[item]['productId']), None)
