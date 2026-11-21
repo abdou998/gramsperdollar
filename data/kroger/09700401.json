@@ -1,0 +1,5189 @@
+{
+ "whey protein isolate": {
+  "search": "whey protein isolate",
+  "results": []
+ },
+ "egg whole": {
+  "search": "large eggs 12",
+  "results": [
+   {
+    "id": "0081565200414",
+    "brand": "Nellie's",
+    "desc": "Nellie's Free Range Eggs Extra Large 12 ct",
+    "size": "extra large 12 ct",
+    "soldBy": "UNIT",
+    "regular": 6.79,
+    "promo": null
+   },
+   {
+    "id": "0071514172928",
+    "brand": "Eggland's Best",
+    "desc": "Eggland's Best Classic Extra Large White Eggs, 12 Count",
+    "size": "12 ct",
+    "soldBy": "UNIT",
+    "regular": 4.29,
+    "promo": null
+   },
+   {
+    "id": "0071514151464",
+    "brand": "Eggland's Best",
+    "desc": "Eggland's Best Cage Free Large Brown Eggs, 12 Count",
+    "size": "12 ct",
+    "soldBy": "UNIT",
+    "regular": 5.29,
+    "promo": null
+   },
+   {
+    "id": "0081565200234",
+    "brand": "Pete and Gerrys",
+    "desc": "Pete & Gerry's Organic Eggs Extra Large 12 Ct",
+    "size": "12 ct",
+    "soldBy": "UNIT",
+    "regular": 7.49,
+    "promo": null
+   },
+   {
+    "id": "0085948400794",
+    "brand": "New Barn Organics",
+    "desc": "New Barn Organics Pasture Raised Certified Humane Regenerative Humanely Hatched Large A Brown 12 ct",
+    "size": "12 ct",
+    "soldBy": "UNIT",
+    "regular": 8.99,
+    "promo": null
+   },
+   {
+    "id": "0086174500001",
+    "brand": "Vital Farms",
+    "desc": "Vital Farms\u00ae Pasture-Raised Large Brown Eggs",
+    "size": "12 ct",
+    "soldBy": "UNIT",
+    "regular": 7.99,
+    "promo": null
+   },
+   {
+    "id": "0071514150349",
+    "brand": "Eggland's Best",
+    "desc": "Eggland's Best Classic Large White Eggs",
+    "size": "12 ct",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": 1.99
+   },
+   {
+    "id": "0001111079772",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic Brown Cage Free Large Eggs",
+    "size": "12 ct",
+    "soldBy": "UNIT",
+    "regular": 5.29,
+    "promo": null
+   },
+   {
+    "id": "0086174500002",
+    "brand": "Vital Farms",
+    "desc": "Vital Farms\u00ae Pasture-Raised Large Brown Grade-A Organic Eggs",
+    "size": "12 ct",
+    "soldBy": "UNIT",
+    "regular": 9.99,
+    "promo": null
+   },
+   {
+    "id": "0071514171682",
+    "brand": "Eggland's Best",
+    "desc": "Eggland's Best 100% USDA Organic Certified Large Brown Eggs",
+    "size": "12 ct",
+    "soldBy": "UNIT",
+    "regular": 6.29,
+    "promo": 4.99
+   },
+   {
+    "id": "0081565200214",
+    "brand": "Pete and Gerrys",
+    "desc": "Pete & Gerry's Organic Free Range Large Eggs",
+    "size": "12 ct",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": null
+   },
+   {
+    "id": "0007203663220",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter Large Grade A White Eggs",
+    "size": "12 ct",
+    "soldBy": "UNIT",
+    "regular": 2.19,
+    "promo": null
+   }
+  ]
+ },
+ "milk whole": {
+  "search": "whole milk gallon",
+  "results": [
+   {
+    "id": "0007203673802",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u2122 Vitamin D Whole Milk Gallon",
+    "size": "1 gal",
+    "soldBy": "UNIT",
+    "regular": 3.29,
+    "promo": null
+   },
+   {
+    "id": "0004138309036",
+    "brand": "Lactaid",
+    "desc": "Lactaid\u00ae Lactose Free Whole Milk Half Gallon",
+    "size": "1/2 gallon",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0001111042850",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Vitamin D Whole Milk Half Gallon",
+    "size": "1/2 gal",
+    "soldBy": "UNIT",
+    "regular": 4.69,
+    "promo": null
+   },
+   {
+    "id": "0001111042908",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Vitamin D Whole Milk Gallon",
+    "size": "1 gal",
+    "soldBy": "UNIT",
+    "regular": 8.19,
+    "promo": null
+   },
+   {
+    "id": "0001111042858",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Vitamin D Whole Milk with DHA Omega-3 Half Gallon",
+    "size": "1/2 gal",
+    "soldBy": "UNIT",
+    "regular": 4.69,
+    "promo": null
+   },
+   {
+    "id": "0001111050075",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Whole Chocolate Milk Half Gallon",
+    "size": "1/2 gal",
+    "soldBy": "UNIT",
+    "regular": 4.69,
+    "promo": null
+   },
+   {
+    "id": "0001111050434",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Lactose Free Vitamin D Whole Milk Half Gallon",
+    "size": "1/2 gal",
+    "soldBy": "UNIT",
+    "regular": 5.19,
+    "promo": null
+   },
+   {
+    "id": "0009396651300",
+    "brand": "Organic Valley",
+    "desc": "Organic Valley\u00ae Whole Milk Half Gallon",
+    "size": "64 fl oz",
+    "soldBy": "UNIT",
+    "regular": 6.29,
+    "promo": null
+   },
+   {
+    "id": "0009396600742",
+    "brand": "Organic Valley",
+    "desc": "Organic Valley\u00ae Whole Milk Gallon",
+    "size": "128 fl oz",
+    "soldBy": "UNIT",
+    "regular": 9.49,
+    "promo": null
+   },
+   {
+    "id": "0007203673810",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u00ae Vitamin D Whole Milk",
+    "size": "1/2 gal",
+    "soldBy": "UNIT",
+    "regular": 1.79,
+    "promo": null
+   },
+   {
+    "id": "0074236526445",
+    "brand": "Horizon Organic",
+    "desc": "Horizon Organic Vitamin D Whole Milk - Vitamin D Milk",
+    "size": "1/2 gal",
+    "soldBy": "UNIT",
+    "regular": 6.49,
+    "promo": null
+   },
+   {
+    "id": "0074236526447",
+    "brand": "Horizon Organic",
+    "desc": "Horizon Organic DHA Omega-3 Milk - DHA Whole Milk",
+    "size": "1/2 gal",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": null
+   }
+  ]
+ },
+ "banana": {
+  "search": "banana",
+  "results": [
+   {
+    "id": "0000000004011",
+    "brand": "Fresh Bananas",
+    "desc": "Fresh Bunch of Bananas \u2013 5-7 Bananas",
+    "size": "1 lb",
+    "soldBy": "WEIGHT",
+    "regular": 0.69,
+    "promo": null
+   },
+   {
+    "id": "0000000094011",
+    "brand": "Fresh Bananas",
+    "desc": "Fresh Bunch of Organic Bananas \u2013 5-7 Bananas",
+    "size": "1 lb",
+    "soldBy": "WEIGHT",
+    "regular": 0.99,
+    "promo": null
+   },
+   {
+    "id": "0000000004235",
+    "brand": null,
+    "desc": "Fresh Plantain - Single",
+    "size": "1 ea",
+    "soldBy": "UNIT",
+    "regular": 1.29,
+    "promo": null
+   },
+   {
+    "id": "0008259219415",
+    "brand": "Naked",
+    "desc": "Naked Boosted Smoothie Strawberry Banana Machine",
+    "size": "15.2 fl oz",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": null
+   },
+   {
+    "id": "0001111063660",
+    "brand": "Simple Truth",
+    "desc": "Simple Truth\u00ae Berries and Banana Trail Mix",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 8.99,
+    "promo": 4.49
+   },
+   {
+    "id": "0000000004678",
+    "brand": null,
+    "desc": "Fresh Yellow Banana Peppers",
+    "size": "1 lb",
+    "soldBy": "WEIGHT",
+    "regular": 3.99,
+    "promo": null
+   },
+   {
+    "id": "0001111011379",
+    "brand": "Simple Truth",
+    "desc": "Simple Truth\u00ae Freeze-Dried Bananas",
+    "size": "1.5 oz",
+    "soldBy": "UNIT",
+    "regular": 4.29,
+    "promo": 3.59
+   },
+   {
+    "id": "0007203689943",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter Farmers Market\u2122 Banana Chips",
+    "size": "7 oz",
+    "soldBy": "UNIT",
+    "regular": 3.29,
+    "promo": null
+   },
+   {
+    "id": "0000000004757",
+    "brand": null,
+    "desc": "Banana Squash",
+    "size": "1 lb",
+    "soldBy": "WEIGHT",
+    "regular": 1.79,
+    "promo": null
+   },
+   {
+    "id": "0018525500058",
+    "brand": "Crispy Green",
+    "desc": "Crispy Green\u00ae Crispy Fruit Freeze Dried Banana",
+    "size": "3.39 oz",
+    "soldBy": "UNIT",
+    "regular": 7.99,
+    "promo": 6.99
+   },
+   {
+    "id": "0081410902400",
+    "brand": "Chiquita",
+    "desc": "Chiquita\u00ae Snacks Original Plantain Chips with Sea Salt",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": 3.5
+   },
+   {
+    "id": "0081410902420",
+    "brand": "Chiquita",
+    "desc": "Chiquita\u00ae Snacks Sweet Plantain Chips",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": 3.5
+   }
+  ]
+ },
+ "butter salted": {
+  "search": "salted butter",
+  "results": [
+   {
+    "id": "0007203659020",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u2122 Salted Butter Quarters",
+    "size": "4 ct / 16 oz",
+    "soldBy": "UNIT",
+    "regular": 3.59,
+    "promo": null
+   },
+   {
+    "id": "0003450015136",
+    "brand": "Land O' Lakes",
+    "desc": "Land O Lakes Salted Butter Sticks",
+    "size": "4 sticks / 16 oz",
+    "soldBy": "UNIT",
+    "regular": 6.29,
+    "promo": 3.14
+   },
+   {
+    "id": "0076770700214",
+    "brand": "Kerrygold",
+    "desc": "Kerrygold Irish Grass-Fed Salted Butter Sticks, 8oz",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": 2.99
+   },
+   {
+    "id": "0001111085287",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Salted Butter Sticks",
+    "size": "4 sticks / 16 oz",
+    "soldBy": "UNIT",
+    "regular": 6.79,
+    "promo": null
+   },
+   {
+    "id": "0003450015181",
+    "brand": "Land O' Lakes",
+    "desc": "Land O Lakes Salted Butter Half Sticks",
+    "size": "8 sticks / 16 oz",
+    "soldBy": "UNIT",
+    "regular": 6.29,
+    "promo": 3.14
+   },
+   {
+    "id": "0076770700106",
+    "brand": "Kerrygold",
+    "desc": "Kerrygold Irish Grass-Fed Salted Butter Foil",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 5.79,
+    "promo": 2.89
+   },
+   {
+    "id": "0007283090612",
+    "brand": "Tillamook",
+    "desc": "Tillamook Extra Creamy Sea Salted Butter Sticks",
+    "size": "4 sticks / 16 oz",
+    "soldBy": "UNIT",
+    "regular": 7.19,
+    "promo": 5.99
+   },
+   {
+    "id": "0003450015135",
+    "brand": "Land O' Lakes",
+    "desc": "Land O Lakes Salted Butter in Half Sticks",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 3.59,
+    "promo": null
+   },
+   {
+    "id": "0009396601042",
+    "brand": "Organic Valley",
+    "desc": "Organic Valley\u00ae Salted Organic Butter, 8 oz",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 6.29,
+    "promo": null
+   },
+   {
+    "id": "0501105602377",
+    "brand": "Truly Grass Fed",
+    "desc": "Truly Grass Fed\u2122 Natural Creamy Salted Butter",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 5.49,
+    "promo": null
+   },
+   {
+    "id": "0007203674617",
+    "brand": "Highland Crest",
+    "desc": "Highland Crest Salted Butter",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 3.19,
+    "promo": null
+   },
+   {
+    "id": "0076770701430",
+    "brand": "Kerrygold",
+    "desc": "Kerrygold Grass-Fed Pure Irish Salted Butter Sticks",
+    "size": "4 ct / 16 oz",
+    "soldBy": "UNIT",
+    "regular": 10.99,
+    "promo": null
+   }
+  ]
+ },
+ "baking powder": {
+  "search": "baking powder",
+  "results": [
+   {
+    "id": "0001990000320",
+    "brand": "Clabber Girl",
+    "desc": "Clabber Girl\u00ae Double Acting Baking Powder",
+    "size": "8.1 oz",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": 3.29
+   },
+   {
+    "id": "0007203603051",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u2122 Double Acting Baking Powder",
+    "size": "8.1 oz",
+    "soldBy": "UNIT",
+    "regular": 1.99,
+    "promo": null
+   },
+   {
+    "id": "0004161700222",
+    "brand": "Rumford",
+    "desc": "Rumford Baking Powder",
+    "size": "4 oz",
+    "soldBy": "UNIT",
+    "regular": 3.19,
+    "promo": null
+   },
+   {
+    "id": "0003320001130",
+    "brand": "Arm & Hammer",
+    "desc": "Arm & Hammer Pure Baking Soda",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 0.99,
+    "promo": 0.79
+   },
+   {
+    "id": "0005210007086",
+    "brand": "McCormick",
+    "desc": "McCormick Pure Vanilla Extract, 1.0 fl oz",
+    "size": "1 fl oz",
+    "soldBy": "UNIT",
+    "regular": 6.29,
+    "promo": 4.72
+   },
+   {
+    "id": "0007203603052",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u00ae All Purpose Baking Soda",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 0.99,
+    "promo": null
+   },
+   {
+    "id": "0076172007104",
+    "brand": "Argo",
+    "desc": "Argo\u00ae 100% Pure Corn Starch",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 2.99,
+    "promo": 2.49
+   },
+   {
+    "id": "0005210007103",
+    "brand": "McCormick",
+    "desc": "McCormick Pure Vanilla Extract",
+    "size": "2 fl oz",
+    "soldBy": "UNIT",
+    "regular": 9.19,
+    "promo": 6.9
+   },
+   {
+    "id": "0007203638020",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u2122 Light Brown Sugar",
+    "size": "2 lb",
+    "soldBy": "UNIT",
+    "regular": 3.39,
+    "promo": 2.5
+   },
+   {
+    "id": "0074759961703",
+    "brand": "Ghirardelli",
+    "desc": "GHIRARDELLI Premium Baking Cocoa 100% Cocoa Unsweetened Cocoa Powder",
+    "size": "8 ounces",
+    "soldBy": "UNIT",
+    "regular": 9.99,
+    "promo": 7.99
+   },
+   {
+    "id": "0001111012148",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Dutch Process Unsweetened 100% Cocoa Powder",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 6.29,
+    "promo": null
+   },
+   {
+    "id": "0007203603070",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u00ae Corn Starch",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 1.99,
+    "promo": null
+   }
+  ]
+ },
+ "cinnamon ground": {
+  "search": "ground cinnamon",
+  "results": [
+   {
+    "id": "0001111011748",
+    "brand": "Smart Way",
+    "desc": "Smart Way\u2122 Ground Cinnamon",
+    "size": "1.94 oz",
+    "soldBy": "UNIT",
+    "regular": 1.19,
+    "promo": null
+   },
+   {
+    "id": "0005210000438",
+    "brand": "McCormick",
+    "desc": "McCormick Ground Cinnamon",
+    "size": "2.37 oz",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": 3
+   },
+   {
+    "id": "0001111072972",
+    "brand": "Private Selection",
+    "desc": "Private Selection\u00ae Ground Cinnamon Shaker",
+    "size": "1.62 oz",
+    "soldBy": "UNIT",
+    "regular": 2.99,
+    "promo": null
+   },
+   {
+    "id": "0005210003821",
+    "brand": "McCormick",
+    "desc": "McCormick Ground Cinnamon",
+    "size": "7.12 oz",
+    "soldBy": "UNIT",
+    "regular": 7.99,
+    "promo": 6
+   },
+   {
+    "id": "0005210002872",
+    "brand": "McCormick",
+    "desc": "McCormick Gourmet Organic Ground Saigon Cinnamon",
+    "size": "1.25 oz",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": 5.25
+   },
+   {
+    "id": "0007203674772",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u00ae Ground Cinnamon",
+    "size": "2.57 oz",
+    "soldBy": "UNIT",
+    "regular": 3.59,
+    "promo": 3.19
+   },
+   {
+    "id": "0008983618513",
+    "brand": "Simply Organic",
+    "desc": "Cinnamon Ground",
+    "size": "2.45 oz",
+    "soldBy": "UNIT",
+    "regular": 7.49,
+    "promo": 6.49
+   },
+   {
+    "id": "0008983619515",
+    "brand": "Simply Organic",
+    "desc": "Simply Organic\u00ae Ceylon Cinnamon Ground",
+    "size": "2.08 oz",
+    "soldBy": "UNIT",
+    "regular": 10.49,
+    "promo": 7.99
+   },
+   {
+    "id": "0007203674698",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u00ae Ground Cinnamon",
+    "size": "6.3 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0001629144113",
+    "brand": "Morton & Bassett",
+    "desc": "Morton & Bassett\u00ae Ground Cinnamon",
+    "size": "2.2 oz",
+    "soldBy": "UNIT",
+    "regular": 9.99,
+    "promo": 8.99
+   },
+   {
+    "id": "0007203673629",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u2122 Ground Sugar & Cinnamon",
+    "size": "3.75 oz",
+    "soldBy": "UNIT",
+    "regular": 3.29,
+    "promo": null
+   }
+  ]
+ },
+ "chicken breast": {
+  "search": "boneless skinless chicken breast",
+  "results": [
+   {
+    "id": "0027082900000",
+    "brand": "Perdue",
+    "desc": "PERDUE\u00ae Fresh Boneless Skinless Chicken Breasts",
+    "size": "1 lb",
+    "soldBy": "WEIGHT",
+    "regular": 6.99,
+    "promo": null
+   },
+   {
+    "id": "0001111018028",
+    "brand": null,
+    "desc": "Boneless Skinless Uncooked Chicken Breast With Rib Meat Thin-sliced",
+    "size": "1.25 lb",
+    "soldBy": "UNIT",
+    "regular": 5,
+    "promo": null
+   },
+   {
+    "id": "0020895300000",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter Boneless Skinless Chicken Breasts Small Pack",
+    "size": "1 lb",
+    "soldBy": "WEIGHT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0020802600000",
+    "brand": "Farmer Focus",
+    "desc": "Farmer Focus Organic Boneless Skinless Chicken Breasts 1 Each",
+    "size": "1 lb",
+    "soldBy": "WEIGHT",
+    "regular": 12.99,
+    "promo": 8.99
+   },
+   {
+    "id": "0020030600000",
+    "brand": "Smart Chicken",
+    "desc": "Smart Chicken Organic Boneless Skinless Fresh Chicken Breast",
+    "size": "1 lb",
+    "soldBy": "WEIGHT",
+    "regular": 13.99,
+    "promo": null
+   },
+   {
+    "id": "0007274506839",
+    "brand": "Perdue",
+    "desc": "Perdue\u00ae Shortcuts\u00ae Individually Sealed Boneless Skinless Chicken Breasts",
+    "size": "1.5 lbs",
+    "soldBy": "UNIT",
+    "regular": 10.99,
+    "promo": null
+   },
+   {
+    "id": "0007274506861",
+    "brand": "Perdue",
+    "desc": "PERDUE\u00ae SHORTCUTS\u00ae Individually Sealed Boneless Skinless Chicken Breasts, Garlic Herb",
+    "size": "1.5 lbs",
+    "soldBy": "UNIT",
+    "regular": 10.99,
+    "promo": null
+   },
+   {
+    "id": "0007701361610",
+    "brand": "Just Bare",
+    "desc": "Just Bare Fully Cooked Roasted Spicy Boneless Skinless Chicken Breast Bites",
+    "size": "1.2 lb",
+    "soldBy": "UNIT",
+    "regular": 14.99,
+    "promo": null
+   }
+  ]
+ },
+ "olive oil": {
+  "search": "extra virgin olive oil",
+  "results": [
+   {
+    "id": "0007203631060",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u00ae Extra Virgin Olive Oil",
+    "size": "26 fl oz",
+    "soldBy": "UNIT",
+    "regular": 9.99,
+    "promo": 8.69
+   },
+   {
+    "id": "0019589319439",
+    "brand": "Graza",
+    "desc": "Graza Sizzle Extra Virgin Olive Oil 25.3 fl oz",
+    "size": "25.3 fl oz",
+    "soldBy": "UNIT",
+    "regular": 15.99,
+    "promo": 13.99
+   },
+   {
+    "id": "0085068710005",
+    "brand": "California Olive Ranch",
+    "desc": "California Olive Ranch Extra Virgin Global Blend Olive Oil 16.9 fl oz",
+    "size": "16.9 fl oz",
+    "soldBy": "UNIT",
+    "regular": 12.99,
+    "promo": null
+   },
+   {
+    "id": "0007040400280",
+    "brand": "Pompeian",
+    "desc": "Pompeian Smooth Extra Virgin Olive Oil - 32 fl oz",
+    "size": "32 fl oz",
+    "soldBy": "UNIT",
+    "regular": 23.99,
+    "promo": 11.99
+   },
+   {
+    "id": "0619150990066",
+    "brand": "Terra Delyssa",
+    "desc": "Terra Delyssa\u00ae Single Origin Smooth Flavor Extra Virgin Olive Oil",
+    "size": "34 fl oz",
+    "soldBy": "UNIT",
+    "regular": 18.99,
+    "promo": 15.99
+   },
+   {
+    "id": "0007203632014",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter Extra Virgin Olive Oil",
+    "size": "16.9 fl oz",
+    "soldBy": "UNIT",
+    "regular": 7.29,
+    "promo": null
+   },
+   {
+    "id": "0004179000165",
+    "brand": "Bertolli",
+    "desc": "Bertolli Extra Virgin Olive Oil, Rich Taste",
+    "size": "8.45 fl oz",
+    "soldBy": "UNIT",
+    "regular": 6.29,
+    "promo": null
+   },
+   {
+    "id": "0001111008223",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Extra Virgin Olive Oil",
+    "size": "16.9 fl oz",
+    "soldBy": "UNIT",
+    "regular": 8.49,
+    "promo": null
+   },
+   {
+    "id": "0085068711050",
+    "brand": "California Olive Ranch",
+    "desc": "California Olive Ranch 100% California Extra Virgin Olive Oil 16.9 fl oz",
+    "size": "16.9 fl oz",
+    "soldBy": "UNIT",
+    "regular": 16.99,
+    "promo": 12.99
+   },
+   {
+    "id": "0085068711042",
+    "brand": "California Olive Ranch",
+    "desc": "California Olive Ranch Chef's Bottle 100% California Extra Virgin Olive Oil 16.9 fl oz",
+    "size": "16.9 fl oz",
+    "soldBy": "UNIT",
+    "regular": 16.99,
+    "promo": null
+   },
+   {
+    "id": "0004179000160",
+    "brand": "Bertolli",
+    "desc": "Bertolli Extra Virgin Olive Oil, Rich Taste",
+    "size": "16.9 fl oz",
+    "soldBy": "UNIT",
+    "regular": 13.49,
+    "promo": null
+   },
+   {
+    "id": "0004173601014",
+    "brand": "Filippo Berio",
+    "desc": "Filippo Berio Extra Virgin Olive Oil",
+    "size": "16.9 fl oz",
+    "soldBy": "UNIT",
+    "regular": 9.99,
+    "promo": 6.99
+   }
+  ]
+ },
+ "lemon juice and zest": {
+  "search": "lemon",
+  "results": [
+   {
+    "id": "0000000004053",
+    "brand": "Fresh Citrus",
+    "desc": "Fresh Large Lemon - Each",
+    "size": "1 each",
+    "soldBy": "UNIT",
+    "regular": 0.69,
+    "promo": null
+   },
+   {
+    "id": "0007224054678",
+    "brand": "Wonderful",
+    "desc": "Wonderful Seedless Lemons",
+    "size": "1 lb",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": 3.99
+   },
+   {
+    "id": "0004140901397",
+    "brand": "Italia Garden",
+    "desc": "Italia Garden Organic Perfectly Lemon Juice",
+    "size": "4 fl oz",
+    "soldBy": "UNIT",
+    "regular": 1.99,
+    "promo": null
+   },
+   {
+    "id": "0004140901413",
+    "brand": "Italia Garden",
+    "desc": "Italia Garden, Lemon Juice",
+    "size": "7 fl oz",
+    "soldBy": "UNIT",
+    "regular": 2.49,
+    "promo": null
+   },
+   {
+    "id": "0001111018206",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Fresh Lemons Bag",
+    "size": "2 lb",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": null
+   },
+   {
+    "id": "0000000094053",
+    "brand": "Fresh Citrus",
+    "desc": "Fresh Organic Lemon - Each",
+    "size": "1 each",
+    "soldBy": "UNIT",
+    "regular": 1.25,
+    "promo": null
+   },
+   {
+    "id": "0004900002892",
+    "brand": "Sprite",
+    "desc": "Sprite\u00ae Lemon-Lime Caffeine Free Soda Cans",
+    "size": "12 pk / 12 fl oz",
+    "soldBy": "UNIT",
+    "regular": 11.99,
+    "promo": null
+   },
+   {
+    "id": "0004900000764",
+    "brand": "Sprite",
+    "desc": "Sprite\u00ae Lemon-Lime Caffeine Free Soda Bottle",
+    "size": "20 fl oz",
+    "soldBy": "UNIT",
+    "regular": 2.89,
+    "promo": null
+   },
+   {
+    "id": "0004900005015",
+    "brand": "Sprite",
+    "desc": "Sprite\u00ae Lemon-Lime Caffeine Free Soda Bottle",
+    "size": "2 liter",
+    "soldBy": "UNIT",
+    "regular": 4.49,
+    "promo": null
+   },
+   {
+    "id": "0004900002470",
+    "brand": "Sprite",
+    "desc": "Sprite\u00ae Lemon-Lime Caffeine Free Soda Bottles",
+    "size": "6 pk / 16.9 fl oz",
+    "soldBy": "UNIT",
+    "regular": 8.49,
+    "promo": null
+   },
+   {
+    "id": "0004900006724",
+    "brand": "Sprite",
+    "desc": "Sprite\u00ae Lemon-Lime Caffeine Free Soda Mini Cans",
+    "size": "10 pk / 7.5 fl oz",
+    "soldBy": "UNIT",
+    "regular": 8.99,
+    "promo": null
+   },
+   {
+    "id": "0004900005545",
+    "brand": "Sprite",
+    "desc": "Sprite\u00ae Lemon-Lime Caffeine Free Soda Bottle",
+    "size": "1.25 liter",
+    "soldBy": "UNIT",
+    "regular": 2.29,
+    "promo": 2
+   }
+  ]
+ },
+ "garlic": {
+  "search": "garlic bulb",
+  "results": [
+   {
+    "id": "0000000004608",
+    "brand": null,
+    "desc": "Garlic",
+    "size": "1 ct",
+    "soldBy": "UNIT",
+    "regular": 0.75,
+    "promo": null
+   },
+   {
+    "id": "0001111002882",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Garlic Bulbs",
+    "size": "3 ct",
+    "soldBy": "UNIT",
+    "regular": 3.49,
+    "promo": null
+   },
+   {
+    "id": "0007096900439",
+    "brand": "Spice World",
+    "desc": "Spice World\u00ae Fresh Diced Garlic",
+    "size": "5 oz",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": 3.49
+   },
+   {
+    "id": "0001111012981",
+    "brand": "Simple Truth",
+    "desc": "Simple Truth\u00ae Garlic Paste Tube",
+    "size": "3.5 oz",
+    "soldBy": "UNIT",
+    "regular": 3.49,
+    "promo": 2.99
+   },
+   {
+    "id": "0007457485101",
+    "brand": "Christopher Ranch",
+    "desc": "Christopher Ranch Elephant Garlic",
+    "size": "1 ct",
+    "soldBy": "UNIT",
+    "regular": 4.49,
+    "promo": null
+   },
+   {
+    "id": "0004133103912",
+    "brand": "GOYA",
+    "desc": "Goya Minced Garlic",
+    "size": "4.5 oz",
+    "soldBy": "UNIT",
+    "regular": 4.49,
+    "promo": null
+   },
+   {
+    "id": "0007457483220",
+    "brand": "Christopher Ranch",
+    "desc": "Christopher Ranch Chopped Garlic",
+    "size": "4.25 oz",
+    "soldBy": "UNIT",
+    "regular": 2.99,
+    "promo": null
+   },
+   {
+    "id": "0007045900558",
+    "brand": "New York Bakery",
+    "desc": "New York Bakery Garlic Frozen Texas Toast",
+    "size": "11.25 oz",
+    "soldBy": "UNIT",
+    "regular": 3.79,
+    "promo": null
+   },
+   {
+    "id": "0007045900910",
+    "brand": "New York Bakery",
+    "desc": "New York Bakery Frozen Garlic Breadsticks",
+    "size": "6 ct",
+    "soldBy": "UNIT",
+    "regular": 3.79,
+    "promo": null
+   },
+   {
+    "id": "0007045900930",
+    "brand": "New York Bakery",
+    "desc": "New York Bakery Frozen Garlic Bread Knots",
+    "size": "6 ct",
+    "soldBy": "UNIT",
+    "regular": 6.19,
+    "promo": null
+   },
+   {
+    "id": "0005100012767",
+    "brand": "Pepperidge Farm",
+    "desc": "Pepperidge Farm\u00ae Texas Toast Frozen Garlic Bread 8 Slices",
+    "size": "11.25 oz",
+    "soldBy": "UNIT",
+    "regular": 3.79,
+    "promo": null
+   },
+   {
+    "id": "0005100007546",
+    "brand": "Pepperidge Farm",
+    "desc": "Pepperidge Farm Frozen Garlic Bread",
+    "size": "10 oz",
+    "soldBy": "UNIT",
+    "regular": 3.19,
+    "promo": null
+   }
+  ]
+ },
+ "rosemary fresh": {
+  "search": "fresh rosemary",
+  "results": [
+   {
+    "id": "0001111001886",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Rosemary",
+    "size": "0.5 oz",
+    "soldBy": "UNIT",
+    "regular": 2.39,
+    "promo": null
+   },
+   {
+    "id": "0000000004903",
+    "brand": null,
+    "desc": "Rosemary Bunch",
+    "size": "1 ct",
+    "soldBy": "UNIT",
+    "regular": 3.29,
+    "promo": null
+   },
+   {
+    "id": "0007111702701",
+    "brand": "Reser's",
+    "desc": "Reser's\u00ae Main St\u00ae Bistro Roasted Garlic and Rosemary Potatoes",
+    "size": "17 oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": null
+   }
+  ]
+ },
+ "kosher salt": {
+  "search": "kosher salt",
+  "results": [
+   {
+    "id": "0002460001700",
+    "brand": "Morton",
+    "desc": "Morton Coarse Kosher Salt Coarse Salt for Cooking, 3 lb.",
+    "size": "3 lb",
+    "soldBy": "UNIT",
+    "regular": 4.69,
+    "promo": 3.49
+   },
+   {
+    "id": "0002460001707",
+    "brand": "Morton",
+    "desc": "Morton Flakes Kosher Salt 16 oz",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 2.69,
+    "promo": null
+   },
+   {
+    "id": "0001360002003",
+    "brand": "Diamond Crystal",
+    "desc": "Diamond Crystal Salt Co. Kosher Salt Flakes 26oz",
+    "size": "26 oz",
+    "soldBy": "UNIT",
+    "regular": 6.19,
+    "promo": null
+   },
+   {
+    "id": "0001360000000",
+    "brand": "Diamond Crystal",
+    "desc": "Diamond Crystal Salt Co. Fine Kosher Baking Salt, 8.5 oz Canister",
+    "size": "8.5 oz",
+    "soldBy": "UNIT",
+    "regular": 4.29,
+    "promo": 3.59
+   },
+   {
+    "id": "0007022750001",
+    "brand": "Streit's",
+    "desc": "Streit's Lightly Salted Matzos",
+    "size": "11 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0004082204320",
+    "brand": "Sea Castle",
+    "desc": "Sea Castle Sea Salt Organic Roasted Seaweed Snacks",
+    "size": "0.35 oz",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": null
+   },
+   {
+    "id": "0007203631021",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u2122 Iodized Salt",
+    "size": "26 oz",
+    "soldBy": "UNIT",
+    "regular": 0.69,
+    "promo": null
+   },
+   {
+    "id": "0000930000651",
+    "brand": "Mt. Olive",
+    "desc": "Mt. Olive Sandwich Stuffers Kosher Dill Pickles with Sea Salt",
+    "size": "24 fl oz",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": null
+   },
+   {
+    "id": "0002460001097",
+    "brand": "Morton",
+    "desc": "Morton All-Natural Coarse Sea Salt 17.6 oz",
+    "size": "17.6 oz",
+    "soldBy": "UNIT",
+    "regular": 4.19,
+    "promo": 2.99
+   },
+   {
+    "id": "0060502100061",
+    "brand": "Dash",
+    "desc": "Dash Salt-Free Lemon Pepper Seasoning Blend, Kosher, 2.5 oz",
+    "size": "2.5 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0000930000650",
+    "brand": "Mt. Olive",
+    "desc": "Mt. Olive Kosher Dill Spear Pickles with Sea Salt",
+    "size": "24 fl oz",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": null
+   },
+   {
+    "id": "0060502100008",
+    "brand": "Mrs. Dash",
+    "desc": "Dash Salt-Free Original Seasoning Blend, Kosher",
+    "size": "2.5 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   }
+  ]
+ },
+ "black pepper": {
+  "search": "ground black pepper",
+  "results": [
+   {
+    "id": "0007203671553",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u2122 Pure Ground Black Pepper",
+    "size": "4 oz",
+    "soldBy": "UNIT",
+    "regular": 4.19,
+    "promo": null
+   },
+   {
+    "id": "0005210005231",
+    "brand": "McCormick",
+    "desc": "McCormick Pure Ground Black Pepper, 3.0 oz",
+    "size": "3 oz",
+    "soldBy": "UNIT",
+    "regular": 6.39,
+    "promo": null
+   },
+   {
+    "id": "0001111011742",
+    "brand": "Smart Way",
+    "desc": "Smart Way\u2122 Ground Black Pepper",
+    "size": "2.25 oz",
+    "soldBy": "UNIT",
+    "regular": 1.19,
+    "promo": null
+   },
+   {
+    "id": "0005210002992",
+    "brand": "McCormick",
+    "desc": "McCormick Pure Ground Black Pepper",
+    "size": "1.5 oz",
+    "soldBy": "UNIT",
+    "regular": 3.79,
+    "promo": null
+   },
+   {
+    "id": "0003384400448",
+    "brand": "Badia",
+    "desc": "Badia\u00ae Ground Black Pepper",
+    "size": "2 oz",
+    "soldBy": "UNIT",
+    "regular": 3.19,
+    "promo": null
+   },
+   {
+    "id": "0007203674712",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u00ae Ground Black Pepper",
+    "size": "7 oz",
+    "soldBy": "UNIT",
+    "regular": 6.79,
+    "promo": 5.99
+   },
+   {
+    "id": "0005210003025",
+    "brand": "McCormick",
+    "desc": "McCormick Coarse Ground Black Pepper",
+    "size": "3.12 oz",
+    "soldBy": "UNIT",
+    "regular": 7.49,
+    "promo": null
+   },
+   {
+    "id": "0003384400613",
+    "brand": "Badia",
+    "desc": "Badia\u00ae Ground Black Pepper",
+    "size": "7 oz",
+    "soldBy": "UNIT",
+    "regular": 6.49,
+    "promo": null
+   },
+   {
+    "id": "0005210004303",
+    "brand": "McCormick",
+    "desc": "McCormick Ground Organic Black Pepper",
+    "size": "3 oz",
+    "soldBy": "UNIT",
+    "regular": 8.99,
+    "promo": null
+   },
+   {
+    "id": "0005210000586",
+    "brand": "McCormick",
+    "desc": "McCormick Gourmet Organic Coarse Ground Black Pepper",
+    "size": "1.62 oz",
+    "soldBy": "UNIT",
+    "regular": 5.49,
+    "promo": null
+   }
+  ]
+ },
+ "yellow squash": {
+  "search": "yellow squash",
+  "results": [
+   {
+    "id": "0000000004784",
+    "brand": null,
+    "desc": "Squash Yellow",
+    "size": "1 lb",
+    "soldBy": "WEIGHT",
+    "regular": 2.69,
+    "promo": 2.29
+   },
+   {
+    "id": "0000000094784",
+    "brand": null,
+    "desc": "Organic Yellow Squash",
+    "size": "1 lb",
+    "soldBy": "WEIGHT",
+    "regular": 3.79,
+    "promo": null
+   }
+  ]
+ },
+ "green beans": {
+  "search": "fresh green beans",
+  "results": [
+   {
+    "id": "0001111060405",
+    "brand": null,
+    "desc": "Fresh French Green Beans Bag",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": null
+   },
+   {
+    "id": "0001111091215",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter Farmer\u2019s Market Ready Veggies Green Beans",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": 1.99
+   },
+   {
+    "id": "0087489600750",
+    "brand": "Pero Family Farms",
+    "desc": "Pero Family Farms Snipped Green Beans",
+    "size": "2 lb",
+    "soldBy": "UNIT",
+    "regular": 7.99,
+    "promo": 5.99
+   },
+   {
+    "id": "0007203688159",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u2122 Farmers Market French Green Beans",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": null
+   },
+   {
+    "id": "0002400016286",
+    "brand": "Del Monte",
+    "desc": "Del Monte\u00ae Fresh Cut\u00ae Blue Lake\u00ae Cut Green Beans 14.5 oz. Can",
+    "size": "14.5 onz",
+    "soldBy": "UNIT",
+    "regular": 2.19,
+    "promo": null
+   },
+   {
+    "id": "0002880010314",
+    "brand": "Hanover",
+    "desc": "Hanover Garden Fresh Blue Lake Cut Green Beans",
+    "size": "50 oz",
+    "soldBy": "UNIT",
+    "regular": 4.39,
+    "promo": 2.99
+   },
+   {
+    "id": "0002400016290",
+    "brand": "Del Monte",
+    "desc": "Del Monte\u00ae Fresh Cut\u00ae French Style Green Beans No Salt Added, 14.5 oz. Can",
+    "size": "14.5 onz",
+    "soldBy": "UNIT",
+    "regular": 2.19,
+    "promo": null
+   },
+   {
+    "id": "0002880010901",
+    "brand": "Hanover",
+    "desc": "Hanover\u00ae Garden Fresh Cut Green Beans & Diced Potatoes",
+    "size": "39 oz",
+    "soldBy": "UNIT",
+    "regular": 3.29,
+    "promo": 2
+   },
+   {
+    "id": "0002400001398",
+    "brand": "Del Monte",
+    "desc": "Del Monte\u00ae Fresh Cut\u00ae French Style Green Beans",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 1.79,
+    "promo": null
+   },
+   {
+    "id": "0062797501293",
+    "brand": "Freshpet",
+    "desc": "Freshpet Small Dog Beef And Egg Recipe With Green Beans And Sweet Potatoes Fresh Dog Food",
+    "size": "1 lb",
+    "soldBy": "UNIT",
+    "regular": 9.99,
+    "promo": null
+   },
+   {
+    "id": "0003022308294",
+    "brand": "Taylor Farms",
+    "desc": "Fresh Foods Market Chicken With Roasted Potatoes and Green Beans",
+    "size": "34.75 oz",
+    "soldBy": "UNIT",
+    "regular": 20,
+    "promo": null
+   }
+  ]
+ },
+ "carrots": {
+  "search": "carrots 2 lb",
+  "results": [
+   {
+    "id": "0001111091622",
+    "brand": null,
+    "desc": "Harris Teeter Farmers Market Whole Carrots Bag",
+    "size": "2 lb",
+    "soldBy": "UNIT",
+    "regular": 2.99,
+    "promo": null
+   },
+   {
+    "id": "0001111091621",
+    "brand": null,
+    "desc": "Harris Teeter Farmers Market Peeled Baby Carrots Bag",
+    "size": "2 lb",
+    "soldBy": "UNIT",
+    "regular": 2.99,
+    "promo": null
+   }
+  ]
+ },
+ "red bell pepper": {
+  "search": "red bell pepper",
+  "results": [
+   {
+    "id": "0000000004088",
+    "brand": null,
+    "desc": "Fresh Red Bell Pepper",
+    "size": "1 ct",
+    "soldBy": "UNIT",
+    "regular": 1.79,
+    "promo": 1.67
+   },
+   {
+    "id": "0000000094088",
+    "brand": null,
+    "desc": "Organic Fresh Red Bell Pepper",
+    "size": "1 ct",
+    "soldBy": "UNIT",
+    "regular": 3.29,
+    "promo": null
+   },
+   {
+    "id": "0007321400104",
+    "brand": "Mezzetta",
+    "desc": "Mezzetta\u2122 Mild Roasted Red Bell Peppers",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 4.79,
+    "promo": 2.5
+   },
+   {
+    "id": "0081015393012",
+    "brand": "Green Giant",
+    "desc": "Green Giant\u00ae SteamCrisp\u00ae Mexicorn\u00ae Whole Kernel Corn with Red & Green Bell Peppers",
+    "size": "11 oz",
+    "soldBy": "UNIT",
+    "regular": 2.49,
+    "promo": 1.5
+   }
+  ]
+ },
+ "yellow bell pepper": {
+  "search": "yellow bell pepper",
+  "results": [
+   {
+    "id": "0000000004680",
+    "brand": null,
+    "desc": "Fresh Yellow Bell Pepper",
+    "size": "1 ct",
+    "soldBy": "UNIT",
+    "regular": 1.79,
+    "promo": 1.67
+   }
+  ]
+ },
+ "white rice": {
+  "search": "long grain white rice",
+  "results": [
+   {
+    "id": "0007203642073",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u00ae Long Grain White Rice",
+    "size": "32 oz",
+    "soldBy": "UNIT",
+    "regular": 1.79,
+    "promo": null
+   },
+   {
+    "id": "0001740010675",
+    "brand": "Mahatma",
+    "desc": "Mahatma Extra Long Grain White Rice, Uncooked Rice, 32 oz (907g)",
+    "size": "32 onz",
+    "soldBy": "UNIT",
+    "regular": 3.19,
+    "promo": 2.79
+   },
+   {
+    "id": "0005480042356",
+    "brand": "Ben's Original",
+    "desc": "BEN'S ORIGINAL Enriched Long Grain White Parboiled Rice",
+    "size": "5 lb",
+    "soldBy": "UNIT",
+    "regular": 10.19,
+    "promo": 6.99
+   },
+   {
+    "id": "0081620202205",
+    "brand": "4Sisters",
+    "desc": "4Sisters\u00ae Extra Long Grain Organic White Rice",
+    "size": "32 oz",
+    "soldBy": "UNIT",
+    "regular": 9.29,
+    "promo": 6.99
+   },
+   {
+    "id": "0007341619774",
+    "brand": "Lundberg Family Farms",
+    "desc": "Lundberg Family Farms\u00ae Regenerative Organic Certified\u00ae Long Grain White Rice",
+    "size": "32 oz",
+    "soldBy": "UNIT",
+    "regular": 8.99,
+    "promo": 7.49
+   },
+   {
+    "id": "0001740010932",
+    "brand": "Mahatma",
+    "desc": "Mahatma Extra Long Grain White Rice, Uncooked Rice, 80 oz (2.27kg)",
+    "size": "5 lbr",
+    "soldBy": "UNIT",
+    "regular": 7.29,
+    "promo": 4.99
+   },
+   {
+    "id": "0001740010800",
+    "brand": "Mahatma",
+    "desc": "Mahatma Extra Long Grain White Rice, Uncooked Rice, 48 oz (1.36kg)",
+    "size": "3 lbr",
+    "soldBy": "UNIT",
+    "regular": 4.19,
+    "promo": 3.49
+   },
+   {
+    "id": "0001740014080",
+    "brand": "Mahatma",
+    "desc": "Mahatma Organic White Rice, Long Grain Rice, 32 oz (907g)",
+    "size": "2 lbr",
+    "soldBy": "UNIT",
+    "regular": 4.19,
+    "promo": null
+   },
+   {
+    "id": "0005480042355",
+    "brand": "Ben's Original",
+    "desc": "BEN'S ORIGINAL Converted Enriched Long Grain White Parboiled Rice",
+    "size": "2 lb",
+    "soldBy": "UNIT",
+    "regular": 5.49,
+    "promo": 3
+   },
+   {
+    "id": "0005480042333",
+    "brand": "Ben's Original",
+    "desc": "BEN'S ORIGINAL READY RICE Original Long Grain White Rice",
+    "size": "8.8 oz",
+    "soldBy": "UNIT",
+    "regular": 3.19,
+    "promo": 2.5
+   },
+   {
+    "id": "0007142901524",
+    "brand": "Zatarain's",
+    "desc": "Zatarain's Garlic Parmesan Long Grain White Rice",
+    "size": "6.9 oz",
+    "soldBy": "UNIT",
+    "regular": 1.69,
+    "promo": 1.5
+   },
+   {
+    "id": "0007203641222",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u00ae Enriched Long Grain White Rice",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 0.99,
+    "promo": null
+   }
+  ]
+ },
+ "red lentils": {
+  "search": "red lentils",
+  "results": [
+   {
+    "id": "0001111086285",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Red Lentils",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 3.39,
+    "promo": 2.99
+   },
+   {
+    "id": "0007426500238",
+    "brand": "Ziyad",
+    "desc": "Ziyad\u00ae Red Lentils",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 4.69,
+    "promo": null
+   },
+   {
+    "id": "0007433347626",
+    "brand": "Arrowhead Mills",
+    "desc": "Arrowhead Mills Organic Red Lentils",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 7.99,
+    "promo": 5.99
+   },
+   {
+    "id": "0074504200074",
+    "brand": "Royal",
+    "desc": "Royal\u00ae Massor Dal Split Red Lentils",
+    "size": "2 lb",
+    "soldBy": "UNIT",
+    "regular": 4.19,
+    "promo": null
+   },
+   {
+    "id": "0089175600043",
+    "brand": "Maya Kaimal",
+    "desc": "Maya Kaimal\u00ae Organic Everyday Dal\u00ae Red Lentils with Butternut Squash and Coconut",
+    "size": "10 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0004133112402",
+    "brand": "GOYA",
+    "desc": "Goya\u00ae Red Kidney Beans",
+    "size": "15.5 oz",
+    "soldBy": "UNIT",
+    "regular": 2.59,
+    "promo": null
+   },
+   {
+    "id": "0004133112420",
+    "brand": "GOYA",
+    "desc": "Goya\u00ae Gluten Free Small Red Beans",
+    "size": "15.5 oz",
+    "soldBy": "UNIT",
+    "regular": 2.59,
+    "promo": null
+   },
+   {
+    "id": "0004133112435",
+    "brand": "GOYA",
+    "desc": "Goya\u00ae Dark Red Kidney Beans",
+    "size": "15.5 oz",
+    "soldBy": "UNIT",
+    "regular": 2.59,
+    "promo": null
+   },
+   {
+    "id": "0004133102340",
+    "brand": "GOYA",
+    "desc": "Goya Organic Red Kidney Beans",
+    "size": "15.5 oz",
+    "soldBy": "UNIT",
+    "regular": 3.19,
+    "promo": null
+   },
+   {
+    "id": "0007114600301",
+    "brand": "Harvest Snaps",
+    "desc": "Calbee\u00ae Harvest Snaps\u00ae Tomato Basil Red Lentil Bean Crisps",
+    "size": "3 oz",
+    "soldBy": "UNIT",
+    "regular": 2.99,
+    "promo": null
+   },
+   {
+    "id": "0007114600638",
+    "brand": "Harvest Snaps",
+    "desc": "Calbee\u00ae Harvest Snaps\u00ae Sour Cream Red Lentil Crunchy Loops Crisps",
+    "size": "2.5 oz",
+    "soldBy": "UNIT",
+    "regular": 2.79,
+    "promo": 1.39
+   },
+   {
+    "id": "0007114601085",
+    "brand": "Harvest Snaps",
+    "desc": "Harvest Snaps\u00ae Crunchy Loops Honey BBQ Baked Red Lentil Snacks",
+    "size": "2.5 oz",
+    "soldBy": "UNIT",
+    "regular": 2.79,
+    "promo": 1.39
+   }
+  ]
+ },
+ "onion": {
+  "search": "yellow onions 3 lb",
+  "results": [
+   {
+    "id": "0001111091682",
+    "brand": null,
+    "desc": "Yellow Onions In 3lb Bag",
+    "size": "3 lb",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": 3
+   }
+  ]
+ },
+ "diced tomatoes canned": {
+  "search": "diced tomatoes 14.5 oz",
+  "results": [
+   {
+    "id": "0007203641055",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u00ae Diced Tomatoes",
+    "size": "14.5 oz",
+    "soldBy": "UNIT",
+    "regular": 1.29,
+    "promo": 0.99
+   },
+   {
+    "id": "0007203641058",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter Chili Ready Diced Tomatoes 14.5 oz",
+    "size": "14.5 oz",
+    "soldBy": "UNIT",
+    "regular": 1.29,
+    "promo": 0.99
+   },
+   {
+    "id": "0002700037800",
+    "brand": "Hunt's",
+    "desc": "Hunt\u2019s Fire Roasted Diced Tomatoes, Canned Tomatoes Perfect for Chili & Soups",
+    "size": "14.5 oz",
+    "soldBy": "UNIT",
+    "regular": 2.19,
+    "promo": 1.25
+   },
+   {
+    "id": "0002700037831",
+    "brand": "Hunt's",
+    "desc": "Hunt\u2019s Petite Diced Tomatoes, Canned Tomatoes Perfect for Chili & Soups",
+    "size": "14.5 oz",
+    "soldBy": "UNIT",
+    "regular": 2.19,
+    "promo": 1.25
+   },
+   {
+    "id": "0002700038040",
+    "brand": "Hunt's",
+    "desc": "Hunt\u2019s Diced Tomatoes, Canned Tomatoes, Perfect for Chili & Soups",
+    "size": "14.5 oz",
+    "soldBy": "UNIT",
+    "regular": 2.19,
+    "promo": 1.25
+   },
+   {
+    "id": "0002700037801",
+    "brand": "Hunt's",
+    "desc": "Hunt\u2019s Fire Roasted Diced Tomatoes, Garlic, Perfect for Chili & Soups",
+    "size": "14.5 oz",
+    "soldBy": "UNIT",
+    "regular": 2.19,
+    "promo": 1.25
+   },
+   {
+    "id": "0002700037895",
+    "brand": "Hunt's",
+    "desc": "Hunt\u2019s Diced Tomatoes, Basil, Garlic & Oregano, Perfect for Pasta Sauce",
+    "size": "14.5 oz",
+    "soldBy": "UNIT",
+    "regular": 2.19,
+    "promo": 1.25
+   },
+   {
+    "id": "0007203641072",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u00ae Petite Diced Tomatoes",
+    "size": "14.5 oz",
+    "soldBy": "UNIT",
+    "regular": 1.29,
+    "promo": 0.99
+   },
+   {
+    "id": "0002700038049",
+    "brand": "Hunt's",
+    "desc": "Hunt\u2019s No Salt Added Diced Tomatoes, Perfect for Chili & Soups",
+    "size": "14.5 oz",
+    "soldBy": "UNIT",
+    "regular": 2.19,
+    "promo": 1.25
+   },
+   {
+    "id": "0007203672614",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u2122 No Salt Added Petite Diced Tomatoes",
+    "size": "14.5 oz",
+    "soldBy": "UNIT",
+    "regular": 1.29,
+    "promo": 0.99
+   },
+   {
+    "id": "0007203641056",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u2122 Original Diced Tomatoes with Green Chilies",
+    "size": "14.5 oz",
+    "soldBy": "UNIT",
+    "regular": 1.29,
+    "promo": 0.99
+   },
+   {
+    "id": "0007203698212",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u2122 Diced Tomatoes With Basil Garlic And Oregano",
+    "size": "14.5 oz",
+    "soldBy": "UNIT",
+    "regular": 1.29,
+    "promo": 0.99
+   }
+  ]
+ },
+ "frozen peas": {
+  "search": "frozen peas",
+  "results": [
+   {
+    "id": "0007203671652",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u2122 Sweet Green Peas",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 1.99,
+    "promo": 1.79
+   },
+   {
+    "id": "0001450002100",
+    "brand": "Birds Eye",
+    "desc": "Birds Eye Steamfresh Sweet Peas Frozen Vegetables",
+    "size": "10 oz",
+    "soldBy": "UNIT",
+    "regular": 2.79,
+    "promo": 2.18
+   },
+   {
+    "id": "0001111001098",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth\u00ae Frozen Green Peas",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 3.19,
+    "promo": 2.5
+   },
+   {
+    "id": "0001450002253",
+    "brand": "Birds Eye",
+    "desc": "Birds Eye Baby Sweet Peas, Frozen Vegetables",
+    "size": "13 oz",
+    "soldBy": "UNIT",
+    "regular": 3.39,
+    "promo": null
+   },
+   {
+    "id": "0001450001088",
+    "brand": "Birds Eye",
+    "desc": "Birds Eye\u00ae Steamfresh\u00ae Petite Sweet Frozen Peas",
+    "size": "10 oz",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": 2.5
+   },
+   {
+    "id": "0007203671653",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u2122 Sweet Green Peas",
+    "size": "32 oz",
+    "soldBy": "UNIT",
+    "regular": 3.49,
+    "promo": null
+   },
+   {
+    "id": "0019056952228",
+    "brand": "Green Giant",
+    "desc": "Green Giant Simply Steam Lightly Sauced Sweet Peas",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 1.99,
+    "promo": 1
+   },
+   {
+    "id": "0007056082532",
+    "brand": "Pictsweet Farms",
+    "desc": "Pictsweet Farms\u00ae Southern Classics\u00ae Butter Peas Frozen Vegetable",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 3.39,
+    "promo": 1.69
+   },
+   {
+    "id": "0007056090093",
+    "brand": "Pictsweet Farms",
+    "desc": "Pictsweet Farms\u00ae Family Size Frozen Simple Harvest Green Peas",
+    "size": "24 oz",
+    "soldBy": "UNIT",
+    "regular": 4.19,
+    "promo": null
+   },
+   {
+    "id": "0007056096955",
+    "brand": "Pictsweet Farms",
+    "desc": "Pictsweet Farms\u00ae Southern Cooking Seasoned Field Peas with Snaps",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 4.39,
+    "promo": 2.19
+   },
+   {
+    "id": "0019056952229",
+    "brand": "Green Giant",
+    "desc": "Green Giant No Sauce Sweet Peas",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 1.99,
+    "promo": 1
+   },
+   {
+    "id": "0007056090307",
+    "brand": "Pictsweet Farms",
+    "desc": "Pictsweet Farms\u00ae Family Size Deluxe Baby Sweet Peas",
+    "size": "20 oz",
+    "soldBy": "UNIT",
+    "regular": 5.49,
+    "promo": null
+   }
+  ]
+ },
+ "cumin ground": {
+  "search": "ground cumin",
+  "results": [
+   {
+    "id": "0005210000651",
+    "brand": "McCormick",
+    "desc": "McCormick Ground Cumin",
+    "size": "1.5 oz",
+    "soldBy": "UNIT",
+    "regular": 3.69,
+    "promo": 2.77
+   },
+   {
+    "id": "0007203671558",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u2122 Ground Cumin",
+    "size": "2.12 oz",
+    "soldBy": "UNIT",
+    "regular": 4.29,
+    "promo": 3.99
+   },
+   {
+    "id": "0003384400007",
+    "brand": "Badia",
+    "desc": "Badia\u00ae Ground Cumin",
+    "size": "2 oz",
+    "soldBy": "UNIT",
+    "regular": 3.19,
+    "promo": null
+   },
+   {
+    "id": "0001111016155",
+    "brand": "Private Selection",
+    "desc": "Private Selection\u00ae Ground Cumin Shaker",
+    "size": "1.56 oz",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": null
+   },
+   {
+    "id": "0001111015600",
+    "brand": "Simple Truth",
+    "desc": "Simple Truth Organic\u00ae Ground Cumin",
+    "size": "1.72 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0008983618514",
+    "brand": "Simply Organic",
+    "desc": "Cumin ground",
+    "size": "2.31 oz",
+    "soldBy": "UNIT",
+    "regular": 7.49,
+    "promo": 6.49
+   },
+   {
+    "id": "0005210000493",
+    "brand": "McCormick",
+    "desc": "McCormick Gourmet Organic Ground Cumin",
+    "size": "1.5 oz",
+    "soldBy": "UNIT",
+    "regular": 6.29,
+    "promo": 4.72
+   },
+   {
+    "id": "0005210001337",
+    "brand": "McCormick",
+    "desc": "McCormick Gourmet Organic Roasted Ground Cumin",
+    "size": "1.5 oz",
+    "soldBy": "UNIT",
+    "regular": 8.19,
+    "promo": null
+   }
+  ]
+ },
+ "smoked paprika": {
+  "search": "smoked paprika",
+  "results": [
+   {
+    "id": "0003384400213",
+    "brand": "Badia",
+    "desc": "Badia\u00ae Smoked Paprika",
+    "size": "2 oz",
+    "soldBy": "UNIT",
+    "regular": 3.19,
+    "promo": null
+   },
+   {
+    "id": "0005210002276",
+    "brand": "McCormick",
+    "desc": "McCormick Smoked Paprika",
+    "size": "1.75 oz",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": null
+   },
+   {
+    "id": "0005210000625",
+    "brand": "McCormick",
+    "desc": "McCormick Smoked Paprika",
+    "size": "0.9 oz",
+    "soldBy": "UNIT",
+    "regular": 3.19,
+    "promo": null
+   },
+   {
+    "id": "0008983619517",
+    "brand": "Simply Organic",
+    "desc": "Smoked Paprika",
+    "size": "2.72 oz",
+    "soldBy": "UNIT",
+    "regular": 8.99,
+    "promo": 7.49
+   },
+   {
+    "id": "0005210044339",
+    "brand": "McCormick",
+    "desc": "McCormick Gourmet Organic Smoked Paprika",
+    "size": "1.62 oz",
+    "soldBy": "UNIT",
+    "regular": 7.29,
+    "promo": 5.47
+   },
+   {
+    "id": "0001629144184",
+    "brand": "Morton & Bassett",
+    "desc": "Morton & Bassett\u00ae Smoked Paprika",
+    "size": "2 oz",
+    "soldBy": "UNIT",
+    "regular": 8.99,
+    "promo": 7.99
+   },
+   {
+    "id": "0007203674745",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u00ae Smoked Paprika 8 oz",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 11.99,
+    "promo": 10.79
+   }
+  ]
+ },
+ "greek yogurt plain nonfat": {
+  "search": "plain nonfat greek yogurt 32 oz",
+  "results": [
+   {
+    "id": "0007203670428",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u2122 Plain Nonfat Greek Yogurt Tub",
+    "size": "32 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0068954408301",
+    "brand": "Fage",
+    "desc": "Fage\u00ae Total Plain Nonfat Greek Yogurt Tub",
+    "size": "32 oz",
+    "soldBy": "UNIT",
+    "regular": 7.49,
+    "promo": null
+   },
+   {
+    "id": "0089470001013",
+    "brand": "Chobani",
+    "desc": "Chobani\u00ae Plain Nonfat Greek Yogurt Tub",
+    "size": "32 oz",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": null
+   },
+   {
+    "id": "0003663202432",
+    "brand": "Oikos",
+    "desc": "Oikos Triple Zero Plain High Protein Nonfat Greek Yogurt Tub",
+    "size": "32 fl oz",
+    "soldBy": "UNIT",
+    "regular": 7.49,
+    "promo": null
+   },
+   {
+    "id": "0005215953250",
+    "brand": "Stonyfield Organic",
+    "desc": "Stonyfield Organic Greek Nonfat Yogurt, Plain",
+    "size": "32 oz",
+    "soldBy": "UNIT",
+    "regular": 8.99,
+    "promo": null
+   }
+  ]
+ },
+ "rolled oats": {
+  "search": "old fashioned oats",
+  "results": [
+   {
+    "id": "0007203673782",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u00ae 100% Whole Grain Old Fashioned Oats",
+    "size": "18 oz",
+    "soldBy": "UNIT",
+    "regular": 2.79,
+    "promo": 2.49
+   },
+   {
+    "id": "0003000001020",
+    "brand": "Quaker",
+    "desc": "Quaker\u00ae Old Fashioned Oats",
+    "size": "18 oz",
+    "soldBy": "UNIT",
+    "regular": 4.29,
+    "promo": null
+   },
+   {
+    "id": "0003000001040",
+    "brand": "Quaker",
+    "desc": "Quaker\u00ae Old Fashioned Oats",
+    "size": "42 oz",
+    "soldBy": "UNIT",
+    "regular": 7.79,
+    "promo": null
+   },
+   {
+    "id": "0003997803375",
+    "brand": "Bob's Red Mill",
+    "desc": "Bob's Red Mill Gluten Free Whole Grain Old Fashioned Rolled Oats",
+    "size": "32 oz",
+    "soldBy": "UNIT",
+    "regular": 11.99,
+    "promo": null
+   },
+   {
+    "id": "0007203673784",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u00ae Whole Grain Old Fashioned Oats",
+    "size": "42 oz",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": null
+   },
+   {
+    "id": "0003000004090",
+    "brand": "Quaker",
+    "desc": "Quaker\u00ae Old Fashioned Grits",
+    "size": "24 oz",
+    "soldBy": "UNIT",
+    "regular": 3.79,
+    "promo": null
+   }
+  ]
+ },
+ "walnuts": {
+  "search": "walnuts halves pieces",
+  "results": [
+   {
+    "id": "0007203673968",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u2122 Walnuts Halves and Pieces",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": 5
+   },
+   {
+    "id": "0007069002364",
+    "brand": "Fisher",
+    "desc": "Fisher California Grown Unsalted Walnut Halves & Pieces",
+    "size": "10 oz / 2.6 cups",
+    "soldBy": "UNIT",
+    "regular": 8.99,
+    "promo": 4.49
+   },
+   {
+    "id": "0007203673969",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u2122 Walnut Halves & Pieces",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 8.99,
+    "promo": 7.99
+   }
+  ]
+ },
+ "chia seeds": {
+  "search": "chia seeds",
+  "results": [
+   {
+    "id": "0001111008452",
+    "brand": "Simple Truth",
+    "desc": "Simple Truth Organic\u00ae Whole Black Chia Seeds",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 6.49,
+    "promo": null
+   },
+   {
+    "id": "0007203689930",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter Farmers Market\u2122 Chia Seeds",
+    "size": "11 oz",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": null
+   },
+   {
+    "id": "0085884700033",
+    "brand": "Navitas Naturals",
+    "desc": "100% Organic Chia Seeds - 16oz - Navitas Organics",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 14.49,
+    "promo": null
+   },
+   {
+    "id": "0070587510023",
+    "brand": "Barlean's",
+    "desc": "Barlean's Organic Chia Seeds",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 25.99,
+    "promo": null
+   },
+   {
+    "id": "0004525514734",
+    "brand": "Melissa's",
+    "desc": "Mellissa's Cranberry Clean Snax with Chia & Flaxseed (Approximate Delivery 3-6 Days)",
+    "size": "6.5 oz",
+    "soldBy": "UNIT",
+    "regular": 7.59,
+    "promo": null
+   },
+   {
+    "id": "0004525514732",
+    "brand": "Melissa's",
+    "desc": "Mellissa's Coconut Clean Snax (Approximate Delivery 3-6 Days)",
+    "size": "7 oz",
+    "soldBy": "UNIT",
+    "regular": 7.59,
+    "promo": null
+   },
+   {
+    "id": "0004525515217",
+    "brand": "Melissa's",
+    "desc": "Melissa's Clean Snax\u00ae with Chia and Flaxseed Peanut Butter Bites",
+    "size": "5 oz",
+    "soldBy": "UNIT",
+    "regular": 7.59,
+    "promo": null
+   }
+  ]
+ },
+ "honey": {
+  "search": "honey",
+  "results": [
+   {
+    "id": "0007203619046",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u00ae Honey Bear",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": 2.5
+   },
+   {
+    "id": "0001111016478",
+    "brand": "Simple Truth",
+    "desc": "Simple Truth Organic\u00ae Unfiltered Raw Honey",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": null
+   },
+   {
+    "id": "0007203674494",
+    "brand": "HT Traders",
+    "desc": "HT Traders\u2122 Unfiltered Raw Honey",
+    "size": "24 oz",
+    "soldBy": "UNIT",
+    "regular": 7.99,
+    "promo": 6.49
+   },
+   {
+    "id": "0007500210124",
+    "brand": "Local Hive",
+    "desc": "Local Hive\u2122 Southeast Raw & Unfiltered Honey",
+    "size": "24 oz",
+    "soldBy": "UNIT",
+    "regular": 13.79,
+    "promo": 9.99
+   },
+   {
+    "id": "0007500210112",
+    "brand": "Local Hive",
+    "desc": "Local Hive\u2122 Raw & Unfiltered Southeast Honey",
+    "size": "12 oz.",
+    "soldBy": "UNIT",
+    "regular": 7.39,
+    "promo": null
+   },
+   {
+    "id": "0003877883032",
+    "brand": "Nate's Honey",
+    "desc": "Nate's Honey 100% Pure Raw & Unfiltered Honey",
+    "size": "32 oz",
+    "soldBy": "UNIT",
+    "regular": 17.49,
+    "promo": 13.99
+   },
+   {
+    "id": "0003877861016",
+    "brand": "Nate's Honey",
+    "desc": "Nate's\u00ae 100% Pure Organic Raw & Unfiltered Honey",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 12.19,
+    "promo": 9.99
+   },
+   {
+    "id": "0085136100576",
+    "brand": "Carmichael\u2019s Honey",
+    "desc": "Carmichael's\u2122 Organic Honey Bear",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": null
+   },
+   {
+    "id": "0003877861032",
+    "brand": "Nate's Honey",
+    "desc": "Nate's\u00ae 100% Organic Raw & Unfiltered Honey",
+    "size": "32 oz",
+    "soldBy": "UNIT",
+    "regular": 22.99,
+    "promo": null
+   },
+   {
+    "id": "0065135797757",
+    "brand": "ENC Honey",
+    "desc": "ENC Honey Local Autumn Amber Honey",
+    "size": "0.5 lb.",
+    "soldBy": "UNIT",
+    "regular": 9.99,
+    "promo": null
+   },
+   {
+    "id": "0001111016477",
+    "brand": "Simple Truth",
+    "desc": "Simple Truth Organic\u00ae Honey",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": null
+   },
+   {
+    "id": "0003877873020",
+    "brand": "Nate's Honey",
+    "desc": "Nate's Honey 100% Pure Raw & Unfiltered Single-Serve Honey Packets",
+    "size": "20 ct / 9.8 oz",
+    "soldBy": "UNIT",
+    "regular": 9.99,
+    "promo": null
+   }
+  ]
+ },
+ "mint fresh": {
+  "search": "fresh mint",
+  "results": [
+   {
+    "id": "0001111001818",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Mint",
+    "size": "0.5 oz",
+    "soldBy": "UNIT",
+    "regular": 2.39,
+    "promo": null
+   },
+   {
+    "id": "0000000004896",
+    "brand": null,
+    "desc": "Mint",
+    "size": "1 ct",
+    "soldBy": "UNIT",
+    "regular": 3.29,
+    "promo": null
+   },
+   {
+    "id": "0007339001404",
+    "brand": "Mentos",
+    "desc": "Mentos Gum Fresh Mint Pure Fresh Sugar Free Chewing Gum Bottle",
+    "size": "50 pc",
+    "soldBy": "UNIT",
+    "regular": 4.69,
+    "promo": 2.34
+   },
+   {
+    "id": "0007339002661",
+    "brand": "Mentos",
+    "desc": "Mentos Pure Fresh Gum Fresh Mint Sugar Free Chewing Gum Pouch",
+    "size": "120 pc",
+    "soldBy": "UNIT",
+    "regular": 9.49,
+    "promo": null
+   },
+   {
+    "id": "0007339001405",
+    "brand": "Mentos",
+    "desc": "Mentos Pure Fresh Sugar-Free Chewing Gum with Xylitol, Spearmint flavor, 50 Piece Bottle",
+    "size": "50 pc",
+    "soldBy": "UNIT",
+    "regular": 4.69,
+    "promo": 2.34
+   },
+   {
+    "id": "0007339002662",
+    "brand": "Mentos",
+    "desc": "Mentos Pure Fresh Gum Spearmint Sugar Free Chewing Gum Pouch",
+    "size": "120 pc",
+    "soldBy": "UNIT",
+    "regular": 9.49,
+    "promo": null
+   },
+   {
+    "id": "0007339001463",
+    "brand": "Mentos",
+    "desc": "Mentos\u00ae Pure Fresh Sugar Free Wintergreen Chewing Gum",
+    "size": "50 pc",
+    "soldBy": "UNIT",
+    "regular": 4.69,
+    "promo": 2.34
+   },
+   {
+    "id": "0007339002673",
+    "brand": "Mentos",
+    "desc": "Mentos Bubble Fresh Gum",
+    "size": "3.53 oz",
+    "soldBy": "UNIT",
+    "regular": 4.69,
+    "promo": 2.34
+   },
+   {
+    "id": "0007339001334",
+    "brand": "Mentos",
+    "desc": "Mentos\u00ae Pure Fresh Sugar Free Watermelon Chewing Gum",
+    "size": "50 pc",
+    "soldBy": "UNIT",
+    "regular": 4.69,
+    "promo": 2.34
+   },
+   {
+    "id": "0069702910116",
+    "brand": "Therabreath",
+    "desc": "TheraBreath Fresh Breath Mouthwash Icy Mint Alcohol-Free",
+    "size": "16 fl oz",
+    "soldBy": "UNIT",
+    "regular": 9.79,
+    "promo": null
+   },
+   {
+    "id": "0069702920001",
+    "brand": "Therabreath",
+    "desc": "TheraBreath Deep Clean Mouthwash, Antiseptic Benefits, Fresh Mint Oral Rinse",
+    "size": "16 fl oz",
+    "soldBy": "UNIT",
+    "regular": 10.99,
+    "promo": null
+   },
+   {
+    "id": "0004858200330",
+    "brand": "Biotene",
+    "desc": "Biotene Dry Mouth Oral Rinse Mouthwash Fresh Mint Soothing Moisturization",
+    "size": "16 fl fl oz",
+    "soldBy": "UNIT",
+    "regular": 8.69,
+    "promo": null
+   }
+  ]
+ },
+ "shrimp raw": {
+  "search": "frozen raw shrimp peeled",
+  "results": [
+   {
+    "id": "0007203678100",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter Fishermans Market 51/60 ct Peeled & Deveined Tail Off Raw Shrimp",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 7.99,
+    "promo": null
+   }
+  ]
+ },
+ "paprika": {
+  "search": "paprika",
+  "results": [
+   {
+    "id": "0007203672732",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u2122 Paprika",
+    "size": "2.25 oz",
+    "soldBy": "UNIT",
+    "regular": 2.59,
+    "promo": 1.99
+   },
+   {
+    "id": "0001111011743",
+    "brand": "Smart Way",
+    "desc": "Smart Way\u2122 Ground Paprika",
+    "size": "2 oz",
+    "soldBy": "UNIT",
+    "regular": 1.19,
+    "promo": null
+   },
+   {
+    "id": "0005210000448",
+    "brand": "McCormick",
+    "desc": "McCormick Paprika",
+    "size": "2.12 oz",
+    "soldBy": "UNIT",
+    "regular": 3.89,
+    "promo": null
+   },
+   {
+    "id": "0005210000625",
+    "brand": "McCormick",
+    "desc": "McCormick Smoked Paprika",
+    "size": "0.9 oz",
+    "soldBy": "UNIT",
+    "regular": 3.19,
+    "promo": null
+   },
+   {
+    "id": "0008983618765",
+    "brand": "Simply Organic",
+    "desc": "Simply Organic\u00ae Paprika",
+    "size": "2.96 oz",
+    "soldBy": "UNIT",
+    "regular": 7.49,
+    "promo": 6.49
+   },
+   {
+    "id": "0003384400213",
+    "brand": "Badia",
+    "desc": "Badia\u00ae Smoked Paprika",
+    "size": "2 oz",
+    "soldBy": "UNIT",
+    "regular": 3.19,
+    "promo": null
+   },
+   {
+    "id": "0001111072983",
+    "brand": "Private Selection",
+    "desc": "Private Selection\u00ae Ground Paprika Shaker",
+    "size": "1.67 oz",
+    "soldBy": "UNIT",
+    "regular": 3.49,
+    "promo": null
+   },
+   {
+    "id": "0005210002291",
+    "brand": "McCormick",
+    "desc": "McCormick Gourmet All Natural Hot Hungarian Paprika",
+    "size": "1.62 oz",
+    "soldBy": "UNIT",
+    "regular": 8.19,
+    "promo": null
+   },
+   {
+    "id": "0008983619517",
+    "brand": "Simply Organic",
+    "desc": "Smoked Paprika",
+    "size": "2.72 oz",
+    "soldBy": "UNIT",
+    "regular": 8.99,
+    "promo": 7.49
+   },
+   {
+    "id": "0005210000657",
+    "brand": "McCormick",
+    "desc": "McCormick Gourmet Organic Paprika",
+    "size": "1.62 oz",
+    "soldBy": "UNIT",
+    "regular": 7.29,
+    "promo": null
+   },
+   {
+    "id": "0001629144184",
+    "brand": "Morton & Bassett",
+    "desc": "Morton & Bassett\u00ae Smoked Paprika",
+    "size": "2 oz",
+    "soldBy": "UNIT",
+    "regular": 8.99,
+    "promo": 7.99
+   },
+   {
+    "id": "0003384400011",
+    "brand": "Badia",
+    "desc": "Badia\u00ae Paprika",
+    "size": "2 oz",
+    "soldBy": "UNIT",
+    "regular": 3.79,
+    "promo": null
+   }
+  ]
+ },
+ "italian seasoning": {
+  "search": "italian seasoning",
+  "results": [
+   {
+    "id": "0007203672733",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u2122 Italian Seasoning",
+    "size": "0.91 oz",
+    "soldBy": "UNIT",
+    "regular": 2.59,
+    "promo": 1.99
+   },
+   {
+    "id": "0005210004973",
+    "brand": "McCormick",
+    "desc": "McCormick PERFECT PINCH Italian Seasoning",
+    "size": "1.31 oz",
+    "soldBy": "UNIT",
+    "regular": 5.79,
+    "promo": null
+   },
+   {
+    "id": "0008983618606",
+    "brand": "Simply Organic",
+    "desc": "Simply Organic\u00ae Italian Seasoning",
+    "size": "0.95 oz",
+    "soldBy": "UNIT",
+    "regular": 7.49,
+    "promo": 6.49
+   },
+   {
+    "id": "0007203674706",
+    "brand": "HT Traders",
+    "desc": "HT Traders\u2122 Roasted Italian Seasoning",
+    "size": "2 oz",
+    "soldBy": "UNIT",
+    "regular": 4.49,
+    "promo": 3.99
+   },
+   {
+    "id": "0005210000452",
+    "brand": "McCormick",
+    "desc": "McCormick Gourmet Organic Italian Seasoning",
+    "size": "0.55 oz",
+    "soldBy": "UNIT",
+    "regular": 6.49,
+    "promo": null
+   },
+   {
+    "id": "0005210003825",
+    "brand": "McCormick",
+    "desc": "McCormick PERFECT PINCH Italian Seasoning",
+    "size": "2.25 oz",
+    "soldBy": "UNIT",
+    "regular": 9.19,
+    "promo": null
+   },
+   {
+    "id": "0001111011751",
+    "brand": "Smart Way",
+    "desc": "Smart Way\u2122 Italian Seasoning",
+    "size": "0.60 oz",
+    "soldBy": "UNIT",
+    "regular": 1.19,
+    "promo": null
+   },
+   {
+    "id": "0005210084586",
+    "brand": "McCormick",
+    "desc": "McCormick Italian Herb Seasoning Grinder",
+    "size": "0.77 oz",
+    "soldBy": "UNIT",
+    "regular": 3.39,
+    "promo": 3
+   },
+   {
+    "id": "0060502100049",
+    "brand": "Mrs. Dash",
+    "desc": "Dash Italian Medley Salt-Free Seasoning Blend",
+    "size": "2 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0001629144147",
+    "brand": "Morton & Bassett",
+    "desc": "Morton & Bassett\u00ae Italian Herb Blend",
+    "size": "0.8 oz",
+    "soldBy": "UNIT",
+    "regular": 8.99,
+    "promo": 7.99
+   },
+   {
+    "id": "0004119689102",
+    "brand": "Progresso",
+    "desc": "Progresso\u2122 Italian Style Bread Crumbs",
+    "size": "15 oz",
+    "soldBy": "UNIT",
+    "regular": 3.39,
+    "promo": 2
+   },
+   {
+    "id": "0007203608081",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u2122 Italian Bread Crumbs",
+    "size": "15 oz",
+    "soldBy": "UNIT",
+    "regular": 1.99,
+    "promo": 1.79
+   }
+  ]
+ },
+ "tuna canned light drained": {
+  "search": "chunk light tuna in water 5 oz",
+  "results": [
+   {
+    "id": "0008000000673",
+    "brand": "StarKist",
+    "desc": "StarKist\u00ae Chunk Light Tuna in Water Can",
+    "size": "5 oz",
+    "soldBy": "UNIT",
+    "regular": 1.59,
+    "promo": null
+   },
+   {
+    "id": "0008000000528",
+    "brand": "StarKist",
+    "desc": "StarKist\u00ae Chunk Light Tuna in Water 25% Less Sodium",
+    "size": "5 oz",
+    "soldBy": "UNIT",
+    "regular": 1.69,
+    "promo": null
+   },
+   {
+    "id": "0004800000245",
+    "brand": "Chicken of the Sea",
+    "desc": "Chicken of the Sea Chunk Light Tuna In Water",
+    "size": "5 oz",
+    "soldBy": "UNIT",
+    "regular": 1.29,
+    "promo": 1.09
+   },
+   {
+    "id": "0008000049564",
+    "brand": "StarKist",
+    "desc": "StarKist\u00ae Chunk Light Tuna in Water Can",
+    "size": "4 pk / 5 oz",
+    "soldBy": "UNIT",
+    "regular": 5.19,
+    "promo": null
+   },
+   {
+    "id": "0008000052270",
+    "brand": "StarKist",
+    "desc": "StarKist\u00ae Chunk Light Tuna in Water 25% Less Sodium 3pk Can",
+    "size": "5 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0008660000020",
+    "brand": "Bumble Bee",
+    "desc": "Bumble Bee\u00ae Chunk Light Tuna in Water",
+    "size": "5 oz",
+    "soldBy": "UNIT",
+    "regular": 1.49,
+    "promo": null
+   }
+  ]
+ },
+ "chicken canned": {
+  "search": "canned chicken breast 12.5 oz",
+  "results": [
+   {
+    "id": "0005100018806",
+    "brand": "Swanson",
+    "desc": "Swanson\u00ae White Premium Chunk Canned Chicken Breast In Water",
+    "size": "12.5 oz",
+    "soldBy": "UNIT",
+    "regular": 5.59,
+    "promo": null
+   },
+   {
+    "id": "0005100027802",
+    "brand": "Swanson",
+    "desc": "Swanson\u00ae 25% Less Sodium White Premium Chunk Canned Chicken Breast In Water",
+    "size": "12.5 oz",
+    "soldBy": "UNIT",
+    "regular": 5.59,
+    "promo": null
+   },
+   {
+    "id": "0005100023355",
+    "brand": "Swanson",
+    "desc": "Swanson Premium Chunk Chicken Breast With Rib Meat",
+    "size": "2 ct / 12.5 oz",
+    "soldBy": "UNIT",
+    "regular": 10.49,
+    "promo": 7.99
+   },
+   {
+    "id": "0007203673287",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u2122 Premium Chunk White Chicken Breast in Water",
+    "size": "2 ct / 12.5 oz",
+    "soldBy": "UNIT",
+    "regular": 8.19,
+    "promo": 6.99
+   }
+  ]
+ },
+ "black beans dry": {
+  "search": "dry black beans 2 lb",
+  "results": []
+ },
+ "black beans canned": {
+  "search": "black beans 15 oz can",
+  "results": [
+   {
+    "id": "0007203698078",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u2122 Black Beans",
+    "size": "15.25 oz",
+    "soldBy": "UNIT",
+    "regular": 1.29,
+    "promo": 0.75
+   },
+   {
+    "id": "0003940001880",
+    "brand": "Bush's Best",
+    "desc": "Bush's Black Beans 15 oz",
+    "size": "15 oz",
+    "soldBy": "UNIT",
+    "regular": 1.99,
+    "promo": 1.25
+   },
+   {
+    "id": "0003940001884",
+    "brand": "Bush's Best",
+    "desc": "Bush's Seasoned Recipe Black Beans 15 oz",
+    "size": "15 oz",
+    "soldBy": "UNIT",
+    "regular": 1.99,
+    "promo": 1.25
+   },
+   {
+    "id": "0003940001883",
+    "brand": "Bush's Best",
+    "desc": "Bush's Reduced Sodium Black Beans 15 oz",
+    "size": "15 oz",
+    "soldBy": "UNIT",
+    "regular": 1.99,
+    "promo": 1.25
+   },
+   {
+    "id": "0003940016657",
+    "brand": "Bush's Best",
+    "desc": "Bush's Taco Fiesta Black Beans 15.1 oz",
+    "size": "15.1 oz",
+    "soldBy": "UNIT",
+    "regular": 2.29,
+    "promo": null
+   },
+   {
+    "id": "0003940001878",
+    "brand": "Bush's Best",
+    "desc": "Bush's Organic Black Beans 15 oz",
+    "size": "15 oz",
+    "soldBy": "UNIT",
+    "regular": 2.19,
+    "promo": null
+   },
+   {
+    "id": "0003940001502",
+    "brand": "Bush's Best",
+    "desc": "Bush's Black Beans in a Mild Chili Sauce 15.5 oz",
+    "size": "15.5 oz",
+    "soldBy": "UNIT",
+    "regular": 2.59,
+    "promo": 1.67
+   },
+   {
+    "id": "0004133112466",
+    "brand": "GOYA",
+    "desc": "Goya\u00ae Black Beans",
+    "size": "15.5 oz",
+    "soldBy": "UNIT",
+    "regular": 2.59,
+    "promo": null
+   },
+   {
+    "id": "0001111012212",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Low Sodium Black Beans",
+    "size": "15 oz",
+    "soldBy": "UNIT",
+    "regular": 1.69,
+    "promo": 1.25
+   },
+   {
+    "id": "0004133112332",
+    "brand": "GOYA",
+    "desc": "Goya\u00ae Low Sodium Prime Premium Black Beans",
+    "size": "15.5 oz",
+    "soldBy": "UNIT",
+    "regular": 2.59,
+    "promo": null
+   },
+   {
+    "id": "0001111008285",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Seasoned Black Beans",
+    "size": "15 oz",
+    "soldBy": "UNIT",
+    "regular": 1.69,
+    "promo": 1.25
+   },
+   {
+    "id": "0007203672604",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u00ae No Salt Added Black Beans",
+    "size": "15.5 oz",
+    "soldBy": "UNIT",
+    "regular": 1.29,
+    "promo": 0.75
+   }
+  ]
+ },
+ "ground turkey 93": {
+  "search": "ground turkey 93/7",
+  "results": [
+   {
+    "id": "0001111099000",
+    "brand": "Simple Truth",
+    "desc": "Simple Truth\u00ae 93/7 Natural Turkey Burgers",
+    "size": "6 ct / 32 oz",
+    "soldBy": "UNIT",
+    "regular": 12.99,
+    "promo": null
+   }
+  ]
+ },
+ "ground beef 80/20": {
+  "search": "ground beef 80/20",
+  "results": [
+   {
+    "id": "0020031100000",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u00ae Butchers Market 80/20 Ground Beef Chuck Value Pack",
+    "size": "1 lb",
+    "soldBy": "WEIGHT",
+    "regular": 7.99,
+    "promo": 6.99
+   },
+   {
+    "id": "0020165600000",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u00ae Butchers Market 80/20 Ground Beef Chuck",
+    "size": "1 lb",
+    "soldBy": "WEIGHT",
+    "regular": 7.99,
+    "promo": null
+   },
+   {
+    "id": "0085236600600",
+    "brand": null,
+    "desc": "Hickory Nut Gap 80/20 100% Grassfed Ground Beef",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 10.99,
+    "promo": 9.99
+   },
+   {
+    "id": "0020249600000",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u00ae 80/20 Prime Rib Beef Steak Burgers",
+    "size": "1 lb",
+    "soldBy": "WEIGHT",
+    "regular": 10.99,
+    "promo": null
+   },
+   {
+    "id": "0085759810025",
+    "brand": "Verde",
+    "desc": "Verde\u00ae Organic Grass-Fed 80/20 Ground Beef",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 10.99,
+    "promo": null
+   }
+  ]
+ },
+ "chicken thigh boneless": {
+  "search": "boneless skinless chicken thighs",
+  "results": [
+   {
+    "id": "0020898500000",
+    "brand": "Smart Chicken",
+    "desc": "Smart Chicken\u00ae Boneless Skinless Chicken Thighs",
+    "size": "1 lb",
+    "soldBy": "WEIGHT",
+    "regular": 8.99,
+    "promo": null
+   },
+   {
+    "id": "0020029700000",
+    "brand": "Farmer Focus",
+    "desc": "Farmer Focus Boneless Skinless Chicken Thighs 1 Each",
+    "size": "1 lb",
+    "soldBy": "WEIGHT",
+    "regular": 8.99,
+    "promo": null
+   },
+   {
+    "id": "0067043301464",
+    "brand": "Smart Chicken",
+    "desc": "Smart Chicken Organic Boneless Skinless Chicken Drumstick Medallions",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 5,
+    "promo": null
+   }
+  ]
+ },
+ "pork loin": {
+  "search": "boneless pork loin",
+  "results": [
+   {
+    "id": "0007080022537",
+    "brand": "Smithfield",
+    "desc": "Smithfield\u00ae Lemon and Garlic Boneless Pork Loin Filet",
+    "size": "27.2 oz",
+    "soldBy": "UNIT",
+    "regular": 9.99,
+    "promo": 4.99
+   },
+   {
+    "id": "0007080023465",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter 3/$7 Boneless Thick Cut Pork Loin Chops",
+    "size": "24 oz",
+    "soldBy": "UNIT",
+    "regular": 7,
+    "promo": null
+   },
+   {
+    "id": "0007080023466",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter 6/$6 Boneless Thin Cut Pork Loin Chops",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 6,
+    "promo": null
+   }
+  ]
+ },
+ "tofu firm": {
+  "search": "extra firm tofu",
+  "results": [
+   {
+    "id": "0001111091342",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Extra Firm Tofu",
+    "size": "14 oz",
+    "soldBy": "UNIT",
+    "regular": 2.99,
+    "promo": null
+   },
+   {
+    "id": "0001111082294",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Extra Firm Tofu Twin Pack",
+    "size": "2 ct",
+    "soldBy": "UNIT",
+    "regular": 2.99,
+    "promo": null
+   },
+   {
+    "id": "0002548400012",
+    "brand": "Nasoya",
+    "desc": "Nasoya Extra Firm Organic Tofu 14 oz",
+    "size": "14 oz",
+    "soldBy": "UNIT",
+    "regular": 3.49,
+    "promo": null
+   },
+   {
+    "id": "0008569660805",
+    "brand": "Mori-Nu",
+    "desc": "Mori-Nu\u00ae Shelf-Stable Silken Extra Firm Tofu",
+    "size": "10.9 oz",
+    "soldBy": "UNIT",
+    "regular": 3.79,
+    "promo": 3
+   }
+  ]
+ },
+ "cottage cheese": {
+  "search": "cottage cheese 4%",
+  "results": [
+   {
+    "id": "0002100012382",
+    "brand": "Breakstone's",
+    "desc": "Breakstone's Lowfat Small Curd Cottage Cheese with 2% Milkfat, 4 ct Pack, 4 oz Cups",
+    "size": "4 pk / 4 oz",
+    "soldBy": "UNIT",
+    "regular": 4.69,
+    "promo": null
+   },
+   {
+    "id": "0007342053064",
+    "brand": "Daisy",
+    "desc": "Daisy Pure and Natural 4% Cottage Cheese",
+    "size": "2 ct / 5.3 oz",
+    "soldBy": "UNIT",
+    "regular": 3.19,
+    "promo": null
+   },
+   {
+    "id": "0085997700512",
+    "brand": "Good Culture",
+    "desc": "Good Culture\u00ae Simply 4% Cottage Cheese",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 5.39,
+    "promo": null
+   },
+   {
+    "id": "0085997700506",
+    "brand": "Good Culture",
+    "desc": "Good Culture Organic Cottage Cheese, 4% Whole Milk Classic, 16 oz.",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": null
+   },
+   {
+    "id": "0007342052440",
+    "brand": "Daisy",
+    "desc": "Daisy Pure and Natural 4% Cottage Cheese",
+    "size": "24 oz",
+    "soldBy": "UNIT",
+    "regular": 5.29,
+    "promo": null
+   },
+   {
+    "id": "0007342051640",
+    "brand": "Daisy",
+    "desc": "Daisy Pure and Natural 4% Cottage Cheese",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": null
+   },
+   {
+    "id": "0004138315548",
+    "brand": "Lactaid",
+    "desc": "Lactaid\u00ae Lactose Free 4% Milkfat Cottage Cheese",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 4.19,
+    "promo": null
+   },
+   {
+    "id": "0007342053122",
+    "brand": "Daisy",
+    "desc": "Daisy 4% Milkfat Minimum with Strawberries Cottage Cheese 6 oz",
+    "size": "6 oz",
+    "soldBy": "UNIT",
+    "regular": 1.99,
+    "promo": 1.67
+   },
+   {
+    "id": "0007342053121",
+    "brand": "Daisy",
+    "desc": "Daisy 4% Cottage Cheese with Pineapple",
+    "size": "6 oz",
+    "soldBy": "UNIT",
+    "regular": 1.99,
+    "promo": 1.67
+   },
+   {
+    "id": "0007342053124",
+    "brand": "Daisy",
+    "desc": "Daisy 4% Milkfat Minimum with Peaches Cottage Cheese 6 oz",
+    "size": "6 oz",
+    "soldBy": "UNIT",
+    "regular": 1.99,
+    "promo": 1.67
+   },
+   {
+    "id": "0085997700554",
+    "brand": "Good Culture",
+    "desc": "Good Culture\u00ae Simply Whole Milk 4% Cottage Cheese Single Serve",
+    "size": "5.3 oz",
+    "soldBy": "UNIT",
+    "regular": 2.19,
+    "promo": null
+   },
+   {
+    "id": "0084037120037",
+    "brand": "Breakstone's",
+    "desc": "Breakstone's Cottage Cheese, Large Curd, 4% Milkfat",
+    "size": "24 oz (1.5 lb) 680g",
+    "soldBy": "UNIT",
+    "regular": 5.49,
+    "promo": null
+   }
+  ]
+ },
+ "peanut butter": {
+  "search": "creamy peanut butter",
+  "results": [
+   {
+    "id": "0007203671346",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter Creamy Peanut Butter 16 oz",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 2.39,
+    "promo": null
+   },
+   {
+    "id": "0005150025516",
+    "brand": "Jif",
+    "desc": "Jif Creamy Peanut Butter",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": null
+   },
+   {
+    "id": "0005150025565",
+    "brand": "Jif",
+    "desc": "Jif Creamy Natural Peanut Butter",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": null
+   },
+   {
+    "id": "0004530000549",
+    "brand": "Peter Pan",
+    "desc": "Peter Pan Creamy Peanut Butter, Gluten Free, 16.3 oz Jar",
+    "size": "16.3 oz",
+    "soldBy": "UNIT",
+    "regular": 3.49,
+    "promo": null
+   },
+   {
+    "id": "0005150072001",
+    "brand": "Jif",
+    "desc": "Jif Creamy Peanut Butter",
+    "size": "40 oz",
+    "soldBy": "UNIT",
+    "regular": 8.29,
+    "promo": 6.99
+   },
+   {
+    "id": "0005150024177",
+    "brand": "Jif",
+    "desc": "Jif Creamy Peanut Butter",
+    "size": "28 oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": null
+   },
+   {
+    "id": "0003760011075",
+    "brand": "Skippy",
+    "desc": "Skippy\u00ae Creamy Peanut Butter",
+    "size": "net wt 16.3 oz",
+    "soldBy": "UNIT",
+    "regular": 3.29,
+    "promo": null
+   },
+   {
+    "id": "0005150024321",
+    "brand": "Jif",
+    "desc": "Jif Creamy Natural Peanut Butter",
+    "size": "40 oz",
+    "soldBy": "UNIT",
+    "regular": 8.29,
+    "promo": 6.99
+   },
+   {
+    "id": "0007482261063",
+    "brand": "Crazy Richard's",
+    "desc": "Crazy Richard's\u00ae 100% Peanuts Creamy Natural Peanut Butter",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 4.69,
+    "promo": 2.99
+   },
+   {
+    "id": "0005150025518",
+    "brand": "Jif",
+    "desc": "Jif Creamy Reduced Fat Peanut Butter",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": null
+   },
+   {
+    "id": "0005150024322",
+    "brand": "Jif",
+    "desc": "Jif Creamy Natural Peanut Butter",
+    "size": "28 oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": null
+   },
+   {
+    "id": "0003760010506",
+    "brand": "Skippy",
+    "desc": "Skippy\u00ae Natural Peanut Butter Spread Creamy",
+    "size": "15 oz (425 g)",
+    "soldBy": "UNIT",
+    "regular": 3.29,
+    "promo": null
+   }
+  ]
+ },
+ "quinoa": {
+  "search": "quinoa",
+  "results": [
+   {
+    "id": "0001111091238",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Quinoa",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": 4.99
+   },
+   {
+    "id": "0001111086333",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Red Quinoa",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": 4.99
+   },
+   {
+    "id": "0008912512000",
+    "brand": "Ancient Harvest",
+    "desc": "Ancient Harvest Traditional Quinoa",
+    "size": "14.4 oz",
+    "soldBy": "UNIT",
+    "regular": 8.49,
+    "promo": 6.99
+   },
+   {
+    "id": "0001740014075",
+    "brand": "Success",
+    "desc": "Success Boil-in-Bag Tri-Color Quinoa",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 3.79,
+    "promo": 2
+   },
+   {
+    "id": "0008912518000",
+    "brand": "Ancient Harvest",
+    "desc": "Ancient Harvest\u2122 Gluten Free Organic Whole Grain Harmony Quinoa",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 8.49,
+    "promo": 6.99
+   },
+   {
+    "id": "0067994810029",
+    "brand": "Nature's Earthly Choice",
+    "desc": "Nature's Earthly\u2122 Choice Organic Tri-Color Quinoa",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 7.99,
+    "promo": 6.49
+   },
+   {
+    "id": "0089703400204",
+    "brand": "Nature's Earthly Choice",
+    "desc": "Nature's Earthly Choice Premium Quinoa",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 7.99,
+    "promo": 6.49
+   },
+   {
+    "id": "0001450009087",
+    "brand": "Birds Eye",
+    "desc": "Birds Eye Steamfresh Quinoa, Frozen Side",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 3.39,
+    "promo": null
+   },
+   {
+    "id": "0067562535906",
+    "brand": "One Degree Organic Foods",
+    "desc": "One Degree Organic Foods Gluten Free Sprouted Quinoa Cacao Granola",
+    "size": "11 oz",
+    "soldBy": "UNIT",
+    "regular": 7.99,
+    "promo": null
+   },
+   {
+    "id": "0018581400003",
+    "brand": "truRoots",
+    "desc": "TruRoots\u00ae Sprouted Organic Quinoa Blend",
+    "size": "11 oz",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": null
+   },
+   {
+    "id": "0081509902165",
+    "brand": "Late July",
+    "desc": "Late July\u00ae Restaurant Style Chia & Quinoa Tortilla Chips",
+    "size": "10.1 oz",
+    "soldBy": "UNIT",
+    "regular": 5.29,
+    "promo": 4.5
+   },
+   {
+    "id": "0008000051970",
+    "brand": "StarKist",
+    "desc": "StarKist Smart Bowls\u00ae Latin Citrus Tuna with Quinoa & Beans Pouch",
+    "size": "4.5 oz",
+    "soldBy": "UNIT",
+    "regular": 1.99,
+    "promo": 1.79
+   }
+  ]
+ },
+ "romaine lettuce": {
+  "search": "romaine hearts",
+  "results": [
+   {
+    "id": "0001111091629",
+    "brand": "Fresh Romaine Lettuce",
+    "desc": "Fresh Romaine Hearts",
+    "size": "18 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": 4
+   },
+   {
+    "id": "0001111091661",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Romaine Hearts",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0007203688091",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u2122 Hearts Of Romaine Lettuce",
+    "size": "10 oz",
+    "soldBy": "UNIT",
+    "regular": 3.79,
+    "promo": null
+   },
+   {
+    "id": "0007127926102",
+    "brand": "Fresh Express",
+    "desc": "Fresh Express\u00ae Hearts of Romaine Salad",
+    "size": "9 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": 3.99
+   }
+  ]
+ },
+ "spinach fresh": {
+  "search": "baby spinach",
+  "results": [
+   {
+    "id": "0081957301338",
+    "brand": "Happy Baby",
+    "desc": "Happy Baby Organics Teethers Pea & Spinach Organic Baby Snack Box",
+    "size": "1.7 fl oz",
+    "soldBy": "UNIT",
+    "regular": 5.69,
+    "promo": null
+   },
+   {
+    "id": "0004126000193",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Blueberry Banana Kale Spinach Stage 2 Baby Food Puree",
+    "size": "4 oz",
+    "soldBy": "UNIT",
+    "regular": 1.39,
+    "promo": 1
+   },
+   {
+    "id": "0004126000194",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Pear Spinach Pea Stage 2 Baby Food Puree",
+    "size": "4 oz",
+    "soldBy": "UNIT",
+    "regular": 1.39,
+    "promo": 1
+   },
+   {
+    "id": "0004126000199",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Banana Kiwi Spinach Oat Stage 2 Baby Food Puree",
+    "size": "4 oz",
+    "soldBy": "UNIT",
+    "regular": 1.39,
+    "promo": 1
+   },
+   {
+    "id": "0086876700039",
+    "brand": "Serenity Kids",
+    "desc": "Serenity Kids Grass Fed Bison with Organic Pumpkin & Spinach Baby Food",
+    "size": "3.5 oz",
+    "soldBy": "UNIT",
+    "regular": 4.69,
+    "promo": null
+   },
+   {
+    "id": "0081536701002",
+    "brand": "Peter Rabbit Organics",
+    "desc": "Peter Rabbit\u2122 Organics Apple Pea & Spinach Puree Baby Food",
+    "size": "10 ct / 4.4 oz",
+    "soldBy": "UNIT",
+    "regular": 2.59,
+    "promo": null
+   },
+   {
+    "id": "0089018000119",
+    "brand": "Plum Organics",
+    "desc": "Plum Organics\u00ae Stage 2 Organic Baby Food Pear + Pea with Spinach",
+    "size": "4 oz",
+    "soldBy": "UNIT",
+    "regular": 1.99,
+    "promo": null
+   },
+   {
+    "id": "0084667501260",
+    "brand": "Plum Organics",
+    "desc": "Plum Organics\u00ae Stage 2 Apple, Spinach and Avocado Organic Baby Food",
+    "size": "3.5 oz",
+    "soldBy": "UNIT",
+    "regular": 1.99,
+    "promo": null
+   },
+   {
+    "id": "0001111091128",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Baby Spinach",
+    "size": "5 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0081957301639",
+    "brand": "Happy Baby",
+    "desc": "Happy Family Organics Happy Baby 6+ Months Organic Squash Chickpeas & Spinach",
+    "size": "4 oz",
+    "soldBy": "UNIT",
+    "regular": 2.19,
+    "promo": null
+   },
+   {
+    "id": "0081957301173",
+    "brand": "Happy Baby",
+    "desc": "Happy Tot Stage 4 Organic Pears Blueberries & Spinach Pouch",
+    "size": "4 fl oz",
+    "soldBy": "UNIT",
+    "regular": 2.19,
+    "promo": null
+   },
+   {
+    "id": "0081957301699",
+    "brand": "Happy Baby",
+    "desc": "Happy Tot\u00ae Organics Love My Veggies Apples Zucchini Green Beans & Spinach Toddler Food Pouch",
+    "size": "4.22 oz",
+    "soldBy": "UNIT",
+    "regular": 2.19,
+    "promo": null
+   }
+  ]
+ },
+ "avocado": {
+  "search": "hass avocado",
+  "results": [
+   {
+    "id": "0000000004225",
+    "brand": "Fresh Avocados",
+    "desc": "Fresh Large Ripe Avocado",
+    "size": "1 each",
+    "soldBy": "UNIT",
+    "regular": 2.99,
+    "promo": null
+   },
+   {
+    "id": "0001111018209",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Fresh Avocados Bag",
+    "size": "4 ct",
+    "soldBy": "UNIT",
+    "regular": 9.99,
+    "promo": null
+   },
+   {
+    "id": "0000000004046",
+    "brand": "Fresh Avocados",
+    "desc": "Fresh Medium Ripe Avocado",
+    "size": "1 each",
+    "soldBy": "UNIT",
+    "regular": 1.99,
+    "promo": 1.5
+   },
+   {
+    "id": "0000000094225",
+    "brand": "Fresh Avocados",
+    "desc": "Fresh Organic Large Ripe Avocado",
+    "size": "1 each",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": null
+   },
+   {
+    "id": "0000000004223",
+    "brand": "Fresh Avocados",
+    "desc": "Large Ripe Avocado",
+    "size": "large",
+    "soldBy": "UNIT",
+    "regular": 4.49,
+    "promo": null
+   },
+   {
+    "id": "0061611226606",
+    "brand": "Wholly",
+    "desc": "Wholly\u00ae Avocado Diced Avocado Trays",
+    "size": "2 ct / 4 oz",
+    "soldBy": "UNIT",
+    "regular": 5.49,
+    "promo": null
+   },
+   {
+    "id": "0007020085612",
+    "brand": "Chick-fil-A",
+    "desc": "Chick-Fil-A\u00ae Avocado Lime Ranch Salad Dressing",
+    "size": "12 fl oz",
+    "soldBy": "UNIT",
+    "regular": 5.49,
+    "promo": null
+   },
+   {
+    "id": "0007203688639",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter Avocado Verde with Tomatillo Mild Salsa",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0007146402278",
+    "brand": "Bolthouse Farms",
+    "desc": "Bolthouse\u2122 Farms Cilantro Avocado Yogurt Dressing & Dip",
+    "size": "12 fl oz",
+    "soldBy": "UNIT",
+    "regular": 4.49,
+    "promo": null
+   },
+   {
+    "id": "0082951531026",
+    "brand": "Sensible Portions",
+    "desc": "Sensible Portions\u00ae Garden Veggie Straws\u00ae Avocado Oil Sea Salt Veggie Chips",
+    "size": "6 oz",
+    "soldBy": "UNIT",
+    "regular": 4.79,
+    "promo": null
+   },
+   {
+    "id": "0002840078962",
+    "brand": "Miss Vickie's",
+    "desc": "Miss Vickie's Avocado Oil Kettle Cooked Sea Salt & Vinegar Potato Chips",
+    "size": "6 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0070816312058",
+    "brand": "Boulder Canyon",
+    "desc": "Boulder Canyon Avocado Oil Classic Sea Salt Canyon Cut Kettle Style Potato Chips",
+    "size": "5.25 oz",
+    "soldBy": "UNIT",
+    "regular": 5.29,
+    "promo": null
+   }
+  ]
+ },
+ "tomato": {
+  "search": "roma tomato",
+  "results": [
+   {
+    "id": "0000000004087",
+    "brand": "Fresh Tomatoes",
+    "desc": "Fresh Roma Tomato",
+    "size": "1 lb",
+    "soldBy": "WEIGHT",
+    "regular": 3.79,
+    "promo": null
+   },
+   {
+    "id": "0001111000219",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Roma Tomatoes",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": null
+   },
+   {
+    "id": "0007203688132",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter Farmers Market Ready Veggies Diced Roma Tomatoes",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 2.99,
+    "promo": null
+   }
+  ]
+ },
+ "cucumber": {
+  "search": "cucumber",
+  "results": [
+   {
+    "id": "0000000004062",
+    "brand": null,
+    "desc": "Cucumber",
+    "size": "1 ct",
+    "soldBy": "UNIT",
+    "regular": 1.39,
+    "promo": 1.25
+   },
+   {
+    "id": "0005783616851",
+    "brand": "Sunset",
+    "desc": "Sunset\u00ae Mini Cucumbers",
+    "size": "6 oz",
+    "soldBy": "UNIT",
+    "regular": 4.29,
+    "promo": 3.5
+   },
+   {
+    "id": "0000000004593",
+    "brand": null,
+    "desc": "English Cucumber",
+    "size": "1 ct",
+    "soldBy": "UNIT",
+    "regular": 2,
+    "promo": 1.79
+   },
+   {
+    "id": "0001111062501",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Seedless Mini Cucumbers",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": null
+   },
+   {
+    "id": "0000000094062",
+    "brand": null,
+    "desc": "Organic Cucumber",
+    "size": "1 ct",
+    "soldBy": "UNIT",
+    "regular": 2.19,
+    "promo": null
+   },
+   {
+    "id": "0000000094593",
+    "brand": null,
+    "desc": "Organic Long English Cucumber",
+    "size": "1 ct",
+    "soldBy": "UNIT",
+    "regular": 2.79,
+    "promo": null
+   },
+   {
+    "id": "0069905807301",
+    "brand": "Mucci Farms",
+    "desc": "Mucci Farms Cute Cucumber Poppers",
+    "size": "1.5 lb",
+    "soldBy": "UNIT",
+    "regular": 7.99,
+    "promo": 6
+   },
+   {
+    "id": "0004411534340",
+    "brand": "Cedar's",
+    "desc": "Cedar's Foods Cucumber Garlic Dill Tzatziki",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": 3.99
+   },
+   {
+    "id": "0081213603018",
+    "brand": "Fever-Tree",
+    "desc": "Fever-Tree Sparkling Cucumber Mixer Soda",
+    "size": "4 bottles / 6.8 fl oz",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": 5.49
+   },
+   {
+    "id": "0081011968028",
+    "brand": "TRIP",
+    "desc": "Trip Mindful Blends Calm Melon Cucumber Sparkling Water Can",
+    "size": "12 fl oz",
+    "soldBy": "UNIT",
+    "regular": 2.99,
+    "promo": null
+   },
+   {
+    "id": "0003338304596",
+    "brand": null,
+    "desc": "Kirby Cucumbers",
+    "size": "1 ct",
+    "soldBy": "UNIT",
+    "regular": 3.49,
+    "promo": null
+   },
+   {
+    "id": "0001111014139",
+    "brand": "Simple Truth",
+    "desc": "Simple Truth\u00ae Cucumber Melon Sparkling Seltzer Water Cans",
+    "size": "8 ct / 12 fl oz",
+    "soldBy": "UNIT",
+    "regular": 3.49,
+    "promo": null
+   }
+  ]
+ },
+ "feta cheese": {
+  "search": "crumbled feta",
+  "results": [
+   {
+    "id": "0007027700006",
+    "brand": "Athenos",
+    "desc": "Athenos Traditional Feta Cheese Crumbles",
+    "size": "6 oz",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": 3.49
+   },
+   {
+    "id": "0007027729040",
+    "brand": "Athenos",
+    "desc": "Athenos Mediterranean Herb Crumbled Traditional Feta Cheese",
+    "size": "6 oz",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": 3.49
+   },
+   {
+    "id": "0007027700005",
+    "brand": "Athenos",
+    "desc": "Athenos Reduced Fat Feta Cheese Crumbles 5 oz",
+    "size": "5 oz",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": 3.49
+   },
+   {
+    "id": "0007790100770",
+    "brand": "President",
+    "desc": "President\u00ae Feta Crumbles",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 10.99,
+    "promo": null
+   },
+   {
+    "id": "0007027729200",
+    "brand": "Athenos",
+    "desc": "Athenos Protein Packed Feta Cheese Crumbles",
+    "size": "5 oz",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": 3.49
+   },
+   {
+    "id": "0007027710518",
+    "brand": "Athenos",
+    "desc": "Athenos Traditional Feta Cheese Chunk",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 8.99,
+    "promo": null
+   },
+   {
+    "id": "0007790100786",
+    "brand": "President",
+    "desc": "President Feta Cheese Mediterranean Herbs Crumbled 6 oz",
+    "size": "6 oz",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": null
+   },
+   {
+    "id": "0064334281531",
+    "brand": "Dodoni",
+    "desc": "Dodoni\u00ae Crumbled Feta Tub",
+    "size": "5 oz",
+    "soldBy": "UNIT",
+    "regular": 9.99,
+    "promo": null
+   },
+   {
+    "id": "0007790100781",
+    "brand": "President",
+    "desc": "President Feta Cheese Crumbles, 6 oz",
+    "size": "6 oz",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": null
+   },
+   {
+    "id": "0007027729000",
+    "brand": "Athenos",
+    "desc": "Athenos Traditional Feta Cheese Crumbles",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 10.99,
+    "promo": null
+   },
+   {
+    "id": "0007027700007",
+    "brand": "Athenos",
+    "desc": "Athenos Tomato & Basil Feta Cheese Crumbles",
+    "size": "6 oz",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": 3.49
+   },
+   {
+    "id": "0004956834006",
+    "brand": "Follow Your Heart",
+    "desc": "Follow Your Heart Dairy Free Vegan Feta Style Crumbles Cheese",
+    "size": "6 fl oz",
+    "soldBy": "UNIT",
+    "regular": 5.49,
+    "promo": null
+   }
+  ]
+ },
+ "mustard yellow": {
+  "search": "yellow mustard",
+  "results": [
+   {
+    "id": "0004150000025",
+    "brand": "French's",
+    "desc": "French's Classic Yellow Mustard",
+    "size": "14 oz",
+    "soldBy": "UNIT",
+    "regular": 2.29,
+    "promo": 2
+   },
+   {
+    "id": "0004150000700",
+    "brand": "French's",
+    "desc": "French's Classic Yellow Mustard",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 1.49,
+    "promo": null
+   },
+   {
+    "id": "0007203672891",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u2122 Yellow Mustard",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 0.99,
+    "promo": null
+   },
+   {
+    "id": "0001300000212",
+    "brand": "Heinz",
+    "desc": "Heinz Yellow Mustard",
+    "size": "14 oz",
+    "soldBy": "UNIT",
+    "regular": 2.39,
+    "promo": 1.19
+   },
+   {
+    "id": "0007203673371",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u00ae Yellow Mustard",
+    "size": "20 oz",
+    "soldBy": "UNIT",
+    "regular": 1.99,
+    "promo": null
+   },
+   {
+    "id": "0004150000031",
+    "brand": "French's",
+    "desc": "French's Classic Yellow Mustard, 20.0 oz",
+    "size": "20 oz",
+    "soldBy": "UNIT",
+    "regular": 2.99,
+    "promo": null
+   },
+   {
+    "id": "0001111013768",
+    "brand": "Smart Way",
+    "desc": "Smart Way\u2122 Original Yellow Mustard",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 0.69,
+    "promo": null
+   },
+   {
+    "id": "0001111084942",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Yellow Mustard",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 1.99,
+    "promo": null
+   },
+   {
+    "id": "0004242116202",
+    "brand": "Boar's Head",
+    "desc": "Boar\u2019s Head 54% Lower Sodium Yellow Mustard",
+    "size": "9 oz",
+    "soldBy": "UNIT",
+    "regular": 4.49,
+    "promo": null
+   },
+   {
+    "id": "0007203672892",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u00ae Yellow Mustard",
+    "size": "14 oz",
+    "soldBy": "UNIT",
+    "regular": 1.49,
+    "promo": null
+   },
+   {
+    "id": "0001300000955",
+    "brand": "Heinz",
+    "desc": "Heinz Organic Yellow Mustard",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 2.79,
+    "promo": 1.99
+   },
+   {
+    "id": "0001300000218",
+    "brand": "Heinz",
+    "desc": "Heinz Yellow Mustard",
+    "size": "20 oz",
+    "soldBy": "UNIT",
+    "regular": 2.79,
+    "promo": null
+   }
+  ]
+ },
+ "blueberries": {
+  "search": "blueberries",
+  "results": [
+   {
+    "id": "0003338322101",
+    "brand": "Fresh Berries",
+    "desc": "Fresh Blueberries - 1 PT Clamshell",
+    "size": "1 pt",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": null
+   },
+   {
+    "id": "0071575650017",
+    "brand": "Driscoll's",
+    "desc": "Driscoll\u2019s\u00ae Limited Edition Sweetest Batch\u2122 Fresh Blueberries",
+    "size": "11 oz",
+    "soldBy": "UNIT",
+    "regular": 10.99,
+    "promo": 9.99
+   },
+   {
+    "id": "0003338322241",
+    "brand": "Fresh Berries",
+    "desc": "Fresh Blueberries - 18 OZ - Clamshell",
+    "size": "18 oz",
+    "soldBy": "UNIT",
+    "regular": 10.99,
+    "promo": 9.99
+   },
+   {
+    "id": "0007203646040",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u00ae Whole Blueberries",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 3.99,
+    "promo": null
+   },
+   {
+    "id": "0001111036742",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Frozen Blueberries",
+    "size": "10 oz",
+    "soldBy": "UNIT",
+    "regular": 3.19,
+    "promo": null
+   },
+   {
+    "id": "0007203672978",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u2122 Blueberries",
+    "size": "48 oz",
+    "soldBy": "UNIT",
+    "regular": 9.59,
+    "promo": 8.49
+   },
+   {
+    "id": "0001111080606",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Frozen Blueberries",
+    "size": "32 oz",
+    "soldBy": "UNIT",
+    "regular": 9.29,
+    "promo": null
+   },
+   {
+    "id": "0001111003931",
+    "brand": "Private Selection",
+    "desc": "Private Selection\u00ae Fresh Colossal Blueberries",
+    "size": "9.8 oz",
+    "soldBy": "UNIT",
+    "regular": 8.99,
+    "promo": 7.99
+   },
+   {
+    "id": "0001111001623",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Blueberries",
+    "size": "1 pt",
+    "soldBy": "UNIT",
+    "regular": 7.99,
+    "promo": null
+   },
+   {
+    "id": "0001111001616",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Blueberries",
+    "size": "18 oz",
+    "soldBy": "UNIT",
+    "regular": 10.99,
+    "promo": null
+   },
+   {
+    "id": "0007990000169",
+    "brand": "Wyman's",
+    "desc": "Wyman's\u00ae Frozen Wild Blueberries",
+    "size": "3 lb",
+    "soldBy": "UNIT",
+    "regular": 15.39,
+    "promo": null
+   },
+   {
+    "id": "0085001211704",
+    "brand": "Tru Fru",
+    "desc": "Tru Fru Fresh Frozen Blueberries in Dark & White Chocolate",
+    "size": "8.0 oz",
+    "soldBy": "UNIT",
+    "regular": 9.99,
+    "promo": null
+   }
+  ]
+ },
+ "blackberries": {
+  "search": "blackberries",
+  "results": [
+   {
+    "id": "0003338324000",
+    "brand": "Fresh Berries",
+    "desc": "Fresh Blackberries - 6 OZ Clamshell",
+    "size": "6 oz",
+    "soldBy": "UNIT",
+    "regular": 4.69,
+    "promo": null
+   },
+   {
+    "id": "0071575610022",
+    "brand": "Fresh Berries",
+    "desc": "Fresh Organic Blackberries",
+    "size": "6 oz",
+    "soldBy": "UNIT",
+    "regular": 5.49,
+    "promo": null
+   },
+   {
+    "id": "0084029070037",
+    "brand": "Siggi's",
+    "desc": "Siggi's Fruit & Fiber Blueberry Blackberry, 5.3oz",
+    "size": "5.3 oz",
+    "soldBy": "UNIT",
+    "regular": 1.99,
+    "promo": null
+   },
+   {
+    "id": "0086000533228",
+    "brand": "Hiyo",
+    "desc": "Hiyo Blackberry Lemon Organic Social Tonic 4pk",
+    "size": "4 pk / 12 fl oz",
+    "soldBy": "UNIT",
+    "regular": 13.99,
+    "promo": 11.99
+   },
+   {
+    "id": "0004280800046",
+    "brand": "Fresh Berries",
+    "desc": "Driscoll\u2019s\u00ae Rainbow Pack Fresh Blackberries Raspberries an Blueberries",
+    "size": "7 oz",
+    "soldBy": "UNIT",
+    "regular": 7.49,
+    "promo": null
+   },
+   {
+    "id": "0001111015061",
+    "brand": "Simple Truth",
+    "desc": "Simple Truth Organic\u00ae Sliced Strawberries Blackberries and Blueberries Triple Berry Smoothie Blend",
+    "size": "32 oz",
+    "soldBy": "UNIT",
+    "regular": 8.99,
+    "promo": null
+   },
+   {
+    "id": "0081957301322",
+    "brand": "Happy Baby",
+    "desc": "Happy Baby Clearly Crafted Stage 2 Pears Squash & Blackberries Organic Baby Food Pouch",
+    "size": "4 fl oz",
+    "soldBy": "UNIT",
+    "regular": 2.19,
+    "promo": null
+   },
+   {
+    "id": "0007203646021",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u00ae Frozen Whole Blackberries",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 4.49,
+    "promo": null
+   },
+   {
+    "id": "0001200018119",
+    "brand": "bubly",
+    "desc": "Bubly Sparkling Water Blackberry Cans",
+    "size": "8 ct / 12 fl oz",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": null
+   },
+   {
+    "id": "0007800004050",
+    "brand": "Dr Pepper",
+    "desc": "Dr Pepper Blackberry Zero Sugar Soda Cans",
+    "size": "12 pk / 12 fl oz",
+    "soldBy": "UNIT",
+    "regular": 11.99,
+    "promo": null
+   },
+   {
+    "id": "0005150000684",
+    "brand": "Smucker's",
+    "desc": "Smucker's Seedless Blackberry Jam",
+    "size": "18 oz",
+    "soldBy": "UNIT",
+    "regular": 5.39,
+    "promo": null
+   },
+   {
+    "id": "0006647900006",
+    "brand": "Clearly Canadian",
+    "desc": "Clearly Canadian\u00ae Mountain Blackberry Flavored Sparkling Bottled Water",
+    "size": "11 fl oz",
+    "soldBy": "UNIT",
+    "regular": 2.99,
+    "promo": 2
+   }
+  ]
+ },
+ "pumpkin seeds": {
+  "search": "pepitas",
+  "results": [
+   {
+    "id": "0007203689937",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter Farmers Market\u2122 Pumpkin Seeds",
+    "size": "8.5 oz",
+    "soldBy": "UNIT",
+    "regular": 6.79,
+    "promo": 5
+   },
+   {
+    "id": "0081601201112",
+    "brand": "Bigs",
+    "desc": "Bigs\u00ae Simply Salted Pumpkin Seeds",
+    "size": "5 oz",
+    "soldBy": "UNIT",
+    "regular": 3.79,
+    "promo": null
+   },
+   {
+    "id": "0086000333192",
+    "brand": "Top Fox",
+    "desc": "Top Fox\u00ae Pop-Roasted Himalayan Salt Pumpkin Seeds",
+    "size": "3.5 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0085001838836",
+    "brand": "Top Fox",
+    "desc": "Top Fox\u00ae Pop-Roasted Salt & Vinegar Pumpkin Seeds",
+    "size": "3.5 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0004525514733",
+    "brand": "Melissa's",
+    "desc": "Melissa's Pumpkin Seed Clean Snax Gluten-Free Snack (Approximate Delivery is 3-5 Days)",
+    "size": "6.5 oz",
+    "soldBy": "UNIT",
+    "regular": 7.59,
+    "promo": null
+   },
+   {
+    "id": "0085449700835",
+    "brand": "Go Raw",
+    "desc": "Go Raw Pumpkin Seeds, 4oz",
+    "size": "4 oz",
+    "soldBy": "UNIT",
+    "regular": 5.49,
+    "promo": null
+   }
+  ]
+ },
+ "granola": {
+  "search": "granola",
+  "results": [
+   {
+    "id": "0001600043779",
+    "brand": "Nature Valley",
+    "desc": "Nature Valley\u2122 Protein Oats and Honey Granola",
+    "size": "11 oz",
+    "soldBy": "UNIT",
+    "regular": 6.29,
+    "promo": 3.5
+   },
+   {
+    "id": "0007203672466",
+    "brand": "HT Traders",
+    "desc": "HT Traders Honey Vanilla Granola",
+    "size": "11 oz",
+    "soldBy": "UNIT",
+    "regular": 5.29,
+    "promo": null
+   },
+   {
+    "id": "0085514000217",
+    "brand": "Purely Elizabeth",
+    "desc": "Purely Elizabeth Original Ancient Grain Granola",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 9.49,
+    "promo": null
+   },
+   {
+    "id": "0070559901963",
+    "brand": "Kodiak",
+    "desc": "Kodiak\u00ae Honey Oat Protein Granola",
+    "size": "11 oz",
+    "soldBy": "UNIT",
+    "regular": 6.49,
+    "promo": null
+   },
+   {
+    "id": "0085641600071",
+    "brand": "Bear Naked",
+    "desc": "Bear Naked Cereal Granola Vanilla Almond Crisp",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 5.89,
+    "promo": null
+   },
+   {
+    "id": "0002190813321",
+    "brand": "Cascadian Farm Organic",
+    "desc": "Cascadian Farm\u2122 Organic Oats and Honey Granola Cereal",
+    "size": "11 oz",
+    "soldBy": "UNIT",
+    "regular": 7.29,
+    "promo": null
+   },
+   {
+    "id": "0001600043268",
+    "brand": "Nature Valley",
+    "desc": "Nature Valley\u2122 Crunchy Oats and Honey Granola",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 6.29,
+    "promo": 3.5
+   },
+   {
+    "id": "0005844977180",
+    "brand": "Nature's Path Organic",
+    "desc": "Nature's Path Love Crunch Dark Chocolate & Red Berries Granola",
+    "size": "11.5 oz",
+    "soldBy": "UNIT",
+    "regular": 6.49,
+    "promo": null
+   },
+   {
+    "id": "0001600043778",
+    "brand": "Nature Valley",
+    "desc": "Nature Valley\u2122 Protein Oats and Dark Chocolate Granola",
+    "size": "11 oz",
+    "soldBy": "UNIT",
+    "regular": 6.29,
+    "promo": 3.5
+   },
+   {
+    "id": "0079357348151",
+    "brand": "Michele's Granola",
+    "desc": "Michele's Granola\u00ae Original Granola",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 8.79,
+    "promo": null
+   },
+   {
+    "id": "0001600018587",
+    "brand": "Nature Valley",
+    "desc": "Nature Valley\u2122 Protein Oats and Honey Family Size Granola",
+    "size": "17 oz",
+    "soldBy": "UNIT",
+    "regular": 7.99,
+    "promo": null
+   },
+   {
+    "id": "0001111009253",
+    "brand": "Simple Truth",
+    "desc": "Simple Truth\u00ae Grain Free Original Granola Cereal BIG DEAL!",
+    "size": "16 oz",
+    "soldBy": "UNIT",
+    "regular": 8.69,
+    "promo": null
+   }
+  ]
+ },
+ "sweet potato": {
+  "search": "sweet potatoes",
+  "results": [
+   {
+    "id": "0000000004816",
+    "brand": "Fresh Potatoes",
+    "desc": "Sweet Potato",
+    "size": "1 lb",
+    "soldBy": "WEIGHT",
+    "regular": 1.99,
+    "promo": 0.39
+   },
+   {
+    "id": "0001760004386",
+    "brand": "Bruce's",
+    "desc": "Bruce's\u00ae Cut Sweet Potato Yams in Syrup",
+    "size": "40 oz",
+    "soldBy": "UNIT",
+    "regular": 3.79,
+    "promo": 3
+   },
+   {
+    "id": "0083418300712",
+    "brand": "Alexia",
+    "desc": "Alexia\u00ae Sweet Potato Fries Frozen Potatoes",
+    "size": "20 oz",
+    "soldBy": "UNIT",
+    "regular": 6.69,
+    "promo": 4.69
+   },
+   {
+    "id": "0083418300717",
+    "brand": "Alexia",
+    "desc": "Alexia\u00ae Sweet Potato Tot Bite-Sized and Crispy Frozen Potatoes",
+    "size": "20 oz",
+    "soldBy": "UNIT",
+    "regular": 6.69,
+    "promo": 4.69
+   },
+   {
+    "id": "0083418300714",
+    "brand": "Alexia",
+    "desc": "Alexia\u00ae Sweet Potato Waffle Cut Fries Frozen Potatoes",
+    "size": "20 oz",
+    "soldBy": "UNIT",
+    "regular": 6.69,
+    "promo": 4.69
+   },
+   {
+    "id": "0001111087975",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Cut Sweet Potato Yams",
+    "size": "15 oz",
+    "soldBy": "UNIT",
+    "regular": 2.29,
+    "promo": 1.99
+   },
+   {
+    "id": "0001760004321",
+    "brand": "Bruce's",
+    "desc": "Bruce's\u00ae Cut Sweet Potato Yams in Syrup",
+    "size": "15 oz",
+    "soldBy": "UNIT",
+    "regular": 1.69,
+    "promo": 1.67
+   },
+   {
+    "id": "0001111004382",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Diced Frozen Sweet Potato",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 3.19,
+    "promo": 2.5
+   },
+   {
+    "id": "0007056090183",
+    "brand": "Pictsweet Farms",
+    "desc": "Pictsweet Farms\u00ae Air Fryer Sweet Potato Bites",
+    "size": "14 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": 2.49
+   },
+   {
+    "id": "0001111062731",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Sweet Potatoes",
+    "size": "3 lb",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": null
+   },
+   {
+    "id": "0065690508208",
+    "brand": "Nature's Way",
+    "desc": "Nature's Way Premium Sweet Potatoes",
+    "size": "4 ct / 32 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0007203688092",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter Farmers Market Microwaveable Sweet Potato",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 1,
+    "promo": null
+   }
+  ]
+ },
+ "cheddar cheese": {
+  "search": "shredded cheddar",
+  "results": [
+   {
+    "id": "0007203655024",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter Shredded Sharp Cheddar Cheese",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 3.59,
+    "promo": null
+   },
+   {
+    "id": "0007203660078",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u00ad\u2122 Gourmet Sharp Cheddar Blend Shredded Cheese",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 3.59,
+    "promo": null
+   },
+   {
+    "id": "0007203656081",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u2122 Fancy Shredded Mild Cheddar Cheese",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 3.59,
+    "promo": null
+   },
+   {
+    "id": "0007203655026",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u00ae Fancy Shredded Sharp Cheddar Cheese",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 3.59,
+    "promo": null
+   },
+   {
+    "id": "0007203659052",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u00ae Sharp Cheddar Shredded Cheese",
+    "size": "32 oz",
+    "soldBy": "UNIT",
+    "regular": 9.49,
+    "promo": 7.99
+   },
+   {
+    "id": "0007203670927",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u2122 Double Cheddar Shredded Cheese",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 3.59,
+    "promo": null
+   },
+   {
+    "id": "0007283001123",
+    "brand": "Tillamook",
+    "desc": "Tillamook\u00ae Sharp Cheddar Shredded Cheese",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 5.19,
+    "promo": null
+   },
+   {
+    "id": "0007283001127",
+    "brand": "Tillamook",
+    "desc": "Tillamook\u00ae Double Cheddar Shredded Cheese",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 5.19,
+    "promo": null
+   },
+   {
+    "id": "0007203659046",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u00ae 2% Milk Reduced Fat Sharp Cheddar Shredded Cheese",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 3.59,
+    "promo": null
+   },
+   {
+    "id": "0004610040029",
+    "brand": "Sargento",
+    "desc": "Sargento\u00ae Off the Block Sharp Cheddar Natural Cheese Shreds",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 4.79,
+    "promo": null
+   },
+   {
+    "id": "0084037090157",
+    "brand": "Kraft",
+    "desc": "Kraft Triple Cheddar Finely Shredded Cheese",
+    "size": "8 oz (226g)",
+    "soldBy": "UNIT",
+    "regular": 4.69,
+    "promo": null
+   },
+   {
+    "id": "0007283001104",
+    "brand": "Tillamook",
+    "desc": "Tillamook Farmstyle Thick Cut Sharp Cheddar Shredded Cheese, 8oz",
+    "size": "8 oz (227 g)",
+    "soldBy": "UNIT",
+    "regular": 5.19,
+    "promo": null
+   }
+  ]
+ },
+ "potatoes russet": {
+  "search": "russet potatoes",
+  "results": [
+   {
+    "id": "0000000004072",
+    "brand": "Fresh Potatoes",
+    "desc": "Russet Potato",
+    "size": "1 lb",
+    "soldBy": "WEIGHT",
+    "regular": 1.79,
+    "promo": null
+   },
+   {
+    "id": "0001111091760",
+    "brand": null,
+    "desc": "Harris Teeter Farmers Market Russet Potatoes",
+    "size": "5 lb",
+    "soldBy": "UNIT",
+    "regular": 5.99,
+    "promo": 5
+   },
+   {
+    "id": "0001111091845",
+    "brand": null,
+    "desc": "Russet Potatoes",
+    "size": "8 lb",
+    "soldBy": "UNIT",
+    "regular": 6.49,
+    "promo": 6
+   },
+   {
+    "id": "0001111091778",
+    "brand": "Fresh Potatoes",
+    "desc": "Simple Truth Organic\u00ae Russet Potatoes",
+    "size": "3 lb",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": null
+   },
+   {
+    "id": "0007203688073",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter Farmers Market\u2122 Premium Bakers Potatoes",
+    "size": "4 ct / 38 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": null
+   },
+   {
+    "id": "0007203688093",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter Farmers Market Microwaveable Russet Potato",
+    "size": "8 oz",
+    "soldBy": "UNIT",
+    "regular": 1,
+    "promo": null
+   },
+   {
+    "id": "0001111091871",
+    "brand": "Fresh Potatoes",
+    "desc": "Harris Teeter Farmers Market Yukon Gold Potatoes",
+    "size": "5 lb",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": 6
+   },
+   {
+    "id": "0000000004727",
+    "brand": "Fresh Potatoes",
+    "desc": "Yukon Gold Potatoes",
+    "size": "1 lb",
+    "soldBy": "WEIGHT",
+    "regular": 2.79,
+    "promo": null
+   },
+   {
+    "id": "0004716790103",
+    "brand": "Russet",
+    "desc": "Russet Organic Potatos",
+    "size": "3 lb",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": null
+   },
+   {
+    "id": "0001111079542",
+    "brand": "Fresh Potatoes",
+    "desc": "Private Selection\u00ae Petite Gold Gourmet Potatoes",
+    "size": "1.5 lb",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": 3.99
+   },
+   {
+    "id": "0001111091846",
+    "brand": "Fresh",
+    "desc": "Harris Teeter Farmers Market Red Potatoes",
+    "size": "5 lb",
+    "soldBy": "UNIT",
+    "regular": 6.99,
+    "promo": null
+   },
+   {
+    "id": "0000000004073",
+    "brand": "Fresh Potatoes",
+    "desc": "Red Potatoes",
+    "size": "1 lb",
+    "soldBy": "WEIGHT",
+    "regular": 2.49,
+    "promo": null
+   }
+  ]
+ },
+ "green bell pepper": {
+  "search": "green bell pepper",
+  "results": [
+   {
+    "id": "0000000004065",
+    "brand": null,
+    "desc": "Fresh Large Green Bell Pepper",
+    "size": "1 ct",
+    "soldBy": "UNIT",
+    "regular": 1.79,
+    "promo": 1.67
+   },
+   {
+    "id": "0003338349033",
+    "brand": "Harris Teeter",
+    "desc": "Green Bell Peppers",
+    "size": "2 pk",
+    "soldBy": "UNIT",
+    "regular": 2.49,
+    "promo": null
+   },
+   {
+    "id": "0000000094065",
+    "brand": null,
+    "desc": "Organic Fresh Green Bell Pepper",
+    "size": "1 ct",
+    "soldBy": "UNIT",
+    "regular": 2.5,
+    "promo": null
+   },
+   {
+    "id": "0081015393012",
+    "brand": "Green Giant",
+    "desc": "Green Giant\u00ae SteamCrisp\u00ae Mexicorn\u00ae Whole Kernel Corn with Red & Green Bell Peppers",
+    "size": "11 oz",
+    "soldBy": "UNIT",
+    "regular": 2.49,
+    "promo": 1.5
+   }
+  ]
+ },
+ "parsley fresh": {
+  "search": "parsley",
+  "results": [
+   {
+    "id": "0000000004901",
+    "brand": null,
+    "desc": "Parsley - Italian",
+    "size": "1 ct",
+    "soldBy": "UNIT",
+    "regular": 2.29,
+    "promo": null
+   },
+   {
+    "id": "0000000004899",
+    "brand": null,
+    "desc": "Parsley",
+    "size": "1 ct",
+    "soldBy": "UNIT",
+    "regular": 2.29,
+    "promo": null
+   },
+   {
+    "id": "0005210000738",
+    "brand": "McCormick",
+    "desc": "McCormick Parsley Flakes",
+    "size": "0.25 oz",
+    "soldBy": "UNIT",
+    "regular": 2.69,
+    "promo": 2.02
+   },
+   {
+    "id": "0001111018155",
+    "brand": "Simple Truth Organic",
+    "desc": "Simple Truth Organic\u00ae Italian Parsley",
+    "size": "0.5 oz",
+    "soldBy": "UNIT",
+    "regular": 1.99,
+    "promo": null
+   },
+   {
+    "id": "0000000094901",
+    "brand": null,
+    "desc": "Organic Italian Parsley",
+    "size": "each",
+    "soldBy": "UNIT",
+    "regular": 2.49,
+    "promo": null
+   },
+   {
+    "id": "0087520800124",
+    "brand": "Gourmet Garden",
+    "desc": "Gourmet Garden\u2122 Lightly Dried Parsley",
+    "size": "0.35 oz",
+    "soldBy": "UNIT",
+    "regular": 4.49,
+    "promo": null
+   },
+   {
+    "id": "0000000094899",
+    "brand": null,
+    "desc": "Organic Parsley",
+    "size": "1 ct",
+    "soldBy": "UNIT",
+    "regular": 2.49,
+    "promo": null
+   },
+   {
+    "id": "0005210007114",
+    "brand": "McCormick",
+    "desc": "McCormick Parsley Flakes",
+    "size": "0.5 oz",
+    "soldBy": "UNIT",
+    "regular": 3.19,
+    "promo": 2.4
+   },
+   {
+    "id": "0007203671557",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u2122 Parsley Flakes",
+    "size": "0.46 oz",
+    "soldBy": "UNIT",
+    "regular": 2.39,
+    "promo": null
+   },
+   {
+    "id": "0002150000036",
+    "brand": "Lawry's",
+    "desc": "Lawry's Garlic Powder Coarse Ground with Parsley",
+    "size": "2.9 oz",
+    "soldBy": "UNIT",
+    "regular": 7.89,
+    "promo": null
+   },
+   {
+    "id": "0002150000056",
+    "brand": "Lawry's",
+    "desc": "Lawry's Coarse Ground with Parsley Garlic Salt",
+    "size": "3 oz",
+    "soldBy": "UNIT",
+    "regular": 3.69,
+    "promo": null
+   },
+   {
+    "id": "0008983618522",
+    "brand": "Simply Organic",
+    "desc": "Simply Organic\u00ae Parsley Bottle",
+    "size": "0.26 oz",
+    "soldBy": "UNIT",
+    "regular": 4.99,
+    "promo": 4.29
+   }
+  ]
+ },
+ "chocolate chips": {
+  "search": "semi-sweet chocolate chips",
+  "results": [
+   {
+    "id": "0002800098612",
+    "brand": "Nestle Toll House",
+    "desc": "Nestle Toll House Semi-Sweet Chocolate Mini Morsels Chocolate Chips",
+    "size": "10 oz",
+    "soldBy": "UNIT",
+    "regular": 6.19,
+    "promo": 4.99
+   },
+   {
+    "id": "0002800021580",
+    "brand": "Nestle Toll House",
+    "desc": "Nestle Toll House Semi-Sweet Chocolate Morsels Chocolate Chips",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 6.19,
+    "promo": 4.99
+   },
+   {
+    "id": "0085352200030",
+    "brand": "Enjoy Life",
+    "desc": "Enjoy Life\u2122 Semi Sweet Mini Chocolate Chips",
+    "size": "10 oz",
+    "soldBy": "UNIT",
+    "regular": 9.59,
+    "promo": null
+   },
+   {
+    "id": "0074759964015",
+    "brand": "Ghirardelli",
+    "desc": "Ghirardelli Premium Baking Semi Sweet Chocolate Chips",
+    "size": "12 ounces",
+    "soldBy": "UNIT",
+    "regular": 7.59,
+    "promo": 5.99
+   },
+   {
+    "id": "0085352200000",
+    "brand": "Enjoy Life",
+    "desc": "Enjoy Life Semi-Sweet Dairy Free Mini Chocolate Chips, Vegan, 9 oz",
+    "size": "9 oz",
+    "soldBy": "UNIT",
+    "regular": 9.59,
+    "promo": 8.59
+   },
+   {
+    "id": "0007203672495",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter\u2122 Semi-Sweet Mini Chocolate Chips",
+    "size": "12 oz",
+    "soldBy": "UNIT",
+    "regular": 4.59,
+    "promo": 4
+   },
+   {
+    "id": "0007203670631",
+    "brand": "Harris Teeter",
+    "desc": "Harris Teeter Real Semi Sweet Chocolate Chips",
+    "size": "24 oz",
+    "soldBy": "UNIT",
+    "regular": 7.39,
+    "promo": 6.59
+   },
+   {
+    "id": "0085352200001",
+    "brand": "Enjoy Life",
+    "desc": "Enjoy Life Semi-Sweet Dairy Free Mega Chocolate Chips, Vegan, 9 oz",
+    "size": "9 oz",
+    "soldBy": "UNIT",
+    "regular": 9.59,
+    "promo": 8.59
+   },
+   {
+    "id": "0002800021560",
+    "brand": "Nestle Toll House",
+    "desc": "Nestle Toll House Semi-Sweet Chocolate Chip Morsels",
+    "size": "24 oz",
+    "soldBy": "UNIT",
+    "regular": 10.99,
+    "promo": 8.99
+   },
+   {
+    "id": "0085648100389",
+    "brand": "Lily's",
+    "desc": "LILY'S Semi-Sweet Chocolate Style No Sugar Added Baking Chips Bag",
+    "size": "9 oz",
+    "soldBy": "UNIT",
+    "regular": 10.59,
+    "promo": 8.99
+   },
+   {
+    "id": "0074759962213",
+    "brand": "Ghirardelli",
+    "desc": "Ghirardelli Semi-Sweet Chocolate Premium Baking Chips",
+    "size": "24 ounces",
+    "soldBy": "UNIT",
+    "regular": 13.99,
+    "promo": 12.99
+   },
+   {
+    "id": "0074759961027",
+    "brand": "Ghirardelli",
+    "desc": "Ghirardelli Mini Semi-Sweet Chocolate Premium Baking Chips",
+    "size": "10 ounces",
+    "soldBy": "UNIT",
+    "regular": 7.59,
+    "promo": 5.99
+   }
+  ]
+ }
+}
