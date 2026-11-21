@@ -1,7 +1,7 @@
 # Monthly Kroger price fetch via the official Kroger Public API.
 # Needs repo secrets KROGER_CLIENT_ID and KROGER_CLIENT_SECRET (Settings > Secrets and variables > Actions).
 # Monthly (and on push of data/kroger/run.txt): prices every store in data/kroger/stores.csv and recomputes recipe costs.
-# run.txt line 1 = "locations <zip>" to look up store ids instead.
+# run.txt line 1 = "locations <zip...>" to look up store ids, or "fetch <locationId...>" to fetch new stores without publishing.
 name: kroger-prices
 on:
   workflow_dispatch:
@@ -27,6 +27,9 @@ jobs:
           read -r cmd args < data/kroger/run.txt
           if [ "$cmd" = locations ] && [ "${{ github.event_name }}" = push ]; then
             python3 tools/kroger_fetch.py locations $args
+          elif [ "$cmd" = fetch ] && [ "${{ github.event_name }}" = push ]; then
+            # new stores: fetch only, picks get reviewed by hand before they go live
+            python3 tools/kroger_fetch.py products $args
           else
             # every Kroger store we price: fetch -> pick -> prices.csv -> recipe costs
             mkdir -p data/todo
