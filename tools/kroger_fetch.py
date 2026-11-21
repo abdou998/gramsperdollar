@@ -74,4 +74,5 @@ def products(tok, loc):
 if __name__ == '__main__':
     OUT.mkdir(parents=True, exist_ok=True)
     tok = token()
-    {'locations': locations, 'products': products}[sys.argv[1]](tok, sys.argv[2])
+    for arg in sys.argv[2:]:
+        {'locations': locations, 'products': products}[sys.argv[1]](tok, arg)
