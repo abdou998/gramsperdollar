@@ -19,7 +19,7 @@ const pick = ids.includes(store) ? store : ids[0];
     <div class="head">
       <Hx id={`${r.slug}-money`}>Where the money goes</Hx>
       {ids.length > 1 && (
-        <label class="pick small">Store
+        <label class="pick small">Your store
           <select data-money-pick aria-controls={`${r.slug}-money-tables`}>
             {groups.map((g) => (
               <optgroup label={g.state}>
@@ -43,8 +43,17 @@ const pick = ids.includes(store) ? store : ids[0];
 <script>
   document.querySelectorAll<HTMLElement>('[data-money]').forEach((sec) => {
     const sel = sec.querySelector<HTMLSelectElement>('[data-money-pick]');
-    sel?.addEventListener('change', () => {
-      sec.querySelectorAll<HTMLElement>('[data-money-store]').forEach((d) => { d.hidden = d.dataset.moneyStore !== sel.value; });
+    if (!sel) return;
+    const show = () => sec.querySelectorAll<HTMLElement>('[data-money-store]').forEach((d) => { d.hidden = d.dataset.moneyStore !== sel.value; });
+    // Open on the reader's own store if this recipe is priced there.
+    try {
+      const mine = localStorage.getItem('gpd-store');
+      if (mine && [...sel.options].some((o) => o.value === mine)) { sel.value = mine; show(); }
+    } catch {}
+    sel.addEventListener('change', () => {
+      show();
+      try { localStorage.setItem('gpd-store', sel.value); } catch {}
+      window.dispatchEvent(new CustomEvent('gpd-store', { detail: sel.value }));
     });
   });
 </script>

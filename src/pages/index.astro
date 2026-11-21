@@ -37,8 +37,8 @@ const jsonLd = [
     <div class="hero-text">
       <h1>High-protein meal prep, priced by the gram</h1>
       <p class="lede">
-        We cost every recipe at real supermarkets and show how many grams of protein each dollar buys.
-        The higher the yellow number, the better the value.
+        Recipes costed at real supermarkets, with the grams of protein each dollar buys.
+        Higher yellow number, better value.
       </p>
       <div class="picker">
         <label for="shop">Where do you shop?</label>
@@ -53,27 +53,6 @@ const jsonLd = [
       </div>
     </div>
 
-    <aside class="shelf panel" aria-labelledby="cheapest">
-      <h2 id="cheapest">Cheapest protein right now</h2>
-      {views.map((v, i) => (
-        <div class="view" data-view={v.key} hidden={i > 0}>
-          <ol class="mini">
-            {v.top.map((r) => (
-              <li>
-                <span class="tag tag-sm"><span class="tag-number">{r.protein_per_dollar.toFixed(1)}</span><span class="tag-unit">g protein<br />per $1</span></span>
-                <span><span class="mini-name">{r.name}</span><span class="small muted">30 g of protein for {usd(r.cost_per_30g!)}{v.ids.length > 1 && <> at {where(r.store)}</>}</span></span>
-              </li>
-            ))}
-          </ol>
-          {v.lean && <p class="small">Cheapest lean protein: <strong>{v.lean.name.toLowerCase()}</strong>, {v.lean.protein_per_dollar.toFixed(1)} g per $1{v.ids.length > 1 && <> at {where(v.lean.store)}</>}.</p>}
-          <p class="small">{v.ids.length === 1
-            ? <a href={rankUrl(v.ids[0])}>All {v.n} foods at {storeInfo(v.ids[0]).store}, ranked</a>
-            : <a href="/cheapest-protein">All foods, store by store</a>}
-            <span class="muted"> Shelf prices checked {monthLabel(checked)}.</span>
-          </p>
-        </div>
-      ))}
-    </aside>
   </section>
 
   <section aria-labelledby="best-value">
@@ -86,6 +65,28 @@ const jsonLd = [
       <span>Pick recipes, set the days, and get one shopping list with the checkout total.</span>
       <a class="btn" href="/planner">Plan your week</a>
     </p>
+  </section>
+
+  <section class="shelf panel" aria-labelledby="cheapest">
+    <h2 id="cheapest">Cheapest protein right now</h2>
+    {views.map((v, i) => (
+      <div class="view" data-view={v.key} hidden={i > 0}>
+        <ol class="mini">
+          {v.top.map((r) => (
+            <li>
+              <span class="tag tag-sm"><span class="tag-number">{r.protein_per_dollar.toFixed(1)}</span><span class="tag-unit">g protein<br />per $1</span></span>
+              <span><span class="mini-name">{r.name}</span><span class="small muted">30 g of protein for {usd(r.cost_per_30g!)}{v.ids.length > 1 && <> at {where(r.store)}</>}</span></span>
+            </li>
+          ))}
+        </ol>
+        {v.lean && <p class="small">Cheapest lean protein: <strong>{v.lean.name.toLowerCase()}</strong>, {v.lean.protein_per_dollar.toFixed(1)} g per $1{v.ids.length > 1 && <> at {where(v.lean.store)}</>}.</p>}
+        <p class="small">{v.ids.length === 1
+          ? <a href={rankUrl(v.ids[0])}>All {v.n} foods at {storeInfo(v.ids[0]).store}, ranked</a>
+          : <a href="/cheapest-protein">All foods, store by store</a>}
+          <span class="muted"> Shelf prices checked {monthLabel(checked)}.</span>
+        </p>
+      </div>
+    ))}
   </section>
 
   {posts.length > 0 && (
@@ -148,7 +149,7 @@ const jsonLd = [
     views.forEach((v) => (v.hidden = v.dataset.view !== key));
   }
   let start = 'all';
-  try { start = localStorage.getItem('gpd-home-view') || 'all'; } catch {}
+  try { start = localStorage.getItem('gpd-home-view') || localStorage.getItem('gpd-store') || 'all'; } catch {}
   show(start);
   sel.addEventListener('change', () => {
     show(sel.value);
@@ -160,7 +161,8 @@ const jsonLd = [
 </script>
 
 <style>
-  .hero { display: grid; grid-template-columns: 1.15fr 1fr; gap: 2rem 3rem; align-items: start; margin: 1rem 0 1rem; }
+  .hero { display: grid; grid-template-columns: 1fr; gap: 1rem; margin: 0.5rem 0 1.5rem; max-width: 46rem; }
+  .shelf { margin-top: 2.5rem; }
   .hero h1 { font-size: clamp(2.4rem, 6.5vw, 3.9rem); line-height: 1.02; letter-spacing: -0.035em; font-weight: 800; }
   .lede { font-size: var(--step-1); line-height: 1.5; max-width: var(--measure); margin-top: 1.1rem; }
   .picker { margin: 1.5rem 0 0; }

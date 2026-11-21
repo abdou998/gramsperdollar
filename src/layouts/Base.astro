@@ -24,10 +24,10 @@ const siteName = 'Grams per Dollar';
 const fullTitle = asIs || title === siteName || title.length + siteName.length + 3 > 62 ? title : `${title} | ${siteName}`;
 const ogImage = image ?? new URL('/og-default.png', Astro.site).href;
 const nav = [
-  { href: '/recipes', label: 'Recipes', on: cleanPath.startsWith('/recipes') },
-  { href: '/cheapest-protein', label: 'Cheapest protein', on: cleanPath.startsWith('/cheapest-protein') },
-  { href: '/planner', label: 'Meal planner', on: cleanPath === '/planner' },
-  { href: '/guides', label: 'Guides', on: cleanPath === '/guides' || (type === 'article' && !/^\/(recipes|cheapest-protein)/.test(cleanPath)) },
+  { href: '/recipes', label: 'Recipes', short: 'Recipes', on: cleanPath.startsWith('/recipes') },
+  { href: '/cheapest-protein', label: 'Cheapest protein', short: 'Cheapest', on: cleanPath.startsWith('/cheapest-protein') },
+  { href: '/planner', label: 'Meal planner', short: 'Planner', on: cleanPath === '/planner' },
+  { href: '/guides', label: 'Guides', short: 'Guides', on: cleanPath === '/guides' || (type === 'article' && !/^\/(recipes|cheapest-protein)/.test(cleanPath)) },
 ];
 const path = cleanPath;
 ---
@@ -65,13 +65,19 @@ const path = cleanPath;
           <span class="logo-word">Grams per Dollar</span>
         </a>
         <nav aria-label="Main">
-          {nav.map((n) => <a href={n.href} aria-current={n.on ? 'page' : undefined}>{n.label}</a>)}
+          {nav.map((n) => <a href={n.href} aria-current={n.on ? 'page' : undefined}><span class="long">{n.label}</span><span class="short" aria-hidden="true">{n.short}</span></a>)}
         </nav>
       </div>
     </header>
     <main id="main" class="wrap">
       <slot />
     </main>
+    {path !== '/planner' && (
+      <div class="weekbar" data-weekbar hidden>
+        <a href="/planner"><strong>Your week:</strong> <span data-weekbar-text></span> <span class="go">See the total and shopping list →</span></a>
+        <button type="button" data-weekbar-close aria-label="Hide your week bar">×</button>
+      </div>
+    )}
     <footer class="site">
       <div class="wrap foot">
         <div>
@@ -90,6 +96,28 @@ const path = cleanPath;
         </nav>
       </div>
     </footer>
+    <script>
+      // "Your week" bar: appears once something is in the planner (saved on this device), on every page but the planner.
+      const bar = document.querySelector<HTMLElement>('[data-weekbar]');
+      function renderWeek() {
+        if (!bar) return;
+        let picks: Record<string, number> = {};
+        try {
+          if (sessionStorage.getItem('gpd-weekbar-off')) return void (bar.hidden = true);
+          picks = (JSON.parse(localStorage.getItem('gpd-plan') || 'null') ?? {}).picks ?? {};
+        } catch {}
+        const n = Object.values(picks).filter((v) => v > 0);
+        bar.hidden = n.length === 0;
+        const servings = n.reduce((a, b) => a + b, 0);
+        bar.querySelector('[data-weekbar-text]')!.textContent = `${n.length} recipe${n.length > 1 ? 's' : ''}, ${servings} serving${servings > 1 ? 's' : ''}.`;
+      }
+      bar?.querySelector('[data-weekbar-close]')?.addEventListener('click', () => {
+        try { sessionStorage.setItem('gpd-weekbar-off', '1'); } catch {}
+        bar.hidden = true;
+      });
+      window.addEventListener('gpd-plan', renderWeek);
+      renderWeek();
+    </script>
   </body>
 </html>
 
@@ -110,6 +138,16 @@ const path = cleanPath;
   nav[aria-label='Main'] a:hover { background: var(--surface); }
   nav[aria-label='Main'] a[aria-current='page'] { background: var(--basil); color: var(--paper); }
   main { padding-block: 1.5rem 4rem; }
+  nav[aria-label='Main'] a { position: relative; }
+  .weekbar { position: fixed; left: 50%; bottom: 0.9rem; transform: translateX(-50%); z-index: 20; display: flex; align-items: center; gap: 0.25rem;
+    width: min(36rem, calc(100% - 1.5rem)); background: var(--basil); color: var(--paper); border-radius: 999px; padding: 0.35rem 0.4rem 0.35rem 1.1rem;
+    box-shadow: 0 6px 24px rgb(0 0 0 / 0.18); font-size: var(--step--1); }
+  .weekbar[hidden] { display: none; }
+  body:has(.weekbar:not([hidden])) footer.site { padding-bottom: 4.5rem; }
+  .weekbar a { color: inherit; text-decoration: none; flex: 1; padding-block: 0.35rem; }
+  .weekbar .go { text-decoration: underline; text-underline-offset: 2px; white-space: nowrap; }
+  .weekbar button { background: none; border: 0; color: inherit; font-size: 1.3rem; line-height: 1; padding: 0.3rem 0.6rem; cursor: pointer; border-radius: 999px; }
+  .weekbar button:hover { background: rgb(255 255 255 / 0.15); }
   footer.site { background: var(--surface); color: var(--muted); font-size: var(--step--1); border-radius: 2.5rem 2.5rem 0 0; margin-top: 2rem; }
   .foot { display: grid; grid-template-columns: 1.4fr 1fr; gap: 1rem 3rem; padding-block: 2.25rem 2.75rem; }
   .foot-name { font-family: var(--display); font-weight: 750; font-size: 1.05rem; color: var(--ink); margin-bottom: 0.4rem; }
@@ -117,8 +155,12 @@ const path = cleanPath;
   .foot ul { list-style: none; padding: 0; margin: 0; }
   .foot li { margin: 0 0 0.35rem; }
   .foot a { color: var(--ink); }
+  nav[aria-label='Main'] .short { display: none; }
   @media (max-width: 40rem) {
-    .bar { flex-direction: column; align-items: flex-start; }
+    .bar { flex-direction: column; align-items: flex-start; gap: 0.5rem; padding-block: 0.8rem; }
+    nav[aria-label='Main'] .long { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+    nav[aria-label='Main'] .short { display: inline; }
+    nav[aria-label='Main'] a { padding: 0.4rem 0.7rem; }
     nav[aria-label='Main'] { width: calc(100% + var(--gutter)); margin-left: -0.8rem; }
     .foot { grid-template-columns: 1fr; }
   }

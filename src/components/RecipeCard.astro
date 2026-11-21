@@ -6,7 +6,8 @@ import ShelfTag from './ShelfTag.astro';
 import MoneyBreakdown from './MoneyBreakdown.astro';
 import StoreCosts from './StoreCosts.astro';
 import { howToSteps, SITE_AUTHOR } from '../lib/schema';
-import { getRecipe, storeStats, homeStore, storeShort, usd, num } from '../lib/data';
+import { getRecipe, storeStats, homeStore, storeShort, usd, num, allRecipes } from '../lib/data';
+import RecipeList from './RecipeList.astro';
 
 interface Props { slug: string; headingLevel?: 1 | 2 | 3 }
 const { slug, headingLevel = 2 } = Astro.props;
@@ -16,6 +17,12 @@ const home = homeStore(r);
 const H = `h${headingLevel}`;
 const Sub = `h${headingLevel + 1}`; // sections sit one level below the recipe title
 const isPage = headingLevel === 1;
+// "Try this next": same meal type first, then best protein per dollar.
+const next = isPage ? allRecipes().filter((x) => x.slug !== r.slug)
+  .sort((a, b) => Number(b.meal === r.meal) - Number(a.meal === r.meal) || (storeStats(b)?.protein_g_per_dollar ?? 0) - (storeStats(a)?.protein_g_per_dollar ?? 0))
+  .slice(0, 3) : [];
+// Every store's numbers, so the page can switch to the reader's own store (saved as gpd-store) without a reload.
+const myStores = Object.fromEntries(Object.entries(r.stores as Record<string, any>).map(([id, x]) => [id, { l: storeShort(id), c: usd(x.cost_per_serving), p: x.protein_g_per_dollar }]));
 
 const images = import.meta.glob<{ default: ImageMetadata }>('../assets/images/*.{jpg,jpeg,png,webp}', { eager: true });
 const img = r.image ? images[`../assets/images/${r.image}`]?.default : undefined;
@@ -56,7 +63,8 @@ const schema = {
   ...(r.published ? { datePublished: r.published } : {}),
 };
 ---
-<section class:list={["recipe", { page: headingLevel === 1 }]} id={slug} aria-labelledby={`${slug}-title`}>
+<section class:list={["recipe", { page: headingLevel === 1 }]} id={slug} aria-labelledby={`${slug}-title`} data-recipe>
+  {isPage && <script type="application/json" data-my-stores set:html={JSON.stringify(myStores)} />}
   <header class="head">
     <ShelfTag value={s?.protein_g_per_dollar} />
     <div>
@@ -69,7 +77,7 @@ const schema = {
   <dl class="stats">
     <div><dt>Protein</dt><dd>{r.protein_g_per_serving} g</dd></div>
     <div><dt>Calories</dt><dd>{num(r.kcal_per_serving)}</dd></div>
-    {s && home && <div><dt>Cost at {storeShort(home)}</dt><dd>{usd(s.cost_per_serving)}</dd></div>}
+    {s && home && <div><dt>Cost at <span data-my-label>{storeShort(home)}</span>{isPage && Object.keys(myStores).length > 1 && <> <a class="chg" href={`#${slug}-money`}>change</a></>}</dt><dd data-my-cost>{usd(s.cost_per_serving)}</dd></div>}
     <div><dt>Makes</dt><dd>{r.servings} serving{r.servings > 1 ? 's' : ''}</dd></div>
     {total > 0 && <div><dt>Time</dt><dd>{total} min</dd></div>}
   </dl>
@@ -109,6 +117,14 @@ const schema = {
 
   {r.storage && (<><Sub>Storing it</Sub><p>{r.storage}</p></>)}
   {r.tip && (<><Sub>Make it cheaper</Sub><p>{r.tip}</p></>)}
+
+  {next.length > 0 && (
+    <section class="next" aria-labelledby={`${r.slug}-next`}>
+      <Sub id={`${r.slug}-next`}>Try this next</Sub>
+      <RecipeList recipes={next} headingLevel={(headingLevel + 2) as 2 | 3} />
+      <p class="small"><a href="/recipes">All recipes</a> · <a href="/planner">Plan a whole week and get one shopping list</a></p>
+    </section>
+  )}
 
   {isPage && (
     <section class="rate" data-rate-slug={r.slug} hidden aria-labelledby={`${r.slug}-rate`}>
@@ -157,6 +173,22 @@ const schema = {
     }));
   });
 
+  // Reader's own store (gpd-store): swap the shelf tag and cost to it. The picker in "Where the money goes" sets it.
+  function applyStore(id: string | null) {
+    document.querySelectorAll<HTMLElement>('[data-recipe]').forEach((sec) => {
+      const el = sec.querySelector('[data-my-stores]');
+      if (!el || !id) return;
+      const m = JSON.parse(el.textContent || '{}')[id];
+      if (!m) return;
+      sec.querySelector('[data-my-label]')!.textContent = m.l;
+      sec.querySelector('[data-my-cost]')!.textContent = m.c;
+      const tag = sec.querySelector<HTMLElement>('.head .tag');
+      if (tag) { tag.querySelector('.tag-number')!.textContent = String(m.p); tag.setAttribute('aria-label', `${m.p} grams of protein per dollar`); }
+    });
+  }
+  try { applyStore(localStorage.getItem('gpd-store')); } catch {}
+  window.addEventListener('gpd-store', (e) => applyStore((e as CustomEvent).detail));
+
   // "Add to my week": adds one batch of this recipe to the planner saved on this device.
   document.querySelectorAll<HTMLButtonElement>('.add-btn').forEach((b) => b.addEventListener('click', () => {
     const status = b.nextElementSibling as HTMLElement;
@@ -166,6 +198,8 @@ const schema = {
       plan.picks[slug] = Math.min(28, (plan.picks[slug] || 0) + n);
       localStorage.setItem('gpd-plan', JSON.stringify(plan));
       status.innerHTML = `Added (${plan.picks[slug]} serving${plan.picks[slug] > 1 ? 's' : ''} in your week). <a href="/planner">Open the planner</a>`;
+      try { sessionStorage.removeItem('gpd-weekbar-off'); } catch {}
+      window.dispatchEvent(new Event('gpd-plan'));
     } catch {
       status.innerHTML = `Couldn't save on this device. <a href="/planner#d=5&r=${b.dataset.addSlug}:${b.dataset.addN}">Open it in the planner</a>`;
     }
@@ -183,6 +217,9 @@ const schema = {
   .title { margin: 0 0 0.35rem; font-size: var(--step-3); letter-spacing: -0.03em; }
   .recipe.page { margin-top: 0.5rem; border-top: 0; padding-top: 0; }
   .desc { margin: 0; color: var(--muted); max-width: var(--measure); }
+  .next { margin-top: 2.25rem; padding: 1.25rem 1.25rem 0.5rem; background: var(--surface); border-radius: var(--leaf-sm); max-width: 40rem; }
+  .next :is(h2, h3) { margin-top: 0; font-size: var(--step-1); }
+  .chg { font-weight: 400; font-size: var(--step--1); margin-left: 0.25rem; }
   .byline { margin: 0.4rem 0 0; }
   .intro { max-width: var(--measure); margin: 0 0 1.5rem; }
   .stats {

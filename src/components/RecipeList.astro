@@ -18,8 +18,11 @@ const H = `h${headingLevel}`;
     const s = storeStats(r, home);
     const img = recipeImage(r.image);
     const total = (r.prep_minutes ?? 0) + (r.cook_minutes ?? 0);
+    // Without a fixed store, cards follow the reader's own store (gpd-store) on the client.
+    const my = store ? undefined : JSON.stringify(Object.fromEntries(Object.entries(r.stores as Record<string, any>)
+      .map(([id, x]) => [id, [usd(x.cost_per_serving), x.protein_g_per_dollar, storeShort(id)]])));
     return (
-      <li>
+      <li data-my={my}>
         <a class="thumb" href={`/recipes/${r.slug}`} tabindex="-1" aria-hidden="true">
           {img ? <Image src={img} alt={r.image_alt ?? `${r.name}, ${r.protein_g_per_serving} g protein a serving`} widths={[240, 400]} sizes="9rem" /> : <span class="no-photo"></span>}
           <span class="pin"><ShelfTag value={s?.protein_g_per_dollar} size="sm" /></span>
@@ -29,7 +32,7 @@ const H = `h${headingLevel}`;
           {r.description && <p class="desc">{r.description}</p>}
           <p class="facts muted">
             <span>{r.protein_g_per_serving} g protein</span>
-            {s && home && <span>{usd(s.cost_per_serving)} a serving at {storeShort(home)}</span>}
+            {s && home && <span data-my-line>{usd(s.cost_per_serving)} a serving at {storeShort(home)}</span>}
             <span>{num(r.kcal_per_serving)} kcal</span>
             {total > 0 && <span>{total} min</span>}
           </p>
@@ -59,6 +62,22 @@ const H = `h${headingLevel}`;
     );
   })}
 </ul>
+
+<script>
+  function applyMyStore(id: string | null) {
+    if (!id) return;
+    document.querySelectorAll<HTMLElement>('.recipe-list li[data-my]').forEach((li) => {
+      const m = JSON.parse(li.dataset.my || '{}')[id];
+      if (!m) return;
+      const line = li.querySelector('[data-my-line]');
+      if (line) line.textContent = `${m[0]} a serving at ${m[2]}`;
+      const tag = li.querySelector<HTMLElement>('.tag');
+      if (tag) { tag.querySelector('.tag-number')!.textContent = String(m[1]); tag.setAttribute('aria-label', `${m[1]} grams of protein per dollar`); }
+    });
+  }
+  try { applyMyStore(localStorage.getItem('gpd-store')); } catch {}
+  window.addEventListener('gpd-store', (e) => applyMyStore((e as CustomEvent).detail));
+</script>
 
 <style>
   .recipe-list { list-style: none; padding: 0; margin: 1rem 0 1.5rem; max-width: var(--wide); display: grid; gap: 1.75rem; }

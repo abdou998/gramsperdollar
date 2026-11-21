@@ -60,14 +60,21 @@ const ogImage = photo ? new URL(photo.src, Astro.site).href : undefined;
         </p>
       )}
       {cats.length > 0 && (
-        <p><strong>More like this:</strong>{' '}
-          {cats.map((c, i) => <>{i > 0 && ', '}<a href={c.url}>{c.title}</a></>)}
-        </p>
+        <>
+          <p class="chips-label"><strong>More like this</strong></p>
+          <ul class="chips">{cats.filter((c) => c.facet !== 'store').map((c) => <li><a href={c.url}>{c.title}</a></li>)}</ul>
+          {cats.some((c) => c.facet === 'store') && (
+            <details class="by-store">
+              <summary>Recipes by store ({cats.filter((c) => c.facet === 'store').length} stores)</summary>
+              <ul class="chips">{cats.filter((c) => c.facet === 'store').map((c) => <li><a href={c.url}>{c.title}</a></li>)}</ul>
+            </details>
+          )}
+        </>
       )}
     </aside>
   )}
 
-  {related.length > 0 && (
+  {!r && related.length > 0 && (
     <section aria-labelledby="related">
       <h2 id="related">Other recipes</h2>
       <RecipeList recipes={related} />
@@ -78,4 +85,8 @@ const ogImage = photo ? new URL(photo.src, Astro.site).href : undefined;
 <style>
   .more { max-width: var(--measure); padding: 1rem 1.25rem; background: var(--surface); border-radius: var(--leaf-sm); margin: 2.5rem 0; }
   .more p { margin: 0.25rem 0; }
+  .chips { list-style: none; padding: 0; margin: 0.4rem 0 0.6rem; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .chips a { display: inline-block; padding: 0.3rem 0.75rem; border-radius: 999px; background: var(--paper); border: 1px solid var(--rule); text-decoration: none; color: var(--ink); font-size: var(--step--1); }
+  .chips a:hover { border-color: var(--basil); }
+  .by-store summary { cursor: pointer; font-size: var(--step--1); color: var(--muted); margin-top: 0.4rem; }
 </style>
